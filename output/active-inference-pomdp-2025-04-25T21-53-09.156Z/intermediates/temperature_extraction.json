@@ -1,0 +1,34 @@
+{
+  "rawTemperatures": [
+    0,
+    15,
+    5
+  ],
+  "tempData": [
+    {
+      "timepoint": "beginning",
+      "description": "A crisp autumn morning with frost on the ground and visible breath clouds.",
+      "temperature": 0,
+      "confidence": 0.9
+    },
+    {
+      "timepoint": "middle",
+      "description": "Midday with the sun high in the sky, warming the air considerably, perfect for hiking.",
+      "temperature": 15,
+      "confidence": 0.8
+    },
+    {
+      "timepoint": "end",
+      "description": "Evening with a sudden summer storm, rain cooling the air dramatically.",
+      "temperature": 5,
+      "confidence": 0.85
+    }
+  ],
+  "observationIndices": [
+    1,
+    4,
+    2
+  ],
+  "llmResponse": "```json\n{\n  \"temperatures\": [\n    {\n      \"timepoint\": \"beginning\",\n      \"description\": \"A crisp autumn morning with frost on the ground and visible breath clouds.\",\n      \"temperature\": 0,\n      \"confidence\": 0.9\n    },\n    {\n      \"timepoint\": \"middle\",\n      \"description\": \"Midday with the sun high in the sky, warming the air considerably, perfect for hiking.\",\n      \"temperature\": 15,\n      \"confidence\": 0.8\n    },\n    {\n      \"timepoint\": \"end\",\n      \"description\": \"Evening with a sudden summer storm, rain cooling the air dramatically.\",\n      \"temperature\": 5,\n      \"confidence\": 0.85\n    }\n  ]\n}\n```",
+  "llmOutputPath": "/home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/llm_outputs/temperature_extraction.json"
+}

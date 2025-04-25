@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Active Inference POMDP Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; }
+    img { max-width: 100%; margin: 20px 0; }
+    pre { background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    h1, h2, h3 { color: #333; }
+    .image-container { text-align: center; margin: 30px 0; }
+    .image-caption { font-style: italic; margin-top: 5px; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Active Inference POMDP Model Report</h1><br><br><h2>Executive Summary</h2><br><br>This report presents the results of an Active Inference Partially Observable Markov Decision Process (POMDP) model applied to analyze temperature changes within a narrative context. The model's goal was to determine optimal actions based on temperature observations extracted from a story. The analysis involved extracting temperature data, configuring a POMDP model, updating beliefs, selecting actions, and interpreting the results. This report details each step and provides insights into the model's performance.<br><br><h2>Temperature Extraction from the Story</h2><br><br>The temperature extraction process involved analyzing a narrative to identify temperature-related descriptions and quantify them. The story was segmented into three timepoints: beginning, middle, and end. The extracted temperatures were:<br><br><ul><li><strong>Beginning</strong>: 0°C, described as a "crisp autumn morning with frost on the ground and visible breath clouds," with a confidence level of 0.9.</li></ul>
+<ul><li><strong>Middle</strong>: 15°C, described as "Midday with the sun high in the sky, warming the air considerably, perfect for hiking," with a confidence level of 0.8.</li></ul>
+<ul><li><strong>End</strong>: 5°C, described as "Evening with a sudden summer storm, rain cooling the air dramatically," with a confidence level of 0.85.</li></ul><br><br>These temperatures were used as observations in the POMDP model.<br><br><h2>POMDP Model Configuration</h2><br><br>The POMDP model was configured with the following components:<br><br><ul><li><strong>States</strong>: ["very-cold", "cold", "cool", "mild", "warm", "hot", "very-hot"]</li></ul>
+<ul><li><strong>Actions</strong>: ["add-clothing", "remove-clothing", "seek-shelter", "seek-shade", "use-heating", "use-cooling", "no-action"]</li></ul>
+<ul><li><strong>Observations</strong>: ["freezing", "very-cold", "cold", "cool", "mild", "warm", "hot", "very-hot"]</li></ul>
+<ul><li><strong>Policy Depth</strong>: 2</li></ul><br><br>The model aimed to infer the most probable state of the environment and select actions that minimize free energy, a measure of uncertainty and surprise.<br><br><h2>Belief Updates and Action Selection</h2><br><br><h3>Final Beliefs</h3><br><br>The final belief distribution over the states was as follows:<br><br><ul><li>Very-cold: 1.14%</li></ul>
+<ul><li>Cold: 42.35%</li></ul>
+<ul><li>Cool: 42.35%</li></ul>
+<ul><li>Mild: 10.59%</li></ul>
+<ul><li>Warm: 2.82%</li></ul>
+<ul><li>Hot: 0.71%</li></ul>
+<ul><li>Very-hot: 0.05%</li></ul><br><br>This distribution indicates a high probability of the environment being in a "cold" or "cool" state.<br><br><h3>Belief History, Action History, Observation History, Policy History, Free Energy History</h3><br><br>Unfortunately, the belief history, action history, observation history, policy history, and free energy history were not available in the provided data. These histories typically provide insights into how beliefs and actions evolved over time, how observations influenced the model, and how the policy adapted to minimize free energy.<br><br><h2>Interpretation of Results and Insights</h2><br><br>The model's final belief distribution suggests that the environment was most likely in a "cold" or "cool" state, aligning with the extracted temperatures from the story. The high confidence in these states indicates that the model effectively integrated the temperature observations to update its beliefs.<br><br>The absence of detailed histories limits the ability to analyze the model's dynamic behavior and decision-making process. However, the final beliefs provide a snapshot of the model's inference capabilities.<br><br><h2>Conclusion</h2><br><br>The Active Inference POMDP model successfully utilized temperature data extracted from a narrative to infer the most probable environmental states and guide action selection. Despite the lack of detailed histories, the final belief distribution aligns with the observed temperatures, demonstrating the model's effectiveness in processing and integrating sensory information. Future analyses could benefit from complete histories to provide a more comprehensive understanding of the model's decision-making process.<br><br><h2>Visualizations</h2><br><br>The following visualizations were generated to support the analysis:<br><br><ul><li><strong>Belief History</strong>: <code>belief_history.svg</code> and <code>belief_history.png</code></li></ul>
+<ul><li><strong>Free Energy</strong>: <code>free_energy.svg</code> and <code>free_energy.png</code></li></ul>
+<ul><li><strong>Observation and Action History</strong>: <code>observation_action_history.svg</code> and <code>observation_action_history.png</code></li></ul>
+<ul><li><strong>Transition Model</strong>: <code>transition_model.svg</code> and <code>transition_model.png</code></li></ul>
+<ul><li><strong>Observation Model</strong>: <code>observation_model.svg</code> and <code>observation_model.png</code></li></ul>
+<ul><li><strong>Belief Animation</strong>: <code>belief_animation.gif</code></li></ul><br><br>These visualizations can be referenced for a visual representation of the model's performance and dynamics.
+  
+  <div class="image-container">
+    <h2>Visualizations</h2>
+    
+      <div class="image-container">
+        <img src="visualizations/belief_history.png" alt="belief_history">
+        <div class="image-caption">Belief History</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/free_energy.png" alt="free_energy">
+        <div class="image-caption">Free Energy</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/observation_action_history.png" alt="observation_action_history">
+        <div class="image-caption">Observation Action History</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/transition_model.png" alt="transition_model">
+        <div class="image-caption">Transition Model</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/observation_model.png" alt="observation_model">
+        <div class="image-caption">Observation Model</div>
+      </div>
+    
+    
+    
+      <h2>Animations</h2>
+      
+        <div class="image-container">
+          <img src="visualizations/belief_animation.gif" alt="belief_animation">
+          <div class="image-caption">Belief Animation</div>
+        </div>
+      
+    
+  </div>
+</body>
+</html>

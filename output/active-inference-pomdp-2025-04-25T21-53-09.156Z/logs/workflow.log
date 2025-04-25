@@ -1,0 +1,41 @@
+=== Active Inference POMDP Example - 2025-04-25T21:53:09.157Z ===
+
+[INFO] Starting Active Inference POMDP Example
+[INFO] Output directory: /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z
+[INFO] Step 1: Extracting temperatures from story
+[INFO] Temperature Extraction Agent processing story to extract temperatures
+[INFO] Sending request to LLM for temperature extraction
+[INFO] Extracted temperatures: [0,15,5]
+[INFO] Mapped to observation indices: [1,4,2]
+[INFO] Extracted temperatures: [0,15,5]
+[INFO] Mapped to observation indices: [1,4,2]
+[INFO] Step 2: Running Active Inference POMDP
+[INFO] ActiveInferencePOMDPAgent Active Inference POMDP Agent processing observations
+[INFO] Processing observations: [1,4,2]
+[INFO] POMDP processing complete
+[INFO] Step 3: Generating visualizations
+[INFO] POMDP Visualization Agent creating visualizations for POMDP results
+[INFO] Creating belief history chart
+[INFO] Saved belief history chart to /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/belief_history.svg
+[INFO] Converted SVG to PNG: /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/belief_history.png
+[INFO] Creating free energy chart
+[INFO] Saved free energy chart to /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/free_energy.svg
+[INFO] Converted SVG to PNG: /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/free_energy.png
+[INFO] Creating observation and action history chart
+[INFO] Saved observation and action history chart to /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/observation_action_history.svg
+[INFO] Converted SVG to PNG: /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/observation_action_history.png
+[INFO] Creating transition model visualization
+[INFO] Saved transition model visualization to /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/transition_model.svg
+[INFO] Converted SVG to PNG: /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/transition_model.png
+[INFO] Creating observation model visualization
+[INFO] Saved observation model visualization to /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/observation_model.svg
+[INFO] Converted SVG to PNG: /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/observation_model.png
+[INFO] Created belief state animation: /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/visualizations/belief_animation.gif
+[INFO] Generated 5 visualizations
+[INFO] Step 4: Generating final report
+[INFO] Report Generation Agent generating final report
+[INFO] Sending request to LLM for report generation
+[INFO] Report saved to /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/active_inference_pomdp_report.md
+[INFO] HTML report saved to /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/active_inference_pomdp_report.html
+[INFO] Report generated at /home/trim/Documents/GitHub/NoOrg/output/active-inference-pomdp-2025-04-25T21-53-09.156Z/active_inference_pomdp_report.md
+[INFO] Workflow completed in 17.20 seconds

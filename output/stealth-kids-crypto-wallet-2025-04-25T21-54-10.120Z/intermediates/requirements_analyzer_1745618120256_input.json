@@ -1,0 +1,7 @@
+{
+  "agent": "Requirements Analyzer",
+  "timestamp": "2025-04-25T21:55:20.256Z",
+  "model": "gpt-4o",
+  "system_prompt": "You are a requirements analyst specializing in technical systems. Your job is to analyze project requirements, identify key stakeholders, and determine essential functionality based on user needs.",
+  "user_prompt": "\nEnhance project documentation with real-time usage data insights.\n\nPROJECT: Child-friendly secure cryptocurrency solutions - Organic Fertilizer Project\nOBJECTIVE: Design an invisible, waterproof cryptocurrency hardware wallet specifically for children\n\nKEY DATA POINTS:\n- Data source: Prototype Testing\n- Retrieved: 2025-04-25T21:55:20.256Z\n- Sample location: No location data available\n\nPROJECT SUMMARY: Project summary not available\n\nAdd a \"Real-time Monitoring\" section with these insights:\n1. Current usage data metrics based on prototype testing\n2. How stakeholders can use this real-time data\n3. Future enhancement recommendations\n\nFormat as JSON:\n{\n  \"enhanced_documentation\": {\n    \"title\": \"Organic Fertilizer Project\",\n    \"version\": \"2.0\",\n    \"new_sections\": [\n      {\n        \"title\": \"Real-time Monitoring Capabilities\",\n        \"content\": { \"key_points\": [...], \"benefits\": [...] }\n      }\n    ],\n    \"recommendations\": [...]\n  }\n}\n"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-BQLGnUPFmqgSXfVvahtXaYU7v3XMA",
+  "object": "chat.completion",
+  "created": 1745617989,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "```json\n{\n  \"temperatures\": [\n    {\n      \"timepoint\": \"beginning\",\n      \"description\": \"A crisp autumn morning with frost on the ground and visible breath clouds.\",\n      \"temperature\": 0,\n      \"confidence\": 0.9\n    },\n    {\n      \"timepoint\": \"middle\",\n      \"description\": \"Midday with the sun high in the sky, warming the air considerably, perfect for hiking.\",\n      \"temperature\": 15,\n      \"confidence\": 0.8\n    },\n    {\n      \"timepoint\": \"end\",\n      \"description\": \"Evening with a sudden summer storm, rain cooling the air dramatically.\",\n      \"temperature\": 5,\n      \"confidence\": 0.85\n    }\n  ]\n}\n```",
+        "refusal": null,
+        "annotations": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 162,
+    "total_tokens": 624,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_90122d973c"
+}

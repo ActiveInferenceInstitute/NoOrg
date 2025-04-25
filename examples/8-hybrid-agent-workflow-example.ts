@@ -33,15 +33,15 @@ if (!apiKey) {
 }
 // Create run-specific output folder
 const timestamp = new Date().toISOString().replace(/:/g, '-');
-const runId = `butterfly-car-design-${timestamp}`;
+const runId = `stealth-kids-crypto-wallet-${timestamp}`;
 // Initialize outputDir with a default value
 let outputDir: string = path.join('output', runId);
 // Configure the project parameters
 const PROJECT_CONFIG = {
-  DOMAIN: "Eco-friendly transportation solutions for pollinators",
-  OBJECTIVE: "Design a lightweight, aerodynamic vehicle optimized for butterfly transportation and safety",
-  CONSTRAINTS: "Must be non-toxic, use biodegradable materials, provide safe perching/storage for delicate anatomy, maintain stable microclimates, integrate with natural ecosystems, and be aerodynamic for wind resistance",
-  TARGET_USERS: "Butterfly conservation organizations, pollinator researchers, nature reserve transportation teams, ecological tourism companies, and insect habitat designers",
+  DOMAIN: "Child-friendly secure cryptocurrency solutions",
+  OBJECTIVE: "Design an invisible, waterproof cryptocurrency hardware wallet specifically for children",
+  CONSTRAINTS: "Must be undetectable as a tech device, fully waterproof (IPX8 rating), use non-toxic materials, withstand rough handling/play, maintain crypto security while being child-accessible, and integrate military-grade encryption",
+  TARGET_USERS: "Children aged 6-12, parents seeking financial education tools, school cryptocurrency literacy programs, toy manufacturers, and child safety organizations",
   // AI configuration
   LLM_CONFIG: {
     DEFAULT_MODEL: process.env.DEFAULT_MODEL || 'gpt-4o',
