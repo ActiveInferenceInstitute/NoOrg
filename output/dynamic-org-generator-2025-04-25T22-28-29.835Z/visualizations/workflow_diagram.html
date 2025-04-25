@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lollipop Organization - Task Workflow - Workflow Diagram</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .diagram-container { border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px; background: white; }
+    .workflow-info { border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px; background: white; }
+    .stages-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+    .stage-card { border: 1px solid #ddd; border-radius: 5px; padding: 15px; background: white; }
+    .stage-header { background: #e8f5e9; padding: 10px; border-radius: 5px 5px 0 0; margin: -15px -15px 15px -15px; }
+    h1, h2, h3 { color: #333; }
+    .header { text-align: center; margin-bottom: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Lollipop Organization - Task Workflow</h1>
+      <p>Workflow for executing: Design, produce, and package a new line of gourmet lollipops, focusing on unique flavor combinations and high-quality ingredients.</p>
+    </div>
+    
+    <div class="diagram-container">
+      <h2>Workflow Diagram</h2>
+      <div class="mermaid">
+graph TD;
+    stage_flavor_development["Stage Flavor Development<br/>(Flavor R&D)"]
+    style stage_flavor_development fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    stage_candy_production["Stage Candy Production<br/>(Candy Making)"]
+    style stage_candy_production fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    stage_stick_manufacturing["Stage Stick Manufacturing<br/>(Stick Production)"]
+    style stage_stick_manufacturing fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    stage_wrapping_packaging["Stage Wrapping Packaging<br/>(Wrapping & Packaging)"]
+    style stage_wrapping_packaging fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    stage_quality_assurance["Stage Quality Assurance<br/>(Quality Assurance)"]
+    style stage_quality_assurance fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    stage_marketing_and_sales["Stage Marketing And Sales<br/>(Marketing & Sales)"]
+    style stage_marketing_and_sales fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+
+      </div>
+    </div>
+    
+    <div class="workflow-info">
+      <h2>Workflow Details</h2>
+      <p><strong>Name:</strong> Lollipop Organization - Task Workflow</p>
+      <p><strong>Description:</strong> Workflow for executing: Design, produce, and package a new line of gourmet lollipops, focusing on unique flavor combinations and high-quality ingredients.</p>
+      <p><strong>Stages:</strong> 6</p>
+    </div>
+    
+    <h2>Workflow Stages</h2>
+    <div class="stages-container">
+      
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage Flavor Development</h3>
+            </div>
+            <p>Developed new flavor formulations including exotic fruit blends and organic ingredients.</p>
+            <p><strong>Unit:</strong> Flavor R&D</p>
+            <p><strong>Dependencies:</strong> None</p>
+          </div>
+        
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage Candy Production</h3>
+            </div>
+            <p>Produced candy components using the new formulations, ensuring the quality and consistency of flavor...</p>
+            <p><strong>Unit:</strong> Candy Making</p>
+            <p><strong>Dependencies:</strong> None</p>
+          </div>
+        
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage Stick Manufacturing</h3>
+            </div>
+            <p>Produced high-quality sticks using sustainable materials.</p>
+            <p><strong>Unit:</strong> Stick Production</p>
+            <p><strong>Dependencies:</strong> None</p>
+          </div>
+        
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage Wrapping Packaging</h3>
+            </div>
+            <p>Wrapped and packaged the lollipops in eco-friendly, attractive packaging that highlights the gourmet...</p>
+            <p><strong>Unit:</strong> Wrapping & Packaging</p>
+            <p><strong>Dependencies:</strong> None</p>
+          </div>
+        
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage Quality Assurance</h3>
+            </div>
+            <p>Conducted quality checks ensuring the lollipops meet safety and quality standards.</p>
+            <p><strong>Unit:</strong> Quality Assurance</p>
+            <p><strong>Dependencies:</strong> None</p>
+          </div>
+        
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage Marketing And Sales</h3>
+            </div>
+            <p>Developed a marketing strategy and launched a campaign to promote the new gourmet lollipop line, foc...</p>
+            <p><strong>Unit:</strong> Marketing & Sales</p>
+            <p><strong>Dependencies:</strong> None</p>
+          </div>
+        
+    </div>
+  </div>
+  
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+</body>
+</html>

@@ -11,21 +11,7 @@ Part of ongoing projects related to organizations, documentation, and multi-agen
 
 **License:** Open source (CC BY-NC-SA 4.0)
 
-## Agenda
-
-1. GitHub push
-2. Looking at the outputs from the examples (Butterfly Car Design)
-3. Return to NoOrg.md and Documentation
-4. Units review (Obsidian)
-5. Documentation updates
-6. Cognicism <https://medium.com/@speakerjohnash/what-is-cognicism-a-glossary-baa55e106900>
-7. MetaGov Projects: <https://metagov.org/projects/>
-
 ## Tools Used
-
-- Cursor 0.49.6
-- LLMs: Claude-3.7-sonnet
-- Obsidian
 
 ## Resources
 
@@ -33,8 +19,6 @@ Part of ongoing projects related to organizations, documentation, and multi-agen
 
 ## Engagement Opportunities
 
-- Support the work by...
-    donating at: donate.activeinference.institute
 - **Upcoming Series:** 4-week multi-agent systems design phase starting next week
   - Implementation phase will follow in June
   - Meetings: Tuesdays (16 UTC) and Wednesdays (19 UTC)

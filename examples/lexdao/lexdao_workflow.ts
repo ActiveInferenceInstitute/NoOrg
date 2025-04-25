@@ -1688,7 +1688,17 @@ Format your response as JSON with these keys:
     prepareInput: () => {
       // Generate simulated membership data
       // For demo purposes, we'll create mock member records
-      const members = [];
+      // Define member type
+      interface SimulatedMember {
+        address: string;
+        tokens: number;
+        joined: string;
+        status: string;
+        lastActivity: string;
+        votes: number;
+        proposals: number;
+      }
+      const members: SimulatedMember[] = [];
       
       // Generate random dates within the last year
       const generateRandomDate = () => {
@@ -1705,17 +1715,6 @@ Format your response as JSON with these keys:
         return '0x' + [...Array(40)].map(() => Math.floor(Math.random() * 16).toString(16)).join('');
       };
       
-      // Define member type
-      interface SimulatedMember {
-        address: string;
-        tokens: number;
-        joined: string;
-        status: string;
-        lastActivity: string;
-        votes: number;
-        proposals: number;
-      }
-
       // Create 50 members
       for (let i = 0; i < 50; i++) {
         const newMember: SimulatedMember = {
@@ -2227,10 +2226,12 @@ function createWorkflowHtml(context: WorkflowContext): string {
 // Main function to run the workflow
 async function runLexDAOWorkflow() {
   console.log('Starting LexDAO Governance Workflow...');
-  
+  let logger: FileLogger | null = null; // Define logger variable outside try block
+
   try {
     // Create logger for this workflow run
-    const logger = new FileLogger(path.join(outputDir, 'workflow.log'));
+    logger = new FileLogger(path.join(outputDir, 'workflow.log'));
+    logger.info('Workflow started');
     
     // Get workflow engine instance
     const workflowEngine = WorkflowEngine.getInstance({
@@ -2241,7 +2242,7 @@ async function runLexDAOWorkflow() {
     // Register a task executor for our agent tasks
     workflowEngine.registerTaskExecutor('execute', async (task, context) => {
       try {
-        logger.info(`Executing task: ${task.name}`);
+        logger?.info(`Executing task: ${task.name} (ID: ${task.id})`);
         
         // Extract parameters
         const agent = task.parameters?.agent;
@@ -2253,14 +2254,17 @@ async function runLexDAOWorkflow() {
         }
         
         // Prepare input using the prepareInput function
+        logger?.info(`Preparing input for task ${task.name}`);
         const input = prepareInput(context);
         
         // Process with the agent
+        logger?.info(`Processing task ${task.name} with agent ${agent.name}`);
         const output = await agent.process(input, {
           ...context,
-          logger: logger,
+          logger: logger as FileLogger, // Cast logger as it's guaranteed to be defined here
           currentStage: task.id
         });
+        logger?.info(`Task ${task.name} processing complete`);
         
         // Store the output in the context
         if (!context.outputs) {
@@ -2275,16 +2279,19 @@ async function runLexDAOWorkflow() {
           success: true,
           result: output
         };
-      } catch (error) {
-        logger.error(`Error executing task ${task.id}: ${error}`);
+      } catch (error: any) {
+        logger?.error(`Error executing task ${task.id} (${task.name}): ${error.message || error}`);
+        // Ensure the error is re-thrown so the engine knows the task failed
+        // The workflow engine should handle marking the task and workflow as failed
         return {
           success: false,
-          error: String(error)
+          error: String(error.message || error)
         };
       }
     });
     
     // Create workflow from our stages
+    logger.info('Creating workflow definition');
     const workflow = workflowEngine.createWorkflow({
       name: 'LexDAO Governance Workflow',
       version: '1.0.0',
@@ -2314,24 +2321,28 @@ async function runLexDAOWorkflow() {
     });
     
     // Start and await workflow completion
+    logger.info(`Starting workflow with ID: ${workflow.id}`);
     workflowEngine.startWorkflow(workflow.id);
     
     // Wait for workflow to complete
     let workflowCompleted = false;
+    logger.info('Entering workflow completion loop...');
     while (!workflowCompleted) {
       const currentWorkflow = workflowEngine.getWorkflow(workflow.id);
       if (currentWorkflow) {
+        logger.info(`Workflow status: ${currentWorkflow.status}`);
         if (currentWorkflow.status === 'completed' || currentWorkflow.status === 'failed') {
           workflowCompleted = true;
           logger.info(`Workflow ${currentWorkflow.status} with ID: ${workflow.id}`);
         } else {
           // Wait a bit before checking again
-          await new Promise(resolve => setTimeout(resolve, 1000));
+          await new Promise(resolve => setTimeout(resolve, 2000)); // Increased wait time
         }
       } else {
         throw new Error(`Workflow with ID ${workflow.id} not found`);
       }
     }
+    logger.info('Exited workflow completion loop.');
     
     // Get the final workflow state
     const finalWorkflow = workflowEngine.getWorkflow(workflow.id);
@@ -2339,7 +2350,14 @@ async function runLexDAOWorkflow() {
       throw new Error(`Workflow with ID ${workflow.id} not found`);
     }
     
+    // Check final status before proceeding
+    if (finalWorkflow.status === 'failed') {
+      logger.error(`Workflow failed. Check logs for details.`);
+      throw new Error('Workflow execution failed');
+    }
+    
     // Save all task results to a comprehensive output file
+    logger.info('Saving task results to workflow_outputs.json');
     const results = Object.fromEntries(
       finalWorkflow.tasks
         .filter(task => task.result && task.status === 'completed')
@@ -2349,12 +2367,13 @@ async function runLexDAOWorkflow() {
     fs.writeJsonSync(path.join(outputDir, 'workflow_outputs.json'), results, { spaces: 2 });
     
     // Generate visualizations with the results
+    logger.info('Generating final visualizations');
     generateWorkflowVisualizations({
       config: workflowConfig,
       outputs: results,
-      logger,
+      logger: logger as FileLogger, // Cast logger
       eventSystem: EventSystem.getInstance(),
-      startTime: Date.now(),
+      startTime: Date.now(), // Use Date.now() as fallback
       metrics: {
         stageMetrics: Object.fromEntries(
           finalWorkflow.tasks.map(task => [
@@ -2370,17 +2389,31 @@ async function runLexDAOWorkflow() {
       }
     }, outputDir);
     
-    console.log(`LexDAO Governance Workflow completed successfully. Results saved to ${outputDir}`);
+    console.log(`✅ LexDAO Governance Workflow completed successfully. Results saved to ${outputDir}`);
+    logger.info('Workflow completed successfully.');
     return outputDir;
-  } catch (error) {
-    console.error('Workflow failed:', error);
-    throw error;
+
+  } catch (error: any) {
+    console.error('❌ Workflow failed:', error.message || error);
+    logger?.error(`Workflow failed catastrophically: ${error.message || error}`);
+    // Ensure process exits with error code on failure
+    process.exit(1); 
+    // throw error; // Re-throwing might prevent process.exit(1) from running if not caught higher up
   }
 }
 
 // Execute if run directly
 if (require.main === module) {
-  runLexDAOWorkflow().catch(console.error);
+  runLexDAOWorkflow()
+    .then(() => {
+      // Optional: Explicitly exit with 0 on success if needed, though usually not required
+      // process.exit(0);
+    })
+    .catch(err => {
+      // Catch block in runLexDAOWorkflow should handle exit, but this is a safety net
+      console.error("Unhandled error during workflow execution:", err);
+      process.exit(1);
+    });
 }
 
 export { runLexDAOWorkflow }; 

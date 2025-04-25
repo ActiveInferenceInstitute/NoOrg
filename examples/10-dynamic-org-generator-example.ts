@@ -21,11 +21,10 @@ import axios from 'axios';
 // User configuration for organization and task (moved back to global scope)
 const USER_CONFIG = {
   // Natural language description of the desired organizational structure
-  ORGANIZATION_DESCRIPTION: "Create a compact research organization focused on developing sustainable urban agriculture technologies. Include research, development, community outreach, and business development departments. The structure should be efficient for a small team of 15-20 people.",
+  ORGANIZATION_DESCRIPTION: "Design an organization literally shaped like a lollipop. It should feature a 'stick' composed of several vertically nested hierarchical layers for core production and support functions (e.g., supply chain, HR, finance). The 'candy' top layer should be a hub-and-spoke structure with a central coordination unit connected to 6 distinct operational spokes responsible for different aspects of lollipop creation (e.g., flavor R&D, candy making, stick production, wrapping & packaging, quality assurance, marketing & sales).",
   
   // Task for the organization to execute
-  ORGANIZATION_TASK: "Develop a prototype for a vertical farming system that can be installed in apartment buildings and requires minimal maintenance while maximizing yield.",
-  
+  ORGANIZATION_TASK: "Design, produce, and package a new line of gourmet lollipops, focusing on unique flavor combinations and high-quality ingredients.",
   // Additional configuration parameters
   LLM_CONFIG: {
     DEFAULT_MODEL: process.env.DEFAULT_MODEL || 'gpt-4o',
@@ -613,60 +612,87 @@ async function runDynamicOrgGenerator() {
   // Use the initialized config to avoid global variable issues
   const { outputDir, apiKey } = initializeDynamicOrgGenerator();
   
-  console.log('Starting Dynamic Organization Generator...');
-  
-  // Ensure OpenAI API key is set
-  if (!apiKey) {
-    console.error("❌ OPENAI_API_KEY environment variable not set. This example requires a valid API key.");
-    throw new Error("Missing OpenAI API key. Please set the OPENAI_API_KEY environment variable.");
-  }
-  
-  // Create output directory
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
-    console.log(`Created output directory: ${outputDir}`);
-  }
-  
-  // Create subdirectories
-  fs.ensureDirSync(path.join(outputDir, 'visualizations'));
-  fs.ensureDirSync(path.join(outputDir, 'data'));
-  fs.ensureDirSync(path.join(outputDir, 'intermediates'));
-  
-  const workflowConfig = {
-    PROJECT_ID: 'dynamic-org-generator',
-    VERSION: '1.0.0',
-    ORGANIZATION_DESCRIPTION: USER_CONFIG.ORGANIZATION_DESCRIPTION,
-    ORGANIZATION_TASK: USER_CONFIG.ORGANIZATION_TASK,
-    OUTPUT_DIR: outputDir,
-    OPENAI_API_KEY: apiKey,
-    LLM_CONFIG: USER_CONFIG.LLM_CONFIG
-  };
-  
+  console.log(`Attempting to run workflow with outputDir: ${outputDir}`);
+
   try {
-    // Create logger for this workflow run
-    const logger = new FileLogger(path.join(outputDir, 'workflow.log'));
-    logger.info('Initializing dynamic organization generator workflow');
-    logger.info(`Organization Description: ${USER_CONFIG.ORGANIZATION_DESCRIPTION}`);
-    logger.info(`Organization Task: ${USER_CONFIG.ORGANIZATION_TASK}`);
-    
-    // Initialize the event system
-    const eventSystem = EventSystem.getInstance();
-    
-    // Initialize workflow context
-    const context: WorkflowContext = {
-      config: workflowConfig,
-      outputs: {},
-      logger,
-      eventSystem,
-      startTime: Date.now(),
-      metrics: {
-        stageMetrics: {}
+    // Ensure output directory exists with more robust logging
+    console.log(`Checking if output directory exists: ${outputDir}`);
+    if (!fs.existsSync(outputDir)) {
+      console.log(`Output directory does not exist. Creating...`);
+      try {
+        fs.mkdirSync(outputDir, { recursive: true });
+        console.log(`Successfully created output directory: ${outputDir}`);
+      } catch (mkdirError) {
+        console.error(`❌ Failed to create output directory: ${outputDir}`, mkdirError);
+        throw mkdirError; // Rethrow the error to stop execution
       }
-    };
+    } else {
+      console.log(`Output directory already exists: ${outputDir}`);
+    }
     
-    // STEP 1: Create the organization analyzer agent
-    logger.info('Creating organization analyzer agent');
-    const orgAnalyzerPrompt = `
+    // Create subdirectories explicitly after main directory creation
+    try {
+      fs.ensureDirSync(path.join(outputDir, 'visualizations'));
+      fs.ensureDirSync(path.join(outputDir, 'data'));
+      fs.ensureDirSync(path.join(outputDir, 'intermediates'));
+      console.log('Successfully created subdirectories (visualizations, data, intermediates)');
+    } catch (subDirError) {
+      console.error(`❌ Failed to create subdirectories in ${outputDir}`, subDirError);
+      throw subDirError; // Rethrow the error
+    }
+
+    // Ensure OpenAI API key is set
+    if (!apiKey) {
+      console.error("❌ OPENAI_API_KEY environment variable not set. This example requires a valid API key.");
+      throw new Error("Missing OpenAI API key. Please set the OPENAI_API_KEY environment variable.");
+    }
+
+    // Create output directory
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+      console.log(`Created output directory: ${outputDir}`);
+    }
+  
+    // Create subdirectories
+    fs.ensureDirSync(path.join(outputDir, 'visualizations'));
+    fs.ensureDirSync(path.join(outputDir, 'data'));
+    fs.ensureDirSync(path.join(outputDir, 'intermediates'));
+  
+    const workflowConfig = {
+      PROJECT_ID: 'dynamic-org-generator',
+      VERSION: '1.0.0',
+      ORGANIZATION_DESCRIPTION: USER_CONFIG.ORGANIZATION_DESCRIPTION,
+      ORGANIZATION_TASK: USER_CONFIG.ORGANIZATION_TASK,
+      OUTPUT_DIR: outputDir,
+      OPENAI_API_KEY: apiKey,
+      LLM_CONFIG: USER_CONFIG.LLM_CONFIG
+    };
+  
+    try {
+      // Create logger for this workflow run
+      const logger = new FileLogger(path.join(outputDir, 'workflow.log'));
+      logger.info('Initializing dynamic organization generator workflow');
+      logger.info(`Organization Description: ${USER_CONFIG.ORGANIZATION_DESCRIPTION}`);
+      logger.info(`Organization Task: ${USER_CONFIG.ORGANIZATION_TASK}`);
+      
+      // Initialize the event system
+      const eventSystem = EventSystem.getInstance();
+      
+      // Initialize workflow context
+      const context: WorkflowContext = {
+        config: workflowConfig,
+        outputs: {},
+        logger,
+        eventSystem,
+        startTime: Date.now(),
+        metrics: {
+          stageMetrics: {}
+        }
+      };
+      
+      // STEP 1: Create the organization analyzer agent
+      logger.info('Creating organization analyzer agent');
+      const orgAnalyzerPrompt = `
 You are an expert organizational designer who specializes in creating effective organizational structures.
 Your task is to create a detailed organizational structure based on the natural language description provided.
 
@@ -710,83 +736,83 @@ Guidelines:
 
 Respond ONLY with the valid JSON object and nothing else.
 `;
-    
-    const orgAnalyzerAgent = new LLMAgent({
-      id: 'org_analyzer',
-      name: 'Organization Analyzer',
-      unitId: 'meta_unit',
-      unitName: 'Meta Unit',
-      description: 'Analyzes natural language descriptions and converts them to structured organizational schemas',
-      systemPrompt: orgAnalyzerPrompt
-    });
-    
-    // STEP 2: Generate the organizational structure from the natural language description
-    logger.info('Generating organizational structure from description');
-    const stageStartTime = Date.now();
-    
-    let organizationSchema: OrganizationSchema;
-    try {
-      organizationSchema = await orgAnalyzerAgent.process(
-        USER_CONFIG.ORGANIZATION_DESCRIPTION,
-        context
-      ) as OrganizationSchema;
       
-      // Record metrics
-      context.metrics.stageMetrics['org_analysis'] = {
-        startTime: stageStartTime,
-        endTime: Date.now(),
-        duration: Date.now() - stageStartTime,
-        agentType: 'LLMAgent'
-      };
-      
-      // Save the organization schema
-      context.outputs.organization_schema = organizationSchema;
-      fs.writeJsonSync(path.join(outputDir, 'data', 'organization_schema.json'), organizationSchema, { spaces: 2 });
-      
-      logger.info(`Generated organization schema with ${organizationSchema.units.length} units and ${organizationSchema.workflows.length} workflows`);
-    } catch (error) {
-      logger.error(`Failed to generate organization schema: ${error}`);
-      throw error;
-    }
-    
-    // STEP 3: Visualize the organizational structure
-    logger.info('Generating organization chart visualization');
-    const visualizationStartTime = Date.now();
-    
-    try {
-      const visualizationAgent = new VisualizationAgent({
-        id: 'org_visualizer',
-        name: 'Organization Visualizer',
+      const orgAnalyzerAgent = new LLMAgent({
+        id: 'org_analyzer',
+        name: 'Organization Analyzer',
         unitId: 'meta_unit',
         unitName: 'Meta Unit',
-        description: 'Creates visual representations of organizational structures',
-        visualizationType: 'org-chart'
+        description: 'Analyzes natural language descriptions and converts them to structured organizational schemas',
+        systemPrompt: orgAnalyzerPrompt
       });
       
-      const visualizationResult = await visualizationAgent.process(
-        organizationSchema,
-        context
-      );
+      // STEP 2: Generate the organizational structure from the natural language description
+      logger.info('Generating organizational structure from description');
+      const stageStartTime = Date.now();
       
-      // Record metrics
-      context.metrics.stageMetrics['org_visualization'] = {
-        startTime: visualizationStartTime,
-        endTime: Date.now(),
-        duration: Date.now() - visualizationStartTime,
-        agentType: 'VisualizationAgent'
-      };
+      let organizationSchema: OrganizationSchema;
+      try {
+        organizationSchema = await orgAnalyzerAgent.process(
+          USER_CONFIG.ORGANIZATION_DESCRIPTION,
+          context
+        ) as OrganizationSchema;
+        
+        // Record metrics
+        context.metrics.stageMetrics['org_analysis'] = {
+          startTime: stageStartTime,
+          endTime: Date.now(),
+          duration: Date.now() - stageStartTime,
+          agentType: 'LLMAgent'
+        };
+        
+        // Save the organization schema
+        context.outputs.organization_schema = organizationSchema;
+        fs.writeJsonSync(path.join(outputDir, 'data', 'organization_schema.json'), organizationSchema, { spaces: 2 });
+        
+        logger.info(`Generated organization schema with ${organizationSchema.units.length} units and ${organizationSchema.workflows.length} workflows`);
+      } catch (error) {
+        logger.error(`Failed to generate organization schema: ${error}`);
+        throw error;
+      }
       
-      // Save the visualization result
-      context.outputs.organization_visualization = visualizationResult;
-      logger.info(`Generated organization chart visualization`);
-    } catch (error) {
-      logger.error(`Failed to generate organization chart: ${error}`);
-      // Continue execution even if visualization fails
-    }
-    
-    // STEP 4: Create a task execution agent that will use the organization to perform the task
-    logger.info('Creating task execution agent');
-    const taskExecutorPrompt = `
+      // STEP 3: Visualize the organizational structure
+      logger.info('Generating organization chart visualization');
+      const visualizationStartTime = Date.now();
+      
+      try {
+        const visualizationAgent = new VisualizationAgent({
+          id: 'org_visualizer',
+          name: 'Organization Visualizer',
+          unitId: 'meta_unit',
+          unitName: 'Meta Unit',
+          description: 'Creates visual representations of organizational structures',
+          visualizationType: 'org-chart'
+        });
+        
+        const visualizationResult = await visualizationAgent.process(
+          organizationSchema,
+          context
+        );
+        
+        // Record metrics
+        context.metrics.stageMetrics['org_visualization'] = {
+          startTime: visualizationStartTime,
+          endTime: Date.now(),
+          duration: Date.now() - visualizationStartTime,
+          agentType: 'VisualizationAgent'
+        };
+        
+        // Save the visualization result
+        context.outputs.organization_visualization = visualizationResult;
+        logger.info(`Generated organization chart visualization`);
+      } catch (error) {
+        logger.error(`Failed to generate organization chart: ${error}`);
+        // Continue execution even if visualization fails
+      }
+      
+      // STEP 4: Create a task execution agent that will use the organization to perform the task
+      logger.info('Creating task execution agent');
+      const taskExecutorPrompt = `
 You are acting as the entire organization described below. Your task is to solve the given problem
 by using the organizational structure and workflow provided.
 
@@ -828,108 +854,112 @@ Your response should be a JSON object with the following structure:
 
 Respond ONLY with the valid JSON object and nothing else.
 `;
-    
-    const taskExecutionAgent = new LLMAgent({
-      id: 'task_executor',
-      name: 'Task Execution Agent',
-      unitId: 'meta_unit',
-      unitName: 'Meta Unit',
-      description: 'Executes tasks by coordinating across the organizational structure',
-      systemPrompt: taskExecutorPrompt
-    });
-    
-    // STEP 5: Execute the task using the organizational structure
-    logger.info('Executing task through the organization');
-    const taskStartTime = Date.now();
-    
-    try {
-      const taskResult = await taskExecutionAgent.process(
-        USER_CONFIG.ORGANIZATION_TASK,
-        context
-      );
       
-      // Record metrics
-      context.metrics.stageMetrics['task_execution'] = {
-        startTime: taskStartTime,
-        endTime: Date.now(),
-        duration: Date.now() - taskStartTime,
-        agentType: 'LLMAgent'
-      };
-      
-      // Save the task result
-      context.outputs.task_execution = taskResult;
-      fs.writeJsonSync(path.join(outputDir, 'data', 'task_execution_result.json'), taskResult, { spaces: 2 });
-      
-      logger.info(`Task execution completed`);
-    } catch (error) {
-      logger.error(`Failed to execute task: ${error}`);
-      throw error;
-    }
-    
-    // STEP 6: Generate workflow visualization for the task execution
-    logger.info('Generating workflow visualization');
-    const workflowVisStartTime = Date.now();
-    
-    try {
-      // Create a workflow visualization structure that includes units for visualization
-      const workflowVisStructure = {
-        name: `${organizationSchema.name} - Task Workflow`,
-        description: `Workflow for executing: ${USER_CONFIG.ORGANIZATION_TASK}`,
-        units: organizationSchema.units,
-        stages: context.outputs.task_execution.stage_outputs.map((stage: any) => ({
-          id: stage.stage_id,
-          name: stage.stage_id.replace(/_/g, ' ').replace(/\b\w/g, (letter: string) => letter.toUpperCase()),
-          description: stage.output.substring(0, 100) + (stage.output.length > 100 ? '...' : ''),
-          unitId: stage.unit_id,
-          dependencies: context.outputs.task_execution.stage_outputs
-            .filter((s: any) => stage.input && stage.input.includes(s.stage_id))
-            .map((s: any) => s.stage_id)
-        }))
-      };
-      
-      const workflowVisualizationAgent = new VisualizationAgent({
-        id: 'workflow_visualizer',
-        name: 'Workflow Visualizer',
+      const taskExecutionAgent = new LLMAgent({
+        id: 'task_executor',
+        name: 'Task Execution Agent',
         unitId: 'meta_unit',
         unitName: 'Meta Unit',
-        description: 'Creates visual representations of workflows',
-        visualizationType: 'workflow-diagram'
+        description: 'Executes tasks by coordinating across the organizational structure',
+        systemPrompt: taskExecutorPrompt
       });
       
-      const workflowVisResult = await workflowVisualizationAgent.process(
-        workflowVisStructure,
-        context
-      );
+      // STEP 5: Execute the task using the organizational structure
+      logger.info('Executing task through the organization');
+      const taskStartTime = Date.now();
       
-      // Record metrics
-      context.metrics.stageMetrics['workflow_visualization'] = {
-        startTime: workflowVisStartTime,
-        endTime: Date.now(),
-        duration: Date.now() - workflowVisStartTime,
-        agentType: 'VisualizationAgent'
-      };
+      try {
+        const taskResult = await taskExecutionAgent.process(
+          USER_CONFIG.ORGANIZATION_TASK,
+          context
+        );
+        
+        // Record metrics
+        context.metrics.stageMetrics['task_execution'] = {
+          startTime: taskStartTime,
+          endTime: Date.now(),
+          duration: Date.now() - taskStartTime,
+          agentType: 'LLMAgent'
+        };
+        
+        // Save the task result
+        context.outputs.task_execution = taskResult;
+        fs.writeJsonSync(path.join(outputDir, 'data', 'task_execution_result.json'), taskResult, { spaces: 2 });
+        
+        logger.info(`Task execution completed`);
+      } catch (error) {
+        logger.error(`Failed to execute task: ${error}`);
+        throw error;
+      }
       
-      // Save the visualization result
-      context.outputs.workflow_visualization = workflowVisResult;
-      logger.info(`Generated workflow visualization`);
+      // STEP 6: Generate workflow visualization for the task execution
+      logger.info('Generating workflow visualization');
+      const workflowVisStartTime = Date.now();
+      
+      try {
+        // Create a workflow visualization structure that includes units for visualization
+        const workflowVisStructure = {
+          name: `${organizationSchema.name} - Task Workflow`,
+          description: `Workflow for executing: ${USER_CONFIG.ORGANIZATION_TASK}`,
+          units: organizationSchema.units,
+          stages: context.outputs.task_execution.stage_outputs.map((stage: any) => ({
+            id: stage.stage_id,
+            name: stage.stage_id.replace(/_/g, ' ').replace(/\b\w/g, (letter: string) => letter.toUpperCase()),
+            description: stage.output.substring(0, 100) + (stage.output.length > 100 ? '...' : ''),
+            unitId: stage.unit_id,
+            dependencies: context.outputs.task_execution.stage_outputs
+              .filter((s: any) => stage.input && stage.input.includes(s.stage_id))
+              .map((s: any) => s.stage_id)
+          }))
+        };
+        
+        const workflowVisualizationAgent = new VisualizationAgent({
+          id: 'workflow_visualizer',
+          name: 'Workflow Visualizer',
+          unitId: 'meta_unit',
+          unitName: 'Meta Unit',
+          description: 'Creates visual representations of workflows',
+          visualizationType: 'workflow-diagram'
+        });
+        
+        const workflowVisResult = await workflowVisualizationAgent.process(
+          workflowVisStructure,
+          context
+        );
+        
+        // Record metrics
+        context.metrics.stageMetrics['workflow_visualization'] = {
+          startTime: workflowVisStartTime,
+          endTime: Date.now(),
+          duration: Date.now() - workflowVisStartTime,
+          agentType: 'VisualizationAgent'
+        };
+        
+        // Save the visualization result
+        context.outputs.workflow_visualization = workflowVisResult;
+        logger.info(`Generated workflow visualization`);
+      } catch (error) {
+        logger.error(`Failed to generate workflow visualization: ${error}`);
+        // Continue execution even if visualization fails
+      }
+      
+      // STEP 7: Generate summary HTML report
+      logger.info('Generating summary report');
+      
+      try {
+        const summaryHtml = generateSummaryHtml(context);
+        fs.writeFileSync(path.join(outputDir, 'index.html'), summaryHtml);
+        logger.info(`Generated summary report at ${path.join(outputDir, 'index.html')}`);
+      } catch (error) {
+        logger.error(`Failed to generate summary report: ${error}`);
+      }
+      
+      // Return the output directory for the caller
+      return outputDir;
     } catch (error) {
-      logger.error(`Failed to generate workflow visualization: ${error}`);
-      // Continue execution even if visualization fails
+      console.error('Workflow failed inside runDynamicOrgGenerator:', error);
+      throw error;
     }
-    
-    // STEP 7: Generate summary HTML report
-    logger.info('Generating summary report');
-    
-    try {
-      const summaryHtml = generateSummaryHtml(context);
-      fs.writeFileSync(path.join(outputDir, 'index.html'), summaryHtml);
-      logger.info(`Generated summary report at ${path.join(outputDir, 'index.html')}`);
-    } catch (error) {
-      logger.error(`Failed to generate summary report: ${error}`);
-    }
-    
-    // Return the output directory for the caller
-    return outputDir;
   } catch (error) {
     console.error('Workflow failed:', error);
     throw error;
@@ -1034,5 +1064,18 @@ ${taskResult.final_deliverable.summary}
 </html>`;
 }
 
-// Export the main function for the runner
+// Ensure the main function is called when the script is executed directly
+if (require.main === module) {
+  console.log("Executing runDynamicOrgGenerator directly...");
+  runDynamicOrgGenerator()
+    .then(finalOutputDir => {
+      console.log(`✅ Workflow finished successfully. Output: ${finalOutputDir}`);
+    })
+    .catch(error => {
+      console.error("❌ Workflow run failed:", error);
+      process.exit(1);
+    });
+}
+
+// Export the main function for the runner script
 export { runDynamicOrgGenerator }; 

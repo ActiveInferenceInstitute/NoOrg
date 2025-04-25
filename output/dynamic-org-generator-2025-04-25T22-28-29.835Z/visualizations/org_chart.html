@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lollipop Organization - Organization Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .diagram-container { border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px; background: white; }
+    .org-info { border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px; background: white; }
+    .units-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+    .unit-card { border: 1px solid #ddd; border-radius: 5px; padding: 15px; background: white; }
+    .unit-header { background: #e3f2fd; padding: 10px; border-radius: 5px 5px 0 0; margin: -15px -15px 15px -15px; }
+    .role-card { border: 1px solid #eee; border-radius: 5px; padding: 10px; margin-top: 10px; background: #f5f5f5; }
+    h1, h2, h3 { color: #333; }
+    .header { text-align: center; margin-bottom: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Lollipop Organization</h1>
+      <p>An organization literally shaped like a lollipop with a hierarchical 'stick' for core functions and a hub-and-spoke 'candy' top for operations.</p>
+    </div>
+    
+    <div class="diagram-container">
+      <h2>Organization Chart</h2>
+      <div class="mermaid">
+graph TD;
+    org["Lollipop Organization"]
+    style org fill:#f9f9f9,stroke:#333,stroke-width:2px
+    stick_supply_chain["Supply Chain Management"]
+    style stick_supply_chain fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> stick_supply_chain
+    supply_chain_manager["Supply Chain Manager"]
+    style supply_chain_manager fill:#f5f5f5,stroke:#666,stroke-width:1px
+    stick_supply_chain --> supply_chain_manager
+    stick_hr["Human Resources"]
+    style stick_hr fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> stick_hr
+    hr_manager["HR Manager"]
+    style hr_manager fill:#f5f5f5,stroke:#666,stroke-width:1px
+    stick_hr --> hr_manager
+    stick_finance["Finance"]
+    style stick_finance fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> stick_finance
+    finance_manager["Finance Manager"]
+    style finance_manager fill:#f5f5f5,stroke:#666,stroke-width:1px
+    stick_finance --> finance_manager
+    candy_coordination["Central Coordination Unit"]
+    style candy_coordination fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> candy_coordination
+    coordination_lead["Coordination Lead"]
+    style coordination_lead fill:#f5f5f5,stroke:#666,stroke-width:1px
+    candy_coordination --> coordination_lead
+    candy_flavor_rnd["Flavor R&D"]
+    style candy_flavor_rnd fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> candy_flavor_rnd
+    flavor_scientist["Flavor Scientist"]
+    style flavor_scientist fill:#f5f5f5,stroke:#666,stroke-width:1px
+    candy_flavor_rnd --> flavor_scientist
+    candy_making["Candy Making"]
+    style candy_making fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> candy_making
+    candy_producer["Candy Producer"]
+    style candy_producer fill:#f5f5f5,stroke:#666,stroke-width:1px
+    candy_making --> candy_producer
+    candy_stick_production["Stick Production"]
+    style candy_stick_production fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> candy_stick_production
+    stick_producer["Stick Producer"]
+    style stick_producer fill:#f5f5f5,stroke:#666,stroke-width:1px
+    candy_stick_production --> stick_producer
+    candy_wrapping_packaging["Wrapping & Packaging"]
+    style candy_wrapping_packaging fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> candy_wrapping_packaging
+    packaging_specialist["Packaging Specialist"]
+    style packaging_specialist fill:#f5f5f5,stroke:#666,stroke-width:1px
+    candy_wrapping_packaging --> packaging_specialist
+    candy_quality_assurance["Quality Assurance"]
+    style candy_quality_assurance fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> candy_quality_assurance
+    qa_analyst["QA Analyst"]
+    style qa_analyst fill:#f5f5f5,stroke:#666,stroke-width:1px
+    candy_quality_assurance --> qa_analyst
+    candy_marketing_sales["Marketing & Sales"]
+    style candy_marketing_sales fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    org --> candy_marketing_sales
+    marketing_manager["Marketing Manager"]
+    style marketing_manager fill:#f5f5f5,stroke:#666,stroke-width:1px
+    candy_marketing_sales --> marketing_manager
+
+      </div>
+    </div>
+    
+    <div class="org-info">
+      <h2>Organization Details</h2>
+      <p><strong>Organization:</strong> Lollipop Organization</p>
+      <p><strong>Description:</strong> An organization literally shaped like a lollipop with a hierarchical 'stick' for core functions and a hub-and-spoke 'candy' top for operations.</p>
+      <p><strong>Units:</strong> 10</p>
+      <p><strong>Total Roles:</strong> 10</p>
+    </div>
+    
+    <h2>Units & Roles</h2>
+    <div class="units-container">
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Supply Chain Management</h3>
+          </div>
+          <p>Manages the logistics and supply of raw materials for lollipop production.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Supply Chain Manager</h5>
+              <p>Oversees the supply chain operations.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Coordinate with suppliers to ensure timely delivery of materials</li><li>Optimize inventory levels</li><li>Manage supply chain risks</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Human Resources</h3>
+          </div>
+          <p>Responsible for the recruitment, training, and welfare of employees.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>HR Manager</h5>
+              <p>Leads the HR team and oversees all HR functions.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Recruit and train new employees</li><li>Manage employee benefits and relations</li><li>Ensure compliance with labor laws</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Finance</h3>
+          </div>
+          <p>Handles the financial health and planning of the organization.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Finance Manager</h5>
+              <p>Oversees financial planning and analysis.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Prepare financial reports</li><li>Manage budgets</li><li>Conduct financial forecasting</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Central Coordination Unit</h3>
+          </div>
+          <p>Coordinates operations across all spokes of the candy layer.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Coordination Lead</h5>
+              <p>Leads the central coordination efforts.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Facilitate communication between operational spokes</li><li>Monitor overall project timelines</li><li>Resolve cross-functional issues</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Flavor R&D</h3>
+          </div>
+          <p>Researches and develops new lollipop flavors.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Flavor Scientist</h5>
+              <p>Researches and creates new flavors.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Develop new flavor formulations</li><li>Conduct taste tests</li><li>Ensure compliance with safety standards</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Candy Making</h3>
+          </div>
+          <p>Produces the core candy components of the lollipop.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Candy Producer</h5>
+              <p>Operates candy production equipment.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Manage candy production lines</li><li>Ensure quality of candy produced</li><li>Maintain equipment</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Stick Production</h3>
+          </div>
+          <p>Manufactures the sticks for the lollipops.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Stick Producer</h5>
+              <p>Oversees stick manufacturing processes.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Operate stick production machinery</li><li>Ensure stick quality</li><li>Source materials for stick production</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Wrapping & Packaging</h3>
+          </div>
+          <p>Handles the wrapping and packaging of finished lollipops.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Packaging Specialist</h5>
+              <p>Manages the packaging process.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Design packaging for new products</li><li>Ensure packaging quality</li><li>Oversee packaging operations</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Quality Assurance</h3>
+          </div>
+          <p>Ensures the quality and safety of all lollipop products.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>QA Analyst</h5>
+              <p>Conducts quality checks and audits.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Perform quality inspections</li><li>Document quality issues</li><li>Implement quality improvement plans</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+        <div class="unit-card">
+          <div class="unit-header">
+            <h3>Marketing & Sales</h3>
+          </div>
+          <p>Responsible for marketing the lollipops and managing sales.</p>
+          <h4>Roles:</h4>
+          
+            <div class="role-card">
+              <h5>Marketing Manager</h5>
+              <p>Leads marketing campaigns and sales strategy.</p>
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                <li>Develop marketing strategies</li><li>Manage sales team</li><li>Analyze market trends</li>
+              </ul>
+            </div>
+          
+        </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+</body>
+</html>

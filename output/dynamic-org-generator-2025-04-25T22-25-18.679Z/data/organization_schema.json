@@ -1,0 +1,161 @@
+{
+  "name": "Sustainable Urban Agriculture Technologies Institute",
+  "description": "A compact research organization focused on advancing sustainable urban agriculture technologies.",
+  "units": [
+    {
+      "id": "research_unit",
+      "name": "Research Unit",
+      "description": "Responsible for conducting primary research and feasibility studies on urban agriculture technologies.",
+      "roles": [
+        {
+          "id": "lead_researcher",
+          "name": "Lead Researcher",
+          "description": "Oversees all research activities and ensures alignment with organizational goals.",
+          "responsibilities": [
+            "Develop research agendas and methodologies",
+            "Supervise research team members",
+            "Analyze and interpret research data"
+          ]
+        },
+        {
+          "id": "research_analyst",
+          "name": "Research Analyst",
+          "description": "Conducts data collection and analysis for research projects.",
+          "responsibilities": [
+            "Collect data from various sources",
+            "Perform statistical analyses",
+            "Prepare research reports"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "development_unit",
+      "name": "Development Unit",
+      "description": "Focuses on the engineering and prototyping of new urban agriculture technologies.",
+      "roles": [
+        {
+          "id": "development_manager",
+          "name": "Development Manager",
+          "description": "Leads the development of prototypes and ensures technical feasibility.",
+          "responsibilities": [
+            "Plan and oversee development projects",
+            "Coordinate with research and business units",
+            "Evaluate prototypes for efficiency and sustainability"
+          ]
+        },
+        {
+          "id": "engineer",
+          "name": "Engineer",
+          "description": "Designs and tests prototypes for urban agriculture technologies.",
+          "responsibilities": [
+            "Create design specifications",
+            "Build and test prototypes",
+            "Document engineering processes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "community_outreach_unit",
+      "name": "Community Outreach Unit",
+      "description": "Engages with communities to promote urban agriculture technologies and gather feedback.",
+      "roles": [
+        {
+          "id": "outreach_coordinator",
+          "name": "Outreach Coordinator",
+          "description": "Plans and executes community engagement activities.",
+          "responsibilities": [
+            "Develop outreach programs",
+            "Coordinate with local communities",
+            "Collect community feedback"
+          ]
+        },
+        {
+          "id": "community_engagement_specialist",
+          "name": "Community Engagement Specialist",
+          "description": "Facilitates workshops and provides support for community projects.",
+          "responsibilities": [
+            "Conduct community workshops",
+            "Provide technical assistance to community members",
+            "Evaluate community impact"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "business_development_unit",
+      "name": "Business Development Unit",
+      "description": "Responsible for the commercialization of technologies and securing funding.",
+      "roles": [
+        {
+          "id": "business_development_manager",
+          "name": "Business Development Manager",
+          "description": "Identifies market opportunities and manages partnerships.",
+          "responsibilities": [
+            "Develop business strategies",
+            "Establish partnerships with stakeholders",
+            "Secure funding and investments"
+          ]
+        },
+        {
+          "id": "marketing_specialist",
+          "name": "Marketing Specialist",
+          "description": "Promotes the organization's technologies and initiatives.",
+          "responsibilities": [
+            "Create marketing materials",
+            "Manage social media presence",
+            "Organize promotional events"
+          ]
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "id": "technology_development_workflow",
+      "name": "Technology Development Workflow",
+      "description": "A process to develop and launch new urban agriculture technologies.",
+      "stages": [
+        {
+          "id": "stage_1",
+          "name": "Research and Analysis",
+          "description": "Conduct initial research and feasibility studies.",
+          "unitId": "research_unit",
+          "roleId": "lead_researcher",
+          "dependencies": []
+        },
+        {
+          "id": "stage_2",
+          "name": "Prototype Development",
+          "description": "Develop and test prototypes based on research findings.",
+          "unitId": "development_unit",
+          "roleId": "development_manager",
+          "dependencies": [
+            "stage_1"
+          ]
+        },
+        {
+          "id": "stage_3",
+          "name": "Community Feedback",
+          "description": "Engage with communities to gather feedback on prototypes.",
+          "unitId": "community_outreach_unit",
+          "roleId": "outreach_coordinator",
+          "dependencies": [
+            "stage_2"
+          ]
+        },
+        {
+          "id": "stage_4",
+          "name": "Commercialization",
+          "description": "Market the developed technology and secure partnerships.",
+          "unitId": "business_development_unit",
+          "roleId": "business_development_manager",
+          "dependencies": [
+            "stage_3"
+          ]
+        }
+      ]
+    }
+  ]
+}

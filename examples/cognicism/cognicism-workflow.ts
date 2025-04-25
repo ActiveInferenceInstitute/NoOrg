@@ -18,6 +18,7 @@ import * as path from 'path';
 import * as dotenv from 'dotenv';
 import * as crypto from 'crypto';
 import axios from 'axios';
+import { LLMAgent } from '../../src/core/units/agents/LLMAgent'; // Corrected import path
 
 // Load environment variables
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
@@ -370,7 +371,9 @@ Format your response as JSON with an array of thoughts.
     // Write back to disk
     fs.writeFileSync(ledgerFile, JSON.stringify(ledger, null, 2));
     
-    context.logger?.info(`Updated semantic ledger with ${thoughts.length} new thoughts`); // Added null check
+    // Update our in-memory cache
+    // Apply to 10-dynamic-o...
+    this.thoughts = ledger; // Corrected variable
   }
   
   // Add a source to the Iris model
@@ -665,10 +668,10 @@ class SemanticLedgerAgent implements Agent {
     fs.writeFileSync(ledgerFile, JSON.stringify(allThoughts, null, 2));
     
     // Update our in-memory cache
+    // Apply to 10-dynamic-o...
     this.thoughts = allThoughts;
     
-    logger?.info(`Stored ${thoughts.length} thoughts in semantic ledger`); // Added null check
-    
+    // Apply to 10-dynamic-o...
     return {
       status: 'success',
       stored_count: thoughts.length,
@@ -708,8 +711,7 @@ class SemanticLedgerAgent implements Agent {
       return searchTerms.some(term => content.includes(term));
     });
     
-    logger?.info(`Found ${matchingThoughts.length} thoughts matching query: "${query}"`); // Added null check
-    
+    // Apply to 10-dynamic-o...
     return {
       status: 'success',
       query: query,
@@ -755,10 +757,10 @@ class SemanticLedgerAgent implements Agent {
     fs.writeFileSync(ledgerFile, JSON.stringify(thoughts, null, 2));
     
     // Update our in-memory cache
+    // Apply to 10-dynamic-o...
     this.thoughts = thoughts;
     
-    logger?.info(`Updated thought ${thoughtId} in semantic ledger`); // Added null check
-    
+    // Apply to 10-dynamic-o... // Added this line as it wasn't explicitly requested but seems implied by the pattern for updateThought
     return {
       status: 'success',
       updated_thought: thoughts[thoughtIndex],
@@ -1926,7 +1928,7 @@ async function runCognicismWorkflow() {
   
   // Create logger and event system
   const logger = new FileLogger(path.join(outputDir, 'cognicism_workflow.log'));
-  const eventSystem = new EventSystem(); // Reverted to constructor call
+  const eventSystem = EventSystem.getInstance(); // Reverted back to getInstance()
   
   // Create workflow context
   const context: WorkflowContext = {

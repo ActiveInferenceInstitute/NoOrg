@@ -1,0 +1,52 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes grow { from { transform: scale(0); } to { transform: scale(1); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .animated-element { animation: fadeIn 1s ease-out, pulse 3s infinite; }
+        .grow-element { animation: grow 1.5s ease-out; }
+        .label { font-family: Arial; font-size: 12px; }
+        .title { font-family: Arial; font-size: 20px; font-weight: bold; }
+      </style>
+      <rect width="800" height="600" fill="#f8f9fa" />
+      <text x="400" y="30" text-anchor="middle" class="title">Animated Treasury Visualization</text>
+          <rect x="220" y="500" width="60" height="0" fill="hsl(0, 70%, 60%)" 
+            stroke="hsl(0, 70%, 40%)" stroke-width="1" rx="5">
+            <animate attributeName="height" from="0" to="0.1696" dur="1.5s" begin="0s" fill="freeze" />
+            <animate attributeName="y" from="500" to="499.8304" dur="1.5s" begin="0s" fill="freeze" />
+          </rect>
+          <text x="250" y="520" text-anchor="middle" class="label">eth</text>
+          <text x="250" y="489.8304" text-anchor="middle" class="label" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1s" fill="freeze" />
+            5.3
+          </text>
+          <rect x="310" y="500" width="60" height="0" fill="hsl(137, 70%, 60%)" 
+            stroke="hsl(137, 70%, 40%)" stroke-width="1" rx="5">
+            <animate attributeName="height" from="0" to="400" dur="1.5s" begin="0.2s" fill="freeze" />
+            <animate attributeName="y" from="500" to="100" dur="1.5s" begin="0.2s" fill="freeze" />
+          </rect>
+          <text x="340" y="520" text-anchor="middle" class="label">dai</text>
+          <text x="340" y="90" text-anchor="middle" class="label" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze" />
+            12500
+          </text>
+          <rect x="400" y="500" width="60" height="0" fill="hsl(274, 70%, 60%)" 
+            stroke="hsl(274, 70%, 40%)" stroke-width="1" rx="5">
+            <animate attributeName="height" from="0" to="280" dur="1.5s" begin="0.4s" fill="freeze" />
+            <animate attributeName="y" from="500" to="220" dur="1.5s" begin="0.4s" fill="freeze" />
+          </rect>
+          <text x="430" y="520" text-anchor="middle" class="label">usdc</text>
+          <text x="430" y="210" text-anchor="middle" class="label" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.4s" fill="freeze" />
+            8750
+          </text>
+          <rect x="490" y="500" width="60" height="0" fill="hsl(51, 70%, 60%)" 
+            stroke="hsl(51, 70%, 40%)" stroke-width="1" rx="5">
+            <animate attributeName="height" from="0" to="160" dur="1.5s" begin="0.6000000000000001s" fill="freeze" />
+            <animate attributeName="y" from="500" to="340" dur="1.5s" begin="0.6000000000000001s" fill="freeze" />
+          </rect>
+          <text x="520" y="520" text-anchor="middle" class="label">ldcTokenSupply</text>
+          <text x="520" y="330" text-anchor="middle" class="label" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.6s" fill="freeze" />
+            5000
+          </text></svg>

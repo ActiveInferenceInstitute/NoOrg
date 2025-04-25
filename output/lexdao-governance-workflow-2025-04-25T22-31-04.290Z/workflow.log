@@ -1,0 +1,192 @@
+
+----- Log started at 2025-04-25T22:31:04.307Z -----
+[INFO] 2025-04-25T22:31:04.309Z: Workflow started
+[LOG] 2025-04-25T22:31:04.313Z: Loaded 0 workflow templates from disk
+[LOG] 2025-04-25T22:31:04.314Z: Registered task executor for action: execute
+[INFO] 2025-04-25T22:31:04.314Z: Creating workflow definition
+[INFO] 2025-04-25T22:31:04.318Z: Starting workflow with ID: 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.319Z: Executing task Constitution Analysis (constitution_analysis) in workflow 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.321Z: Executing task: Constitution Analysis (ID: constitution_analysis)
+[INFO] 2025-04-25T22:31:04.321Z: Preparing input for task Constitution Analysis
+[INFO] 2025-04-25T22:31:04.322Z: Processing task Constitution Analysis with agent Document Analyzer
+[INFO] 2025-04-25T22:31:04.323Z: DocumentProcessingAgent Document Analyzer processing document
+[INFO] 2025-04-25T22:31:04.324Z: Document is large (30971 chars), chunking into smaller pieces
+[INFO] 2025-04-25T22:31:04.325Z: Created 7 chunks
+[INFO] 2025-04-25T22:31:04.328Z: Executing task Membership Simulation (membership_simulation) in workflow 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.328Z: Executing task: Membership Simulation (ID: membership_simulation)
+[INFO] 2025-04-25T22:31:04.329Z: Preparing input for task Membership Simulation
+[INFO] 2025-04-25T22:31:04.330Z: Processing task Membership Simulation with agent Membership Manager
+[INFO] 2025-04-25T22:31:04.332Z: BlockchainAgent Membership Manager processing input: {"members":[{"address":"0xfa1e6315bf340a66581412d61e24b24ac5981a24","tokens":1000,"joined":"2024-07-17T08:28:57.680Z","status":"active","lastActivity":"2025-02-28T04:06:21.009Z","votes":11,"proposals":0},{"address":"0x4f786e1cba689a7942eb669e8af3bf1617d3f6b8","tokens":1000,"joined":"2024-12-15T11:19:02.889Z","status":"active","lastActivity":"2025-02-07T21:46:04.630Z","votes":5,"proposals":0},{"address":"0xf792923c8030d1af888388e947212a9031bd4c7d","tokens":1000,"joined":"2024-07-03T11:49:13.024Z","status":"active","lastActivity":"2024-05-09T18:35:53.842Z","votes":7,"proposals":0},{"address":"0xc2c68e3f5ce9e48dfa203d8d983942a09cb5bc74","tokens":1000,"joined":"2024-11-22T00:28:26.602Z","status":"active","lastActivity":"2024-11-26T06:21:01.302Z","votes":17,"proposals":0},{"address":"0x7b20dc586e401508d34e6e7f01aa8f169938db1d","tokens":1000,"joined":"2024-11-06T18:59:52.161Z","status":"active","lastActivity":"2025-03-20T05:01:18.307Z","votes":6,"proposals":0},{"address":"0xbb6a7348a1d3f2c634c52c57a50960ff6f25cff7","tokens":1000,"joined":"2024-09-14T11:52:16.001Z","status":"active","lastActivity":"2024-06-09T05:59:10.713Z","votes":11,"proposals":0},{"address":"0xc3493ffd753c62fb9d8b60a4659a1061a8b3905a","tokens":1000,"joined":"2024-07-01T15:37:59.234Z","status":"active","lastActivity":"2024-05-07T19:39:08.193Z","votes":11,"proposals":0},{"address":"0x9cb63478823d3abf822aed24905568aeae99d19a","tokens":1000,"joined":"2024-10-02T22:44:22.200Z","status":"active","lastActivity":"2024-12-19T22:53:15.826Z","votes":17,"proposals":2},{"address":"0x9e26d3fff2521db5a5e9db59b60e7adaccf57af3","tokens":1000,"joined":"2024-05-10T16:47:44.559Z","status":"inactive","lastActivity":"2024-05-08T20:30:33.946Z","votes":2,"proposals":0},{"address":"0x0bf7b87882d74ff07a42b2b8f0808630d69475f1","tokens":1000,"joined":"2025-02-25T22:21:44.121Z","status":"active","lastActivity":"2024-12-03T06:34:01.825Z","votes":4,"proposals":2},{"address":"0x73129f3cf76367967fd7a0b60b09fcd9348246f3","tokens":1000,"joined":"2025-02-18T20:15:56.408Z","status":"active","lastActivity":"2025-01-03T02:45:28.187Z","votes":12,"proposals":0},{"address":"0x2ef2baa9b25ffed24cdd35b181517de65e8a0d38","tokens":1000,"joined":"2025-03-20T02:47:59.230Z","status":"active","lastActivity":"2024-10-05T13:53:22.906Z","votes":19,"proposals":2},{"address":"0x2cb79e26df949dc7ae33a2fc75e5cb84aabef9cc","tokens":1000,"joined":"2024-08-06T18:36:36.866Z","status":"active","lastActivity":"2025-03-12T20:56:30.125Z","votes":2,"proposals":0},{"address":"0x8ff2766b7d920596ab42b8f76391a4e1e1232a4a","tokens":1000,"joined":"2024-07-10T10:10:01.329Z","status":"active","lastActivity":"2024-05-02T23:41:51.098Z","votes":16,"proposals":0},{"address":"0xcf216e07cafcf9c7136391df50752549c91b0e12","tokens":1000,"joined":"2024-12-03T00:28:55.193Z","status":"active","lastActivity":"2024-12-20T08:31:32.182Z","votes":19,"proposals":2},{"address":"0x35a414fb484406a2d6652f34a19bbdec16ff17d5","tokens":1000,"joined":"2025-01-26T18:48:44.734Z","status":"active","lastActivity":"2024-10-05T23:24:25.113Z","votes":12,"proposals":0},{"address":"0x3ad409e3bc40d0c7f7de6ac5f7074b4b863d8e56","tokens":1000,"joined":"2025-04-21T03:30:38.843Z","status":"active","lastActivity":"2025-03-19T14:32:03.166Z","votes":6,"proposals":2},{"address":"0x4f77c4c88e215259f62f49e4cd1a2ece6dc5e054","tokens":1000,"joined":"2025-04-02T12:06:05.215Z","status":"active","lastActivity":"2024-09-16T20:40:22.037Z","votes":7,"proposals":0},{"address":"0xe17d5a51efd377ba67e133f9a0ed1d999721e597","tokens":1000,"joined":"2025-03-06T18:48:25.740Z","status":"inactive","lastActivity":"2024-05-22T01:04:09.234Z","votes":7,"proposals":0},{"address":"0x2058ca1dcd0977677efecbd3e254aa30a599ee39","tokens":1000,"joined":"2024-05-09T22:18:13.008Z","status":"active","lastActivity":"2024-04-26T15:59:46.260Z","votes":3,"proposals":0},{"address":"0x5888efc26439bbbf1d461e431ba0893302a2008c","tokens":1000,"joined":"2024-11-09T14:35:08.943Z","status":"active","lastActivity":"2025-04-01T19:26:52.648Z","votes":16,"proposals":1},{"address":"0xbd7b22629964fb395b825b4f9d8ecc0e18144b54","tokens":1000,"joined":"2024-09-11T18:01:18.910Z","status":"active","lastActivity":"2024-10-26T13:38:45.838Z","votes":14,"proposals":0},{"address":"0x8df9cf93ac3e02c86347095dcb3ea309ff1f7a42","tokens":1000,"joined":"2024-10-31T13:59:05.498Z","status":"inactive","lastActivity":"2025-02-06T00:01:20.845Z","votes":3,"proposals":0},{"address":"0xc8b380661da3721c653a5a93318437a8b2eee98b","tokens":1000,"joined":"2024-11-21T12:37:28.889Z","status":"active","lastActivity":"2024-06-19T05:19:56.510Z","votes":2,"proposals":0},{"address":"0x9a1a0c02c544c2737f3bae4823ca20756c74cbfc","tokens":1000,"joined":"2024-05-11T02:47:12.327Z","status":"active","lastActivity":"2025-01-06T01:29:48.404Z","votes":15,"proposals":0},{"address":"0x3f7cc48812121c199de76880b03a61b09d4d85e7","tokens":1000,"joined":"2024-09-18T02:33:37.887Z","status":"active","lastActivity":"2025-03-08T07:32:23.712Z","votes":2,"proposals":0},{"address":"0x97274f31988e3a1c4d121baecce1cc578246675c","tokens":1000,"joined":"2024-08-14T08:11:05.752Z","status":"inactive","lastActivity":"2025-03-22T19:42:21.228Z","votes":3,"proposals":0},{"address":"0x25b41ed70665138ef616f2db63a42efeca462092","tokens":1000,"joined":"2024-12-03T14:41:42.288Z","status":"active","lastActivity":"2025-03-16T05:42:26.602Z","votes":19,"proposals":0},{"address":"0x17453b2b4734b9408d192468bc8b9a2d492a8efd","tokens":1000,"joined":"2024-08-26T16:09:35.201Z","status":"active","lastActivity":"2024-07-09T16:21:51.298Z","votes":10,"proposals":0},{"address":"0x2cea72c1fc4df746c87e729cd6fd5bc23bf90ff7","tokens":1000,"joined":"2025-03-28T14:46:36.336Z","status":"active","lastActivity":"2024-08-18T18:58:29.648Z","votes":18,"proposals":1},{"address":"0x1f1ed727c8e600c153b0ed063fac611a66956ccc","tokens":1000,"joined":"2024-10-16T18:40:05.869Z","status":"active","lastActivity":"2024-12-30T06:49:17.444Z","votes":10,"proposals":0},{"address":"0x79ac48649ba250f07da92977457b35fecc47b952","tokens":1000,"joined":"2024-10-10T12:14:02.416Z","status":"active","lastActivity":"2025-01-10T23:55:47.233Z","votes":19,"proposals":0},{"address":"0x03ca318062296e71e1cf138cc303f6de2dc77cdc","tokens":1000,"joined":"2025-01-16T07:53:41.523Z","status":"active","lastActivity":"2024-12-24T03:36:23.585Z","votes":10,"proposals":0},{"address":"0x3175b28d85d546d12e00130029d31533e41eb891","tokens":1000,"joined":"2024-09-12T20:10:08.166Z","status":"active","lastActivity":"2024-12-01T04:47:44.445Z","votes":8,"proposals":0},{"address":"0x251545dff2657e2084ab3e39ed04bd05a5b4aec2","tokens":1000,"joined":"2024-11-05T11:47:46.088Z","status":"inactive","lastActivity":"2025-03-18T19:40:01.101Z","votes":16,"proposals":0},{"address":"0x25a3d63836280a9fcb65c83963beab93b2f80ab6","tokens":1000,"joined":"2024-09-09T21:13:26.064Z","status":"active","lastActivity":"2024-07-17T04:55:37.783Z","votes":8,"proposals":0},{"address":"0xa87f02443e9c83708c8662aa168114dd87397c6e","tokens":1000,"joined":"2024-10-24T20:40:14.736Z","status":"active","lastActivity":"2025-03-13T22:02:20.614Z","votes":17,"proposals":0},{"address":"0x6958f9fd2e31f90eac07307218767d4059549064","tokens":1000,"joined":"2025-01-07T04:28:30.792Z","status":"active","lastActivity":"2025-02-23T16:45:41.031Z","votes":6,"proposals":0},{"address":"0xcac38c4c0d6f14b4055a7398717e8ace7bd35f6e","tokens":1000,"joined":"2024-05-28T10:10:37.827Z","status":"active","lastActivity":"2024-06-28T22:52:45.234Z","votes":7,"proposals":0},{"address":"0xe5216d0cf64f389fb62137cb4b95b05a3265967a","tokens":1000,"joined":"2024-08-27T20:28:08.605Z","status":"active","lastActivity":"2024-12-31T17:43:37.546Z","votes":10,"proposals":0},{"address":"0xce6005f75c77bab59f10244eb6a0b7041d558442","tokens":1000,"joined":"2025-01-05T13:22:44.018Z","status":"active","lastActivity":"2025-04-13T14:28:03.258Z","votes":14,"proposals":1},{"address":"0xbd1abc2d65b4f20ab9224d52fa57784e9e0115c0","tokens":1000,"joined":"2024-07-15T16:07:46.064Z","status":"active","lastActivity":"2024-11-22T22:56:33.258Z","votes":15,"proposals":0},{"address":"0x6d2afa3a6040f88c75d93084ba0993a42cdf1f3e","tokens":1000,"joined":"2024-06-19T17:33:31.679Z","status":"active","lastActivity":"2024-06-08T15:55:58.447Z","votes":9,"proposals":0},{"address":"0x4b99bd017688b61907e25c3ccf195e853ee64d92","tokens":1000,"joined":"2025-03-30T20:07:24.217Z","status":"active","lastActivity":"2025-01-16T04:44:53.387Z","votes":6,"proposals":0},{"address":"0xd69524f5be814af62df5eeb61761f666785be292","tokens":1000,"joined":"2024-08-21T16:29:37.804Z","status":"active","lastActivity":"2025-01-01T14:39:45.660Z","votes":17,"proposals":1},{"address":"0xdbde88822c374d91d388b6bd381637b4d22aae5b","tokens":1000,"joined":"2024-05-05T00:10:36.073Z","status":"active","lastActivity":"2024-05-26T22:21:40.868Z","votes":16,"proposals":0},{"address":"0x7a66b99a57132d3107f465874005f38622d3c7e4","tokens":1000,"joined":"2024-11-30T21:23:18.185Z","status":"active","lastActivity":"2024-05-08T22:12:09.072Z","votes":19,"proposals":2},{"address":"0x9c330d08c6f37a2840a9a950c07925ed7b3c28ea","tokens":1000,"joined":"2024-04-30T03:08:47.186Z","status":"active","lastActivity":"2024-12-03T08:11:06.441Z","votes":7,"proposals":1},{"address":"0x6c96ebb17ca39902d55f1b098ea106ae86e9a48c","tokens":1000,"joined":"2025-03-29T04:37:26.643Z","status":"active","lastActivity":"2024-10-10T13:42:54.099Z","votes":6,"proposals":0},{"address":"0xde4571ba553749012927964f4c6002002d626163","tokens":1000,"joined":"2025-03-17T22:27:02.746Z","status":"active","lastActivity":"2025-02-13T13:25:39.551Z","votes":14,"proposals":0}]}
+[INFO] 2025-04-25T22:31:04.334Z: Executing task Treasury Simulation (treasury_simulation) in workflow 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.335Z: Executing task: Treasury Simulation (ID: treasury_simulation)
+[INFO] 2025-04-25T22:31:04.335Z: Preparing input for task Treasury Simulation
+[INFO] 2025-04-25T22:31:04.335Z: Processing task Treasury Simulation with agent Treasury Manager
+[INFO] 2025-04-25T22:31:04.335Z: BlockchainAgent Treasury Manager processing input: {"operation":"getTreasuryBalance"}
+[INFO] 2025-04-25T22:31:04.335Z: Executing task Proposal Simulation (proposal_simulation) in workflow 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.335Z: Executing task: Proposal Simulation (ID: proposal_simulation)
+[INFO] 2025-04-25T22:31:04.335Z: Preparing input for task Proposal Simulation
+[INFO] 2025-04-25T22:31:04.336Z: Processing task Proposal Simulation with agent Proposal Validator
+[INFO] 2025-04-25T22:31:04.336Z: RuleBasedAgent Proposal Validator processing input
+[INFO] 2025-04-25T22:31:04.336Z: Entering workflow completion loop...
+[INFO] 2025-04-25T22:31:04.336Z: Workflow status: running
+[INFO] 2025-04-25T22:31:04.337Z: Task Constitution Analysis processing complete
+[ERROR] 2025-04-25T22:31:04.337Z: Error executing task membership_simulation (Membership Simulation): Unknown blockchain operation: undefined
+[INFO] 2025-04-25T22:31:04.337Z: Task Treasury Simulation processing complete
+[INFO] 2025-04-25T22:31:04.337Z: Task Proposal Simulation processing complete
+[INFO] 2025-04-25T22:31:04.338Z: Executing task Legal Interpretation (legal_interpretation) in workflow 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.338Z: Executing task: Legal Interpretation (ID: legal_interpretation)
+[INFO] 2025-04-25T22:31:04.338Z: Preparing input for task Legal Interpretation
+[INFO] 2025-04-25T22:31:04.338Z: Processing task Legal Interpretation with agent Legal Advisor
+[INFO] 2025-04-25T22:31:04.338Z: LLMAgent Legal Advisor processing input
+[INFO] 2025-04-25T22:31:04.339Z: Executing task Treasury Visualization (treasury_visualization) in workflow 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.340Z: Executing task: Treasury Visualization (ID: treasury_visualization)
+[INFO] 2025-04-25T22:31:04.340Z: Preparing input for task Treasury Visualization
+[INFO] 2025-04-25T22:31:04.340Z: Processing task Treasury Visualization with agent Treasury Visualizer
+[INFO] 2025-04-25T22:31:04.340Z: VisualizationAgent Treasury Visualizer creating treasury visualization
+[INFO] 2025-04-25T22:31:04.342Z: Executing task Proposals Visualization (proposals_visualization) in workflow 1d3c76dd-d0b4-4882-8e04-b43b24d86f8f
+[INFO] 2025-04-25T22:31:04.342Z: Executing task: Proposals Visualization (ID: proposals_visualization)
+[INFO] 2025-04-25T22:31:04.342Z: Preparing input for task Proposals Visualization
+[INFO] 2025-04-25T22:31:04.342Z: Processing task Proposals Visualization with agent Proposals Visualizer
+[INFO] 2025-04-25T22:31:04.342Z: VisualizationAgent Proposals Visualizer creating proposals visualization
+[INFO] 2025-04-25T22:31:04.343Z: Task Proposals Visualization processing complete
+[INFO] 2025-04-25T22:31:04.343Z: Task Treasury Visualization processing complete
+[INFO] 2025-04-25T22:31:06.346Z: Workflow status: running
+[INFO] 2025-04-25T22:31:08.357Z: Workflow status: running
+[INFO] 2025-04-25T22:31:10.367Z: Workflow status: running
+[INFO] 2025-04-25T22:31:12.377Z: Workflow status: running
+[INFO] 2025-04-25T22:31:14.386Z: Workflow status: running
+[INFO] 2025-04-25T22:31:16.397Z: Workflow status: running
+[INFO] 2025-04-25T22:31:17.194Z: Task Legal Interpretation processing complete
+[INFO] 2025-04-25T22:31:18.404Z: Workflow status: running
+[INFO] 2025-04-25T22:31:20.415Z: Workflow status: running
+[INFO] 2025-04-25T22:31:22.422Z: Workflow status: running
+[INFO] 2025-04-25T22:31:24.433Z: Workflow status: running
+[INFO] 2025-04-25T22:31:26.443Z: Workflow status: running
+[INFO] 2025-04-25T22:31:28.453Z: Workflow status: running
+[INFO] 2025-04-25T22:31:30.463Z: Workflow status: running
+[INFO] 2025-04-25T22:31:32.473Z: Workflow status: running
+[INFO] 2025-04-25T22:31:34.484Z: Workflow status: running
+[INFO] 2025-04-25T22:31:36.494Z: Workflow status: running
+[INFO] 2025-04-25T22:31:38.502Z: Workflow status: running
+[INFO] 2025-04-25T22:31:40.514Z: Workflow status: running
+[INFO] 2025-04-25T22:31:42.525Z: Workflow status: running
+[INFO] 2025-04-25T22:31:44.536Z: Workflow status: running
+[INFO] 2025-04-25T22:31:46.537Z: Workflow status: running
+[INFO] 2025-04-25T22:31:48.550Z: Workflow status: running
+[INFO] 2025-04-25T22:31:50.560Z: Workflow status: running
+[INFO] 2025-04-25T22:31:52.570Z: Workflow status: running
+[INFO] 2025-04-25T22:31:54.575Z: Workflow status: running
+[INFO] 2025-04-25T22:31:56.585Z: Workflow status: running
+[INFO] 2025-04-25T22:31:58.595Z: Workflow status: running
+[INFO] 2025-04-25T22:32:00.605Z: Workflow status: running
+[INFO] 2025-04-25T22:32:02.615Z: Workflow status: running
+[INFO] 2025-04-25T22:32:04.625Z: Workflow status: running
+[INFO] 2025-04-25T22:32:06.635Z: Workflow status: running
+[INFO] 2025-04-25T22:32:08.638Z: Workflow status: running
+[INFO] 2025-04-25T22:32:10.648Z: Workflow status: running
+[INFO] 2025-04-25T22:32:12.658Z: Workflow status: running
+[INFO] 2025-04-25T22:32:14.668Z: Workflow status: running
+[INFO] 2025-04-25T22:32:16.678Z: Workflow status: running
+[INFO] 2025-04-25T22:32:18.688Z: Workflow status: running
+[INFO] 2025-04-25T22:32:20.698Z: Workflow status: running
+[INFO] 2025-04-25T22:32:22.708Z: Workflow status: running
+[INFO] 2025-04-25T22:32:24.719Z: Workflow status: running
+[INFO] 2025-04-25T22:32:26.729Z: Workflow status: running
+[INFO] 2025-04-25T22:32:28.739Z: Workflow status: running
+[INFO] 2025-04-25T22:32:30.750Z: Workflow status: running
+[INFO] 2025-04-25T22:32:32.760Z: Workflow status: running
+[INFO] 2025-04-25T22:32:34.765Z: Workflow status: running
+[INFO] 2025-04-25T22:32:36.775Z: Workflow status: running
+[INFO] 2025-04-25T22:32:38.787Z: Workflow status: running
+[INFO] 2025-04-25T22:32:40.798Z: Workflow status: running
+[INFO] 2025-04-25T22:32:42.808Z: Workflow status: running
+[INFO] 2025-04-25T22:32:44.818Z: Workflow status: running
+[INFO] 2025-04-25T22:32:46.828Z: Workflow status: running
+[INFO] 2025-04-25T22:32:48.839Z: Workflow status: running
+[INFO] 2025-04-25T22:32:50.849Z: Workflow status: running
+[INFO] 2025-04-25T22:32:52.860Z: Workflow status: running
+[INFO] 2025-04-25T22:32:54.870Z: Workflow status: running
+[INFO] 2025-04-25T22:32:56.881Z: Workflow status: running
+[INFO] 2025-04-25T22:32:58.892Z: Workflow status: running
+[INFO] 2025-04-25T22:33:00.897Z: Workflow status: running
+[INFO] 2025-04-25T22:33:02.907Z: Workflow status: running
+[INFO] 2025-04-25T22:33:04.919Z: Workflow status: running
+[INFO] 2025-04-25T22:33:06.929Z: Workflow status: running
+[INFO] 2025-04-25T22:33:08.940Z: Workflow status: running
+[INFO] 2025-04-25T22:33:10.951Z: Workflow status: running
+[INFO] 2025-04-25T22:33:12.962Z: Workflow status: running
+[INFO] 2025-04-25T22:33:14.973Z: Workflow status: running
+[INFO] 2025-04-25T22:33:16.985Z: Workflow status: running
+[INFO] 2025-04-25T22:33:18.996Z: Workflow status: running
+[INFO] 2025-04-25T22:33:21.008Z: Workflow status: running
+[INFO] 2025-04-25T22:33:23.018Z: Workflow status: running
+[INFO] 2025-04-25T22:33:25.029Z: Workflow status: running
+[INFO] 2025-04-25T22:33:27.039Z: Workflow status: running
+[INFO] 2025-04-25T22:33:29.049Z: Workflow status: running
+[INFO] 2025-04-25T22:33:31.059Z: Workflow status: running
+[INFO] 2025-04-25T22:33:33.070Z: Workflow status: running
+[INFO] 2025-04-25T22:33:35.080Z: Workflow status: running
+[INFO] 2025-04-25T22:33:37.090Z: Workflow status: running
+[INFO] 2025-04-25T22:33:39.100Z: Workflow status: running
+[INFO] 2025-04-25T22:33:41.110Z: Workflow status: running
+[INFO] 2025-04-25T22:33:43.120Z: Workflow status: running
+[INFO] 2025-04-25T22:33:45.130Z: Workflow status: running
+[INFO] 2025-04-25T22:33:47.141Z: Workflow status: running
+[INFO] 2025-04-25T22:33:49.157Z: Workflow status: running
+[INFO] 2025-04-25T22:33:51.167Z: Workflow status: running
+[INFO] 2025-04-25T22:33:53.178Z: Workflow status: running
+[INFO] 2025-04-25T22:33:55.188Z: Workflow status: running
+[INFO] 2025-04-25T22:33:57.198Z: Workflow status: running
+[INFO] 2025-04-25T22:33:59.208Z: Workflow status: running
+[INFO] 2025-04-25T22:34:01.219Z: Workflow status: running
+[INFO] 2025-04-25T22:34:03.229Z: Workflow status: running
+[INFO] 2025-04-25T22:34:05.240Z: Workflow status: running
+[INFO] 2025-04-25T22:34:07.250Z: Workflow status: running
+[INFO] 2025-04-25T22:34:09.261Z: Workflow status: running
+[INFO] 2025-04-25T22:34:11.272Z: Workflow status: running
+[INFO] 2025-04-25T22:34:13.282Z: Workflow status: running
+[INFO] 2025-04-25T22:34:15.292Z: Workflow status: running
+[INFO] 2025-04-25T22:34:17.302Z: Workflow status: running
+[INFO] 2025-04-25T22:34:19.312Z: Workflow status: running
+[INFO] 2025-04-25T22:34:21.322Z: Workflow status: running
+[INFO] 2025-04-25T22:34:23.333Z: Workflow status: running
+[INFO] 2025-04-25T22:34:25.337Z: Workflow status: running
+[INFO] 2025-04-25T22:34:27.347Z: Workflow status: running
+[INFO] 2025-04-25T22:34:29.358Z: Workflow status: running
+[INFO] 2025-04-25T22:34:31.369Z: Workflow status: running
+[INFO] 2025-04-25T22:34:33.373Z: Workflow status: running
+[INFO] 2025-04-25T22:34:35.383Z: Workflow status: running
+[INFO] 2025-04-25T22:34:37.393Z: Workflow status: running
+[INFO] 2025-04-25T22:34:39.405Z: Workflow status: running
+[INFO] 2025-04-25T22:34:41.415Z: Workflow status: running
+[INFO] 2025-04-25T22:34:43.426Z: Workflow status: running
+[INFO] 2025-04-25T22:34:45.438Z: Workflow status: running
+[INFO] 2025-04-25T22:34:47.448Z: Workflow status: running
+[INFO] 2025-04-25T22:34:49.458Z: Workflow status: running
+[INFO] 2025-04-25T22:34:51.468Z: Workflow status: running
+[INFO] 2025-04-25T22:34:53.479Z: Workflow status: running
+[INFO] 2025-04-25T22:34:55.489Z: Workflow status: running
+[INFO] 2025-04-25T22:34:57.500Z: Workflow status: running
+[INFO] 2025-04-25T22:34:59.510Z: Workflow status: running
+[INFO] 2025-04-25T22:35:01.521Z: Workflow status: running
+[INFO] 2025-04-25T22:35:03.532Z: Workflow status: running
+[INFO] 2025-04-25T22:35:05.542Z: Workflow status: running
+[INFO] 2025-04-25T22:35:07.552Z: Workflow status: running
+[INFO] 2025-04-25T22:35:09.563Z: Workflow status: running
+[INFO] 2025-04-25T22:35:11.573Z: Workflow status: running
+[INFO] 2025-04-25T22:35:13.583Z: Workflow status: running
+[INFO] 2025-04-25T22:35:15.593Z: Workflow status: running
+[INFO] 2025-04-25T22:35:17.603Z: Workflow status: running
+[INFO] 2025-04-25T22:35:19.614Z: Workflow status: running
+[INFO] 2025-04-25T22:35:21.624Z: Workflow status: running
+[INFO] 2025-04-25T22:35:23.635Z: Workflow status: running
+[INFO] 2025-04-25T22:35:25.637Z: Workflow status: running
+[INFO] 2025-04-25T22:35:27.648Z: Workflow status: running
+[INFO] 2025-04-25T22:35:29.658Z: Workflow status: running
+[INFO] 2025-04-25T22:35:31.668Z: Workflow status: running
+[INFO] 2025-04-25T22:35:33.669Z: Workflow status: running
+[INFO] 2025-04-25T22:35:35.679Z: Workflow status: running
+[INFO] 2025-04-25T22:35:37.690Z: Workflow status: running
+[INFO] 2025-04-25T22:35:39.700Z: Workflow status: running
+[INFO] 2025-04-25T22:35:41.710Z: Workflow status: running
+[INFO] 2025-04-25T22:35:43.720Z: Workflow status: running

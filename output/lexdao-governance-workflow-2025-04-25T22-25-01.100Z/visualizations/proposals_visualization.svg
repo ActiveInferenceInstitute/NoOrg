@@ -1,0 +1,23 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .proposal-box { transition: all 0.3s ease; }
+        .proposal-box:hover { stroke-width: 3; }
+        .label { font-family: Arial; font-size: 12px; }
+        .title { font-family: Arial; font-size: 20px; font-weight: bold; }
+        .subtitle { font-family: Arial; font-size: 16px; }
+        .prop-title { font-family: Arial; font-size: 14px; font-weight: bold; }
+        .prop-detail { font-family: Arial; font-size: 12px; }
+      </style>
+      <rect width="800" height="600" fill="#f8f9fa" />
+      <text x="400" y="30" text-anchor="middle" class="title">LexDAO Governance Proposals</text>
+      <text x="400" y="60" text-anchor="middle" class="subtitle">Total Proposals: 0</text><line x1="100" y1="120" x2="700" y2="120" stroke="#ccc" stroke-width="2" />
+        <line x1="100" y1="110" x2="100" y2="130" stroke="#ccc" stroke-width="2" />
+        <text x="100" y="150" text-anchor="middle" class="label">0 months ago</text>
+        <line x1="250" y1="110" x2="250" y2="130" stroke="#ccc" stroke-width="2" />
+        <text x="250" y="150" text-anchor="middle" class="label">3 months ago</text>
+        <line x1="400" y1="110" x2="400" y2="130" stroke="#ccc" stroke-width="2" />
+        <text x="400" y="150" text-anchor="middle" class="label">6 months ago</text>
+        <line x1="550" y1="110" x2="550" y2="130" stroke="#ccc" stroke-width="2" />
+        <text x="550" y="150" text-anchor="middle" class="label">9 months ago</text>
+        <line x1="700" y1="110" x2="700" y2="130" stroke="#ccc" stroke-width="2" />
+        <text x="700" y="150" text-anchor="middle" class="label">12 months ago</text></svg>

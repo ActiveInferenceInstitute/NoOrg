@@ -1,0 +1,27 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .bar { transition: height 1s ease-out; }
+        .label { font-family: Arial; font-size: 12px; }
+        .title { font-family: Arial; font-size: 20px; font-weight: bold; }
+        .subtitle { font-family: Arial; font-size: 16px; }
+        .value { font-family: Arial; font-size: 14px; font-weight: bold; }
+      </style>
+      <rect width="800" height="600" fill="#f8f9fa" />
+      <text x="400" y="30" text-anchor="middle" class="title">LexDAO Treasury Assets</text>
+      <text x="400" y="60" text-anchor="middle" class="subtitle">Last Updated: 2025-04-25T22:25:01.132Z</text>
+        <rect x="220" y="499.8304" width="60" height="0.1696" fill="hsl(0, 70%, 60%)" 
+          stroke="hsl(0, 70%, 40%)" stroke-width="1" rx="5" class="bar" />
+        <text x="250" y="520" text-anchor="middle" class="label">eth</text>
+        <text x="250" y="489.8304" text-anchor="middle" class="value">5.3</text>
+        <rect x="310" y="100" width="60" height="400" fill="hsl(137, 70%, 60%)" 
+          stroke="hsl(137, 70%, 40%)" stroke-width="1" rx="5" class="bar" />
+        <text x="340" y="520" text-anchor="middle" class="label">dai</text>
+        <text x="340" y="90" text-anchor="middle" class="value">12500</text>
+        <rect x="400" y="220" width="60" height="280" fill="hsl(274, 70%, 60%)" 
+          stroke="hsl(274, 70%, 40%)" stroke-width="1" rx="5" class="bar" />
+        <text x="430" y="520" text-anchor="middle" class="label">usdc</text>
+        <text x="430" y="210" text-anchor="middle" class="value">8750</text>
+        <rect x="490" y="340" width="60" height="160" fill="hsl(51, 70%, 60%)" 
+          stroke="hsl(51, 70%, 40%)" stroke-width="1" rx="5" class="bar" />
+        <text x="520" y="520" text-anchor="middle" class="label">ldcTokenSupply</text>
+        <text x="520" y="330" text-anchor="middle" class="value">5000</text></svg>

@@ -1,0 +1,31 @@
+=== Dynamic Organization Generator - 2025-04-25T22:28:29.837Z ===
+
+[INFO] Initializing dynamic organization generator workflow
+[INFO] Organization Description: Design an organization literally shaped like a lollipop. It should feature a 'stick' composed of several vertically nested hierarchical layers for core production and support functions (e.g., supply chain, HR, finance). The 'candy' top layer should be a hub-and-spoke structure with a central coordination unit connected to 6 distinct operational spokes responsible for different aspects of lollipop creation (e.g., flavor R&D, candy making, stick production, wrapping & packaging, quality assurance, marketing & sales).
+[INFO] Organization Task: Design, produce, and package a new line of gourmet lollipops, focusing on unique flavor combinations and high-quality ingredients.
+[INFO] Creating organization analyzer agent
+[INFO] Generating organizational structure from description
+[INFO] LLMAgent Organization Analyzer processing input
+[INFO] Using model gpt-4o for request with estimated 465 tokens
+[INFO] Sending request to gpt-4o
+[INFO] Response received in 18309ms
+[INFO] Successfully extracted and parsed JSON from markdown code block
+[INFO] Generated organization schema with 10 units and 1 workflows
+[INFO] Generating organization chart visualization
+[INFO] VisualizationAgent Organization Visualizer processing input
+[INFO] Generating organization chart
+[INFO] Generated organization chart visualization
+[INFO] Creating task execution agent
+[INFO] Executing task through the organization
+[INFO] LLMAgent Task Execution Agent processing input
+[INFO] Using model gpt-4o for request with estimated 2570.25 tokens
+[INFO] Sending request to gpt-4o
+[INFO] Response received in 8913ms
+[INFO] Successfully extracted and parsed JSON from markdown code block
+[INFO] Task execution completed
+[INFO] Generating workflow visualization
+[INFO] VisualizationAgent Workflow Visualizer processing input
+[INFO] Generating workflow diagram
+[INFO] Generated workflow visualization
+[INFO] Generating summary report
+[INFO] Generated summary report at /home/trim/Documents/GitHub/NoOrg/output/dynamic-org-generator-2025-04-25T22-28-29.835Z/index.html

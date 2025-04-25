@@ -1,0 +1,242 @@
+{
+  "name": "Lollipop Organization",
+  "description": "An organization literally shaped like a lollipop with a hierarchical 'stick' for core functions and a hub-and-spoke 'candy' top for operations.",
+  "units": [
+    {
+      "id": "stick_supply_chain",
+      "name": "Supply Chain Management",
+      "description": "Manages the logistics and supply of raw materials for lollipop production.",
+      "roles": [
+        {
+          "id": "supply_chain_manager",
+          "name": "Supply Chain Manager",
+          "description": "Oversees the supply chain operations.",
+          "responsibilities": [
+            "Coordinate with suppliers to ensure timely delivery of materials",
+            "Optimize inventory levels",
+            "Manage supply chain risks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stick_hr",
+      "name": "Human Resources",
+      "description": "Responsible for the recruitment, training, and welfare of employees.",
+      "roles": [
+        {
+          "id": "hr_manager",
+          "name": "HR Manager",
+          "description": "Leads the HR team and oversees all HR functions.",
+          "responsibilities": [
+            "Recruit and train new employees",
+            "Manage employee benefits and relations",
+            "Ensure compliance with labor laws"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stick_finance",
+      "name": "Finance",
+      "description": "Handles the financial health and planning of the organization.",
+      "roles": [
+        {
+          "id": "finance_manager",
+          "name": "Finance Manager",
+          "description": "Oversees financial planning and analysis.",
+          "responsibilities": [
+            "Prepare financial reports",
+            "Manage budgets",
+            "Conduct financial forecasting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candy_coordination",
+      "name": "Central Coordination Unit",
+      "description": "Coordinates operations across all spokes of the candy layer.",
+      "roles": [
+        {
+          "id": "coordination_lead",
+          "name": "Coordination Lead",
+          "description": "Leads the central coordination efforts.",
+          "responsibilities": [
+            "Facilitate communication between operational spokes",
+            "Monitor overall project timelines",
+            "Resolve cross-functional issues"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candy_flavor_rnd",
+      "name": "Flavor R&D",
+      "description": "Researches and develops new lollipop flavors.",
+      "roles": [
+        {
+          "id": "flavor_scientist",
+          "name": "Flavor Scientist",
+          "description": "Researches and creates new flavors.",
+          "responsibilities": [
+            "Develop new flavor formulations",
+            "Conduct taste tests",
+            "Ensure compliance with safety standards"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candy_making",
+      "name": "Candy Making",
+      "description": "Produces the core candy components of the lollipop.",
+      "roles": [
+        {
+          "id": "candy_producer",
+          "name": "Candy Producer",
+          "description": "Operates candy production equipment.",
+          "responsibilities": [
+            "Manage candy production lines",
+            "Ensure quality of candy produced",
+            "Maintain equipment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candy_stick_production",
+      "name": "Stick Production",
+      "description": "Manufactures the sticks for the lollipops.",
+      "roles": [
+        {
+          "id": "stick_producer",
+          "name": "Stick Producer",
+          "description": "Oversees stick manufacturing processes.",
+          "responsibilities": [
+            "Operate stick production machinery",
+            "Ensure stick quality",
+            "Source materials for stick production"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candy_wrapping_packaging",
+      "name": "Wrapping & Packaging",
+      "description": "Handles the wrapping and packaging of finished lollipops.",
+      "roles": [
+        {
+          "id": "packaging_specialist",
+          "name": "Packaging Specialist",
+          "description": "Manages the packaging process.",
+          "responsibilities": [
+            "Design packaging for new products",
+            "Ensure packaging quality",
+            "Oversee packaging operations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candy_quality_assurance",
+      "name": "Quality Assurance",
+      "description": "Ensures the quality and safety of all lollipop products.",
+      "roles": [
+        {
+          "id": "qa_analyst",
+          "name": "QA Analyst",
+          "description": "Conducts quality checks and audits.",
+          "responsibilities": [
+            "Perform quality inspections",
+            "Document quality issues",
+            "Implement quality improvement plans"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "candy_marketing_sales",
+      "name": "Marketing & Sales",
+      "description": "Responsible for marketing the lollipops and managing sales.",
+      "roles": [
+        {
+          "id": "marketing_manager",
+          "name": "Marketing Manager",
+          "description": "Leads marketing campaigns and sales strategy.",
+          "responsibilities": [
+            "Develop marketing strategies",
+            "Manage sales team",
+            "Analyze market trends"
+          ]
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "id": "lollipop_creation_workflow",
+      "name": "Lollipop Creation Workflow",
+      "description": "A workflow detailing the process of creating and bringing a lollipop to market.",
+      "stages": [
+        {
+          "id": "stage_flavor_development",
+          "name": "Flavor Development",
+          "description": "Develop new lollipop flavors.",
+          "unitId": "candy_flavor_rnd",
+          "roleId": "flavor_scientist",
+          "dependencies": []
+        },
+        {
+          "id": "stage_candy_production",
+          "name": "Candy Production",
+          "description": "Produce the candy based on developed flavors.",
+          "unitId": "candy_making",
+          "roleId": "candy_producer",
+          "dependencies": [
+            "stage_flavor_development"
+          ]
+        },
+        {
+          "id": "stage_stick_manufacturing",
+          "name": "Stick Manufacturing",
+          "description": "Manufacture sticks for the lollipops.",
+          "unitId": "candy_stick_production",
+          "roleId": "stick_producer",
+          "dependencies": []
+        },
+        {
+          "id": "stage_wrapping_packaging",
+          "name": "Wrapping and Packaging",
+          "description": "Wrap and package the produced lollipops.",
+          "unitId": "candy_wrapping_packaging",
+          "roleId": "packaging_specialist",
+          "dependencies": [
+            "stage_candy_production",
+            "stage_stick_manufacturing"
+          ]
+        },
+        {
+          "id": "stage_quality_assurance",
+          "name": "Quality Assurance",
+          "description": "Ensure quality of the packaged lollipops.",
+          "unitId": "candy_quality_assurance",
+          "roleId": "qa_analyst",
+          "dependencies": [
+            "stage_wrapping_packaging"
+          ]
+        },
+        {
+          "id": "stage_marketing_and_sales",
+          "name": "Marketing and Sales",
+          "description": "Market and sell the finished lollipops.",
+          "unitId": "candy_marketing_sales",
+          "roleId": "marketing_manager",
+          "dependencies": [
+            "stage_quality_assurance"
+          ]
+        }
+      ]
+    }
+  ]
+}
