@@ -14,6 +14,7 @@
 - [[Curriculum/README|Curriculum Development]]
 - [[Programs/README|Educational Programs]]
 - [[Resources/README|Learning Resources]]
+- [[LanguageLearning/README|Language Learning]]
 
 ## Related Units
 - [[../Research/index|Research Unit]]
@@ -31,6 +32,10 @@ The Education Unit is responsible for designing, developing, and delivering educ
 - [[Initiatives/TechnicalSkills|Technical Skills Development]]
 - [[Initiatives/LeadershipDevelopment|Leadership Development Program]]
 - [[Initiatives/OnboardingEnhancement|Onboarding Enhancement Project]]
+- [[Initiatives/GlobalLanguageCapabilities|Global Language Capabilities Initiative]]
 
 ## Key Performance Indicators
 - [[KPIs/README|Education KPIs Dashboard]]
+
+## Specialized Education Areas
+- [[LanguageLearning/README|Language Learning Subunit]]

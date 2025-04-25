@@ -1,0 +1,18 @@
+# Meta-Governance Unit
+
+- [[Charter|Charter]]
+- [[metaGovernance|Overview]]
+- [[Policies/|Policies]]
+- [[Processes/|Processes]]
+- [[Reports/|Reports]]
+- [[MeetingNotes/|Meeting Notes]]
+- [[Projects/|Projects]]
+- [[Diagrams/|Diagrams]]
+- [[Templates/|Templates]]
+- [[ResponsibilitiesAndAuthorities|Responsibilities & Authorities]]
+- [[FractalGovernanceFramework|Fractal Governance Framework]]
+- [[ScaleFreeGovernance|Scale-Free Governance]]
+- [[CrossOrganizationalGovernance|Cross-Organizational Governance]]
+- [[GovernancePatternLibrary|Governance Pattern Library]]
+- [[AdaptiveRuleSystems|Adaptive Rule Systems]]
+- [[Integration_With_Traditional_Governance|Integration with Traditional Governance]] 
