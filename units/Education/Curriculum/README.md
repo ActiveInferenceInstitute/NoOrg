@@ -1,9 +1,33 @@
 # Curriculum Development
 
-This folder contains all curriculum-related materials for the Education Unit, including frameworks, templates, and specific curricula organized by domain.
-
 ## Overview
-The Curriculum Development area follows a structured approach to designing, implementing, and maintaining educational curricula across the organization. All curricula follow standardized templates while allowing for domain-specific customization.
+This directory contains all curriculum development frameworks, templates, and materials used to create educational pathways across the organization.
+
+## Structure
+- **Frameworks/**: Curriculum design frameworks and methodologies
+- **Pathways/**: Defined learning pathways for different roles and skill levels
+- **Templates/**: Standard templates for course development
+- **Assessments/**: Assessment tools and evaluation methodologies
+- **Standards/**: Curriculum quality standards and guidelines
+
+## Key Documents
+- **CurriculumDevelopmentProcess.md**: Standard process for designing new curricula
+- **CompetencyFramework.md**: Organization-wide competency framework
+- **CourseDesignGuidelines.md**: Best practices for course design
+- **CertificationRequirements.md**: Standards for certification programs
+- **CurriculumReviewCycle.md**: Schedule and methodology for curriculum review
+
+## Related Resources
+- [[../Programs/README|Educational Programs]]
+- [[../Resources/README|Learning Resources]]
+- [[../KPIs/LearningMetrics|Learning Effectiveness Metrics]]
+
+## Current Focus Areas
+1. Technical skills development curriculum
+2. Leadership and management pathways
+3. Cross-functional knowledge sharing programs
+4. Industry-specific specializations
+5. Compliance and regulatory training requirements
 
 ## Framework and Methodology
 - [[Framework|Curriculum Development Framework]]
@@ -48,12 +72,6 @@ The Curriculum Development area follows a structured approach to designing, impl
 - [[Integration/Research|Research Integration Guidelines]]
 - [[Integration/Development|Development Integration Guidelines]]
 - [[Integration/ProductManagement|Product Management Integration Guidelines]]
-
-## Related Resources
-- [[../Resources/README|Learning Resources]]
-- [[../Programs/README|Educational Programs]]
-- [[../KPIs/Curriculum|Curriculum KPIs]]
-- [[../StrategicPlan|Strategic Plan]] (Curriculum Modernization section)
 
 ## Responsible Team
 - Lead Curriculum Designer

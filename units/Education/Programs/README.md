@@ -1,75 +1,40 @@
 # Educational Programs
 
-This folder contains information about all educational programs developed and managed by the Education Unit, including their design, implementation plans, and evaluation metrics.
-
 ## Overview
-Educational Programs represent structured learning journeys designed to develop specific competencies, knowledge areas, or skills across the organization. Each program combines multiple learning components into a cohesive educational experience with defined outcomes.
+This directory contains all formal educational programs developed and maintained by the Education Unit, including their structure, content, and implementation guidelines.
 
 ## Program Categories
+- **Onboarding/**: New employee and role transition programs
+- **TechnicalTraining/**: Technical skills and competencies programs
+- **LeadershipDevelopment/**: Leadership and management training
+- **ComplianceTraining/**: Mandatory and regulatory compliance programs
+- **ContinuousProfessionalDevelopment/**: Ongoing professional development programs
+- **CertificationPrograms/**: Formal certification pathways
+- **CrossFunctionalTraining/**: Programs for cross-unit knowledge sharing
 
-### Core Organizational Programs
-- [[CorePrograms/OrganizationalValues|Organizational Values Program]]
-- [[CorePrograms/EthicalDecisionMaking|Ethical Decision Making Program]]
-- [[CorePrograms/CrossFunctionalCollaboration|Cross-Functional Collaboration Program]]
-- [[CorePrograms/OrganizationalLeadership|Organizational Leadership Program]]
+## Program Structure Documents
+- **ProgramLifecycle.md**: Standard program development and maintenance lifecycle
+- **ProgramEvaluationFramework.md**: Assessment methodology for program effectiveness
+- **DeliveryModalities.md**: Guidelines for in-person, online, and hybrid delivery
+- **FacilitatorGuidelines.md**: Standards for program facilitators and instructors
+- **ParticipantJourneyMap.md**: Ideal participant experience and journey mapping
 
-### Technical Excellence Programs
-- [[TechnicalPrograms/AIProficiency|AI Proficiency Program]]
-- [[TechnicalPrograms/SoftwareEngineering|Software Engineering Excellence Program]]
-- [[TechnicalPrograms/DataScience|Data Science Mastery Program]]
-- [[TechnicalPrograms/ProductDevelopment|Product Development Program]]
-
-### Leadership Development Programs
-- [[LeadershipPrograms/EmergingLeaders|Emerging Leaders Program]]
-- [[LeadershipPrograms/MidLevelManagement|Mid-Level Management Program]]
-- [[LeadershipPrograms/ExecutiveLeadership|Executive Leadership Program]]
-- [[LeadershipPrograms/StrategicLeadership|Strategic Leadership Program]]
-
-### Specialized Programs
-- [[SpecializedPrograms/ProjectManagement|Project Management Certification]]
-- [[SpecializedPrograms/ChangeManagement|Change Management Certification]]
-- [[SpecializedPrograms/Innovation|Innovation Facilitation Program]]
-- [[SpecializedPrograms/RiskManagement|Risk Management Certification]]
-
-### Onboarding Programs
-- [[OnboardingPrograms/NewEmployeeOrientation|New Employee Orientation]]
-- [[OnboardingPrograms/RoleTransition|Role Transition Program]]
-- [[OnboardingPrograms/LeadershipOnboarding|Leadership Onboarding]]
+## Active Programs
+1. **AI Literacy Program**: [[AILiteracy/Overview|Program Overview]]
+2. **Technical Upskilling Initiative**: [[TechnicalUpskilling/Overview|Program Overview]]
+3. **Leadership Excellence Program**: [[LeadershipExcellence/Overview|Program Overview]]
+4. **Enhanced Onboarding Experience**: [[EnhancedOnboarding/Overview|Program Overview]]
+5. **Cross-Functional Knowledge Exchange**: [[CrossFunctionalExchange/Overview|Program Overview]]
 
 ## Program Development Process
-- [[Process/ProgramDesignFramework|Program Design Framework]]
-- [[Process/NeedsAssessment|Needs Assessment Methodology]]
-- [[Process/OutcomeMeasurement|Outcome Measurement Guidelines]]
-- [[Process/ProgramRevision|Program Revision Process]]
-
-## Program Management
-- [[Management/SchedulingGuidelines|Program Scheduling Guidelines]]
-- [[Management/ResourceAllocation|Resource Allocation Model]]
-- [[Management/ParticipantSelection|Participant Selection Criteria]]
-- [[Management/FacilitatorStandards|Facilitator Standards]]
-
-## Program Evaluation
-- [[Evaluation/Framework|Program Evaluation Framework]]
-- [[Evaluation/Metrics|Standard Program Metrics]]
-- [[Evaluation/ReportingTemplates|Evaluation Reporting Templates]]
-- [[Evaluation/ImpactAssessment|Impact Assessment Methodology]]
-
-## Current Initiatives
-- [[Initiatives/AILiteracy|AI Literacy Enhancement Initiative]]
-- [[Initiatives/LeadershipPipeline|Leadership Pipeline Development]]
-- [[Initiatives/CrossFunctionalLearning|Cross-Functional Learning Communities]]
-- [[Initiatives/PeerMentorship|Peer Mentorship Program]]
-
-## Program Calendar
-- [[Calendar/CurrentQuarter|Current Quarter Program Schedule]]
-- [[Calendar/AnnualPlanning|Annual Program Planning]]
-- [[Calendar/FacilitatorAssignments|Facilitator Assignments]]
+All new programs follow the standard [[../Processes/ProgramDevelopment|Program Development Process]], which includes:
+1. Needs analysis and stakeholder consultation
+2. Design and curriculum development
+3. Pilot testing and refinement
+4. Full implementation and delivery
+5. Evaluation and continuous improvement
 
 ## Related Resources
 - [[../Curriculum/README|Curriculum Development]]
 - [[../Resources/README|Learning Resources]]
-- [[../KPIs/Programs|Program KPIs]]
-- [[../Team|Education Team Structure]] (Program Management Team section)
-
-## Program Development Roadmap
-See [[Roadmap|Program Development Roadmap]] for planned program launches and updates. 
+- [[../KPIs/ProgramEffectiveness|Program Effectiveness Metrics]] 

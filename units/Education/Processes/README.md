@@ -1,123 +1,61 @@
 # Education Unit Processes
 
-This folder contains all process documentation for the Education Unit, detailing standard operating procedures, workflows, and methodologies for educational activities.
-
 ## Overview
-Education Unit processes provide structured approaches to executing the unit's functions, ensuring consistency, quality, and efficiency in all educational activities. These processes translate policies into actionable workflows and procedures.
+This directory contains all standard operating procedures, workflows, and process documentation for the Education Unit's operations and activities.
 
 ## Core Processes
-
-### Curriculum Processes
-- [[Curriculum/Development|Curriculum Development Process]]
-- [[Curriculum/Review|Curriculum Review Process]]
-- [[Curriculum/Maintenance|Curriculum Maintenance Process]]
-- [[Curriculum/SMEEngagement|Subject Matter Expert Engagement Process]]
-
-### Program Processes
-- [[Programs/Development|Program Development Process]]
-- [[Programs/Delivery|Program Delivery Process]]
-- [[Programs/Evaluation|Program Evaluation Process]]
-- [[Programs/Scheduling|Program Scheduling Process]]
-
-### Resource Processes
-- [[Resources/Development|Resource Development Process]]
-- [[Resources/Review|Resource Review and Approval Process]]
-- [[Resources/Publication|Resource Publication Process]]
-- [[Resources/Maintenance|Resource Maintenance Process]]
-
-### Technology Processes
-- [[Technology/Implementation|Technology Implementation Process]]
-- [[Technology/Support|Educational Technology Support Process]]
-- [[Technology/Integration|Technology Integration Process]]
-- [[Technology/UpgradeManagement|Technology Upgrade Management Process]]
+- **CurriculumDevelopment.md**: Process for designing and developing curricula
+- **ProgramManagement.md**: End-to-end program management process
+- **ResourceCreation.md**: Process for developing educational resources
+- **NeedsAssessment.md**: Process for identifying educational needs
+- **QualityAssurance.md**: Quality standards and review processes
+- **PerformanceEvaluation.md**: Process for evaluating educational effectiveness
 
 ## Administrative Processes
+- **BudgetPlanning.md**: Annual budget planning and management process
+- **ResourceAllocation.md**: Process for allocating resources to initiatives
+- **TeamManagement.md**: Team management and coordination processes
+- **VendorManagement.md**: Process for managing external vendors and partners
+- **ChangeManagement.md**: Process for implementing organizational changes
 
-### Planning Processes
-- [[Planning/StrategicPlanning|Strategic Planning Process]]
-- [[Planning/AnnualPlanning|Annual Planning Process]]
-- [[Planning/QuarterlyPlanning|Quarterly Planning Process]]
-- [[Planning/ResourcePlanning|Resource Planning Process]]
+## Operational Processes
+- **ContentReviewCycle.md**: Regular content review and update cycle
+- **ProgramScheduling.md**: Process for scheduling educational programs
+- **LearnerEnrollment.md**: Process for enrolling and tracking participants
+- **FeedbackCollection.md**: Methods for collecting and analyzing feedback
+- **ContinuousImprovement.md**: Process for ongoing improvement initiatives
 
-### Reporting Processes
-- [[Reporting/PerformanceReporting|Performance Reporting Process]]
-- [[Reporting/MetricsCollection|Metrics Collection Process]]
-- [[Reporting/ExecutiveReporting|Executive Reporting Process]]
-- [[Reporting/ComplianceReporting|Compliance Reporting Process]]
+## Collaboration Processes
+- **StakeholderEngagement.md**: Process for engaging organizational stakeholders
+- **SubjectMatterExpertCollaboration.md**: Guidelines for working with SMEs
+- **CrossUnitCoordination.md**: Process for working with other units
+- **ExternalPartnership.md**: Process for establishing educational partnerships
+- **CommunityManagement.md**: Managing learning communities and networks
 
-### Budget Processes
-- [[Budget/Forecasting|Budget Forecasting Process]]
-- [[Budget/Allocation|Budget Allocation Process]]
-- [[Budget/Tracking|Budget Tracking Process]]
-- [[Budget/Adjustment|Budget Adjustment Process]]
+## Technical Processes
+- **LearningPlatformAdministration.md**: LMS administration procedures
+- **ContentMigration.md**: Process for migrating educational content
+- **DataManagement.md**: Educational data management procedures
+- **SystemIntegration.md**: Process for integrating with other systems
+- **TechnicalSupport.md**: Support processes for educational technology
 
-### Team Processes
-- [[Team/Onboarding|Team Onboarding Process]]
-- [[Team/PerformanceManagement|Team Performance Management Process]]
-- [[Team/SkillDevelopment|Team Skill Development Process]]
-- [[Team/CrossTraining|Cross-Training Process]]
+## Compliance and Governance
+- **ComplianceMonitoring.md**: Process for ensuring regulatory compliance
+- **DataPrivacy.md**: Procedures for protecting learner data
+- **IntellectualPropertyManagement.md**: IP management for educational content
+- **RiskManagement.md**: Educational risk assessment and mitigation
+- **PolicyDevelopment.md**: Process for developing educational policies
 
-## Quality and Improvement Processes
-
-### Quality Assurance Processes
-- [[QualityAssurance/ContentReview|Content Quality Review Process]]
-- [[QualityAssurance/DeliveryObservation|Delivery Observation Process]]
-- [[QualityAssurance/FeedbackCollection|Feedback Collection Process]]
-- [[QualityAssurance/QualityAudits|Quality Audit Process]]
-
-### Continuous Improvement Processes
-- [[Improvement/ProblemSolving|Problem-Solving Process]]
-- [[Improvement/RootCauseAnalysis|Root Cause Analysis Process]]
-- [[Improvement/ProcessOptimization|Process Optimization Methodology]]
-- [[Improvement/InnovationManagement|Innovation Management Process]]
-
-### Risk Management Processes
-- [[RiskManagement/RiskIdentification|Risk Identification Process]]
-- [[RiskManagement/RiskAssessment|Risk Assessment Process]]
-- [[RiskManagement/MitigationPlanning|Mitigation Planning Process]]
-- [[RiskManagement/Monitoring|Risk Monitoring Process]]
-
-## Collaborative Processes
-
-### Cross-Unit Processes
-- [[CrossUnit/Collaboration|Cross-Unit Collaboration Process]]
-- [[CrossUnit/KnowledgeSharing|Knowledge Sharing Process]]
-- [[CrossUnit/ResourceAlignment|Resource Alignment Process]]
-- [[CrossUnit/JointInitiatives|Joint Initiative Process]]
-
-### External Engagement Processes
-- [[External/PartnerEngagement|Partner Engagement Process]]
-- [[External/ContractManagement|Contract Management Process]]
-- [[External/VendorManagement|Vendor Management Process]]
-- [[External/ExternalSME|External Subject Matter Expert Process]]
-
-## Process Management
-
-### Process Governance
-- [[ProcessGovernance/Development|Process Development Guidelines]]
-- [[ProcessGovernance/Documentation|Process Documentation Standards]]
-- [[ProcessGovernance/Review|Process Review Schedule]]
-- [[ProcessGovernance/Change|Process Change Management]]
-
-### Process Improvement
-- [[ProcessImprovement/Evaluation|Process Evaluation Methodology]]
-- [[ProcessImprovement/Metrics|Process Performance Metrics]]
-- [[ProcessImprovement/Workshops|Process Improvement Workshops]]
-- [[ProcessImprovement/Implementation|Process Improvement Implementation]]
-
-## Emergency and Contingency Processes
-
-### Crisis Response
-- [[CrisisResponse|Education Crisis Response Process]]
-- [[BusinessContinuity|Educational Business Continuity Process]]
-- [[EmergencyOperations|Emergency Operations Process]]
-- [[CommunicationProtocols|Emergency Communication Protocols]]
+## Process Improvement
+- **ProcessAudit.md**: Process for auditing educational processes
+- **EfficiencyAnalysis.md**: Methods for analyzing process efficiency
+- **ProcessOptimization.md**: Guidelines for optimizing processes
+- **AutomationOpportunities.md**: Identifying automation opportunities
 
 ## Related Resources
-- [[../Policies/README|Education Unit Policies]]
-- [[../Team|Education Team Structure]]
-- [[../KPIs/Operational|Operational KPIs]]
-- [[../Templates/ProcessTemplates|Process Templates]]
+- [[../Policies/README|Education Policies]]
+- [[../KPIs/README|Education KPIs]]
+- [[../Reports/README|Education Reports]]
 
 ## Process Map
 See [[ProcessMap|Education Unit Process Map]] for a visual representation of how these processes interconnect and support the unit's objectives. 
