@@ -19,7 +19,8 @@ const examples = [
   './6-openai-agent-example.ts',
   './7-multi-unit-llm-flow-example.ts',
   './8-hybrid-agent-workflow-example.ts',
-  './9-active-inference-pomdp-example.ts'
+  './9-active-inference-pomdp-example.ts',
+  './10-dynamic-org-generator-example.ts'
 ];
 
 // Create output directory
