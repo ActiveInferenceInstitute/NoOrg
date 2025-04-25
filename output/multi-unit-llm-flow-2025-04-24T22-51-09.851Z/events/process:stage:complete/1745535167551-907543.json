@@ -1,0 +1,15 @@
+{
+  "id": "1745535167551-907543",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "security_assessment",
+    "stageName": "Security Assessment",
+    "unitId": "security_unit",
+    "unitName": "Security Unit",
+    "duration": 30253,
+    "tokenUsage": 1417,
+    "cost": 0.05907,
+    "timestamp": "2025-04-24T22:52:47.551Z"
+  },
+  "timestamp": 1745535167551
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow: Strategic Decision Process</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    .visualization {
+      margin: 30px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .stat-card {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+      flex: 1;
+      min-width: 150px;
+    }
+    .task-list {
+      margin-top: 30px;
+    }
+    .task-item {
+      margin-bottom: 10px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+    }
+    .completed { border-left: 5px solid #4CAF50; }
+    .running { border-left: 5px solid #2196F3; }
+    .failed { border-left: 5px solid #f44336; }
+    .skipped { border-left: 5px solid #9C27B0; }
+    .pending { border-left: 5px solid #9E9E9E; }
+    .cancelled { border-left: 5px solid #607D8B; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Workflow: Strategic Decision Process</h1>
+      <p>ID: 3a22603b-54d0-44b2-859e-d20b8cd4eb12</p>
+      <p>Status: completed</p>
+      <p>Description: Workflow for making and executing strategic decisions</p>
+      <p>Created: 4/24/2025, 3:15:40 PM</p>
+      <p>Started: 4/24/2025, 3:15:40 PM</p>
+      <p>Completed: 4/24/2025, 3:16:00 PM</p>
+      <p>Total Duration: 20.10 seconds</p>
+    </div>
+    
+    <div class="visualization">
+      <h2>Workflow Visualization</h2>
+      <div class="mermaid">
+        graph TD;
+    t94c473903c2e47a5a4cd765ac3da233b["Market Analysis<br/>(completed) (2s)"];
+    style t94c473903c2e47a5a4cd765ac3da233b fill:#90EE90,stroke:#228B22;
+    tef7ecfaec7b74496801b2dccc466523b["Customer Feedback Analysis<br/>(completed) (1s)"];
+    style tef7ecfaec7b74496801b2dccc466523b fill:#90EE90,stroke:#228B22;
+    t71a5d277b03c4daa87e546081f09f8ff["Financial Projections<br/>(completed) (2s)"];
+    style t71a5d277b03c4daa87e546081f09f8ff fill:#90EE90,stroke:#228B22;
+    t2bf4a41424c54348b3c80a7b54d48a9a["Strategic Decision<br/>(completed) (1s)"];
+    style t2bf4a41424c54348b3c80a7b54d48a9a fill:#90EE90,stroke:#228B22;
+    tfbc1e5d6d9b34d22a23bac5ec5946142["Implementation Planning<br/>(skipped)"];
+    style tfbc1e5d6d9b34d22a23bac5ec5946142 fill:#D8BFD8,stroke:#9370DB;
+    t42ed7ab25e9f498db1bdb773c5d0a32e["Alternatives Planning<br/>(skipped)"];
+    style t42ed7ab25e9f498db1bdb773c5d0a32e fill:#D8BFD8,stroke:#9370DB;
+    t9f9018e4a1aa4de699be2ae05b1c583b["Final Report<br/>(completed)"];
+    style t9f9018e4a1aa4de699be2ae05b1c583b fill:#90EE90,stroke:#228B22;
+    t94c473903c2e47a5a4cd765ac3da233b --> t2bf4a41424c54348b3c80a7b54d48a9a;
+    tef7ecfaec7b74496801b2dccc466523b --> t2bf4a41424c54348b3c80a7b54d48a9a;
+    t71a5d277b03c4daa87e546081f09f8ff --> t2bf4a41424c54348b3c80a7b54d48a9a;
+    t2bf4a41424c54348b3c80a7b54d48a9a --> tfbc1e5d6d9b34d22a23bac5ec5946142;
+    t2bf4a41424c54348b3c80a7b54d48a9a --> t42ed7ab25e9f498db1bdb773c5d0a32e;
+    t94c473903c2e47a5a4cd765ac3da233b --> t9f9018e4a1aa4de699be2ae05b1c583b;
+    tef7ecfaec7b74496801b2dccc466523b --> t9f9018e4a1aa4de699be2ae05b1c583b;
+    t71a5d277b03c4daa87e546081f09f8ff --> t9f9018e4a1aa4de699be2ae05b1c583b;
+    t2bf4a41424c54348b3c80a7b54d48a9a --> t9f9018e4a1aa4de699be2ae05b1c583b;
+    tfbc1e5d6d9b34d22a23bac5ec5946142 --> t9f9018e4a1aa4de699be2ae05b1c583b;
+    t42ed7ab25e9f498db1bdb773c5d0a32e --> t9f9018e4a1aa4de699be2ae05b1c583b;
+      </div>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Task Status</h3>
+        <p>Total: 7</p>
+        <p>Completed: 5</p>
+        <p>Failed: 0</p>
+        <p>Skipped: 2</p>
+        <p>Running: 0</p>
+        <p>Pending: 0</p>
+        <p>Cancelled: 0</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>Task Dependencies</h3>
+        <p>Total Dependencies: 11</p>
+        <p>Avg Dependencies Per Task: 1.57</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>Task Performance</h3>
+        
+            <p>Avg Task Duration: 1.43s</p>
+            <p>Total Task Time: 5.71s</p>
+          
+      </div>
+    </div>
+    
+    <div class="task-list">
+      <h2>Tasks</h2>
+      
+          <div class="task-item completed">
+            <h3>Market Analysis</h3>
+            <p>ID: 94c47390-3c2e-47a5-a4cd-765ac3da233b</p>
+            <p>Status: completed</p>
+            <p>Duration: 1.50s</p>
+            
+            
+          </div>
+        
+          <div class="task-item completed">
+            <h3>Customer Feedback Analysis</h3>
+            <p>ID: ef7ecfae-c7b7-4496-801b-2dccc466523b</p>
+            <p>Status: completed</p>
+            <p>Duration: 1.20s</p>
+            
+            
+          </div>
+        
+          <div class="task-item completed">
+            <h3>Financial Projections</h3>
+            <p>ID: 71a5d277-b03c-4daa-87e5-46081f09f8ff</p>
+            <p>Status: completed</p>
+            <p>Duration: 2.00s</p>
+            
+            
+          </div>
+        
+          <div class="task-item completed">
+            <h3>Strategic Decision</h3>
+            <p>ID: 2bf4a414-24c5-4348-b3c8-0a7b54d48a9a</p>
+            <p>Status: completed</p>
+            <p>Duration: 1.01s</p>
+            <p>Dependencies: 3</p>
+            
+          </div>
+        
+          <div class="task-item skipped">
+            <h3>Implementation Planning</h3>
+            <p>ID: fbc1e5d6-d9b3-4d22-a23b-ac5ec5946142</p>
+            <p>Status: skipped</p>
+            <p>Not completed</p>
+            <p>Dependencies: 1</p>
+            
+          </div>
+        
+          <div class="task-item skipped">
+            <h3>Alternatives Planning</h3>
+            <p>ID: 42ed7ab2-5e9f-498d-b1bd-b773c5d0a32e</p>
+            <p>Status: skipped</p>
+            <p>Not completed</p>
+            <p>Dependencies: 1</p>
+            
+          </div>
+        
+          <div class="task-item completed">
+            <h3>Final Report</h3>
+            <p>ID: 9f9018e4-a1aa-4de6-99be-2ae05b1c583b</p>
+            <p>Status: completed</p>
+            <p>Not completed</p>
+            <p>Dependencies: 6</p>
+            
+          </div>
+        
+    </div>
+  </div>
+  
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>

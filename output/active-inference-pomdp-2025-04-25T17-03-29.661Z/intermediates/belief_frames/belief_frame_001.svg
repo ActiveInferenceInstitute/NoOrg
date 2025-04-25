@@ -1,0 +1,31 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+          <rect width="800" height="500" fill="white"/>
+          <text x="400" y="25" text-anchor="middle" font-size="18">Belief State (Step 1)</text>
+            <rect x="88.88888888888889" y="445.44522112813263" width="71.11111111111111" height="4.5547788718673745" fill="steelblue"/>
+            <text x="124.44444444444444" y="470" text-anchor="middle" font-size="12">very-cold</text>
+            <text x="124.44444444444444" y="440.44522112813263" text-anchor="middle" font-size="10">0.01</text>
+          
+            <rect x="177.77777777777777" y="438.706942756931" width="71.11111111111111" height="11.293057243068992" fill="steelblue"/>
+            <text x="213.33333333333331" y="470" text-anchor="middle" font-size="12">cold</text>
+            <text x="213.33333333333331" y="433.706942756931" text-anchor="middle" font-size="10">0.03</text>
+          
+            <rect x="266.66666666666663" y="407.6510353384913" width="71.11111111111111" height="42.348964661508724" fill="steelblue"/>
+            <text x="302.2222222222222" y="470" text-anchor="middle" font-size="12">cool</text>
+            <text x="302.2222222222222" y="402.6510353384913" text-anchor="middle" font-size="10">0.11</text>
+          
+            <rect x="355.55555555555554" y="280.60414135396513" width="71.11111111111111" height="169.3958586460349" fill="steelblue"/>
+            <text x="391.1111111111111" y="470" text-anchor="middle" font-size="12">mild</text>
+            <text x="391.1111111111111" y="275.60414135396513" text-anchor="middle" font-size="10">0.42</text>
+          
+            <rect x="444.44444444444446" y="280.60414135396513" width="71.11111111111111" height="169.3958586460349" fill="steelblue"/>
+            <text x="480" y="470" text-anchor="middle" font-size="12">warm</text>
+            <text x="480" y="275.60414135396513" text-anchor="middle" font-size="10">0.42</text>
+          
+            <rect x="533.3333333333333" y="447.17673568923277" width="71.11111111111111" height="2.823264310767248" fill="steelblue"/>
+            <text x="568.8888888888888" y="470" text-anchor="middle" font-size="12">hot</text>
+            <text x="568.8888888888888" y="442.17673568923277" text-anchor="middle" font-size="10">0.01</text>
+          
+            <rect x="622.2222222222222" y="449.8117823792822" width="71.11111111111111" height="0.18821762071781653" fill="steelblue"/>
+            <text x="657.7777777777777" y="470" text-anchor="middle" font-size="12">very-hot</text>
+            <text x="657.7777777777777" y="444.8117823792822" text-anchor="middle" font-size="10">0.00</text>
+          </svg>

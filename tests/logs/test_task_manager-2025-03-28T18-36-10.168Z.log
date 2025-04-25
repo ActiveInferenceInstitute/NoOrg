@@ -1,0 +1,70 @@
+Test: test_task_manager
+Path: /home/trim/Documents/operations/tests/unit/multiagent/test_task_manager.ts
+Success: false
+Exit Code: 1
+
+--- Output ---
+
+
+
+--- Errors ---
+
+/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+unit/multiagent/test_task_manager.ts(5,16): error TS2305: Module '"../../../src/core/multiagent/types"' has no exported member 'TaskStatus'.
+unit/multiagent/test_task_manager.ts(5,28): error TS2305: Module '"../../../src/core/multiagent/types"' has no exported member 'TaskPriority'.
+unit/multiagent/test_task_manager.ts(103,9): error TS2322: Type '"normal"' is not assignable to type '"high" | "low" | "medium" | "critical" | undefined'.
+unit/multiagent/test_task_manager.ts(179,9): error TS2322: Type '"normal"' is not assignable to type '"high" | "low" | "medium" | "critical" | undefined'.
+unit/multiagent/test_task_manager.ts(198,51): error TS2561: Object literal may only specify known properties, but 'type' does not exist in type 'TaskFilter'. Did you mean to write 'types'?
+unit/multiagent/test_task_manager.ts(206,51): error TS2322: Type 'string' is not assignable to type '("pending" | "assigned" | "in-progress" | "completed" | "failed" | "cancelled")[]'.
+unit/multiagent/test_task_manager.ts(212,51): error TS2322: Type 'string' is not assignable to type '("high" | "low" | "medium" | "critical")[]'.
+unit/multiagent/test_task_manager.ts(226,9): error TS2322: Type 'string' is not assignable to type '("pending" | "assigned" | "in-progress" | "completed" | "failed" | "cancelled")[]'.
+unit/multiagent/test_task_manager.ts(252,19): error TS2551: Property 'assignedAt' does not exist on type 'Task'. Did you mean 'assignedTo'?
+unit/multiagent/test_task_manager.ts(265,19): error TS2551: Property 'assignedAt' does not exist on type 'Task'. Did you mean 'assignedTo'?
+unit/multiagent/test_task_manager.ts(280,48): error TS2353: Object literal may only specify known properties, and 'outcome' does not exist in type 'TaskResult'.
+unit/multiagent/test_task_manager.ts(308,19): error TS2339: Property 'startedAt' does not exist on type 'Task'.
+unit/multiagent/test_task_manager.ts(321,46): error TS2345: Argument of type '{ outcome: string; data: { key: string; }; }' is not assignable to parameter of type 'TaskResult'.
+  Property 'success' is missing in type '{ outcome: string; data: { key: string; }; }' but required in type 'TaskResult'.
+unit/multiagent/test_task_manager.ts(325,19): error TS2339: Property 'completedAt' does not exist on type 'Task'.
+unit/multiagent/test_task_manager.ts(339,42): error TS2345: Argument of type '{ message: string; details: { reason: string; }; }' is not assignable to parameter of type 'Error'.
+  Property 'name' is missing in type '{ message: string; details: { reason: string; }; }' but required in type 'Error'.
+unit/multiagent/test_task_manager.ts(343,19): error TS2339: Property 'completedAt' does not exist on type 'Task'.
+unit/multiagent/test_task_manager.ts(344,19): error TS2339: Property 'error' does not exist on type 'Task'.
+unit/multiagent/test_task_manager.ts(350,44): error TS2554: Expected 1 arguments, but got 2.
+unit/multiagent/test_task_manager.ts(354,19): error TS2339: Property 'cancelledAt' does not exist on type 'Task'.
+unit/multiagent/test_task_manager.ts(355,19): error TS2339: Property 'cancelReason' does not exist on type 'Task'.
+unit/multiagent/test_task_manager.ts(359,44): error TS2554: Expected 1 arguments, but got 2.
+unit/multiagent/test_task_manager.ts(362,50): error TS2353: Object literal may only specify known properties, and 'outcome' does not exist in type 'TaskResult'.
+unit/multiagent/test_task_manager.ts(383,9): error TS2353: Object literal may only specify known properties, and 'dependencies' does not exist in type 'Partial<Task>'.
+unit/multiagent/test_task_manager.ts(395,54): error TS2353: Object literal may only specify known properties, and 'outcome' does not exist in type 'TaskResult'.
+unit/multiagent/test_task_manager.ts(411,54): error TS2353: Object literal may only specify known properties, and 'outcome' does not exist in type 'TaskResult'.
+unit/multiagent/test_task_manager.ts(427,9): error TS2353: Object literal may only specify known properties, and 'dependencies' does not exist in type 'Partial<Task>'.
+unit/multiagent/test_task_manager.ts(432,9): error TS2353: Object literal may only specify known properties, and 'dependencies' does not exist in type 'Partial<Task>'.
+unit/multiagent/test_task_manager.ts(476,53): error TS2353: Object literal may only specify known properties, and 'outcome' does not exist in type 'TaskResult'.
+unit/multiagent/test_task_manager.ts(484,44): error TS2345: Argument of type '{ message: string; }' is not assignable to parameter of type 'Error'.
+  Property 'name' is missing in type '{ message: string; }' but required in type 'Error'.
+unit/multiagent/test_task_manager.ts(490,49): error TS2554: Expected 1 arguments, but got 2.
+unit/multiagent/test_task_manager.ts(494,40): error TS2339: Property 'countTasksByStatus' does not exist on type 'TaskManager'.
+
+    at createTSError (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1019:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12) {
+  diagnosticCodes: [
+    2305, 2305, 2322, 2322, 2561,
+    2322, 2322, 2322, 2551, 2551,
+    2353, 2339, 2345, 2339, 2345,
+    2339, 2339, 2554, 2339, 2339,
+    2554, 2353, 2353, 2353, 2353,
+    2353, 2353, 2353, 2345, 2554,
+    2339
+  ]
+}

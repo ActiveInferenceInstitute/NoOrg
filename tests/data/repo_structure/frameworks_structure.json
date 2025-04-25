@@ -1,0 +1,699 @@
+{
+  "root": "/home/trim/Documents/operations/frameworks",
+  "generated": "2025-03-13T10:42:31.978113",
+  "structure": {
+    "name": "frameworks",
+    "modified": "2025-03-11T06:57:01.101589",
+    "type": "directory",
+    "children": [
+      {
+        "name": "Events",
+        "modified": "2025-02-18T07:21:48.328200",
+        "type": "directory",
+        "children": [
+          {
+            "name": "Command",
+            "modified": "2025-02-18T07:26:30.729329",
+            "type": "directory",
+            "children": [
+              {
+                "name": "Roles",
+                "modified": "2025-02-18T07:33:18.249795",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "command_center_director.md",
+                    "size": 4720,
+                    "modified": "2025-02-18T07:27:07.215523",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "security_coordinator.md",
+                    "size": 4917,
+                    "modified": "2025-02-18T07:27:07.215523",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "technical_operations_manager.md",
+                    "size": 5067,
+                    "modified": "2025-02-18T07:33:21.498806",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              },
+              {
+                "name": "command_center_operations.md",
+                "size": 6549,
+                "modified": "2025-02-18T07:25:10.807891",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "crisis_protocols.md",
+                "size": 6637,
+                "modified": "2025-02-18T07:24:27.690744",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "decision_matrix.md",
+                "size": 4836,
+                "modified": "2025-02-18T07:23:31.208551",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "event_command_center.md",
+                "size": 6072,
+                "modified": "2025-02-18T07:22:17.116298",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Emergency",
+            "modified": "2025-02-18T07:20:40.630968",
+            "type": "directory",
+            "children": [
+              {
+                "name": "event_emergency_procedures.md",
+                "size": 6650,
+                "modified": "2025-02-18T07:22:17.116298",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Monitoring",
+            "modified": "2025-02-18T07:17:11.858255",
+            "type": "directory",
+            "children": [
+              {
+                "name": "event_monitoring_dashboard.md",
+                "size": 4661,
+                "modified": "2025-02-18T07:17:21.817289",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Operations",
+            "modified": "2025-02-18T07:16:03.708023",
+            "type": "directory",
+            "children": [
+              {
+                "name": "event_operations_guide.md",
+                "size": 5894,
+                "modified": "2025-02-18T07:17:21.816289",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Planning",
+            "modified": "2025-02-18T07:16:38.696142",
+            "type": "directory",
+            "children": [
+              {
+                "name": "event_planning_checklist.md",
+                "size": 5590,
+                "modified": "2025-02-18T07:17:21.817289",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Risk_Management",
+        "modified": "2025-02-18T06:47:47.400699",
+        "type": "directory",
+        "children": [
+          {
+            "name": "Risk_Appetite_Framework",
+            "modified": "2025-02-18T06:44:21.182012",
+            "type": "directory",
+            "children": [
+              {
+                "name": "risk_appetite_framework.md",
+                "size": 6131,
+                "modified": "2025-02-18T06:45:00.071141",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Risk_Assessment_Methodology",
+            "modified": "2025-02-18T06:42:53.045718",
+            "type": "directory",
+            "children": [
+              {
+                "name": "risk_assessment_methodology.md",
+                "size": 6098,
+                "modified": "2025-02-18T06:45:00.071141",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Risk_Control_Matrix",
+            "modified": "2025-02-18T06:47:47.401699",
+            "type": "directory",
+            "children": [
+              {
+                "name": "risk_control_matrix.md",
+                "size": 5901,
+                "modified": "2025-02-18T06:48:44.997891",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Technical",
+        "modified": "2025-02-18T09:11:15.334728",
+        "type": "directory",
+        "children": [
+          {
+            "name": "Analytics",
+            "modified": "2025-02-18T09:29:46.695696",
+            "type": "directory",
+            "children": [
+              {
+                "name": "analytics_future.md",
+                "size": 3475,
+                "modified": "2025-02-18T09:16:36.884999",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "analytics_infrastructure.md",
+                "size": 3489,
+                "modified": "2025-02-18T09:29:25.748382",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "analytics_integration.md",
+                "size": 3511,
+                "modified": "2025-02-18T09:16:36.884999",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "analytics_intelligence.md",
+                "size": 3467,
+                "modified": "2025-02-18T09:16:36.884999",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "analytics_platform.md",
+                "size": 3529,
+                "modified": "2025-02-18T09:16:36.884999",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "analytics_research.md",
+                "size": 3446,
+                "modified": "2025-02-18T09:16:36.884999",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "data_operations.md",
+                "size": 3404,
+                "modified": "2025-02-18T09:29:49.050703",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "predictive_analytics.md",
+                "size": 3343,
+                "modified": "2025-02-18T09:16:36.882999",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "prescriptive_analytics.md",
+                "size": 3350,
+                "modified": "2025-02-18T09:16:36.884999",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "realtime_analytics.md",
+                "size": 3283,
+                "modified": "2025-02-18T09:16:36.879999",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Assets",
+            "modified": "2025-02-18T09:09:28.301383",
+            "type": "directory",
+            "children": [
+              {
+                "name": "Advanced",
+                "modified": "2025-02-18T08:54:12.562914",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "asset_features.md",
+                    "size": 2998,
+                    "modified": "2025-02-18T09:00:27.936157",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "knowledge_integration.md",
+                    "size": 2982,
+                    "modified": "2025-02-18T08:55:34.332188",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "security_enhancement.md",
+                    "size": 3100,
+                    "modified": "2025-02-18T09:00:27.937157",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "token_features.md",
+                    "size": 3184,
+                    "modified": "2025-02-18T08:54:43.104016",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              },
+              {
+                "name": "Analytics",
+                "modified": "2025-02-18T09:10:38.988611",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "market_analytics.md",
+                    "size": 3744,
+                    "modified": "2025-02-18T09:16:36.868999",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "performance_analytics.md",
+                    "size": 3797,
+                    "modified": "2025-02-18T09:16:36.867999",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "risk_analytics.md",
+                    "size": 3935,
+                    "modified": "2025-02-18T09:16:36.879999",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "value_analytics.md",
+                    "size": 3823,
+                    "modified": "2025-02-18T09:16:36.879999",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              },
+              {
+                "name": "Infrastructure",
+                "modified": "2025-02-18T09:08:53.323271",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "integration_system.md",
+                    "size": 3991,
+                    "modified": "2025-02-18T09:16:36.867999",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "trading_system.md",
+                    "size": 3969,
+                    "modified": "2025-02-18T09:16:36.867999",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              },
+              {
+                "name": "asset_classification.md",
+                "size": 10143,
+                "modified": "2025-02-18T07:57:14.572726",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "asset_management.md",
+                "size": 9061,
+                "modified": "2025-02-18T07:54:43.517203",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "asset_protection.md",
+                "size": 9919,
+                "modified": "2025-02-18T07:58:25.146897",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "token_framework.md",
+                "size": 8288,
+                "modified": "2025-02-18T08:13:30.490884",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "DevOps",
+            "modified": "2025-02-18T07:37:47.716389",
+            "type": "directory",
+            "children": [
+              {
+                "name": "devops_framework.md",
+                "size": 8301,
+                "modified": "2025-02-18T07:37:50.443398",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Governance",
+            "modified": "2025-02-18T08:57:12.083515",
+            "type": "directory",
+            "children": [
+              {
+                "name": "governance_enhancement.md",
+                "size": 3449,
+                "modified": "2025-02-18T08:57:13.683521",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Implementation",
+            "modified": "2025-02-18T09:00:08.354093",
+            "type": "directory",
+            "children": [
+              {
+                "name": "continuous_integration.md",
+                "size": 3373,
+                "modified": "2025-02-18T09:00:27.939157",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "devsecops_framework.md",
+                "size": 3421,
+                "modified": "2025-02-18T09:00:27.947157",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "quality_assurance.md",
+                "size": 3418,
+                "modified": "2025-02-18T09:00:11.618104",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Infrastructure",
+            "modified": "2025-02-18T08:03:19.250802",
+            "type": "directory",
+            "children": [
+              {
+                "name": "storage_system.md",
+                "size": 10146,
+                "modified": "2025-02-18T08:03:23.103816",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "technical_infrastructure_framework.md",
+                "size": 6453,
+                "modified": "2025-02-18T07:34:01.516943",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Integration",
+            "modified": "2025-02-18T08:58:03.794685",
+            "type": "directory",
+            "children": [
+              {
+                "name": "integration_enhancement.md",
+                "size": 3391,
+                "modified": "2025-02-18T08:58:07.240697",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Performance",
+            "modified": "2025-02-18T08:57:38.685603",
+            "type": "directory",
+            "children": [
+              {
+                "name": "performance_optimization.md",
+                "size": 3512,
+                "modified": "2025-02-18T08:57:40.328609",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Platform",
+            "modified": "2025-02-18T12:54:58.925922",
+            "type": "directory",
+            "children": [
+              {
+                "name": "platform_analytics.md",
+                "size": 2819,
+                "modified": "2025-02-18T09:06:36.410830",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "platform_architecture.md",
+                "size": 3451,
+                "modified": "2025-02-18T09:06:36.398830",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "platform_compliance.md",
+                "size": 2799,
+                "modified": "2025-02-18T09:06:36.398830",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "platform_development.md",
+                "size": 2981,
+                "modified": "2025-02-18T09:06:36.410830",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "platform_integration.md",
+                "size": 3377,
+                "modified": "2025-02-18T09:06:36.398830",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "platform_operations.md",
+                "size": 3396,
+                "modified": "2025-02-18T09:06:36.398830",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "platform_operations_framework.md",
+                "size": 3543,
+                "modified": "2025-02-18T13:25:33.220448",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "platform_security.md",
+                "size": 2799,
+                "modified": "2025-02-18T09:06:36.398830",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "Security",
+            "modified": "2025-02-18T07:53:01.412849",
+            "type": "directory",
+            "children": [
+              {
+                "name": "application_security.md",
+                "size": 9806,
+                "modified": "2025-02-18T07:53:04.949861",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "data_security.md",
+                "size": 10069,
+                "modified": "2025-02-18T07:50:11.834261",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "identity_management.md",
+                "size": 10252,
+                "modified": "2025-02-18T07:47:43.879643",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "network_security.md",
+                "size": 10101,
+                "modified": "2025-02-18T07:51:37.782559",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "security_analytics.md",
+                "size": 6855,
+                "modified": "2025-02-18T07:42:00.578252",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "security_architecture.md",
+                "size": 10195,
+                "modified": "2025-02-18T07:44:59.004860",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "security_compliance.md",
+                "size": 6439,
+                "modified": "2025-02-18T07:39:25.318722",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "security_governance.md",
+                "size": 10245,
+                "modified": "2025-02-18T07:46:01.473073",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "security_operations.md",
+                "size": 7168,
+                "modified": "2025-02-18T07:40:01.430845",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "security_training.md",
+                "size": 7695,
+                "modified": "2025-02-18T07:42:59.095451",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "threat_management.md",
+                "size": 8520,
+                "modified": "2025-02-18T07:43:55.440644",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "zero_trust_architecture.md",
+                "size": 7062,
+                "modified": "2025-02-18T07:38:41.068571",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "core",
+        "modified": "2025-03-11T07:42:59.027643",
+        "type": "directory",
+        "children": [
+          {
+            "name": "events",
+            "modified": "2025-03-11T07:41:56.430392",
+            "type": "directory",
+            "children": []
+          },
+          {
+            "name": "integration",
+            "modified": "2025-03-11T07:03:59.805162",
+            "type": "directory",
+            "children": [
+              {
+                "name": "patterns",
+                "modified": "2025-03-11T07:42:02.878418",
+                "type": "directory",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "messaging",
+            "modified": "2025-03-11T07:42:10.140447",
+            "type": "directory",
+            "children": []
+          },
+          {
+            "name": "monitoring",
+            "modified": "2025-03-11T07:42:16.885474",
+            "type": "directory",
+            "children": []
+          },
+          {
+            "name": "storage",
+            "modified": "2025-03-11T07:42:50.456609",
+            "type": "directory",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

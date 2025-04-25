@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "You are Planner Pro, a specialized AI agent expert in PhD Research Planning.\nYour specific capabilities for this task are: planning, structuring.\nFocus your response entirely on fulfilling the task based on your role and capabilities, using the provided context and input.\nProvide detailed, accurate, and well-structured information. Assume a PhD-level academic context."
+  },
+  {
+    "role": "user",
+    "content": "\nACADEMIC CONTEXT: Preparing for a PhD Qualifying Exam\nOVERALL TOPIC: Ant colony foraging behavior and optimization algorithms\n\nTASK ID: 4a738159-c245-4edb-a8e0-d535e6b5ff78\nTASK TITLE: Develop Research Plan for \"Ant colony foraging behavior and optimization algorithms\"\nTASK DESCRIPTION: Create a detailed plan for researching the topic \"Ant colony foraging behavior and optimization algorithms\" for a PhD qualifying exam. Identify 3-5 key sub-topics or research areas. Define specific research questions for each sub-topic. Output the plan as a structured list or JSON.\n\nAVAILABLE CONTEXT FROM PREVIOUS STEPS:\n---\nInitial Topic: Ant colony foraging behavior and optimization algorithms\n---\n\n\n\nPlease execute this task according to your role (PhD Research Planning) and capabilities.\nDeliver the output required by the task description. Ensure your response is comprehensive and directly addresses the task.\n"
+  }
+]

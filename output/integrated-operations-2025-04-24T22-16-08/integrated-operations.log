@@ -1,0 +1,22 @@
+=== Integrated Operations Example - 2025-04-24T22:16:08.027Z ===
+
+[INFO] Starting integrated operations example...
+[LOG] Registered task executor for action: task1
+[LOG] Registered task executor for action: task2
+[LOG] Registered task executor for action: task3
+[INFO] Created workflow template: e5b2f45b-dd50-4874-867c-747a7b3c5cb9
+[INFO] Created workflow: ed4d8045-c605-4f84-8366-101605527e19
+[INFO] Executing task Task 1 (17bce428-91ce-4b9d-8a9b-e0756af0d4e9) in workflow ed4d8045-c605-4f84-8366-101605527e19
+[INFO] Executing task: Task 1
+[INFO] Executing task Task 2 (af55e47f-2995-46bb-b46b-22be451d144c) in workflow ed4d8045-c605-4f84-8366-101605527e19
+[INFO] Executing task: Task 2
+[INFO] Progress: 1/3 tasks completed
+[INFO] Executing task Task 3 (09ab552e-777e-4bd1-a97b-991d29e58594) in workflow ed4d8045-c605-4f84-8366-101605527e19
+[INFO] Executing task: Task 3
+[INFO] Progress: 2/3 tasks completed
+[INFO] Progress: 3/3 tasks completed
+[INFO] Workflow completed
+[INFO] Created workflow visualization in output/integrated-operations-2025-04-24T22-16-08/visualizations
+[INFO] Created HTML report in output/integrated-operations-2025-04-24T22-16-08
+[INFO] Example completed. Results saved to: output/integrated-operations-2025-04-24T22-16-08
+[INFO] Generated Markdown report: output/integrated-operations-2025-04-24T22-16-08/integration-report.md

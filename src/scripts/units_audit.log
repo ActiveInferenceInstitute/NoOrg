@@ -1,0 +1,1470 @@
+2025-04-22 07:01:45,545 [INFO] --- Starting Units Directory Audit (/home/trim/Documents/operations/units) ---
+2025-04-22 07:01:45,545 [INFO] Processing Unit: Sales
+2025-04-22 07:01:45,545 [INFO] Checking standard subfolders for unit: Sales
+2025-04-22 07:01:45,545 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Sales/index.md
+2025-04-22 07:01:45,545 [INFO] Scanning for wiki links in unit: Sales
+2025-04-22 07:01:45,545 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/README.md
+2025-04-22 07:01:45,546 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Reports/template_performance_report.md
+2025-04-22 07:01:45,546 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/MeetingNotes/template_meeting_notes.md
+2025-04-22 07:01:45,546 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/Responsibilities.md
+2025-04-22 07:01:45,546 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,546 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/SkillsRoles.md
+2025-04-22 07:01:45,546 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/Resources.md
+2025-04-22 07:01:45,546 [INFO] Processing Unit: EthicsAdvisoryBoard
+2025-04-22 07:01:45,547 [INFO] Checking standard subfolders for unit: EthicsAdvisoryBoard
+2025-04-22 07:01:45,547 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/index.md
+2025-04-22 07:01:45,547 [INFO] Scanning for wiki links in unit: EthicsAdvisoryBoard
+2025-04-22 07:01:45,547 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:01:45,547 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,547 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:01:45,547 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:01:45,548 [INFO] Processing Unit: Education
+2025-04-22 07:01:45,548 [INFO] Checking standard subfolders for unit: Education
+2025-04-22 07:01:45,548 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Education/index.md
+2025-04-22 07:01:45,548 [INFO] Scanning for wiki links in unit: Education
+2025-04-22 07:01:45,548 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Charter.md
+2025-04-22 07:01:45,548 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/README.md
+2025-04-22 07:01:45,548 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/Responsibilities.md
+2025-04-22 07:01:45,548 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,548 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/SkillsRoles.md
+2025-04-22 07:01:45,548 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/Resources.md
+2025-04-22 07:01:45,549 [INFO] Processing Unit: CustomerSupport
+2025-04-22 07:01:45,549 [INFO] Checking standard subfolders for unit: CustomerSupport
+2025-04-22 07:01:45,549 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/CustomerSupport/index.md
+2025-04-22 07:01:45,549 [INFO] Scanning for wiki links in unit: CustomerSupport
+2025-04-22 07:01:45,549 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/README.md
+2025-04-22 07:01:45,549 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Reports/README.md
+2025-04-22 07:01:45,549 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/MeetingNotes/README.md
+2025-04-22 07:01:45,549 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/Responsibilities.md
+2025-04-22 07:01:45,549 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,549 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/SkillsRoles.md
+2025-04-22 07:01:45,550 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/README.md
+2025-04-22 07:01:45,550 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/Resources.md
+2025-04-22 07:01:45,550 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Processes/README.md
+2025-04-22 07:01:45,550 [INFO] Processing Unit: Legal
+2025-04-22 07:01:45,550 [INFO] Checking standard subfolders for unit: Legal
+2025-04-22 07:01:45,550 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Legal/index.md
+2025-04-22 07:01:45,550 [INFO] Scanning for wiki links in unit: Legal
+2025-04-22 07:01:45,550 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Responsibilities.md
+2025-04-22 07:01:45,550 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/OrgChart.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Risk_Management.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Strategic_Management.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Interfaces.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Legal_Overview.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Charter.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Performance_Metrics.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/README.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Related_Links.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Resources.md
+2025-04-22 07:01:45,551 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/IntellectualProperty/README.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/IntellectualPropertyPolicy.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/Responsibilities.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/CodeOfConduct_LegalImplications.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/RecordsRetentionPolicy.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/CompliancePolicyOverview.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/SkillsRoles.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/ContractManagementPolicy.md
+2025-04-22 07:01:45,552 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/DataPrivacyPolicy.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/README.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/LitigationHoldPolicy.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/Resources.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/PolicyManagementProcess.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/LitigationManagementProcess.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/OutsideCounselManagementProcess.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/README.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/ContractReviewProcess.md
+2025-04-22 07:01:45,553 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/ComplianceReportingProcess.md
+2025-04-22 07:01:45,554 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/LegalHoldProcess.md
+2025-04-22 07:01:45,554 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Contracts/README.md
+2025-04-22 07:01:45,554 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/CorporateGovernance/README.md
+2025-04-22 07:01:45,554 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Compliance/README.md
+2025-04-22 07:01:45,554 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Litigation/README.md
+2025-04-22 07:01:45,554 [INFO] Processing Unit: HumanResources
+2025-04-22 07:01:45,554 [INFO] Checking standard subfolders for unit: HumanResources
+2025-04-22 07:01:45,555 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/HumanResources/index.md
+2025-04-22 07:01:45,555 [INFO] Scanning for wiki links in unit: HumanResources
+2025-04-22 07:01:45,555 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/hr_report_template.md
+2025-04-22 07:01:45,555 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/HRMetricsDashboardTemplate.md
+2025-04-22 07:01:45,555 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/README.md
+2025-04-22 07:01:45,556 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/MeetingNotes/README.md
+2025-04-22 07:01:45,556 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/MeetingNotes/HRTeamMeetingTemplate.md
+2025-04-22 07:01:45,556 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/Responsibilities.md
+2025-04-22 07:01:45,556 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/EmployeeHandbook.md
+2025-04-22 07:01:45,556 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,556 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/LeavePolicy.md
+2025-04-22 07:01:45,556 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/SkillsRoles.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/CodeOfConductPolicy.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/CompensationPolicy.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/README.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/Resources.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/RecruitmentProcess.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/OnboardingProcess.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/OffboardingProcess.md
+2025-04-22 07:01:45,557 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/PerformanceManagementProcess.md
+2025-04-22 07:01:45,558 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/README.md
+2025-04-22 07:01:45,558 [INFO] Processing Unit: TechnologyAdvisoryBoard
+2025-04-22 07:01:45,558 [INFO] Checking standard subfolders for unit: TechnologyAdvisoryBoard
+2025-04-22 07:01:45,558 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/index.md
+2025-04-22 07:01:45,558 [INFO] Scanning for wiki links in unit: TechnologyAdvisoryBoard
+2025-04-22 07:01:45,558 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Charter.md
+2025-04-22 07:01:45,558 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/README.md
+2025-04-22 07:01:45,559 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:01:45,559 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,559 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:01:45,559 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:01:45,559 [INFO] Processing Unit: Strategy
+2025-04-22 07:01:45,559 [INFO] Checking standard subfolders for unit: Strategy
+2025-04-22 07:01:45,559 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Strategy/index.md
+2025-04-22 07:01:45,560 [INFO] Scanning for wiki links in unit: Strategy
+2025-04-22 07:01:45,560 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Responsibilities.md
+2025-04-22 07:01:45,560 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Charter.md
+2025-04-22 07:01:45,560 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Resources.md
+2025-04-22 07:01:45,561 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/MeetingNotes/Meeting_Minutes_Template.md
+2025-04-22 07:01:45,561 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/Responsibilities.md
+2025-04-22 07:01:45,561 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,561 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/SkillsRoles.md
+2025-04-22 07:01:45,561 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/Resources.md
+2025-04-22 07:01:45,562 [INFO] Processing Unit: RiskAdvisoryBoard
+2025-04-22 07:01:45,562 [INFO] Checking standard subfolders for unit: RiskAdvisoryBoard
+2025-04-22 07:01:45,562 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/RiskAdvisoryBoard/index.md
+2025-04-22 07:01:45,562 [INFO] Scanning for wiki links in unit: RiskAdvisoryBoard
+2025-04-22 07:01:45,562 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Charter.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/README.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Confidentiality_Policy.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Conflict_of_Interest_Policy.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:01:45,563 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/RiskAdvisoryBoard_Operating_Principles.md
+2025-04-22 07:01:45,564 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Processes/Risk_Review_Process.md
+2025-04-22 07:01:45,564 [INFO] Processing Unit: Security
+2025-04-22 07:01:45,564 [INFO] Checking standard subfolders for unit: Security
+2025-04-22 07:01:45,564 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Security/index.md
+2025-04-22 07:01:45,564 [INFO] Scanning for wiki links in unit: Security
+2025-04-22 07:01:45,564 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Charter.md
+2025-04-22 07:01:45,564 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/Responsibilities.md
+2025-04-22 07:01:45,565 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,565 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/SkillsRoles.md
+2025-04-22 07:01:45,565 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/securitydocumentcatalog.md
+2025-04-22 07:01:45,565 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/Resources.md
+2025-04-22 07:01:45,565 [INFO] Processing Unit: RiskManagement
+2025-04-22 07:01:45,565 [INFO] Checking standard subfolders for unit: RiskManagement
+2025-04-22 07:01:45,566 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/RiskManagement/index.md
+2025-04-22 07:01:45,566 [INFO] Scanning for wiki links in unit: RiskManagement
+2025-04-22 07:01:45,566 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/README.md
+2025-04-22 07:01:45,566 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Reports/README.md
+2025-04-22 07:01:45,566 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/MeetingNotes/README.md
+2025-04-22 07:01:45,566 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/Responsibilities.md
+2025-04-22 07:01:45,566 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,566 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/SkillsRoles.md
+2025-04-22 07:01:45,567 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/README.md
+2025-04-22 07:01:45,567 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/Resources.md
+2025-04-22 07:01:45,567 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Processes/README.md
+2025-04-22 07:01:45,567 [INFO] Processing Unit: OrganizationalDevelopment
+2025-04-22 07:01:45,567 [INFO] Checking standard subfolders for unit: OrganizationalDevelopment
+2025-04-22 07:01:45,567 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/OrganizationalDevelopment/index.md
+2025-04-22 07:01:45,567 [INFO] Scanning for wiki links in unit: OrganizationalDevelopment
+2025-04-22 07:01:45,568 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Reports/README.md
+2025-04-22 07:01:45,568 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/Responsibilities.md
+2025-04-22 07:01:45,568 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,568 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:01:45,568 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/Resources.md
+2025-04-22 07:01:45,569 [INFO] Processing Unit: Governance
+2025-04-22 07:01:45,569 [INFO] Checking standard subfolders for unit: Governance
+2025-04-22 07:01:45,569 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Governance/index.md
+2025-04-22 07:01:45,569 [INFO] Scanning for wiki links in unit: Governance
+2025-04-22 07:01:45,569 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Charter.md
+2025-04-22 07:01:45,569 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/MeetingNotes/Meeting_Minutes_Template.md
+2025-04-22 07:01:45,570 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/Responsibilities.md
+2025-04-22 07:01:45,570 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,570 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/SkillsRoles.md
+2025-04-22 07:01:45,570 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/Resources.md
+2025-04-22 07:01:45,570 [INFO] Processing Unit: BusinessDevelopment
+2025-04-22 07:01:45,570 [INFO] Checking standard subfolders for unit: BusinessDevelopment
+2025-04-22 07:01:45,571 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/BusinessDevelopment/index.md
+2025-04-22 07:01:45,571 [INFO] Scanning for wiki links in unit: BusinessDevelopment
+2025-04-22 07:01:45,571 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/Responsibilities.md
+2025-04-22 07:01:45,571 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,571 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:01:45,571 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/Resources.md
+2025-04-22 07:01:45,572 [INFO] Processing Unit: QualityAssurance
+2025-04-22 07:01:45,572 [INFO] Checking standard subfolders for unit: QualityAssurance
+2025-04-22 07:01:45,572 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/QualityAssurance/index.md
+2025-04-22 07:01:45,572 [INFO] Scanning for wiki links in unit: QualityAssurance
+2025-04-22 07:01:45,572 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Charter.md
+2025-04-22 07:01:45,572 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/README.md
+2025-04-22 07:01:45,572 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Test_Strategy_Policy.md
+2025-04-22 07:01:45,572 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Release_Criteria_Policy.md
+2025-04-22 07:01:45,572 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Responsibilities.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Quality_Standards_Policy.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/SkillsRoles.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/README.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Defect_Management_Policy.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Resources.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Audit_Policy.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Processes/Test_Planning_Process.md
+2025-04-22 07:01:45,573 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Processes/README.md
+2025-04-22 07:01:45,574 [INFO] Processing Unit: MarketingCommunications
+2025-04-22 07:01:45,574 [INFO] Checking standard subfolders for unit: MarketingCommunications
+2025-04-22 07:01:45,574 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/MarketingCommunications/index.md
+2025-04-22 07:01:45,574 [INFO] Scanning for wiki links in unit: MarketingCommunications
+2025-04-22 07:01:45,574 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Charter.md
+2025-04-22 07:01:45,574 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/README.md
+2025-04-22 07:01:45,574 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/Responsibilities.md
+2025-04-22 07:01:45,574 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,574 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/SkillsRoles.md
+2025-04-22 07:01:45,575 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/Resources.md
+2025-04-22 07:01:45,575 [INFO] Processing Unit: Development
+2025-04-22 07:01:45,575 [INFO] Checking standard subfolders for unit: Development
+2025-04-22 07:01:45,575 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Development/index.md
+2025-04-22 07:01:45,575 [INFO] Scanning for wiki links in unit: Development
+2025-04-22 07:01:45,575 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/Responsibilities.md
+2025-04-22 07:01:45,575 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,576 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/SkillsRoles.md
+2025-04-22 07:01:45,576 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/Resources.md
+2025-04-22 07:01:45,576 [INFO] Processing Unit: ExecutiveCommittee
+2025-04-22 07:01:45,576 [INFO] Checking standard subfolders for unit: ExecutiveCommittee
+2025-04-22 07:01:45,576 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/ExecutiveCommittee/index.md
+2025-04-22 07:01:45,576 [INFO] Scanning for wiki links in unit: ExecutiveCommittee
+2025-04-22 07:01:45,576 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Charter.md
+2025-04-22 07:01:45,576 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/README.md
+2025-04-22 07:01:45,577 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/DecisionFramework/decisionframework.md
+2025-04-22 07:01:45,577 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/OperatingProcedures/operatingprocedures.md
+2025-04-22 07:01:45,577 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/Responsibilities.md
+2025-04-22 07:01:45,577 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,577 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/SkillsRoles.md
+2025-04-22 07:01:45,577 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/Resources.md
+2025-04-22 07:01:45,578 [INFO] Processing Unit: Audit
+2025-04-22 07:01:45,578 [INFO] Checking standard subfolders for unit: Audit
+2025-04-22 07:01:45,578 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Audit/index.md
+2025-04-22 07:01:45,578 [INFO] Scanning for wiki links in unit: Audit
+2025-04-22 07:01:45,578 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/README.md
+2025-04-22 07:01:45,578 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Reports/README.md
+2025-04-22 07:01:45,578 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/MeetingNotes/README.md
+2025-04-22 07:01:45,578 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/Responsibilities.md
+2025-04-22 07:01:45,579 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,579 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/SkillsRoles.md
+2025-04-22 07:01:45,579 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/Resources.md
+2025-04-22 07:01:45,579 [INFO] Processing Unit: ScientificAdvisoryBoard
+2025-04-22 07:01:45,579 [INFO] Checking standard subfolders for unit: ScientificAdvisoryBoard
+2025-04-22 07:01:45,580 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/index.md
+2025-04-22 07:01:45,580 [INFO] Scanning for wiki links in unit: ScientificAdvisoryBoard
+2025-04-22 07:01:45,580 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/README.md
+2025-04-22 07:01:45,580 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:01:45,580 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,580 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:01:45,580 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:01:45,581 [INFO] Processing Unit: Operations
+2025-04-22 07:01:45,581 [INFO] Checking standard subfolders for unit: Operations
+2025-04-22 07:01:45,581 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Operations/index.md
+2025-04-22 07:01:45,581 [INFO] Scanning for wiki links in unit: Operations
+2025-04-22 07:01:45,581 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Operations/Policies/Responsibilities.md
+2025-04-22 07:01:45,582 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Operations/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,582 [INFO] Processing Unit: Innovation
+2025-04-22 07:01:45,582 [INFO] Checking standard subfolders for unit: Innovation
+2025-04-22 07:01:45,582 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Innovation/index.md
+2025-04-22 07:01:45,582 [INFO] Scanning for wiki links in unit: Innovation
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Charter.md
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/README.md
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Related_Links.md
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Resources.md
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Experiment_Results_Template.md
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/README.md
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Quarterly_Innovation_Review_Template.md
+2025-04-22 07:01:45,583 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Innovation_Pipeline_Report_Template.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Projects/README.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/MeetingNotes/README.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Intellectual_Property_Policy.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Responsibilities.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Idea_Submission_Policy.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/SkillsRoles.md
+2025-04-22 07:01:45,584 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Innovation_Funding_Policy.md
+2025-04-22 07:01:45,585 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Experimentation_Policy.md
+2025-04-22 07:01:45,585 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/README.md
+2025-04-22 07:01:45,585 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Resources.md
+2025-04-22 07:01:45,585 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Templates/Idea_Submission_Form.md
+2025-04-22 07:01:45,585 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Templates/Experiment_Plan_Template.md
+2025-04-22 07:01:45,585 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Idea_Management_Process.md
+2025-04-22 07:01:45,585 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Innovation_Lifecycle_Process.md
+2025-04-22 07:01:45,586 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/README.md
+2025-04-22 07:01:45,586 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Prototyping_Process.md
+2025-04-22 07:01:45,586 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Experiment_Tracking_Process.md
+2025-04-22 07:01:45,586 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Diagrams/Innovation_Lifecycle_Process_Diagram.md
+2025-04-22 07:01:45,586 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Diagrams/Idea_Management_Process_Diagram.md
+2025-04-22 07:01:45,586 [INFO] Processing Unit: InformationTechnology
+2025-04-22 07:01:45,586 [INFO] Checking standard subfolders for unit: InformationTechnology
+2025-04-22 07:01:45,586 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/InformationTechnology/index.md
+2025-04-22 07:01:45,586 [INFO] Scanning for wiki links in unit: InformationTechnology
+2025-04-22 07:01:45,587 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Charter.md
+2025-04-22 07:01:45,587 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/README.md
+2025-04-22 07:01:45,587 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/Responsibilities.md
+2025-04-22 07:01:45,587 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/AcceptableUsePolicy.md
+2025-04-22 07:01:45,587 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/HardwareLifecyclePolicy.md
+2025-04-22 07:01:45,587 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/EmailUsagePolicy.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/IncidentResponsePolicy.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/DisasterRecoveryPolicy.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/DataSecurityPolicy.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/SkillsRoles.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/RemoteAccessPolicy.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/ChangeManagementPolicy.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/SoftwareUsagePolicy.md
+2025-04-22 07:01:45,588 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/PasswordPolicy.md
+2025-04-22 07:01:45,589 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/README.md
+2025-04-22 07:01:45,589 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/Resources.md
+2025-04-22 07:01:45,589 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/NewUserOnboarding.md
+2025-04-22 07:01:45,589 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/AccessRequestProcedure.md
+2025-04-22 07:01:45,589 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/ChangeManagementProcedure.md
+2025-04-22 07:01:45,589 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/IncidentResponseProcedure.md
+2025-04-22 07:01:45,590 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/SoftwareUpdateProcess.md
+2025-04-22 07:01:45,590 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/NetworkMonitoringProcedure.md
+2025-04-22 07:01:45,590 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/HelpDeskProcedure.md
+2025-04-22 07:01:45,590 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/README.md
+2025-04-22 07:01:45,590 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/UserOffboardingProcedure.md
+2025-04-22 07:01:45,590 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/DataBackupRecoveryProcedure.md
+2025-04-22 07:01:45,590 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/HardwareProcurement.md
+2025-04-22 07:01:45,591 [INFO] Processing Unit: Facilities
+2025-04-22 07:01:45,591 [INFO] Checking standard subfolders for unit: Facilities
+2025-04-22 07:01:45,591 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Facilities/index.md
+2025-04-22 07:01:45,591 [INFO] Scanning for wiki links in unit: Facilities
+2025-04-22 07:01:45,592 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/Responsibilities.md
+2025-04-22 07:01:45,592 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,592 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/SkillsRoles.md
+2025-04-22 07:01:45,592 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/Resources.md
+2025-04-22 07:01:45,592 [INFO] Processing Unit: SupplyChain
+2025-04-22 07:01:45,592 [INFO] Checking standard subfolders for unit: SupplyChain
+2025-04-22 07:01:45,593 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/SupplyChain/index.md
+2025-04-22 07:01:45,593 [INFO] Scanning for wiki links in unit: SupplyChain
+2025-04-22 07:01:45,593 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Charter.md
+2025-04-22 07:01:45,593 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/README.md
+2025-04-22 07:01:45,593 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/Responsibilities.md
+2025-04-22 07:01:45,593 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,594 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/SkillsRoles.md
+2025-04-22 07:01:45,594 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/Resources.md
+2025-04-22 07:01:45,594 [INFO] Found top-level file: unitdirectory.md. Skipping unit-specific checks.
+2025-04-22 07:01:45,594 [INFO] Processing Unit: Intelligence
+2025-04-22 07:01:45,595 [INFO] Checking standard subfolders for unit: Intelligence
+2025-04-22 07:01:45,595 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Intelligence/index.md
+2025-04-22 07:01:45,595 [INFO] Scanning for wiki links in unit: Intelligence
+2025-04-22 07:01:45,596 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Responsibilities.md
+2025-04-22 07:01:45,596 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,596 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Intelligence_Data_Classification_Guideline.md
+2025-04-22 07:01:45,596 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/SkillsRoles.md
+2025-04-22 07:01:45,596 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Resources.md
+2025-04-22 07:01:45,597 [INFO] Processing Unit: Marketing
+2025-04-22 07:01:45,597 [INFO] Checking standard subfolders for unit: Marketing
+2025-04-22 07:01:45,597 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Marketing/index.md
+2025-04-22 07:01:45,597 [INFO] Scanning for wiki links in unit: Marketing
+2025-04-22 07:01:45,597 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Charter.md
+2025-04-22 07:01:45,597 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/README.md
+2025-04-22 07:01:45,598 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/Responsibilities.md
+2025-04-22 07:01:45,598 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,598 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/SkillsRoles.md
+2025-04-22 07:01:45,598 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/Resources.md
+2025-04-22 07:01:45,598 [INFO] Processing Unit: Finance
+2025-04-22 07:01:45,598 [INFO] Checking standard subfolders for unit: Finance
+2025-04-22 07:01:45,599 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Finance/index.md
+2025-04-22 07:01:45,599 [INFO] Scanning for wiki links in unit: Finance
+2025-04-22 07:01:45,599 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Charter.md
+2025-04-22 07:01:45,599 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/README.md
+2025-04-22 07:01:45,599 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/Responsibilities.md
+2025-04-22 07:01:45,599 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,599 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/SkillsRoles.md
+2025-04-22 07:01:45,599 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/Resources.md
+2025-04-22 07:01:45,599 [INFO] Processing Unit: Administration
+2025-04-22 07:01:45,599 [INFO] Checking standard subfolders for unit: Administration
+2025-04-22 07:01:45,600 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Administration/index.md
+2025-04-22 07:01:45,600 [INFO] Scanning for wiki links in unit: Administration
+2025-04-22 07:01:45,600 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/Responsibilities.md
+2025-04-22 07:01:45,600 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,600 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/SkillsRoles.md
+2025-04-22 07:01:45,600 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/Resources.md
+2025-04-22 07:01:45,601 [INFO] Processing Unit: Compliance
+2025-04-22 07:01:45,601 [INFO] Checking standard subfolders for unit: Compliance
+2025-04-22 07:01:45,601 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Compliance/index.md
+2025-04-22 07:01:45,601 [INFO] Scanning for wiki links in unit: Compliance
+2025-04-22 07:01:45,601 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Charter.md
+2025-04-22 07:01:45,601 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/README.md
+2025-04-22 07:01:45,601 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/Responsibilities.md
+2025-04-22 07:01:45,601 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,601 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/SkillsRoles.md
+2025-04-22 07:01:45,602 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/Resources.md
+2025-04-22 07:01:45,602 [INFO] Processing Unit: BoardOfDirectors
+2025-04-22 07:01:45,602 [INFO] Checking standard subfolders for unit: BoardOfDirectors
+2025-04-22 07:01:45,602 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/BoardOfDirectors/index.md
+2025-04-22 07:01:45,602 [INFO] Scanning for wiki links in unit: BoardOfDirectors
+2025-04-22 07:01:45,602 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Charter.md
+2025-04-22 07:01:45,602 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/README.md
+2025-04-22 07:01:45,602 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/Responsibilities.md
+2025-04-22 07:01:45,603 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,603 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/SkillsRoles.md
+2025-04-22 07:01:45,603 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/Resources.md
+2025-04-22 07:01:45,603 [INFO] Processing Unit: Executive
+2025-04-22 07:01:45,603 [INFO] Checking standard subfolders for unit: Executive
+2025-04-22 07:01:45,603 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Executive/index.md
+2025-04-22 07:01:45,603 [INFO] Scanning for wiki links in unit: Executive
+2025-04-22 07:01:45,603 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Charter.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/README.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/AnnualStrategicReportTemplate.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/README.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/QuarterlyBusinessReviewTemplate.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/MeetingNotes/README.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/CodeOfConduct.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/Responsibilities.md
+2025-04-22 07:01:45,604 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/SkillsRoles.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/CommunicationPolicy.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/DelegationOfAuthority.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/README.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/ConflictOfInterestPolicy.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/Resources.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/CrisisManagementProcess.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/PerformanceReviewProcess.md
+2025-04-22 07:01:45,605 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/DecisionMakingFramework.md
+2025-04-22 07:01:45,606 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/README.md
+2025-04-22 07:01:45,606 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/StrategicPlanningProcess.md
+2025-04-22 07:01:45,606 [INFO] Processing Unit: AdvisoryBoard
+2025-04-22 07:01:45,606 [INFO] Checking standard subfolders for unit: AdvisoryBoard
+2025-04-22 07:01:45,606 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/AdvisoryBoard/index.md
+2025-04-22 07:01:45,606 [INFO] Scanning for wiki links in unit: AdvisoryBoard
+2025-04-22 07:01:45,606 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/README.md
+2025-04-22 07:01:45,606 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/ReportingStructure/reportingstructure.md
+2025-04-22 07:01:45,607 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:01:45,607 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,607 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:01:45,608 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/Resources.md
+2025-04-22 07:01:45,608 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/workinggroups.md
+2025-04-22 07:01:45,608 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/TechnologyGroup/technologygroupcharter.md
+2025-04-22 07:01:45,608 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/StrategyGroup/strategygroupcharter.md
+2025-04-22 07:01:45,608 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/RiskGroup/riskgroupcharter.md
+2025-04-22 07:01:45,608 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/SpecialProjects/specialprojectscharter.md
+2025-04-22 07:01:45,608 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/PerformanceGroup/performancegroupcharter.md
+2025-04-22 07:01:45,608 [INFO] Processing Unit: TrainingDevelopment
+2025-04-22 07:01:45,608 [INFO] Checking standard subfolders for unit: TrainingDevelopment
+2025-04-22 07:01:45,609 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/TrainingDevelopment/index.md
+2025-04-22 07:01:45,609 [INFO] Scanning for wiki links in unit: TrainingDevelopment
+2025-04-22 07:01:45,609 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/README.md
+2025-04-22 07:01:45,609 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Reports/README.md
+2025-04-22 07:01:45,609 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/MeetingNotes/README.md
+2025-04-22 07:01:45,609 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/Responsibilities.md
+2025-04-22 07:01:45,609 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,609 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:01:45,609 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/Resources.md
+2025-04-22 07:01:45,610 [INFO] Processing Unit: KnowledgeManagement
+2025-04-22 07:01:45,610 [INFO] Checking standard subfolders for unit: KnowledgeManagement
+2025-04-22 07:01:45,610 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/KnowledgeManagement/index.md
+2025-04-22 07:01:45,610 [INFO] Scanning for wiki links in unit: KnowledgeManagement
+2025-04-22 07:01:45,610 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Charter.md
+2025-04-22 07:01:45,610 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/README.md
+2025-04-22 07:01:45,610 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeRetentionPolicy.md
+2025-04-22 07:01:45,610 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/Responsibilities.md
+2025-04-22 07:01:45,610 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,610 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/DataClassificationPolicy.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/SkillsRoles.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeCreationPolicy.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/CommunityOfPracticePolicy.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/README.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeSharingPolicy.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/Resources.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/KnowledgeCaptureProcess.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/README.md
+2025-04-22 07:01:45,611 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/KnowledgeReviewProcess.md
+2025-04-22 07:01:45,612 [INFO] Processing Unit: ProductManagement
+2025-04-22 07:01:45,612 [INFO] Checking standard subfolders for unit: ProductManagement
+2025-04-22 07:01:45,612 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/ProductManagement/index.md
+2025-04-22 07:01:45,612 [INFO] Scanning for wiki links in unit: ProductManagement
+2025-04-22 07:01:45,612 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/Responsibilities.md
+2025-04-22 07:01:45,612 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,612 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/SkillsRoles.md
+2025-04-22 07:01:45,613 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/Resources.md
+2025-04-22 07:01:45,613 [INFO] Processing Unit: ResearchDevelopment
+2025-04-22 07:01:45,613 [INFO] Checking standard subfolders for unit: ResearchDevelopment
+2025-04-22 07:01:45,613 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/ResearchDevelopment/index.md
+2025-04-22 07:01:45,613 [INFO] Scanning for wiki links in unit: ResearchDevelopment
+2025-04-22 07:01:45,613 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Charter.md
+2025-04-22 07:01:45,613 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/README.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Reports/README.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/MeetingNotes/README.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Intellectual_Property_Policy.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Responsibilities.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Data_Management_Policy.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Lab_Safety_Policy.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:01:45,614 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Research_Ethics_Policy.md
+2025-04-22 07:01:45,615 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Resources.md
+2025-04-22 07:01:45,615 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Experiment_Design_Process.md
+2025-04-22 07:01:45,615 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Idea_Generation_Process.md
+2025-04-22 07:01:45,615 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Peer_Review_Process.md
+2025-04-22 07:01:45,615 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Project_Proposal_Process.md
+2025-04-22 07:01:45,615 [INFO] Processing Unit: Research
+2025-04-22 07:01:45,615 [INFO] Checking standard subfolders for unit: Research
+2025-04-22 07:01:45,615 [WARNING] CREATED missing index file: /home/trim/Documents/operations/units/Research/index.md
+2025-04-22 07:01:45,615 [INFO] Scanning for wiki links in unit: Research
+2025-04-22 07:01:45,616 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Reports/Template_Research_Report.md
+2025-04-22 07:01:45,616 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Reports/README.md
+2025-04-22 07:01:45,616 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/MeetingNotes/README.md
+2025-04-22 07:01:45,616 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/MeetingNotes/Template_Meeting_Notes.md
+2025-04-22 07:01:45,616 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/Responsibilities.md
+2025-04-22 07:01:45,617 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/PositionsPersonas.md
+2025-04-22 07:01:45,617 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/SkillsRoles.md
+2025-04-22 07:01:45,617 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/Resources.md
+2025-04-22 07:01:45,617 [INFO] --- Units Directory Audit Complete ---
+2025-04-22 07:01:45,617 [INFO] NOTE: Some markdown files were found without [[wiki links]]. See details above.
+2025-04-22 07:01:45,617 [INFO] Log file saved to: units_audit.log
+2025-04-22 07:05:21,171 [INFO] --- Starting Units Directory Audit (/home/trim/Documents/operations/units) ---
+2025-04-22 07:05:21,171 [INFO] Processing Unit: Sales
+2025-04-22 07:05:21,171 [INFO] Checking standard subfolders for unit: Sales
+2025-04-22 07:05:21,172 [INFO] Scanning for wiki links in unit: Sales
+2025-04-22 07:05:21,172 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Reports/template_performance_report.md
+2025-04-22 07:05:21,172 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/MeetingNotes/template_meeting_notes.md
+2025-04-22 07:05:21,172 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/Responsibilities.md
+2025-04-22 07:05:21,173 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,173 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/SkillsRoles.md
+2025-04-22 07:05:21,173 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/Resources.md
+2025-04-22 07:05:21,173 [INFO] Processing Unit: EthicsAdvisoryBoard
+2025-04-22 07:05:21,173 [INFO] Checking standard subfolders for unit: EthicsAdvisoryBoard
+2025-04-22 07:05:21,173 [INFO] Scanning for wiki links in unit: EthicsAdvisoryBoard
+2025-04-22 07:05:21,174 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:05:21,174 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,174 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:05:21,174 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:05:21,174 [INFO] Processing Unit: Education
+2025-04-22 07:05:21,174 [INFO] Checking standard subfolders for unit: Education
+2025-04-22 07:05:21,174 [INFO] Scanning for wiki links in unit: Education
+2025-04-22 07:05:21,174 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Charter.md
+2025-04-22 07:05:21,175 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/README.md
+2025-04-22 07:05:21,175 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/Responsibilities.md
+2025-04-22 07:05:21,175 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,175 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/SkillsRoles.md
+2025-04-22 07:05:21,175 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/Resources.md
+2025-04-22 07:05:21,175 [INFO] Processing Unit: CustomerSupport
+2025-04-22 07:05:21,175 [INFO] Checking standard subfolders for unit: CustomerSupport
+2025-04-22 07:05:21,175 [INFO] Scanning for wiki links in unit: CustomerSupport
+2025-04-22 07:05:21,176 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/README.md
+2025-04-22 07:05:21,176 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Reports/README.md
+2025-04-22 07:05:21,176 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/MeetingNotes/README.md
+2025-04-22 07:05:21,176 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/Responsibilities.md
+2025-04-22 07:05:21,176 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,176 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/SkillsRoles.md
+2025-04-22 07:05:21,176 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/README.md
+2025-04-22 07:05:21,177 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/Resources.md
+2025-04-22 07:05:21,177 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Processes/README.md
+2025-04-22 07:05:21,177 [INFO] Processing Unit: Legal
+2025-04-22 07:05:21,177 [INFO] Checking standard subfolders for unit: Legal
+2025-04-22 07:05:21,177 [INFO] Scanning for wiki links in unit: Legal
+2025-04-22 07:05:21,177 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Responsibilities.md
+2025-04-22 07:05:21,177 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/OrgChart.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Risk_Management.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Strategic_Management.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Interfaces.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Legal_Overview.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Charter.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Performance_Metrics.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/README.md
+2025-04-22 07:05:21,178 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Related_Links.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Resources.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/IntellectualProperty/README.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/IntellectualPropertyPolicy.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/Responsibilities.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/CodeOfConduct_LegalImplications.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/RecordsRetentionPolicy.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/CompliancePolicyOverview.md
+2025-04-22 07:05:21,179 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/SkillsRoles.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/ContractManagementPolicy.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/DataPrivacyPolicy.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/README.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/LitigationHoldPolicy.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/Resources.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/PolicyManagementProcess.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/LitigationManagementProcess.md
+2025-04-22 07:05:21,180 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/OutsideCounselManagementProcess.md
+2025-04-22 07:05:21,181 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/README.md
+2025-04-22 07:05:21,181 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/ContractReviewProcess.md
+2025-04-22 07:05:21,181 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/ComplianceReportingProcess.md
+2025-04-22 07:05:21,181 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/LegalHoldProcess.md
+2025-04-22 07:05:21,181 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Contracts/README.md
+2025-04-22 07:05:21,181 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/CorporateGovernance/README.md
+2025-04-22 07:05:21,181 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Compliance/README.md
+2025-04-22 07:05:21,182 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Litigation/README.md
+2025-04-22 07:05:21,182 [INFO] Processing Unit: HumanResources
+2025-04-22 07:05:21,182 [INFO] Checking standard subfolders for unit: HumanResources
+2025-04-22 07:05:21,182 [INFO] Scanning for wiki links in unit: HumanResources
+2025-04-22 07:05:21,182 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/hr_report_template.md
+2025-04-22 07:05:21,182 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/HRMetricsDashboardTemplate.md
+2025-04-22 07:05:21,182 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/README.md
+2025-04-22 07:05:21,183 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/MeetingNotes/README.md
+2025-04-22 07:05:21,183 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/MeetingNotes/HRTeamMeetingTemplate.md
+2025-04-22 07:05:21,183 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/Responsibilities.md
+2025-04-22 07:05:21,183 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/EmployeeHandbook.md
+2025-04-22 07:05:21,183 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,183 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/LeavePolicy.md
+2025-04-22 07:05:21,183 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/SkillsRoles.md
+2025-04-22 07:05:21,184 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/CodeOfConductPolicy.md
+2025-04-22 07:05:21,184 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/CompensationPolicy.md
+2025-04-22 07:05:21,184 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/README.md
+2025-04-22 07:05:21,184 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/Resources.md
+2025-04-22 07:05:21,184 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/RecruitmentProcess.md
+2025-04-22 07:05:21,184 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/OffboardingProcess.md
+2025-04-22 07:05:21,185 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/PerformanceManagementProcess.md
+2025-04-22 07:05:21,185 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/README.md
+2025-04-22 07:05:21,185 [INFO] Processing Unit: TechnologyAdvisoryBoard
+2025-04-22 07:05:21,185 [INFO] Checking standard subfolders for unit: TechnologyAdvisoryBoard
+2025-04-22 07:05:21,185 [INFO] Scanning for wiki links in unit: TechnologyAdvisoryBoard
+2025-04-22 07:05:21,185 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Charter.md
+2025-04-22 07:05:21,185 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/README.md
+2025-04-22 07:05:21,185 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:05:21,185 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,185 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:05:21,186 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:05:21,186 [INFO] Processing Unit: Strategy
+2025-04-22 07:05:21,186 [INFO] Checking standard subfolders for unit: Strategy
+2025-04-22 07:05:21,186 [INFO] Scanning for wiki links in unit: Strategy
+2025-04-22 07:05:21,186 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Responsibilities.md
+2025-04-22 07:05:21,186 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Charter.md
+2025-04-22 07:05:21,187 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Resources.md
+2025-04-22 07:05:21,187 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/MeetingNotes/Meeting_Minutes_Template.md
+2025-04-22 07:05:21,188 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/Responsibilities.md
+2025-04-22 07:05:21,188 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,188 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/SkillsRoles.md
+2025-04-22 07:05:21,189 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/Resources.md
+2025-04-22 07:05:21,190 [INFO] Processing Unit: RiskAdvisoryBoard
+2025-04-22 07:05:21,190 [INFO] Checking standard subfolders for unit: RiskAdvisoryBoard
+2025-04-22 07:05:21,190 [INFO] Scanning for wiki links in unit: RiskAdvisoryBoard
+2025-04-22 07:05:21,190 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Charter.md
+2025-04-22 07:05:21,190 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/README.md
+2025-04-22 07:05:21,191 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Confidentiality_Policy.md
+2025-04-22 07:05:21,191 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:05:21,191 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,191 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:05:21,191 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Conflict_of_Interest_Policy.md
+2025-04-22 07:05:21,191 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:05:21,192 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/RiskAdvisoryBoard_Operating_Principles.md
+2025-04-22 07:05:21,192 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Processes/Risk_Review_Process.md
+2025-04-22 07:05:21,192 [INFO] Processing Unit: Security
+2025-04-22 07:05:21,192 [INFO] Checking standard subfolders for unit: Security
+2025-04-22 07:05:21,192 [INFO] Scanning for wiki links in unit: Security
+2025-04-22 07:05:21,193 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Charter.md
+2025-04-22 07:05:21,193 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/Responsibilities.md
+2025-04-22 07:05:21,194 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,194 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/SkillsRoles.md
+2025-04-22 07:05:21,194 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/securitydocumentcatalog.md
+2025-04-22 07:05:21,194 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/Resources.md
+2025-04-22 07:05:21,195 [INFO] Processing Unit: RiskManagement
+2025-04-22 07:05:21,195 [INFO] Checking standard subfolders for unit: RiskManagement
+2025-04-22 07:05:21,195 [INFO] Scanning for wiki links in unit: RiskManagement
+2025-04-22 07:05:21,195 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/README.md
+2025-04-22 07:05:21,196 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Reports/README.md
+2025-04-22 07:05:21,196 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/MeetingNotes/README.md
+2025-04-22 07:05:21,196 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/Responsibilities.md
+2025-04-22 07:05:21,196 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,196 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/SkillsRoles.md
+2025-04-22 07:05:21,196 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/README.md
+2025-04-22 07:05:21,196 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/Resources.md
+2025-04-22 07:05:21,197 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Processes/README.md
+2025-04-22 07:05:21,197 [INFO] Processing Unit: OrganizationalDevelopment
+2025-04-22 07:05:21,197 [INFO] Checking standard subfolders for unit: OrganizationalDevelopment
+2025-04-22 07:05:21,197 [INFO] Scanning for wiki links in unit: OrganizationalDevelopment
+2025-04-22 07:05:21,197 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Reports/README.md
+2025-04-22 07:05:21,198 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/Responsibilities.md
+2025-04-22 07:05:21,198 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,198 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:05:21,198 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/Resources.md
+2025-04-22 07:05:21,199 [INFO] Processing Unit: Governance
+2025-04-22 07:05:21,199 [INFO] Checking standard subfolders for unit: Governance
+2025-04-22 07:05:21,199 [INFO] Scanning for wiki links in unit: Governance
+2025-04-22 07:05:21,199 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Charter.md
+2025-04-22 07:05:21,200 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/MeetingNotes/Meeting_Minutes_Template.md
+2025-04-22 07:05:21,200 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/Responsibilities.md
+2025-04-22 07:05:21,200 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,200 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/SkillsRoles.md
+2025-04-22 07:05:21,200 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/Resources.md
+2025-04-22 07:05:21,201 [INFO] Processing Unit: BusinessDevelopment
+2025-04-22 07:05:21,201 [INFO] Checking standard subfolders for unit: BusinessDevelopment
+2025-04-22 07:05:21,201 [INFO] Scanning for wiki links in unit: BusinessDevelopment
+2025-04-22 07:05:21,202 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/Responsibilities.md
+2025-04-22 07:05:21,202 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,202 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:05:21,202 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/Resources.md
+2025-04-22 07:05:21,202 [INFO] Processing Unit: QualityAssurance
+2025-04-22 07:05:21,202 [INFO] Checking standard subfolders for unit: QualityAssurance
+2025-04-22 07:05:21,203 [INFO] Scanning for wiki links in unit: QualityAssurance
+2025-04-22 07:05:21,203 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Charter.md
+2025-04-22 07:05:21,203 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/README.md
+2025-04-22 07:05:21,203 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Test_Strategy_Policy.md
+2025-04-22 07:05:21,203 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Release_Criteria_Policy.md
+2025-04-22 07:05:21,203 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Responsibilities.md
+2025-04-22 07:05:21,203 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Quality_Standards_Policy.md
+2025-04-22 07:05:21,204 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,204 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/SkillsRoles.md
+2025-04-22 07:05:21,204 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/README.md
+2025-04-22 07:05:21,204 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Defect_Management_Policy.md
+2025-04-22 07:05:21,204 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Resources.md
+2025-04-22 07:05:21,204 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Audit_Policy.md
+2025-04-22 07:05:21,204 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Processes/Test_Planning_Process.md
+2025-04-22 07:05:21,205 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Processes/README.md
+2025-04-22 07:05:21,205 [INFO] Processing Unit: MarketingCommunications
+2025-04-22 07:05:21,205 [INFO] Checking standard subfolders for unit: MarketingCommunications
+2025-04-22 07:05:21,205 [INFO] Scanning for wiki links in unit: MarketingCommunications
+2025-04-22 07:05:21,205 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Charter.md
+2025-04-22 07:05:21,205 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/README.md
+2025-04-22 07:05:21,206 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/Responsibilities.md
+2025-04-22 07:05:21,206 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,206 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/SkillsRoles.md
+2025-04-22 07:05:21,206 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/Resources.md
+2025-04-22 07:05:21,206 [INFO] Processing Unit: Development
+2025-04-22 07:05:21,206 [INFO] Checking standard subfolders for unit: Development
+2025-04-22 07:05:21,206 [INFO] Scanning for wiki links in unit: Development
+2025-04-22 07:05:21,207 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/Responsibilities.md
+2025-04-22 07:05:21,207 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,207 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/SkillsRoles.md
+2025-04-22 07:05:21,207 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/Resources.md
+2025-04-22 07:05:21,207 [INFO] Processing Unit: ExecutiveCommittee
+2025-04-22 07:05:21,207 [INFO] Checking standard subfolders for unit: ExecutiveCommittee
+2025-04-22 07:05:21,208 [INFO] Scanning for wiki links in unit: ExecutiveCommittee
+2025-04-22 07:05:21,208 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Charter.md
+2025-04-22 07:05:21,208 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/README.md
+2025-04-22 07:05:21,208 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/DecisionFramework/decisionframework.md
+2025-04-22 07:05:21,208 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/OperatingProcedures/operatingprocedures.md
+2025-04-22 07:05:21,209 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/Responsibilities.md
+2025-04-22 07:05:21,209 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,209 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/SkillsRoles.md
+2025-04-22 07:05:21,209 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/Resources.md
+2025-04-22 07:05:21,209 [INFO] Processing Unit: Audit
+2025-04-22 07:05:21,209 [INFO] Checking standard subfolders for unit: Audit
+2025-04-22 07:05:21,209 [INFO] Scanning for wiki links in unit: Audit
+2025-04-22 07:05:21,209 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/README.md
+2025-04-22 07:05:21,210 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Reports/README.md
+2025-04-22 07:05:21,210 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/MeetingNotes/README.md
+2025-04-22 07:05:21,210 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/Responsibilities.md
+2025-04-22 07:05:21,210 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,210 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/SkillsRoles.md
+2025-04-22 07:05:21,210 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/Resources.md
+2025-04-22 07:05:21,211 [INFO] Processing Unit: ScientificAdvisoryBoard
+2025-04-22 07:05:21,211 [INFO] Checking standard subfolders for unit: ScientificAdvisoryBoard
+2025-04-22 07:05:21,211 [INFO] Scanning for wiki links in unit: ScientificAdvisoryBoard
+2025-04-22 07:05:21,211 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/README.md
+2025-04-22 07:05:21,211 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:05:21,212 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,212 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:05:21,212 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:05:21,212 [INFO] Processing Unit: Operations
+2025-04-22 07:05:21,212 [INFO] Checking standard subfolders for unit: Operations
+2025-04-22 07:05:21,212 [INFO] Scanning for wiki links in unit: Operations
+2025-04-22 07:05:21,213 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Operations/Policies/Responsibilities.md
+2025-04-22 07:05:21,213 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Operations/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,214 [INFO] Processing Unit: Innovation
+2025-04-22 07:05:21,214 [INFO] Checking standard subfolders for unit: Innovation
+2025-04-22 07:05:21,214 [INFO] Scanning for wiki links in unit: Innovation
+2025-04-22 07:05:21,214 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/README.md
+2025-04-22 07:05:21,215 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Related_Links.md
+2025-04-22 07:05:21,215 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Resources.md
+2025-04-22 07:05:21,215 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Experiment_Results_Template.md
+2025-04-22 07:05:21,215 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/README.md
+2025-04-22 07:05:21,215 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Quarterly_Innovation_Review_Template.md
+2025-04-22 07:05:21,215 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Innovation_Pipeline_Report_Template.md
+2025-04-22 07:05:21,215 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Projects/README.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/MeetingNotes/README.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Intellectual_Property_Policy.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Responsibilities.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Idea_Submission_Policy.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/SkillsRoles.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Innovation_Funding_Policy.md
+2025-04-22 07:05:21,216 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Experimentation_Policy.md
+2025-04-22 07:05:21,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/README.md
+2025-04-22 07:05:21,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Resources.md
+2025-04-22 07:05:21,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Templates/Idea_Submission_Form.md
+2025-04-22 07:05:21,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Templates/Experiment_Plan_Template.md
+2025-04-22 07:05:21,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Idea_Management_Process.md
+2025-04-22 07:05:21,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Innovation_Lifecycle_Process.md
+2025-04-22 07:05:21,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/README.md
+2025-04-22 07:05:21,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Prototyping_Process.md
+2025-04-22 07:05:21,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Experiment_Tracking_Process.md
+2025-04-22 07:05:21,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Diagrams/Innovation_Lifecycle_Process_Diagram.md
+2025-04-22 07:05:21,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Diagrams/Idea_Management_Process_Diagram.md
+2025-04-22 07:05:21,218 [INFO] Processing Unit: InformationTechnology
+2025-04-22 07:05:21,218 [INFO] Checking standard subfolders for unit: InformationTechnology
+2025-04-22 07:05:21,218 [INFO] Scanning for wiki links in unit: InformationTechnology
+2025-04-22 07:05:21,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Charter.md
+2025-04-22 07:05:21,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/README.md
+2025-04-22 07:05:21,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/Responsibilities.md
+2025-04-22 07:05:21,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/HardwareLifecyclePolicy.md
+2025-04-22 07:05:21,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/EmailUsagePolicy.md
+2025-04-22 07:05:21,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/IncidentResponsePolicy.md
+2025-04-22 07:05:21,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/DisasterRecoveryPolicy.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/DataSecurityPolicy.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/SkillsRoles.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/RemoteAccessPolicy.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/ChangeManagementPolicy.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/SoftwareUsagePolicy.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/PasswordPolicy.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/README.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/Resources.md
+2025-04-22 07:05:21,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/NewUserOnboarding.md
+2025-04-22 07:05:21,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/AccessRequestProcedure.md
+2025-04-22 07:05:21,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/ChangeManagementProcedure.md
+2025-04-22 07:05:21,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/IncidentResponseProcedure.md
+2025-04-22 07:05:21,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/SoftwareUpdateProcess.md
+2025-04-22 07:05:21,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/NetworkMonitoringProcedure.md
+2025-04-22 07:05:21,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/HelpDeskProcedure.md
+2025-04-22 07:05:21,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/README.md
+2025-04-22 07:05:21,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/UserOffboardingProcedure.md
+2025-04-22 07:05:21,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/DataBackupRecoveryProcedure.md
+2025-04-22 07:05:21,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/HardwareProcurement.md
+2025-04-22 07:05:21,222 [INFO] Processing Unit: Facilities
+2025-04-22 07:05:21,222 [INFO] Checking standard subfolders for unit: Facilities
+2025-04-22 07:05:21,222 [INFO] Scanning for wiki links in unit: Facilities
+2025-04-22 07:05:21,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/Responsibilities.md
+2025-04-22 07:05:21,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/SkillsRoles.md
+2025-04-22 07:05:21,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/Resources.md
+2025-04-22 07:05:21,223 [INFO] Processing Unit: SupplyChain
+2025-04-22 07:05:21,223 [INFO] Checking standard subfolders for unit: SupplyChain
+2025-04-22 07:05:21,223 [INFO] Scanning for wiki links in unit: SupplyChain
+2025-04-22 07:05:21,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Charter.md
+2025-04-22 07:05:21,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/README.md
+2025-04-22 07:05:21,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/Responsibilities.md
+2025-04-22 07:05:21,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/SkillsRoles.md
+2025-04-22 07:05:21,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/Resources.md
+2025-04-22 07:05:21,224 [INFO] Found top-level file: unitdirectory.md. Skipping unit-specific checks.
+2025-04-22 07:05:21,225 [INFO] Processing Unit: Intelligence
+2025-04-22 07:05:21,225 [INFO] Checking standard subfolders for unit: Intelligence
+2025-04-22 07:05:21,225 [INFO] Scanning for wiki links in unit: Intelligence
+2025-04-22 07:05:21,225 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Responsibilities.md
+2025-04-22 07:05:21,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Intelligence_Data_Classification_Guideline.md
+2025-04-22 07:05:21,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/SkillsRoles.md
+2025-04-22 07:05:21,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Resources.md
+2025-04-22 07:05:21,227 [INFO] Processing Unit: Marketing
+2025-04-22 07:05:21,227 [INFO] Checking standard subfolders for unit: Marketing
+2025-04-22 07:05:21,227 [INFO] Scanning for wiki links in unit: Marketing
+2025-04-22 07:05:21,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Charter.md
+2025-04-22 07:05:21,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/README.md
+2025-04-22 07:05:21,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/Responsibilities.md
+2025-04-22 07:05:21,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/SkillsRoles.md
+2025-04-22 07:05:21,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/Resources.md
+2025-04-22 07:05:21,228 [INFO] Processing Unit: Finance
+2025-04-22 07:05:21,228 [INFO] Checking standard subfolders for unit: Finance
+2025-04-22 07:05:21,228 [INFO] Scanning for wiki links in unit: Finance
+2025-04-22 07:05:21,228 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Charter.md
+2025-04-22 07:05:21,228 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/README.md
+2025-04-22 07:05:21,228 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/Responsibilities.md
+2025-04-22 07:05:21,229 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,229 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/SkillsRoles.md
+2025-04-22 07:05:21,229 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/Resources.md
+2025-04-22 07:05:21,229 [INFO] Processing Unit: Administration
+2025-04-22 07:05:21,229 [INFO] Checking standard subfolders for unit: Administration
+2025-04-22 07:05:21,229 [INFO] Scanning for wiki links in unit: Administration
+2025-04-22 07:05:21,230 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/Responsibilities.md
+2025-04-22 07:05:21,230 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,230 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/SkillsRoles.md
+2025-04-22 07:05:21,230 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/Resources.md
+2025-04-22 07:05:21,230 [INFO] Processing Unit: Compliance
+2025-04-22 07:05:21,230 [INFO] Checking standard subfolders for unit: Compliance
+2025-04-22 07:05:21,230 [INFO] Scanning for wiki links in unit: Compliance
+2025-04-22 07:05:21,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Charter.md
+2025-04-22 07:05:21,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/README.md
+2025-04-22 07:05:21,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/Responsibilities.md
+2025-04-22 07:05:21,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/SkillsRoles.md
+2025-04-22 07:05:21,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/Resources.md
+2025-04-22 07:05:21,232 [INFO] Processing Unit: BoardOfDirectors
+2025-04-22 07:05:21,232 [INFO] Checking standard subfolders for unit: BoardOfDirectors
+2025-04-22 07:05:21,232 [INFO] Scanning for wiki links in unit: BoardOfDirectors
+2025-04-22 07:05:21,232 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Charter.md
+2025-04-22 07:05:21,232 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/README.md
+2025-04-22 07:05:21,233 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/Responsibilities.md
+2025-04-22 07:05:21,233 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,233 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/SkillsRoles.md
+2025-04-22 07:05:21,233 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/Resources.md
+2025-04-22 07:05:21,233 [INFO] Processing Unit: Executive
+2025-04-22 07:05:21,233 [INFO] Checking standard subfolders for unit: Executive
+2025-04-22 07:05:21,233 [INFO] Scanning for wiki links in unit: Executive
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Charter.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/README.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/AnnualStrategicReportTemplate.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/README.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/QuarterlyBusinessReviewTemplate.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/MeetingNotes/README.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/CodeOfConduct.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/Responsibilities.md
+2025-04-22 07:05:21,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/SkillsRoles.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/CommunicationPolicy.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/DelegationOfAuthority.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/README.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/ConflictOfInterestPolicy.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/Resources.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/CrisisManagementProcess.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/PerformanceReviewProcess.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/DecisionMakingFramework.md
+2025-04-22 07:05:21,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/README.md
+2025-04-22 07:05:21,236 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/StrategicPlanningProcess.md
+2025-04-22 07:05:21,236 [INFO] Processing Unit: AdvisoryBoard
+2025-04-22 07:05:21,236 [INFO] Checking standard subfolders for unit: AdvisoryBoard
+2025-04-22 07:05:21,236 [INFO] Scanning for wiki links in unit: AdvisoryBoard
+2025-04-22 07:05:21,236 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/README.md
+2025-04-22 07:05:21,236 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/ReportingStructure/reportingstructure.md
+2025-04-22 07:05:21,237 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:05:21,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:05:21,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/Resources.md
+2025-04-22 07:05:21,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/workinggroups.md
+2025-04-22 07:05:21,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/TechnologyGroup/technologygroupcharter.md
+2025-04-22 07:05:21,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/StrategyGroup/strategygroupcharter.md
+2025-04-22 07:05:21,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/RiskGroup/riskgroupcharter.md
+2025-04-22 07:05:21,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/SpecialProjects/specialprojectscharter.md
+2025-04-22 07:05:21,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/PerformanceGroup/performancegroupcharter.md
+2025-04-22 07:05:21,239 [INFO] Processing Unit: TrainingDevelopment
+2025-04-22 07:05:21,239 [INFO] Checking standard subfolders for unit: TrainingDevelopment
+2025-04-22 07:05:21,239 [INFO] Scanning for wiki links in unit: TrainingDevelopment
+2025-04-22 07:05:21,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/README.md
+2025-04-22 07:05:21,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Reports/README.md
+2025-04-22 07:05:21,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/MeetingNotes/README.md
+2025-04-22 07:05:21,240 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/Responsibilities.md
+2025-04-22 07:05:21,240 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,240 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:05:21,240 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/Resources.md
+2025-04-22 07:05:21,240 [INFO] Processing Unit: KnowledgeManagement
+2025-04-22 07:05:21,240 [INFO] Checking standard subfolders for unit: KnowledgeManagement
+2025-04-22 07:05:21,240 [INFO] Scanning for wiki links in unit: KnowledgeManagement
+2025-04-22 07:05:21,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Charter.md
+2025-04-22 07:05:21,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/README.md
+2025-04-22 07:05:21,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeRetentionPolicy.md
+2025-04-22 07:05:21,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/Responsibilities.md
+2025-04-22 07:05:21,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/DataClassificationPolicy.md
+2025-04-22 07:05:21,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/SkillsRoles.md
+2025-04-22 07:05:21,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeCreationPolicy.md
+2025-04-22 07:05:21,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/CommunityOfPracticePolicy.md
+2025-04-22 07:05:21,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/README.md
+2025-04-22 07:05:21,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeSharingPolicy.md
+2025-04-22 07:05:21,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/Resources.md
+2025-04-22 07:05:21,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/KnowledgeCaptureProcess.md
+2025-04-22 07:05:21,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/README.md
+2025-04-22 07:05:21,243 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/KnowledgeReviewProcess.md
+2025-04-22 07:05:21,243 [INFO] Processing Unit: ProductManagement
+2025-04-22 07:05:21,243 [INFO] Checking standard subfolders for unit: ProductManagement
+2025-04-22 07:05:21,243 [INFO] Scanning for wiki links in unit: ProductManagement
+2025-04-22 07:05:21,243 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/Responsibilities.md
+2025-04-22 07:05:21,243 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/SkillsRoles.md
+2025-04-22 07:05:21,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/Resources.md
+2025-04-22 07:05:21,244 [INFO] Processing Unit: ResearchDevelopment
+2025-04-22 07:05:21,244 [INFO] Checking standard subfolders for unit: ResearchDevelopment
+2025-04-22 07:05:21,244 [INFO] Scanning for wiki links in unit: ResearchDevelopment
+2025-04-22 07:05:21,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Charter.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/README.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Reports/README.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/MeetingNotes/README.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Intellectual_Property_Policy.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Responsibilities.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Data_Management_Policy.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Lab_Safety_Policy.md
+2025-04-22 07:05:21,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:05:21,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Research_Ethics_Policy.md
+2025-04-22 07:05:21,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Resources.md
+2025-04-22 07:05:21,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Experiment_Design_Process.md
+2025-04-22 07:05:21,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Idea_Generation_Process.md
+2025-04-22 07:05:21,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Peer_Review_Process.md
+2025-04-22 07:05:21,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Project_Proposal_Process.md
+2025-04-22 07:05:21,247 [INFO] Processing Unit: Research
+2025-04-22 07:05:21,247 [INFO] Checking standard subfolders for unit: Research
+2025-04-22 07:05:21,247 [INFO] Scanning for wiki links in unit: Research
+2025-04-22 07:05:21,247 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Reports/Template_Research_Report.md
+2025-04-22 07:05:21,247 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Reports/README.md
+2025-04-22 07:05:21,247 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/MeetingNotes/README.md
+2025-04-22 07:05:21,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/MeetingNotes/Template_Meeting_Notes.md
+2025-04-22 07:05:21,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/Responsibilities.md
+2025-04-22 07:05:21,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/PositionsPersonas.md
+2025-04-22 07:05:21,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/SkillsRoles.md
+2025-04-22 07:05:21,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/Resources.md
+2025-04-22 07:05:21,249 [INFO] --- Units Directory Audit Complete ---
+2025-04-22 07:05:21,249 [INFO] NOTE: Some markdown files were found without [[wiki links]]. See details above.
+2025-04-22 07:05:21,249 [INFO] Log file saved to: units_audit.log
+2025-04-22 07:11:33,216 [INFO] --- Starting Units Directory Audit (/home/trim/Documents/operations/units) ---
+2025-04-22 07:11:33,216 [INFO] Processing Unit: Sales
+2025-04-22 07:11:33,216 [INFO] Checking standard subfolders for unit: Sales
+2025-04-22 07:11:33,216 [INFO] Scanning for wiki links in unit: Sales
+2025-04-22 07:11:33,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Reports/template_performance_report.md
+2025-04-22 07:11:33,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/MeetingNotes/template_meeting_notes.md
+2025-04-22 07:11:33,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/Responsibilities.md
+2025-04-22 07:11:33,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/SkillsRoles.md
+2025-04-22 07:11:33,217 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Sales/Policies/Resources.md
+2025-04-22 07:11:33,218 [INFO] Processing Unit: EthicsAdvisoryBoard
+2025-04-22 07:11:33,218 [INFO] Checking standard subfolders for unit: EthicsAdvisoryBoard
+2025-04-22 07:11:33,218 [INFO] Scanning for wiki links in unit: EthicsAdvisoryBoard
+2025-04-22 07:11:33,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:11:33,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:11:33,218 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/EthicsAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:11:33,219 [INFO] Processing Unit: Education
+2025-04-22 07:11:33,219 [INFO] Checking standard subfolders for unit: Education
+2025-04-22 07:11:33,219 [INFO] Scanning for wiki links in unit: Education
+2025-04-22 07:11:33,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Charter.md
+2025-04-22 07:11:33,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/README.md
+2025-04-22 07:11:33,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/Responsibilities.md
+2025-04-22 07:11:33,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/SkillsRoles.md
+2025-04-22 07:11:33,219 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Education/Policies/Resources.md
+2025-04-22 07:11:33,220 [INFO] Processing Unit: CustomerSupport
+2025-04-22 07:11:33,220 [INFO] Checking standard subfolders for unit: CustomerSupport
+2025-04-22 07:11:33,220 [INFO] Scanning for wiki links in unit: CustomerSupport
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/README.md
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Reports/README.md
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/MeetingNotes/README.md
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/Responsibilities.md
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/SkillsRoles.md
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/README.md
+2025-04-22 07:11:33,220 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Policies/Resources.md
+2025-04-22 07:11:33,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/CustomerSupport/Processes/README.md
+2025-04-22 07:11:33,221 [INFO] Processing Unit: Legal
+2025-04-22 07:11:33,221 [INFO] Checking standard subfolders for unit: Legal
+2025-04-22 07:11:33,221 [INFO] Scanning for wiki links in unit: Legal
+2025-04-22 07:11:33,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Responsibilities.md
+2025-04-22 07:11:33,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/OrgChart.md
+2025-04-22 07:11:33,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Risk_Management.md
+2025-04-22 07:11:33,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Strategic_Management.md
+2025-04-22 07:11:33,221 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Interfaces.md
+2025-04-22 07:11:33,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Legal_Overview.md
+2025-04-22 07:11:33,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Charter.md
+2025-04-22 07:11:33,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Performance_Metrics.md
+2025-04-22 07:11:33,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/README.md
+2025-04-22 07:11:33,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Related_Links.md
+2025-04-22 07:11:33,222 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Resources.md
+2025-04-22 07:11:33,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/IntellectualProperty/README.md
+2025-04-22 07:11:33,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/IntellectualPropertyPolicy.md
+2025-04-22 07:11:33,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/Responsibilities.md
+2025-04-22 07:11:33,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/CodeOfConduct_LegalImplications.md
+2025-04-22 07:11:33,223 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/RecordsRetentionPolicy.md
+2025-04-22 07:11:33,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/CompliancePolicyOverview.md
+2025-04-22 07:11:33,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/SkillsRoles.md
+2025-04-22 07:11:33,224 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/ContractManagementPolicy.md
+2025-04-22 07:11:33,225 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/DataPrivacyPolicy.md
+2025-04-22 07:11:33,225 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/README.md
+2025-04-22 07:11:33,225 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/LitigationHoldPolicy.md
+2025-04-22 07:11:33,225 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Policies/Resources.md
+2025-04-22 07:11:33,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/PolicyManagementProcess.md
+2025-04-22 07:11:33,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/LitigationManagementProcess.md
+2025-04-22 07:11:33,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/OutsideCounselManagementProcess.md
+2025-04-22 07:11:33,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/README.md
+2025-04-22 07:11:33,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/ContractReviewProcess.md
+2025-04-22 07:11:33,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/ComplianceReportingProcess.md
+2025-04-22 07:11:33,226 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Processes/LegalHoldProcess.md
+2025-04-22 07:11:33,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Contracts/README.md
+2025-04-22 07:11:33,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/CorporateGovernance/README.md
+2025-04-22 07:11:33,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Compliance/README.md
+2025-04-22 07:11:33,227 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Legal/Litigation/README.md
+2025-04-22 07:11:33,228 [INFO] Processing Unit: HumanResources
+2025-04-22 07:11:33,228 [INFO] Checking standard subfolders for unit: HumanResources
+2025-04-22 07:11:33,228 [INFO] Scanning for wiki links in unit: HumanResources
+2025-04-22 07:11:33,229 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/hr_report_template.md
+2025-04-22 07:11:33,229 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/HRMetricsDashboardTemplate.md
+2025-04-22 07:11:33,229 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Reports/README.md
+2025-04-22 07:11:33,229 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/MeetingNotes/README.md
+2025-04-22 07:11:33,230 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/MeetingNotes/HRTeamMeetingTemplate.md
+2025-04-22 07:11:33,230 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/Responsibilities.md
+2025-04-22 07:11:33,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/EmployeeHandbook.md
+2025-04-22 07:11:33,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,231 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/LeavePolicy.md
+2025-04-22 07:11:33,232 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/SkillsRoles.md
+2025-04-22 07:11:33,232 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/CodeOfConductPolicy.md
+2025-04-22 07:11:33,232 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/CompensationPolicy.md
+2025-04-22 07:11:33,233 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/README.md
+2025-04-22 07:11:33,233 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Policies/Resources.md
+2025-04-22 07:11:33,233 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/RecruitmentProcess.md
+2025-04-22 07:11:33,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/OffboardingProcess.md
+2025-04-22 07:11:33,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/PerformanceManagementProcess.md
+2025-04-22 07:11:33,234 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/HumanResources/Processes/README.md
+2025-04-22 07:11:33,234 [INFO] Processing Unit: TechnologyAdvisoryBoard
+2025-04-22 07:11:33,234 [INFO] Checking standard subfolders for unit: TechnologyAdvisoryBoard
+2025-04-22 07:11:33,235 [INFO] Scanning for wiki links in unit: TechnologyAdvisoryBoard
+2025-04-22 07:11:33,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Charter.md
+2025-04-22 07:11:33,235 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/README.md
+2025-04-22 07:11:33,236 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:11:33,236 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,236 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:11:33,236 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TechnologyAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:11:33,237 [INFO] Processing Unit: Strategy
+2025-04-22 07:11:33,237 [INFO] Checking standard subfolders for unit: Strategy
+2025-04-22 07:11:33,237 [INFO] Scanning for wiki links in unit: Strategy
+2025-04-22 07:11:33,237 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Responsibilities.md
+2025-04-22 07:11:33,237 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Charter.md
+2025-04-22 07:11:33,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Resources.md
+2025-04-22 07:11:33,238 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/MeetingNotes/Meeting_Minutes_Template.md
+2025-04-22 07:11:33,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/Responsibilities.md
+2025-04-22 07:11:33,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/SkillsRoles.md
+2025-04-22 07:11:33,239 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Strategy/Policies/Resources.md
+2025-04-22 07:11:33,240 [INFO] Processing Unit: RiskAdvisoryBoard
+2025-04-22 07:11:33,241 [INFO] Checking standard subfolders for unit: RiskAdvisoryBoard
+2025-04-22 07:11:33,241 [INFO] Scanning for wiki links in unit: RiskAdvisoryBoard
+2025-04-22 07:11:33,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Charter.md
+2025-04-22 07:11:33,241 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/README.md
+2025-04-22 07:11:33,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Confidentiality_Policy.md
+2025-04-22 07:11:33,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:11:33,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:11:33,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Conflict_of_Interest_Policy.md
+2025-04-22 07:11:33,242 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:11:33,243 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Policies/RiskAdvisoryBoard_Operating_Principles.md
+2025-04-22 07:11:33,243 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskAdvisoryBoard/Processes/Risk_Review_Process.md
+2025-04-22 07:11:33,243 [INFO] Processing Unit: Security
+2025-04-22 07:11:33,243 [INFO] Checking standard subfolders for unit: Security
+2025-04-22 07:11:33,243 [INFO] Scanning for wiki links in unit: Security
+2025-04-22 07:11:33,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Charter.md
+2025-04-22 07:11:33,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/Responsibilities.md
+2025-04-22 07:11:33,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/SkillsRoles.md
+2025-04-22 07:11:33,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/securitydocumentcatalog.md
+2025-04-22 07:11:33,244 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Security/Policies/Resources.md
+2025-04-22 07:11:33,245 [INFO] Processing Unit: RiskManagement
+2025-04-22 07:11:33,245 [INFO] Checking standard subfolders for unit: RiskManagement
+2025-04-22 07:11:33,245 [INFO] Scanning for wiki links in unit: RiskManagement
+2025-04-22 07:11:33,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/README.md
+2025-04-22 07:11:33,245 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Reports/README.md
+2025-04-22 07:11:33,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/MeetingNotes/README.md
+2025-04-22 07:11:33,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/Responsibilities.md
+2025-04-22 07:11:33,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/SkillsRoles.md
+2025-04-22 07:11:33,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/README.md
+2025-04-22 07:11:33,246 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Policies/Resources.md
+2025-04-22 07:11:33,247 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/RiskManagement/Processes/README.md
+2025-04-22 07:11:33,247 [INFO] Processing Unit: OrganizationalDevelopment
+2025-04-22 07:11:33,247 [INFO] Checking standard subfolders for unit: OrganizationalDevelopment
+2025-04-22 07:11:33,247 [INFO] Scanning for wiki links in unit: OrganizationalDevelopment
+2025-04-22 07:11:33,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Reports/README.md
+2025-04-22 07:11:33,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/Responsibilities.md
+2025-04-22 07:11:33,248 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,249 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:11:33,249 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/OrganizationalDevelopment/Policies/Resources.md
+2025-04-22 07:11:33,250 [INFO] Processing Unit: Governance
+2025-04-22 07:11:33,250 [INFO] Checking standard subfolders for unit: Governance
+2025-04-22 07:11:33,250 [INFO] Scanning for wiki links in unit: Governance
+2025-04-22 07:11:33,250 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Charter.md
+2025-04-22 07:11:33,251 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/MeetingNotes/Meeting_Minutes_Template.md
+2025-04-22 07:11:33,251 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/Responsibilities.md
+2025-04-22 07:11:33,251 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,251 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/SkillsRoles.md
+2025-04-22 07:11:33,251 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Governance/Policies/Resources.md
+2025-04-22 07:11:33,252 [INFO] Processing Unit: BusinessDevelopment
+2025-04-22 07:11:33,252 [INFO] Checking standard subfolders for unit: BusinessDevelopment
+2025-04-22 07:11:33,252 [INFO] Scanning for wiki links in unit: BusinessDevelopment
+2025-04-22 07:11:33,252 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/Responsibilities.md
+2025-04-22 07:11:33,252 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,252 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:11:33,253 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BusinessDevelopment/Policies/Resources.md
+2025-04-22 07:11:33,253 [INFO] Processing Unit: QualityAssurance
+2025-04-22 07:11:33,253 [INFO] Checking standard subfolders for unit: QualityAssurance
+2025-04-22 07:11:33,253 [INFO] Scanning for wiki links in unit: QualityAssurance
+2025-04-22 07:11:33,253 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Charter.md
+2025-04-22 07:11:33,253 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/README.md
+2025-04-22 07:11:33,253 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Test_Strategy_Policy.md
+2025-04-22 07:11:33,253 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Release_Criteria_Policy.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Responsibilities.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Quality_Standards_Policy.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/SkillsRoles.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/README.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Defect_Management_Policy.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Resources.md
+2025-04-22 07:11:33,254 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Policies/Audit_Policy.md
+2025-04-22 07:11:33,255 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Processes/Test_Planning_Process.md
+2025-04-22 07:11:33,255 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/QualityAssurance/Processes/README.md
+2025-04-22 07:11:33,255 [INFO] Processing Unit: MarketingCommunications
+2025-04-22 07:11:33,255 [INFO] Checking standard subfolders for unit: MarketingCommunications
+2025-04-22 07:11:33,255 [INFO] Scanning for wiki links in unit: MarketingCommunications
+2025-04-22 07:11:33,255 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Charter.md
+2025-04-22 07:11:33,255 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/README.md
+2025-04-22 07:11:33,255 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/Responsibilities.md
+2025-04-22 07:11:33,255 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,256 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/SkillsRoles.md
+2025-04-22 07:11:33,256 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/MarketingCommunications/Policies/Resources.md
+2025-04-22 07:11:33,256 [INFO] Processing Unit: Development
+2025-04-22 07:11:33,256 [INFO] Checking standard subfolders for unit: Development
+2025-04-22 07:11:33,256 [INFO] Scanning for wiki links in unit: Development
+2025-04-22 07:11:33,257 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/Responsibilities.md
+2025-04-22 07:11:33,257 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,257 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/SkillsRoles.md
+2025-04-22 07:11:33,257 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Development/Policies/Resources.md
+2025-04-22 07:11:33,258 [INFO] Processing Unit: ExecutiveCommittee
+2025-04-22 07:11:33,258 [INFO] Checking standard subfolders for unit: ExecutiveCommittee
+2025-04-22 07:11:33,258 [INFO] Scanning for wiki links in unit: ExecutiveCommittee
+2025-04-22 07:11:33,258 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Charter.md
+2025-04-22 07:11:33,258 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/README.md
+2025-04-22 07:11:33,259 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/DecisionFramework/decisionframework.md
+2025-04-22 07:11:33,259 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/OperatingProcedures/operatingprocedures.md
+2025-04-22 07:11:33,260 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/Responsibilities.md
+2025-04-22 07:11:33,260 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,260 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/SkillsRoles.md
+2025-04-22 07:11:33,260 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ExecutiveCommittee/Policies/Resources.md
+2025-04-22 07:11:33,260 [INFO] Processing Unit: Audit
+2025-04-22 07:11:33,261 [INFO] Checking standard subfolders for unit: Audit
+2025-04-22 07:11:33,261 [INFO] Scanning for wiki links in unit: Audit
+2025-04-22 07:11:33,261 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/README.md
+2025-04-22 07:11:33,261 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Reports/README.md
+2025-04-22 07:11:33,262 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/MeetingNotes/README.md
+2025-04-22 07:11:33,262 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/Responsibilities.md
+2025-04-22 07:11:33,262 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,262 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/SkillsRoles.md
+2025-04-22 07:11:33,263 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Audit/Policies/Resources.md
+2025-04-22 07:11:33,263 [INFO] Processing Unit: ScientificAdvisoryBoard
+2025-04-22 07:11:33,263 [INFO] Checking standard subfolders for unit: ScientificAdvisoryBoard
+2025-04-22 07:11:33,263 [INFO] Scanning for wiki links in unit: ScientificAdvisoryBoard
+2025-04-22 07:11:33,264 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/README.md
+2025-04-22 07:11:33,264 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:11:33,264 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,264 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:11:33,265 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ScientificAdvisoryBoard/Policies/Resources.md
+2025-04-22 07:11:33,265 [INFO] Processing Unit: Operations
+2025-04-22 07:11:33,265 [INFO] Checking standard subfolders for unit: Operations
+2025-04-22 07:11:33,265 [INFO] Scanning for wiki links in unit: Operations
+2025-04-22 07:11:33,266 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Operations/Policies/Responsibilities.md
+2025-04-22 07:11:33,266 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Operations/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,267 [INFO] Processing Unit: Innovation
+2025-04-22 07:11:33,267 [INFO] Checking standard subfolders for unit: Innovation
+2025-04-22 07:11:33,267 [INFO] Scanning for wiki links in unit: Innovation
+2025-04-22 07:11:33,267 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/README.md
+2025-04-22 07:11:33,267 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Related_Links.md
+2025-04-22 07:11:33,268 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Resources.md
+2025-04-22 07:11:33,268 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Experiment_Results_Template.md
+2025-04-22 07:11:33,268 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/README.md
+2025-04-22 07:11:33,268 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Quarterly_Innovation_Review_Template.md
+2025-04-22 07:11:33,268 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Reports/Innovation_Pipeline_Report_Template.md
+2025-04-22 07:11:33,268 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Projects/README.md
+2025-04-22 07:11:33,268 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/MeetingNotes/README.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Intellectual_Property_Policy.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Responsibilities.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Idea_Submission_Policy.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/SkillsRoles.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Innovation_Funding_Policy.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Experimentation_Policy.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/README.md
+2025-04-22 07:11:33,269 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Policies/Resources.md
+2025-04-22 07:11:33,270 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Templates/Idea_Submission_Form.md
+2025-04-22 07:11:33,270 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Templates/Experiment_Plan_Template.md
+2025-04-22 07:11:33,270 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Idea_Management_Process.md
+2025-04-22 07:11:33,270 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Innovation_Lifecycle_Process.md
+2025-04-22 07:11:33,270 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/README.md
+2025-04-22 07:11:33,270 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Prototyping_Process.md
+2025-04-22 07:11:33,270 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Processes/Experiment_Tracking_Process.md
+2025-04-22 07:11:33,271 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Diagrams/Innovation_Lifecycle_Process_Diagram.md
+2025-04-22 07:11:33,271 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Innovation/Diagrams/Idea_Management_Process_Diagram.md
+2025-04-22 07:11:33,271 [INFO] Processing Unit: InformationTechnology
+2025-04-22 07:11:33,271 [INFO] Checking standard subfolders for unit: InformationTechnology
+2025-04-22 07:11:33,271 [INFO] Scanning for wiki links in unit: InformationTechnology
+2025-04-22 07:11:33,271 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Charter.md
+2025-04-22 07:11:33,271 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/README.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/Responsibilities.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/HardwareLifecyclePolicy.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/EmailUsagePolicy.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/IncidentResponsePolicy.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/DisasterRecoveryPolicy.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/DataSecurityPolicy.md
+2025-04-22 07:11:33,272 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/SkillsRoles.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/RemoteAccessPolicy.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/ChangeManagementPolicy.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/SoftwareUsagePolicy.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/PasswordPolicy.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/README.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Policies/Resources.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/NewUserOnboarding.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/AccessRequestProcedure.md
+2025-04-22 07:11:33,273 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/ChangeManagementProcedure.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/IncidentResponseProcedure.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/SoftwareUpdateProcess.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/NetworkMonitoringProcedure.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/HelpDeskProcedure.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/README.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/UserOffboardingProcedure.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/DataBackupRecoveryProcedure.md
+2025-04-22 07:11:33,274 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/InformationTechnology/Processes/HardwareProcurement.md
+2025-04-22 07:11:33,274 [INFO] Processing Unit: Facilities
+2025-04-22 07:11:33,275 [INFO] Checking standard subfolders for unit: Facilities
+2025-04-22 07:11:33,275 [INFO] Scanning for wiki links in unit: Facilities
+2025-04-22 07:11:33,275 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/Responsibilities.md
+2025-04-22 07:11:33,275 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,275 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/SkillsRoles.md
+2025-04-22 07:11:33,276 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Facilities/Policies/Resources.md
+2025-04-22 07:11:33,276 [INFO] Processing Unit: SupplyChain
+2025-04-22 07:11:33,276 [INFO] Checking standard subfolders for unit: SupplyChain
+2025-04-22 07:11:33,276 [INFO] Scanning for wiki links in unit: SupplyChain
+2025-04-22 07:11:33,276 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Charter.md
+2025-04-22 07:11:33,276 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/README.md
+2025-04-22 07:11:33,277 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/Responsibilities.md
+2025-04-22 07:11:33,277 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,277 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/SkillsRoles.md
+2025-04-22 07:11:33,277 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/SupplyChain/Policies/Resources.md
+2025-04-22 07:11:33,277 [INFO] Found top-level file: unitdirectory.md. Skipping unit-specific checks.
+2025-04-22 07:11:33,278 [INFO] Processing Unit: Intelligence
+2025-04-22 07:11:33,278 [INFO] Checking standard subfolders for unit: Intelligence
+2025-04-22 07:11:33,278 [INFO] Scanning for wiki links in unit: Intelligence
+2025-04-22 07:11:33,280 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Responsibilities.md
+2025-04-22 07:11:33,281 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,281 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Intelligence_Data_Classification_Guideline.md
+2025-04-22 07:11:33,281 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/SkillsRoles.md
+2025-04-22 07:11:33,282 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Intelligence/Policies/Resources.md
+2025-04-22 07:11:33,282 [INFO] Processing Unit: Marketing
+2025-04-22 07:11:33,283 [INFO] Checking standard subfolders for unit: Marketing
+2025-04-22 07:11:33,283 [INFO] Scanning for wiki links in unit: Marketing
+2025-04-22 07:11:33,283 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Charter.md
+2025-04-22 07:11:33,283 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/README.md
+2025-04-22 07:11:33,283 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/Responsibilities.md
+2025-04-22 07:11:33,283 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,283 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/SkillsRoles.md
+2025-04-22 07:11:33,283 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Marketing/Policies/Resources.md
+2025-04-22 07:11:33,284 [INFO] Processing Unit: Finance
+2025-04-22 07:11:33,284 [INFO] Checking standard subfolders for unit: Finance
+2025-04-22 07:11:33,284 [INFO] Scanning for wiki links in unit: Finance
+2025-04-22 07:11:33,284 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Charter.md
+2025-04-22 07:11:33,284 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/README.md
+2025-04-22 07:11:33,284 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/Responsibilities.md
+2025-04-22 07:11:33,284 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,284 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/SkillsRoles.md
+2025-04-22 07:11:33,285 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Finance/Policies/Resources.md
+2025-04-22 07:11:33,285 [INFO] Processing Unit: Administration
+2025-04-22 07:11:33,285 [INFO] Checking standard subfolders for unit: Administration
+2025-04-22 07:11:33,285 [INFO] Scanning for wiki links in unit: Administration
+2025-04-22 07:11:33,285 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/Responsibilities.md
+2025-04-22 07:11:33,285 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,286 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/SkillsRoles.md
+2025-04-22 07:11:33,286 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Administration/Policies/Resources.md
+2025-04-22 07:11:33,286 [INFO] Processing Unit: Compliance
+2025-04-22 07:11:33,286 [INFO] Checking standard subfolders for unit: Compliance
+2025-04-22 07:11:33,286 [INFO] Scanning for wiki links in unit: Compliance
+2025-04-22 07:11:33,286 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Charter.md
+2025-04-22 07:11:33,286 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/README.md
+2025-04-22 07:11:33,286 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/Responsibilities.md
+2025-04-22 07:11:33,287 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,287 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/SkillsRoles.md
+2025-04-22 07:11:33,287 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Compliance/Policies/Resources.md
+2025-04-22 07:11:33,287 [INFO] Processing Unit: BoardOfDirectors
+2025-04-22 07:11:33,287 [INFO] Checking standard subfolders for unit: BoardOfDirectors
+2025-04-22 07:11:33,287 [INFO] Scanning for wiki links in unit: BoardOfDirectors
+2025-04-22 07:11:33,288 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Charter.md
+2025-04-22 07:11:33,288 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/README.md
+2025-04-22 07:11:33,288 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/Responsibilities.md
+2025-04-22 07:11:33,288 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,288 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/SkillsRoles.md
+2025-04-22 07:11:33,289 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/BoardOfDirectors/Policies/Resources.md
+2025-04-22 07:11:33,289 [INFO] Processing Unit: Executive
+2025-04-22 07:11:33,289 [INFO] Checking standard subfolders for unit: Executive
+2025-04-22 07:11:33,289 [INFO] Scanning for wiki links in unit: Executive
+2025-04-22 07:11:33,289 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Charter.md
+2025-04-22 07:11:33,290 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/README.md
+2025-04-22 07:11:33,290 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/AnnualStrategicReportTemplate.md
+2025-04-22 07:11:33,290 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/README.md
+2025-04-22 07:11:33,290 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Reports/QuarterlyBusinessReviewTemplate.md
+2025-04-22 07:11:33,290 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/MeetingNotes/README.md
+2025-04-22 07:11:33,291 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/CodeOfConduct.md
+2025-04-22 07:11:33,291 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/Responsibilities.md
+2025-04-22 07:11:33,291 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,291 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/SkillsRoles.md
+2025-04-22 07:11:33,292 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/CommunicationPolicy.md
+2025-04-22 07:11:33,292 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/DelegationOfAuthority.md
+2025-04-22 07:11:33,292 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/README.md
+2025-04-22 07:11:33,292 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/ConflictOfInterestPolicy.md
+2025-04-22 07:11:33,292 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Policies/Resources.md
+2025-04-22 07:11:33,293 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/CrisisManagementProcess.md
+2025-04-22 07:11:33,293 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/PerformanceReviewProcess.md
+2025-04-22 07:11:33,293 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/DecisionMakingFramework.md
+2025-04-22 07:11:33,294 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/README.md
+2025-04-22 07:11:33,294 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Executive/Processes/StrategicPlanningProcess.md
+2025-04-22 07:11:33,294 [INFO] Processing Unit: AdvisoryBoard
+2025-04-22 07:11:33,294 [INFO] Checking standard subfolders for unit: AdvisoryBoard
+2025-04-22 07:11:33,294 [INFO] Scanning for wiki links in unit: AdvisoryBoard
+2025-04-22 07:11:33,295 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/README.md
+2025-04-22 07:11:33,295 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/ReportingStructure/reportingstructure.md
+2025-04-22 07:11:33,297 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/Responsibilities.md
+2025-04-22 07:11:33,297 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,298 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/SkillsRoles.md
+2025-04-22 07:11:33,298 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/Policies/Resources.md
+2025-04-22 07:11:33,298 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/workinggroups.md
+2025-04-22 07:11:33,298 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/TechnologyGroup/technologygroupcharter.md
+2025-04-22 07:11:33,299 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/StrategyGroup/strategygroupcharter.md
+2025-04-22 07:11:33,299 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/RiskGroup/riskgroupcharter.md
+2025-04-22 07:11:33,299 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/SpecialProjects/specialprojectscharter.md
+2025-04-22 07:11:33,299 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/AdvisoryBoard/WorkingGroups/PerformanceGroup/performancegroupcharter.md
+2025-04-22 07:11:33,300 [INFO] Processing Unit: TrainingDevelopment
+2025-04-22 07:11:33,300 [INFO] Checking standard subfolders for unit: TrainingDevelopment
+2025-04-22 07:11:33,300 [INFO] Scanning for wiki links in unit: TrainingDevelopment
+2025-04-22 07:11:33,301 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/README.md
+2025-04-22 07:11:33,301 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Reports/README.md
+2025-04-22 07:11:33,302 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/MeetingNotes/README.md
+2025-04-22 07:11:33,302 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/Responsibilities.md
+2025-04-22 07:11:33,302 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,303 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:11:33,303 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/TrainingDevelopment/Policies/Resources.md
+2025-04-22 07:11:33,305 [INFO] Processing Unit: KnowledgeManagement
+2025-04-22 07:11:33,305 [INFO] Checking standard subfolders for unit: KnowledgeManagement
+2025-04-22 07:11:33,305 [INFO] Scanning for wiki links in unit: KnowledgeManagement
+2025-04-22 07:11:33,306 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Charter.md
+2025-04-22 07:11:33,306 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/README.md
+2025-04-22 07:11:33,306 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeRetentionPolicy.md
+2025-04-22 07:11:33,306 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/Responsibilities.md
+2025-04-22 07:11:33,306 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,307 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/DataClassificationPolicy.md
+2025-04-22 07:11:33,307 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/SkillsRoles.md
+2025-04-22 07:11:33,307 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeCreationPolicy.md
+2025-04-22 07:11:33,307 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/CommunityOfPracticePolicy.md
+2025-04-22 07:11:33,307 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/README.md
+2025-04-22 07:11:33,307 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/KnowledgeSharingPolicy.md
+2025-04-22 07:11:33,308 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Policies/Resources.md
+2025-04-22 07:11:33,308 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/KnowledgeCaptureProcess.md
+2025-04-22 07:11:33,308 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/README.md
+2025-04-22 07:11:33,308 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/KnowledgeManagement/Processes/KnowledgeReviewProcess.md
+2025-04-22 07:11:33,308 [INFO] Processing Unit: ProductManagement
+2025-04-22 07:11:33,308 [INFO] Checking standard subfolders for unit: ProductManagement
+2025-04-22 07:11:33,309 [INFO] Scanning for wiki links in unit: ProductManagement
+2025-04-22 07:11:33,309 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/Responsibilities.md
+2025-04-22 07:11:33,309 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,310 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/SkillsRoles.md
+2025-04-22 07:11:33,310 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ProductManagement/Policies/Resources.md
+2025-04-22 07:11:33,310 [INFO] Processing Unit: ResearchDevelopment
+2025-04-22 07:11:33,310 [INFO] Checking standard subfolders for unit: ResearchDevelopment
+2025-04-22 07:11:33,311 [INFO] Scanning for wiki links in unit: ResearchDevelopment
+2025-04-22 07:11:33,311 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Charter.md
+2025-04-22 07:11:33,311 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/README.md
+2025-04-22 07:11:33,311 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Reports/README.md
+2025-04-22 07:11:33,312 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/MeetingNotes/README.md
+2025-04-22 07:11:33,312 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Intellectual_Property_Policy.md
+2025-04-22 07:11:33,312 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Responsibilities.md
+2025-04-22 07:11:33,312 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Data_Management_Policy.md
+2025-04-22 07:11:33,312 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Lab_Safety_Policy.md
+2025-04-22 07:11:33,313 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,313 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/SkillsRoles.md
+2025-04-22 07:11:33,313 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Research_Ethics_Policy.md
+2025-04-22 07:11:33,313 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Policies/Resources.md
+2025-04-22 07:11:33,313 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Experiment_Design_Process.md
+2025-04-22 07:11:33,313 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Idea_Generation_Process.md
+2025-04-22 07:11:33,313 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Peer_Review_Process.md
+2025-04-22 07:11:33,314 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/ResearchDevelopment/Processes/Project_Proposal_Process.md
+2025-04-22 07:11:33,314 [INFO] Processing Unit: Research
+2025-04-22 07:11:33,314 [INFO] Checking standard subfolders for unit: Research
+2025-04-22 07:11:33,314 [INFO] Scanning for wiki links in unit: Research
+2025-04-22 07:11:33,314 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Reports/Template_Research_Report.md
+2025-04-22 07:11:33,314 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Reports/README.md
+2025-04-22 07:11:33,315 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/MeetingNotes/README.md
+2025-04-22 07:11:33,315 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/MeetingNotes/Template_Meeting_Notes.md
+2025-04-22 07:11:33,315 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/Responsibilities.md
+2025-04-22 07:11:33,315 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/PositionsPersonas.md
+2025-04-22 07:11:33,315 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/SkillsRoles.md
+2025-04-22 07:11:33,316 [INFO] Link Check: No [[wiki links]] found in: /home/trim/Documents/operations/units/Research/Policies/Resources.md
+2025-04-22 07:11:33,316 [INFO] --- Units Directory Audit Complete ---
+2025-04-22 07:11:33,316 [INFO] NOTE: Some markdown files were found without [[wiki links]]. See details above.
+2025-04-22 07:11:33,316 [INFO] Log file saved to: units_audit.log

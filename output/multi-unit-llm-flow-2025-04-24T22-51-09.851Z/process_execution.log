@@ -1,0 +1,24 @@
+=== Multi-Unit LLM Flow Example - 2025-04-24T22:51:09.851Z ===
+
+[INFO] Starting multi-unit LLM process...
+[INFO] Starting stage: Situation Assessment (Innovation Unit)
+[INFO] Completed stage: Situation Assessment in 15874ms
+[INFO] Starting stage: Idea Generation (Innovation Unit)
+[INFO] Completed stage: Idea Generation in 25143ms
+[INFO] Starting stage: Market Research (Research Unit)
+[INFO] Completed stage: Market Research in 26416ms
+[INFO] Starting stage: Security Assessment (Security Unit)
+[INFO] Completed stage: Security Assessment in 30253ms
+[INFO] Starting stage: Board Review (Board of Directors)
+[INFO] Completed stage: Board Review in 15601ms
+[INFO] Starting stage: Concept Refinement (Innovation Unit)
+[INFO] Completed stage: Concept Refinement in 26113ms
+[INFO] Starting stage: Technical Planning (Development Unit)
+[INFO] Completed stage: Technical Planning in 25266ms
+[INFO] Starting stage: Brand Development (Marketing Unit)
+[INFO] Completed stage: Brand Development in 23384ms
+[INFO] Starting stage: Implementation Roadmap (Development Unit)
+[INFO] Completed stage: Implementation Roadmap in 49035ms
+[INFO] Starting stage: Final Project Plan (Board of Directors)
+[INFO] Completed stage: Final Project Plan in 26571ms
+[INFO] Process completed. Results saved to: output/multi-unit-llm-flow-2025-04-24T22-51-09.851Z

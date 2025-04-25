@@ -1,0 +1,104 @@
+Test: test_agent_coordination
+Path: /home/trim/Documents/operations/tests/integration/multiagent/test_agent_coordination.ts
+Success: false
+Exit Code: 1
+
+--- Output ---
+
+
+
+--- Errors ---
+
+/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+integration/multiagent/test_agent_coordination.ts(70,45): error TS2345: Argument of type '{ agentRegistry: AgentRegistry; taskManager: TaskManager; sharedState: SharedStateManager; promptManager: PromptManager; openAIClient: OpenAIClient; }' is not assignable to parameter of type 'string'.
+integration/multiagent/test_agent_coordination.ts(130,48): error TS2339: Property 'findAgentsByCapability' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(131,47): error TS2339: Property 'findAgentsByCapability' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(135,34): error TS7006: Parameter 'a' implicitly has an 'any' type.
+integration/multiagent/test_agent_coordination.ts(136,34): error TS7006: Parameter 'a' implicitly has an 'any' type.
+integration/multiagent/test_agent_coordination.ts(139,33): error TS7006: Parameter 'a' implicitly has an 'any' type.
+integration/multiagent/test_agent_coordination.ts(140,33): error TS7006: Parameter 'a' implicitly has an 'any' type.
+integration/multiagent/test_agent_coordination.ts(143,48): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(160,25): error TS2339: Property 'updateAgentStatus' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(163,48): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(167,62): error TS2322: Type 'string' is not assignable to type 'string[]'.
+integration/multiagent/test_agent_coordination.ts(177,7): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(189,51): error TS2345: Argument of type '{ type: string; description: string; priority: "high"; }' is not assignable to parameter of type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+  Property 'title' is missing in type '{ type: string; description: string; priority: "high"; }' but required in type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+integration/multiagent/test_agent_coordination.ts(196,25): error TS2339: Property 'assignTaskToAgent' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(199,46): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(204,25): error TS2339: Property 'startTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(207,53): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(211,25): error TS2339: Property 'completeTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(214,55): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(220,57): error TS2345: Argument of type '{ type: string; description: string; priority: "high"; }' is not assignable to parameter of type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+  Property 'title' is missing in type '{ type: string; description: string; priority: "high"; }' but required in type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+integration/multiagent/test_agent_coordination.ts(231,9): error TS2353: Object literal may only specify known properties, and 'dependencies' does not exist in type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+integration/multiagent/test_agent_coordination.ts(235,39): error TS2339: Property 'areDependenciesSatisfied' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(239,25): error TS2339: Property 'assignTaskToAgent' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(240,25): error TS2339: Property 'startTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(241,25): error TS2339: Property 'completeTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(244,50): error TS2339: Property 'areDependenciesSatisfied' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(248,44): error TS2339: Property 'getReadyTasks' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(249,30): error TS7006: Parameter 't' implicitly has an 'any' type.
+integration/multiagent/test_agent_coordination.ts(275,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(281,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(282,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(285,38): error TS2339: Property 'getState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(289,38): error TS2339: Property 'getState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(290,38): error TS2339: Property 'getState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(300,19): error TS2339: Property 'watchState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(303,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(306,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(314,19): error TS2339: Property 'unwatchState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(317,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(330,7): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(339,7): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(351,59): error TS2345: Argument of type '{ type: string; description: string; priority: "high"; }' is not assignable to parameter of type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+  Property 'title' is missing in type '{ type: string; description: string; priority: "high"; }' but required in type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+integration/multiagent/test_agent_coordination.ts(362,9): error TS2353: Object literal may only specify known properties, and 'dependencies' does not exist in type 'Omit<Task, "id" | "status" | "createdAt" | "updatedAt">'.
+integration/multiagent/test_agent_coordination.ts(366,25): error TS2339: Property 'assignTaskToAgent' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(369,25): error TS2339: Property 'assignTaskToAgent' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(372,25): error TS2339: Property 'startTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(375,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(381,25): error TS2339: Property 'completeTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(390,41): error TS2339: Property 'areDependenciesSatisfied' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(394,25): error TS2339: Property 'startTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(397,25): error TS2339: Property 'setState' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(402,25): error TS2339: Property 'completeTask' does not exist on type 'MultiAgentCoordinator'.
+integration/multiagent/test_agent_coordination.ts(410,54): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+integration/multiagent/test_agent_coordination.ts(411,53): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+
+    at createTSError (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1019:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12) {
+  diagnosticCodes: [
+    2345, 2339, 2339, 7006, 7006, 7006, 7006,
+    2345, 2339, 2345, 2322, 2322, 2345, 2339,
+    2345, 2339, 2345, 2339, 2345, 2345, 2353,
+    2339, 2339, 2339, 2339, 2339, 2339, 7006,
+    2339, 2339, 2339, 2339, 2339, 2339, 2339,
+    2339, 2339, 2339, 2339, 2322, 2322, 2345,
+    2353, 2339, 2339, 2339, 2339, 2339, 2339,
+    2339, 2339, 2339, 2345, 2345
+  ]
+}

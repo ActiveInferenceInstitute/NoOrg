@@ -1,0 +1,31 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Task Duration Distribution</title>
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+          <style>
+            body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+            #chart { width: 800px; height: 600px; }
+            .error { color: #dc3545; text-align: center; margin-top: 20px; }
+          </style>
+        </head>
+        <body>
+          <div id="chart"></div>
+          <script>
+            const data = [{"x":[276],"y":[247],"mode":"markers","type":"scatter","name":"Task task-3f0483a5-51b4-46da-b79a-3dd7218483a1","marker":{"color":"#17a2b8","size":8}},{"x":[767],"y":[491],"mode":"markers","type":"scatter","name":"Task task-59ce0075-987e-4221-b138-ab6f853748b8","marker":{"color":"#17a2b8","size":8}},{"x":[1200],"y":[433],"mode":"markers","type":"scatter","name":"Task task-609fe62d-31df-40d4-9203-66237b06b742","marker":{"color":"#17a2b8","size":8}},{"x":[276,767,1200],"y":[390.3333333333333,390.3333333333333,390.3333333333333],"mode":"lines","type":"scatter","name":"Moving Average","line":{"color":"#dc3545","width":2,"dash":"dot"}}];
+            const layout = {"title":{"text":"Task Duration Distribution","font":{"size":24}},"width":800,"height":600,"margin":{"t":50,"l":50,"r":50,"b":50},"showlegend":true,"xaxis":{"title":"Time (ms)","showgrid":true,"gridcolor":"#eee"},"yaxis":{"title":"Duration (ms)","showgrid":true,"gridcolor":"#eee"},"plot_bgcolor":"white","paper_bgcolor":"white","hovermode":"closest"};
+            const config = {"responsive":true,"displayModeBar":true,"displaylogo":false};
+            
+            Plotly.newPlot('chart', data, layout, config).catch(error => {
+              document.getElementById('chart').innerHTML = `
+                <div class="error">
+                  <h3>Failed to generate chart</h3>
+                  <p>${error.message}</p>
+                </div>
+              `;
+            });
+          </script>
+        </body>
+      </html>
+    

@@ -1,0 +1,608 @@
+{
+  "root": "/home/trim/Documents/operations/tests",
+  "generated": "2025-03-13T10:42:31.841848",
+  "structure": {
+    "name": "tests",
+    "modified": "2025-03-13T10:42:16.781118",
+    "type": "directory",
+    "children": [
+      {
+        "name": ".benchmarks",
+        "modified": "2025-02-12T14:37:31.739866",
+        "type": "directory",
+        "children": []
+      },
+      {
+        "name": "data",
+        "modified": "2025-03-13T10:41:07.745899",
+        "type": "directory",
+        "children": [
+          {
+            "name": "codebase_relationships",
+            "modified": "2025-03-13T10:41:17.863931",
+            "type": "directory",
+            "children": [
+              {
+                "name": "README.md",
+                "size": 1151,
+                "modified": "2025-03-13T10:41:17.863931",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "dependency_metrics.json",
+                "size": 183,
+                "modified": "2025-03-13T10:42:31.742165",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "dependency_metrics.md",
+                "size": 225,
+                "modified": "2025-03-13T10:42:31.742165",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "markdown_links.json",
+                "size": 142574,
+                "modified": "2025-03-13T10:42:31.823166",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "python_dependencies.json",
+                "size": 164344,
+                "modified": "2025-03-13T10:42:31.685165",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "typescript_dependencies.json",
+                "size": 162133,
+                "modified": "2025-03-13T10:42:31.779166",
+                "type": "file",
+                "extension": "json"
+              }
+            ]
+          },
+          {
+            "name": "metrics",
+            "modified": "2025-02-12T15:31:41.545630",
+            "type": "directory",
+            "children": [
+              {
+                "name": "sample_metrics.json",
+                "size": 3548,
+                "modified": "2025-02-12T15:31:47.632649",
+                "type": "file",
+                "extension": "json"
+              }
+            ]
+          },
+          {
+            "name": "repo_structure",
+            "modified": "2025-03-13T10:41:17.863931",
+            "type": "directory",
+            "children": [
+              {
+                "name": "README.md",
+                "size": 1071,
+                "modified": "2025-03-13T10:41:17.863931",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "agents_structure.json",
+                "size": 59343,
+                "modified": "2025-03-13T10:41:07.762899",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "agents_structure.md",
+                "size": 15457,
+                "modified": "2025-03-13T10:41:07.770899",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "docs_structure.json",
+                "size": 81628,
+                "modified": "2025-03-13T10:41:07.804899",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "docs_structure.md",
+                "size": 19991,
+                "modified": "2025-03-13T10:41:07.813900",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "file_extensions.json",
+                "size": 202,
+                "modified": "2025-03-13T10:42:31.836166",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "file_extensions.md",
+                "size": 276,
+                "modified": "2025-03-13T10:42:31.835166",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "frameworks_structure.json",
+                "size": 22434,
+                "modified": "2025-03-13T10:41:07.777899",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "frameworks_structure.md",
+                "size": 5486,
+                "modified": "2025-03-13T10:41:07.779899",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "repository_structure.json",
+                "size": 251001,
+                "modified": "2025-03-13T10:41:17.358930",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "repository_structure.md",
+                "size": 60386,
+                "modified": "2025-03-13T10:41:07.963900",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "tests_structure.json",
+                "size": 15644,
+                "modified": "2025-03-13T10:41:07.834899",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "tests_structure.md",
+                "size": 3629,
+                "modified": "2025-03-13T10:41:07.837899",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "resources",
+            "modified": "2025-02-12T15:31:13.313540",
+            "type": "directory",
+            "children": [
+              {
+                "name": "resource_pools.json",
+                "size": 2788,
+                "modified": "2025-02-12T15:31:20.041561",
+                "type": "file",
+                "extension": "json"
+              }
+            ]
+          },
+          {
+            "name": "tasks",
+            "modified": "2025-02-12T15:30:48.811461",
+            "type": "directory",
+            "children": [
+              {
+                "name": "sample_tasks.json",
+                "size": 2190,
+                "modified": "2025-02-12T15:30:54.612480",
+                "type": "file",
+                "extension": "json"
+              }
+            ]
+          },
+          {
+            "name": "README.md",
+            "size": 2048,
+            "modified": "2025-03-11T07:20:53.966324",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "schemas.json",
+            "size": 1,
+            "modified": "2025-02-12T15:32:31.385789",
+            "type": "file",
+            "extension": "json"
+          }
+        ]
+      },
+      {
+        "name": "fixtures",
+        "modified": "2025-02-12T15:34:26.773159",
+        "type": "directory",
+        "children": []
+      },
+      {
+        "name": "integration",
+        "modified": "2025-02-12T15:34:28.773165",
+        "type": "directory",
+        "children": [
+          {
+            "name": "task",
+            "modified": "2025-02-12T15:34:13.898118",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "size": 0,
+                "modified": "2025-02-12T15:34:13.898118",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "test_task_execution.py",
+                "size": 11163,
+                "modified": "2025-02-12T15:36:20.173522",
+                "type": "file",
+                "extension": "py"
+              }
+            ]
+          },
+          {
+            "name": "__init__.py",
+            "size": 0,
+            "modified": "2025-02-12T15:34:13.898118",
+            "type": "file",
+            "extension": "py"
+          }
+        ]
+      },
+      {
+        "name": "system",
+        "modified": "2025-02-12T15:34:28.784165",
+        "type": "directory",
+        "children": [
+          {
+            "name": "scenarios",
+            "modified": "2025-02-12T15:34:13.898118",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "size": 0,
+                "modified": "2025-02-12T15:34:13.898118",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "test_task_workflow.py",
+                "size": 12601,
+                "modified": "2025-02-12T15:37:33.215755",
+                "type": "file",
+                "extension": "py"
+              }
+            ]
+          },
+          {
+            "name": "__init__.py",
+            "size": 0,
+            "modified": "2025-02-12T15:34:13.898118",
+            "type": "file",
+            "extension": "py"
+          }
+        ]
+      },
+      {
+        "name": "tests",
+        "modified": "2025-02-12T15:30:36.305421",
+        "type": "directory",
+        "children": [
+          {
+            "name": "data",
+            "modified": "2025-02-12T15:30:36.305421",
+            "type": "directory",
+            "children": [
+              {
+                "name": "metrics",
+                "modified": "2025-02-12T15:30:36.305421",
+                "type": "directory",
+                "children": []
+              },
+              {
+                "name": "resources",
+                "modified": "2025-02-12T15:30:36.305421",
+                "type": "directory",
+                "children": []
+              },
+              {
+                "name": "tasks",
+                "modified": "2025-02-12T15:30:36.305421",
+                "type": "directory",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "integration",
+            "modified": "2025-02-12T15:29:00.184113",
+            "type": "directory",
+            "children": [
+              {
+                "name": "task",
+                "modified": "2025-02-12T15:29:00.184113",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "__init__.py",
+                    "size": 0,
+                    "modified": "2025-02-12T15:29:00.184113",
+                    "type": "file",
+                    "extension": "py"
+                  }
+                ]
+              },
+              {
+                "name": "__init__.py",
+                "size": 0,
+                "modified": "2025-02-12T15:29:00.184113",
+                "type": "file",
+                "extension": "py"
+              }
+            ]
+          },
+          {
+            "name": "system",
+            "modified": "2025-02-12T15:29:00.184113",
+            "type": "directory",
+            "children": [
+              {
+                "name": "scenarios",
+                "modified": "2025-02-12T15:29:00.184113",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "__init__.py",
+                    "size": 0,
+                    "modified": "2025-02-12T15:29:00.184113",
+                    "type": "file",
+                    "extension": "py"
+                  }
+                ]
+              },
+              {
+                "name": "__init__.py",
+                "size": 0,
+                "modified": "2025-02-12T15:29:00.184113",
+                "type": "file",
+                "extension": "py"
+              }
+            ]
+          },
+          {
+            "name": "unit",
+            "modified": "2025-02-12T15:29:00.184113",
+            "type": "directory",
+            "children": [
+              {
+                "name": "task",
+                "modified": "2025-02-12T15:29:00.184113",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "__init__.py",
+                    "size": 0,
+                    "modified": "2025-02-12T15:29:00.184113",
+                    "type": "file",
+                    "extension": "py"
+                  }
+                ]
+              },
+              {
+                "name": "__init__.py",
+                "size": 0,
+                "modified": "2025-02-12T15:29:00.184113",
+                "type": "file",
+                "extension": "py"
+              }
+            ]
+          },
+          {
+            "name": "__init__.py",
+            "size": 0,
+            "modified": "2025-02-12T15:29:00.184113",
+            "type": "file",
+            "extension": "py"
+          }
+        ]
+      },
+      {
+        "name": "unit",
+        "modified": "2025-02-12T15:34:28.832165",
+        "type": "directory",
+        "children": [
+          {
+            "name": "task",
+            "modified": "2025-02-12T15:34:13.898118",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "size": 0,
+                "modified": "2025-02-12T15:34:13.898118",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "test_task_dependencies.py",
+                "size": 8724,
+                "modified": "2025-02-12T15:19:20.634190",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "test_task_ingestion.py",
+                "size": 6851,
+                "modified": "2025-02-12T14:28:06.882066",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "test_task_prioritization.py",
+                "size": 7528,
+                "modified": "2025-02-12T15:19:20.634190",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "test_task_scheduling.py",
+                "size": 1,
+                "modified": "2025-02-12T15:13:26.344982",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "test_task_workflow.py",
+                "size": 10724,
+                "modified": "2025-02-12T15:35:11.764303",
+                "type": "file",
+                "extension": "py"
+              }
+            ]
+          },
+          {
+            "name": "__init__.py",
+            "size": 0,
+            "modified": "2025-02-12T15:34:13.898118",
+            "type": "file",
+            "extension": "py"
+          }
+        ]
+      },
+      {
+        "name": "utils",
+        "modified": "2025-03-11T07:28:02.206046",
+        "type": "directory",
+        "children": [
+          {
+            "name": "README.md",
+            "size": 1926,
+            "modified": "2025-03-11T07:21:17.834422",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "__init__.py",
+            "size": 130,
+            "modified": "2025-03-11T07:25:42.755486",
+            "type": "file",
+            "extension": "py"
+          },
+          {
+            "name": "file_structure_mapper.py",
+            "size": 8230,
+            "modified": "2025-03-11T07:31:21.415846",
+            "type": "file",
+            "extension": "py"
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "size": 5596,
+        "modified": "2025-03-11T07:23:28.896949",
+        "type": "file",
+        "extension": "md"
+      },
+      {
+        "name": "TEST_EXECUTION_README.md",
+        "size": 6944,
+        "modified": "2025-03-13T10:42:06.942087",
+        "type": "file",
+        "extension": "md"
+      },
+      {
+        "name": "TEST_SUMMARY.md",
+        "size": 1120,
+        "modified": "2025-03-13T10:42:18.633124",
+        "type": "file",
+        "extension": "md"
+      },
+      {
+        "name": "__init__.py",
+        "size": 0,
+        "modified": "2025-02-12T15:34:13.898118",
+        "type": "file",
+        "extension": "py"
+      },
+      {
+        "name": "conftest.py",
+        "size": 10348,
+        "modified": "2025-02-12T15:30:28.723397",
+        "type": "file",
+        "extension": "py"
+      },
+      {
+        "name": "pytest.ini",
+        "size": 1477,
+        "modified": "2025-02-12T15:29:17.989170",
+        "type": "file",
+        "extension": "ini"
+      },
+      {
+        "name": "requirements.txt",
+        "size": 1299,
+        "modified": "2025-03-11T07:22:31.270718",
+        "type": "file",
+        "extension": "txt"
+      },
+      {
+        "name": "run_structure_analysis.py",
+        "size": 6512,
+        "modified": "2025-03-11T07:20:53.966324",
+        "type": "file",
+        "extension": "py"
+      },
+      {
+        "name": "run_tests.py",
+        "size": 4245,
+        "modified": "2025-02-12T15:34:13.898118",
+        "type": "file",
+        "extension": "py"
+      },
+      {
+        "name": "test_codebase_relationships.py",
+        "size": 9269,
+        "modified": "2025-03-11T07:27:51.840005",
+        "type": "file",
+        "extension": "py"
+      },
+      {
+        "name": "test_repo_structure.py",
+        "size": 7853,
+        "modified": "2025-03-11T07:30:23.869615",
+        "type": "file",
+        "extension": "py"
+      },
+      {
+        "name": "test_workflow.py",
+        "size": 6103,
+        "modified": "2025-02-12T15:19:20.634190",
+        "type": "file",
+        "extension": "py"
+      },
+      {
+        "name": "utils.py",
+        "size": 12093,
+        "modified": "2025-02-12T15:33:27.016968",
+        "type": "file",
+        "extension": "py"
+      }
+    ]
+  }
+}

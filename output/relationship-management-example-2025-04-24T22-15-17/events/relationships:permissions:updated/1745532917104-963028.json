@@ -1,0 +1,18 @@
+{
+  "id": "1745532917104-963028",
+  "type": "relationships:permissions:updated",
+  "payload": {
+    "relationshipId": "92fed52b-ae70-4f99-bb17-8818b41c8c06",
+    "permissions": [
+      {
+        "resource": "all_resources",
+        "level": "admin",
+        "conditions": {
+          "description": "Security audit access",
+          "expiration": "2026-04-24T22:15:17.103Z"
+        }
+      }
+    ]
+  },
+  "timestamp": 1745532917104
+}

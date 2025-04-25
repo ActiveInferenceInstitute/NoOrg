@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "925670564bfa036a",
+    "type": "split",
+    "children": [
+      {
+        "id": "b4bd344549f38c39",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1444d8aef171810f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d37d6cff25209cab",
+    "type": "split",
+    "children": [
+      {
+        "id": "695960e1621ed494",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9319e648094d5adf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8161587b51f69bd9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1c1437f4270a87f3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4cdb2cd874251e8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed9aea3919126f6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6dc65548f699905",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2c759eb7cd5f47ad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "eeea24fe6d79257d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3a0790fb10c0abd9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "1444d8aef171810f",
+  "lastOpenFiles": [
+    "CustomerSupport/Policies/QualityStandards.md",
+    "CustomerSupport/MeetingNotes/2025-04-25-WeeklyOperations.md",
+    "CustomerSupport/Resources/QualityScorecard.md",
+    "CustomerSupport/Resources/README.md",
+    "Education/MeetingNotes/Initiatives/README.md",
+    "CustomerSupport/Resources",
+    "CustomerSupport/Policies/ContentStyleGuide.md",
+    "Education/Resources/Technical/AI/README.md",
+    "Education/MeetingNotes/External",
+    "Education/MeetingNotes/Initiatives",
+    "Education/MeetingNotes/Committees",
+    "Education/MeetingNotes/CrossUnit",
+    "Education/MeetingNotes/TeamMeetings",
+    "Education/MeetingNotes/Leadership",
+    "Education/Resources/Technical/AI/Fundamentals",
+    "Education/Resources/Technical/AI/EthicsModule",
+    "Education/Resources/Technical/AI/ApplicationsLibrary",
+    "Education/Curriculum/Technical/AIPrinciples.md",
+    "CustomerSupport/Reports/SLAComplianceReport.md",
+    "CustomerSupport/Reports/CSATReport.md",
+    "Education/Initiatives/AI_Literacy.md",
+    "CustomerSupport/Processes/QualityAssurance.md",
+    "Compliance/Organization/ComplianceCommittee.md",
+    "Education/Policies/README.md",
+    "Compliance/Organization/TeamStructure.md",
+    "CustomerSupport/Processes/CustomerCommunication.md",
+    "Education/Initiatives/README.md",
+    "Compliance/Organization/README.md",
+    "Compliance/MeetingNotes/ComplianceCommittee/2024-05-15.md",
+    "Education/KPIs/README.md",
+    "CustomerSupport/Processes/KnowledgeManagement.md",
+    "Compliance/MeetingNotes/README.md",
+    "Education/Resources/README.md",
+    "Compliance/Reports/ComplianceDashboard.md",
+    "Education/Programs/README.md",
+    "Compliance/Reports/README.md"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "1745534547941-390551",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "idea_generation",
+    "stageName": "Idea Generation",
+    "unitId": "innovation_unit",
+    "unitName": "Innovation Unit",
+    "timestamp": "2025-04-24T22:42:27.941Z"
+  },
+  "timestamp": 1745534547941
+}

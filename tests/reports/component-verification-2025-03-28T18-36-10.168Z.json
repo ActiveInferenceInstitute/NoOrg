@@ -1,0 +1,121 @@
+{
+  "components": {
+    "TaskManager": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/src/core/multiagent/TaskManager.ts",
+      "lineCount": 447,
+      "hasMethods": true,
+      "methods": [
+        "createTask",
+        "updateTask",
+        "getTask",
+        "listTasks",
+        "assignTask"
+      ]
+    },
+    "SharedStateManager": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/src/core/multiagent/SharedStateManager.ts",
+      "lineCount": 278,
+      "hasMethods": true,
+      "methods": [
+        "getState",
+        "setState",
+        "watchState",
+        "unwatchState"
+      ]
+    },
+    "AgentRegistry": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/src/core/multiagent/AgentRegistry.ts",
+      "lineCount": 466,
+      "hasMethods": true,
+      "methods": [
+        "registerAgent",
+        "unregisterAgent",
+        "getAgent",
+        "listAgents"
+      ]
+    },
+    "MultiAgentCoordinator": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/src/core/multiagent/MultiAgentCoordinator.ts",
+      "lineCount": 758,
+      "hasMethods": true,
+      "methods": [
+        "registerAgent",
+        "unregisterAgent",
+        "createTask",
+        "assignTask",
+        "getTask",
+        "updateTaskStatus"
+      ]
+    },
+    "ResearchAgent": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/src/agents/ResearchAgent.ts",
+      "lineCount": 470,
+      "hasMethods": true,
+      "methods": [
+        "researchTopic",
+        "extractInformation",
+        "summarizeDocument"
+      ]
+    },
+    "CreativeWritingAgent": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/src/agents/CreativeWritingAgent.ts",
+      "lineCount": 511,
+      "hasMethods": true,
+      "methods": [
+        "generateContent",
+        "refineContent",
+        "generateStylizedContent"
+      ]
+    }
+  },
+  "tests": {
+    "unit": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/tests/unit/multiagent",
+      "files": [
+        {
+          "name": "test_openai_client.ts",
+          "lineCount": 245
+        },
+        {
+          "name": "test_shared_state_manager.ts",
+          "lineCount": 325
+        },
+        {
+          "name": "test_task_manager.ts",
+          "lineCount": 504
+        }
+      ]
+    },
+    "integration": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/tests/integration/multiagent",
+      "files": [
+        {
+          "name": "test_agent_coordination.ts",
+          "lineCount": 417
+        },
+        {
+          "name": "test_coordinator_and_registry.ts",
+          "lineCount": 259
+        }
+      ]
+    },
+    "system": {
+      "exists": true,
+      "path": "/home/trim/Documents/operations/tests/system/multiagent",
+      "files": [
+        {
+          "name": "test_end_to_end_workflow.ts",
+          "lineCount": 338
+        }
+      ]
+    }
+  }
+}

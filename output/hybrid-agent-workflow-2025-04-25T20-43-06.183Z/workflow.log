@@ -1,0 +1,29 @@
+=== Hybrid Agent Workflow Example - 2025-04-25T20:43:06.184Z ===
+
+[LOG] Loaded 0 workflow templates from disk
+[LOG] Registered task executor for action: execute
+[INFO] Executing task Requirements Analysis (requirements_analysis) in workflow b10917fd-e8b4-40bc-b5a8-19a9dd9f4711
+[INFO] Executing task: Requirements Analysis
+[INFO] LLMAgent Requirements Analyzer processing input
+[INFO] Using model gpt-4o for request with estimated 351 tokens
+[INFO] Saved LLM input to requirements_analyzer_1745613786188_input.json
+[INFO] Saved LLM output to requirements_analyzer_1745613795579_output.json
+[INFO] Executing task Hardware Catalog Search (hardware_catalog_search) in workflow b10917fd-e8b4-40bc-b5a8-19a9dd9f4711
+[INFO] Executing task: Hardware Catalog Search
+[INFO] APIAgent Hardware Catalog Service processing with endpoint https://api.example.com/hardware-catalog
+[INFO] APIAgent Hardware Catalog Service transformed request data
+[INFO] Executing task Community Engagement Strategy (community_strategy) in workflow b10917fd-e8b4-40bc-b5a8-19a9dd9f4711
+[INFO] Executing task: Community Engagement Strategy
+[INFO] LLMAgent Community Engagement Strategist processing input
+[INFO] Using model gpt-4o for request with estimated 1042.75 tokens
+[INFO] Saved LLM input to engagement_strategist_1745613795583_input.json
+[INFO] APIAgent Hardware Catalog Service transformed response data
+[INFO] APIAgent Hardware Catalog Service completed processing
+[INFO] Executing task Budget Allocation (budget_allocation) in workflow b10917fd-e8b4-40bc-b5a8-19a9dd9f4711
+[INFO] Executing task: Budget Allocation
+[INFO] RuleBasedAgent Budget Optimizer evaluating rules
+[INFO] Rule triggered in Budget Optimizer
+[INFO] Executing task Sensor Allocation Analysis (sensor_allocation_analysis) in workflow b10917fd-e8b4-40bc-b5a8-19a9dd9f4711
+[INFO] Executing task: Sensor Allocation Analysis
+[INFO] VisualizationAgent Chart Generator generating chart
+[INFO] Created visualization file: /home/trim/Documents/GitHub/NoOrg/output/hybrid-agent-workflow-2025-04-25T20-43-06.183Z/visualizations/chart_generator_1745613796094.html

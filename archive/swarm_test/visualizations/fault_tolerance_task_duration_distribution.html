@@ -1,0 +1,31 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Task Duration Distribution</title>
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+          <style>
+            body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+            #chart { width: 800px; height: 600px; }
+            .error { color: #dc3545; text-align: center; margin-top: 20px; }
+          </style>
+        </head>
+        <body>
+          <div id="chart"></div>
+          <script>
+            const data = [{"x":[186],"y":[162],"mode":"markers","type":"scatter","name":"Task task-1a788edf-3624-48d8-9bea-3451aecf12a3","marker":{"color":"#17a2b8","size":8}},{"x":[497],"y":[311],"mode":"markers","type":"scatter","name":"Task task-518d54fb-340d-4294-8d88-63f905ea6add","marker":{"color":"#17a2b8","size":8}},{"x":[971],"y":[472],"mode":"markers","type":"scatter","name":"Task task-ea3fe8b2-6d3d-4aa8-bead-77c961585260","marker":{"color":"#17a2b8","size":8}},{"x":[1449],"y":[477],"mode":"markers","type":"scatter","name":"Task task-a1ff95a1-bcef-4400-a7ac-7ec15e7b9cb6","marker":{"color":"#17a2b8","size":8}},{"x":[1855],"y":[405],"mode":"markers","type":"scatter","name":"Task task-c1689398-1866-4a82-b26d-aca9a55e7a21","marker":{"color":"#17a2b8","size":8}},{"x":[2127],"y":[270],"mode":"markers","type":"scatter","name":"Task task-64cf553b-2d6f-43d9-88c5-99801c2aa4df","marker":{"color":"#17a2b8","size":8}},{"x":[2530],"y":[403],"mode":"markers","type":"scatter","name":"Task task-774f9bbb-9e7e-4673-9cf6-668f83cc7665","marker":{"color":"#17a2b8","size":8}},{"x":[2923],"y":[391],"mode":"markers","type":"scatter","name":"Task task-4e3451b4-d579-4bba-a5a3-6635a5cc15f8","marker":{"color":"#17a2b8","size":8}},{"x":[3150],"y":[227],"mode":"markers","type":"scatter","name":"Task task-c18aa618-80ba-4fdd-be3e-f924ced7bf04","marker":{"color":"#17a2b8","size":8}},{"x":[3487],"y":[337],"mode":"markers","type":"scatter","name":"Task task-801409c0-69e2-4a9c-bc97-6d69c2265b12","marker":{"color":"#17a2b8","size":8}},{"x":[3642],"y":[154],"mode":"markers","type":"scatter","name":"Task task-b607b885-be87-4a77-9f4b-05038ff8dc09","marker":{"color":"#17a2b8","size":8}},{"x":[3965],"y":[322],"mode":"markers","type":"scatter","name":"Task task-966280e4-9e10-4cef-a608-754fb8a9d2a6","marker":{"color":"#17a2b8","size":8}},{"x":[4295],"y":[329],"mode":"markers","type":"scatter","name":"Task task-f3f338a3-25fc-4bfc-a4c6-bce049e76c85","marker":{"color":"#17a2b8","size":8}},{"x":[4527],"y":[231],"mode":"markers","type":"scatter","name":"Task task-61ba4fa0-abe2-4c6f-ab8a-6b5893d2a5f2","marker":{"color":"#17a2b8","size":8}},{"x":[4801],"y":[273],"mode":"markers","type":"scatter","name":"Task task-d2e5e130-38f2-43be-ba5a-5a288c36e02b","marker":{"color":"#17a2b8","size":8}},{"x":[4967],"y":[165],"mode":"markers","type":"scatter","name":"Task task-2be73c99-b52f-4165-86f5-9b1d1a4cec60","marker":{"color":"#17a2b8","size":8}},{"x":[5129],"y":[161],"mode":"markers","type":"scatter","name":"Task task-ed815c20-8a64-46b9-80ea-0309e79b3342","marker":{"color":"#17a2b8","size":8}},{"x":[5278],"y":[148],"mode":"markers","type":"scatter","name":"Task task-e3b86ebc-f1e4-40ca-84f1-d4cbef7a4e0b","marker":{"color":"#17a2b8","size":8}},{"x":[5655],"y":[376],"mode":"markers","type":"scatter","name":"Task task-7a90acdb-87f7-4bde-990e-611cfe480664","marker":{"color":"#17a2b8","size":8}},{"x":[6117],"y":[460],"mode":"markers","type":"scatter","name":"Task task-6bd8d808-4bed-4f6f-b91b-92060f126c87","marker":{"color":"#17a2b8","size":8}},{"x":[186,497,971,1449,1855,2127,2530,2923,3150,3487,3642,3965,4295,4527,4801,4967,5129,5278,5655,6117],"y":[315,355.5,365.4,387,405.4,389.2,339.2,325.6,302.4,286.2,273.8,274.6,261.8,264,231.8,195.6,224.6,262,286.25,328],"mode":"lines","type":"scatter","name":"Moving Average","line":{"color":"#dc3545","width":2,"dash":"dot"}}];
+            const layout = {"title":{"text":"Task Duration Distribution","font":{"size":24}},"width":800,"height":600,"margin":{"t":50,"l":50,"r":50,"b":50},"showlegend":true,"xaxis":{"title":"Time (ms)","showgrid":true,"gridcolor":"#eee"},"yaxis":{"title":"Duration (ms)","showgrid":true,"gridcolor":"#eee"},"plot_bgcolor":"white","paper_bgcolor":"white","hovermode":"closest"};
+            const config = {"responsive":true,"displayModeBar":true,"displaylogo":false};
+            
+            Plotly.newPlot('chart', data, layout, config).catch(error => {
+              document.getElementById('chart').innerHTML = `
+                <div class="error">
+                  <h3>Failed to generate chart</h3>
+                  <p>${error.message}</p>
+                </div>
+              `;
+            });
+          </script>
+        </body>
+      </html>
+    

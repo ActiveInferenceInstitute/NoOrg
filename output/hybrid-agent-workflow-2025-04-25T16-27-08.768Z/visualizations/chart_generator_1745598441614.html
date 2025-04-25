@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chart Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .chart-container { width: 800px; height: 400px; }
+  </style>
+</head>
+<body>
+  <h1>Data Visualization</h1>
+  <div class="chart-container">
+    <canvas id="chart_chart_generator_1745598441614"></canvas>
+  </div>
+  <script>
+    const ctx = document.getElementById('chart_chart_generator_1745598441614').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["Point 1","Point 2","Point 3"],
+        datasets: [{"label":"Values","data":[0,0,0],"backgroundColor":"rgba(75, 192, 192, 0.2)","borderColor":"rgba(75, 192, 192, 1)","borderWidth":1}]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

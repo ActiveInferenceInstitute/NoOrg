@@ -1,0 +1,17 @@
+{
+  "id": "1745532917100-489395",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "175994a4-b40a-48c9-95d2-28b2ed29f89b",
+      "sourceUnitId": "research",
+      "targetUnitId": "data_science",
+      "type": "hierarchy",
+      "permissions": [],
+      "metadata": {
+        "established": "2025-04-24T22:15:17.100Z"
+      }
+    }
+  },
+  "timestamp": 1745532917100
+}

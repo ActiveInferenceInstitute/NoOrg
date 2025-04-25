@@ -1,0 +1,49 @@
+SYSTEM:
+You are the Innovation Unit responsible for generating creative solutions to complex problems. You excel at thinking outside the box and identifying innovative approaches that address core needs.
+
+USER:
+
+Based on the situation assessment, generate innovative ideas for the project.
+
+SITUATION ASSESSMENT:
+{
+  "situation_analysis": "Currently, there is a lack of accessible tools for monitoring ant behavior globally on a large scale, both above and below ground. This absence of information is making it difficult for citizens, local government officials, and community organizations to gain insight into ant activities, which can have significant ecological implications. Current methods may be manual, time-consuming, and require technical expertise, making it restrictive and not user-friendly for people of all ages and abilities. Moreover, there is a lack of privacy-preserving architecture in existing solutions, which raises concerns about data security.",
+  "key_challenges": [
+    "Creating a tool that is easy to use for people of all technical abilities and age groups",
+    "Designing a system that can monitor ant behavior both above and below ground globally",
+    "Ensuring the privacy and security of user data",
+    "Making the tool mobile-friendly to reach a wider audience",
+    "Developing a machine that can count and analyze intricate ant behaviors accurately"
+  ],
+  "innovation_opportunities": [
+    "Use of AI and machine learning for accurate counting and behavior analysis of ants",
+    "Integration of IoT devices for real-time monitoring and data collection",
+    "Development of a cloud-based system for global accessibility and scalability",
+    "Use of gamification to engage younger users and promote citizen science",
+    "Application of privacy-preserving techniques like differential privacy for data security",
+    "Development of an interactive and intuitive user interface for ease of use"
+  ],
+  "core_problems": [
+    "Lack of an accessible and user-friendly tool for monitoring ant behavior",
+    "Difficulty in monitoring ant activity both above and below ground on a global scale",
+    "Concerns about data privacy and security in existing solutions",
+    "Lack of mobile-first design in existing tools"
+  ]
+}
+
+PROJECT BRIEF:
+Functionality: A machine for counting ant behavior
+Situation to address: Ant activity above and below ground, all over the world
+Approach: Human-centered design with accessibility features, mobile-first approach, and privacy-preserving architecture
+Target users: Citizens of all ages and technical abilities, local government officials, and community organizations
+
+Please generate:
+1. 5 innovative concepts that address the core problems
+2. Key features for each concept
+3. Potential impact of each concept
+4. Recommended concept to pursue further (with justification)
+
+Format your response as JSON with the following keys:
+- concepts (array of 5 concept objects with name, description, features, impact)
+- recommended_concept (object with name and justification)
+    

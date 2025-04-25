@@ -1,0 +1,10 @@
+{
+  "total_files": 771,
+  "files_with_dependencies": 549,
+  "total_dependencies": 6796,
+  "dependencies_by_type": {
+    "python": 191,
+    "typescript": 74,
+    "markdown": 6531
+  }
+}

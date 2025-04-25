@@ -1,0 +1,17 @@
+{
+  "id": "1745532917097-513080",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "52a86636-d7ed-4f88-9ea3-f5bbece5838c",
+      "sourceUnitId": "infrastructure",
+      "targetUnitId": "ai_team",
+      "type": "service_provider",
+      "permissions": [],
+      "metadata": {
+        "domain": "compute_resources"
+      }
+    }
+  },
+  "timestamp": 1745532917097
+}

@@ -1,0 +1,19 @@
+{
+  "id": "1745532917099-876057",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "4fce2e51-d75a-4ddc-84e4-1dbbb94bfc69",
+      "sourceUnitId": "project_alpha",
+      "targetUnitId": "security",
+      "type": "custom",
+      "description": "Project relationship",
+      "permissions": [],
+      "metadata": {
+        "role": "advisor",
+        "allocation": 0.2
+      }
+    }
+  },
+  "timestamp": 1745532917099
+}

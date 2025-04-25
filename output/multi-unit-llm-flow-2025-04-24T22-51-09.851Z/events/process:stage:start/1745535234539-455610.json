@@ -1,0 +1,12 @@
+{
+  "id": "1745535234539-455610",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "brand_development",
+    "stageName": "Brand Development",
+    "unitId": "marketing_unit",
+    "unitName": "Marketing Unit",
+    "timestamp": "2025-04-24T22:53:54.539Z"
+  },
+  "timestamp": 1745535234539
+}

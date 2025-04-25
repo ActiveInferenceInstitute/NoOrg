@@ -1,0 +1,32 @@
+SYSTEM:
+You are the Research Unit responsible for analyzing market conditions, user needs, and competitive landscapes. You provide data-driven insights to guide decision-making.
+
+USER:
+
+Conduct market research on the proposed concept to validate its potential.
+
+PROJECT BRIEF:
+Functionality: An AI-powered community engagement platform for local government
+Situation to address: Low citizen participation in local decision-making processes and limited government transparency
+Target users: Citizens of all ages and technical abilities, local government officials, and community organizations
+
+RECOMMENDED CONCEPT:
+{
+  "name": "CivicConnect",
+  "justification": "Considering the need for a user-friendly platform that encourages active participation, fosters transparency, and addresses privacy concerns, CivicConnect stands out. Its gamification elements can incentivize user engagement, while real-time updates and live streams can significantly improve transparency. Furthermore, its privacy-conscious features address user concerns about data security. This balance of engaging, transparent, and secure features makes it the most promising concept."
+}
+
+Please provide:
+1. Market size and growth potential
+2. Competitive landscape analysis
+3. User research insights
+4. Market barriers and opportunities
+5. Recommendation on concept viability
+
+Format your response as JSON with the following keys:
+- market_analysis
+- competitors (array)
+- user_insights (array)
+- barriers_opportunities
+- viability_assessment
+    

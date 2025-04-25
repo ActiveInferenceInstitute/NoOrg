@@ -1,0 +1,44 @@
+{
+  "status": {
+    "phase": "architecture",
+    "completion": 0.25,
+    "health": "good",
+    "updated_at": "2025-04-24T22:15:27.506Z"
+  },
+  "resources": {
+    "developers": 5,
+    "researchers": 2,
+    "compute_units": 15
+  },
+  "timeline": {
+    "start_date": "2025-04-24T22:15:25.493Z",
+    "estimated_completion": "2025-07-23T22:15:25.493Z",
+    "milestones": [
+      {
+        "name": "Requirements Gathering",
+        "due_date": "2025-05-09T22:15:25.493Z",
+        "status": "in_progress"
+      },
+      {
+        "name": "Architecture Design",
+        "due_date": "2025-05-24T22:15:25.493Z",
+        "status": "not_started"
+      },
+      {
+        "name": "Implementation",
+        "due_date": "2025-06-23T22:15:25.493Z",
+        "status": "not_started"
+      },
+      {
+        "name": "Testing",
+        "due_date": "2025-07-08T22:15:25.493Z",
+        "status": "not_started"
+      },
+      {
+        "name": "Deployment",
+        "due_date": "2025-07-18T22:15:25.493Z",
+        "status": "not_started"
+      }
+    ]
+  }
+}

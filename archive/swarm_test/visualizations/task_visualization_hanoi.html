@@ -1,0 +1,154 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Towers of Hanoi Visualization</title>
+          <style>
+            body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+            #visualization { width: 800px; height: 600px; }
+            .controls { margin: 20px 0; }
+            .step-info { margin: 10px 0; font-size: 14px; }
+          </style>
+        </head>
+        <body>
+          <div class="controls">
+            <button id="prevBtn">Previous</button>
+            <button id="playBtn">Play</button>
+            <button id="nextBtn">Next</button>
+            <span id="stepCounter">Step: 1/16</span>
+          </div>
+          <div class="step-info" id="stepInfo"></div>
+          <canvas id="visualization" width="800" height="600"></canvas>
+          <script>
+            const states = [{"disk":0,"from":"A","to":"A","state":{"A":[4,3,2,1],"B":[],"C":[]}},{"disk":1,"from":"A","to":"B","state":{"A":[4,3,2],"B":[1],"C":[]}},{"disk":2,"from":"A","to":"C","state":{"A":[4,3],"B":[1],"C":[2]}},{"disk":1,"from":"B","to":"C","state":{"A":[4,3],"B":[],"C":[2,1]}},{"disk":3,"from":"A","to":"B","state":{"A":[4],"B":[3],"C":[2,1]}},{"disk":1,"from":"C","to":"A","state":{"A":[4,1],"B":[3],"C":[2]}},{"disk":2,"from":"C","to":"B","state":{"A":[4,1],"B":[3,2],"C":[]}},{"disk":1,"from":"A","to":"B","state":{"A":[4],"B":[3,2,1],"C":[]}},{"disk":4,"from":"A","to":"C","state":{"A":[],"B":[3,2,1],"C":[4]}},{"disk":1,"from":"B","to":"C","state":{"A":[],"B":[3,2],"C":[4,1]}},{"disk":2,"from":"B","to":"A","state":{"A":[2],"B":[3],"C":[4,1]}},{"disk":1,"from":"C","to":"A","state":{"A":[2,1],"B":[3],"C":[4]}},{"disk":3,"from":"B","to":"C","state":{"A":[2,1],"B":[],"C":[4,3]}},{"disk":1,"from":"A","to":"B","state":{"A":[2],"B":[1],"C":[4,3]}},{"disk":2,"from":"A","to":"C","state":{"A":[],"B":[1],"C":[4,3,2]}},{"disk":1,"from":"B","to":"C","state":{"A":[],"B":[],"C":[4,3,2,1]}}];
+            const config = {"width":800,"height":600,"pegWidth":20,"pegHeight":300,"pegSpacing":250,"diskHeight":30,"baseHeight":40,"frameDelay":500};
+            const colors = ["#FF6B6B","#4ECDC4","#45B7D1","#96CEB4","#FFEEAD","#D4A5A5","#9B59B6","#3498DB","#E67E22"];
+            let currentStep = 0;
+            let isPlaying = false;
+            let playInterval;
+
+            const canvas = document.getElementById('visualization');
+            const ctx = canvas.getContext('2d');
+            
+            function drawPeg(x, y, label) {
+              // Draw base
+              ctx.fillStyle = '#34495e';
+              ctx.fillRect(
+                x - config.pegWidth/2 - 100,
+                y + config.pegHeight,
+                200,
+                config.baseHeight
+              );
+              
+              // Draw peg
+              ctx.fillRect(
+                x - config.pegWidth/2,
+                y,
+                config.pegWidth,
+                config.pegHeight
+              );
+              
+              // Draw label
+              ctx.fillStyle = '#2c3e50';
+              ctx.font = '20px Arial';
+              ctx.textAlign = 'center';
+              ctx.fillText(label, x, y + config.pegHeight + 30);
+            }
+            
+            function drawDisk(x, y, size, index) {
+              const width = 40 + size * 30;
+              ctx.fillStyle = colors[index % colors.length];
+              ctx.beginPath();
+              ctx.roundRect(
+                x - width/2,
+                y,
+                width,
+                config.diskHeight,
+                10
+              );
+              ctx.fill();
+              
+              // Draw disk number
+              ctx.fillStyle = '#fff';
+              ctx.font = '16px Arial';
+              ctx.textAlign = 'center';
+              ctx.fillText(size.toString(), x, y + 20);
+            }
+            
+            function drawState(state) {
+              ctx.clearRect(0, 0, config.width, config.height);
+              
+              // Draw pegs
+              const pegY = 100;
+              const pegPositions = {
+                'A': config.pegSpacing,
+                'B': config.pegSpacing * 2,
+                'C': config.pegSpacing * 3
+              };
+              
+              Object.entries(pegPositions).forEach(([peg, x]) => {
+                drawPeg(x, pegY, peg);
+              });
+              
+              // Draw disks
+              Object.entries(state.state).forEach(([peg, disks]) => {
+                const x = pegPositions[peg];
+                disks.forEach((disk, i) => {
+                  const y = pegY + config.pegHeight - (i + 1) * config.diskHeight;
+                  drawDisk(x, y, disk, disk - 1);
+                });
+              });
+              
+              // Update step info
+              document.getElementById('stepCounter').textContent = 
+                `Step: ${currentStep + 1}/${states.length}`;
+              document.getElementById('stepInfo').textContent = 
+                currentStep > 0 ? 
+                `Moving disk ${state.disk} from ${state.from} to ${state.to}` :
+                'Initial state';
+            }
+            
+            function updateState(step) {
+              currentStep = step;
+              drawState(states[step]);
+            }
+            
+            function play() {
+              if (isPlaying) {
+                clearInterval(playInterval);
+                playBtn.textContent = 'Play';
+                isPlaying = false;
+                return;
+              }
+              
+              isPlaying = true;
+              playBtn.textContent = 'Pause';
+              playInterval = setInterval(() => {
+                if (currentStep >= states.length - 1) {
+                  clearInterval(playInterval);
+                  playBtn.textContent = 'Play';
+                  isPlaying = false;
+                  return;
+                }
+                updateState(currentStep + 1);
+              }, config.frameDelay);
+            }
+            
+            // Event listeners
+            document.getElementById('prevBtn').addEventListener('click', () => {
+              if (currentStep > 0) updateState(currentStep - 1);
+            });
+            
+            document.getElementById('nextBtn').addEventListener('click', () => {
+              if (currentStep < states.length - 1) updateState(currentStep + 1);
+            });
+            
+            const playBtn = document.getElementById('playBtn');
+            playBtn.addEventListener('click', play);
+            
+            // Initial render
+            updateState(0);
+          </script>
+        </body>
+      </html>
+    

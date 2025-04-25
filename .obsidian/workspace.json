@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "f2875896907c5eb3",
+    "type": "split",
+    "children": [
+      {
+        "id": "764f9bb9dad9add4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5fa710e2914b3bc9",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bcd6ad77b43bc5a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e28cfee6ec964e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "894fece0d0f3732a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ff517b5cf3021504",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f954baa956918521",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "af5a259e137d3e31",
+    "type": "split",
+    "children": [
+      {
+        "id": "13acbcf2147be087",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4fa019c2063ba57e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "3a1964d4a7d8ae04",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "917359f08e7968b5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "df29a2ee8dde0ccd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5fa710e2914b3bc9",
+  "lastOpenFiles": [
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/visualizations/workflow_dashboard.html",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/visualizations/workflow_diagram.mmd",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/workflow_outputs.json",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/images/abstract_prompt.txt",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/images/abstract.png",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/images/system_prompt.txt",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/images/system.png",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/images/logo_prompt.txt",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/images/logo.png",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/intermediates/requirements_analyzer_1745614356400_output.json",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/intermediates/requirements_analyzer_1745614355541_output.json",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/intermediates/requirements_analyzer_1745614349316_input.json",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/intermediates/requirements_analyzer_1745614349312_input.json",
+    "output/butterfly-car-design-2025-04-25T20-50-58.725Z/intermediates/project_manager_1745614348771_output.json",
+    "output/hybrid-agent-workflow-2025-04-25T20-48-04.129Z/images/abstract.png",
+    "output/hybrid-agent-workflow-2025-04-25T20-48-04.129Z/images/system.png",
+    "output/hybrid-agent-workflow-2025-04-25T20-48-04.129Z/images/logo.png",
+    "output/hybrid-agent-workflow-2025-04-25T20-16-55.337Z/images/micro-ant-brain-extractor_abstract.png",
+    "output/hybrid-agent-workflow-2025-04-25T20-16-55.337Z/images/micro-ant-brain-extractor_system.png",
+    "output/hybrid-agent-workflow-2025-04-25T20-16-55.337Z/images/micro-ant-brain-extractor_logo.png"
+  ]
+}

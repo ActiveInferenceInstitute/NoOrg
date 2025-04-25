@@ -1,0 +1,39 @@
+=== Hybrid Agent Workflow Example - 2025-04-25T20:07:45.960Z ===
+
+[LOG] Loaded 0 workflow templates from disk
+[LOG] Registered task executor for action: execute
+[INFO] Executing task Requirements Analysis (requirements_analysis) in workflow dafed38c-fa03-40a3-88f8-4734871705bd
+[INFO] Executing task: Requirements Analysis
+[INFO] LLMAgent Requirements Analyzer processing input
+[INFO] Using model gpt-4o for request with estimated 338.5 tokens
+[INFO] Saved LLM input to requirements_analyzer_1745611665963_input.json
+[INFO] Saved LLM output to requirements_analyzer_1745611677948_output.json
+[WARN] Task system_architecture depends on non-existent task hardware_catalog
+[INFO] Executing task Hardware Catalog Search (hardware_catalog_search) in workflow dafed38c-fa03-40a3-88f8-4734871705bd
+[INFO] Executing task: Hardware Catalog Search
+[INFO] APIAgent Hardware Catalog Service processing with endpoint https://api.example.com/hardware-catalog
+[INFO] APIAgent Hardware Catalog Service transformed request data
+[INFO] Executing task Community Engagement Strategy (community_strategy) in workflow dafed38c-fa03-40a3-88f8-4734871705bd
+[INFO] Executing task: Community Engagement Strategy
+[INFO] LLMAgent Community Engagement Strategist processing input
+[INFO] Using model gpt-4o for request with estimated 1172.25 tokens
+[INFO] Saved LLM input to engagement_strategist_1745611677951_input.json
+[INFO] APIAgent Hardware Catalog Service transformed response data
+[INFO] APIAgent Hardware Catalog Service completed processing
+[WARN] Task system_architecture depends on non-existent task hardware_catalog
+[INFO] Executing task Budget Allocation (budget_allocation) in workflow dafed38c-fa03-40a3-88f8-4734871705bd
+[INFO] Executing task: Budget Allocation
+[INFO] RuleBasedAgent Budget Optimizer evaluating rules
+[INFO] Rule triggered in Budget Optimizer
+[WARN] Task system_architecture depends on non-existent task hardware_catalog
+[INFO] Executing task Sensor Allocation Analysis (sensor_allocation_analysis) in workflow dafed38c-fa03-40a3-88f8-4734871705bd
+[INFO] Executing task: Sensor Allocation Analysis
+[INFO] VisualizationAgent Chart Generator generating chart
+[INFO] Created visualization file: /home/trim/Documents/GitHub/NoOrg/output/hybrid-agent-workflow-2025-04-25T20-07-45.960Z/visualizations/chart_generator_1745611678453.html
+[WARN] Task system_architecture depends on non-existent task hardware_catalog
+[INFO] Saved LLM output to engagement_strategist_1745611703077_output.json
+[WARN] Task system_architecture depends on non-existent task hardware_catalog
+[INFO] Executing task Deployment Location Optimization (location_optimization) in workflow dafed38c-fa03-40a3-88f8-4734871705bd
+[INFO] Executing task: Deployment Location Optimization
+[INFO] DataProcessingAgent Deployment Location Optimizer processing input
+[WARN] Task system_architecture depends on non-existent task hardware_catalog

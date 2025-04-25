@@ -1,0 +1,140 @@
+
+====================================
+Test: fault_tolerance
+Started: 2025-02-20T01:07:28.211Z
+Environment:
+  Node Version: v18.20.6
+  Platform: linux
+  Memory: 166MB
+====================================
+
+
+-----------------------------------
+Step: Initializing test environment
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:265:18)
+    at SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:13)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:28.216Z] [5ms] [SUCCESS] [Initializing test environment] System initialized successfully
+
+Completed Step: Initializing test environment
+
+
+-----------------------------------
+Step: Registering test template
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:270:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:28.221Z] [10ms] [SUCCESS] [Registering test template] Template registered successfully
+
+Completed Step: Registering test template
+
+
+-----------------------------------
+Step: Generating test data
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:279:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:28.225Z] [14ms] [SUCCESS] [Generating test data] Generated 10 agents and 20 tasks
+
+Completed Step: Generating test data
+
+
+-----------------------------------
+Step: Registering agents
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:285:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:28.227Z] [16ms] [DEBUG] [Registering agents] Registered agent: agent-59eb1191-213d-4518-9386-0507d803aa23
+[2025-02-20T01:07:28.228Z] [17ms] [DEBUG] [Registering agents] Registered agent: agent-b20d61b3-d990-4d7c-b481-eb7cb764b8ee
+[2025-02-20T01:07:28.229Z] [18ms] [DEBUG] [Registering agents] Registered agent: agent-d2c000b0-868a-42ec-b6c6-d971faedea09
+[2025-02-20T01:07:28.229Z] [18ms] [DEBUG] [Registering agents] Registered agent: agent-e91d802c-0bcc-4595-b2bd-303a73196056
+[2025-02-20T01:07:28.230Z] [19ms] [DEBUG] [Registering agents] Registered agent: agent-5ac9e820-a141-4313-8bda-32c7b732920a
+[2025-02-20T01:07:28.230Z] [19ms] [DEBUG] [Registering agents] Registered agent: agent-6b01f966-70b4-4e57-b897-030cdfc6c498
+[2025-02-20T01:07:28.230Z] [19ms] [DEBUG] [Registering agents] Registered agent: agent-f7d727fc-1279-4e8f-b825-5d2ad28dc914
+[2025-02-20T01:07:28.230Z] [19ms] [DEBUG] [Registering agents] Registered agent: agent-3f57ab88-c4c0-4158-b92e-1684faa609f2
+[2025-02-20T01:07:28.230Z] [19ms] [DEBUG] [Registering agents] Registered agent: agent-8ab8f613-fda4-4dda-92e0-1effdf40552c
+[2025-02-20T01:07:28.231Z] [20ms] [DEBUG] [Registering agents] Registered agent: agent-5bd305aa-de0c-40be-b4a5-6e78a44abaae
+[2025-02-20T01:07:28.231Z] [20ms] [SUCCESS] [Registering agents] Registered 10 agents
+
+Completed Step: Registering agents
+
+
+-----------------------------------
+Step: Creating swarm
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:301:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:28.232Z] [21ms] [SUCCESS] [Creating swarm] Created swarm with 3 agents
+
+Completed Step: Creating swarm
+
+
+-----------------------------------
+Step: Simulating agent failures
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:310:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:28.233Z] [22ms] [DEBUG] [Simulating agent failures] Agent agent-59eb1191-213d-4518-9386-0507d803aa23 marked as offline
+[2025-02-20T01:07:28.234Z] [23ms] [DEBUG] [Simulating agent failures] Agent agent-b20d61b3-d990-4d7c-b481-eb7cb764b8ee marked as offline
+[2025-02-20T01:07:28.235Z] [24ms] [DEBUG] [Simulating agent failures] Agent agent-d2c000b0-868a-42ec-b6c6-d971faedea09 marked as offline
+[2025-02-20T01:07:28.235Z] [24ms] [SUCCESS] [Simulating agent failures] Simulated failure of 3 agents
+
+Completed Step: Simulating agent failures
+
+
+-----------------------------------
+Step: Executing tasks
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:334:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:28.398Z] [187ms] [DEBUG] [Executing tasks] Task task-1a788edf-3624-48d8-9bea-3451aecf12a3 completed: true
+[2025-02-20T01:07:28.709Z] [498ms] [DEBUG] [Executing tasks] Task task-518d54fb-340d-4294-8d88-63f905ea6add completed: true
+[2025-02-20T01:07:29.183Z] [972ms] [DEBUG] [Executing tasks] Task task-ea3fe8b2-6d3d-4aa8-bead-77c961585260 completed: true
+[2025-02-20T01:07:29.661Z] [1450ms] [DEBUG] [Executing tasks] Task task-a1ff95a1-bcef-4400-a7ac-7ec15e7b9cb6 completed: true
+[2025-02-20T01:07:30.067Z] [1856ms] [DEBUG] [Executing tasks] Task task-c1689398-1866-4a82-b26d-aca9a55e7a21 completed: true
+[2025-02-20T01:07:30.339Z] [2128ms] [DEBUG] [Executing tasks] Task task-64cf553b-2d6f-43d9-88c5-99801c2aa4df completed: true
+[2025-02-20T01:07:30.742Z] [2531ms] [DEBUG] [Executing tasks] Task task-774f9bbb-9e7e-4673-9cf6-668f83cc7665 completed: true
+[2025-02-20T01:07:31.135Z] [2924ms] [DEBUG] [Executing tasks] Task task-4e3451b4-d579-4bba-a5a3-6635a5cc15f8 completed: true
+[2025-02-20T01:07:31.362Z] [3151ms] [DEBUG] [Executing tasks] Task task-c18aa618-80ba-4fdd-be3e-f924ced7bf04 completed: true
+[2025-02-20T01:07:31.699Z] [3488ms] [DEBUG] [Executing tasks] Task task-801409c0-69e2-4a9c-bc97-6d69c2265b12 completed: true
+[2025-02-20T01:07:31.854Z] [3643ms] [DEBUG] [Executing tasks] Task task-b607b885-be87-4a77-9f4b-05038ff8dc09 completed: true
+[2025-02-20T01:07:32.177Z] [3966ms] [DEBUG] [Executing tasks] Task task-966280e4-9e10-4cef-a608-754fb8a9d2a6 completed: true
+[2025-02-20T01:07:32.507Z] [4296ms] [DEBUG] [Executing tasks] Task task-f3f338a3-25fc-4bfc-a4c6-bce049e76c85 completed: true
+[2025-02-20T01:07:32.739Z] [4528ms] [DEBUG] [Executing tasks] Task task-61ba4fa0-abe2-4c6f-ab8a-6b5893d2a5f2 completed: true
+[2025-02-20T01:07:33.013Z] [4802ms] [DEBUG] [Executing tasks] Task task-d2e5e130-38f2-43be-ba5a-5a288c36e02b completed: true
+[2025-02-20T01:07:33.179Z] [4968ms] [DEBUG] [Executing tasks] Task task-2be73c99-b52f-4165-86f5-9b1d1a4cec60 completed: true
+[2025-02-20T01:07:33.341Z] [5130ms] [DEBUG] [Executing tasks] Task task-ed815c20-8a64-46b9-80ea-0309e79b3342 completed: true
+[2025-02-20T01:07:33.490Z] [5279ms] [DEBUG] [Executing tasks] Task task-e3b86ebc-f1e4-40ca-84f1-d4cbef7a4e0b completed: true
+[2025-02-20T01:07:33.867Z] [5656ms] [DEBUG] [Executing tasks] Task task-7a90acdb-87f7-4bde-990e-611cfe480664 completed: true
+[2025-02-20T01:07:34.329Z] [6118ms] [DEBUG] [Executing tasks] Task task-6bd8d808-4bed-4f6f-b91b-92060f126c87 completed: true
+[2025-02-20T01:07:34.331Z] [6120ms] [SUCCESS] [Executing tasks] Executed 20 tasks
+
+Completed Step: Executing tasks
+
+
+-----------------------------------
+Step: Generating visualizations
+Stack:
+    at testFaultTolerance (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:384:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:38.257Z] [10046ms] [SUCCESS] [Generating visualizations] Generated visualizations
+
+Completed Step: Generating visualizations
+
+[2025-02-20T01:07:38.258Z] [10047ms] [SUCCESS] [main] Test completed successfully

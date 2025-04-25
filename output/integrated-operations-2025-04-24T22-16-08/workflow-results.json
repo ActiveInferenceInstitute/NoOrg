@@ -1,0 +1,22 @@
+{
+  "id": "ed4d8045-c605-4f84-8366-101605527e19",
+  "name": "Simple Operations Workflow",
+  "status": "completed",
+  "tasks": [
+    {
+      "id": "17bce428-91ce-4b9d-8a9b-e0756af0d4e9",
+      "name": "Task 1",
+      "status": "completed"
+    },
+    {
+      "id": "af55e47f-2995-46bb-b46b-22be451d144c",
+      "name": "Task 2",
+      "status": "completed"
+    },
+    {
+      "id": "09ab552e-777e-4bd1-a97b-991d29e58594",
+      "name": "Task 3",
+      "status": "completed"
+    }
+  ]
+}

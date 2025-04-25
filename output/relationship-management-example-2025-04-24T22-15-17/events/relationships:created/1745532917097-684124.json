@@ -1,0 +1,17 @@
+{
+  "id": "1745532917097-684124",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "92fed52b-ae70-4f99-bb17-8818b41c8c06",
+      "sourceUnitId": "security",
+      "targetUnitId": "research",
+      "type": "service_provider",
+      "permissions": [],
+      "metadata": {
+        "domain": "security_compliance"
+      }
+    }
+  },
+  "timestamp": 1745532917097
+}

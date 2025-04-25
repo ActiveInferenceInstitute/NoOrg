@@ -1,0 +1,17 @@
+{
+  "id": "1745532917097-408435",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "0f9aed73-e65c-4e5f-a73b-2c02f357c1c4",
+      "sourceUnitId": "security",
+      "targetUnitId": "development",
+      "type": "service_provider",
+      "permissions": [],
+      "metadata": {
+        "domain": "security_compliance"
+      }
+    }
+  },
+  "timestamp": 1745532917097
+}

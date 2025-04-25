@@ -1,0 +1,15 @@
+{
+  "id": "1745535183153-38147",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "board_review",
+    "stageName": "Board Review",
+    "unitId": "board_of_directors",
+    "unitName": "Board of Directors",
+    "duration": 15601,
+    "tokenUsage": 1816,
+    "cost": 0.06513,
+    "timestamp": "2025-04-24T22:53:03.153Z"
+  },
+  "timestamp": 1745535183153
+}

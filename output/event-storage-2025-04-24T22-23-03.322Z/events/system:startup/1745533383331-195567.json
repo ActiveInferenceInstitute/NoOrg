@@ -1,0 +1,13 @@
+{
+  "id": "1745533383331-195567",
+  "type": "system:startup",
+  "payload": {
+    "version": "1.0.0",
+    "environment": "development"
+  },
+  "timestamp": 1745533383331,
+  "metadata": {
+    "domain": "system",
+    "importance": "high"
+  }
+}

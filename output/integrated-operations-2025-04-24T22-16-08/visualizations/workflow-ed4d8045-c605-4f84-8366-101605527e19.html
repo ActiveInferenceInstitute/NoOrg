@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow: Simple Operations Workflow</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    .visualization {
+      margin: 30px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .stat-card {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+      flex: 1;
+      min-width: 150px;
+    }
+    .task-list {
+      margin-top: 30px;
+    }
+    .task-item {
+      margin-bottom: 10px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+    }
+    .completed { border-left: 5px solid #4CAF50; }
+    .running { border-left: 5px solid #2196F3; }
+    .failed { border-left: 5px solid #f44336; }
+    .skipped { border-left: 5px solid #9C27B0; }
+    .pending { border-left: 5px solid #9E9E9E; }
+    .cancelled { border-left: 5px solid #607D8B; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Workflow: Simple Operations Workflow</h1>
+      <p>ID: ed4d8045-c605-4f84-8366-101605527e19</p>
+      <p>Status: completed</p>
+      <p>Description: Basic operations workflow with three tasks</p>
+      <p>Created: 4/24/2025, 3:16:08 PM</p>
+      <p>Started: 4/24/2025, 3:16:08 PM</p>
+      <p>Completed: 4/24/2025, 3:16:09 PM</p>
+      <p>Total Duration: 1.51 seconds</p>
+    </div>
+    
+    <div class="visualization">
+      <h2>Workflow Visualization</h2>
+      <div class="mermaid">
+        graph TD;
+    t17bce42891ce4b9d8a9be0756af0d4e9["Task 1<br/>(completed) (1s)"];
+    style t17bce42891ce4b9d8a9be0756af0d4e9 fill:#90EE90,stroke:#228B22;
+    taf55e47f299546bbb46b22be451d144c["Task 2<br/>(completed) (1s)"];
+    style taf55e47f299546bbb46b22be451d144c fill:#90EE90,stroke:#228B22;
+    t09ab552e777e4bd1a97b991d29e58594["Task 3<br/>(completed) (1s)"];
+    style t09ab552e777e4bd1a97b991d29e58594 fill:#90EE90,stroke:#228B22;
+    t17bce42891ce4b9d8a9be0756af0d4e9 --> taf55e47f299546bbb46b22be451d144c;
+    taf55e47f299546bbb46b22be451d144c --> t09ab552e777e4bd1a97b991d29e58594;
+      </div>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Task Status</h3>
+        <p>Total: 3</p>
+        <p>Completed: 3</p>
+        <p>Failed: 0</p>
+        <p>Skipped: 0</p>
+        <p>Running: 0</p>
+        <p>Pending: 0</p>
+        <p>Cancelled: 0</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>Task Dependencies</h3>
+        <p>Total Dependencies: 2</p>
+        <p>Avg Dependencies Per Task: 0.67</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>Task Performance</h3>
+        
+            <p>Avg Task Duration: 0.50s</p>
+            <p>Total Task Time: 1.51s</p>
+          
+      </div>
+    </div>
+    
+    <div class="task-list">
+      <h2>Tasks</h2>
+      
+          <div class="task-item completed">
+            <h3>Task 1</h3>
+            <p>ID: 17bce428-91ce-4b9d-8a9b-e0756af0d4e9</p>
+            <p>Status: completed</p>
+            <p>Duration: 0.50s</p>
+            
+            
+          </div>
+        
+          <div class="task-item completed">
+            <h3>Task 2</h3>
+            <p>ID: af55e47f-2995-46bb-b46b-22be451d144c</p>
+            <p>Status: completed</p>
+            <p>Duration: 0.50s</p>
+            <p>Dependencies: 1</p>
+            
+          </div>
+        
+          <div class="task-item completed">
+            <h3>Task 3</h3>
+            <p>ID: 09ab552e-777e-4bd1-a97b-991d29e58594</p>
+            <p>Status: completed</p>
+            <p>Duration: 0.50s</p>
+            <p>Dependencies: 1</p>
+            
+          </div>
+        
+    </div>
+  </div>
+  
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>

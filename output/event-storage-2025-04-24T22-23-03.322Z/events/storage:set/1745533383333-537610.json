@@ -1,0 +1,12 @@
+{
+  "id": "1745533383333-537610",
+  "type": "storage:set",
+  "payload": {
+    "key": "user_event_1745533383329-566008",
+    "metadata": {
+      "domain": "auth",
+      "eventId": "1745533383329-566008"
+    }
+  },
+  "timestamp": 1745533383333
+}

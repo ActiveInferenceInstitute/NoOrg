@@ -1,0 +1,2 @@
+Prompt: A scientific graphical abstract showing the workflow of the micro-ant-brain-extractor system. Include microscale dissection tools, neuroimaging, data capture, neural tissue extraction, and analysis steps. Show the connection to neuroscience research applications.
+Generated: 2025-04-25T16:29:14.506Z

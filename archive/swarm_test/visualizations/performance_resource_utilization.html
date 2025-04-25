@@ -1,0 +1,31 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Resource Utilization</title>
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+          <style>
+            body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+            #chart { width: 800px; height: 600px; }
+            .error { color: #dc3545; text-align: center; margin-top: 20px; }
+          </style>
+        </head>
+        <body>
+          <div id="chart"></div>
+          <script>
+            const data = [{"z":[[0]],"x":["No Data"],"y":["No Data"],"type":"heatmap"}];
+            const layout = {"title":"Resource Utilization","width":800,"height":600,"margin":{"t":50,"l":50,"r":50,"b":50},"xaxis":{"title":"Resource Type"},"yaxis":{"title":"Agent ID"}};
+            const config = {"responsive":true,"displayModeBar":true};
+            
+            Plotly.newPlot('chart', data, layout, config).catch(error => {
+              document.getElementById('chart').innerHTML = `
+                <div class="error">
+                  <h3>Failed to generate chart</h3>
+                  <p>${error.message}</p>
+                </div>
+              `;
+            });
+          </script>
+        </body>
+      </html>
+    

@@ -1,0 +1,18 @@
+{
+  "id": "1745532917104-870611",
+  "type": "relationships:permissions:updated",
+  "payload": {
+    "relationshipId": "f7162a60-0185-4b2d-80dd-9e87f9bd821c",
+    "permissions": [
+      {
+        "resource": "project_alpha_data",
+        "level": "read",
+        "conditions": {
+          "description": "Read access to Project Alpha metrics and KPIs",
+          "expiration": "2025-10-21T22:15:17.103Z"
+        }
+      }
+    ]
+  },
+  "timestamp": 1745532917104
+}

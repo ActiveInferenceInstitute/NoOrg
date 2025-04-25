@@ -1,0 +1,14 @@
+{
+  "totalEvents": 11,
+  "eventTypes": [
+    "user:login",
+    "user:logout",
+    "system:startup",
+    "storage:set",
+    "storage:transaction:begin",
+    "storage:transaction:rollback"
+  ],
+  "correlationIds": [
+    "session-abc123"
+  ]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Active Inference POMDP Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; }
+    img { max-width: 100%; margin: 20px 0; }
+    pre { background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    h1, h2, h3 { color: #333; }
+    .image-container { text-align: center; margin: 30px 0; }
+    .image-caption { font-style: italic; margin-top: 5px; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Active Inference POMDP Model Report on Temperature Changes</h1><br><br><h2>Executive Summary</h2>
+This report presents the results of an Active Inference Partially Observable Markov Decision Process (POMDP) model used to analyze temperature changes throughout a narrative. The model was designed to extract temperature information from the story and determine optimal actions based on the inferred states of the environment. The analysis revealed dynamic temperature changes, with the model's belief states indicating a preference for "cool" and "mild" conditions, and suggested actions that align with these states. Visualizations accompanying the report provide insights into the model's performance and decision-making process.<br><br><h2>Temperature Extraction from the Story</h2>
+The temperature extraction process involved analyzing descriptions from various timepoints in the story. The extracted temperatures and their associated confidences are as follows:<br><br><ul><li><strong>Beginning</strong>: A crisp autumn morning with a temperature of <strong>2°C</strong> (confidence: <strong>0.8</strong>).</li></ul>
+<ul><li><strong>Middle</strong>: Midday with a temperature of <strong>15°C</strong> (confidence: <strong>0.7</strong>).</li></ul>
+<ul><li><strong>End</strong>: An evening with a temperature of <strong>10°C</strong> (confidence: <strong>0.8</strong>).</li></ul><br><br>These temperatures were derived from the narrative context, which provided a basis for understanding the environmental conditions at different times. The confidence values indicate the reliability of each temperature reading, with higher values suggesting greater certainty.<br><br><h2>POMDP Model Configuration</h2>
+The POMDP model was structured with the following components:<br><br><ul><li><strong>States</strong>: The model defined seven discrete states representing temperature conditions:</li></ul>
+  - "very-cold"
+  - "cold"
+  - "cool"
+  - "mild"
+  - "warm"
+  - "hot"
+  - "very-hot"<br><br><ul><li><strong>Actions</strong>: The model allowed for various actions that could be taken in response to the inferred states:</li></ul>
+  - "add-clothing"
+  - "remove-clothing"
+  - "seek-shelter"
+  - "seek-shade"
+  - "use-heating"
+  - "use-cooling"
+  - "no-action"<br><br><ul><li><strong>Observations</strong>: The observations corresponded to the perceived temperature conditions:</li></ul>
+  - "freezing"
+  - "very-cold"
+  - "cold"
+  - "cool"
+  - "mild"
+  - "warm"
+  - "hot"
+  - "very-hot"<br><br><ul><li><strong>Policy Depth</strong>: The model utilized a policy depth of <strong>2</strong>, allowing it to consider the consequences of actions over two time steps.</li></ul><br><br><h2>Belief Updates and Action Selection</h2>
+The model's final beliefs, which represent the probability distribution over the defined states, were as follows:
+json
+[
+  0.0114,  // very-cold
+  0.0282,  // cold
+  0.1059,  // cool
+  0.4235,  // mild
+  0.4235,  // warm
+  0.0071,  // hot
+  0.0005   // very-hot
+]<br><br>The highest probabilities were assigned to the "mild" and "warm" states, each with approximately <strong>42.35%</strong> confidence. This indicates that the model inferred a preference for these temperature conditions based on the extracted data.<br><br>Action selection was based on these beliefs, with the model likely favoring actions that would maintain or enhance comfort in the "mild" and "warm" states. Although specific action history data was not available, it can be inferred that actions such as "no-action" or "remove-clothing" would have been prioritized.<br><br><h2>Interpretation of Results and Insights</h2>
+The results of the POMDP model indicate a clear understanding of the temperature dynamics throughout the narrative. The model's belief distribution suggests that it effectively captured the transition from a cold morning to a warmer midday and back to a cooler evening. The high confidence in the "mild" and "warm" states suggests that the model is well-tuned to the environmental cues provided in the story.<br><br>The absence of detailed histories for beliefs, actions, observations, and policies limits the ability to conduct a thorough analysis of the decision-making process. However, the generated visualizations, including belief history and action-observation dynamics, can provide further insights into how the model navigated the temperature changes.<br><br><h2>Conclusion</h2>
+The Active Inference POMDP model successfully analyzed temperature changes within the narrative, demonstrating a robust understanding of the environmental conditions and the appropriate actions to take. The model's final beliefs indicate a strong preference for "mild" and "warm" states, aligning with the extracted temperature data. Future work could benefit from a more detailed logging of belief and action histories to enhance the interpretability of the model's decision-making process. The accompanying visualizations serve as valuable tools for understanding the model's performance and can guide further refinements in similar analyses.
+  
+  <div class="image-container">
+    <h2>Visualizations</h2>
+    
+      <div class="image-container">
+        <img src="visualizations/belief_history.png" alt="belief_history">
+        <div class="image-caption">Belief History</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/free_energy.png" alt="free_energy">
+        <div class="image-caption">Free Energy</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/observation_action_history.png" alt="observation_action_history">
+        <div class="image-caption">Observation Action History</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/transition_model.png" alt="transition_model">
+        <div class="image-caption">Transition Model</div>
+      </div>
+    
+
+      <div class="image-container">
+        <img src="visualizations/observation_model.png" alt="observation_model">
+        <div class="image-caption">Observation Model</div>
+      </div>
+    
+    
+    
+      <h2>Animations</h2>
+      
+        <div class="image-container">
+          <img src="visualizations/belief_animation.gif" alt="belief_animation">
+          <div class="image-caption">Belief Animation</div>
+        </div>
+      
+    
+  </div>
+</body>
+</html>

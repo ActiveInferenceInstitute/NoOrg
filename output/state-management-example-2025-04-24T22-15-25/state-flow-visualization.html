@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>State Management Visualization</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #network-container { width: 100%; height: 100vh; }
+    .controls { position: absolute; top: 10px; left: 10px; background: white; padding: 10px; border: 1px solid #ddd; }
+    .legend { position: absolute; top: 10px; right: 10px; background: white; padding: 10px; border: 1px solid #ddd; }
+    .legend-item { margin: 5px 0; }
+    .legend-color { display: inline-block; width: 15px; height: 15px; margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <div id="network-container"></div>
+  <div class="controls">
+    <button id="hierarchical">Hierarchical Layout</button>
+    <button id="physics">Physics Layout</button>
+  </div>
+  <div class="legend">
+    <h3>Legend</h3>
+    <div class="legend-item"><div class="legend-color" style="background-color: #D2E5FF;"></div> Department</div>
+    <div class="legend-item"><div class="legend-color" style="background-color: #FFC0CB;"></div> Project</div>
+    <div class="legend-item"><div class="legend-color" style="background-color: #FFFF99;"></div> State Subscription</div>
+  </div>
+  <script type="text/javascript">
+    const container = document.getElementById('network-container');
+    
+    const data = {
+      nodes: [{"id":"research_unit","label":"Research Unit","group":"department"},{"id":"development_unit","label":"Development Unit","group":"department"},{"id":"operations_unit","label":"Operations Unit","group":"department"},{"id":"project_alpha","label":"Project Alpha","group":"project"}],
+      edges: [{"from":"project_alpha","to":"research_unit","label":"status","arrows":"to","color":{"color":"#FFFF00","highlight":"#FFD700"}},{"from":"project_alpha","to":"development_unit","label":"resources","arrows":"to","color":{"color":"#FFFF00","highlight":"#FFD700"}},{"from":"research_unit","to":"operations_unit","label":"status","arrows":"to","color":{"color":"#FFFF00","highlight":"#FFD700"}},{"from":"development_unit","to":"operations_unit","label":"status","arrows":"to","color":{"color":"#FFFF00","highlight":"#FFD700"}}]
+    };
+    
+    const options = {
+      nodes: {
+        shape: 'box',
+        font: {
+          size: 16
+        }
+      },
+      edges: {
+        font: {
+          size: 12,
+          align: 'middle'
+        },
+        width: 2
+      },
+      groups: {
+        department: {
+          color: { background: '#D2E5FF', border: '#2B7CE9' }
+        },
+        project: {
+          color: { background: '#FFC0CB', border: '#FF69B4' }
+        }
+      }
+    };
+    
+    const network = new vis.Network(container, data, options);
+    
+    document.getElementById('hierarchical').addEventListener('click', function() {
+      network.setOptions({
+        layout: {
+          hierarchical: {
+            enabled: true,
+            direction: 'UD',
+            sortMethod: 'directed'
+          }
+        }
+      });
+    });
+    
+    document.getElementById('physics').addEventListener('click', function() {
+      network.setOptions({
+        layout: {
+          hierarchical: {
+            enabled: false
+          }
+        },
+        physics: {
+          enabled: true,
+          barnesHut: {
+            gravitationalConstant: -2000,
+            centralGravity: 0.3,
+            springLength: 150
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "id": "1745534547937-561310",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "situation_assessment",
+    "stageName": "Situation Assessment",
+    "unitId": "innovation_unit",
+    "unitName": "Innovation Unit",
+    "duration": 12830,
+    "tokenUsage": 540,
+    "cost": 0.02625,
+    "timestamp": "2025-04-24T22:42:27.937Z"
+  },
+  "timestamp": 1745534547937
+}

@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "executive",
+      "name": "Executive Committee",
+      "type": "leadership"
+    },
+    {
+      "id": "research",
+      "name": "Research Division",
+      "type": "business_unit"
+    },
+    {
+      "id": "development",
+      "name": "Development Division",
+      "type": "business_unit"
+    },
+    {
+      "id": "ai_team",
+      "name": "AI Team",
+      "type": "team"
+    },
+    {
+      "id": "platform_team",
+      "name": "Platform Team",
+      "type": "team"
+    },
+    {
+      "id": "security",
+      "name": "Security Office",
+      "type": "support"
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure Team",
+      "type": "support"
+    },
+    {
+      "id": "project_alpha",
+      "name": "Project Alpha",
+      "type": "project"
+    },
+    {
+      "id": "data_science",
+      "name": "Data Science Team",
+      "type": "team"
+    }
+  ],
+  "edges": [
+    {
+      "source": "executive",
+      "target": "research",
+      "type": "hierarchy",
+      "metadata": {
+        "established": "2025-04-24T22:15:17.088Z"
+      }
+    },
+    {
+      "source": "executive",
+      "target": "development",
+      "type": "hierarchy",
+      "metadata": {
+        "established": "2025-04-24T22:15:17.095Z"
+      }
+    },
+    {
+      "source": "research",
+      "target": "ai_team",
+      "type": "hierarchy",
+      "metadata": {
+        "established": "2025-04-24T22:15:17.095Z"
+      }
+    },
+    {
+      "source": "development",
+      "target": "platform_team",
+      "type": "hierarchy",
+      "metadata": {
+        "established": "2025-04-24T22:15:17.096Z"
+      }
+    },
+    {
+      "source": "ai_team",
+      "target": "platform_team",
+      "type": "peer",
+      "metadata": {
+        "collaboration_level": "high"
+      }
+    },
+    {
+      "source": "security",
+      "target": "development",
+      "type": "service_provider",
+      "metadata": {
+        "domain": "security_compliance"
+      }
+    },
+    {
+      "source": "infrastructure",
+      "target": "ai_team",
+      "type": "service_provider",
+      "metadata": {
+        "domain": "compute_resources"
+      }
+    },
+    {
+      "source": "infrastructure",
+      "target": "platform_team",
+      "type": "service_provider",
+      "metadata": {
+        "domain": "deployment"
+      }
+    },
+    {
+      "source": "project_alpha",
+      "target": "ai_team",
+      "type": "custom",
+      "metadata": {
+        "role": "core_development",
+        "allocation": 0.6
+      }
+    },
+    {
+      "source": "project_alpha",
+      "target": "platform_team",
+      "type": "custom",
+      "metadata": {
+        "role": "integration",
+        "allocation": 0.4
+      }
+    },
+    {
+      "source": "project_alpha",
+      "target": "security",
+      "type": "custom",
+      "metadata": {
+        "role": "advisor",
+        "allocation": 0.2
+      }
+    },
+    {
+      "source": "research",
+      "target": "data_science",
+      "type": "hierarchy",
+      "metadata": {
+        "established": "2025-04-24T22:15:17.100Z"
+      }
+    },
+    {
+      "source": "data_science",
+      "target": "ai_team",
+      "type": "peer",
+      "metadata": {
+        "collaboration_level": "very_high"
+      }
+    },
+    {
+      "source": "project_alpha",
+      "target": "data_science",
+      "type": "custom",
+      "metadata": {
+        "role": "data_modeling",
+        "allocation": 0.5
+      }
+    },
+    {
+      "source": "security",
+      "target": "research",
+      "type": "advisor",
+      "metadata": {
+        "domain": "security_governance",
+        "priority": "high"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+You need to break down the following problem into smaller, manageable tasks:
+{{problem_statement}}
+Consider the following constraints:
+{{constraints}}
+Available resources include:
+{{resources}}
+For each sub-task, provide:
+1. A clear title
+2. A detailed description
+3. Required capabilities
+4. Dependencies on other tasks
+5. Estimated complexity (low, medium, high)
+6. Success criteria

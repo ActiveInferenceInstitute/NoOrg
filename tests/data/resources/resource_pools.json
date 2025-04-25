@@ -1,0 +1,102 @@
+{
+    "resource_pools": [
+        {
+            "id": "pool-001",
+            "name": "compute-pool",
+            "type": "compute",
+            "resources": {
+                "cpu": {
+                    "total": 32,
+                    "allocated": 8,
+                    "available": 24
+                },
+                "memory": {
+                    "total": "64Gi",
+                    "allocated": "16Gi",
+                    "available": "48Gi"
+                }
+            },
+            "metadata": {
+                "zone": "us-west",
+                "created_at": "2024-03-21T10:00:00Z"
+            }
+        },
+        {
+            "id": "pool-002",
+            "name": "storage-pool",
+            "type": "storage",
+            "resources": {
+                "ssd": {
+                    "total": "1Ti",
+                    "allocated": "200Gi",
+                    "available": "824Gi"
+                },
+                "hdd": {
+                    "total": "10Ti",
+                    "allocated": "2Ti",
+                    "available": "8Ti"
+                }
+            },
+            "metadata": {
+                "zone": "us-west",
+                "created_at": "2024-03-21T10:00:00Z"
+            }
+        },
+        {
+            "id": "pool-003",
+            "name": "gpu-pool",
+            "type": "gpu",
+            "resources": {
+                "gpu": {
+                    "total": 4,
+                    "allocated": 1,
+                    "available": 3,
+                    "type": "nvidia-a100"
+                },
+                "memory": {
+                    "total": "128Gi",
+                    "allocated": "32Gi",
+                    "available": "96Gi"
+                }
+            },
+            "metadata": {
+                "zone": "us-west",
+                "created_at": "2024-03-21T10:00:00Z"
+            }
+        }
+    ],
+    "allocations": [
+        {
+            "id": "alloc-001",
+            "pool_id": "pool-001",
+            "task_id": "task-001",
+            "resources": {
+                "cpu": 2,
+                "memory": "4Gi"
+            },
+            "status": "active",
+            "created_at": "2024-03-21T10:00:00Z"
+        },
+        {
+            "id": "alloc-002",
+            "pool_id": "pool-002",
+            "task_id": "task-002",
+            "resources": {
+                "ssd": "10Gi"
+            },
+            "status": "active",
+            "created_at": "2024-03-21T10:05:00Z"
+        },
+        {
+            "id": "alloc-003",
+            "pool_id": "pool-003",
+            "task_id": "task-003",
+            "resources": {
+                "gpu": 1,
+                "memory": "32Gi"
+            },
+            "status": "active",
+            "created_at": "2024-03-21T10:10:00Z"
+        }
+    ]
+} 

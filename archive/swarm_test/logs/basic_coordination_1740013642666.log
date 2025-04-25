@@ -1,0 +1,106 @@
+
+====================================
+Test: basic_coordination
+Started: 2025-02-20T01:07:22.666Z
+Environment:
+  Node Version: v18.20.6
+  Platform: linux
+  Memory: 161MB
+====================================
+
+
+-----------------------------------
+Step: Initializing test environment
+Stack:
+    at testBasicSwarmCoordination (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:26:18)
+    at SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:13)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:22.676Z] [10ms] [SUCCESS] [Initializing test environment] System initialized successfully
+
+Completed Step: Initializing test environment
+
+
+-----------------------------------
+Step: Registering test template
+Stack:
+    at testBasicSwarmCoordination (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:31:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:22.679Z] [13ms] [SUCCESS] [Registering test template] Template registered successfully
+
+Completed Step: Registering test template
+
+
+-----------------------------------
+Step: Generating test agents
+Stack:
+    at testBasicSwarmCoordination (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:40:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:22.684Z] [18ms] [DEBUG] [Generating test agents] Generated agent: agent-d93a248d-c866-4295-a226-6708638613d2
+[2025-02-20T01:07:22.686Z] [20ms] [DEBUG] [Generating test agents] Generated agent: agent-8e94e1c6-0d54-4137-8611-c795673683fa
+[2025-02-20T01:07:22.687Z] [21ms] [DEBUG] [Generating test agents] Generated agent: agent-334bc1f3-ecb5-42cb-b051-031ad77d78ce
+[2025-02-20T01:07:22.687Z] [21ms] [SUCCESS] [Generating test agents] Generated and registered 3 agents
+
+Completed Step: Generating test agents
+
+
+-----------------------------------
+Step: Generating test tasks
+Stack:
+    at testBasicSwarmCoordination (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:58:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:22.690Z] [24ms] [DEBUG] [Generating test tasks] Generated task: task-3f0483a5-51b4-46da-b79a-3dd7218483a1
+[2025-02-20T01:07:22.692Z] [26ms] [DEBUG] [Generating test tasks] Generated task: task-59ce0075-987e-4221-b138-ab6f853748b8
+[2025-02-20T01:07:22.693Z] [27ms] [DEBUG] [Generating test tasks] Generated task: task-609fe62d-31df-40d4-9203-66237b06b742
+[2025-02-20T01:07:22.693Z] [27ms] [SUCCESS] [Generating test tasks] Generated and added 3 tasks
+
+Completed Step: Generating test tasks
+
+
+-----------------------------------
+Step: Creating swarm
+Stack:
+    at testBasicSwarmCoordination (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:68:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:22.695Z] [29ms] [SUCCESS] [Creating swarm] Created swarm with 3 agents
+[2025-02-20T01:07:22.696Z] [30ms] [METRIC] [Creating swarm] swarmSize: 3
+
+Completed Step: Creating swarm
+
+
+-----------------------------------
+Step: Executing tasks
+Stack:
+    at testBasicSwarmCoordination (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:78:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:22.943Z] [277ms] [DEBUG] [Executing tasks] Task task-3f0483a5-51b4-46da-b79a-3dd7218483a1 completed: true
+[2025-02-20T01:07:23.434Z] [768ms] [DEBUG] [Executing tasks] Task task-59ce0075-987e-4221-b138-ab6f853748b8 completed: true
+[2025-02-20T01:07:23.867Z] [1201ms] [DEBUG] [Executing tasks] Task task-609fe62d-31df-40d4-9203-66237b06b742 completed: true
+[2025-02-20T01:07:23.867Z] [1201ms] [SUCCESS] [Executing tasks] Tasks executed successfully
+
+Completed Step: Executing tasks
+
+
+-----------------------------------
+Step: Generating visualizations
+Stack:
+    at testBasicSwarmCoordination (/home/trim/Documents/operations/agents/swarm_test/test_cases.ts:127:18)
+    at async SwarmTestRunner.runTest (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:133:7)
+    at async SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:79:9)
+-----------------------------------
+[2025-02-20T01:07:27.844Z] [5178ms] [SUCCESS] [Generating visualizations] Generated visualizations
+
+Completed Step: Generating visualizations
+
+[2025-02-20T01:07:27.846Z] [5180ms] [SUCCESS] [main] Test completed successfully
+[2025-02-20T01:07:27.846Z] [5180ms] [SUCCESS] [main] Test completed successfully in 5180ms

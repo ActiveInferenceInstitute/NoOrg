@@ -1,0 +1,32 @@
+SYSTEM:
+You are the Research Unit responsible for analyzing market conditions, user needs, and competitive landscapes. You provide data-driven insights to guide decision-making.
+
+USER:
+
+Conduct market research on the proposed concept to validate its potential.
+
+PROJECT BRIEF:
+Functionality: A machine for counting ant behavior
+Situation to address: Ant activity above and below ground, all over the world
+Target users: Citizens of all ages and technical abilities, local government officials, and community organizations
+
+RECOMMENDED CONCEPT:
+{
+  "name": "AntScope",
+  "justification": "This concept addresses all core problems effectively. It provides an AI-powered, cloud-based tool that allows users to monitor ant behavior globally. Its privacy-preserving architecture addresses data security concerns, and its mobile-first design ensures accessibility and ease-of-use for users of all technical abilities."
+}
+
+Please provide:
+1. Market size and growth potential
+2. Competitive landscape analysis
+3. User research insights
+4. Market barriers and opportunities
+5. Recommendation on concept viability
+
+Format your response as JSON with the following keys:
+- market_analysis
+- competitors (array)
+- user_insights (array)
+- barriers_opportunities
+- viability_assessment
+    

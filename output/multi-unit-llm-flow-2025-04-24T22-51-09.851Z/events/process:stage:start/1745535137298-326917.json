@@ -1,0 +1,12 @@
+{
+  "id": "1745535137298-326917",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "security_assessment",
+    "stageName": "Security Assessment",
+    "unitId": "security_unit",
+    "unitName": "Security Unit",
+    "timestamp": "2025-04-24T22:52:17.298Z"
+  },
+  "timestamp": 1745535137298
+}

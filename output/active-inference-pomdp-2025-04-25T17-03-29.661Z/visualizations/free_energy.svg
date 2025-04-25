@@ -1,0 +1,7 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="500" fill="white"/>
+      <text x="400" y="25" text-anchor="middle" font-size="18">Expected Free Energy by Policy</text>
+      <text x="400" y="490" text-anchor="middle">Time Step</text>
+      <text x="15" y="250" text-anchor="middle" transform="rotate(-90, 15, 250)">Expected Free Energy</text>
+      <!-- This is a placeholder for the actual chart -->
+    </svg>

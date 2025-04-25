@@ -1,0 +1,34 @@
+{
+  "rawTemperatures": [
+    2,
+    15,
+    10
+  ],
+  "tempData": [
+    {
+      "timepoint": "beginning",
+      "description": "A crisp autumn morning with frost covering the ground.",
+      "temperature": 2,
+      "confidence": 0.8
+    },
+    {
+      "timepoint": "middle",
+      "description": "Midday with the sun high in the sky, warming the air considerably.",
+      "temperature": 15,
+      "confidence": 0.7
+    },
+    {
+      "timepoint": "end",
+      "description": "Evening with a summer storm bringing rain and cooling the air dramatically.",
+      "temperature": 10,
+      "confidence": 0.8
+    }
+  ],
+  "observationIndices": [
+    1,
+    4,
+    3
+  ],
+  "llmResponse": "```json\n{\n  \"temperatures\": [\n    {\n      \"timepoint\": \"beginning\",\n      \"description\": \"A crisp autumn morning with frost covering the ground.\",\n      \"temperature\": 2,\n      \"confidence\": 0.8\n    },\n    {\n      \"timepoint\": \"middle\",\n      \"description\": \"Midday with the sun high in the sky, warming the air considerably.\",\n      \"temperature\": 15,\n      \"confidence\": 0.7\n    },\n    {\n      \"timepoint\": \"end\",\n      \"description\": \"Evening with a summer storm bringing rain and cooling the air dramatically.\",\n      \"temperature\": 10,\n      \"confidence\": 0.8\n    }\n  ]\n}\n```",
+  "llmOutputPath": "/home/trim/Documents/operations/output/active-inference-pomdp-2025-04-25T17-03-29.661Z/llm_outputs/temperature_extraction.json"
+}

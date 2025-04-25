@@ -1,0 +1,54 @@
+--- Log Started ---
+[INFO] Starting workflow engine example...
+[LOG] Registered task executor for action: analyzeMarketData
+[LOG] Registered task executor for action: analyzeCustomerFeedback
+[LOG] Registered task executor for action: calculateFinancials
+[LOG] Registered task executor for action: makeDecision
+[LOG] Registered task executor for action: implementationPlanning
+[LOG] Registered task executor for action: alternativesPlanning
+[LOG] Registered task executor for action: generateReport
+[INFO] Creating workflow template...
+[INFO] Created template: fe0f26e6-914f-43a4-ac16-e9e7ca2b4dac (Strategic Decision Process v1.0)
+[INFO] Creating new template version with risk analysis task...
+[INFO] New template version would add risk analysis before the decision step
+[INFO] Creating workflow from template...
+[INFO] Created workflow: 3a22603b-54d0-44b2-859e-d20b8cd4eb12
+[INFO] Starting workflow execution...
+[INFO] Executing task Market Analysis (94c47390-3c2e-47a5-a4cd-765ac3da233b) in workflow 3a22603b-54d0-44b2-859e-d20b8cd4eb12
+[INFO] Running market data analysis...
+[INFO] Executing task Customer Feedback Analysis (ef7ecfae-c7b7-4496-801b-2dccc466523b) in workflow 3a22603b-54d0-44b2-859e-d20b8cd4eb12
+[INFO] Analyzing customer feedback...
+[INFO] Executing task Financial Projections (71a5d277-b03c-4daa-87e5-46081f09f8ff) in workflow 3a22603b-54d0-44b2-859e-d20b8cd4eb12
+[INFO] Calculating financial projections...
+[INFO] Workflow progress: 0% (0/7 tasks)
+[INFO] Executing task Strategic Decision (2bf4a414-24c5-4348-b3c8-0a7b54d48a9a) in workflow 3a22603b-54d0-44b2-859e-d20b8cd4eb12
+[INFO] Making strategic decision...
+[INFO] Workflow progress: 43% (3/7 tasks)
+[LOG] Task fbc1e5d6-d9b3-4d22-a23b-ac5ec5946142 skipped due to unsatisfied condition
+[LOG] Task 42ed7ab2-5e9f-498d-b1bd-b773c5d0a32e skipped due to unsatisfied condition
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[INFO] Workflow progress: 86% (6/7 tasks)
+[WARN] Timeout reached, stopping monitoring
+[INFO] Forcing completion of task: Final Report
+[INFO] Forcing workflow completion due to timeout
+[INFO] Results saved to: output/workflow-engine-2025-04-24T22-15-40.109Z/workflow-results.json
+[INFO] Creating workflow visualizations...
+[INFO] Workflow example completed. Output is available in: output/workflow-engine-2025-04-24T22-15-40.109Z
+[INFO] Workflow visualization available at: output/workflow-engine-2025-04-24T22-15-40.109Z/visualizations/workflow-3a22603b-54d0-44b2-859e-d20b8cd4eb12.html
+[INFO] Generated Markdown report: output/workflow-engine-2025-04-24T22-15-40.109Z/workflow-report.md

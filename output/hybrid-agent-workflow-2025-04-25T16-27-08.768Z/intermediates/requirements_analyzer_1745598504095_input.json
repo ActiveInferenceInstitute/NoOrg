@@ -1,0 +1,7 @@
+{
+  "agent": "Requirements Analyzer",
+  "timestamp": "2025-04-25T16:28:24.095Z",
+  "model": "gpt-4o-mini",
+  "system_prompt": "You are a requirements analyst specializing in technical systems. Your job is to analyze project requirements, identify key stakeholders, and determine essential functionality based on user needs.",
+  "user_prompt": "\nEnhance project documentation with real-time neural data insights.\n\nPROJECT: Neuroscience and micro-robotics - Ant Brain Extraction Project\nOBJECTIVE: Develop an automated micro-dissection system for precise ant brain extraction and analysis\n\nKEY DATA POINTS:\n- Data source: Local Sensors\n- Retrieved: 2025-04-25T16:28:24.095Z\n- Sample location: No location data available\n\nPROJECT SUMMARY: Project summary not available\n\nAdd a \"Real-time Monitoring\" section with these insights:\n1. Current neural data conditions based on sample data\n2. How stakeholders can use this real-time data\n3. Future enhancement recommendations\n\nFormat as JSON:\n{\n  \"enhanced_documentation\": {\n    \"title\": \"Ant Brain Extraction Project\",\n    \"version\": \"2.0\",\n    \"new_sections\": [\n      {\n        \"title\": \"Real-time Monitoring Capabilities\",\n        \"content\": { \"key_points\": [...], \"benefits\": [...] }\n      }\n    ],\n    \"recommendations\": [...]\n  }\n}\n"
+}

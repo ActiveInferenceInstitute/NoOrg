@@ -1,0 +1,15 @@
+{
+  "id": "1745534716254-742070",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "technical_planning",
+    "stageName": "Technical Planning",
+    "unitId": "development_unit",
+    "unitName": "Development Unit",
+    "duration": 25987,
+    "tokenUsage": 2322,
+    "cost": 0.09156,
+    "timestamp": "2025-04-24T22:45:16.254Z"
+  },
+  "timestamp": 1745534716254
+}

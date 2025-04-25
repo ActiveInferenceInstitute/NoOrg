@@ -1,0 +1,43 @@
+{
+  "duration": 23.438,
+  "outputs": {
+    "temperatures": [
+      2,
+      15,
+      10
+    ],
+    "beliefs": [
+      0.011386947179668436,
+      0.02823264310767248,
+      0.10587241165377181,
+      0.42348964661508726,
+      0.42348964661508726,
+      0.00705816077691812,
+      0.00047054405179454135
+    ],
+    "selectedPolicy": [
+      0,
+      0
+    ],
+    "selectedAction": 0,
+    "visualizations": [
+      "visualizations/belief_history.svg",
+      "visualizations/free_energy.svg",
+      "visualizations/observation_action_history.svg",
+      "visualizations/transition_model.svg",
+      "visualizations/observation_model.svg"
+    ],
+    "pngFiles": [
+      "visualizations/belief_history.png",
+      "visualizations/free_energy.png",
+      "visualizations/observation_action_history.png",
+      "visualizations/transition_model.png",
+      "visualizations/observation_model.png"
+    ],
+    "animationFiles": [
+      "visualizations/belief_animation.gif"
+    ],
+    "report": "active_inference_pomdp_report.md",
+    "htmlReport": "active_inference_pomdp_report.html"
+  }
+}

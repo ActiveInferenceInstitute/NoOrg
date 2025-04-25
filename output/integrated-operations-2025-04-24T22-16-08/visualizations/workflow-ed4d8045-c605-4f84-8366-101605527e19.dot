@@ -1,0 +1,12 @@
+digraph "Simple Operations Workflow" {
+  rankdir=TB;
+  node [shape=box, style=filled, fontname="Arial"];
+  edge [fontname="Arial"];
+
+  "17bce428-91ce-4b9d-8a9b-e0756af0d4e9" [label="Task 1\n[completed]\nDuration: 1s", fillcolor="#90EE90"];
+  "af55e47f-2995-46bb-b46b-22be451d144c" [label="Task 2\n[completed]\nDuration: 1s", fillcolor="#90EE90"];
+  "09ab552e-777e-4bd1-a97b-991d29e58594" [label="Task 3\n[completed]\nDuration: 1s", fillcolor="#90EE90"];
+
+  "17bce428-91ce-4b9d-8a9b-e0756af0d4e9" -> "af55e47f-2995-46bb-b46b-22be451d144c";
+  "af55e47f-2995-46bb-b46b-22be451d144c" -> "09ab552e-777e-4bd1-a97b-991d29e58594";
+}

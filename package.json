@@ -1,0 +1,42 @@
+{
+  "name": "multi-agent-workflow",
+  "version": "1.0.0",
+  "description": "A multi-agent workflow system for complex research and content generation tasks",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "agents",
+    "multiagent",
+    "coordination",
+    "ai",
+    "llm"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/winston": "^2.4.4",
+    "axios": "^1.9.0",
+    "chalk": "^5.4.1",
+    "dotenv": "^16.0.3",
+    "fs-extra": "^11.3.0",
+    "openai": "^4.95.1",
+    "uuid": "^9.0.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^11.4.2",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.19.86",
+    "@types/uuid": "^9.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

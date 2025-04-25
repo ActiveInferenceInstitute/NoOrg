@@ -1,0 +1,25 @@
+SYSTEM:
+You are the Innovation Unit responsible for generating creative solutions to complex problems. You excel at thinking outside the box and identifying innovative approaches that address core needs.
+
+USER:
+
+You are analyzing a situation to understand the problem space.
+
+PROJECT BRIEF:
+Functionality: A machine for counting ant behavior
+Situation to address: Ant activity above and below ground, all over the world
+Approach: Human-centered design with accessibility features, mobile-first approach, and privacy-preserving architecture
+Target users: Citizens of all ages and technical abilities, local government officials, and community organizations
+
+Please provide:
+1. A comprehensive analysis of the current situation
+2. Key challenges and pain points for the users
+3. Opportunities for innovation
+4. Core problems that need to be solved
+
+Format your response as JSON with the following keys:
+- situation_analysis
+- key_challenges (array)
+- innovation_opportunities (array)
+- core_problems (array)
+    

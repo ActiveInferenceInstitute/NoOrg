@@ -1,0 +1,25 @@
+digraph "Strategic Decision Process" {
+  rankdir=TB;
+  node [shape=box, style=filled, fontname="Arial"];
+  edge [fontname="Arial"];
+
+  "94c47390-3c2e-47a5-a4cd-765ac3da233b" [label="Market Analysis\n[completed]\nDuration: 2s", fillcolor="#90EE90"];
+  "ef7ecfae-c7b7-4496-801b-2dccc466523b" [label="Customer Feedback Analysis\n[completed]\nDuration: 1s", fillcolor="#90EE90"];
+  "71a5d277-b03c-4daa-87e5-46081f09f8ff" [label="Financial Projections\n[completed]\nDuration: 2s", fillcolor="#90EE90"];
+  "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a" [label="Strategic Decision\n[completed]\nDuration: 1s", fillcolor="#90EE90"];
+  "fbc1e5d6-d9b3-4d22-a23b-ac5ec5946142" [label="Implementation Planning\n[skipped]", fillcolor="#D8BFD8"];
+  "42ed7ab2-5e9f-498d-b1bd-b773c5d0a32e" [label="Alternatives Planning\n[skipped]", fillcolor="#D8BFD8"];
+  "9f9018e4-a1aa-4de6-99be-2ae05b1c583b" [label="Final Report\n[completed]", fillcolor="#90EE90"];
+
+  "94c47390-3c2e-47a5-a4cd-765ac3da233b" -> "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a";
+  "ef7ecfae-c7b7-4496-801b-2dccc466523b" -> "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a";
+  "71a5d277-b03c-4daa-87e5-46081f09f8ff" -> "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a";
+  "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a" -> "fbc1e5d6-d9b3-4d22-a23b-ac5ec5946142";
+  "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a" -> "42ed7ab2-5e9f-498d-b1bd-b773c5d0a32e";
+  "94c47390-3c2e-47a5-a4cd-765ac3da233b" -> "9f9018e4-a1aa-4de6-99be-2ae05b1c583b";
+  "ef7ecfae-c7b7-4496-801b-2dccc466523b" -> "9f9018e4-a1aa-4de6-99be-2ae05b1c583b";
+  "71a5d277-b03c-4daa-87e5-46081f09f8ff" -> "9f9018e4-a1aa-4de6-99be-2ae05b1c583b";
+  "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a" -> "9f9018e4-a1aa-4de6-99be-2ae05b1c583b";
+  "fbc1e5d6-d9b3-4d22-a23b-ac5ec5946142" -> "9f9018e4-a1aa-4de6-99be-2ae05b1c583b";
+  "42ed7ab2-5e9f-498d-b1bd-b773c5d0a32e" -> "9f9018e4-a1aa-4de6-99be-2ae05b1c583b";
+}

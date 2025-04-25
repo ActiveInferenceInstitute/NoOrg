@@ -1,0 +1,106 @@
+{
+  "research_unit": {
+    "status": {
+      "operational_status": "active",
+      "current_projects": 3,
+      "resource_utilization": 0.95,
+      "updated_at": "2025-04-24T22:15:28.518Z"
+    },
+    "projects": {
+      "active": [
+        {
+          "id": "project_alpha",
+          "role": "research_lead",
+          "allocation": 0.5
+        },
+        {
+          "id": "project_beta",
+          "role": "contributor",
+          "allocation": 0.3
+        },
+        {
+          "id": "project_gamma",
+          "role": "advisor",
+          "allocation": 0.1
+        }
+      ]
+    },
+    "shared_data": {
+      "user_count": 100
+    }
+  },
+  "development_unit": {
+    "status": {
+      "operational_status": "active",
+      "current_sprints": 2,
+      "resource_utilization": 0.92,
+      "updated_at": "2025-04-24T22:15:26.503Z"
+    },
+    "projects": {
+      "active": [
+        {
+          "id": "project_alpha",
+          "role": "implementation",
+          "allocation": 0.5
+        },
+        {
+          "id": "project_delta",
+          "role": "lead",
+          "allocation": 0.4
+        }
+      ]
+    },
+    "shared_data": {
+      "user_count": 120
+    }
+  },
+  "operations_unit": {
+    "shared_data": {
+      "user_count": 110
+    }
+  },
+  "project_alpha": {
+    "status": {
+      "phase": "architecture",
+      "completion": 0.25,
+      "health": "good",
+      "updated_at": "2025-04-24T22:15:27.506Z"
+    },
+    "resources": {
+      "developers": 5,
+      "researchers": 2,
+      "compute_units": 15
+    },
+    "timeline": {
+      "start_date": "2025-04-24T22:15:25.493Z",
+      "estimated_completion": "2025-07-23T22:15:25.493Z",
+      "milestones": [
+        {
+          "name": "Requirements Gathering",
+          "due_date": "2025-05-09T22:15:25.493Z",
+          "status": "in_progress"
+        },
+        {
+          "name": "Architecture Design",
+          "due_date": "2025-05-24T22:15:25.493Z",
+          "status": "not_started"
+        },
+        {
+          "name": "Implementation",
+          "due_date": "2025-06-23T22:15:25.493Z",
+          "status": "not_started"
+        },
+        {
+          "name": "Testing",
+          "due_date": "2025-07-08T22:15:25.493Z",
+          "status": "not_started"
+        },
+        {
+          "name": "Deployment",
+          "due_date": "2025-07-18T22:15:25.493Z",
+          "status": "not_started"
+        }
+      ]
+    }
+  }
+}

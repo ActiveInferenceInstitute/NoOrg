@@ -1,0 +1,31 @@
+{
+  "total_units": 4,
+  "total_state_paths": 53,
+  "subscription_flows": [
+    {
+      "from": "project_alpha",
+      "to": "research_unit",
+      "path": "status",
+      "type": "subscription"
+    },
+    {
+      "from": "project_alpha",
+      "to": "development_unit",
+      "path": "resources",
+      "type": "subscription"
+    },
+    {
+      "from": "research_unit",
+      "to": "operations_unit",
+      "path": "status",
+      "type": "subscription"
+    },
+    {
+      "from": "development_unit",
+      "to": "operations_unit",
+      "path": "status",
+      "type": "subscription"
+    }
+  ],
+  "timestamp": "2025-04-24T22:15:32.540Z"
+}

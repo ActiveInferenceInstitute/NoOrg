@@ -1,0 +1,12 @@
+{
+  "id": "1745534586516-552141",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "market_research",
+    "stageName": "Market Research",
+    "unitId": "research_unit",
+    "unitName": "Research Unit",
+    "timestamp": "2025-04-24T22:43:06.516Z"
+  },
+  "timestamp": 1745534586516
+}

@@ -1,0 +1,19 @@
+{
+  "id": "1745532917103-854148",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "24ba71fd-f92c-4687-8e64-e15d33026a20",
+      "sourceUnitId": "project_alpha",
+      "targetUnitId": "data_science",
+      "type": "custom",
+      "description": "Project relationship",
+      "permissions": [],
+      "metadata": {
+        "role": "data_modeling",
+        "allocation": 0.5
+      }
+    }
+  },
+  "timestamp": 1745532917103
+}

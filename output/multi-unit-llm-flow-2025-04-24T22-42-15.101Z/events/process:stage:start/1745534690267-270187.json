@@ -1,0 +1,12 @@
+{
+  "id": "1745534690267-270187",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "technical_planning",
+    "stageName": "Technical Planning",
+    "unitId": "development_unit",
+    "unitName": "Development Unit",
+    "timestamp": "2025-04-24T22:44:50.266Z"
+  },
+  "timestamp": 1745534690267
+}

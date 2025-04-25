@@ -1,0 +1,26 @@
+Test: test_coordinator_and_registry
+Path: /home/trim/Documents/operations/tests/integration/multiagent/test_coordinator_and_registry.ts
+Success: false
+Exit Code: 1
+
+--- Output ---
+
+
+
+--- Errors ---
+
+/home/trim/Documents/operations/node_modules/ts-node/dist/index.js:851
+            return old(m, filename);
+                   ^
+Error [ERR_REQUIRE_ESM]: require() of ES Module /home/trim/Documents/operations/node_modules/chai/chai.js from /home/trim/Documents/operations/tests/integration/multiagent/test_coordinator_and_registry.ts not supported.
+Instead change the require of chai.js in /home/trim/Documents/operations/tests/integration/multiagent/test_coordinator_and_registry.ts to a dynamic import() which is available in all CommonJS modules.
+    at require.extensions.<computed> [as .js] (/home/trim/Documents/operations/node_modules/ts-node/dist/index.js:851:20)
+    at Object.<anonymous> (/home/trim/Documents/operations/tests/integration/multiagent/test_coordinator_and_registry.ts:6:16)
+    at m._compile (/home/trim/Documents/operations/node_modules/ts-node/dist/index.js:857:29)
+    at require.extensions.<computed> [as .ts] (/home/trim/Documents/operations/node_modules/ts-node/dist/index.js:859:16)
+    at phase4 (/home/trim/Documents/operations/node_modules/ts-node/dist/bin.js:466:20)
+    at bootstrap (/home/trim/Documents/operations/node_modules/ts-node/dist/bin.js:54:12)
+    at main (/home/trim/Documents/operations/node_modules/ts-node/dist/bin.js:33:12)
+    at Object.<anonymous> (/home/trim/Documents/operations/node_modules/ts-node/dist/bin.js:579:5) {
+  code: 'ERR_REQUIRE_ESM'
+}

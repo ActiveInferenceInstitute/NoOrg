@@ -1,0 +1,27 @@
+[
+  {
+    "id": "research",
+    "name": "Research Division",
+    "type": "business_unit"
+  },
+  {
+    "id": "ai_team",
+    "name": "AI Team",
+    "type": "team"
+  },
+  {
+    "id": "data_science",
+    "name": "Data Science Team",
+    "type": "team"
+  },
+  {
+    "id": "development",
+    "name": "Development Division",
+    "type": "business_unit"
+  },
+  {
+    "id": "platform_team",
+    "name": "Platform Team",
+    "type": "team"
+  }
+]

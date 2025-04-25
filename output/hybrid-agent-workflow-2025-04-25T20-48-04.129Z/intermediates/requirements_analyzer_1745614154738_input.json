@@ -1,0 +1,7 @@
+{
+  "agent": "Requirements Analyzer",
+  "timestamp": "2025-04-25T20:49:14.738Z",
+  "model": "gpt-4o",
+  "system_prompt": "You are a requirements analyst specializing in technical systems. Your job is to analyze project requirements, identify key stakeholders, and determine essential functionality based on user needs.",
+  "user_prompt": "\nEnhance project documentation with real-time neural data insights.\n\nPROJECT: Eco-friendly transportation solutions for pollinators - Design a lightweight, aerodynamic vehicle optimized for butterfly transportation and safety\nOBJECTIVE: Design a lightweight, aerodynamic vehicle optimized for butterfly transportation and safety\n\nKEY DATA POINTS:\n- Data source: Local Sensors\n- Retrieved: 2025-04-25T20:49:14.737Z\n- Sample location: No location data available\n\nPROJECT SUMMARY: Project summary not available\n\nAdd a \"Real-time Monitoring\" section with these insights:\n1. Current neural data conditions based on sample data\n2. How stakeholders can use this real-time data\n3. Future enhancement recommendations\n\nFormat as JSON:\n{\n  \"enhanced_documentation\": {\n    \"title\": \"Design a lightweight, aerodynamic vehicle optimized for butterfly transportation and safety\",\n    \"version\": \"2.0\",\n    \"new_sections\": [\n      {\n        \"title\": \"Real-time Monitoring Capabilities\",\n        \"content\": { \"key_points\": [...], \"benefits\": [...] }\n      }\n    ],\n    \"recommendations\": [...]\n  }\n}\n"
+}

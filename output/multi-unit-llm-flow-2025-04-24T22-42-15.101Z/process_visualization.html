@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Unit LLM Process Flow</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .container { display: flex; }
+    .flow-diagram { flex: 1; border: 1px solid #ddd; padding: 20px; }
+    .stage-details { flex: 1; margin-left: 20px; }
+    .stage-card { border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin-bottom: 15px; }
+    .completed { border-left: 5px solid #4CAF50; }
+    pre { background-color: #f5f5f5; padding: 10px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Multi-Unit LLM Process Flow</h1>
+  
+  <div class="container">
+    <div class="flow-diagram">
+      <h2>Process Flow Diagram</h2>
+      <div class="mermaid">
+graph TD;
+    situation_assessment["Situation Assessment<br/>(Innovation Unit)"];
+    style situation_assessment fill:#90EE90,stroke:#228B22;
+    idea_generation["Idea Generation<br/>(Innovation Unit)"];
+    style idea_generation fill:#90EE90,stroke:#228B22;
+    market_research["Market Research<br/>(Research Unit)"];
+    style market_research fill:#90EE90,stroke:#228B22;
+    security_assessment["Security Assessment<br/>(Security Unit)"];
+    style security_assessment fill:#90EE90,stroke:#228B22;
+    board_review["Board Review<br/>(Board of Directors)"];
+    style board_review fill:#90EE90,stroke:#228B22;
+    concept_refinement["Concept Refinement<br/>(Innovation Unit)"];
+    style concept_refinement fill:#90EE90,stroke:#228B22;
+    technical_planning["Technical Planning<br/>(Development Unit)"];
+    style technical_planning fill:#90EE90,stroke:#228B22;
+    brand_development["Brand Development<br/>(Marketing Unit)"];
+    style brand_development fill:#90EE90,stroke:#228B22;
+    implementation_roadmap["Implementation Roadmap<br/>(Development Unit)"];
+    style implementation_roadmap fill:#90EE90,stroke:#228B22;
+    final_deliverable["Final Project Plan<br/>(Board of Directors)"];
+    style final_deliverable fill:#90EE90,stroke:#228B22;
+    situation_assessment --> idea_generation;
+    idea_generation --> market_research;
+    idea_generation --> security_assessment;
+    market_research --> security_assessment;
+    idea_generation --> board_review;
+    market_research --> board_review;
+    security_assessment --> board_review;
+    board_review --> concept_refinement;
+    security_assessment --> concept_refinement;
+    market_research --> concept_refinement;
+    concept_refinement --> technical_planning;
+    concept_refinement --> brand_development;
+    market_research --> brand_development;
+    technical_planning --> implementation_roadmap;
+    brand_development --> implementation_roadmap;
+    implementation_roadmap --> final_deliverable;
+
+      </div>
+    </div>
+    
+    <div class="stage-details">
+      <h2>Process Stages</h2>
+      
+        <div class="stage-card completed">
+          <h3>Situation Assessment</h3>
+          <p><strong>Unit:</strong> Innovation Unit</p>
+          <p><strong>Dependencies:</strong> None</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Idea Generation</h3>
+          <p><strong>Unit:</strong> Innovation Unit</p>
+          <p><strong>Dependencies:</strong> situation_assessment</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Market Research</h3>
+          <p><strong>Unit:</strong> Research Unit</p>
+          <p><strong>Dependencies:</strong> idea_generation</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Security Assessment</h3>
+          <p><strong>Unit:</strong> Security Unit</p>
+          <p><strong>Dependencies:</strong> idea_generation, market_research</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Board Review</h3>
+          <p><strong>Unit:</strong> Board of Directors</p>
+          <p><strong>Dependencies:</strong> idea_generation, market_research, security_assessment</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Concept Refinement</h3>
+          <p><strong>Unit:</strong> Innovation Unit</p>
+          <p><strong>Dependencies:</strong> board_review, security_assessment, market_research</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Technical Planning</h3>
+          <p><strong>Unit:</strong> Development Unit</p>
+          <p><strong>Dependencies:</strong> concept_refinement</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Brand Development</h3>
+          <p><strong>Unit:</strong> Marketing Unit</p>
+          <p><strong>Dependencies:</strong> concept_refinement, market_research</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Implementation Roadmap</h3>
+          <p><strong>Unit:</strong> Development Unit</p>
+          <p><strong>Dependencies:</strong> technical_planning, brand_development</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+        <div class="stage-card completed">
+          <h3>Final Project Plan</h3>
+          <p><strong>Unit:</strong> Board of Directors</p>
+          <p><strong>Dependencies:</strong> implementation_roadmap</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>

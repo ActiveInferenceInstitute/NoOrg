@@ -1,0 +1,12 @@
+{
+  "id": "1745535167552-41488",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "board_review",
+    "stageName": "Board Review",
+    "unitId": "board_of_directors",
+    "unitName": "Board of Directors",
+    "timestamp": "2025-04-24T22:52:47.552Z"
+  },
+  "timestamp": 1745535167552
+}

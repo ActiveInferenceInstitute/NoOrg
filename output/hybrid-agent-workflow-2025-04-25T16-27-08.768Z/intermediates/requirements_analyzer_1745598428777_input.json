@@ -1,0 +1,7 @@
+{
+  "agent": "Requirements Analyzer",
+  "timestamp": "2025-04-25T16:27:08.777Z",
+  "model": "gpt-4o-mini",
+  "system_prompt": "You are a requirements analyst specializing in technical systems. Your job is to analyze project requirements, identify key stakeholders, and determine essential functionality based on user needs.",
+  "user_prompt": "\nPlease analyze the requirements for our environmental monitoring project.\n\nPROJECT INFORMATION:\nDomain: Neuroscience and micro-robotics\nObjective: Develop an automated micro-dissection system for precise ant brain extraction and analysis\nConstraints: Must maintain cellular integrity, operate at microscale, and integrate with imaging systems\nTarget Users: Ant behavior researchers, neurobiology labs, entomology institutes, and bio-engineering teams\n\nGenerate a comprehensive analysis of the requirements for this project. Include:\n1. Key stakeholders and their needs\n2. Primary and secondary objectives\n3. Critical constraints and limitations\n4. Core functional requirements\n5. Minimum viable product definition\n6. Success criteria\n\nFormat your response as JSON with the following keys:\n- stakeholders (array of objects with role and needs)\n- objectives (object with primary and secondary arrays)\n- constraints (array)\n- functional_requirements (array)\n- mvp_definition (object)\n- success_criteria (array)\n    "
+}

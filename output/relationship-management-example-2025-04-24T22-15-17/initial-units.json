@@ -1,0 +1,42 @@
+[
+  {
+    "id": "executive",
+    "name": "Executive Committee",
+    "type": "leadership"
+  },
+  {
+    "id": "research",
+    "name": "Research Division",
+    "type": "business_unit"
+  },
+  {
+    "id": "development",
+    "name": "Development Division",
+    "type": "business_unit"
+  },
+  {
+    "id": "ai_team",
+    "name": "AI Team",
+    "type": "team"
+  },
+  {
+    "id": "platform_team",
+    "name": "Platform Team",
+    "type": "team"
+  },
+  {
+    "id": "security",
+    "name": "Security Office",
+    "type": "support"
+  },
+  {
+    "id": "infrastructure",
+    "name": "Infrastructure Team",
+    "type": "support"
+  },
+  {
+    "id": "project_alpha",
+    "name": "Project Alpha",
+    "type": "project"
+  }
+]

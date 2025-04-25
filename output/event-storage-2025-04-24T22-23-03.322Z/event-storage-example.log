@@ -1,0 +1,60 @@
+--- Log Started ---
+[INFO] Starting Event System and Storage System Example...
+[INFO] Event System initialized with persistence at: output/event-storage-2025-04-24T22-23-03.322Z/events
+[INFO] Storage System initialized with file backend at: output/event-storage-2025-04-24T22-23-03.322Z/storage
+[INFO] Setting up event subscriptions...
+[INFO] Emitting events...
+[INFO] Received user event: user:login {
+  "id": "1745533383327-878094",
+  "payload": {
+    "userId": "user123",
+    "ipAddress": "192.168.1.1"
+  },
+  "timestamp": "2025-04-24T22:23:03.327Z"
+}
+[INFO] Received user event: user:login {
+  "id": "1745533383327-878094",
+  "payload": {
+    "userId": "user123",
+    "ipAddress": "192.168.1.1"
+  },
+  "timestamp": "2025-04-24T22:23:03.327Z"
+}
+[INFO] Received user event: user:logout {
+  "id": "1745533383329-566008",
+  "payload": {
+    "userId": "user123"
+  },
+  "timestamp": "2025-04-24T22:23:03.329Z"
+}
+[INFO] Received user event: user:logout {
+  "id": "1745533383329-566008",
+  "payload": {
+    "userId": "user123"
+  },
+  "timestamp": "2025-04-24T22:23:03.329Z"
+}
+[INFO] Demonstrating storage transactions...
+[INFO] Transaction started
+[ERROR] Transaction failed: {}
+[INFO] Transaction rolled back
+[INFO] Querying storage data...
+[INFO] Found 0 matching keys: []
+[INFO] Query results: []
+[INFO] Demonstrating event replay...
+[INFO] Replay event 1: {
+  "id": "1745533383327-878094",
+  "type": "user:login",
+  "timestamp": "2025-04-24T22:23:03.327Z"
+}
+[INFO] Replay event 2: {
+  "id": "1745533383329-566008",
+  "type": "user:logout",
+  "timestamp": "2025-04-24T22:23:03.329Z"
+}
+[INFO] Replayed 2 events
+[INFO] Finding correlated events...
+[INFO] Found 2 correlated events for session-abc123
+[INFO] Example completed successfully.
+[INFO] Results saved to: output/event-storage-2025-04-24T22-23-03.322Z
+[INFO] Generated human-readable artifacts (summary.md and event-visualization.html)

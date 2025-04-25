@@ -1,0 +1,2827 @@
+{
+  "root": "/home/trim/Documents/operations/docs",
+  "generated": "2025-03-13T10:42:31.988746",
+  "structure": {
+    "name": "docs",
+    "modified": "2025-03-11T06:55:34.800264",
+    "type": "directory",
+    "children": [
+      {
+        "name": "agents",
+        "modified": "2025-03-11T07:11:31.023011",
+        "type": "directory",
+        "children": [
+          {
+            "name": "architectures",
+            "modified": "2025-02-13T08:34:20.087374",
+            "type": "directory",
+            "children": [
+              {
+                "name": "core.md",
+                "size": 6093,
+                "modified": "2025-02-13T08:36:06.937801",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "integration.md",
+                "size": 5108,
+                "modified": "2025-02-13T08:34:33.493427",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "interfaces.md",
+                "size": 5002,
+                "modified": "2025-02-13T08:36:06.937801",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "modules.md",
+                "size": 5983,
+                "modified": "2025-02-13T08:34:33.492427",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "modules",
+            "modified": "2025-02-13T08:43:37.854482",
+            "type": "directory",
+            "children": [
+              {
+                "name": "core",
+                "modified": "2025-02-13T08:38:05.296273",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "behavior.md",
+                    "size": 5927,
+                    "modified": "2025-02-13T08:38:27.521360",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "communication.md",
+                    "size": 6087,
+                    "modified": "2025-02-13T08:38:27.521360",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "state.md",
+                    "size": 5718,
+                    "modified": "2025-02-13T08:38:27.521360",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              },
+              {
+                "name": "extensions",
+                "modified": "2025-02-13T08:40:08.029735",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "system.md",
+                    "size": 6690,
+                    "modified": "2025-02-13T08:40:25.460800",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "tasks.md",
+                    "size": 6541,
+                    "modified": "2025-02-13T08:42:52.759342",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              },
+              {
+                "name": "integration",
+                "modified": "2025-02-13T08:44:16.597603",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "data.md",
+                    "size": 6757,
+                    "modified": "2025-02-13T08:44:36.094664",
+                    "type": "file",
+                    "extension": "md"
+                  },
+                  {
+                    "name": "services.md",
+                    "size": 7046,
+                    "modified": "2025-02-13T08:44:36.094664",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "operations",
+            "modified": "2025-03-11T07:12:45.872318",
+            "type": "directory",
+            "children": [
+              {
+                "name": "agent-operations.md",
+                "size": 6393,
+                "modified": "2025-03-11T07:15:10.919914",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "task-operations.md",
+                "size": 9517,
+                "modified": "2025-03-11T07:12:47.816326",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "task",
+            "modified": "2025-02-13T08:29:19.879297",
+            "type": "directory",
+            "children": [
+              {
+                "name": "implementation.md",
+                "size": 5788,
+                "modified": "2025-02-13T08:29:35.136351",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ai",
+        "modified": "2025-02-12T06:03:49.011597",
+        "type": "directory",
+        "children": [
+          {
+            "name": "agent-framework.md",
+            "size": 3092,
+            "modified": "2025-02-11T11:07:47.125999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "agi-safety.md",
+            "size": 3561,
+            "modified": "2025-02-11T11:08:18.519000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "analysis",
+        "modified": "2025-02-13T08:11:48.691188",
+        "type": "directory",
+        "children": [
+          {
+            "name": "competitive_analysis.md",
+            "size": 4581,
+            "modified": "2025-02-13T08:12:31.776368",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "market_analysis.md",
+            "size": 3907,
+            "modified": "2025-02-12T19:26:13.448800",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "analytics",
+        "modified": "2025-02-12T06:03:50.027598",
+        "type": "directory",
+        "children": [
+          {
+            "name": "analytics-platform.md",
+            "size": 4441,
+            "modified": "2025-02-11T14:07:32.089999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "api",
+        "modified": "2025-03-11T06:36:47.148937",
+        "type": "directory",
+        "children": [
+          {
+            "name": "index.md",
+            "size": 5787,
+            "modified": "2025-03-11T06:36:49.155945",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "architecture",
+        "modified": "2025-03-11T07:08:09.487182",
+        "type": "directory",
+        "children": [
+          {
+            "name": "system-architecture.md",
+            "size": 3023,
+            "modified": "2025-03-11T07:15:10.919914",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "tag-hierarchy.md",
+            "size": 8224,
+            "modified": "2025-02-12T06:54:44.781868",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "taxonomy-system.md",
+            "size": 8540,
+            "modified": "2025-02-12T06:53:19.358621",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "automation",
+        "modified": "2025-02-12T09:01:27.451656",
+        "type": "directory",
+        "children": [
+          {
+            "name": "automation-framework.md",
+            "size": 5023,
+            "modified": "2025-02-11T13:47:34.135999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "automation-monitoring.md",
+            "size": 4503,
+            "modified": "2025-02-11T11:08:53.691999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "automation-strategy.md",
+            "size": 4284,
+            "modified": "2025-02-11T11:05:22.716000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "automation-workflows.md",
+            "size": 4442,
+            "modified": "2025-02-11T11:05:22.716000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "ci-cd-pipeline.md",
+            "size": 4974,
+            "modified": "2025-02-11T13:47:34.135999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "dataview-automation.md",
+            "size": 10339,
+            "modified": "2025-02-12T08:58:21.813037",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "note-refactoring.md",
+            "size": 9473,
+            "modified": "2025-02-12T09:04:24.402246",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "templater-workflows.md",
+            "size": 9583,
+            "modified": "2025-02-12T09:04:24.402246",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "configuration",
+        "modified": "2025-02-12T06:39:02.220179",
+        "type": "directory",
+        "children": [
+          {
+            "name": "obsidian-configuration.md",
+            "size": 6847,
+            "modified": "2025-02-12T06:39:29.126255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "obsidian-settings.md",
+            "size": 5526,
+            "modified": "2025-02-12T06:48:55.349855",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "core",
+        "modified": "2025-03-11T06:31:54.889797",
+        "type": "directory",
+        "children": [
+          {
+            "name": "core-documentation.md",
+            "size": 6552,
+            "modified": "2025-02-12T06:39:29.126255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "getting-started.md",
+            "size": 2573,
+            "modified": "2025-02-11T14:44:34.102999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "index.md",
+            "size": 3853,
+            "modified": "2025-03-11T06:31:59.067813",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "data",
+        "modified": "2025-03-11T06:48:23.673644",
+        "type": "directory",
+        "children": [
+          {
+            "name": "index.md",
+            "size": 16910,
+            "modified": "2025-03-11T06:51:42.886393",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "development",
+        "modified": "2025-03-11T06:38:56.358442",
+        "type": "directory",
+        "children": [
+          {
+            "name": "api-standards.md",
+            "size": 1,
+            "modified": "2025-02-11T12:01:33.644000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "build-process.md",
+            "size": 4787,
+            "modified": "2025-02-11T13:33:57.042999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "ci-cd-pipeline.md",
+            "size": 4683,
+            "modified": "2025-02-11T12:10:36.861999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "code-management.md",
+            "size": 4753,
+            "modified": "2025-02-11T13:31:13.930000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "code-review-process.md",
+            "size": 5953,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "contribution-guidelines.md",
+            "size": 3116,
+            "modified": "2025-02-11T14:44:34.217000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "deployment-pipeline.md",
+            "size": 5273,
+            "modified": "2025-02-11T13:38:43.378000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "development-standards.md",
+            "size": 6076,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "development-tools.md",
+            "size": 5289,
+            "modified": "2025-02-11T13:38:43.378000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation-standards.md",
+            "size": 3358,
+            "modified": "2025-02-11T14:48:55.066999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "index.md",
+            "size": 8839,
+            "modified": "2025-03-11T06:38:58.163449",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "release-management.md",
+            "size": 5396,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "testing-strategy.md",
+            "size": 5658,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "version-control.md",
+            "size": 5097,
+            "modified": "2025-02-11T12:10:36.861999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "experiments",
+        "modified": "2025-02-12T06:35:11.325485",
+        "type": "directory",
+        "children": []
+      },
+      {
+        "name": "frameworks",
+        "modified": "2025-02-13T08:28:19.722083",
+        "type": "directory",
+        "children": [
+          {
+            "name": "agent-framework.md",
+            "size": 7447,
+            "modified": "2025-02-12T06:26:43.245150",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "agent_framework.md",
+            "size": 4695,
+            "modified": "2025-02-13T08:31:25.749745",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "experiment-management.md",
+            "size": 8595,
+            "modified": "2025-02-12T06:26:43.245150",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "implementation_framework.md",
+            "size": 3659,
+            "modified": "2025-02-13T08:21:44.887151",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "integration-testing.md",
+            "size": 8846,
+            "modified": "2025-02-12T06:46:49.613494",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quality_management.md",
+            "size": 3742,
+            "modified": "2025-02-13T08:21:44.887151",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "research-tools.md",
+            "size": 7883,
+            "modified": "2025-02-12T06:26:43.245150",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "risk_management.md",
+            "size": 3566,
+            "modified": "2025-02-13T08:21:44.888151",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "strategic_planning.md",
+            "size": 4167,
+            "modified": "2025-02-12T19:21:37.410883",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "git",
+        "modified": "2025-02-24T08:25:42.283755",
+        "type": "directory",
+        "children": [
+          {
+            "name": "fractigit",
+            "modified": "2025-02-24T08:33:52.437868",
+            "type": "directory",
+            "children": [
+              {
+                "name": "core",
+                "modified": "2025-02-24T08:29:01.684615",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "base.py",
+                    "size": 4701,
+                    "modified": "2025-02-24T08:32:29.947513",
+                    "type": "file",
+                    "extension": "py"
+                  },
+                  {
+                    "name": "git_ops.py",
+                    "size": 7222,
+                    "modified": "2025-02-24T08:32:29.947513",
+                    "type": "file",
+                    "extension": "py"
+                  }
+                ]
+              },
+              {
+                "name": "tests",
+                "modified": "2025-02-24T08:31:54.459360",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "test_core.py",
+                    "size": 6362,
+                    "modified": "2025-02-24T08:32:29.947513",
+                    "type": "file",
+                    "extension": "py"
+                  },
+                  {
+                    "name": "test_visualization.py",
+                    "size": 14159,
+                    "modified": "2025-02-24T08:38:50.701154",
+                    "type": "file",
+                    "extension": "py"
+                  }
+                ]
+              },
+              {
+                "name": "visualization",
+                "modified": "2025-02-24T08:30:55.967108",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "graph.py",
+                    "size": 11982,
+                    "modified": "2025-02-24T08:40:20.446541",
+                    "type": "file",
+                    "extension": "py"
+                  }
+                ]
+              },
+              {
+                "name": "__init__.py",
+                "size": 333,
+                "modified": "2025-02-24T08:32:41.571563",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "fractigit_main.py",
+                "size": 1,
+                "modified": "2025-02-24T08:25:29.179699",
+                "type": "file",
+                "extension": "py"
+              },
+              {
+                "name": "requirements.txt",
+                "size": 129,
+                "modified": "2025-02-24T08:37:02.564688",
+                "type": "file",
+                "extension": "txt"
+              }
+            ]
+          },
+          {
+            "name": "fractigit.md",
+            "size": 54971,
+            "modified": "2025-02-24T08:25:46.110772",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "git-automation.md",
+            "size": 18254,
+            "modified": "2025-02-24T08:13:54.153703",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "git-best-practices.md",
+            "size": 16937,
+            "modified": "2025-02-24T08:12:40.986387",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "git-documentation.md",
+            "size": 18334,
+            "modified": "2025-02-24T08:12:40.985387",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "git-security.md",
+            "size": 10888,
+            "modified": "2025-02-12T09:19:05.764295",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "governance",
+        "modified": "2025-02-12T19:12:24.136027",
+        "type": "directory",
+        "children": [
+          {
+            "name": "governance_frameworks.md",
+            "size": 3906,
+            "modified": "2025-02-12T19:13:08.804180",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "maintenance-schedules.md",
+            "size": 8502,
+            "modified": "2025-02-12T07:16:44.018253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quality-metrics.md",
+            "size": 9228,
+            "modified": "2025-02-12T07:16:44.018253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "roles-responsibilities.md",
+            "size": 8193,
+            "modified": "2025-02-12T06:59:45.561838",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "update-frequencies.md",
+            "size": 8365,
+            "modified": "2025-02-12T07:16:44.017253",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "guidelines",
+        "modified": "2025-02-12T06:57:58.885482",
+        "type": "directory",
+        "children": [
+          {
+            "name": "linking-guidelines.md",
+            "size": 8537,
+            "modified": "2025-02-12T06:58:02.193493",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "guides",
+        "modified": "2025-02-12T07:34:49.313794",
+        "type": "directory",
+        "children": [
+          {
+            "name": "guides-moc.md",
+            "size": 4843,
+            "modified": "2025-02-11T10:56:02.229000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "onboarding-documentation.md",
+            "size": 9870,
+            "modified": "2025-02-12T07:36:06.560043",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "reference-materials.md",
+            "size": 11062,
+            "modified": "2025-02-12T07:36:06.561043",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "technical-guides.md",
+            "size": 10079,
+            "modified": "2025-02-12T07:36:06.561043",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "training-materials.md",
+            "size": 10368,
+            "modified": "2025-02-12T07:36:06.572043",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "troubleshooting-guides.md",
+            "size": 10340,
+            "modified": "2025-02-12T07:36:06.561043",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "infrastructure",
+        "modified": "2025-03-11T06:39:36.776599",
+        "type": "directory",
+        "children": [
+          {
+            "name": "backup-systems.md",
+            "size": 5324,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "deployment-strategy.md",
+            "size": 5618,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "disaster-recovery.md",
+            "size": 6108,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "index.md",
+            "size": 7947,
+            "modified": "2025-03-11T06:39:38.524606",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "infrastructure-architecture.md",
+            "size": 5563,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring-setup.md",
+            "size": 5469,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "network-design.md",
+            "size": 5437,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "scaling-strategy.md",
+            "size": 5488,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security-architecture.md",
+            "size": 5536,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "integrations",
+        "modified": "2025-02-12T10:00:38.399775",
+        "type": "directory",
+        "children": [
+          {
+            "name": "jira-sync.md",
+            "size": 9976,
+            "modified": "2025-02-12T09:56:21.001956",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "slack-integration.md",
+            "size": 10097,
+            "modified": "2025-02-12T09:48:12.192356",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "teams-integration.md",
+            "size": 10211,
+            "modified": "2025-02-12T10:01:11.940880",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "knowledge",
+        "modified": "2025-02-12T19:13:00.485152",
+        "type": "directory",
+        "children": [
+          {
+            "name": "archival-procedures.md",
+            "size": 9800,
+            "modified": "2025-02-12T07:23:41.905644",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "content-analysis.md",
+            "size": 4422,
+            "modified": "2025-02-11T11:13:19.654000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "feedback-loops.md",
+            "size": 9778,
+            "modified": "2025-02-12T07:21:14.168161",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "knowledge-capture.md",
+            "size": 9691,
+            "modified": "2025-02-12T07:19:17.588770",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "knowledge-graph.md",
+            "size": 3779,
+            "modified": "2025-02-11T11:13:19.654000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "knowledge-sharing.md",
+            "size": 9374,
+            "modified": "2025-02-12T07:20:15.022963",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "knowledge_base.md",
+            "size": 3656,
+            "modified": "2025-02-12T19:13:08.810180",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "retention-policies.md",
+            "size": 9819,
+            "modified": "2025-02-12T07:22:23.651392",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "semantic-search.md",
+            "size": 3996,
+            "modified": "2025-02-11T11:13:19.654000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "maintenance",
+        "modified": "2025-02-12T08:07:07.911020",
+        "type": "directory",
+        "children": [
+          {
+            "name": "annual-audit.md",
+            "size": 9251,
+            "modified": "2025-02-12T07:52:54.515276",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "archive-process.md",
+            "size": 9226,
+            "modified": "2025-02-12T08:03:56.534404",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "contact-information.md",
+            "size": 9394,
+            "modified": "2025-02-12T07:57:51.835230",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "content-consolidation.md",
+            "size": 9027,
+            "modified": "2025-02-12T08:05:32.722713",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "data-integrity.md",
+            "size": 8892,
+            "modified": "2025-02-12T08:07:45.149140",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation-maintenance.md",
+            "size": 8713,
+            "modified": "2025-02-12T06:46:49.613494",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "example-updates.md",
+            "size": 8010,
+            "modified": "2025-02-12T07:54:48.051640",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "external-links.md",
+            "size": 8792,
+            "modified": "2025-02-12T07:56:45.228016",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "link-maintenance.md",
+            "size": 9090,
+            "modified": "2025-02-12T08:04:44.073557",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "metadata-maintenance.md",
+            "size": 8786,
+            "modified": "2025-02-12T08:07:45.149140",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monthly-review.md",
+            "size": 9258,
+            "modified": "2025-02-12T07:50:32.523821",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quarterly-policy.md",
+            "size": 9279,
+            "modified": "2025-02-12T07:51:27.149996",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "screenshot-management.md",
+            "size": 8908,
+            "modified": "2025-02-12T07:55:46.856828",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "structure-review.md",
+            "size": 9234,
+            "modified": "2025-02-12T07:52:10.677136",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-maintenance.md",
+            "size": 1,
+            "modified": "2025-02-12T06:46:18.629406",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "template-updates.md",
+            "size": 7961,
+            "modified": "2025-02-12T07:54:04.609501",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "weekly-review.md",
+            "size": 9102,
+            "modified": "2025-02-12T07:49:39.505651",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "meta",
+        "modified": "2025-02-13T08:22:08.318168",
+        "type": "directory",
+        "children": [
+          {
+            "name": "core-documentation.md",
+            "size": 6199,
+            "modified": "2025-02-12T06:21:06.257898",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation-hierarchy.md",
+            "size": 5438,
+            "modified": "2025-02-11T10:56:02.279000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation-workflow.md",
+            "size": 5033,
+            "modified": "2025-02-19T17:07:02.165478",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation_architecture.md",
+            "size": 5900,
+            "modified": "2025-02-19T17:07:02.165478",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation_enhancement_project.md",
+            "size": 3700,
+            "modified": "2025-02-12T19:08:29.695223",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation_unit_index.md",
+            "size": 3462,
+            "modified": "2025-02-12T19:08:29.695223",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "git-workflow.md",
+            "size": 5503,
+            "modified": "2025-02-12T06:22:38.895273",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "metadata-standards.md",
+            "size": 5146,
+            "modified": "2025-02-12T06:21:06.258898",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "naming-conventions.md",
+            "size": 4020,
+            "modified": "2025-02-11T10:56:02.279000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "obsidian-configuration.md",
+            "size": 4862,
+            "modified": "2025-02-12T06:21:06.257898",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "obsidian-style-guide.md",
+            "size": 14622,
+            "modified": "2025-02-12T10:49:25.282229",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "style-guide.md",
+            "size": 4185,
+            "modified": "2025-02-12T06:21:06.252898",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "metrics",
+        "modified": "2025-02-12T08:20:13.215557",
+        "type": "directory",
+        "children": [
+          {
+            "name": "adoption-metrics.md",
+            "size": 1,
+            "modified": "2025-02-11T11:26:01.342000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "content-updates.md",
+            "size": 8496,
+            "modified": "2025-02-12T08:22:09.484935",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "cost-analysis.md",
+            "size": 4719,
+            "modified": "2025-02-11T11:51:49.206000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "dashboard-creation.md",
+            "size": 8413,
+            "modified": "2025-02-12T08:12:39.167086",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "data-analysis-framework.md",
+            "size": 1,
+            "modified": "2025-02-11T11:38:18.019000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation-quality.md",
+            "size": 5032,
+            "modified": "2025-02-19T17:07:02.165478",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "efficiency-metrics.md",
+            "size": 4834,
+            "modified": "2025-02-11T11:28:02.081000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "impact-metrics.md",
+            "size": 9245,
+            "modified": "2025-02-12T06:39:29.114255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "maintenance-efficiency.md",
+            "size": 8616,
+            "modified": "2025-02-12T08:22:09.485934",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "metric-templates.md",
+            "size": 9008,
+            "modified": "2025-02-12T08:14:45.729495",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "metrics-dashboard.md",
+            "size": 4628,
+            "modified": "2025-02-11T11:51:49.206000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "performance-metrics.md",
+            "size": 5084,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quality-metrics.md",
+            "size": 8173,
+            "modified": "2025-02-12T06:39:29.114255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "reporting-schedule.md",
+            "size": 8509,
+            "modified": "2025-02-12T08:13:44.151295",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "reporting-system.md",
+            "size": 5021,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "roi-calculation.md",
+            "size": 4932,
+            "modified": "2025-02-11T11:51:49.206000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security-metrics.md",
+            "size": 5490,
+            "modified": "2025-02-11T11:51:49.450000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "success-metrics.md",
+            "size": 8882,
+            "modified": "2025-02-12T08:10:39.596701",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-metrics.md",
+            "size": 7929,
+            "modified": "2025-02-12T06:39:29.114255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "tracking-system.md",
+            "size": 8070,
+            "modified": "2025-02-12T08:11:37.811889",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "usage-patterns.md",
+            "size": 8337,
+            "modified": "2025-02-12T08:22:09.484935",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "user-engagement.md",
+            "size": 8511,
+            "modified": "2025-02-12T08:22:09.484935",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "value-analysis.md",
+            "size": 4968,
+            "modified": "2025-02-11T11:51:49.206000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "mobile",
+        "modified": "2025-02-12T10:24:36.401361",
+        "type": "directory",
+        "children": [
+          {
+            "name": "mobile-interface.md",
+            "size": 9158,
+            "modified": "2025-02-12T10:25:53.547612",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "mobile-workflows.md",
+            "size": 9071,
+            "modified": "2025-02-12T10:25:53.548612",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "monitoring",
+        "modified": "2025-02-13T09:51:48.968814",
+        "type": "directory",
+        "children": [
+          {
+            "name": "automation_framework.md",
+            "size": 9612,
+            "modified": "2025-02-13T09:43:45.361251",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "compliance_framework.md",
+            "size": 9615,
+            "modified": "2025-02-13T09:43:45.361251",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "data_framework.md",
+            "size": 9367,
+            "modified": "2025-02-13T09:52:07.614873",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "metrics_framework.md",
+            "size": 8447,
+            "modified": "2025-02-13T09:34:56.371496",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring-system.md",
+            "size": 4685,
+            "modified": "2025-02-11T14:07:32.016999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_alerting.md",
+            "size": 8575,
+            "modified": "2025-02-13T09:30:16.249566",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_analytics.md",
+            "size": 8535,
+            "modified": "2025-02-13T09:30:16.245566",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_configuration.md",
+            "size": 8918,
+            "modified": "2025-02-13T09:13:11.758038",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_deployment.md",
+            "size": 8856,
+            "modified": "2025-02-13T09:13:11.768038",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_framework.md",
+            "size": 6815,
+            "modified": "2025-02-13T09:34:56.371496",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_implementation.md",
+            "size": 8829,
+            "modified": "2025-02-13T09:13:11.758038",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_integration.md",
+            "size": 8748,
+            "modified": "2025-02-13T09:34:56.371496",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_maintenance.md",
+            "size": 8927,
+            "modified": "2025-02-13T09:13:11.768038",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_patterns.md",
+            "size": 8628,
+            "modified": "2025-02-13T09:13:11.757038",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_reporting.md",
+            "size": 8714,
+            "modified": "2025-02-13T09:30:16.245566",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_security.md",
+            "size": 8543,
+            "modified": "2025-02-13T09:34:56.371496",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_storage.md",
+            "size": 8309,
+            "modified": "2025-02-13T09:30:16.246566",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_testing.md",
+            "size": 8456,
+            "modified": "2025-02-13T09:13:11.768038",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_visualization.md",
+            "size": 8857,
+            "modified": "2025-02-13T09:30:16.245566",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "optimization_framework.md",
+            "size": 10210,
+            "modified": "2025-02-13T09:52:07.614873",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "performance_framework.md",
+            "size": 9951,
+            "modified": "2025-02-13T09:43:45.361251",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "performance_monitoring.md",
+            "size": 8766,
+            "modified": "2025-02-13T08:52:57.512968",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "resource_monitoring.md",
+            "size": 8743,
+            "modified": "2025-02-13T09:02:47.052867",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security_monitoring.md",
+            "size": 8504,
+            "modified": "2025-02-13T08:52:57.512968",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "navigation",
+        "modified": "2025-02-12T10:11:49.241887",
+        "type": "directory",
+        "children": [
+          {
+            "name": "custom-views.md",
+            "size": 9527,
+            "modified": "2025-02-12T10:11:56.740911",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quick-access.md",
+            "size": 9419,
+            "modified": "2025-02-12T10:09:08.365381",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "smart-navigation.md",
+            "size": 9429,
+            "modified": "2025-02-12T10:10:27.643630",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "onboarding",
+        "modified": "2025-03-11T06:51:16.628294",
+        "type": "directory",
+        "children": [
+          {
+            "name": "index.md",
+            "size": 16547,
+            "modified": "2025-03-11T06:51:42.256390",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "operations",
+        "modified": "2025-03-11T06:45:07.309889",
+        "type": "directory",
+        "children": [
+          {
+            "name": "capacity-planning.md",
+            "size": 1,
+            "modified": "2025-02-11T12:10:11.368999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "change-management.md",
+            "size": 5456,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "incident-response.md",
+            "size": 5452,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "index.md",
+            "size": 11337,
+            "modified": "2025-03-11T06:46:47.013278",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "maintenance-tasks.md",
+            "size": 5824,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring-guidelines.md",
+            "size": 5393,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "operational-procedures.md",
+            "size": 5389,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "problem-management.md",
+            "size": 5549,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "service-level-agreements.md",
+            "size": 5589,
+            "modified": "2025-02-11T12:10:36.992000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "policies",
+        "modified": "2025-02-12T19:25:21.722628",
+        "type": "directory",
+        "children": [
+          {
+            "name": "board",
+            "modified": "2025-02-13T08:11:20.239073",
+            "type": "directory",
+            "children": [
+              {
+                "name": "committee_policy.md",
+                "size": 4661,
+                "modified": "2025-02-13T08:12:31.776368",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "composition_policy.md",
+                "size": 3733,
+                "modified": "2025-02-12T19:26:13.448800",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "compliance-checks.md",
+            "size": 9776,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "essential-policies.md",
+            "size": 10190,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "governance_policies.md",
+            "size": 4356,
+            "modified": "2025-02-12T19:21:37.410883",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "policies-moc.md",
+            "size": 5030,
+            "modified": "2025-02-11T10:56:02.229000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "policy-lifecycle.md",
+            "size": 9929,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "policy-templates.md",
+            "size": 10566,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "policy-workflow.md",
+            "size": 9775,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "processes",
+        "modified": "2025-02-13T09:02:19.993772",
+        "type": "directory",
+        "children": [
+          {
+            "name": "knowledge",
+            "modified": "2025-02-13T08:12:17.246305",
+            "type": "directory",
+            "children": [
+              {
+                "name": "mentoring",
+                "modified": "2025-02-13T08:12:17.246305",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "one_on_one.md",
+                    "size": 4336,
+                    "modified": "2025-02-13T08:12:31.776368",
+                    "type": "file",
+                    "extension": "md"
+                  }
+                ]
+              },
+              {
+                "name": "mentoring.md",
+                "size": 3955,
+                "modified": "2025-02-12T19:26:13.448800",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "agent_processes.md",
+            "size": 4581,
+            "modified": "2025-02-13T08:29:35.136351",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "capacity_planning.md",
+            "size": 8699,
+            "modified": "2025-02-13T09:02:47.052867",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "core-processes.md",
+            "size": 8748,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "data_management.md",
+            "size": 8590,
+            "modified": "2025-02-13T08:49:22.442452",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "implementation_processes.md",
+            "size": 4712,
+            "modified": "2025-02-13T08:26:15.712642",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "knowledge_sharing.md",
+            "size": 4447,
+            "modified": "2025-02-12T19:21:37.410883",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring_processes.md",
+            "size": 9065,
+            "modified": "2025-02-13T09:02:47.052867",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "process-flowcharts.md",
+            "size": 6789,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "process-metrics.md",
+            "size": 9619,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "process-review-cycle.md",
+            "size": 10452,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "process-templates.md",
+            "size": 9513,
+            "modified": "2025-02-12T07:16:44.029253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "processes-moc.md",
+            "size": 4501,
+            "modified": "2025-02-11T10:56:02.229000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quality-assurance.md",
+            "size": 9571,
+            "modified": "2025-02-12T06:39:29.126255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quality_processes.md",
+            "size": 4762,
+            "modified": "2025-02-13T08:26:15.712642",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "review-processes.md",
+            "size": 9644,
+            "modified": "2025-02-12T07:01:14.374134",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "risk_processes.md",
+            "size": 4562,
+            "modified": "2025-02-13T08:26:15.712642",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "service_management.md",
+            "size": 8855,
+            "modified": "2025-02-13T08:49:22.442452",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "program",
+        "modified": "2025-02-12T06:03:51.287598",
+        "type": "directory",
+        "children": [
+          {
+            "name": "program-framework.md",
+            "size": 4930,
+            "modified": "2025-02-11T13:21:47.125000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "project",
+        "modified": "2025-02-12T06:03:51.906599",
+        "type": "directory",
+        "children": [
+          {
+            "name": "agi-framework.md",
+            "size": 4710,
+            "modified": "2025-02-11T13:01:54.865999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "implementation-standards.md",
+            "size": 5046,
+            "modified": "2025-02-11T13:01:54.865999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "process-framework.md",
+            "size": 1,
+            "modified": "2025-02-11T14:43:35.401999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "project-guidelines.md",
+            "size": 4098,
+            "modified": "2025-02-11T14:44:34.217000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "project-lifecycle.md",
+            "size": 4988,
+            "modified": "2025-02-11T13:27:19.104000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "task-framework.md",
+            "size": 4751,
+            "modified": "2025-02-11T13:27:19.283999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "quality",
+        "modified": "2025-02-12T06:03:51.541599",
+        "type": "directory",
+        "children": [
+          {
+            "name": "qa-process.md",
+            "size": 4971,
+            "modified": "2025-02-11T12:57:02.089999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "reference",
+        "modified": "2025-02-12T06:03:50.379598",
+        "type": "directory",
+        "children": [
+          {
+            "name": "reference-moc.md",
+            "size": 4558,
+            "modified": "2025-02-11T10:56:02.229000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "research",
+        "modified": "2025-03-11T06:32:39.315970",
+        "type": "directory",
+        "children": [
+          {
+            "name": "index.md",
+            "size": 9662,
+            "modified": "2025-03-11T06:46:22.940184",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "search",
+        "modified": "2025-02-12T10:16:58.307874",
+        "type": "directory",
+        "children": [
+          {
+            "name": "advanced-search.md",
+            "size": 9182,
+            "modified": "2025-02-12T10:13:41.458241",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "search-documentation.md",
+            "size": 8708,
+            "modified": "2025-02-12T10:17:11.898918",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "search-templates.md",
+            "size": 9206,
+            "modified": "2025-02-12T10:15:35.697605",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "security",
+        "modified": "2025-03-11T06:40:18.370762",
+        "type": "directory",
+        "children": [
+          {
+            "name": "access-control.md",
+            "size": 5479,
+            "modified": "2025-02-11T12:44:34.276000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "access-documentation.md",
+            "size": 8171,
+            "modified": "2025-02-12T10:38:07.110006",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "authentication-system.md",
+            "size": 8054,
+            "modified": "2025-02-12T10:36:24.481669",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "compliance-framework.md",
+            "size": 1,
+            "modified": "2025-02-11T12:47:47.492000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "data_security.md",
+            "size": 7762,
+            "modified": "2025-02-13T08:49:22.442452",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "incident_response.md",
+            "size": 8764,
+            "modified": "2025-02-13T08:52:57.512968",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "index.md",
+            "size": 7104,
+            "modified": "2025-03-11T06:40:20.049768",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "risk-management.md",
+            "size": 5406,
+            "modified": "2025-02-11T12:46:12.176000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "role-based-access.md",
+            "size": 8131,
+            "modified": "2025-02-12T10:35:22.234465",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security-incident-response.md",
+            "size": 5395,
+            "modified": "2025-02-11T12:51:18.881000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security-monitoring.md",
+            "size": 5675,
+            "modified": "2025-02-11T12:49:36.007999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security-policies.md",
+            "size": 5605,
+            "modified": "2025-02-11T12:42:59.352999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security-training.md",
+            "size": 5664,
+            "modified": "2025-02-11T12:57:02.089999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "service_security.md",
+            "size": 7858,
+            "modified": "2025-02-13T08:49:22.442452",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "vulnerability-management.md",
+            "size": 5849,
+            "modified": "2025-02-11T12:53:04.280999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "setup",
+        "modified": "2025-02-12T06:03:52.006599",
+        "type": "directory",
+        "children": [
+          {
+            "name": "backup-system.md",
+            "size": 4238,
+            "modified": "2025-02-11T10:51:11.897000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "git-workflow.md",
+            "size": 4339,
+            "modified": "2025-02-11T10:51:11.891000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "obsidian-configuration.md",
+            "size": 5091,
+            "modified": "2025-02-11T10:51:11.891000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "software",
+        "modified": "2025-02-12T06:03:50.629598",
+        "type": "directory",
+        "children": [
+          {
+            "name": "software-architecture.md",
+            "size": 4698,
+            "modified": "2025-02-11T13:21:47.125000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "standards",
+        "modified": "2025-03-11T06:34:03.541299",
+        "type": "directory",
+        "children": [
+          {
+            "name": "documentation-style-guide.md",
+            "size": 3226,
+            "modified": "2025-03-11T06:24:26.838998",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "documentation_standards.md",
+            "size": 4653,
+            "modified": "2025-02-13T08:18:40.900127",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "index.md",
+            "size": 4684,
+            "modified": "2025-03-11T06:34:05.129305",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "metadata-standards.md",
+            "size": 9047,
+            "modified": "2025-02-12T06:56:22.900162",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "strategies",
+        "modified": "2025-02-12T19:12:42.944091",
+        "type": "directory",
+        "children": [
+          {
+            "name": "corporate_strategy.md",
+            "size": 3597,
+            "modified": "2025-02-12T19:13:08.804180",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "deployment-strategy.md",
+            "size": 10372,
+            "modified": "2025-02-12T06:46:49.613494",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "system",
+        "modified": "2025-02-12T07:44:56.602745",
+        "type": "directory",
+        "children": [
+          {
+            "name": "system-architecture.md",
+            "size": 10353,
+            "modified": "2025-02-12T07:36:06.572043",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-dependencies.md",
+            "size": 9286,
+            "modified": "2025-02-12T07:44:59.729755",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-diagrams.md",
+            "size": 5372,
+            "modified": "2025-02-12T07:42:32.911285",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-integrations.md",
+            "size": 8190,
+            "modified": "2025-02-12T07:43:17.677428",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-inventory.md",
+            "size": 9311,
+            "modified": "2025-02-12T07:44:06.499584",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-modernization.md",
+            "size": 4959,
+            "modified": "2025-02-11T11:24:26.822000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-resilience.md",
+            "size": 4947,
+            "modified": "2025-02-11T11:24:26.819000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-scaling.md",
+            "size": 4884,
+            "modified": "2025-02-11T11:24:26.819000",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "systems",
+        "modified": "2025-02-12T06:50:20.323102",
+        "type": "directory",
+        "children": [
+          {
+            "name": "backup-system.md",
+            "size": 7674,
+            "modified": "2025-02-12T06:50:22.415108",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "knowledge-management.md",
+            "size": 8869,
+            "modified": "2025-02-12T06:46:49.613494",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "templates",
+        "modified": "2025-03-11T06:23:47.164837",
+        "type": "directory",
+        "children": [
+          {
+            "name": "agents",
+            "modified": "2025-02-12T06:35:11.375485",
+            "type": "directory",
+            "children": []
+          },
+          {
+            "name": "analysis",
+            "modified": "2025-02-13T08:15:34.524187",
+            "type": "directory",
+            "children": [
+              {
+                "name": "strategic_analysis_template.md",
+                "size": 4656,
+                "modified": "2025-02-13T08:15:50.919260",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "analytics",
+            "modified": "2025-02-12T06:35:11.471485",
+            "type": "directory",
+            "children": []
+          },
+          {
+            "name": "core",
+            "modified": "2025-02-12T06:03:48.155597",
+            "type": "directory",
+            "children": [
+              {
+                "name": "base-template.md",
+                "size": 557,
+                "modified": "2025-02-11T14:44:34.102999",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "documentation",
+            "modified": "2025-02-12T06:03:47.894597",
+            "type": "directory",
+            "children": [
+              {
+                "name": "documentation-template.md",
+                "size": 1,
+                "modified": "2025-02-11T14:38:52.084000",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "experiments",
+            "modified": "2025-02-12T06:35:11.524485",
+            "type": "directory",
+            "children": []
+          },
+          {
+            "name": "policy",
+            "modified": "2025-02-13T08:14:25.246885",
+            "type": "directory",
+            "children": [
+              {
+                "name": "governance_policy_template.md",
+                "size": 3962,
+                "modified": "2025-02-13T08:15:50.919260",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "process",
+            "modified": "2025-02-13T08:14:59.638033",
+            "type": "directory",
+            "children": [
+              {
+                "name": "operational_process_template.md",
+                "size": 4242,
+                "modified": "2025-02-13T08:15:52.821268",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "project",
+            "modified": "2025-02-12T06:03:47.946597",
+            "type": "directory",
+            "children": [
+              {
+                "name": "project-template.md",
+                "size": 1,
+                "modified": "2025-02-11T14:39:57.418999",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          },
+          {
+            "name": "research",
+            "modified": "2025-02-12T06:35:11.421485",
+            "type": "directory",
+            "children": []
+          },
+          {
+            "name": "README-template.md",
+            "size": 1270,
+            "modified": "2025-03-11T06:27:23.517716",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "decision-record-template.md",
+            "size": 3747,
+            "modified": "2025-02-11T09:49:03.142999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "feedback-template.md",
+            "size": 8196,
+            "modified": "2025-02-12T07:48:32.668437",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "guide-template.md",
+            "size": 4971,
+            "modified": "2025-02-12T06:22:38.895273",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "incident-template.md",
+            "size": 3978,
+            "modified": "2025-02-11T09:49:49.292999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "meeting-notes-template.md",
+            "size": 2671,
+            "modified": "2025-02-11T09:45:55.688999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "meeting-template.md",
+            "size": 7737,
+            "modified": "2025-02-12T07:46:06.285968",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "policy-template.md",
+            "size": 4897,
+            "modified": "2025-02-12T06:21:06.265898",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "process-template.md",
+            "size": 4630,
+            "modified": "2025-02-12T06:21:06.264898",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "project-management-template.md",
+            "size": 3672,
+            "modified": "2025-02-11T09:43:06.390000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "project-template.md",
+            "size": 5982,
+            "modified": "2025-02-12T06:21:06.265898",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "review-template.md",
+            "size": 9098,
+            "modified": "2025-02-12T07:47:41.166272",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "status-report-template.md",
+            "size": 8126,
+            "modified": "2025-02-12T07:46:55.444126",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "system-documentation-template.md",
+            "size": 5427,
+            "modified": "2025-02-11T10:35:53.002000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "task-template.md",
+            "size": 2288,
+            "modified": "2025-02-11T09:43:06.390000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "unit_documentation_template.md",
+            "size": 2256,
+            "modified": "2025-02-12T19:08:29.695223",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "workflow-template.md",
+            "size": 3778,
+            "modified": "2025-02-11T09:45:55.688999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "testing",
+        "modified": "2025-03-11T06:50:00.918009",
+        "type": "directory",
+        "children": [
+          {
+            "name": "index.md",
+            "size": 20890,
+            "modified": "2025-03-11T06:51:42.886393",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "performance-testing.md",
+            "size": 4279,
+            "modified": "2025-02-11T14:07:32.019999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "security-testing.md",
+            "size": 4506,
+            "modified": "2025-02-11T14:07:32.089999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "testing-framework.md",
+            "size": 4177,
+            "modified": "2025-02-11T14:07:32.016999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "testing-standards.md",
+            "size": 4284,
+            "modified": "2025-02-11T14:07:32.019999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "tools",
+        "modified": "2025-03-11T06:33:21.393134",
+        "type": "directory",
+        "children": [
+          {
+            "name": "analytics-platform.md",
+            "size": 4585,
+            "modified": "2025-02-11T11:21:36.163000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "code-quality.md",
+            "size": 4741,
+            "modified": "2025-02-11T11:18:36.789999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "debugging-tools.md",
+            "size": 4897,
+            "modified": "2025-02-11T11:18:36.789999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "deployment-tools.md",
+            "size": 1,
+            "modified": "2025-02-11T11:20:55.733000",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "development-environment.md",
+            "size": 4469,
+            "modified": "2025-02-11T11:18:36.782999",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "index.md",
+            "size": 4288,
+            "modified": "2025-03-11T06:34:28.085395",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "monitoring-tools.md",
+            "size": 5020,
+            "modified": "2025-02-11T11:22:01.338999",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "training",
+        "modified": "2025-02-12T08:56:41.026701",
+        "type": "directory",
+        "children": [
+          {
+            "name": "best-practices.md",
+            "size": 8780,
+            "modified": "2025-02-12T08:41:17.314659",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "contribution-guidelines.md",
+            "size": 8403,
+            "modified": "2025-02-12T08:41:17.313659",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "quick-start.md",
+            "size": 8494,
+            "modified": "2025-02-12T08:41:17.313659",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "screencast-library.md",
+            "size": 9377,
+            "modified": "2025-02-12T08:55:25.378449",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "training-exercises.md",
+            "size": 9436,
+            "modified": "2025-02-12T08:56:46.941721",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "training-modules.md",
+            "size": 8808,
+            "modified": "2025-02-12T08:50:42.046504",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "troubleshooting-documentation.md",
+            "size": 8921,
+            "modified": "2025-02-12T08:41:17.313659",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "tutorial-series.md",
+            "size": 9321,
+            "modified": "2025-02-12T08:53:48.051124",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "user-guides.md",
+            "size": 8301,
+            "modified": "2025-02-12T08:22:09.498935",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "workshop-materials.md",
+            "size": 9232,
+            "modified": "2025-02-12T08:52:15.054814",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "troubleshooting",
+        "modified": "2025-03-11T06:54:28.195014",
+        "type": "directory",
+        "children": [
+          {
+            "name": "index.md",
+            "size": 10815,
+            "modified": "2025-03-11T06:55:29.766245",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "visual",
+        "modified": "2025-02-12T10:21:29.836756",
+        "type": "directory",
+        "children": [
+          {
+            "name": "custom-themes.md",
+            "size": 8167,
+            "modified": "2025-02-12T10:25:53.544612",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "graph-customization.md",
+            "size": 9291,
+            "modified": "2025-02-12T10:25:53.544612",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "visual-aids.md",
+            "size": 9134,
+            "modified": "2025-02-12T10:25:53.544612",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "workflows",
+        "modified": "2025-02-12T06:51:47.181353",
+        "type": "directory",
+        "children": [
+          {
+            "name": "documentation-workflow.md",
+            "size": 8356,
+            "modified": "2025-02-12T06:39:29.126255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "git-workflow.md",
+            "size": 7935,
+            "modified": "2025-02-12T06:51:49.385360",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "research-workflow.md",
+            "size": 8656,
+            "modified": "2025-02-12T06:39:29.114255",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "version-control-workflow.md",
+            "size": 9065,
+            "modified": "2025-02-12T06:39:29.126255",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "000-home.md",
+        "size": 2880,
+        "modified": "2025-02-11T09:39:18.171000",
+        "type": "file",
+        "extension": "md"
+      },
+      {
+        "name": "index.md",
+        "size": 3536,
+        "modified": "2025-03-11T06:23:28.642761",
+        "type": "file",
+        "extension": "md"
+      },
+      {
+        "name": "master-index.md",
+        "size": 8001,
+        "modified": "2025-03-11T06:46:47.013278",
+        "type": "file",
+        "extension": "md"
+      }
+    ]
+  }
+}

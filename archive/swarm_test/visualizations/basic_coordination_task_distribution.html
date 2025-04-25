@@ -1,0 +1,31 @@
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Task Distribution</title>
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+          <style>
+            body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+            #chart { width: 800px; height: 600px; }
+            .error { color: #dc3545; text-align: center; margin-top: 20px; }
+          </style>
+        </head>
+        <body>
+          <div id="chart"></div>
+          <script>
+            const data = [{"x":["agent-d93a248d-c866-4295-a226-6708638613d2"],"y":[3],"type":"bar","name":"Successful Tasks","marker":{"color":"#28a745"}},{"x":["agent-d93a248d-c866-4295-a226-6708638613d2"],"y":[0],"type":"bar","name":"Failed Tasks","marker":{"color":"#dc3545"}}];
+            const layout = {"title":{"text":"Task Distribution by Agent","font":{"size":24}},"width":800,"height":600,"margin":{"t":50,"l":50,"r":50,"b":50},"showlegend":true,"barmode":"stack","xaxis":{"title":"Agent ID","showgrid":true,"gridcolor":"#eee"},"yaxis":{"title":"Tasks","showgrid":true,"gridcolor":"#eee"},"plot_bgcolor":"white","paper_bgcolor":"white"};
+            const config = {"responsive":true,"displayModeBar":true,"displaylogo":false};
+            
+            Plotly.newPlot('chart', data, layout, config).catch(error => {
+              document.getElementById('chart').innerHTML = `
+                <div class="error">
+                  <h3>Failed to generate chart</h3>
+                  <p>${error.message}</p>
+                </div>
+              `;
+            });
+          </script>
+        </body>
+      </html>
+    

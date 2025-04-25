@@ -1,0 +1,41 @@
+{
+  "agent": {
+    "id": "agent-1",
+    "name": "ResearchBot",
+    "role": "research specialist",
+    "systemPrompt": "You are an AI research assistant that provides accurate, factual information. Always think step by step and cite your reasoning.",
+    "capabilities": [
+      "research",
+      "summarization",
+      "analysis"
+    ]
+  },
+  "task": {
+    "id": "task-1",
+    "title": "Quantum Computing Research",
+    "description": "Research and explain the current state of quantum computing and its potential applications.",
+    "requirements": [
+      "Explain the basic principles of quantum computing",
+      "List 3 potential applications",
+      "Describe current limitations",
+      "Predict future developments"
+    ],
+    "status": "completed"
+  },
+  "result": {
+    "basic_principles": "Quantum computing utilizes quantum bits or qubits that can exist in multiple states simultaneously due to superposition and entanglement, allowing for parallel processing and solving complex problems more efficiently than classical computers.",
+    "potential_applications": [
+      "1. Cryptography: Quantum computing can potentially break current encryption methods while also providing more secure quantum cryptography solutions.",
+      "2. Drug Discovery: Quantum computing can simulate molecular interactions more accurately and efficiently, accelerating drug discovery processes.",
+      "3. Optimization Problems: Quantum computing can tackle complex optimization problems in various fields such as logistics, finance, and machine learning."
+    ],
+    "current_limitations": "Current quantum computers are still in the early stages of development and face challenges such as qubit stability, error rates, scalability, and decoherence, limiting their practical applications.",
+    "future_developments": "Future developments in quantum computing may focus on improving qubit coherence and error correction techniques, increasing the number of qubits, developing more robust quantum algorithms, and creating practical quantum applications for industries like finance, healthcare, and artificial intelligence."
+  },
+  "reasoning": "I will first explain the basic principles of quantum computing, then list potential applications, describe current limitations, and finally predict future developments.",
+  "stats": {
+    "tokensUsed": 403,
+    "cost": 0.00046850000000000006,
+    "completedAt": "2025-04-24T22:22:48.822Z"
+  }
+}

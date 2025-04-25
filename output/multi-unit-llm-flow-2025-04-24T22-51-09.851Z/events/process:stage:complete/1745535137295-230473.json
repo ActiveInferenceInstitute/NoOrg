@@ -1,0 +1,15 @@
+{
+  "id": "1745535137295-230473",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "market_research",
+    "stageName": "Market Research",
+    "unitId": "research_unit",
+    "unitName": "Research Unit",
+    "duration": 26416,
+    "tokenUsage": 862,
+    "cost": 0.04407,
+    "timestamp": "2025-04-24T22:52:17.295Z"
+  },
+  "timestamp": 1745535137295
+}

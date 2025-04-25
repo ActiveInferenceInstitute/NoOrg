@@ -1,0 +1,15 @@
+{
+  "id": "1745535257923-721684",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "brand_development",
+    "stageName": "Brand Development",
+    "unitId": "marketing_unit",
+    "unitName": "Marketing Unit",
+    "duration": 23384,
+    "tokenUsage": 2063,
+    "cost": 0.08052000000000001,
+    "timestamp": "2025-04-24T22:54:17.923Z"
+  },
+  "timestamp": 1745535257923
+}

@@ -1,0 +1,81 @@
+=== Hybrid Agent Workflow Example - 2025-04-25T18:18:56.527Z ===
+
+[LOG] Loaded 0 workflow templates from disk
+[LOG] Registered task executor for action: execute
+[INFO] Executing task Requirements Analysis (requirements_analysis) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Requirements Analysis
+[INFO] LLMAgent Requirements Analyzer processing input
+[INFO] Using model gpt-4o for request with estimated 338.5 tokens
+[INFO] Saved LLM input to requirements_analyzer_1745605136533_input.json
+[INFO] Saved LLM output to requirements_analyzer_1745605149590_output.json
+[INFO] Executing task Hardware Catalog Search (hardware_catalog_search) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Hardware Catalog Search
+[INFO] APIAgent Hardware Catalog Service processing with endpoint https://api.example.com/hardware-catalog
+[INFO] APIAgent Hardware Catalog Service transformed request data
+[INFO] Executing task Community Engagement Strategy (community_strategy) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Community Engagement Strategy
+[INFO] LLMAgent Community Engagement Strategist processing input
+[INFO] Using model gpt-4o for request with estimated 1090.5 tokens
+[INFO] Saved LLM input to engagement_strategist_1745605149592_input.json
+[INFO] APIAgent Hardware Catalog Service transformed response data
+[INFO] APIAgent Hardware Catalog Service completed processing
+[INFO] Executing task Budget Allocation (budget_allocation) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Budget Allocation
+[INFO] RuleBasedAgent Budget Optimizer evaluating rules
+[INFO] Rule triggered in Budget Optimizer
+[INFO] Executing task Sensor Allocation Analysis (sensor_allocation_analysis) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Sensor Allocation Analysis
+[INFO] VisualizationAgent Chart Generator generating chart
+[INFO] Created visualization file: /home/trim/Documents/GitHub/NoOrg/output/hybrid-agent-workflow-2025-04-25T18-18-56.525Z/visualizations/chart_generator_1745605150097.html
+[INFO] Saved LLM output to engagement_strategist_1745605166703_output.json
+[INFO] Executing task Deployment Location Optimization (location_optimization) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Deployment Location Optimization
+[INFO] DataProcessingAgent Deployment Location Optimizer processing input
+[INFO] Executing task System Architecture Design (system_architecture) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: System Architecture Design
+[INFO] LLMAgent Architecture Designer processing input
+[INFO] Using model gpt-4o for request with estimated 1742 tokens
+[INFO] Saved LLM input to architecture_designer_1745605166704_input.json
+[INFO] Saved LLM output to architecture_designer_1745605181906_output.json
+[INFO] Executing task Data Management Plan (data_management_plan) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Data Management Plan
+[INFO] LLMAgent Data Architect processing input
+[INFO] Using model gpt-4o for request with estimated 2179.25 tokens
+[INFO] Saved LLM input to data_architect_1745605181907_input.json
+[INFO] Executing task Deployment Map Generation (deployment_map) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Deployment Map Generation
+[INFO] VisualizationAgent Map Generator generating map
+[INFO] Created visualization file: /home/trim/Documents/GitHub/NoOrg/output/hybrid-agent-workflow-2025-04-25T18-18-56.525Z/visualizations/map_generator_1745605181907.html
+[INFO] Saved LLM output to data_architect_1745605195417_output.json
+[INFO] Executing task Implementation Plan (implementation_plan) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Implementation Plan
+[INFO] LLMAgent Project Manager processing input
+[INFO] Using model gpt-4o for request with estimated 376.25 tokens
+[INFO] Saved LLM input to project_manager_1745605195418_input.json
+[INFO] Saved LLM output to project_manager_1745605210106_output.json
+[INFO] Executing task Final Project Documentation (final_deliverable) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Final Project Documentation
+[INFO] DataProcessingAgent Data Preprocessor processing input
+[INFO] Executing task Project Visualization (project_visualization) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Project Visualization
+[INFO] Processing 3 image generation prompts
+[INFO] Generating image for prompt: "Create a modern, minimalist logo for a micro-robotics system called "micro-ant-brain-extractor". The logo should be professional and incorporate elements of neuroscience, microscopy, and precision robotics for ant brain extraction."
+[INFO] Executing task Real-time Neural Data Integration (realtime_air_quality_integration) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Real-time Neural Data Integration
+[INFO] APIAgent Neural Data Integrator processing with endpoint https://api.example.com/air-quality
+[INFO] APIAgent Neural Data Integrator transformed request data
+[INFO] APIAgent Neural Data Integrator transformed response data
+[INFO] APIAgent Neural Data Integrator completed processing
+[INFO] Executing task Enhanced Project Documentation with Real-time Data (enhanced_project_documentation) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Enhanced Project Documentation with Real-time Data
+[INFO] LLMAgent Requirements Analyzer processing input
+[INFO] Using model gpt-4o for request with estimated 317 tokens
+[INFO] Saved LLM input to requirements_analyzer_1745605210625_input.json
+[INFO] Saved LLM output to requirements_analyzer_1745605217661_output.json
+[INFO] Executing task Executive Summary Generation (advanced_document_summarization) in workflow f8668c0e-4471-4dce-abdf-aa0a6100774c
+[INFO] Executing task: Executive Summary Generation
+[INFO] DocumentProcessingAgent Advanced Document Processor processing document
+[INFO] Split document into 1 chunks for processing
+[INFO] Generating image for prompt: "A realistic photo showing a high-precision micro-dissection system for ant brain extraction. Show the microscale robotic tools, imaging system, and sample platform with an ant specimen positioned for neural extraction in a laboratory setting."
+[INFO] Generating image for prompt: "A scientific graphical abstract showing the workflow of the micro-ant-brain-extractor system. Include microscale dissection tools, neuroimaging, data capture, neural tissue extraction, and analysis steps. Show the connection to neuroscience research applications."
+[INFO] Workflow completed with ID: f8668c0e-4471-4dce-abdf-aa0a6100774c

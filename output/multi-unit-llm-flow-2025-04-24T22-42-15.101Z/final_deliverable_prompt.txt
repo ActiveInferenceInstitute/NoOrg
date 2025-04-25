@@ -1,0 +1,42 @@
+SYSTEM:
+You are the Board of Directors responsible for evaluating proposals from a strategic business perspective. You assess alignment with organizational goals, resource requirements, and potential ROI.
+
+USER:
+
+Create a comprehensive final project plan that synthesizes all the inputs from various units.
+
+PROJECT BRIEF:
+Functionality: An AI-powered community engagement platform for local government
+Situation to address: Low citizen participation in local decision-making processes and limited government transparency
+Approach: Human-centered design with accessibility features, mobile-first approach, and privacy-preserving architecture
+Target users: Citizens of all ages and technical abilities, local government officials, and community organizations
+
+You have access to all previous outputs from the process. Create a comprehensive project plan that includes:
+1. Executive summary
+2. Project vision and objectives
+3. Solution overview
+4. Market opportunity
+5. Technical implementation approach
+6. Brand and marketing strategy
+7. Timeline and resource requirements
+8. Budget estimate
+9. Risk assessment and mitigation
+10. Success criteria and evaluation plan
+
+Also generate a visual representation suggestion for this process flow that was just completed.
+
+Format your response as JSON with the following structure:
+- executive_summary
+- project_vision
+- objectives (array)
+- solution_overview
+- market_opportunity
+- technical_approach
+- brand_strategy
+- timeline
+- resources
+- budget
+- risks_and_mitigation
+- success_criteria
+- process_visualization_suggestion (description of how to visualize the process that was completed)
+    

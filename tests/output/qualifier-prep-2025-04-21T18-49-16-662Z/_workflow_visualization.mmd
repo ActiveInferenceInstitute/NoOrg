@@ -1,0 +1,14 @@
+graph TD;
+  Step0_PlanResearch("PlanResearch<br/>(planning)");
+  Step1_ResearchSubTopic_1("ResearchSubTopic_1<br/>(research)");
+  Step2_SynthesizeResearch("SynthesizeResearch<br/>(synthesis)");
+  Step3_CreateOutline("CreateOutline<br/>(outlining)");
+  Step4_WriteDocuments("WriteDocuments<br/>(writing)");
+  Step5_EditDocuments("EditDocuments<br/>(editing)");
+  Step6_FormatFinalOutput("FormatFinalOutput<br/>(formatting)");
+  Step0_PlanResearch --> Step1_ResearchSubTopic_1;
+  Step1_ResearchSubTopic_1 --> Step2_SynthesizeResearch;
+  Step2_SynthesizeResearch --> Step3_CreateOutline;
+  Step3_CreateOutline --> Step4_WriteDocuments;
+  Step4_WriteDocuments --> Step5_EditDocuments;
+  Step5_EditDocuments --> Step6_FormatFinalOutput;

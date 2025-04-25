@@ -1,0 +1,109 @@
+{
+  "total_duration_ms": 263656,
+  "total_duration_formatted": "263.66 seconds",
+  "total_tokens": 16331,
+  "total_cost": 0.67224,
+  "cost_formatted": "$0.6722",
+  "stages": [
+    {
+      "id": "situation_assessment",
+      "name": "Situation Assessment",
+      "unit": "Innovation Unit",
+      "duration_ms": 15874,
+      "duration_formatted": "15.87 seconds",
+      "token_usage": 552,
+      "cost": 0.02709,
+      "cost_formatted": "$0.0271"
+    },
+    {
+      "id": "idea_generation",
+      "name": "Idea Generation",
+      "unit": "Innovation Unit",
+      "duration_ms": 25143,
+      "duration_formatted": "25.14 seconds",
+      "token_usage": 1172,
+      "cost": 0.052649999999999995,
+      "cost_formatted": "$0.0526"
+    },
+    {
+      "id": "market_research",
+      "name": "Market Research",
+      "unit": "Research Unit",
+      "duration_ms": 26416,
+      "duration_formatted": "26.42 seconds",
+      "token_usage": 862,
+      "cost": 0.04407,
+      "cost_formatted": "$0.0441"
+    },
+    {
+      "id": "security_assessment",
+      "name": "Security Assessment",
+      "unit": "Security Unit",
+      "duration_ms": 30253,
+      "duration_formatted": "30.25 seconds",
+      "token_usage": 1417,
+      "cost": 0.05907,
+      "cost_formatted": "$0.0591"
+    },
+    {
+      "id": "board_review",
+      "name": "Board Review",
+      "unit": "Board of Directors",
+      "duration_ms": 15601,
+      "duration_formatted": "15.60 seconds",
+      "token_usage": 1816,
+      "cost": 0.06513,
+      "cost_formatted": "$0.0651"
+    },
+    {
+      "id": "concept_refinement",
+      "name": "Concept Refinement",
+      "unit": "Innovation Unit",
+      "duration_ms": 26113,
+      "duration_formatted": "26.11 seconds",
+      "token_usage": 2383,
+      "cost": 0.08853,
+      "cost_formatted": "$0.0885"
+    },
+    {
+      "id": "technical_planning",
+      "name": "Technical Planning",
+      "unit": "Development Unit",
+      "duration_ms": 25266,
+      "duration_formatted": "25.27 seconds",
+      "token_usage": 1912,
+      "cost": 0.07485,
+      "cost_formatted": "$0.0748"
+    },
+    {
+      "id": "brand_development",
+      "name": "Brand Development",
+      "unit": "Marketing Unit",
+      "duration_ms": 23384,
+      "duration_formatted": "23.38 seconds",
+      "token_usage": 2063,
+      "cost": 0.08052000000000001,
+      "cost_formatted": "$0.0805"
+    },
+    {
+      "id": "implementation_roadmap",
+      "name": "Implementation Roadmap",
+      "unit": "Development Unit",
+      "duration_ms": 49035,
+      "duration_formatted": "49.03 seconds",
+      "token_usage": 3123,
+      "cost": 0.12768,
+      "cost_formatted": "$0.1277"
+    },
+    {
+      "id": "final_deliverable",
+      "name": "Final Project Plan",
+      "unit": "Board of Directors",
+      "duration_ms": 26571,
+      "duration_formatted": "26.57 seconds",
+      "token_usage": 1031,
+      "cost": 0.05265,
+      "cost_formatted": "$0.0527"
+    }
+  ]
+}

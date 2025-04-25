@@ -1,0 +1,8 @@
+{
+  "id": "1745533383334-399661",
+  "type": "storage:set",
+  "payload": {
+    "key": "user:preferences:123"
+  },
+  "timestamp": 1745533383334
+}

@@ -1,0 +1,17 @@
+{
+  "id": "1745532917098-481360",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "30126068-9f6f-497c-bfc0-c84e8f61313b",
+      "sourceUnitId": "infrastructure",
+      "targetUnitId": "platform_team",
+      "type": "service_provider",
+      "permissions": [],
+      "metadata": {
+        "domain": "deployment"
+      }
+    }
+  },
+  "timestamp": 1745532917098
+}

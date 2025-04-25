@@ -1,0 +1,63 @@
+{
+  "workflow": {
+    "id": "3a22603b-54d0-44b2-859e-d20b8cd4eb12",
+    "name": "Strategic Decision Process",
+    "status": "completed",
+    "startedAt": 1745532940118,
+    "completedAt": 1745532960219,
+    "duration": 20.101
+  },
+  "tasks": [
+    {
+      "id": "94c47390-3c2e-47a5-a4cd-765ac3da233b",
+      "name": "Market Analysis",
+      "status": "completed",
+      "startTime": 1745532940119,
+      "endTime": 1745532941620,
+      "duration": 1.501
+    },
+    {
+      "id": "ef7ecfae-c7b7-4496-801b-2dccc466523b",
+      "name": "Customer Feedback Analysis",
+      "status": "completed",
+      "startTime": 1745532940119,
+      "endTime": 1745532941322,
+      "duration": 1.203
+    },
+    {
+      "id": "71a5d277-b03c-4daa-87e5-46081f09f8ff",
+      "name": "Financial Projections",
+      "status": "completed",
+      "startTime": 1745532940120,
+      "endTime": 1745532942122,
+      "duration": 2.002
+    },
+    {
+      "id": "2bf4a414-24c5-4348-b3c8-0a7b54d48a9a",
+      "name": "Strategic Decision",
+      "status": "completed",
+      "startTime": 1745532942122,
+      "endTime": 1745532943129,
+      "duration": 1.007
+    },
+    {
+      "id": "fbc1e5d6-d9b3-4d22-a23b-ac5ec5946142",
+      "name": "Implementation Planning",
+      "status": "skipped",
+      "duration": null
+    },
+    {
+      "id": "42ed7ab2-5e9f-498d-b1bd-b773c5d0a32e",
+      "name": "Alternatives Planning",
+      "status": "skipped",
+      "duration": null
+    },
+    {
+      "id": "9f9018e4-a1aa-4de6-99be-2ae05b1c583b",
+      "name": "Final Report",
+      "status": "completed",
+      "endTime": 1745532960219,
+      "duration": null
+    }
+  ]
+}

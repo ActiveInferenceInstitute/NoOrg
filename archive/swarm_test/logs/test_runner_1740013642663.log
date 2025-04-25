@@ -1,0 +1,91 @@
+
+====================================
+Test: test_runner
+Started: 2025-02-20T01:07:22.663Z
+Environment:
+  Node Version: v18.20.6
+  Platform: linux
+  Memory: 161MB
+====================================
+
+[2025-02-20T01:07:22.663Z] [10ms] [SUCCESS] [Initializing test environment] Previous test artifacts cleaned
+
+Completed Step: Initializing test environment
+
+
+-----------------------------------
+Step: Running Test: Basic Coordination
+Stack:
+    at SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:78:27)
+-----------------------------------
+[2025-02-20T01:07:27.847Z] [5194ms] [METRIC] [Running Test: Basic Coordination] testDuration: {"name":"Basic Coordination","duration":5180,"success":true}
+
+Completed Step: Running Test: Basic Coordination
+
+
+-----------------------------------
+Step: Running Test: Scalability
+Stack:
+    at SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:78:27)
+-----------------------------------
+[2025-02-20T01:07:28.201Z] [5548ms] [METRIC] [Running Test: Scalability] testDuration: {"name":"Scalability","duration":350,"success":true}
+
+Completed Step: Running Test: Scalability
+
+
+-----------------------------------
+Step: Running Test: Fault Tolerance
+Stack:
+    at SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:78:27)
+-----------------------------------
+[2025-02-20T01:07:38.258Z] [15605ms] [METRIC] [Running Test: Fault Tolerance] testDuration: {"name":"Fault Tolerance","duration":10051,"success":true}
+
+Completed Step: Running Test: Fault Tolerance
+
+
+-----------------------------------
+Step: Running Test: Performance
+Stack:
+    at SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:78:27)
+-----------------------------------
+[2025-02-20T01:07:51.238Z] [28585ms] [METRIC] [Running Test: Performance] testDuration: {"name":"Performance","duration":12979,"success":true}
+
+Completed Step: Running Test: Performance
+
+
+-----------------------------------
+Step: Running Test: Task Visualization
+Stack:
+    at SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:78:27)
+-----------------------------------
+[2025-02-20T01:08:00.441Z] [37788ms] [METRIC] [Running Test: Task Visualization] testDuration: {"name":"Task Visualization","duration":9201,"success":true}
+
+Completed Step: Running Test: Task Visualization
+
+
+-----------------------------------
+Step: Generating test report
+Stack:
+    at SwarmTestRunner.generateReport (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:178:23)
+    at SwarmTestRunner.runAllTests (/home/trim/Documents/operations/agents/swarm_test/test_runner.ts:85:18)
+-----------------------------------
+
+====================================
+Test Summary: test_runner
+------------------------------------
+Total Tests: 5
+Passed: 5
+Failed: 0
+Duration: 37790ms
+Steps Completed: 1
+Metrics Collected: 1
+Completed: 2025-02-20T01:08:00.443Z
+====================================
+
+Metrics Summary:
+
+[2025-02-20T01:08:00.444Z] [37791ms] [SUCCESS] [Generating test report] Test report generated successfully
+
+Completed Step: Generating test report
+
+[2025-02-20T01:08:00.444Z] [37792ms] [INFO] [main] Test suite completed successfully

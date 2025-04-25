@@ -1,0 +1,14 @@
+{
+  "id": "1745533383327-878094",
+  "type": "user:login",
+  "payload": {
+    "userId": "user123",
+    "ipAddress": "192.168.1.1"
+  },
+  "timestamp": 1745533383327,
+  "correlationId": "session-abc123",
+  "metadata": {
+    "domain": "auth",
+    "importance": "high"
+  }
+}

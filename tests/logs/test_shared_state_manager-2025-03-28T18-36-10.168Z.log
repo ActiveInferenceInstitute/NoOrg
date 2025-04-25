@@ -1,0 +1,34 @@
+Test: test_shared_state_manager
+Path: /home/trim/Documents/operations/tests/unit/multiagent/test_shared_state_manager.ts
+Success: false
+Exit Code: 1
+
+--- Output ---
+
+
+
+--- Errors ---
+
+/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+unit/multiagent/test_shared_state_manager.ts(189,47): error TS2554: Expected 1 arguments, but got 2.
+unit/multiagent/test_shared_state_manager.ts(218,45): error TS2554: Expected 1 arguments, but got 2.
+unit/multiagent/test_shared_state_manager.ts(237,9): error TS2554: Expected 2 arguments, but got 3.
+unit/multiagent/test_shared_state_manager.ts(272,9): error TS2554: Expected 2 arguments, but got 3.
+unit/multiagent/test_shared_state_manager.ts(297,42): error TS2345: Argument of type 'Promise<any>' is not assignable to parameter of type 'string'.
+unit/multiagent/test_shared_state_manager.ts(297,55): error TS2554: Expected 1 arguments, but got 0.
+
+    at createTSError (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/trim/Documents/operations/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1019:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12) {
+  diagnosticCodes: [ 2554, 2554, 2554, 2554, 2345, 2554 ]
+}

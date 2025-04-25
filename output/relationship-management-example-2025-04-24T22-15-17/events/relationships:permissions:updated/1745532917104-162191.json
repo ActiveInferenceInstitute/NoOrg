@@ -1,0 +1,18 @@
+{
+  "id": "1745532917104-162191",
+  "type": "relationships:permissions:updated",
+  "payload": {
+    "relationshipId": "395744fd-09db-41a7-9145-4ccb4512e45f",
+    "permissions": [
+      {
+        "resource": "research_data",
+        "level": "admin",
+        "conditions": {
+          "description": "Administrator access to research datasets",
+          "expiration": "2025-07-23T22:15:17.103Z"
+        }
+      }
+    ]
+  },
+  "timestamp": 1745532917104
+}

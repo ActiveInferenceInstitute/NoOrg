@@ -1,0 +1,13 @@
+{
+  "id": "1745533383329-566008",
+  "type": "user:logout",
+  "payload": {
+    "userId": "user123"
+  },
+  "timestamp": 1745533383329,
+  "correlationId": "session-abc123",
+  "metadata": {
+    "domain": "auth",
+    "importance": "medium"
+  }
+}

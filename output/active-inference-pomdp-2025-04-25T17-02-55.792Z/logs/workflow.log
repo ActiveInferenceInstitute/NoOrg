@@ -1,0 +1,34 @@
+=== Active Inference POMDP Example - 2025-04-25T17:02:55.792Z ===
+
+[INFO] Starting Active Inference POMDP Example
+[INFO] Output directory: /home/trim/Documents/operations/output/active-inference-pomdp-2025-04-25T17-02-55.792Z
+[INFO] Step 1: Extracting temperatures from story
+[INFO] Temperature Extraction Agent processing story to extract temperatures
+[INFO] Sending request to LLM for temperature extraction
+[ERROR] Failed to parse LLM response: {}
+[ERROR] Response content: ```json
+{
+  "temperatures": [
+    {
+      "timepoint": "beginning",
+      "description": "A crisp autumn morning with frost covering the ground.",
+      "temperature": 2,
+      "confidence": 0.8
+    },
+    {
+      "timepoint": "middle",
+      "description": "Midday with the sun high in the sky, warming the air considerably.",
+      "temperature": 15,
+      "confidence": 0.7
+    },
+    {
+      "timepoint": "end",
+      "description": "Evening with a summer storm bringing rain and cooling the air dramatically.",
+      "temperature": 10,
+      "confidence": 0.9
+    }
+  ]
+}
+```
+[ERROR] Temperature extraction failed: {}
+[ERROR] Workflow failed with error: {}

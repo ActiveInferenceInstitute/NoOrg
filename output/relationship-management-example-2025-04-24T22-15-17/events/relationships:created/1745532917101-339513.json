@@ -1,0 +1,17 @@
+{
+  "id": "1745532917101-339513",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "395744fd-09db-41a7-9145-4ccb4512e45f",
+      "sourceUnitId": "data_science",
+      "targetUnitId": "ai_team",
+      "type": "peer",
+      "permissions": [],
+      "metadata": {
+        "collaboration_level": "very_high"
+      }
+    }
+  },
+  "timestamp": 1745532917101
+}

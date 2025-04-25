@@ -1,0 +1,15 @@
+{
+  "id": "1745535333538-535383",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "final_deliverable",
+    "stageName": "Final Project Plan",
+    "unitId": "board_of_directors",
+    "unitName": "Board of Directors",
+    "duration": 26571,
+    "tokenUsage": 1031,
+    "cost": 0.05265,
+    "timestamp": "2025-04-24T22:55:33.538Z"
+  },
+  "timestamp": 1745535333538
+}

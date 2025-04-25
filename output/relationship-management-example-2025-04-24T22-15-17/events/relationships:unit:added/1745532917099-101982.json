@@ -1,0 +1,12 @@
+{
+  "id": "1745532917099-101982",
+  "type": "relationships:unit:added",
+  "payload": {
+    "unit": {
+      "id": "data_science",
+      "name": "Data Science Team",
+      "type": "team"
+    }
+  },
+  "timestamp": 1745532917099
+}

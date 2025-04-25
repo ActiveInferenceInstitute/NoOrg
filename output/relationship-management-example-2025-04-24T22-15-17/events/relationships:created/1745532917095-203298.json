@@ -1,0 +1,17 @@
+{
+  "id": "1745532917095-203298",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "fc1e423c-312c-463e-954a-8420f7df2bdb",
+      "sourceUnitId": "executive",
+      "targetUnitId": "development",
+      "type": "hierarchy",
+      "permissions": [],
+      "metadata": {
+        "established": "2025-04-24T22:15:17.095Z"
+      }
+    }
+  },
+  "timestamp": 1745532917095
+}

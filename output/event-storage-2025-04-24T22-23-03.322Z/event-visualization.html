@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event System Visualization</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .event { border: 1px solid #ddd; padding: 10px; margin: 10px 0; border-radius: 5px; }
+    .event-user { background-color: #e6f7ff; }
+    .event-system { background-color: #f9f9f9; }
+    .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+    .timeline::after { content: ''; position: absolute; width: 3px; background-color: #ddd; top: 0; bottom: 0; left: 20px; margin-left: -2px; }
+    .container { padding: 10px 40px; position: relative; background-color: inherit; width: 80%; }
+    .container::after { content: ''; position: absolute; width: 15px; height: 15px; left: 13px; background-color: white; border: 3px solid #4682B4; top: 15px; border-radius: 50%; z-index: 1; }
+    .header { display: flex; justify-content: space-between; }
+    .event-id { color: #888; font-size: 0.8em; }
+    .event-payload { font-family: monospace; background-color: #f7f7f7; padding: 8px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Event System Visualization</h1>
+  <div class="timeline">
+    
+    <div class="container">
+      <div class="event event-user">
+        <div class="header">
+          <strong>user:login</strong>
+          <span class="event-id">1745533383327-878094</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.327Z</div>
+        <div>Correlation ID: session-abc123</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "userId": "user123",
+  "ipAddress": "192.168.1.1"
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-user">
+        <div class="header">
+          <strong>user:logout</strong>
+          <span class="event-id">1745533383329-566008</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.329Z</div>
+        <div>Correlation ID: session-abc123</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "userId": "user123"
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>system:startup</strong>
+          <span class="event-id">1745533383331-195567</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.331Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "version": "1.0.0",
+  "environment": "development"
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:set</strong>
+          <span class="event-id">1745533383332-210697</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.332Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "key": "user_event_1745533383327-878094",
+  "metadata": {
+    "domain": "auth",
+    "eventId": "1745533383327-878094"
+  }
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:set</strong>
+          <span class="event-id">1745533383333-453114</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.333Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "key": "user_event_1745533383327-878094",
+  "metadata": {
+    "domain": "auth",
+    "eventId": "1745533383327-878094"
+  }
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:set</strong>
+          <span class="event-id">1745533383333-292913</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.333Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "key": "user_event_1745533383329-566008",
+  "metadata": {
+    "domain": "auth",
+    "eventId": "1745533383329-566008"
+  }
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:set</strong>
+          <span class="event-id">1745533383333-537610</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.333Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "key": "user_event_1745533383329-566008",
+  "metadata": {
+    "domain": "auth",
+    "eventId": "1745533383329-566008"
+  }
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:transaction:begin</strong>
+          <span class="event-id">1745533383333-605886</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.333Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:set</strong>
+          <span class="event-id">1745533383334-833804</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.334Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "key": "user:profile:123"
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:set</strong>
+          <span class="event-id">1745533383334-399661</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.334Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{
+  "key": "user:preferences:123"
+}</pre>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="event event-system">
+        <div class="header">
+          <strong>storage:transaction:rollback</strong>
+          <span class="event-id">1745533383336-326580</span>
+        </div>
+        <div>Timestamp: 2025-04-24T22:23:03.336Z</div>
+        <div>Correlation ID: None</div>
+        <div>Payload:</div>
+        <pre class="event-payload">{}</pre>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "research_unit",
+    "name": "Research Unit",
+    "type": "department"
+  },
+  {
+    "id": "development_unit",
+    "name": "Development Unit",
+    "type": "department"
+  },
+  {
+    "id": "operations_unit",
+    "name": "Operations Unit",
+    "type": "department"
+  },
+  {
+    "id": "project_alpha",
+    "name": "Project Alpha",
+    "type": "project"
+  }
+]

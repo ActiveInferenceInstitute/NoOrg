@@ -1,0 +1,26 @@
+[
+  {
+    "from": "project_alpha",
+    "to": "research_unit",
+    "path": "status",
+    "type": "subscription"
+  },
+  {
+    "from": "project_alpha",
+    "to": "development_unit",
+    "path": "resources",
+    "type": "subscription"
+  },
+  {
+    "from": "research_unit",
+    "to": "operations_unit",
+    "path": "status",
+    "type": "subscription"
+  },
+  {
+    "from": "development_unit",
+    "to": "operations_unit",
+    "path": "status",
+    "type": "subscription"
+  }
+]

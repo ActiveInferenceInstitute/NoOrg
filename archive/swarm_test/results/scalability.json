@@ -1,0 +1,18 @@
+{
+  "agentScaling": [
+    5,
+    10,
+    20
+  ],
+  "taskScaling": [
+    5,
+    10,
+    20
+  ],
+  "concurrentSwarms": 5,
+  "executionResults": {
+    "tasks": 5,
+    "duration": 328,
+    "successRate": 1
+  }
+}

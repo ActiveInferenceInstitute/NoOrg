@@ -1,0 +1,15 @@
+{
+  "id": "1745535209269-839671",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "concept_refinement",
+    "stageName": "Concept Refinement",
+    "unitId": "innovation_unit",
+    "unitName": "Innovation Unit",
+    "duration": 26113,
+    "tokenUsage": 2383,
+    "cost": 0.08853,
+    "timestamp": "2025-04-24T22:53:29.269Z"
+  },
+  "timestamp": 1745535209269
+}

@@ -1,0 +1,69 @@
+{
+  "testName": "test_runner",
+  "startTime": "2025-02-20T01:07:22.653Z",
+  "endTime": "2025-02-20T01:08:00.444Z",
+  "metrics": {
+    "testDuration": [
+      {
+        "timestamp": 1740013647847,
+        "value": {
+          "name": "Basic Coordination",
+          "duration": 5180,
+          "success": true
+        },
+        "metadata": {
+          "step": "Running Test: Basic Coordination",
+          "elapsed": 5194
+        }
+      },
+      {
+        "timestamp": 1740013648201,
+        "value": {
+          "name": "Scalability",
+          "duration": 350,
+          "success": true
+        },
+        "metadata": {
+          "step": "Running Test: Scalability",
+          "elapsed": 5548
+        }
+      },
+      {
+        "timestamp": 1740013658258,
+        "value": {
+          "name": "Fault Tolerance",
+          "duration": 10051,
+          "success": true
+        },
+        "metadata": {
+          "step": "Running Test: Fault Tolerance",
+          "elapsed": 15605
+        }
+      },
+      {
+        "timestamp": 1740013671238,
+        "value": {
+          "name": "Performance",
+          "duration": 12979,
+          "success": true
+        },
+        "metadata": {
+          "step": "Running Test: Performance",
+          "elapsed": 28585
+        }
+      },
+      {
+        "timestamp": 1740013680441,
+        "value": {
+          "name": "Task Visualization",
+          "duration": 9201,
+          "success": true
+        },
+        "metadata": {
+          "step": "Running Test: Task Visualization",
+          "elapsed": 37788
+        }
+      }
+    ]
+  }
+}

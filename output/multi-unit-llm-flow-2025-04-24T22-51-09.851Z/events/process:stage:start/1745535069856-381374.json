@@ -1,0 +1,12 @@
+{
+  "id": "1745535069856-381374",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "situation_assessment",
+    "stageName": "Situation Assessment",
+    "unitId": "innovation_unit",
+    "unitName": "Innovation Unit",
+    "timestamp": "2025-04-24T22:51:09.856Z"
+  },
+  "timestamp": 1745535069856
+}

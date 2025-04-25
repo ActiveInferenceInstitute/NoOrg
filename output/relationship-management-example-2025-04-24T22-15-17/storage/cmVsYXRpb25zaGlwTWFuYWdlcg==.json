@@ -1,0 +1,253 @@
+{
+  "key": "relationshipManager",
+  "value": {
+    "units": [
+      {
+        "id": "executive",
+        "name": "Executive Committee",
+        "type": "leadership"
+      },
+      {
+        "id": "research",
+        "name": "Research Division",
+        "type": "business_unit"
+      },
+      {
+        "id": "development",
+        "name": "Development Division",
+        "type": "business_unit"
+      },
+      {
+        "id": "ai_team",
+        "name": "AI Team",
+        "type": "team"
+      },
+      {
+        "id": "platform_team",
+        "name": "Platform Team",
+        "type": "team"
+      },
+      {
+        "id": "security",
+        "name": "Security Office",
+        "type": "support"
+      },
+      {
+        "id": "infrastructure",
+        "name": "Infrastructure Team",
+        "type": "support"
+      },
+      {
+        "id": "project_alpha",
+        "name": "Project Alpha",
+        "type": "project"
+      },
+      {
+        "id": "data_science",
+        "name": "Data Science Team",
+        "type": "team"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "f7162a60-0185-4b2d-80dd-9e87f9bd821c",
+        "sourceUnitId": "executive",
+        "targetUnitId": "research",
+        "type": "hierarchy",
+        "permissions": [
+          {
+            "resource": "project_alpha_data",
+            "level": "read",
+            "conditions": {
+              "description": "Read access to Project Alpha metrics and KPIs",
+              "expiration": "2025-10-21T22:15:17.103Z"
+            }
+          }
+        ],
+        "metadata": {
+          "established": "2025-04-24T22:15:17.088Z"
+        }
+      },
+      {
+        "id": "fc1e423c-312c-463e-954a-8420f7df2bdb",
+        "sourceUnitId": "executive",
+        "targetUnitId": "development",
+        "type": "hierarchy",
+        "permissions": [],
+        "metadata": {
+          "established": "2025-04-24T22:15:17.095Z"
+        }
+      },
+      {
+        "id": "c9ccaa2f-a1a9-465a-a835-02a4cd815f4c",
+        "sourceUnitId": "research",
+        "targetUnitId": "ai_team",
+        "type": "hierarchy",
+        "permissions": [],
+        "metadata": {
+          "established": "2025-04-24T22:15:17.095Z"
+        }
+      },
+      {
+        "id": "3cba8f14-1b2a-4a75-a4e2-94b32060fccd",
+        "sourceUnitId": "development",
+        "targetUnitId": "platform_team",
+        "type": "hierarchy",
+        "permissions": [],
+        "metadata": {
+          "established": "2025-04-24T22:15:17.096Z"
+        }
+      },
+      {
+        "id": "33f22933-3a9c-4bb7-a310-b6b8319a2015",
+        "sourceUnitId": "ai_team",
+        "targetUnitId": "platform_team",
+        "type": "peer",
+        "permissions": [
+          {
+            "resource": "research_data",
+            "level": "write",
+            "conditions": {
+              "description": "Access to research datasets",
+              "expiration": "2025-07-23T22:15:17.103Z"
+            }
+          }
+        ],
+        "metadata": {
+          "collaboration_level": "high"
+        }
+      },
+      {
+        "id": "0f9aed73-e65c-4e5f-a73b-2c02f357c1c4",
+        "sourceUnitId": "security",
+        "targetUnitId": "development",
+        "type": "service_provider",
+        "permissions": [],
+        "metadata": {
+          "domain": "security_compliance"
+        }
+      },
+      {
+        "id": "52a86636-d7ed-4f88-9ea3-f5bbece5838c",
+        "sourceUnitId": "infrastructure",
+        "targetUnitId": "ai_team",
+        "type": "service_provider",
+        "permissions": [],
+        "metadata": {
+          "domain": "compute_resources"
+        }
+      },
+      {
+        "id": "30126068-9f6f-497c-bfc0-c84e8f61313b",
+        "sourceUnitId": "infrastructure",
+        "targetUnitId": "platform_team",
+        "type": "service_provider",
+        "permissions": [],
+        "metadata": {
+          "domain": "deployment"
+        }
+      },
+      {
+        "id": "8849cd2a-ed80-46d7-9613-0f97c24b5a03",
+        "sourceUnitId": "project_alpha",
+        "targetUnitId": "ai_team",
+        "type": "custom",
+        "description": "Project relationship",
+        "permissions": [],
+        "metadata": {
+          "role": "core_development",
+          "allocation": 0.6
+        }
+      },
+      {
+        "id": "5517e3fe-ad21-4397-b2c4-67db550d8583",
+        "sourceUnitId": "project_alpha",
+        "targetUnitId": "platform_team",
+        "type": "custom",
+        "description": "Project relationship",
+        "permissions": [],
+        "metadata": {
+          "role": "integration",
+          "allocation": 0.4
+        }
+      },
+      {
+        "id": "4fce2e51-d75a-4ddc-84e4-1dbbb94bfc69",
+        "sourceUnitId": "project_alpha",
+        "targetUnitId": "security",
+        "type": "custom",
+        "description": "Project relationship",
+        "permissions": [],
+        "metadata": {
+          "role": "advisor",
+          "allocation": 0.2
+        }
+      },
+      {
+        "id": "175994a4-b40a-48c9-95d2-28b2ed29f89b",
+        "sourceUnitId": "research",
+        "targetUnitId": "data_science",
+        "type": "hierarchy",
+        "permissions": [],
+        "metadata": {
+          "established": "2025-04-24T22:15:17.100Z"
+        }
+      },
+      {
+        "id": "395744fd-09db-41a7-9145-4ccb4512e45f",
+        "sourceUnitId": "data_science",
+        "targetUnitId": "ai_team",
+        "type": "peer",
+        "permissions": [
+          {
+            "resource": "research_data",
+            "level": "admin",
+            "conditions": {
+              "description": "Administrator access to research datasets",
+              "expiration": "2025-07-23T22:15:17.103Z"
+            }
+          }
+        ],
+        "metadata": {
+          "collaboration_level": "very_high"
+        }
+      },
+      {
+        "id": "24ba71fd-f92c-4687-8e64-e15d33026a20",
+        "sourceUnitId": "project_alpha",
+        "targetUnitId": "data_science",
+        "type": "custom",
+        "description": "Project relationship",
+        "permissions": [],
+        "metadata": {
+          "role": "data_modeling",
+          "allocation": 0.5
+        }
+      },
+      {
+        "id": "56367ff2-b39e-48bf-bc74-a3d770ab4c46",
+        "sourceUnitId": "security",
+        "targetUnitId": "research",
+        "type": "advisor",
+        "permissions": [],
+        "metadata": {
+          "domain": "security_governance",
+          "priority": "high"
+        }
+      }
+    ]
+  },
+  "timestamp": 1745532917108
+}
+pe": "custom",
+        "description": "Project relationship",
+        "permissions": [],
+        "metadata": {
+          "role": "data_modeling",
+          "allocation": 0.5
+        }
+      }
+    ]
+  },
+  "timestamp": 1745532917104
+}

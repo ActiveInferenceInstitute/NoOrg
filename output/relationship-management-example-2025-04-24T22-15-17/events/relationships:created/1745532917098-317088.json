@@ -1,0 +1,19 @@
+{
+  "id": "1745532917098-317088",
+  "type": "relationships:created",
+  "payload": {
+    "relationship": {
+      "id": "8849cd2a-ed80-46d7-9613-0f97c24b5a03",
+      "sourceUnitId": "project_alpha",
+      "targetUnitId": "ai_team",
+      "type": "custom",
+      "description": "Project relationship",
+      "permissions": [],
+      "metadata": {
+        "role": "core_development",
+        "allocation": 0.6
+      }
+    }
+  },
+  "timestamp": 1745532917098
+}

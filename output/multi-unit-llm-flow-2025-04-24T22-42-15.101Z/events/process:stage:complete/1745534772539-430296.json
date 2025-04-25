@@ -1,0 +1,15 @@
+{
+  "id": "1745534772539-430296",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "implementation_roadmap",
+    "stageName": "Implementation Roadmap",
+    "unitId": "development_unit",
+    "unitName": "Development Unit",
+    "duration": 27776,
+    "tokenUsage": 3043,
+    "cost": 0.11334,
+    "timestamp": "2025-04-24T22:46:12.539Z"
+  },
+  "timestamp": 1745534772539
+}

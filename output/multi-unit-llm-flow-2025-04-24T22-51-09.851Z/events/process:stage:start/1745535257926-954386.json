@@ -1,0 +1,12 @@
+{
+  "id": "1745535257926-954386",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "implementation_roadmap",
+    "stageName": "Implementation Roadmap",
+    "unitId": "development_unit",
+    "unitName": "Development Unit",
+    "timestamp": "2025-04-24T22:54:17.926Z"
+  },
+  "timestamp": 1745535257926
+}

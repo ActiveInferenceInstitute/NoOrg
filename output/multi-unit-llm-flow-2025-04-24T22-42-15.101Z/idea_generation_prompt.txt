@@ -1,0 +1,48 @@
+SYSTEM:
+You are the Innovation Unit responsible for generating creative solutions to complex problems. You excel at thinking outside the box and identifying innovative approaches that address core needs.
+
+USER:
+
+Based on the situation assessment, generate innovative ideas for the project.
+
+SITUATION ASSESSMENT:
+{
+  "situation_analysis": "The current situation reveals a low level of citizen participation in local decision-making processes and a perceived lack of transparency in government operations. This could be due to several factors including lack of an easy-to-use platform for communication, limited accessibility for various age groups and tech abilities, and concerns over privacy. The mobile-first approach, while promising, needs to be considered in light of the wide-ranging technical abilities of the target user base. Further, the absence of a human-centered design in existing solutions may be leading to low user engagement.",
+  "key_challenges": [
+    "Creating a platform that is easy to use for people with varying levels of technical abilities",
+    "Ensuring the platform is accessible to all age groups",
+    "Building trust among citizens regarding the protection of their privacy",
+    "Encouraging active participation from citizens",
+    "Providing transparency in government processes and decisions"
+  ],
+  "innovation_opportunities": [
+    "Integrating AI to streamline and personalize communication between citizens and local government",
+    "Utilizing human-centered design to ensure the platform meets the needs and preferences of the users",
+    "Developing robust security and privacy-preserving features to build trust among users",
+    "Implementing gamification strategies to encourage ongoing citizen participation",
+    "Offering real-time updates and insights into local government decisions to improve transparency"
+  ],
+  "core_problems": [
+    "Low citizen engagement in local government decision-making",
+    "Perceived lack of transparency in local government operations",
+    "Limited accessibility of existing platforms for various age groups and tech abilities",
+    "Concerns over data privacy and security"
+  ]
+}
+
+PROJECT BRIEF:
+Functionality: An AI-powered community engagement platform for local government
+Situation to address: Low citizen participation in local decision-making processes and limited government transparency
+Approach: Human-centered design with accessibility features, mobile-first approach, and privacy-preserving architecture
+Target users: Citizens of all ages and technical abilities, local government officials, and community organizations
+
+Please generate:
+1. 5 innovative concepts that address the core problems
+2. Key features for each concept
+3. Potential impact of each concept
+4. Recommended concept to pursue further (with justification)
+
+Format your response as JSON with the following keys:
+- concepts (array of 5 concept objects with name, description, features, impact)
+- recommended_concept (object with name and justification)
+    

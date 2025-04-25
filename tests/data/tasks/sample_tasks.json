@@ -1,0 +1,79 @@
+{
+    "tasks": [
+        {
+            "id": "task-001",
+            "type": "computation",
+            "priority": 1,
+            "requirements": {
+                "cpu": 2,
+                "memory": "4Gi",
+                "timeout": 600
+            },
+            "metadata": {
+                "category": "data-processing",
+                "created_at": "2024-03-21T10:00:00Z",
+                "owner": "test-user"
+            }
+        },
+        {
+            "id": "task-002",
+            "type": "io",
+            "priority": 2,
+            "requirements": {
+                "cpu": 1,
+                "memory": "2Gi",
+                "timeout": 300,
+                "storage": "10Gi"
+            },
+            "metadata": {
+                "category": "data-transfer",
+                "created_at": "2024-03-21T10:05:00Z",
+                "owner": "test-user"
+            }
+        },
+        {
+            "id": "task-003",
+            "type": "gpu",
+            "priority": 3,
+            "requirements": {
+                "cpu": 4,
+                "memory": "16Gi",
+                "timeout": 1800,
+                "gpu": 1
+            },
+            "metadata": {
+                "category": "machine-learning",
+                "created_at": "2024-03-21T10:10:00Z",
+                "owner": "test-user"
+            }
+        }
+    ],
+    "workflows": [
+        {
+            "id": "workflow-001",
+            "name": "data-processing-pipeline",
+            "tasks": ["task-001", "task-002"],
+            "dependencies": {
+                "task-002": ["task-001"]
+            },
+            "metadata": {
+                "category": "data-pipeline",
+                "created_at": "2024-03-21T10:00:00Z",
+                "owner": "test-user"
+            }
+        },
+        {
+            "id": "workflow-002",
+            "name": "ml-training-pipeline",
+            "tasks": ["task-001", "task-003"],
+            "dependencies": {
+                "task-003": ["task-001"]
+            },
+            "metadata": {
+                "category": "ml-pipeline",
+                "created_at": "2024-03-21T10:05:00Z",
+                "owner": "test-user"
+            }
+        }
+    ]
+} 

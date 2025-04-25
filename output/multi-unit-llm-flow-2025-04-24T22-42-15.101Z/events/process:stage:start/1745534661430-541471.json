@@ -1,0 +1,12 @@
+{
+  "id": "1745534661430-541471",
+  "type": "process:stage:start",
+  "payload": {
+    "stageId": "concept_refinement",
+    "stageName": "Concept Refinement",
+    "unitId": "innovation_unit",
+    "unitName": "Innovation Unit",
+    "timestamp": "2025-04-24T22:44:21.430Z"
+  },
+  "timestamp": 1745534661431
+}

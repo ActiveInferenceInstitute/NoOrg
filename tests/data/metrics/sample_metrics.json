@@ -1,0 +1,118 @@
+{
+    "task_metrics": [
+        {
+            "task_id": "task-001",
+            "timestamp": "2024-03-21T10:00:00Z",
+            "metrics": {
+                "execution_time": 300.5,
+                "cpu_usage": 0.75,
+                "memory_usage": 0.5,
+                "error_rate": 0.0,
+                "throughput": 1000,
+                "latency": 50
+            }
+        },
+        {
+            "task_id": "task-002",
+            "timestamp": "2024-03-21T10:05:00Z",
+            "metrics": {
+                "execution_time": 150.2,
+                "cpu_usage": 0.25,
+                "memory_usage": 0.3,
+                "error_rate": 0.01,
+                "io_throughput": 100000000,
+                "latency": 75
+            }
+        },
+        {
+            "task_id": "task-003",
+            "timestamp": "2024-03-21T10:10:00Z",
+            "metrics": {
+                "execution_time": 900.8,
+                "cpu_usage": 0.9,
+                "memory_usage": 0.8,
+                "gpu_usage": 0.95,
+                "error_rate": 0.0,
+                "training_loss": 0.15,
+                "validation_accuracy": 0.92
+            }
+        }
+    ],
+    "resource_metrics": [
+        {
+            "pool_id": "pool-001",
+            "timestamp": "2024-03-21T10:00:00Z",
+            "metrics": {
+                "cpu_utilization": 0.25,
+                "memory_utilization": 0.25,
+                "task_queue_length": 2,
+                "active_tasks": 1
+            }
+        },
+        {
+            "pool_id": "pool-002",
+            "timestamp": "2024-03-21T10:05:00Z",
+            "metrics": {
+                "storage_utilization": 0.2,
+                "io_throughput": 50000000,
+                "task_queue_length": 1,
+                "active_tasks": 1
+            }
+        },
+        {
+            "pool_id": "pool-003",
+            "timestamp": "2024-03-21T10:10:00Z",
+            "metrics": {
+                "gpu_utilization": 0.25,
+                "memory_utilization": 0.25,
+                "gpu_memory_usage": 0.3,
+                "task_queue_length": 0,
+                "active_tasks": 1
+            }
+        }
+    ],
+    "system_metrics": [
+        {
+            "timestamp": "2024-03-21T10:00:00Z",
+            "metrics": {
+                "total_tasks": 3,
+                "active_tasks": 3,
+                "completed_tasks": 0,
+                "failed_tasks": 0,
+                "total_cpu_usage": 0.63,
+                "total_memory_usage": 0.53,
+                "total_storage_usage": 0.2,
+                "total_gpu_usage": 0.25,
+                "system_load": 0.45
+            }
+        },
+        {
+            "timestamp": "2024-03-21T10:05:00Z",
+            "metrics": {
+                "total_tasks": 3,
+                "active_tasks": 2,
+                "completed_tasks": 1,
+                "failed_tasks": 0,
+                "total_cpu_usage": 0.58,
+                "total_memory_usage": 0.55,
+                "total_storage_usage": 0.2,
+                "total_gpu_usage": 0.25,
+                "system_load": 0.42
+            }
+        },
+        {
+            "timestamp": "2024-03-21T10:10:00Z",
+            "metrics": {
+                "total_tasks": 3,
+                "active_tasks": 1,
+                "completed_tasks": 2,
+                "failed_tasks": 0,
+                "total_cpu_usage": 0.9,
+                "total_memory_usage": 0.8,
+                "total_storage_usage": 0.2,
+                "total_gpu_usage": 0.95,
+                "system_load": 0.85
+            }
+        }
+    ]
+} 

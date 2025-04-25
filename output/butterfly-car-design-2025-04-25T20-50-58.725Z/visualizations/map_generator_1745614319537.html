@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map Visualization</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    #map_map_generator_1745614319537 { height: 500px; width: 100%; }
+    .header { padding: 10px 20px; background: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Location Map</h1>
+  </div>
+  <div id="map_map_generator_1745614319537"></div>
+  <script>
+    const map = L.map('map_map_generator_1745614319537').setView([40.7128, -74.0060], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    // Add markers
+    L.marker([40.6697, -73.9645]).addTo(map).bindPopup("Library 1");
+      L.marker([40.728300000000004, -73.9581]).addTo(map).bindPopup("Government Building 2");
+      L.marker([40.7382, -74.0377]).addTo(map).bindPopup("School 3");
+      L.marker([40.682900000000004, -73.9612]).addTo(map).bindPopup("Library 4");
+      L.marker([40.7117, -73.9648]).addTo(map).bindPopup("Community Center 5");
+      L.marker([40.6781, -74.0151]).addTo(map).bindPopup("Park 6");
+      L.marker([40.703, -73.9846]).addTo(map).bindPopup("Community Center 7");
+      L.marker([40.6739, -74.0443]).addTo(map).bindPopup("Community Center 8");
+      L.marker([40.7295, -73.9615]).addTo(map).bindPopup("School 9");
+      L.marker([40.7626, -73.9654]).addTo(map).bindPopup("School 10");
+      L.marker([40.6694, -73.9867]).addTo(map).bindPopup("Park 11");
+      L.marker([40.7065, -74.0325]).addTo(map).bindPopup("Library 12");
+  </script>
+</body>
+</html>

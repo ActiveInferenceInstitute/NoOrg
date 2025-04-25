@@ -1,0 +1,11 @@
+{
+  "total_units": 9,
+  "total_relationships": 15,
+  "relationships_by_type": {
+    "hierarchy": 5,
+    "peer": 2,
+    "service_provider": 3,
+    "custom": 4,
+    "advisor": 1
+  }
+}

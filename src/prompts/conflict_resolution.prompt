@@ -1,0 +1,7 @@
+There is a conflict in the shared state that needs to be resolved:
+Conflict: {{conflict_description}}
+Agent A ({{agent_a_name}}) perspective: {{agent_a_perspective}}
+Agent B ({{agent_b_name}}) perspective: {{agent_b_perspective}}
+Please analyze both perspectives, identify the root cause of the conflict,
+and propose a resolution that considers the overall goal: {{goal}}
+Your resolution should be fair, logical, and aim to maximize progress toward the goal.

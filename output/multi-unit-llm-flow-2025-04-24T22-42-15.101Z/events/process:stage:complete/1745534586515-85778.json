@@ -1,0 +1,15 @@
+{
+  "id": "1745534586515-85778",
+  "type": "process:stage:complete",
+  "payload": {
+    "stageId": "idea_generation",
+    "stageName": "Idea Generation",
+    "unitId": "innovation_unit",
+    "unitName": "Innovation Unit",
+    "duration": 38574,
+    "tokenUsage": 1391,
+    "cost": 0.06666,
+    "timestamp": "2025-04-24T22:43:06.515Z"
+  },
+  "timestamp": 1745534586515
+}

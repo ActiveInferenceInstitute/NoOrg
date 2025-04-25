@@ -1,0 +1,121 @@
+=== Relationship Management Example Log - 2025-04-24T22:15:17.082Z ===
+
+INFO: Starting Relationship Management Example
+INFO: Initializing relationship manager with units
+INFO: Initial organizational units created
+INFO: Creating hierarchical relationships
+Created relationship: hierarchy from executive to research
+Created relationship: hierarchy from executive to development
+Created relationship: hierarchy from research to ai_team
+Created relationship: hierarchy from development to platform_team
+INFO: Creating peer relationships
+Created relationship: peer from ai_team to platform_team
+INFO: Creating support relationships
+Created relationship: service_provider from security to research
+Created relationship: service_provider from security to development
+Created relationship: service_provider from infrastructure to ai_team
+Created relationship: service_provider from infrastructure to platform_team
+INFO: Creating project relationships
+Created relationship: custom from project_alpha to ai_team
+Created relationship: custom from project_alpha to platform_team
+Created relationship: custom from project_alpha to security
+INFO: Adding a new unit dynamically
+Created relationship: hierarchy from research to data_science
+Created relationship: peer from data_science to ai_team
+Created relationship: custom from project_alpha to data_science
+INFO: Setting up resource permissions
+INFO: Querying relationships to demonstrate API capabilities
+INFO: Executive hierarchical structure:
+INFO: [
+  {
+    "id": "research",
+    "name": "Research Division",
+    "type": "business_unit"
+  },
+  {
+    "id": "ai_team",
+    "name": "AI Team",
+    "type": "team"
+  },
+  {
+    "id": "data_science",
+    "name": "Data Science Team",
+    "type": "team"
+  },
+  {
+    "id": "development",
+    "name": "Development Division",
+    "type": "business_unit"
+  },
+  {
+    "id": "platform_team",
+    "name": "Platform Team",
+    "type": "team"
+  }
+]
+INFO: AI Team peer relationships:
+INFO: [
+  {
+    "id": "33f22933-3a9c-4bb7-a310-b6b8319a2015",
+    "sourceUnitId": "ai_team",
+    "targetUnitId": "platform_team",
+    "type": "peer",
+    "permissions": [
+      {
+        "resource": "research_data",
+        "level": "write",
+        "conditions": {
+          "description": "Access to research datasets",
+          "expiration": "2025-07-23T22:15:17.103Z"
+        }
+      }
+    ],
+    "metadata": {
+      "collaboration_level": "high"
+    }
+  }
+]
+INFO: Units involved in Project Alpha:
+INFO: [
+  {
+    "id": "ai_team",
+    "name": "AI Team",
+    "type": "team"
+  },
+  {
+    "id": "platform_team",
+    "name": "Platform Team",
+    "type": "team"
+  },
+  {
+    "id": "security",
+    "name": "Security Office",
+    "type": "support"
+  },
+  {
+    "id": "data_science",
+    "name": "Data Science Team",
+    "type": "team"
+  }
+]
+INFO: AI Team can write to research data: false
+INFO: Platform team can access research data: false
+INFO: Modifying relationships to demonstrate dynamic updates
+INFO: Deleted security-research support relationship
+Created relationship: advisor from security to research
+INFO: Created new security-research advisory relationship
+INFO: Generating final relationship graph
+INFO: Example summary:
+INFO: {
+  "total_units": 9,
+  "total_relationships": 15,
+  "relationships_by_type": {
+    "hierarchy": 5,
+    "peer": 2,
+    "service_provider": 3,
+    "custom": 4,
+    "advisor": 1
+  }
+}
+INFO: Generated human-readable artifacts (markdown and HTML visualizations)
+INFO: Example completed. Output saved to: output/relationship-management-example-2025-04-24T22-15-17
