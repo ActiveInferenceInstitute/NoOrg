@@ -10,7 +10,101 @@ This framework provides the core building blocks for creating systems where mult
 
 ### Core Components
 
-![Architecture Diagram](docs/architecture.png)
+```mermaid
+graph TD
+    A[NoOrg Framework] --> B(Core);
+    A --> C(Agents);
+    A --> D(Examples);
+    A --> E(Utils);
+    A --> F(Docs);
+    A --> G(Tests);
+
+    B --> B1(Events);
+    B --> B2(Integration);
+    B --> B3(Messaging);
+    B --> B4(Monitoring);
+    B --> B5(MultiAgent);
+    B --> B6(Storage);
+    B --> B7(Units);
+
+    B2 --> B2a(Patterns);
+
+    C --> C1(Architectures);
+    C --> C2(Communication);
+    C --> C3(Discovery);
+    C --> C4(Orchestration);
+    C --> C5(Relationships);
+    C --> C6(Workflow);
+
+    B7 --> B7a(Discovery);
+    B7 --> B7b(Orchestration);
+    B7 --> B7c(Relationships);
+    B7 --> B7d(Workflow);
+
+    subgraph "High-Level Structure"
+        A
+    end
+
+    subgraph "Core Components"
+        B
+        B1
+        B2
+        B2a
+        B3
+        B4
+        B5
+        B6
+        B7
+        B7a
+        B7b
+        B7c
+        B7d
+    end
+
+    subgraph "Agent Components"
+        C
+        C1
+        C2
+        C3
+        C4
+        C5
+        C6
+    end
+
+    subgraph "Supporting Modules"
+        D
+        E
+        F
+        G
+    end
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:2px
+    style D fill:#cfc,stroke:#333,stroke-width:1px
+    style E fill:#cfc,stroke:#333,stroke-width:1px
+    style F fill:#ffc,stroke:#333,stroke-width:1px
+    style G fill:#ffc,stroke:#333,stroke-width:1px
+
+    style B1 fill:#fcf,stroke:#666,stroke-width:1px
+    style B2 fill:#fcf,stroke:#666,stroke-width:1px
+    style B2a fill:#fdf,stroke:#999,stroke-width:1px
+    style B3 fill:#fcf,stroke:#666,stroke-width:1px
+    style B4 fill:#fcf,stroke:#666,stroke-width:1px
+    style B5 fill:#fcf,stroke:#666,stroke-width:1px
+    style B6 fill:#fcf,stroke:#666,stroke-width:1px
+    style B7 fill:#fcf,stroke:#666,stroke-width:1px
+    style B7a fill:#fdf,stroke:#999,stroke-width:1px
+    style B7b fill:#fdf,stroke:#999,stroke-width:1px
+    style B7c fill:#fdf,stroke:#999,stroke-width:1px
+    style B7d fill:#fdf,stroke:#999,stroke-width:1px
+
+    style C1 fill:#ddf,stroke:#666,stroke-width:1px
+    style C2 fill:#ddf,stroke:#666,stroke-width:1px
+    style C3 fill:#ddf,stroke:#666,stroke-width:1px
+    style C4 fill:#ddf,stroke:#666,stroke-width:1px
+    style C5 fill:#ddf,stroke:#666,stroke-width:1px
+    style C6 fill:#ddf,stroke:#666,stroke-width:1px
+```
 
 The framework consists of several key components:
 
