@@ -1,0 +1,148 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    '@typescript-eslint/recommended-requiring-type-checking',
+    'prettier'
+  ],
+  plugins: ['@typescript-eslint', 'prettier', 'security', 'import'],
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    project: './tsconfig.json',
+    ecmaFeatures: {
+      jsx: false
+    }
+  },
+  env: {
+    node: true,
+    es6: true,
+    jest: true
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: './tsconfig.json'
+      },
+      node: {
+        extensions: ['.js', '.ts', '.json']
+      }
+    }
+  },
+  rules: {
+    // Prettier
+    'prettier/prettier': 'error',
+
+    // TypeScript
+    '@typescript-eslint/no-unused-vars': ['error', {
+      argsIgnorePattern: '^_',
+      varsIgnorePattern: '^_',
+      destructuredArrayIgnorePattern: '^_'
+    }],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-non-null-assertion': 'warn',
+    '@typescript-eslint/prefer-optional-chain': 'error',
+    '@typescript-eslint/prefer-nullish-coalescing': 'error',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+    '@typescript-eslint/no-inferrable-types': 'error',
+    '@typescript-eslint/adjacent-overload-signatures': 'error',
+    '@typescript-eslint/array-type': 'error',
+    '@typescript-eslint/ban-types': 'error',
+    '@typescript-eslint/consistent-type-assertions': 'error',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/prefer-for-of': 'error',
+    '@typescript-eslint/prefer-function-type': 'error',
+    '@typescript-eslint/prefer-includes': 'error',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/prefer-ts-expect-error': 'error',
+    '@typescript-eslint/unified-signatures': 'error',
+
+    // JavaScript
+    'no-console': 'warn',
+    'no-debugger': 'error',
+    'prefer-const': 'error',
+    'no-var': 'error',
+    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+    'no-trailing-spaces': 'error',
+    'no-unneeded-ternary': 'error',
+    'no-nested-ternary': 'error',
+    'no-duplicate-imports': 'error',
+    'object-shorthand': 'error',
+    'prefer-arrow-callback': 'error',
+    'prefer-template': 'error',
+    'template-curly-spacing': 'error',
+    'arrow-spacing': 'error',
+    'comma-dangle': ['error', 'always-multiline'],
+    'comma-spacing': 'error',
+    'comma-style': 'error',
+    'computed-property-spacing': 'error',
+    'eol-last': 'error',
+    'func-call-spacing': 'error',
+    'key-spacing': 'error',
+    'keyword-spacing': 'error',
+    'multiline-ternary': ['error', 'always-multiline'],
+    'new-cap': 'error',
+    'new-parens': 'error',
+    'no-array-constructor': 'error',
+    'no-new-object': 'error',
+    'no-new-wrappers': 'error',
+    'no-restricted-globals': ['error', 'event', 'name', 'location', 'history', 'status'],
+    'no-restricted-syntax': ['error', 'WithStatement'],
+    'no-unneeded-ternary': 'error',
+    'no-whitespace-before-property': 'error',
+    'object-curly-newline': ['error', { multiline: true }],
+    'object-curly-spacing': ['error', 'always'],
+    'object-property-newline': 'error',
+    'operator-linebreak': ['error', 'after'],
+    'padded-blocks': ['error', 'never'],
+    'quote-props': ['error', 'as-needed'],
+    'quotes': ['error', 'single', { avoidEscape: true }],
+    'rest-spread-spacing': 'error',
+    'semi': 'error',
+    'semi-spacing': 'error',
+    'semi-style': 'error',
+    'space-before-blocks': 'error',
+    'space-before-function-paren': ['error', { anonymous: 'always', named: 'never' }],
+    'space-in-parens': 'error',
+    'space-infix-ops': 'error',
+    'space-unary-ops': 'error',
+    'spaced-comment': 'error',
+    'switch-colon-spacing': 'error',
+    'template-tag-spacing': 'error',
+    'unicode-bom': 'error',
+    'wrap-iife': 'error',
+    'yield-star-spacing': 'error',
+
+    // Security
+    'security/detect-object-injection': 'warn',
+    'security/detect-non-literal-fs-filename': 'warn',
+    'security/detect-possible-timing-attacks': 'warn',
+    'security/detect-no-csrf-before-method-override': 'warn',
+    'security/detect-unsafe-regex': 'warn',
+
+    // Import
+    'import/order': ['error', {
+      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      'newlines-between': 'always'
+    }],
+    'import/no-duplicates': 'error',
+    'import/no-unused-modules': 'warn',
+    'import/no-deprecated': 'warn',
+    'import/no-unresolved': 'error'
+  },
+  ignorePatterns: [
+    'dist/',
+    'node_modules/',
+    'coverage/',
+    'logs/',
+    'output/',
+    '*.js',
+    '*.d.ts',
+    '**/*.test.ts',
+    '**/*.spec.ts'
+  ]
+};

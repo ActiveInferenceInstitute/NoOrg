@@ -26,7 +26,9 @@ async function runBasicCoordinationExample() {
       specialty: 'information gathering',
       reliability: 0.95
     },
-    preferredModel: 'o3-mini'
+    preferredModel: 'o3-mini',
+    lastActive: Date.now(),
+    createdAt: Date.now()
   };
   
   const plannerAgent: Omit<Agent, 'id'> = {
@@ -39,7 +41,9 @@ async function runBasicCoordinationExample() {
       specialty: 'task planning',
       reliability: 0.9
     },
-    preferredModel: 'o3-mini'
+    preferredModel: 'o3-mini',
+    lastActive: Date.now(),
+    createdAt: Date.now()
   };
   
   const writerAgent: Omit<Agent, 'id'> = {
@@ -52,7 +56,9 @@ async function runBasicCoordinationExample() {
       specialty: 'content creation',
       reliability: 0.85
     },
-    preferredModel: 'o3-mini'
+    preferredModel: 'o3-mini',
+    lastActive: Date.now(),
+    createdAt: Date.now()
   };
   
   // Register agents with the coordinator
@@ -67,14 +73,14 @@ async function runBasicCoordinationExample() {
   
   // Create a complex task that requires multiple agents
   const taskId = await coordinator.createTask({
-    type: 'research_and_report',
-    title: 'Research emerging AI trends and create a summary report',
+    name: 'Research emerging AI trends and create a summary report',
     description: `
       1. Research the latest trends in artificial intelligence
       2. Identify key innovations and developments
       3. Analyze potential impacts on various industries
       4. Create a structured report summarizing findings
     `,
+    type: 'research_and_report',
     priority: 'high',
     metadata: {
       requiredCapabilities: ['research', 'summarization', 'text-generation'],
@@ -97,16 +103,16 @@ async function runBasicCoordinationExample() {
   const task = await coordinator.getTask(taskId);
   console.log(`Task status: ${task?.status}`);
   
-  if (task?.result) {
+  if (task?.results) {
     console.log('Task result:');
     console.log('-'.repeat(50));
-    console.log(task.result.data);
+    console.log(task.results);
     console.log('-'.repeat(50));
-    
-    if (task.result.metrics) {
+
+    if (task.processingTime) {
       console.log('Task metrics:');
-      console.log(`- Duration: ${task.result.metrics.duration}ms`);
-      console.log(`- Token usage: ${task.result.metrics.tokenUsage?.total || 'N/A'}`);
+      console.log(`- Duration: ${task.processingTime}ms`);
+      console.log(`- Token usage: N/A`);
     }
   }
   

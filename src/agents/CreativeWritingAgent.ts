@@ -245,11 +245,11 @@ export class CreativeWritingAgent extends AbstractAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.preferredModel || 'o3-mini', // Use preferredModel from base class
                 temperature,
-                max_tokens: maxTokens
+                maxTokens: maxTokens
             });
             
             // Process the result
-            const generatedContent = response.content?.trim() || "";
+            const generatedContent = response.choices[0].message.content?.trim() || "";
             
             // Extract title and sections if blog post format
             let title: string | undefined;
@@ -359,10 +359,10 @@ export class CreativeWritingAgent extends AbstractAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.preferredModel || 'o3-mini', 
                 temperature: 0.5, // Lower temperature for refinement
-                max_tokens: Math.max(1000, originalContent.length * 2) // Allow ample space
+                maxTokens: Math.max(1000, originalContent.length * 2) // Allow ample space
             });
 
-            const responseContent = response.content?.trim() || "";
+            const responseContent = response.choices[0].message.content?.trim() || "";
 
             // Extract changes and refined content
             let refinedContent = responseContent;
@@ -457,10 +457,10 @@ export class CreativeWritingAgent extends AbstractAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.preferredModel || 'o3-mini',
                 temperature,
-                max_tokens: maxTokens
+                maxTokens: maxTokens
             });
 
-            const generatedContent = response.content?.trim() || "";
+            const generatedContent = response.choices[0].message.content?.trim() || "";
             const processingTime = Date.now() - startTime;
 
             // Heuristic for confidence: based on response length relative to request?

@@ -119,7 +119,7 @@ Format as JSON array. Example:
                 temperature: 0.7,
                 systemPrompt: `You are a data generation expert that creates realistic, domain-appropriate sample data.`
             });
-            const responseContent = typeof response === 'string' ? response : response.content;
+            const responseContent = typeof response === 'string' ? response : response.choices[0].message.content;
             // Parse the JSON from the response
             let jsonStr = responseContent;
             if (jsonStr.includes('```json')) {
@@ -202,7 +202,7 @@ Example format (but with metrics relevant to ${this.context.DOMAIN}):
                 temperature: 0.7,
                 systemPrompt: `You are a domain expert in ${this.context.DOMAIN} who creates realistic sensor data.`
             });
-            const responseContent = typeof response === 'string' ? response : response.content;
+            const responseContent = typeof response === 'string' ? response : response.choices[0].message.content;
             // Parse the JSON from the response
             let jsonStr = responseContent;
             if (jsonStr.includes('```json')) {
@@ -278,7 +278,7 @@ ${JSON.stringify(responseData.locations.map(l => l.readings), null, 2)}`;
                 temperature: 0.7,
                 systemPrompt: `You are a data analyst specializing in ${this.context.DOMAIN}. Provide concise, insightful summaries of data.`
             });
-            const responseContent = typeof response === 'string' ? response : response.content;
+            const responseContent = typeof response === 'string' ? response : response.choices[0].message.content;
             responseData.analysis_summary = responseContent.trim();
         }
         catch (error) {
@@ -310,7 +310,7 @@ Return only a JSON configuration object that describes the visualization.`;
                 temperature: 0.7,
                 systemPrompt: `You are a data visualization expert specializing in ${this.context.DOMAIN} data.`
             });
-            const responseContent = typeof response === 'string' ? response : response.content;
+            const responseContent = typeof response === 'string' ? response : response.choices[0].message.content;
             // Parse the JSON from the response
             let jsonStr = responseContent;
             if (jsonStr.includes('```json')) {

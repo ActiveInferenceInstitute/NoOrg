@@ -112,25 +112,116 @@ function createLogger(name: string, level: string, options: { console: boolean, 
   return new FileLogger(options.file);
 }
 
-// Define the agent interfaces
+// Define the agent interfaces with enhanced capabilities
 interface Agent {
   id: string;
   name: string;
   unitId: string;
   unitName: string;
   description: string;
+  capabilities: AgentCapability[];
+  cognitiveModel: CognitiveModel;
+  communicationProtocol: CommunicationProtocol;
+  securityProfile: SecurityProfile;
+  performanceMetrics: PerformanceMetrics;
   process: (input: any, context: WorkflowContext) => Promise<any>;
+  initialize?: (context: WorkflowContext) => Promise<void>;
+  cleanup?: (context: WorkflowContext) => Promise<void>;
+  selfDiagnose?: () => Promise<HealthStatus>;
+  adapt?: (feedback: AdaptationFeedback) => Promise<void>;
 }
 
-// Agent implementations
+interface AgentCapability {
+  type: 'reasoning' | 'perception' | 'action' | 'communication' | 'learning' | 'planning';
+  domain: string;
+  proficiency: number; // 0-1 scale
+  specializations: string[];
+}
+
+interface CognitiveModel {
+  architecture: 'reactive' | 'deliberative' | 'hybrid' | 'cognitive' | 'connectionist';
+  reasoningType: 'deductive' | 'inductive' | 'abductive' | 'analogical' | 'case-based';
+  memoryTypes: ('episodic' | 'semantic' | 'procedural' | 'working')[];
+  attentionMechanisms: ('focused' | 'divided' | 'selective' | 'sustained')[];
+  decisionMaking: 'utility-based' | 'rule-based' | 'fuzzy-logic' | 'bayesian' | 'neural';
+}
+
+interface CommunicationProtocol {
+  standard: 'FIPA' | 'KQML' | 'ACL' | 'custom';
+  ontology: string[];
+  messageTypes: ('request' | 'inform' | 'query' | 'propose' | 'accept' | 'reject')[];
+  coordinationPatterns: ('contract-net' | 'blackboard' | 'market' | 'hierarchical')[];
+}
+
+interface SecurityProfile {
+  encryptionLevel: 'none' | 'symmetric' | 'asymmetric' | 'homomorphic';
+  authenticationMethod: 'none' | 'password' | 'certificate' | 'zero-knowledge';
+  accessControl: 'role-based' | 'attribute-based' | 'capability-based' | 'mandatory';
+  auditLogging: boolean;
+  intrusionDetection: boolean;
+}
+
+interface PerformanceMetrics {
+  throughput: number; // operations per second
+  latency: number; // milliseconds
+  accuracy: number; // 0-1 scale
+  reliability: number; // uptime percentage
+  adaptability: number; // learning rate
+}
+
+interface HealthStatus {
+  status: 'healthy' | 'degraded' | 'critical' | 'offline';
+  metrics: Record<string, number>;
+  issues: string[];
+  recommendations: string[];
+}
+
+interface AdaptationFeedback {
+  performanceScore: number;
+  userSatisfaction: number;
+  errorRate: number;
+  suggestions: string[];
+}
+
+interface ConversationEntry {
+  timestamp: string;
+  input: any;
+  output: any;
+  metadata: {
+    responseTime: number;
+    tokenCount: number;
+    confidenceScore: number;
+    errorRate: number;
+  };
+}
+
+interface AdaptationState {
+  learningRate: number;
+  explorationRate: number;
+  confidenceThreshold: number;
+  lastUpdated: string;
+}
+
+// Agent implementations with enhanced capabilities
 class LLMAgent implements Agent {
   id: string;
   name: string;
   unitId: string;
   unitName: string;
   description: string;
+  capabilities: AgentCapability[];
+  cognitiveModel: CognitiveModel;
+  communicationProtocol: CommunicationProtocol;
+  securityProfile: SecurityProfile;
+  performanceMetrics: PerformanceMetrics;
   systemPrompt: string;
   private llm: OpenAIClient;
+  private conversationHistory: ConversationEntry[] = [];
+  private adaptationState: AdaptationState = {
+    learningRate: 0.001,
+    explorationRate: 0.1,
+    confidenceThreshold: 0.8
+  };
   
   constructor(config: {
     id: string;
@@ -139,6 +230,11 @@ class LLMAgent implements Agent {
     unitName: string;
     description: string;
     systemPrompt: string;
+    capabilities?: AgentCapability[];
+    cognitiveModel?: Partial<CognitiveModel>;
+    communicationProtocol?: Partial<CommunicationProtocol>;
+    securityProfile?: Partial<SecurityProfile>;
+    performanceMetrics?: Partial<PerformanceMetrics>;
   }) {
     this.id = config.id;
     this.name = config.name;
@@ -146,15 +242,69 @@ class LLMAgent implements Agent {
     this.unitName = config.unitName;
     this.description = config.description;
     this.systemPrompt = config.systemPrompt;
-    
-    // Initialize LLM client
+
+    // Initialize enhanced capabilities with defaults
+    this.capabilities = config.capabilities || [
+      {
+        type: 'reasoning',
+        domain: 'governance',
+        proficiency: 0.85,
+        specializations: ['legal-analysis', 'policy-recommendation', 'strategic-planning']
+      },
+      {
+        type: 'communication',
+        domain: 'natural-language',
+        proficiency: 0.90,
+        specializations: ['technical-writing', 'stakeholder-communication', 'documentation']
+      }
+    ];
+
+    this.cognitiveModel = {
+      architecture: 'hybrid',
+      reasoningType: 'abductive',
+      memoryTypes: ['episodic', 'semantic', 'working'],
+      attentionMechanisms: ['focused', 'selective'],
+      decisionMaking: 'bayesian',
+      ...config.cognitiveModel
+    };
+
+    this.communicationProtocol = {
+      standard: 'custom',
+      ontology: ['governance', 'legal', 'blockchain', 'dao'],
+      messageTypes: ['request', 'inform', 'query', 'propose'],
+      coordinationPatterns: ['contract-net', 'blackboard'],
+      ...config.communicationProtocol
+    };
+
+    this.securityProfile = {
+      encryptionLevel: 'asymmetric',
+      authenticationMethod: 'certificate',
+      accessControl: 'role-based',
+      auditLogging: true,
+      intrusionDetection: true,
+      ...config.securityProfile
+    };
+
+    this.performanceMetrics = {
+      throughput: 10, // operations per second
+      latency: 150, // milliseconds
+      accuracy: 0.92, // 92% accuracy
+      reliability: 0.98, // 98% uptime
+      adaptability: 0.15, // learning rate
+      ...config.performanceMetrics
+    };
+
+    // Initialize LLM client with enhanced configuration
     this.llm = new OpenAIClient(process.env.OPENAI_API_KEY || '');
     // this.llm = new OpenAIClient({
     //   apiKey: process.env.OPENAI_API_KEY || '',
     //   defaultOptions: {
     //     model: 'gpt-4o',
     //     temperature: 0.7,
-    //     max_tokens: 2000
+    //     max_tokens: 2000,
+    //     top_p: 0.9,
+    //     frequency_penalty: 0.0,
+    //     presence_penalty: 0.0
     //   }
     // });
   }
@@ -229,6 +379,110 @@ class LLMAgent implements Agent {
     } catch (error) {
       context.logger.error(`Error in LLMAgent ${this.name}: ${error}`);
       throw error;
+    }
+  }
+
+  async initialize(context: WorkflowContext): Promise<void> {
+    context.logger.info(`Initializing LLMAgent ${this.name}`);
+
+    // Validate LLM client connectivity
+    try {
+      await this.llm.createChatCompletion([
+        { role: 'system', content: 'Test initialization' },
+        { role: 'user', content: 'Hello' }
+      ], { temperature: 0.1, max_tokens: 10 });
+    } catch (error) {
+      throw new Error(`LLM initialization failed: ${error.message}`);
+    }
+
+    context.logger.info(`LLMAgent ${this.name} initialized successfully`);
+  }
+
+  async cleanup(context: WorkflowContext): Promise<void> {
+    context.logger.info(`Cleaning up LLMAgent ${this.name}`);
+
+    // Clear conversation history
+    this.conversationHistory = [];
+
+    // Reset adaptation state
+    this.adaptationState = {
+      learningRate: 0.001,
+      explorationRate: 0.1,
+      confidenceThreshold: 0.8,
+      lastUpdated: new Date().toISOString()
+    };
+
+    context.logger.info(`LLMAgent ${this.name} cleanup completed`);
+  }
+
+  async selfDiagnose(): Promise<HealthStatus> {
+    const issues: string[] = [];
+    const recommendations: string[] = [];
+
+    // Check LLM connectivity
+    try {
+      await this.llm.createChatCompletion([
+        { role: 'user', content: 'Health check' }
+      ], { temperature: 0.1, max_tokens: 5 });
+    } catch (error) {
+      issues.push('LLM connectivity issue');
+      recommendations.push('Check API key and network connectivity');
+    }
+
+    // Check conversation history size
+    if (this.conversationHistory.length > 1000) {
+      issues.push('Large conversation history');
+      recommendations.push('Consider conversation history cleanup');
+    }
+
+    // Check performance metrics
+    if (this.performanceMetrics.accuracy < 0.8) {
+      issues.push('Low accuracy detected');
+      recommendations.push('Review recent responses and adjust prompts');
+    }
+
+    const status: HealthStatus = {
+      status: issues.length === 0 ? 'healthy' : issues.length < 3 ? 'degraded' : 'critical',
+      metrics: {
+        accuracy: this.performanceMetrics.accuracy,
+        reliability: this.performanceMetrics.reliability,
+        responseTime: this.performanceMetrics.latency,
+        conversationCount: this.conversationHistory.length
+      },
+      issues,
+      recommendations
+    };
+
+    return status;
+  }
+
+  async adapt(feedback: AdaptationFeedback): Promise<void> {
+    // Adaptive learning based on feedback
+    const { performanceScore, userSatisfaction, errorRate } = feedback;
+
+    // Update adaptation state based on feedback
+    if (performanceScore < 0.7) {
+      this.adaptationState.learningRate *= 1.1; // Increase learning rate
+      this.adaptationState.confidenceThreshold *= 0.95; // Lower confidence threshold
+    } else if (performanceScore > 0.9) {
+      this.adaptationState.learningRate *= 0.9; // Decrease learning rate
+      this.adaptationState.confidenceThreshold *= 1.05; // Increase confidence threshold
+    }
+
+    // Adjust exploration rate based on error rate
+    if (errorRate > 0.1) {
+      this.adaptationState.explorationRate = Math.min(0.3, this.adaptationState.explorationRate * 1.2);
+    } else {
+      this.adaptationState.explorationRate = Math.max(0.05, this.adaptationState.explorationRate * 0.9);
+    }
+
+    this.adaptationState.lastUpdated = new Date().toISOString();
+
+    // Apply adaptations to system prompt or model parameters
+    if (feedback.suggestions.length > 0) {
+      // Incorporate user suggestions into system prompt
+      const suggestionText = feedback.suggestions.join(' ');
+      this.systemPrompt += `\n\nAdditional guidance based on feedback: ${suggestionText}`;
     }
   }
   

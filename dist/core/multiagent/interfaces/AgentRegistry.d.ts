@@ -36,4 +36,22 @@ export interface AgentRegistry {
      * @returns Array of agents
      */
     listAgents(filter?: AgentFilter): Promise<AgentType[]>;
+    /**
+     * Find agents by capability
+     * @param capability Capability to search for
+     * @returns Array of agents with the specified capability
+     */
+    findAgentsByCapability(capability: string): Promise<AgentType[]>;
+    /**
+     * Find agents by type
+     * @param type Agent type to search for
+     * @returns Array of agents of the specified type
+     */
+    findAgentsByType(type: string): Promise<AgentType[]>;
+    /**
+     * Get capabilities for a specific agent
+     * @param agentId Agent ID
+     * @returns Array of capabilities
+     */
+    getAgentCapabilities(agentId: string): Promise<string[]>;
 }

@@ -190,13 +190,13 @@ class HRAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.4,
-                max_tokens: 2000
+                maxTokens: 2000
             });
             // Extract structured information from the response
             const extractionPrompt = `
         Extract the following information from this job description in JSON format:
         
-        JOB DESCRIPTION: ${response.content}
+        JOB DESCRIPTION: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -213,10 +213,10 @@ class HRAgent {
             const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.1,
-                max_tokens: 1500
+                maxTokens: 1500
             });
             // Parse the structured result
-            const result = JSON.parse(extractionResponse.content);
+            const result = JSON.parse(extractionResponse.choices[0].message.content);
             // Cache the result
             this.hrCache.set(cacheKey, {
                 query: jobTitle,
@@ -289,13 +289,13 @@ class HRAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.5,
-                max_tokens: 3000
+                maxTokens: 3000
             });
             // Extract structured information from the response
             const extractionPrompt = `
         Extract the following information from these interview questions in JSON format:
         
-        INTERVIEW CONTENT: ${response.content}
+        INTERVIEW CONTENT: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -315,10 +315,10 @@ class HRAgent {
             const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.1,
-                max_tokens: 2500
+                maxTokens: 2500
             });
             // Parse the structured result
-            const result = JSON.parse(extractionResponse.content);
+            const result = JSON.parse(extractionResponse.choices[0].message.content);
             // Limit to the requested number of questions
             if (result.questions.length > numberOfQuestions) {
                 result.questions = result.questions.slice(0, numberOfQuestions);
@@ -379,13 +379,13 @@ class HRAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.4,
-                max_tokens: 3000
+                maxTokens: 3000
             });
             // Extract structured information from the response
             const extractionPrompt = `
         Extract the following information from this onboarding plan in JSON format:
         
-        ONBOARDING PLAN: ${response.content}
+        ONBOARDING PLAN: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -433,10 +433,10 @@ class HRAgent {
             const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.1,
-                max_tokens: 2500
+                maxTokens: 2500
             });
             // Parse the structured result
-            const result = JSON.parse(extractionResponse.content);
+            const result = JSON.parse(extractionResponse.choices[0].message.content);
             // Update agent status
             this.updateStatus('available');
             return {

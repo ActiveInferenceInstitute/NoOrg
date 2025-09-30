@@ -194,11 +194,11 @@ export class MarketingAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.7,
-        max_tokens: 2000
+        maxTokens: 2000
       });
       
       // Process the results
-      const strategyContent = response.content;
+      const strategyContent = response.choices[0].message.content;
       
       // Extract structured information from the response
       const extractionPrompt = `
@@ -221,11 +221,11 @@ export class MarketingAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 1000
+        maxTokens: 1000
       });
       
       // Parse the structured result
-      const structuredResult = JSON.parse(extractionResponse.content);
+      const structuredResult = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Add the full strategy text
       structuredResult.fullStrategy = strategyContent;
@@ -299,14 +299,14 @@ export class MarketingAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.6,
-        max_tokens: depth === 'comprehensive' ? 2500 : (depth === 'detailed' ? 1500 : 800)
+        maxTokens: depth === 'comprehensive' ? 2500 : (depth === 'detailed' ? 1500 : 800)
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this audience analysis in JSON format:
         
-        ANALYSIS: ${response.content}
+        ANALYSIS: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -337,11 +337,11 @@ export class MarketingAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 1000
+        maxTokens: 1000
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Update agent status
       this.updateStatus('available');

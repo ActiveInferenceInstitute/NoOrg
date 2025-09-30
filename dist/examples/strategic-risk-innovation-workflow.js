@@ -156,7 +156,7 @@ class OrganizationalWorkflowManager {
                 const taskId = await this.taskManager.createTask({
                     id: (0, uuid_1.v4)(),
                     type: agent.type,
-                    title: `${step.name} - ${agent.type}`,
+                    name: `${step.name} - ${agent.type}`,
                     description: taskDescription,
                     status: 'pending',
                     priority: 'medium',
@@ -376,7 +376,7 @@ async function runStrategicInnovationWorkflow() {
     // Initialize the core components
     const agentRegistry = new AgentRegistry_1.AgentRegistry();
     const taskManager = new TaskManager_1.TaskManager();
-    const sharedStateManager = new SharedStateManager_1.SharedStateManager();
+    const sharedStateManager = SharedStateManager_1.SharedStateManager.getInstance();
     // Create the coordinator with the required components
     const coordinator = new MultiAgentCoordinator_1.MultiAgentCoordinator('StrategicInnovationWorkflow', {
         agentRegistry,

@@ -219,14 +219,14 @@ export class CustomerSupportAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.4,
-        max_tokens: 2000
+        maxTokens: 2000
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this customer support response in JSON format:
         
-        SUPPORT RESPONSE: ${response.content}
+        SUPPORT RESPONSE: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -255,11 +255,11 @@ export class CustomerSupportAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 1500
+        maxTokens: 1500
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.responseCache.set(cacheKey, {
@@ -373,14 +373,14 @@ export class CustomerSupportAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.3,
-        max_tokens: 3000
+        maxTokens: 3000
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this troubleshooting guide in JSON format:
         
-        TROUBLESHOOTING GUIDE: ${response.content}
+        TROUBLESHOOTING GUIDE: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -420,11 +420,11 @@ export class CustomerSupportAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 2500
+        maxTokens: 2500
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.responseCache.set(cacheKey, {
@@ -518,14 +518,14 @@ export class CustomerSupportAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 2000
+        maxTokens: 2000
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this sentiment analysis in JSON format:
         
-        SENTIMENT ANALYSIS: ${response.content}
+        SENTIMENT ANALYSIS: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -559,11 +559,11 @@ export class CustomerSupportAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 1500
+        maxTokens: 1500
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.responseCache.set(cacheKey, {

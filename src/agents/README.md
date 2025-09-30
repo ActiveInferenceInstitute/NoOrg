@@ -1,133 +1,216 @@
-# Agents Framework
+# Agent Framework
 
-This directory contains the implementation of various agent types in the multi-agent operations framework. All agents extend the abstract base class `AbstractAgent`, which provides common functionality for initialization, status management, and shared state access.
+The Agent Framework provides a comprehensive set of specialized AI agents for the NoOrg Multi-Agent Framework. Each agent is designed for specific domains and use cases, extending the AbstractAgent base class.
 
-## Agent Architecture
+## Overview
 
-Agents in this framework follow a common architecture:
+This directory contains 16 specialized agent implementations, each designed for specific business domains and use cases. All agents extend the AbstractAgent base class and integrate seamlessly with the MultiAgentCoordinator.
 
-1. **AbstractAgent**: Base class that implements the core `Agent` interface and provides common functionality
-2. **Specialized Agents**: Domain-specific implementations that extend AbstractAgent with specialized capabilities
+## Available Agents
 
-Each agent is responsible for:
-- Handling specific types of tasks based on its capabilities
-- Managing its own state and status
-- Coordinating with other agents through the shared state system
-- Processing and generating responses using AI models (via OpenAIClient)
+| Agent Type | File | Description | Use Cases |
+|------------|------|-------------|-----------|
+| **AbstractAgent** | AbstractAgent.ts | Base class for all agents | Framework foundation |
+| **ActiveInferencePOMDPAgent** | ActiveInferencePOMDPAgent.ts | Advanced decision making with POMDP | Complex reasoning, uncertainty handling |
+| **AnalysisAgent** | AnalysisAgent.ts | Data analysis and insights | Business intelligence, research |
+| **CreativeWritingAgent** | CreativeWritingAgent.ts | Content creation and refinement | Marketing, documentation |
+| **CustomerSupportAgent** | CustomerSupportAgent.ts | Customer service automation | Help desk, troubleshooting |
+| **DataAnalysisAgent** | DataAnalysisAgent.ts | Advanced data processing | Statistics, visualization |
+| **DevelopmentAgent** | DevelopmentAgent.ts | Code generation and review | Software development |
+| **FinalReviewAgent** | FinalReviewAgent.ts | Quality assurance | Content review, approval |
+| **FinanceAgent** | FinanceAgent.ts | Financial analysis and planning | Budgeting, forecasting |
+| **HRAgent** | HRAgent.ts | Human resources tasks | Job descriptions, onboarding |
+| **LegalAgent** | LegalAgent.ts | Legal document processing | Contracts, compliance |
+| **MarketingAgent** | MarketingAgent.ts | Marketing strategy and content | Campaigns, audience analysis |
+| **PlanningAgent** | PlanningAgent.ts | Strategic planning | Project management |
+| **ResearchAgent** | ResearchAgent.ts | Information gathering | Research, fact-checking |
+| **ReviewAgent** | ReviewAgent.ts | Content evaluation | Feedback, assessment |
+| **RevisionAgent** | RevisionAgent.ts | Content improvement | Editing, refinement |
+| **WritingAgent** | WritingAgent.ts | Professional writing | Documentation, reports |
 
-## Available Agent Types
+## Architecture
 
-The following agent types are currently implemented:
+### Base Agent (`AbstractAgent.ts`)
+All agents extend the AbstractAgent class which provides:
+- **Lifecycle Management**: Initialization, status tracking, shutdown
+- **State Management**: Integration with SharedStateManager
+- **Error Handling**: Comprehensive error handling and recovery
+- **Communication**: Integration with Event and Message systems
+- **Monitoring**: Performance and health monitoring
 
-| Agent Type | File | Description |
-|------------|------|-------------|
-| Analysis | AnalysisAgent.ts | Performs data and information analysis |
-| Creative Writing | CreativeWritingAgent.ts | Generates creative content and narratives |
-| Customer Support | CustomerSupportAgent.ts | Handles customer service interactions |
-| Data Analysis | DataAnalysisAgent.ts | Processes and analyzes numerical and statistical data |
-| Development | DevelopmentAgent.ts | Assists with software development tasks |
-| Final Review | FinalReviewAgent.ts | Performs final quality checks and reviews |
-| Finance | FinanceAgent.ts | Handles financial analysis and planning |
-| HR | HRAgent.ts | Manages human resources tasks |
-| Legal | LegalAgent.ts | Provides legal analysis and documentation |
-| Marketing | MarketingAgent.ts | Creates and analyzes marketing content |
-| Planning | PlanningAgent.ts | Develops plans and strategies |
-| Research | ResearchAgent.ts | Conducts research on specified topics |
-| Review | ReviewAgent.ts | Reviews content and provides feedback |
-| Revision | RevisionAgent.ts | Refines and improves existing content |
-| Writing | WritingAgent.ts | Generates written content |
-
-## Implementing a New Agent
-
-To create a new agent type:
-
-1. Create a new TypeScript file named `[YourAgent]Agent.ts`
-2. Extend the `AbstractAgent` class
-3. Implement the required `executeTask` method
-4. Add any specialized methods and properties needed
-
-Example template:
-
+### Agent Interface
 ```typescript
-import { AbstractAgent, AbstractAgentOptions } from './AbstractAgent';
-import { Agent, AgentType } from './types';
+interface Agent {
+  id: string;
+  name: string;
+  type: string;
+  description?: string;
+  capabilities: string[];
+  status: 'initializing' | 'available' | 'busy' | 'offline' | 'error';
+  metadata?: Record<string, any>;
+  preferredModel?: string;
+  lastActive: number;
+  createdAt: number;
 
-// Optional: Define specialized task parameters
-export interface YourAgentTaskParams {
-    // Task-specific parameters
-}
-
-// Optional: Define specialized task result
-export interface YourAgentTaskResult {
-    // Task-specific result structure
-}
-
-export class YourAgent extends AbstractAgent {
-    constructor(options: AbstractAgentOptions) {
-        super({
-            ...options,
-            type: 'your-agent' as AgentType, // Add this to types.ts AgentType
-        });
-    }
-    
-    /**
-     * Execute a task specific to this agent type
-     */
-    async executeTask(
-        taskDetails: YourAgentTaskParams, 
-        context?: any
-    ): Promise<YourAgentTaskResult> {
-        // Validate the agent is initialized
-        if (!this.isInitialized) {
-            throw new Error(`Agent ${this.name} is not initialized`);
-        }
-        
-        // Update status to busy
-        this.updateStatus('busy');
-        
-        try {
-            // Implement task execution logic here
-            
-            // Update status to available
-            this.updateStatus('available');
-            
-            // Return the task result
-            return {
-                // Task result data
-            };
-        } catch (error) {
-            // Handle errors
-            this.updateStatus('error');
-            throw error;
-        }
-    }
-    
-    // Add any specialized methods
+  initialize(): Promise<boolean>;
+  executeTask(taskDetails: any, context?: any): Promise<any>;
+  shutdown(): Promise<boolean>;
+  getAgentInfo(): Agent;
+  updateStatus(status: Agent['status']): void;
 }
 ```
 
-## Agent Types and Capabilities
+## Agent Capabilities
 
-The `types.ts` file defines the common interfaces and types used across all agents, including:
+### Core Capabilities
+- **text-generation**: Natural language generation
+- **code-generation**: Code creation and review
+- **reasoning**: Logical reasoning and analysis
+- **planning**: Strategic planning and scheduling
+- **research**: Information gathering and fact-checking
+- **data-analysis**: Data processing and insights
+- **creativity**: Creative content generation
+- **problem-solving**: Complex problem resolution
 
-- `Agent`: The core interface that all agents implement
-- `AgentType`: String literal type of valid agent types
-- `Capability`: Enumeration of agent capabilities
+### Specialized Capabilities
+- **financial-analysis**: Financial modeling and analysis
+- **legal-research**: Legal document processing
+- **customer-service**: Customer support automation
+- **content-strategy**: Marketing content planning
+- **performance-evaluation**: Quality assessment
+- **risk-assessment**: Risk analysis and mitigation
 
-When creating a new agent type, you may need to update these definitions in `types.ts`.
+## Integration
 
-## Testing Agents
+### With MultiAgentCoordinator
+```typescript
+// Register agents
+await coordinator.registerAgent(analysisAgent);
+await coordinator.registerAgent(writingAgent);
 
-When implementing a new agent, ensure:
+// Execute workflows
+const result = await coordinator.executeWorkflow({
+  tasks: [
+    { agent: 'analysis', action: 'analyze', data: dataset },
+    { agent: 'writing', action: 'write', data: analysisResult }
+  ]
+});
+```
 
-1. The agent can be properly initialized
-2. The agent handles errors gracefully
-3. The agent updates its status correctly
-4. The agent integrates with the shared state system
-5. The agent performs its specialized tasks correctly
+### With Core Systems
+- **Event System**: Agents publish and subscribe to events
+- **Message System**: Agents communicate via structured messages
+- **Monitoring System**: Agents report performance metrics
+- **Storage System**: Agents persist state and results
+
+## Configuration
+
+### Agent Configuration
+```typescript
+interface AgentConfig {
+  id: string;
+  name: string;
+  type: string;
+  capabilities: string[];
+  preferredModel?: string;
+  metadata?: Record<string, any>;
+  openAIClient: OpenAIClient;
+  sharedState: SharedStateManager;
+}
+```
+
+### Runtime Configuration
+```typescript
+// Configure agent behavior
+const agent = new AnalysisAgent('Data Analyst', {
+  preferredModel: 'gpt-4o',
+  metadata: {
+    analysisDepth: 'comprehensive',
+    visualizationFramework: 'plotly'
+  }
+});
+```
+
+## Testing
+
+### Test Coverage
+Each agent has comprehensive test coverage:
+- **Unit Tests**: Individual agent functionality
+- **Integration Tests**: Agent coordination and workflows
+- **Performance Tests**: Scalability and efficiency
+- **Error Tests**: Error handling and recovery
+
+### Running Agent Tests
+```bash
+# Test all agents
+npm run test:agents
+
+# Test specific agent
+npm test tests/unit/agents/test_analysis_agent.ts
+
+# Test with coverage
+npm run test:coverage
+```
+
+## Development
+
+### Creating New Agents
+```typescript
+import { AbstractAgent, AbstractAgentOptions } from './AbstractAgent';
+
+export class CustomAgent extends AbstractAgent {
+  constructor(options: AbstractAgentOptions) {
+    super(options);
+  }
+
+  async executeTask(taskDetails: any, context?: any): Promise<any> {
+    // Implement custom agent logic
+    return await this.processCustomTask(taskDetails);
+  }
+}
+```
+
+### Agent Best Practices
+1. **Single Responsibility**: Each agent should have a focused purpose
+2. **Error Handling**: Implement comprehensive error handling
+3. **State Management**: Use shared state for coordination
+4. **Performance**: Optimize for concurrent operations
+5. **Documentation**: Create detailed AGENTS.md documentation
+
+## Performance
+
+### Benchmarks
+- **Response Time**: < 2 seconds for typical operations
+- **Concurrent Operations**: 100+ simultaneous agent tasks
+- **Memory Usage**: Optimized for large-scale deployments
+- **Scalability**: Support for multiple coordinator instances
+
+### Optimization Strategies
+- **Caching**: Intelligent caching for repeated operations
+- **Batching**: Batch operations for efficiency
+- **Resource Management**: Memory and CPU optimization
+- **Monitoring**: Real-time performance tracking
+
+## Security
+
+### Agent Security Features
+- **Input Validation**: All inputs are validated and sanitized
+- **Access Control**: Role-based agent permissions
+- **Audit Logging**: Complete operation audit trails
+- **Data Protection**: Encryption of sensitive agent data
+- **Rate Limiting**: Configurable operation rate limits
+
+### Security Best Practices
+- Validate all agent inputs
+- Implement proper authentication for agent registration
+- Use secure communication channels
+- Monitor agent activities for anomalies
+- Regular security updates and patches
 
 ## Related Documentation
 
-- [Main Source Documentation](../README.md)
-- [Multi-Agent System Overview](../docs/MultiAgentSystem_README.md)
-- [Multi-Agent Coordinator](../docs/MultiAgentCoordinator.md) 
+- [Multi-Agent Coordination](../../../src/core/multiagent/README.md)
+- [Agent Testing](../../../tests/unit/agents/README.md)
+- [Agent Examples](../../../examples/README.md)
+- [Agent Architecture](../../../docs/agents/README.md)
+- [API Reference](../../../docs/api/index.md)

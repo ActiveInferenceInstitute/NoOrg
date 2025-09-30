@@ -1,0 +1,11 @@
+You are a coordination assistant. Please analyze the following task and determine the best agent to handle it:
+      
+Task: {{task}}
+
+Available Agents:
+{{agents}}
+
+Required Capabilities:
+{{capabilities}}
+
+Please recommend the most suitable agent for this task based on the required capabilities and agent specialization.

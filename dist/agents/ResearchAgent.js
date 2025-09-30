@@ -72,7 +72,7 @@ class ResearchAgent extends BaseAgent_1.BaseAgent {
             const response = await this.openAIClient.generateResponse(prompt, {
                 model: this.config.preferredModel || 'o3-mini',
                 temperature: 0.7,
-                max_tokens: 2000
+                maxTokens: 2000
             });
             this.updateStatus('idle');
             return {
@@ -114,7 +114,7 @@ class ResearchAgent extends BaseAgent_1.BaseAgent {
             const response = await this.openAIClient.generateResponse(prompt, {
                 model: this.config.preferredModel || 'o3-mini',
                 temperature: 0.2, // Very low temperature for extraction
-                max_tokens: 500
+                maxTokens: 500
             });
             // Process the results
             const extraction = response;
@@ -165,7 +165,7 @@ class ResearchAgent extends BaseAgent_1.BaseAgent {
             const response = await this.openAIClient.generateResponse(prompt, {
                 model: this.config.preferredModel || 'o3-mini',
                 temperature: 0.3,
-                max_tokens: maxTokens
+                maxTokens: maxTokens
             });
             // Process the results
             const summaryText = response;
@@ -226,7 +226,7 @@ class ResearchAgent extends BaseAgent_1.BaseAgent {
             const response = await this.openAIClient.generateResponse(prompt, {
                 model: this.config.preferredModel || 'o3-mini',
                 temperature: 0.2,
-                max_tokens: 500
+                maxTokens: 500
             });
             // Process the results
             const factCheckText = response;

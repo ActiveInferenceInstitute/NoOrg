@@ -134,12 +134,6 @@ export declare class AgentRegistry implements IAgentRegistry {
      */
     getAgentsByState(state: AgentStatus['state']): Promise<Agent[]>;
     /**
-     * Find agents with a specific capability
-     * @param capability The capability to look for
-     * @returns Array of agents with the specified capability
-     */
-    findAgentsByCapability(capability: string): Promise<Agent[]>;
-    /**
      * Get the count of agents by status
      * @returns Object with counts for each status state
      */
@@ -158,4 +152,16 @@ export declare class AgentRegistry implements IAgentRegistry {
      * Clear all agents from the registry
      */
     clear(): Promise<void>;
+    /**
+     * Find agents by type
+     * @param type Agent type to search for
+     * @returns Array of agents of the specified type
+     */
+    findAgentsByType(type: string): Promise<AgentType[]>;
+    /**
+     * Get capabilities for a specific agent
+     * @param agentId Agent ID
+     * @returns Array of capabilities
+     */
+    getAgentCapabilities(agentId: string): Promise<string[]>;
 }

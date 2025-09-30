@@ -114,7 +114,7 @@ class LLMAgent {
             const sendPromptMethod = typeof this.llm.sendPrompt === 'function' ? 'sendPrompt' : 'createCompletion';
             // @ts-ignore - Dynamic method call
             const response = await this.llm[sendPromptMethod](prompt, options);
-            const responseContent = typeof response === 'string' ? response : response.content;
+            const responseContent = typeof response === 'string' ? response : response.choices[0].message.content;
             const responseUsage = typeof response === 'string' ? undefined : response.usage;
             logger.info(`Received response from LLM (${responseUsage?.total_tokens || 'unknown'} tokens)`);
             // Save the raw response to a file

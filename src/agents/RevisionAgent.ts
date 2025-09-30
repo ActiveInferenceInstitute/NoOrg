@@ -2,8 +2,8 @@ import { BaseAgent } from '../core/multiagent/BaseAgent';
 import { AgentConfig } from '../core/multiagent/types';
 
 export class RevisionAgent extends BaseAgent {
-  constructor(name: string, config: AgentConfig) {
-    super(name, config);
+  constructor(config: AgentConfig) {
+    super(config);
   }
 
   async reviseContent(reviewData: any) {
@@ -22,7 +22,7 @@ export class RevisionAgent extends BaseAgent {
     const response = await this.openAIClient.generateResponse(prompt, {
       model: this.config.preferredModel || 'o3-mini',
       temperature: 0.7,
-      max_tokens: 4000
+      maxTokens: 4000
     });
 
     return {

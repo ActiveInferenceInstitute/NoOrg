@@ -205,14 +205,14 @@ export class FinanceAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.1, // Low temperature for accurate financial analysis
-        max_tokens: 3000
+        maxTokens: 3000
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this financial analysis in JSON format:
         
-        ANALYSIS: ${response.content}
+        ANALYSIS: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -261,11 +261,11 @@ export class FinanceAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 2000
+        maxTokens: 2000
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.financeCache.set(cacheKey, {
@@ -393,14 +393,14 @@ export class FinanceAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.3,
-        max_tokens: 2500
+        maxTokens: 2500
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this budget plan in JSON format:
         
-        BUDGET PLAN: ${response.content}
+        BUDGET PLAN: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -452,11 +452,11 @@ export class FinanceAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 2000
+        maxTokens: 2000
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.financeCache.set(cacheKey, {
@@ -579,14 +579,14 @@ export class FinanceAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.2,
-        max_tokens: 3000
+        maxTokens: 3000
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this financial forecast in JSON format:
         
-        FORECAST: ${response.content}
+        FORECAST: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -658,11 +658,11 @@ export class FinanceAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 2500
+        maxTokens: 2500
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.financeCache.set(cacheKey, {

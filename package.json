@@ -5,9 +5,112 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
+    "build:watch": "tsc --watch",
+    "build:clean": "rm -rf dist && npm run build",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
-    "test": "jest"
+    "start:dev": "ts-node src/index.ts",
+    "start:prod": "NODE_ENV=production node dist/index.js",
+    "dev": "ts-node --transpile-only src/index.ts",
+    "dev:debug": "ts-node --inspect src/index.ts",
+
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:unit": "jest --testPathPattern=unit",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:system": "jest --testPathPattern=system",
+    "test:performance": "jest --testPathPattern=performance",
+    "test:e2e": "jest --testPathPattern=e2e",
+    "test:agents": "jest tests/unit/agents",
+    "test:core": "jest tests/unit/core",
+
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "quality": "npm run lint && npm run type-check",
+
+    "docs": "npm run docs:build",
+    "docs:build": "npm run docs:mermaid && npm run docs:structure",
+    "docs:mermaid": "find docs -name \"*.md\" -exec mmdc -i {} -o {}.png \\;",
+    "docs:structure": "node scripts/generate-docs-structure.js",
+    "docs:serve": "npx docsify serve docs",
+    "docs:deploy": "npm run docs:build && gh-pages -d docs",
+
+    "clean": "rm -rf dist coverage logs output node_modules/.cache",
+    "clean:all": "npm run clean && rm -rf node_modules package-lock.json",
+    "reset": "npm run clean:all && npm install",
+
+    "analyze": "npm run analyze:bundle && npm run analyze:deps",
+    "analyze:bundle": "webpack-bundle-analyzer dist/bundle-analysis.html",
+    "analyze:deps": "npx madge --image graph.svg src",
+
+    "docker:build": "docker build -t noorg/multiagent-framework .",
+    "docker:run": "docker run -p 3000:3000 noorg/multiagent-framework",
+    "docker:push": "docker push noorg/multiagent-framework",
+
+    "deploy": "npm run build && npm run docker:build && npm run docker:push",
+    "deploy:staging": "npm run deploy",
+    "deploy:prod": "NODE_ENV=production npm run deploy",
+
+    "example": "npm run example:basic",
+    "example:basic": "ts-node examples/basic_coordination.ts",
+    "example:workflow": "ts-node examples/multi_agent_workflow.ts",
+    "example:research": "ts-node examples/complex_research_workflow.ts",
+    "example:all": "npm run example:basic && npm run example:workflow && npm run example:research",
+
+    "health": "curl -f http://localhost:3000/health || echo 'Service not running'",
+    "health:wait": "until curl -f http://localhost:3000/health; do sleep 2; done",
+
+    "metrics": "curl http://localhost:9090/metrics || echo 'Metrics not available'",
+    "logs": "tail -f logs/*.log",
+    "logs:clear": "rm -f logs/*.log",
+
+    "backup": "npm run backup:state && npm run backup:logs",
+    "backup:state": "cp data/coordinator-state.json backups/state-$(date +%Y%m%d-%H%M%S).json",
+    "backup:logs": "tar -czf backups/logs-$(date +%Y%m%d-%H%M%S).tar.gz logs/",
+    "backup:list": "ls -la backups/",
+
+    "security": "npm run security:audit && npm run security:scan",
+    "security:audit": "npm audit",
+    "security:scan": "npx security-scan src/",
+
+    "performance": "npm run performance:benchmark && npm run performance:profile",
+    "performance:benchmark": "npm run test:performance",
+    "performance:profile": "node --prof dist/index.js",
+    "performance:analyze": "node scripts/performance-optimizer.js",
+    "performance:advanced": "node scripts/advanced-performance-analyzer.js",
+
+    "security": "npm run security:audit && npm run security:scan",
+    "security:audit": "npm audit",
+    "security:scan": "npx security-scan src/",
+    "security:advanced": "node scripts/advanced-security-scanner.js",
+
+    "maintenance": "npm run maintenance:cleanup && npm run maintenance:optimize",
+    "maintenance:cleanup": "npm run logs:clear && npm run clean",
+    "maintenance:optimize": "npm prune && npm run build",
+    "maintenance:full": "npm run maintenance && npm run performance:analyze && npm run security:advanced",
+
+    "release": "npm run test:ci && npm version patch && npm publish",
+    "release:minor": "npm run test:ci && npm version minor && npm publish",
+    "release:major": "npm run test:ci && npm version major && npm publish",
+
+    "setup": "npm install && npm run build",
+    "setup:dev": "npm install && npm run dev",
+    "setup:prod": "cp .env.example .env && npm run setup",
+
+    "update": "npm update && npm run build",
+    "upgrade": "npm run reset && npm install",
+
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+
+    "validate": "npm run quality && npm run test:ci && npm run security:audit",
+    "validate:all": "npm run validate && npm run docs:build",
+
+    "ci": "npm run validate:all && npm run deploy",
+    "ci:staging": "npm run validate:all && npm run deploy:staging",
+    "ci:prod": "npm run validate:all && npm run deploy:prod"
   },
   "keywords": [
     "agents",
@@ -34,9 +137,18 @@
     "@types/jest": "^29.0.0",
     "@types/node": "^18.19.86",
     "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "gh-pages": "^6.0.0",
     "jest": "^29.0.0",
+    "madge": "^6.0.0",
+    "prettier": "^3.0.0",
     "ts-jest": "^29.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "webpack-bundle-analyzer": "^4.0.0"
   }
 }

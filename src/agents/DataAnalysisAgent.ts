@@ -291,10 +291,10 @@ export class DataAnalysisAgent extends AbstractAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.preferredModel || 'o3-mini', // Use model from base class
                 temperature: 0.1, // Low temperature for accurate analysis
-                max_tokens: 3500 // Allow for detailed analysis
+                maxTokens: 3500 // Allow for detailed analysis
             });
 
-            const analysisText = response.content?.trim() || "";
+            const analysisText = response.choices[0].message.content?.trim() || "";
 
             // --- Attempt to extract structured information --- 
             // This is heuristic. A more robust approach might involve function calling or more specific prompts.
@@ -447,15 +447,15 @@ export class DataAnalysisAgent extends AbstractAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.preferredModel || 'o3-mini',
                 temperature: 0.2,
-                max_tokens: 2000,
+                maxTokens: 2000,
             });
 
             let vizResult: any;
             try {
-                 vizResult = JSON.parse(response.content?.trim() || "{}");
+                 vizResult = JSON.parse(response.choices[0].message.content?.trim() || "{}");
             } catch (e) {
                  console.error("Failed to parse JSON response for visualization.", e);
-                 console.log("Raw response:", response.content);
+                 console.log("Raw response:", response.choices[0].message.content);
                  // Attempt to generate a fallback error structure
                  throw new Error("Failed to generate valid JSON configuration for the visualization."); 
             }
@@ -588,15 +588,15 @@ export class DataAnalysisAgent extends AbstractAgent {
              const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.preferredModel || 'o3-mini',
                 temperature: 0.3,
-                max_tokens: 3800,
+                maxTokens: 3800,
             });
 
             let reportResult: any;
             try {
-                 reportResult = JSON.parse(response.content?.trim() || "{}");
+                 reportResult = JSON.parse(response.choices[0].message.content?.trim() || "{}");
             } catch (e) {
                  console.error("Failed to parse JSON response for report generation.", e);
-                 console.log("Raw response:", response.content);
+                 console.log("Raw response:", response.choices[0].message.content);
                  throw new Error("Failed to generate valid JSON report structure."); 
             }
 

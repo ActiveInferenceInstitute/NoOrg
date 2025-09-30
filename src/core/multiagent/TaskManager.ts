@@ -264,4 +264,312 @@ export class TaskManager implements ITaskManager {
     
     return true;
   }
+
+  /**
+   * Unassign a task from its current agent
+   * @param taskId Task ID
+   */
+  async unassignTask(taskId: string): Promise<void> {
+    const task = this.tasks.get(taskId);
+    if (!task) {
+      throw new Error(`Task ${taskId} not found`);
+    }
+    
+    task.assignedTo = undefined;
+    task.status = 'pending';
+    task.updatedAt = Date.now();
+    
+    this.tasks.set(taskId, task);
+    
+    // Update shared state
+    await this.stateManager.setState(`tasks.${taskId}`, task);
+  }
+
+  /**
+   * Reassign a task to a different agent
+   * @param taskId Task ID
+   * @param newAgentId New agent ID
+   */
+  async reassignTask(taskId: string, newAgentId: string): Promise<void> {
+    const task = this.tasks.get(taskId);
+    if (!task) {
+      throw new Error(`Task ${taskId} not found`);
+    }
+    
+    const previousAgent = task.assignedTo;
+    task.assignedTo = newAgentId;
+    task.status = 'assigned';
+    task.updatedAt = Date.now();
+    
+    // Store reassignment history in metadata
+    if (!task.metadata) {
+      task.metadata = {};
+    }
+    if (!task.metadata.reassignmentHistory) {
+      task.metadata.reassignmentHistory = [];
+    }
+    (task.metadata.reassignmentHistory as any[]).push({
+      from: previousAgent,
+      to: newAgentId,
+      timestamp: Date.now()
+    });
+    
+    this.tasks.set(taskId, task);
+    
+    // Update shared state
+    await this.stateManager.setState(`tasks.${taskId}`, task);
+  }
+
+  /**
+   * Get task history including all state changes
+   * @param taskId Task ID
+   * @returns Task history
+   */
+  async getTaskHistory(taskId: string): Promise<TaskHistory[]> {
+    const task = this.tasks.get(taskId);
+    if (!task) {
+      throw new Error(`Task ${taskId} not found`);
+    }
+    
+    const history: TaskHistory[] = [
+      {
+        timestamp: task.createdAt,
+        event: 'created',
+        status: 'pending',
+        metadata: { task: task.name }
+      }
+    ];
+    
+    if (task.assignedTo) {
+      history.push({
+        timestamp: task.updatedAt,
+        event: 'assigned',
+        status: 'assigned',
+        agentId: task.assignedTo,
+        metadata: {}
+      });
+    }
+    
+    if (task.status === 'in-progress' || task.status === 'completed' || task.status === 'failed') {
+      history.push({
+        timestamp: task.updatedAt,
+        event: 'started',
+        status: 'in-progress',
+        agentId: task.assignedTo,
+        metadata: {}
+      });
+    }
+    
+    if (task.status === 'completed' && task.completedAt) {
+      history.push({
+        timestamp: task.completedAt,
+        event: 'completed',
+        status: 'completed',
+        agentId: task.assignedTo,
+        metadata: { processingTime: task.processingTime }
+      });
+    }
+    
+    if (task.status === 'failed' && task.failedAt) {
+      history.push({
+        timestamp: task.failedAt,
+        event: 'failed',
+        status: 'failed',
+        agentId: task.assignedTo,
+        metadata: { error: task.error }
+      });
+    }
+    
+    // Add reassignment history if exists
+    if (task.metadata?.reassignmentHistory) {
+      const reassignments = task.metadata.reassignmentHistory as any[];
+      reassignments.forEach(reassignment => {
+        history.push({
+          timestamp: reassignment.timestamp,
+          event: 'reassigned',
+          status: task.status,
+          agentId: reassignment.to,
+          metadata: { previousAgent: reassignment.from }
+        });
+      });
+    }
+    
+    // Sort by timestamp
+    return history.sort((a, b) => a.timestamp - b.timestamp);
+  }
+
+  /**
+   * Estimate task duration based on historical data
+   * @param task Task to estimate
+   * @returns Estimated duration in milliseconds
+   */
+  async estimateTaskDuration(task: Task): Promise<number> {
+    // Get completed tasks of similar type
+    const completedTasks = Array.from(this.tasks.values()).filter(t => 
+      t.type === task.type &&
+      t.status === 'completed' &&
+      t.processingTime !== undefined
+    );
+    
+    if (completedTasks.length === 0) {
+      // No historical data, return default estimate
+      const priorityMultipliers: Record<string, number> = {
+        'critical': 0.5,  // Critical tasks get done faster
+        'high': 0.75,
+        'medium': 1.0,
+        'low': 1.5
+      };
+      
+      const baseEstimate = 60000; // 1 minute default
+      const multiplier = task.priority ? priorityMultipliers[task.priority] || 1.0 : 1.0;
+      
+      return baseEstimate * multiplier;
+    }
+    
+    // Calculate average processing time
+    const totalTime = completedTasks.reduce((sum, t) => sum + (t.processingTime || 0), 0);
+    const avgTime = totalTime / completedTasks.length;
+    
+    // Adjust based on priority
+    const priorityMultipliers: Record<string, number> = {
+      'critical': 0.8,
+      'high': 0.9,
+      'medium': 1.0,
+      'low': 1.2
+    };
+    
+    const multiplier = task.priority ? priorityMultipliers[task.priority] || 1.0 : 1.0;
+    
+    return Math.round(avgTime * multiplier);
+  }
+
+  /**
+   * Get task statistics
+   * @returns Task statistics
+   */
+  async getTaskStatistics(): Promise<TaskStatistics> {
+    const tasks = Array.from(this.tasks.values());
+    
+    const stats: TaskStatistics = {
+      total: tasks.length,
+      byStatus: {
+        pending: 0,
+        assigned: 0,
+        'in-progress': 0,
+        completed: 0,
+        failed: 0
+      },
+      byPriority: {
+        critical: 0,
+        high: 0,
+        medium: 0,
+        low: 0
+      },
+      avgProcessingTime: 0,
+      successRate: 0
+    };
+    
+    let totalProcessingTime = 0;
+    let processedTaskCount = 0;
+    let successfulTasks = 0;
+    
+    tasks.forEach(task => {
+      // Count by status
+      stats.byStatus[task.status]++;
+      
+      // Count by priority
+      if (task.priority) {
+        stats.byPriority[task.priority]++;
+      }
+      
+      // Calculate processing time average
+      if (task.processingTime) {
+        totalProcessingTime += task.processingTime;
+        processedTaskCount++;
+      }
+      
+      // Calculate success rate
+      if (task.status === 'completed') {
+        successfulTasks++;
+      }
+    });
+    
+    if (processedTaskCount > 0) {
+      stats.avgProcessingTime = totalProcessingTime / processedTaskCount;
+    }
+    
+    const finishedTasks = stats.byStatus.completed + stats.byStatus.failed;
+    if (finishedTasks > 0) {
+      stats.successRate = (successfulTasks / finishedTasks) * 100;
+    }
+    
+    return stats;
+  }
+
+  /**
+   * Clean up old completed tasks
+   * @param olderThan Timestamp - remove tasks older than this
+   */
+  async cleanupOldTasks(olderThan: number): Promise<number> {
+    const tasks = Array.from(this.tasks.values());
+    let removedCount = 0;
+
+    for (const task of tasks) {
+      if ((task.status === 'completed' || task.status === 'failed') &&
+          task.updatedAt < olderThan) {
+        this.tasks.delete(task.id);
+        await this.stateManager.setState(`tasks.${task.id}`, undefined);
+        removedCount++;
+      }
+    }
+
+    return removedCount;
+  }
+
+  /**
+   * Update task properties
+   * @param taskId Task ID
+   * @param updates Partial task data for updates
+   */
+  async updateTask(taskId: string, updates: Partial<Omit<Task, 'id' | 'createdAt'>>): Promise<void> {
+    const task = this.tasks.get(taskId);
+    if (!task) {
+      throw new Error(`Task ${taskId} not found`);
+    }
+
+    // Update task properties
+    const updatedTask = {
+      ...task,
+      ...updates,
+      id: taskId,
+      updatedAt: Date.now()
+    };
+
+    this.tasks.set(taskId, updatedTask);
+
+    // Update shared state
+    await this.stateManager.setState(`tasks.${taskId}`, updatedTask);
+  }
+}
+
+// Type definitions for new methods
+interface TaskHistory {
+  timestamp: number;
+  event: 'created' | 'assigned' | 'started' | 'completed' | 'failed' | 'reassigned';
+  status: Task['status'];
+  agentId?: string;
+  metadata: Record<string, any>;
+}
+
+interface TaskStatistics {
+  total: number;
+  byStatus: Record<Task['status'], number>;
+  byPriority: {
+    critical: number;
+    high: number;
+    medium: number;
+    low: number;
+  };
+  avgProcessingTime: number;
+  successRate: number;
 } 

@@ -407,6 +407,56 @@ class AgentRegistry {
         this.agents.clear();
         this.capabilityIndex.clear();
     }
+    /**
+     * Find agents by capability
+     * @param capability Capability to search for
+     * @returns Array of agents with the specified capability
+     */
+    async findAgentsByCapability(capability) {
+        try {
+            const agents = Array.from(this.agents.values());
+            const matchingAgents = agents.filter(agent => agent.capabilities.some(cap => typeof cap === 'string' ? cap === capability : cap.name === capability));
+            return matchingAgents.map(agent => this.convertToAgentType(agent));
+        }
+        catch (error) {
+            console.error(`Failed to find agents by capability: ${error.message}`);
+            return [];
+        }
+    }
+    /**
+     * Find agents by type
+     * @param type Agent type to search for
+     * @returns Array of agents of the specified type
+     */
+    async findAgentsByType(type) {
+        try {
+            const agents = Array.from(this.agents.values());
+            const matchingAgents = agents.filter(agent => agent.type === type);
+            return matchingAgents.map(agent => this.convertToAgentType(agent));
+        }
+        catch (error) {
+            console.error(`Failed to find agents by type: ${error.message}`);
+            return [];
+        }
+    }
+    /**
+     * Get capabilities for a specific agent
+     * @param agentId Agent ID
+     * @returns Array of capabilities
+     */
+    async getAgentCapabilities(agentId) {
+        try {
+            const agent = this.agents.get(agentId);
+            if (!agent) {
+                return [];
+            }
+            return agent.capabilities.map(cap => typeof cap === 'string' ? cap : cap.name);
+        }
+        catch (error) {
+            console.error(`Failed to get agent capabilities: ${error.message}`);
+            return [];
+        }
+    }
 }
 exports.AgentRegistry = AgentRegistry;
 //# sourceMappingURL=AgentRegistry.js.map

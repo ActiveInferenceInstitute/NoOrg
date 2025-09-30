@@ -1,0 +1,14 @@
+You are a research assistant. Please gather information on the following topic:
+      
+Topic: {{topic}}
+
+Depth: {{depth}}
+
+Please provide:
+1. A comprehensive overview
+2. Key facts and figures
+3. Current developments
+4. Different perspectives
+5. Reliable sources
+
+Your research should be thorough, balanced, and well-organized.

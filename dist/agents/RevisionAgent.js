@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RevisionAgent = void 0;
 const BaseAgent_1 = require("../core/multiagent/BaseAgent");
 class RevisionAgent extends BaseAgent_1.BaseAgent {
-    constructor(name, config) {
-        super(name, config);
+    constructor(config) {
+        super(config);
     }
     async reviseContent(reviewData) {
         const prompt = `Revise the content based on the following review feedback:
@@ -21,7 +21,7 @@ class RevisionAgent extends BaseAgent_1.BaseAgent {
         const response = await this.openAIClient.generateResponse(prompt, {
             model: this.config.preferredModel || 'o3-mini',
             temperature: 0.7,
-            max_tokens: 4000
+            maxTokens: 4000
         });
         return {
             revisedContent: response,

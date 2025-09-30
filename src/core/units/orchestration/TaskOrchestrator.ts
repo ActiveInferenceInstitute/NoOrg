@@ -380,7 +380,7 @@ export class TaskOrchestrator {
       // Process response
       const result: TaskExecutionResult = {
         success: true,
-        content: response.content,
+        content: response.choices[0].message.content,
         usage: response.usage
       };
       
@@ -388,7 +388,7 @@ export class TaskOrchestrator {
       this.updateTask(taskId, {
         status: 'completed',
         result: {
-          content: response.content,
+          content: response.choices[0].message.content,
           usage: response.usage
         }
       });
@@ -397,7 +397,7 @@ export class TaskOrchestrator {
       this.stateManager.setState(`workflow.results.${taskId}`, {
         unitName: unit.name,
         taskName: task.name,
-        content: response.content,
+        content: response.choices[0].message.content,
         usage: response.usage
       });
       

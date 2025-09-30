@@ -131,7 +131,7 @@ Respond with just the objective text, no additional commentary.`;
         systemPrompt: 'You are a project planning expert that creates realistic project objectives.'
       });
       
-      const responseContent = typeof response === 'string' ? response : response.content;
+      const responseContent = typeof response === 'string' ? response : response.choices[0].message.content;
       return responseContent.trim().replace(/^"/, '').replace(/"$/, '');
     } catch (error) {
       console.error('Error generating project objective:', error);
@@ -167,7 +167,7 @@ Format as JSON with these fields:
         systemPrompt: 'You are a project planning expert that creates realistic project parameters.'
       });
       
-      const responseContent = typeof response === 'string' ? response : response.content;
+      const responseContent = typeof response === 'string' ? response : response.choices[0].message.content;
       
       // Parse the JSON from the response
       let jsonStr = responseContent;

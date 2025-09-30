@@ -17,7 +17,7 @@ export interface OpenAIClientConfig {
 export interface GenerateResponseOptions {
     model?: string;
     temperature?: number;
-    max_tokens?: number;
+    maxTokens?: number;
     top_p?: number;
     frequency_penalty?: number;
     presence_penalty?: number;
@@ -39,7 +39,18 @@ export interface SendPromptOptions {
  * Response from the OpenAI API
  */
 export interface PromptResponse {
-    content: string;
+    id: string;
+    object: string;
+    created: number;
+    model: string;
+    choices: Array<{
+        index: number;
+        message: {
+            role: string;
+            content: string | null;
+        };
+        finish_reason: string | null;
+    }>;
     usage?: {
         prompt_tokens: number;
         completion_tokens: number;

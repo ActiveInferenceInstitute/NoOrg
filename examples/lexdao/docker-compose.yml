@@ -1,0 +1,217 @@
+version: '3.8'
+
+# LexDAO Governance Workflow - Docker Compose Configuration
+# Provides multiple deployment scenarios for development, testing, and production
+
+services:
+  # =============================================================================
+  # PRODUCTION SERVICE
+  # =============================================================================
+  lexdao-production:
+    build:
+      context: .
+      target: production
+    container_name: lexdao-workflow-prod
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OUTPUT_DIR=/app/output
+      - LOG_LEVEL=info
+    volumes:
+      - lexdao_output:/app/output
+      - lexdao_logs:/app/logs
+    networks:
+      - lexdao-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "console.log('Health check passed')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # =============================================================================
+  # DEVELOPMENT SERVICE
+  # =============================================================================
+  lexdao-development:
+    build:
+      context: .
+      target: development
+    container_name: lexdao-workflow-dev
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OUTPUT_DIR=/app/output
+      - LOG_LEVEL=debug
+      - DEBUG=lexdao:*
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - lexdao_output:/app/output
+      - lexdao_logs:/app/logs
+    networks:
+      - lexdao-network
+    ports:
+      - "9229:9229"  # Debug port
+    command: ["npm", "run", "dev"]
+    profiles:
+      - development
+
+  # =============================================================================
+  # TEST SERVICE
+  # =============================================================================
+  lexdao-test:
+    build:
+      context: .
+      target: test
+    container_name: lexdao-workflow-test
+    environment:
+      - NODE_ENV=test
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-test-key}
+      - OUTPUT_DIR=/app/test-output
+      - LOG_LEVEL=error
+    volumes:
+      - lexdao_test_output:/app/test-output
+      - lexdao_test_logs:/app/logs
+    networks:
+      - lexdao-network
+    command: ["npm", "run", "test:coverage"]
+    profiles:
+      - test
+
+  # =============================================================================
+  # VISUALIZATION SERVICE
+  # =============================================================================
+  lexdao-visualization:
+    build:
+      context: .
+      target: production
+    container_name: lexdao-visualization
+    environment:
+      - NODE_ENV=production
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OUTPUT_DIR=/app/output
+    volumes:
+      - lexdao_output:/app/output:ro
+      - lexdao_visualizations:/app/visualizations
+    networks:
+      - lexdao-network
+    command: ["python3", "lexdao_visualizer.py", "--output-dir", "/app/output"]
+    depends_on:
+      lexdao-production:
+        condition: service_completed_successfully
+    profiles:
+      - visualization
+
+  # =============================================================================
+  # ANALYTICS SERVICE
+  # =============================================================================
+  lexdao-analytics:
+    build:
+      context: .
+      target: production
+    container_name: lexdao-analytics
+    environment:
+      - NODE_ENV=production
+      - OUTPUT_DIR=/app/output
+    volumes:
+      - lexdao_output:/app/output:ro
+      - lexdao_analytics:/app/analytics
+    networks:
+      - lexdao-network
+    command: ["node", "-e", "const { DAOAnalytics } = require('./dao-analytics'); const analytics = new DAOAnalytics('./output/workflow_outputs.json'); analytics.generateAnalytics().then(report => analytics.exportReport(report, 'html', './analytics/report.html')).then(() => console.log('Analytics report generated')).catch(console.error)"]
+    depends_on:
+      lexdao-production:
+        condition: service_completed_successfully
+    profiles:
+      - analytics
+
+  # =============================================================================
+  # NGINX REVERSE PROXY (for web interfaces)
+  # =============================================================================
+  lexdao-nginx:
+    image: nginx:alpine
+    container_name: lexdao-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - lexdao_visualizations:/usr/share/nginx/html/visualizations:ro
+      - lexdao_analytics:/usr/share/nginx/html/analytics:ro
+    networks:
+      - lexdao-network
+    depends_on:
+      - lexdao-visualization
+      - lexdao-analytics
+    profiles:
+      - web
+    restart: unless-stopped
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
+volumes:
+  lexdao_output:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./output
+
+  lexdao_logs:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./logs
+
+  lexdao_visualizations:
+    driver: local
+
+  lexdao_analytics:
+    driver: local
+
+  lexdao_test_output:
+    driver: local
+
+  lexdao_test_logs:
+    driver: local
+
+# =============================================================================
+# NETWORKS
+# =============================================================================
+networks:
+  lexdao-network:
+    driver: bridge
+    name: lexdao-network
+
+# =============================================================================
+# PROFILES
+# =============================================================================
+# Use these profiles to run specific service combinations:
+#
+# Development environment:
+#   docker-compose --profile development up
+#
+# Production environment:
+#   docker-compose up lexdao-production
+#
+# Testing:
+#   docker-compose --profile test up lexdao-test
+#
+# Full pipeline (workflow + visualization + analytics):
+#   docker-compose up lexdao-production lexdao-visualization lexdao-analytics
+#
+# Web interface (includes nginx for serving reports):
+#   docker-compose --profile web up
+#
+# Complete demo (all services):
+#   docker-compose up

@@ -63,7 +63,7 @@ if (!fs.existsSync(outputDir)) {
 async function runComplexResearchWorkflow() {
     console.log('Starting Complex Research Workflow');
     // Initialize shared components
-    const sharedState = new SharedStateManager_1.SharedStateManager();
+    const sharedState = SharedStateManager_1.SharedStateManager.getInstance();
     const taskManager = new TaskManager_1.TaskManager();
     const agentRegistry = new AgentRegistry_1.AgentRegistry();
     const openAIClient = new OpenAIClient_1.OpenAIClient();
@@ -169,7 +169,7 @@ async function runComplexResearchWorkflow() {
         {
             id: 'initial_research',
             type: 'research',
-            title: 'Comprehensive Research',
+            name: 'Comprehensive Research',
             description: `Gather detailed information about ${topic}, focusing on all specified aspects.`,
             agent: researchAgent,
             next: ['analysis']
@@ -177,7 +177,7 @@ async function runComplexResearchWorkflow() {
         {
             id: 'analysis',
             type: 'analysis',
-            title: 'Research Analysis',
+            name: 'Research Analysis',
             description: 'Analyze and synthesize research findings, identifying key patterns and insights.',
             agent: analysisAgent,
             dependsOn: ['initial_research'],
@@ -186,7 +186,7 @@ async function runComplexResearchWorkflow() {
         {
             id: 'planning',
             type: 'planning',
-            title: 'Content Planning',
+            name: 'Content Planning',
             description: 'Create detailed content outline and structure based on analysis.',
             agent: planningAgent,
             dependsOn: ['analysis'],
@@ -195,7 +195,7 @@ async function runComplexResearchWorkflow() {
         {
             id: 'writing',
             type: 'writing',
-            title: 'Initial Content Creation',
+            name: 'Initial Content Creation',
             description: 'Generate comprehensive content based on the outline.',
             agent: writingAgent,
             dependsOn: ['planning'],
@@ -204,7 +204,7 @@ async function runComplexResearchWorkflow() {
         {
             id: 'review',
             type: 'review',
-            title: 'Content Review',
+            name: 'Content Review',
             description: 'Review content and suggest improvements.',
             agent: reviewAgent,
             dependsOn: ['writing'],
@@ -213,7 +213,7 @@ async function runComplexResearchWorkflow() {
         {
             id: 'revision',
             type: 'revision',
-            title: 'Content Revision',
+            name: 'Content Revision',
             description: 'Implement suggested improvements and refinements.',
             agent: revisionAgent,
             dependsOn: ['review'],
@@ -222,7 +222,7 @@ async function runComplexResearchWorkflow() {
         {
             id: 'final_review',
             type: 'final_review',
-            title: 'Final Review',
+            name: 'Final Review',
             description: 'Perform final quality check and polish.',
             agent: finalReviewAgent,
             dependsOn: ['revision'],
@@ -245,7 +245,7 @@ async function runComplexResearchWorkflow() {
         await taskManager.createTask({
             id: taskId,
             type: stage.type,
-            title: stage.title,
+            name: stage.title,
             description: stage.description,
             status: 'pending',
             priority: 'high',

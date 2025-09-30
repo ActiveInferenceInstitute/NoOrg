@@ -119,7 +119,7 @@ const MODEL_INFO: Record<string, {
 export interface GenerateResponseOptions {
   model?: string;
   temperature?: number;
-  max_tokens?: number;
+  maxTokens?: number;
   top_p?: number;
   frequency_penalty?: number;
   presence_penalty?: number;
@@ -144,7 +144,18 @@ export interface SendPromptOptions {
  * Response from the OpenAI API
  */
 export interface PromptResponse {
-  content: string;
+  id: string;
+  object: string;
+  created: number;
+  model: string;
+  choices: Array<{
+    index: number;
+    message: {
+      role: string;
+      content: string | null;
+    };
+    finish_reason: string | null;
+  }>;
   usage?: {
     prompt_tokens: number;
     completion_tokens: number;
@@ -700,7 +711,7 @@ export class OpenAIClient implements IOpenAIClient {
         model: options.model || 'o3-mini',
         messages: [{ role: 'user', content: prompt }],
         temperature: options.temperature || 0.7,
-        max_tokens: options.max_tokens || 2000,
+        max_tokens: options.maxTokens || 2000,
         top_p: options.top_p || 1,
         frequency_penalty: options.frequency_penalty || 0,
         presence_penalty: options.presence_penalty || 0,
@@ -762,11 +773,12 @@ export class OpenAIClient implements IOpenAIClient {
         presence_penalty: presencePenalty
       });
 
-      // Extract content from response
-      const content = response.choices[0]?.message?.content || '';
-
       return {
-        content,
+        id: response.id,
+        object: response.object,
+        created: response.created,
+        model: response.model,
+        choices: response.choices,
         usage: response.usage && {
           prompt_tokens: response.usage.prompt_tokens,
           completion_tokens: response.usage.completion_tokens,
@@ -809,11 +821,12 @@ export class OpenAIClient implements IOpenAIClient {
         presence_penalty: presencePenalty
       });
 
-      // Extract content from response
-      const content = response.choices[0]?.message?.content || '';
-
       return {
-        content,
+        id: response.id,
+        object: response.object,
+        created: response.created,
+        model: response.model,
+        choices: response.choices,
         usage: response.usage && {
           prompt_tokens: response.usage.prompt_tokens,
           completion_tokens: response.usage.completion_tokens,

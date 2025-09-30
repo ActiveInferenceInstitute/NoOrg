@@ -564,7 +564,7 @@ class OpenAIClient {
                 model: options.model || 'o3-mini',
                 messages: [{ role: 'user', content: prompt }],
                 temperature: options.temperature || 0.7,
-                max_tokens: options.max_tokens || 2000,
+                max_tokens: options.maxTokens || 2000,
                 top_p: options.top_p || 1,
                 frequency_penalty: options.frequency_penalty || 0,
                 presence_penalty: options.presence_penalty || 0,
@@ -609,10 +609,12 @@ class OpenAIClient {
                 frequency_penalty: frequencyPenalty,
                 presence_penalty: presencePenalty
             });
-            // Extract content from response
-            const content = response.choices[0]?.message?.content || '';
             return {
-                content,
+                id: response.id,
+                object: response.object,
+                created: response.created,
+                model: response.model,
+                choices: response.choices,
                 usage: response.usage && {
                     prompt_tokens: response.usage.prompt_tokens,
                     completion_tokens: response.usage.completion_tokens,
@@ -643,10 +645,12 @@ class OpenAIClient {
                 frequency_penalty: frequencyPenalty,
                 presence_penalty: presencePenalty
             });
-            // Extract content from response
-            const content = response.choices[0]?.message?.content || '';
             return {
-                content,
+                id: response.id,
+                object: response.object,
+                created: response.created,
+                model: response.model,
+                choices: response.choices,
                 usage: response.usage && {
                     prompt_tokens: response.usage.prompt_tokens,
                     completion_tokens: response.usage.completion_tokens,

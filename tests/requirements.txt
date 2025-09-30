@@ -1,69 +1,57 @@
+# NoOrg Test Suite Requirements
+# Install with: pip install -r tests/requirements.txt
+
 # Testing Framework
-pytest>=7.4.0
-pytest-asyncio>=0.18.0
-pytest-cov>=4.1.0
-pytest-benchmark>=4.0.0
-pytest-mock>=3.10.0
-pytest-xdist>=3.3.1
-pytest-timeout>=2.1.0
-pytest-randomly>=3.13.0
-pytest-clarity>=1.0.1
-pytest-sugar>=0.9.7
-pytest-env>=1.0.1
-pytest-html>=4.1.1
-pytest-metadata>=3.0.0
-pytest-repeat>=0.9.3
-pytest-rerunfailures>=13.0
-pytest-ordering>=0.6
-pytest-picked>=0.5.0
-pytest-reportlog>=0.3.0
-pytest-reportportal>=5.2.0
-pytest-selenium>=4.1.0
-pytest-variables>=3.0.0
-pytest-voluptuous>=2.0.2
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-timeout==2.2.0
+pytest-xdist==3.5.0  # Parallel test execution
+pytest-benchmark==4.0.0  # Performance benchmarking
+pytest-mock==3.12.0
 
-# Testing Support
-hypothesis>=6.75.3
-coverage>=7.2.0
-asynctest>=0.13.0
-faker>=19.3.0
-factory-boy>=3.3.0
-freezegun>=1.2.0
-responses>=0.23.0
-requests-mock>=1.11.0
-aioresponses>=0.7.4
-moto>=4.2.0
+# Async support
+asyncio==3.4.3
+aiofiles==23.2.1
 
-# Application Dependencies
-aiohttp>=3.8.0
-pydantic>=2.0.0
-PyYAML>=6.0.0
-ujson>=5.8.0
-orjson>=3.9.0
-msgpack>=1.0.5
-protobuf>=4.24.0
-grpcio>=1.59.0
-redis>=5.0.0
-motor>=3.3.0
-aioboto3>=11.3.0
-aioredis>=2.0.0
-asyncpg>=0.28.0
-prometheus-client>=0.17.0
-opentelemetry-api>=1.20.0
-opentelemetry-sdk>=1.20.0
-structlog>=23.1.0
+# Performance testing
+psutil==5.9.6  # System metrics
+memory-profiler==0.61.0
+py-spy==0.3.14  # Profiling
 
-# Additional dependencies
-black>=23.7.0
-isort>=5.12.0
-mypy>=1.5.1
-pylint>=2.17.5
-flake8>=6.1.0
-bandit>=1.7.5
-safety>=2.3.5
-types-setuptools>=68.2.0.0
-types-requests>=2.31.0.2
-types-PyYAML>=6.0.12.11
-types-python-dateutil>=2.8.19.14
-types-urllib3>=1.26.25.14
-types-jsonschema>=4.17.0.10 
+# Data validation
+pydantic==2.5.2
+jsonschema==4.20.0
+
+# HTTP testing
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Database testing (optional)
+psycopg2-binary==2.9.9  # PostgreSQL
+redis==5.0.1
+
+# Mocking and fixtures
+faker==20.1.0
+factory-boy==3.3.0
+
+# Reporting
+pytest-html==4.1.1
+pytest-json-report==1.5.0
+
+# Code coverage
+coverage[toml]==7.3.3
+
+# Linting (optional)
+pylint==3.0.3
+flake8==6.1.0
+black==23.12.1
+mypy==1.7.1
+
+# Type hints
+types-psutil==5.9.5.17
+types-redis==4.6.0.11
+
+# Utils
+python-dotenv==1.0.0
+pyyaml==6.0.1

@@ -221,7 +221,7 @@ async function runParallelResearchWorkflow() {
     ...researchPaths.map(path => ({
       id: `${path.id}_research`,
       type: 'research',
-      title: path.name,
+      name: path.name,
       description: `Research ${path.name.toLowerCase()}`,
       agent: researchAgents[researchPaths.indexOf(path)] as any,
       next: [`${path.id}_analysis`]
@@ -231,7 +231,7 @@ async function runParallelResearchWorkflow() {
     ...researchPaths.map(path => ({
       id: `${path.id}_analysis`,
       type: 'analysis',
-      title: `${path.name} Analysis`,
+      name: `${path.name} Analysis`,
       description: `Analyze ${path.name.toLowerCase()}`,
       agent: analysisAgents[researchPaths.indexOf(path)] as any,
       dependsOn: [`${path.id}_research`],
@@ -242,7 +242,7 @@ async function runParallelResearchWorkflow() {
     {
       id: 'content_planning',
       type: 'planning',
-      title: 'Content Planning',
+      name: 'Content Planning',
       description: 'Create content plan based on research and analysis',
       agent: planningAgent as any,
       dependsOn: researchPaths.map(path => `${path.id}_analysis`),
@@ -253,7 +253,7 @@ async function runParallelResearchWorkflow() {
     {
       id: 'content_writing',
       type: 'writing',
-      title: 'Content Writing',
+      name: 'Content Writing',
       description: 'Generate content based on the plan',
       agent: writingAgent as any,
       dependsOn: ['content_planning'],
@@ -264,7 +264,7 @@ async function runParallelResearchWorkflow() {
     {
       id: 'content_review',
       type: 'review',
-      title: 'Content Review',
+      name: 'Content Review',
       description: 'Review the generated content',
       agent: reviewAgent as any,
       dependsOn: ['content_writing'],
@@ -275,7 +275,7 @@ async function runParallelResearchWorkflow() {
     {
       id: 'final_review',
       type: 'final_review',
-      title: 'Final Review',
+      name: 'Final Review',
       description: 'Perform final review of the content',
       agent: finalReviewAgent as any,
       dependsOn: ['content_review'],
@@ -301,7 +301,7 @@ async function runParallelResearchWorkflow() {
     await taskManager.createTask({
       id: taskId,
       type: stage.type,
-      title: stage.title,
+      name: stage.title,
       description: stage.description,
       status: 'pending',
       priority: 'high',

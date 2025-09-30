@@ -214,11 +214,11 @@ export class LegalAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.2,
-        max_tokens: 4000
+        maxTokens: 4000
       });
       
       // Process the document
-      const documentContent = response.content;
+      const documentContent = response.choices[0].message.content;
       
       // Extract structured information from the response
       const extractionPrompt = `
@@ -256,11 +256,11 @@ export class LegalAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 3000
+        maxTokens: 3000
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.legalCache.set(cacheKey, {
@@ -383,14 +383,14 @@ export class LegalAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.2,
-        max_tokens: 3500
+        maxTokens: 3500
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this legal document review in JSON format:
         
-        REVIEW: ${response.content}
+        REVIEW: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -426,11 +426,11 @@ export class LegalAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 2500
+        maxTokens: 2500
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.legalCache.set(cacheKey, {
@@ -543,14 +543,14 @@ export class LegalAgent {
       const response = await this.openAIClient.sendPrompt(prompt, {
         model: this.agent.preferredModel,
         temperature: 0.3,
-        max_tokens: 3500
+        maxTokens: 3500
       });
       
       // Extract structured information from the response
       const extractionPrompt = `
         Extract the following information from this legal research in JSON format:
         
-        RESEARCH: ${response.content}
+        RESEARCH: ${response.choices[0].message.content}
         
         Extract into the following structure:
         {
@@ -586,11 +586,11 @@ export class LegalAgent {
       const extractionResponse = await this.openAIClient.sendPrompt(extractionPrompt, {
         model: this.agent.preferredModel,
         temperature: 0.1,
-        max_tokens: 2500
+        maxTokens: 2500
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.content);
+      const result = JSON.parse(extractionResponse.choices[0].message.content);
       
       // Cache the result
       this.legalCache.set(cacheKey, {

@@ -198,10 +198,10 @@ class DevelopmentAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.2, // Lower temperature for more predictable code
-                max_tokens: 3000
+                maxTokens: 3000
             });
             // Extract the code from the response
-            const generatedContent = response.content;
+            const generatedContent = response.choices[0].message.content;
             // Prepare a more structured response
             let result = { code: this.extractCodeBlocks(generatedContent), language };
             // Add documentation if requested
@@ -220,7 +220,7 @@ class DevelopmentAgent {
                 const docResponse = await this.openAIClient.sendPrompt(docPrompt, {
                     model: this.agent.preferredModel,
                     temperature: 0.3,
-                    max_tokens: 1000
+                    maxTokens: 1000
                 });
                 result.documentation = docResponse.choices[0].message.content;
             }
@@ -237,7 +237,7 @@ class DevelopmentAgent {
                 const testResponse = await this.openAIClient.sendPrompt(testPrompt, {
                     model: this.agent.preferredModel,
                     temperature: 0.2,
-                    max_tokens: 1500
+                    maxTokens: 1500
                 });
                 result.testCode = this.extractCodeBlocks(testResponse.choices[0].message.content);
             }
@@ -320,10 +320,10 @@ class DevelopmentAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.1, // Lower temperature for more consistent reviews
-                max_tokens: 2000
+                maxTokens: 2000
             });
             // Parse the JSON response
-            const reviewResult = JSON.parse(response.content);
+            const reviewResult = JSON.parse(response.choices[0].message.content);
             // Update agent status
             this.updateStatus('available');
             return {
@@ -419,10 +419,10 @@ class DevelopmentAgent {
             const response = await this.openAIClient.sendPrompt(prompt, {
                 model: this.agent.preferredModel,
                 temperature: 0.2,
-                max_tokens: 3000
+                maxTokens: 3000
             });
             // Parse the JSON response
-            const architectureResult = JSON.parse(response.content);
+            const architectureResult = JSON.parse(response.choices[0].message.content);
             // Update agent status
             this.updateStatus('available');
             return {

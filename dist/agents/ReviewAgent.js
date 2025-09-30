@@ -28,7 +28,7 @@ class ReviewAgent extends BaseAgent_1.BaseAgent {
             const response = await this.openAIClient.generateResponse(prompt, {
                 model: this.config.preferredModel || 'o3-mini',
                 temperature: 0.7,
-                max_tokens: 2000
+                maxTokens: 2000
             });
             this.updateStatus('idle');
             const sections = response.split('\n\n');
@@ -67,7 +67,7 @@ class ReviewAgent extends BaseAgent_1.BaseAgent {
             const response = await this.openAIClient.generateResponse(prompt, {
                 model: this.config.preferredModel || 'o3-mini',
                 temperature: 0.7,
-                max_tokens: 2000
+                maxTokens: 2000
             });
             this.updateStatus('idle');
             const sections = response.split('\n\n');

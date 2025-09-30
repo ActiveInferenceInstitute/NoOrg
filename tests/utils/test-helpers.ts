@@ -7,7 +7,8 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { expect } from 'chai';
+// Using Jest's built-in expect
+import { expect as jestExpect } from '@jest/globals';
 import { v4 as uuidv4 } from 'uuid';
 import * as dotenv from 'dotenv';
 import { Agent, Capability } from '../../src/agents/types';
@@ -33,7 +34,7 @@ export interface TestScenario {
   agents: TestAgent[];
   initialState?: Record<string, any>;
   tasks?: Partial<Task>[];
-  expectedResults?: any;
+  jestExpectedResults?: any;
 }
 
 // Helper constants
@@ -50,7 +51,7 @@ if (!fs.existsSync(TEST_DATA_DIR)) {
  * Uses a real OpenAI client by default
  */
 export function createTestFixture(useRealLLM = true) {
-  const sharedStateManager = new SharedStateManager();
+  const sharedStateManager = SharedStateManager.getInstance();
   const taskManager = new TaskManager();
   const agentRegistry = new AgentRegistry();
   
@@ -61,10 +62,7 @@ export function createTestFixture(useRealLLM = true) {
     openAIClient = createRealLLMClient();
   } else {
     // Use a minimal client without real API calls for tests that don't need LLM
-    openAIClient = new OpenAIClient({
-      apiKey: 'test-api-key',
-      defaultModel: 'gpt-3.5-turbo'
-    });
+    openAIClient = new OpenAIClient('test-api-key');
   }
   
   const promptManager = new PromptManager();
@@ -104,16 +102,7 @@ export function createRealLLMClient() {
   }
   
   // Create a real OpenAI client
-  return new OpenAIClient({
-    apiKey: process.env.OPENAI_API_KEY,
-    defaultModel: process.env.DEFAULT_MODEL || 'gpt-3.5-turbo',
-    maxTokens: process.env.MAX_TOKENS ? parseInt(process.env.MAX_TOKENS) : 2000,
-    temperature: process.env.TEMPERATURE ? parseFloat(process.env.TEMPERATURE) : 0.7,
-    billingLimits: {
-      maxMonthlySpend: process.env.MAX_MONTHLY_SPEND ? parseFloat(process.env.MAX_MONTHLY_SPEND) : 50,
-      alertThreshold: process.env.ALERT_THRESHOLD ? parseFloat(process.env.ALERT_THRESHOLD) : 0.8
-    }
-  });
+  return new OpenAIClient(process.env.OPENAI_API_KEY || 'test-api-key');
 }
 
 /**
@@ -152,7 +141,7 @@ export function createTestTask(
     id: options.id || uuidv4(),
     type,
     description,
-    title: options.title || `Test Task: ${description}`,
+    name: `Test Task: ${description}`,
     priority: options.priority || 'medium',
     status: options.status || 'pending',
     createdAt: options.createdAt || timestamp,
@@ -219,9 +208,7 @@ export async function runWorkflowTest(scenario: TestScenario) {
     const task = await fixture.taskManager.getTask(taskId);
     
     // Find an agent for the task
-    const agents = await fixture.agentRegistry.findAgents({
-      status: ['available']
-    });
+    const agents = await fixture.agentRegistry.listAgents();
     
     if (agents.length > 0) {
       const selectedAgent = agents[0];
@@ -285,34 +272,34 @@ async function waitForTasks(taskManager: TaskManager, taskIds: string[], timeout
 }
 
 /**
- * Validates workflow test results against expectations
+ * Validates workflow test results against jestExpectations
  */
-export function validateWorkflowResults(
+export async function validateWorkflowResults(
   setup: Awaited<ReturnType<typeof setupTestScenario>>,
-  expectations: Record<string, any>
+  jestExpectations: Record<string, any>
 ) {
   const { fixture, taskIds } = setup;
   
   // Check task statuses
-  if (expectations.taskStatuses) {
+  if (jestExpectations.taskStatuses) {
     for (let i = 0; i < taskIds.length; i++) {
       const taskId = taskIds[i];
-      const task = fixture.taskManager.getTask(taskId);
-      const expectedStatus = expectations.taskStatuses[i] || 'completed';
-      
-      expect(task.status).to.equal(expectedStatus);
+      const task = await fixture.taskManager.getTask(taskId);
+      const jestExpectedStatus = jestExpectations.taskStatuses[i] || 'completed';
+
+      expect(task.status).toBe(jestExpectedStatus);
     }
   }
   
   // Check shared state values
-  if (expectations.sharedState) {
-    for (const [key, expectedValue] of Object.entries(expectations.sharedState)) {
+  if (jestExpectations.sharedState) {
+    for (const [key, jestExpectedValue] of Object.entries(jestExpectations.sharedState)) {
       const actualValue = fixture.sharedStateManager.getState(key);
       
-      if (typeof expectedValue === 'object') {
-        expect(actualValue).to.deep.include(expectedValue);
+      if (typeof jestExpectedValue === 'object') {
+        expect(actualValue).toEqual(expect.objectContaining(jestExpectedValue));
       } else {
-        expect(actualValue).to.equal(expectedValue);
+        expect(actualValue).toBe(jestExpectedValue);
       }
     }
   }

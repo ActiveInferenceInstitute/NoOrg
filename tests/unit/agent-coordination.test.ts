@@ -1,5 +1,6 @@
-import { expect } from 'chai';
-import { createTestFixture, createTestAgent, createTestTask, runWorkflowTest, CompositeAgentTesting } from '../utils/test-helpers';
+// Using Jest's built-in expect
+import { expect } from '@jest/globals';
+import { createTestFixture, createTestAgent, createTestTask, runWorkflowTest } from '../utils/test-helpers';
 import { Agent } from '../../src/agents/types';
 import { Task } from '../../src/core/multiagent/types';
 
@@ -23,11 +24,11 @@ describe('Multiagent Coordination', () => {
       const retrievedAgent = await fixture.agentRegistry.getAgent(agent.id);
       
       // Verify
-      expect(retrievedAgent).to.not.be.undefined;
-      expect(retrievedAgent.id).to.equal(agent.id);
-      expect(retrievedAgent.name).to.equal('Test Research Agent');
-      expect(retrievedAgent.type).to.equal('research');
-      expect(retrievedAgent.capabilities).to.deep.equal(['research', 'web-search']);
+      expect(retrievedAgent).toBeDefined();
+      expect(retrievedAgent?.id).toBe(agent.id);
+      expect(retrievedAgent?.name).toBe('Test Research Agent');
+      expect(retrievedAgent?.type).toBe('research');
+      expect(retrievedAgent?.capabilities).toEqual(['research', 'web-search']);
       
       // Cleanup
       await fixture.coordinator.stop();
@@ -61,24 +62,24 @@ describe('Multiagent Coordination', () => {
       const researchAgents = await fixture.agentRegistry.findAgentsByCapability('research');
       
       // Verify research agents
-      expect(researchAgents.length).to.equal(2);
-      expect(researchAgents.map(a => a.id)).to.include(researchAgent.id);
-      expect(researchAgents.map(a => a.id)).to.include(hybridAgent.id);
+      expect(researchAgents.length).toBe(2);
+      expect(researchAgents.map(a => a.id)).toContain(researchAgent.id);
+      expect(researchAgents.map(a => a.id)).toContain(hybridAgent.id);
       
       // Find agents with writing capability
       const writingAgents = await fixture.agentRegistry.findAgentsByCapability('writing');
       
       // Verify writing agents
-      expect(writingAgents.length).to.equal(2);
-      expect(writingAgents.map(a => a.id)).to.include(writerAgent.id);
-      expect(writingAgents.map(a => a.id)).to.include(hybridAgent.id);
+      expect(writingAgents.length).toBe(2);
+      expect(writingAgents.map(a => a.id)).toContain(writerAgent.id);
+      expect(writingAgents.map(a => a.id)).toContain(hybridAgent.id);
       
       // Find agents with planning capability
       const planningAgents = await fixture.agentRegistry.findAgentsByCapability('planning');
       
       // Verify planning agents
-      expect(planningAgents.length).to.equal(1);
-      expect(planningAgents[0].id).to.equal(hybridAgent.id);
+      expect(planningAgents.length).toBe(1);
+      expect(planningAgents[0].id).toBe(hybridAgent.id);
       
       // Cleanup
       await fixture.coordinator.stop();
@@ -109,15 +110,15 @@ describe('Multiagent Coordination', () => {
       
       // Check task assignment
       const task = await fixture.taskManager.getTask(taskId);
-      expect(task.assignedTo).to.equal(agent.id);
-      expect(task.status).to.equal('assigned');
+      expect(task.assignedTo).toBe(agent.id);
+      expect(task.status).toBe('assigned');
       
       // Start the task
       await fixture.taskManager.updateTask(taskId, { status: 'in-progress' });
       
       // Check task status
       const inProgressTask = await fixture.taskManager.getTask(taskId);
-      expect(inProgressTask.status).to.equal('in-progress');
+      expect(inProgressTask.status).toBe('in-progress');
       
       // Complete the task
       await fixture.taskManager.updateTask(taskId, { 
@@ -130,8 +131,8 @@ describe('Multiagent Coordination', () => {
       
       // Check task completion
       const completedTask = await fixture.taskManager.getTask(taskId);
-      expect(completedTask.status).to.equal('completed');
-      expect(completedTask.metadata.result.success).to.equal(true);
+      expect(completedTask.status).toBe('completed');
+      expect((completedTask.metadata.result as any)?.success).toBe(true);
       
       // Cleanup
       await fixture.coordinator.stop();
@@ -169,12 +170,12 @@ describe('Multiagent Coordination', () => {
       const task2 = await fixture.taskManager.getTask(task2Id);
       const task3 = await fixture.taskManager.getTask(task3Id);
       
-      expect(task2.dependsOn).to.deep.equal([task1Id]);
-      expect(task3.dependsOn).to.deep.equal([task2Id]);
+      expect(task2.dependsOn).toEqual([task1Id]);
+      expect(task3.dependsOn).toEqual([task2Id]);
       
       // Check if dependencies are satisfied (should not be initially)
       const task2Ready = await fixture.taskManager.areDependenciesSatisfied(task2Id);
-      expect(task2Ready).to.be.false;
+      expect(task2Ready).toBe(false);
       
       // Complete the first task
       await fixture.taskManager.assignTask(task1Id, agent.id);
@@ -183,11 +184,11 @@ describe('Multiagent Coordination', () => {
       
       // Now task2's dependencies should be satisfied
       const task2ReadyNow = await fixture.taskManager.areDependenciesSatisfied(task2Id);
-      expect(task2ReadyNow).to.be.true;
+      expect(task2ReadyNow).toBe(true);
       
       // Task3's dependencies should still not be satisfied
       const task3Ready = await fixture.taskManager.areDependenciesSatisfied(task3Id);
-      expect(task3Ready).to.be.false;
+      expect(task3Ready).toBe(false);
       
       // Complete the second task
       await fixture.taskManager.assignTask(task2Id, agent.id);
@@ -196,7 +197,7 @@ describe('Multiagent Coordination', () => {
       
       // Now task3's dependencies should be satisfied
       const task3ReadyNow = await fixture.taskManager.areDependenciesSatisfied(task3Id);
-      expect(task3ReadyNow).to.be.true;
+      expect(task3ReadyNow).toBe(true);
       
       // Cleanup
       await fixture.coordinator.stop();
@@ -218,14 +219,14 @@ describe('Multiagent Coordination', () => {
       const agentCount = fixture.sharedStateManager.getState('agents.count');
       
       // Verify
-      expect(value).to.equal(42);
-      expect(nestedValue).to.equal('hello');
-      expect(agentCount).to.equal(0);
+      expect(value).toBe(42);
+      expect(nestedValue).toBe('hello');
+      expect(agentCount).toBe(0);
       
       // Update a value
       fixture.sharedStateManager.setState('agents.count', 3);
       const updatedCount = fixture.sharedStateManager.getState('agents.count');
-      expect(updatedCount).to.equal(3);
+      expect(updatedCount).toBe(3);
     });
     
     it('should watch for changes in state', async () => {
@@ -235,27 +236,27 @@ describe('Multiagent Coordination', () => {
       let watchCallCount = 0;
       
       // Set up a watcher
-      fixture.sharedStateManager.watchState('test.watchable', (newValue, oldValue) => {
+      const subscriptionId = fixture.sharedStateManager.subscribe('test.watchable', (path: string, newValue: any) => {
         watchedValue = newValue;
         watchCallCount++;
       });
       
       // Make changes
       fixture.sharedStateManager.setState('test.watchable', 'first');
-      expect(watchedValue).to.equal('first');
-      expect(watchCallCount).to.equal(1);
+      expect(watchedValue).toBe('first');
+      expect(watchCallCount).toBe(1);
       
       fixture.sharedStateManager.setState('test.watchable', 'second');
-      expect(watchedValue).to.equal('second');
-      expect(watchCallCount).to.equal(2);
+      expect(watchedValue).toBe('second');
+      expect(watchCallCount).toBe(2);
       
       // Unwatch
-      fixture.sharedStateManager.unwatchState('test.watchable');
+      fixture.sharedStateManager.unsubscribe(subscriptionId);
       
       // Make another change, should not trigger the watcher
       fixture.sharedStateManager.setState('test.watchable', 'third');
-      expect(watchedValue).to.equal('second'); // Still the old value
-      expect(watchCallCount).to.equal(2); // Still the old count
+      expect(watchedValue).toBe('second'); // Still the old value
+      expect(watchCallCount).toBe(2); // Still the old count
     });
   });
   
@@ -332,9 +333,9 @@ describe('Multiagent Coordination', () => {
       // Verify the final task state
       const finalTask = await fixture.taskManager.getTask(taskId);
       
-      expect(finalTask.status).to.equal('completed');
-      expect(finalTask.metadata.result.research.topic).to.equal('AI coordination');
-      expect(finalTask.metadata.result.analysis.insights).to.have.lengthOf(2);
+      expect(finalTask.status).toBe('completed');
+      expect((finalTask.metadata.result as any)?.research?.topic).toBe('AI coordination');
+      expect((finalTask.metadata.result as any)?.analysis?.insights).toHaveLength(2);
       
       // Cleanup
       await fixture.coordinator.stop();

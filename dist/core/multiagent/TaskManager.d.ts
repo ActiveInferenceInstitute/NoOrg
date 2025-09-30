@@ -71,4 +71,63 @@ export declare class TaskManager implements ITaskManager {
      * @returns True if dependencies are satisfied
      */
     areDependenciesSatisfied(taskId: string): Promise<boolean>;
+    /**
+     * Unassign a task from its current agent
+     * @param taskId Task ID
+     */
+    unassignTask(taskId: string): Promise<void>;
+    /**
+     * Reassign a task to a different agent
+     * @param taskId Task ID
+     * @param newAgentId New agent ID
+     */
+    reassignTask(taskId: string, newAgentId: string): Promise<void>;
+    /**
+     * Get task history including all state changes
+     * @param taskId Task ID
+     * @returns Task history
+     */
+    getTaskHistory(taskId: string): Promise<TaskHistory[]>;
+    /**
+     * Estimate task duration based on historical data
+     * @param task Task to estimate
+     * @returns Estimated duration in milliseconds
+     */
+    estimateTaskDuration(task: Task): Promise<number>;
+    /**
+     * Get task statistics
+     * @returns Task statistics
+     */
+    getTaskStatistics(): Promise<TaskStatistics>;
+    /**
+     * Clean up old completed tasks
+     * @param olderThan Timestamp - remove tasks older than this
+     */
+    cleanupOldTasks(olderThan: number): Promise<number>;
+    /**
+     * Update task properties
+     * @param taskId Task ID
+     * @param updates Partial task data for updates
+     */
+    updateTask(taskId: string, updates: Partial<Omit<Task, 'id' | 'createdAt'>>): Promise<void>;
 }
+interface TaskHistory {
+    timestamp: number;
+    event: 'created' | 'assigned' | 'started' | 'completed' | 'failed' | 'reassigned';
+    status: Task['status'];
+    agentId?: string;
+    metadata: Record<string, any>;
+}
+interface TaskStatistics {
+    total: number;
+    byStatus: Record<Task['status'], number>;
+    byPriority: {
+        critical: number;
+        high: number;
+        medium: number;
+        low: number;
+    };
+    avgProcessingTime: number;
+    successRate: number;
+}
+export {};

@@ -498,4 +498,59 @@ export class AgentRegistry implements IAgentRegistry {
     this.agents.clear();
     this.capabilityIndex.clear();
   }
+
+  /**
+   * Find agents by capability
+   * @param capability Capability to search for
+   * @returns Array of agents with the specified capability
+   */
+  async findAgentsByCapability(capability: string): Promise<AgentType[]> {
+    try {
+      const agents = Array.from(this.agents.values());
+      const matchingAgents = agents.filter(agent =>
+        agent.capabilities.some(cap => typeof cap === 'string' ? cap === capability : cap.name === capability)
+      );
+
+      return matchingAgents.map(agent => this.convertToAgentType(agent));
+    } catch (error: any) {
+      console.error(`Failed to find agents by capability: ${error.message}`);
+      return [];
+    }
+  }
+
+  /**
+   * Find agents by type
+   * @param type Agent type to search for
+   * @returns Array of agents of the specified type
+   */
+  async findAgentsByType(type: string): Promise<AgentType[]> {
+    try {
+      const agents = Array.from(this.agents.values());
+      const matchingAgents = agents.filter(agent => agent.type === type);
+
+      return matchingAgents.map(agent => this.convertToAgentType(agent));
+    } catch (error: any) {
+      console.error(`Failed to find agents by type: ${error.message}`);
+      return [];
+    }
+  }
+
+  /**
+   * Get capabilities for a specific agent
+   * @param agentId Agent ID
+   * @returns Array of capabilities
+   */
+  async getAgentCapabilities(agentId: string): Promise<string[]> {
+    try {
+      const agent = this.agents.get(agentId);
+      if (!agent) {
+        return [];
+      }
+
+      return agent.capabilities.map(cap => typeof cap === 'string' ? cap : cap.name);
+    } catch (error: any) {
+      console.error(`Failed to get agent capabilities: ${error.message}`);
+      return [];
+    }
+  }
 } 

@@ -1,0 +1,260 @@
+# LexDAO Governance Workflow - Git Ignore Configuration
+# Comprehensive ignore patterns for the LexDAO example project
+
+# =============================================================================
+# DEPENDENCIES
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+
+# Python virtual environments and dependencies
+venv/
+env/
+ENV/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =============================================================================
+# OUTPUT AND GENERATED FILES
+# =============================================================================
+# Main output directory (relative to project root)
+../../output/
+output/
+test-output/
+
+# Generated reports and artifacts
+*.log
+logs/
+*.tmp
+*.temp
+.cache/
+
+# Visualization outputs
+visualizations/
+animations/
+images/
+*.svg
+*.png
+*.gif
+*.html
+
+# Analytics outputs
+analytics/
+validation/
+constitution-analysis/
+proposals/
+
+# =============================================================================
+# ENVIRONMENT AND CONFIGURATION
+# =============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.backup
+
+# Configuration overrides
+config.local.*
+settings.local.*
+
+# =============================================================================
+# DEVELOPMENT FILES
+# =============================================================================
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# =============================================================================
+# BUILD AND DISTRIBUTION
+# =============================================================================
+dist/
+build/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# =============================================================================
+# TESTING
+# =============================================================================
+test-results/
+coverage/
+*.lcov
+junit.xml
+test-output/
+test-logs/
+
+# Jest
+.jest/
+coverage-final.json
+
+# =============================================================================
+# TEMPORARY AND CACHE FILES
+# =============================================================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# =============================================================================
+# LOGS AND DEBUGGING
+# =============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime logs
+runtime.log
+debug.log
+error.log
+
+# =============================================================================
+# SECURITY AND SENSITIVE DATA
+# =============================================================================
+# API keys and secrets (should be in .env)
+*.key
+*.pem
+*.crt
+*.p12
+
+# Wallet files and private keys
+*.wallet
+keystore/
+private-keys/
+
+# =============================================================================
+# DOCUMENTATION
+# =============================================================================
+# Generated documentation
+docs/build/
+docs/.vuepress/dist
+
+# API documentation
+api-docs/
+
+# =============================================================================
+# MISCELLANEOUS
+# =============================================================================
+# Lock files that might be regenerated
+yarn.lock.bak
+package-lock.json.bak
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+
+# Local Netlify folder
+.netlify
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Sentry Config File
+.sentryclirc
+
+# =============================================================================
+# SPECIFIC TO LEXDAO PROJECT
+# =============================================================================
+# Workflow execution outputs
+workflow_outputs.json
+lexdao_governance_report.html
+
+# LLM agent outputs
+llm_outputs/
+intermediates/
+
+# Event logs
+events/
+
+# Template files (generated)
+templates/
+
+# Data files (sample/test data)
+data/
+
+# =============================================================================
+# FILE SIZE LIMITS
+# =============================================================================
+# Ignore files larger than 100MB (adjust as needed)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.wav
+*.mp3
+
+# =============================================================================
+# ALLOWED PATTERNS
+# =============================================================================
+# These files should NOT be ignored
+!.gitignore
+!README.md
+!package.json
+!tsconfig.json
+!jest.config.js
+!.env.example
+!Dockerfile
+!docker-compose.yml
+!nginx.conf
