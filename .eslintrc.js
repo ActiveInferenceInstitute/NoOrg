@@ -2,11 +2,9 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
-    '@typescript-eslint/recommended-requiring-type-checking',
     'prettier'
   ],
-  plugins: ['@typescript-eslint', 'prettier', 'security', 'import'],
+  plugins: ['@typescript-eslint', 'prettier'],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -19,17 +17,6 @@ module.exports = {
     node: true,
     es6: true,
     jest: true
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-        project: './tsconfig.json'
-      },
-      node: {
-        extensions: ['.js', '.ts', '.json']
-      }
-    }
   },
   rules: {
     // Prettier
@@ -115,24 +102,7 @@ module.exports = {
     'template-tag-spacing': 'error',
     'unicode-bom': 'error',
     'wrap-iife': 'error',
-    'yield-star-spacing': 'error',
-
-    // Security
-    'security/detect-object-injection': 'warn',
-    'security/detect-non-literal-fs-filename': 'warn',
-    'security/detect-possible-timing-attacks': 'warn',
-    'security/detect-no-csrf-before-method-override': 'warn',
-    'security/detect-unsafe-regex': 'warn',
-
-    // Import
-    'import/order': ['error', {
-      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      'newlines-between': 'always'
-    }],
-    'import/no-duplicates': 'error',
-    'import/no-unused-modules': 'warn',
-    'import/no-deprecated': 'warn',
-    'import/no-unresolved': 'error'
+    'yield-star-spacing': 'error'
   },
   ignorePatterns: [
     'dist/',

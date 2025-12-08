@@ -73,18 +73,13 @@
 
     "security": "npm run security:audit && npm run security:scan",
     "security:audit": "npm audit",
-    "security:scan": "npx security-scan src/",
+    "security:scan": "node scripts/security-scanner.js",
 
     "performance": "npm run performance:benchmark && npm run performance:profile",
     "performance:benchmark": "npm run test:performance",
     "performance:profile": "node --prof dist/index.js",
     "performance:analyze": "node scripts/performance-optimizer.js",
     "performance:advanced": "node scripts/advanced-performance-analyzer.js",
-
-    "security": "npm run security:audit && npm run security:scan",
-    "security:audit": "npm audit",
-    "security:scan": "npx security-scan src/",
-    "security:advanced": "node scripts/advanced-security-scanner.js",
 
     "maintenance": "npm run maintenance:cleanup && npm run maintenance:optimize",
     "maintenance:cleanup": "npm run logs:clear && npm run clean",
@@ -136,9 +131,11 @@
     "@mermaid-js/mermaid-cli": "^11.4.2",
     "@types/jest": "^29.0.0",
     "@types/node": "^18.19.86",
+    "@types/chai": "^4.3.11",
     "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "chai": "^4.5.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",

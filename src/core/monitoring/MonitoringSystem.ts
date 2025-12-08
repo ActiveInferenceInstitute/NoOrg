@@ -129,13 +129,17 @@ export class MonitoringSystem {
   }
 
   private async persistMetrics(): Promise<void> {
+    const metricNames: string[] = [];
     for (const [name, metrics] of this.metrics.entries()) {
+      metricNames.push(name);
       await this.storageSystem.set(`metrics:${name}`, metrics);
     }
+    // Persist key list for reload
+    await this.storageSystem.set('metrics:keys', metricNames);
   }
 
   public async loadPersistedMetrics(): Promise<void> {
-    const keys = await this.storageSystem.get<string[]>('metrics:keys') || [];
+    const keys = (await this.storageSystem.get<string[]>('metrics:keys')) || [];
     for (const key of keys) {
       const metrics = await this.storageSystem.get<Metric[]>(`metrics:${key}`);
       if (metrics) {

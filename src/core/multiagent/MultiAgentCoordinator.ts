@@ -4,9 +4,13 @@ import { v4 as uuidv4 } from 'uuid';
 import { AgentRegistry } from './interfaces/AgentRegistry';
 import { SharedStateManager } from './interfaces/SharedStateManager';
 import { TaskManager } from './interfaces/TaskManager';
-import { OpenAIClient } from './interfaces/OpenAIClient';
-import { PromptManager } from './interfaces/PromptManager';
+import { OpenAIClient as OpenAIClientInterface } from './interfaces/OpenAIClient';
+import { PromptManager as PromptManagerInterface } from './interfaces/PromptManager';
 import { SharedStateManager as SharedStateManagerImpl } from './SharedStateManager';
+import { TaskManager as TaskManagerImpl } from './TaskManager';
+import { AgentRegistry as AgentRegistryImpl } from './AgentRegistry';
+import { OpenAIClient as OpenAIClientImpl } from './OpenAIClient';
+import { PromptManager as PromptManagerImpl } from './PromptManager';
 import { Task, Agent, TaskResult, Capability, AgentStatus, StateUpdateOptions, TaskFilter, TokenEstimate } from './types';
 import { Agent as AgentType } from '../../agents/types';
 import * as winston from 'winston';
@@ -204,8 +208,8 @@ export class MultiAgentCoordinator {
   private name: string;
   private sharedStateManager: SharedStateManager;
   private taskManager: TaskManager;
-  private openAIClient: OpenAIClient;
-  private promptManager: PromptManager;
+  private openAIClient: OpenAIClientInterface;
+  private promptManager: PromptManagerInterface;
   private executionConfig: {
     maxConcurrentTasks: number;
     enableAutoRetry: boolean;
@@ -242,43 +246,11 @@ export class MultiAgentCoordinator {
     // Initialize required components using provided options or full fallbacks matching interfaces
     this.sharedStateManager = options?.sharedStateManager || this.stateManager;
     
-    // TaskManager Fallback (Aligned with interface)
-    this.taskManager = options?.taskManager || {
-      assignTask: async (taskId: string, agentId: string): Promise<void> => { this.logger.warn('Using fallback TaskManager.assignTask'); },
-      completeTask: async (taskId: string, result: TaskResult): Promise<void> => { this.logger.warn('Using fallback TaskManager.completeTask'); },
-      failTask: async (taskId: string, error: Error): Promise<void> => { this.logger.warn('Using fallback TaskManager.failTask'); },
-      createTask: async (taskData: Partial<Task>): Promise<string> => { this.logger.warn('Using fallback TaskManager.createTask'); return uuidv4(); },
-      startTask: async (taskId: string): Promise<void> => { this.logger.warn('Using fallback TaskManager.startTask'); },
-      cancelTask: async (taskId: string): Promise<void> => { this.logger.warn('Using fallback TaskManager.cancelTask'); },
-      getTask: async (taskId: string): Promise<Task> => { this.logger.warn('Using fallback TaskManager.getTask'); throw new Error('Fallback getTask not implemented'); },
-      listTasks: async (filter?: TaskFilter): Promise<Task[]> => { this.logger.warn('Using fallback TaskManager.listTasks'); return []; },
-      areDependenciesSatisfied: async (taskId: string): Promise<boolean> => { this.logger.warn('Using fallback TaskManager.areDependenciesSatisfied'); return true; } // Added from interface
-    };
-
-    // OpenAIClient Fallback (Aligned with OpenAIClient interface)
-    this.openAIClient = options?.openAIClient || {
-        // Match methods from interfaces/OpenAIClient.ts
-        createCompletion: async (prompt: string, options?: any): Promise<string> => { this.logger.warn('Using fallback OpenAIClient.createCompletion'); return "Fallback response"; },
-    };
-
-    // PromptManager Fallback (Aligned with interface)
-    this.promptManager = options?.promptManager || {
-      getPrompt: async (name: string, variables?: Record<string, unknown>) => `Fallback prompt: ${name}`,
-      addPrompt: async (name: string, template: string) => { /* Mock/Default Implementation */ },
-      updatePrompt: async (name: string, template: string) => { /* Mock/Default Implementation */ },
-      deletePrompt: async (name: string) => { /* Mock/Default Implementation */ },
-      createDefaultTemplates: async () => { /* Mock/Default Implementation */ } // Added missing method
-    };
-
-    // AgentRegistry Fallback (Aligned with AgentRegistry interface)
-    this.agentRegistry = options?.agentRegistry || {
-      // Match methods from interfaces/AgentRegistry.ts
-      registerAgent: async (agent: Agent): Promise<boolean> => { this.logger.warn('Using fallback AgentRegistry.registerAgent'); return true; },
-      unregisterAgent: async (agentId: string): Promise<boolean> => { this.logger.warn('Using fallback AgentRegistry.unregisterAgent'); return true; },
-      updateAgent: async (agentId: string, updates: Partial<Agent>): Promise<boolean> => { this.logger.warn('Using fallback AgentRegistry.updateAgent'); return true; },
-      getAgent: async (agentId: string): Promise<Agent | null> => { this.logger.warn('Using fallback AgentRegistry.getAgent'); return null; },
-      listAgents: async (filter?: any): Promise<AgentType[]> => { this.logger.warn('Using fallback AgentRegistry.listAgents'); return []; },
-    };
+    // Real implementations (still allow override for testing)
+    this.taskManager = options?.taskManager || TaskManagerImpl.getInstance();
+    this.openAIClient = options?.openAIClient || new OpenAIClientImpl();
+    this.promptManager = options?.promptManager || PromptManagerImpl.getInstance();
+    this.agentRegistry = options?.agentRegistry || AgentRegistryImpl.getInstance();
 
     const now = Date.now();
     this.executionConfig = {
@@ -477,6 +449,8 @@ export class MultiAgentCoordinator {
       if (!success) {
         throw new Error('Failed to register agent with registry');
       }
+      // Track locally for lifecycle operations
+      this.agents.set(agentId, coreAgent);
       
       // Update shared state with new agent information
       this.sharedStateManager.setState(`agents.${agentId}`, {
@@ -558,22 +532,21 @@ export class MultiAgentCoordinator {
    */
   async createTask(taskData: Omit<Task, 'id' | 'status' | 'createdAt' | 'updatedAt'>): Promise<string | null> {
     try {
-      const taskId = uuidv4();
       const now = Date.now();
       const newTask: Task = {
-        id: taskId,
+        id: uuidv4(),
         ...taskData,
         status: 'pending',
         createdAt: now,
         updatedAt: now,
       };
 
-      // Store task locally
-      this.tasks.set(taskId, newTask);
-
-      // Add task to TaskManager if it has its own state
-      // Assuming TaskManager handles persistence/state if needed
-      // await this.taskManager.createTask(newTask); // If TM has createTask
+      // Persist through TaskManager (source of truth) and mirror locally
+      const taskId = await this.taskManager.createTask(newTask);
+      const storedTask = await this.taskManager.getTask(taskId);
+      if (storedTask) {
+        this.tasks.set(taskId, storedTask);
+      }
 
       // Update shared state
       await this.sharedStateManager.setState(`tasks.${taskId}`, {
@@ -1165,7 +1138,7 @@ export class MultiAgentCoordinator {
    * Get the underlying OpenAI client
    * @returns OpenAI client instance
    */
-  getOpenAIClient(): OpenAIClient {
+  getOpenAIClient(): OpenAIClientInterface {
     return this.openAIClient;
   }
   
@@ -1173,7 +1146,7 @@ export class MultiAgentCoordinator {
    * Get the underlying prompt manager
    * @returns Prompt manager instance
    */
-  getPromptManager(): PromptManager {
+  getPromptManager(): PromptManagerInterface {
     return this.promptManager;
   }
 
@@ -1229,7 +1202,7 @@ export class MultiAgentCoordinator {
         coordinatorName: this.name,
         coordinationStrategy: this.coordinationStrategy,
         executionConfig: this.executionConfig,
-        sharedState: this.sharedStateManager.getState('') || {},
+        sharedState: this.sharedStateManager.getFullState() || {},
         tasks: await this.taskManager.listTasks(), 
         agents: agentsToSave,
         initialized: this.initialized,

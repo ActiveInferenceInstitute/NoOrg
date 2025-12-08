@@ -15,8 +15,8 @@ export abstract class BaseAgent implements BaseAgentInterface {
 
   constructor(config: AgentConfig) {
     this.config = config;
-    this.openAIClient = new OpenAIClient();
-    this.sharedState = SharedStateManager.getInstance();
+    this.openAIClient = (config.openAIClient as OpenAIClient) || new OpenAIClient();
+    this.sharedState = (config.sharedState as SharedStateManager) || SharedStateManager.getInstance();
   }
 
   /**

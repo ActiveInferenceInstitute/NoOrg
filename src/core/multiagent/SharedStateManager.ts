@@ -212,6 +212,38 @@ export class SharedStateManager implements ISharedStateManager {
   }
 
   /**
+   * Register a new agent in shared state
+   * @param name Agent name or ID
+   * @param agentInfo Metadata to store
+   */
+  public async registerAgent(name: string, agentInfo: Record<string, unknown>): Promise<boolean> {
+    try {
+      await this.setState(`agents.${name}`, {
+        ...agentInfo,
+        registeredAt: Date.now(),
+      });
+      return true;
+    } catch (error) {
+      this.logger.error('Failed to register agent in shared state', { name, error });
+      return false;
+    }
+  }
+
+  /**
+   * Update agent status in shared state
+   * @param name Agent name or ID
+   * @param status New status
+   */
+  public async updateAgentStatus(name: string, status: string): Promise<void> {
+    await this.setState(`agents.${name}.status`, status, {
+      metadata: {
+        action: 'updateAgentStatus',
+        timestamp: new Date().toISOString(),
+      },
+    });
+  }
+
+  /**
    * Unsubscribe from state changes
    * @param subscriptionId The ID of the subscription to remove
    */
@@ -413,28 +445,4 @@ export class SharedStateManager implements ISharedStateManager {
   }
   */
 
-  /**
-   * Register a new agent in shared state
-   */
-  public async registerAgent(name: string, agentInfo: Record<string, unknown>): Promise<boolean> {
-    try {
-      await this.setState(`agents.${name}`, agentInfo);
-      return true;
-    } catch (error) {
-      this.logger.error('Failed to register agent', { name, error });
-      return false;
-    }
-  }
-  
-  /**
-   * Update the status of an existing agent in shared state
-   */
-  public async updateAgentStatus(name: string, status: string): Promise<void> {
-    try {
-      await this.setState(`agents.${name}.status`, status);
-    } catch (error) {
-      this.logger.error('Failed to update agent status', { name, status, error });
-      throw error;
-    }
-  }
 } 

@@ -51,7 +51,7 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
       const response = await this.openAIClient.generateResponse(prompt, {
         model: this.config.preferredModel || 'o3-mini',
         temperature: 0.7,
-        max_tokens: 2000
+        maxTokens: 2000
       });
 
       this.updateStatus('idle');
@@ -103,7 +103,7 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
       const response = await this.openAIClient.generateResponse(prompt, {
         model: this.config.preferredModel || 'o3-mini',
         temperature: 0.2, // Very low temperature for extraction
-        max_tokens: 500
+        maxTokens: 500
       });
       
       // Process the results
@@ -168,7 +168,7 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
       const response = await this.openAIClient.generateResponse(prompt, {
         model: this.config.preferredModel || 'o3-mini',
         temperature: 0.3,
-        max_tokens: maxTokens
+        maxTokens: maxTokens
       });
       
       // Process the results
@@ -244,7 +244,7 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
       const response = await this.openAIClient.generateResponse(prompt, {
         model: this.config.preferredModel || 'o3-mini',
         temperature: 0.2,
-        max_tokens: 500
+        maxTokens: 500
       });
       
       // Process the results

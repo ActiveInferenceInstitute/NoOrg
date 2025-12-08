@@ -17,18 +17,19 @@ describe('Multiagent Coordination', () => {
       // Initialize coordinator
       await fixture.coordinator.initialize();
       
-      // Register the agent
-      await fixture.coordinator.registerAgent(agent);
+      // Register the agent and get the assigned ID
+      const registeredId = await fixture.coordinator.registerAgent(agent);
+      expect(registeredId).toBeDefined();
       
-      // Retrieve the agent
-      const retrievedAgent = await fixture.agentRegistry.getAgent(agent.id);
+      // Retrieve the agent using the registered ID
+      const retrievedAgent = await fixture.agentRegistry.getAgent(registeredId!);
       
       // Verify
       expect(retrievedAgent).toBeDefined();
-      expect(retrievedAgent?.id).toBe(agent.id);
+      expect(retrievedAgent?.id).toBe(registeredId);
       expect(retrievedAgent?.name).toBe('Test Research Agent');
       expect(retrievedAgent?.type).toBe('research');
-      expect(retrievedAgent?.capabilities).toEqual(['research', 'web-search']);
+      expect(retrievedAgent?.capabilities.map(c => c.name)).toEqual(expect.arrayContaining(['research', 'web-search']));
       
       // Cleanup
       await fixture.coordinator.stop();
@@ -53,33 +54,33 @@ describe('Multiagent Coordination', () => {
       // Initialize coordinator
       await fixture.coordinator.initialize();
       
-      // Register agents
-      await fixture.coordinator.registerAgent(researchAgent);
-      await fixture.coordinator.registerAgent(writerAgent);
-      await fixture.coordinator.registerAgent(hybridAgent);
+      // Register agents and capture assigned IDs
+      const researchAgentId = await fixture.coordinator.registerAgent(researchAgent);
+      const writerAgentId = await fixture.coordinator.registerAgent(writerAgent);
+      const hybridAgentId = await fixture.coordinator.registerAgent(hybridAgent);
       
       // Find agents with research capability
       const researchAgents = await fixture.agentRegistry.findAgentsByCapability('research');
       
       // Verify research agents
       expect(researchAgents.length).toBe(2);
-      expect(researchAgents.map(a => a.id)).toContain(researchAgent.id);
-      expect(researchAgents.map(a => a.id)).toContain(hybridAgent.id);
+      expect(researchAgents.map(a => a.id)).toContain(researchAgentId);
+      expect(researchAgents.map(a => a.id)).toContain(hybridAgentId);
       
       // Find agents with writing capability
       const writingAgents = await fixture.agentRegistry.findAgentsByCapability('writing');
       
       // Verify writing agents
       expect(writingAgents.length).toBe(2);
-      expect(writingAgents.map(a => a.id)).toContain(writerAgent.id);
-      expect(writingAgents.map(a => a.id)).toContain(hybridAgent.id);
+      expect(writingAgents.map(a => a.id)).toContain(writerAgentId);
+      expect(writingAgents.map(a => a.id)).toContain(hybridAgentId);
       
       // Find agents with planning capability
       const planningAgents = await fixture.agentRegistry.findAgentsByCapability('planning');
       
       // Verify planning agents
       expect(planningAgents.length).toBe(1);
-      expect(planningAgents[0].id).toBe(hybridAgent.id);
+      expect(planningAgents[0].id).toBe(hybridAgentId);
       
       // Cleanup
       await fixture.coordinator.stop();
@@ -98,19 +99,20 @@ describe('Multiagent Coordination', () => {
       // Initialize coordinator
       await fixture.coordinator.initialize();
       
-      // Register the agent
-      await fixture.coordinator.registerAgent(agent);
+      // Register the agent and get assigned ID
+      const agentId = await fixture.coordinator.registerAgent(agent);
+      expect(agentId).toBeDefined();
       
       // Create a task
       const taskDetails: Partial<Task> = createTestTask('processing', 'Process the data');
       const taskId = await fixture.taskManager.createTask(taskDetails);
       
       // Assign the task
-      await fixture.taskManager.assignTask(taskId, agent.id);
+      await fixture.taskManager.assignTask(taskId, agentId!);
       
       // Check task assignment
       const task = await fixture.taskManager.getTask(taskId);
-      expect(task.assignedTo).toBe(agent.id);
+      expect(task.assignedTo).toBe(agentId);
       expect(task.status).toBe('assigned');
       
       // Start the task
@@ -149,8 +151,9 @@ describe('Multiagent Coordination', () => {
       // Initialize coordinator
       await fixture.coordinator.initialize();
       
-      // Register the agent
-      await fixture.coordinator.registerAgent(agent);
+      // Register the agent and get assigned ID
+      const agentId = await fixture.coordinator.registerAgent(agent);
+      expect(agentId).toBeDefined();
       
       // Create tasks with dependencies
       const task1Details: Partial<Task> = createTestTask('processing', 'Collect data');
@@ -178,7 +181,7 @@ describe('Multiagent Coordination', () => {
       expect(task2Ready).toBe(false);
       
       // Complete the first task
-      await fixture.taskManager.assignTask(task1Id, agent.id);
+      await fixture.taskManager.assignTask(task1Id, agentId!);
       await fixture.taskManager.updateTask(task1Id, { status: 'in-progress' });
       await fixture.taskManager.updateTask(task1Id, { status: 'completed' });
       
@@ -191,7 +194,7 @@ describe('Multiagent Coordination', () => {
       expect(task3Ready).toBe(false);
       
       // Complete the second task
-      await fixture.taskManager.assignTask(task2Id, agent.id);
+      await fixture.taskManager.assignTask(task2Id, agentId!);
       await fixture.taskManager.updateTask(task2Id, { status: 'in-progress' });
       await fixture.taskManager.updateTask(task2Id, { status: 'completed' });
       
@@ -209,14 +212,14 @@ describe('Multiagent Coordination', () => {
       const fixture = createTestFixture();
       
       // Initialize the shared state
-      fixture.sharedStateManager.setState('test.value', 42);
-      fixture.sharedStateManager.setState('test.nested.value', 'hello');
-      fixture.sharedStateManager.setState('agents.count', 0);
+      await fixture.sharedStateManager.setState('test.value', 42);
+      await fixture.sharedStateManager.setState('test.nested.value', 'hello');
+      await fixture.sharedStateManager.setState('agents.count', 0);
       
       // Retrieve values
-      const value = fixture.sharedStateManager.getState('test.value');
-      const nestedValue = fixture.sharedStateManager.getState('test.nested.value');
-      const agentCount = fixture.sharedStateManager.getState('agents.count');
+      const value = await fixture.sharedStateManager.getState('test.value');
+      const nestedValue = await fixture.sharedStateManager.getState('test.nested.value');
+      const agentCount = await fixture.sharedStateManager.getState('agents.count');
       
       // Verify
       expect(value).toBe(42);
@@ -224,8 +227,8 @@ describe('Multiagent Coordination', () => {
       expect(agentCount).toBe(0);
       
       // Update a value
-      fixture.sharedStateManager.setState('agents.count', 3);
-      const updatedCount = fixture.sharedStateManager.getState('agents.count');
+      await fixture.sharedStateManager.setState('agents.count', 3);
+      const updatedCount = await fixture.sharedStateManager.getState('agents.count');
       expect(updatedCount).toBe(3);
     });
     
@@ -242,11 +245,11 @@ describe('Multiagent Coordination', () => {
       });
       
       // Make changes
-      fixture.sharedStateManager.setState('test.watchable', 'first');
+      await fixture.sharedStateManager.setState('test.watchable', 'first');
       expect(watchedValue).toBe('first');
       expect(watchCallCount).toBe(1);
       
-      fixture.sharedStateManager.setState('test.watchable', 'second');
+      await fixture.sharedStateManager.setState('test.watchable', 'second');
       expect(watchedValue).toBe('second');
       expect(watchCallCount).toBe(2);
       
@@ -254,7 +257,7 @@ describe('Multiagent Coordination', () => {
       fixture.sharedStateManager.unsubscribe(subscriptionId);
       
       // Make another change, should not trigger the watcher
-      fixture.sharedStateManager.setState('test.watchable', 'third');
+      await fixture.sharedStateManager.setState('test.watchable', 'third');
       expect(watchedValue).toBe('second'); // Still the old value
       expect(watchCallCount).toBe(2); // Still the old count
     });

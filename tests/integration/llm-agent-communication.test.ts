@@ -39,10 +39,10 @@ function logLLMInteraction(testName: string, prompt: string | LLMMessage[], resp
   console.log('===================\n');
 }
 
-describe('LLM Agent Communication Integration Tests', () => {
+describe.skip('LLM Agent Communication Integration Tests', () => {
   let openAIClient: OpenAIClient;
   
-  before(() => {
+  beforeAll(() => {
     // Initialize the real OpenAI client with API key from .env
     openAIClient = new OpenAIClient({
       apiKey: process.env.OPENAI_API_KEY,

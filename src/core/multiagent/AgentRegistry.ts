@@ -500,25 +500,6 @@ export class AgentRegistry implements IAgentRegistry {
   }
 
   /**
-   * Find agents by capability
-   * @param capability Capability to search for
-   * @returns Array of agents with the specified capability
-   */
-  async findAgentsByCapability(capability: string): Promise<AgentType[]> {
-    try {
-      const agents = Array.from(this.agents.values());
-      const matchingAgents = agents.filter(agent =>
-        agent.capabilities.some(cap => typeof cap === 'string' ? cap === capability : cap.name === capability)
-      );
-
-      return matchingAgents.map(agent => this.convertToAgentType(agent));
-    } catch (error: any) {
-      console.error(`Failed to find agents by capability: ${error.message}`);
-      return [];
-    }
-  }
-
-  /**
    * Find agents by type
    * @param type Agent type to search for
    * @returns Array of agents of the specified type

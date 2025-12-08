@@ -1,0 +1,1 @@
+{"version":3,"file":"OpenAIClient.d.ts","sourceRoot":"","sources":["../../../../../src/core/multiagent/interfaces/OpenAIClient.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,WAAW,YAAY;IAC3B;;;;;OAKG;IACH,gBAAgB,CAAC,MAAM,EAAE,MAAM,EAAE,OAAO,CAAC,EAAE,MAAM,CAAC,MAAM,EAAE,OAAO,CAAC,GAAG,OAAO,CAAC,MAAM,CAAC,CAAC;CAItF"}
