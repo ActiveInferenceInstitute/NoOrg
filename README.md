@@ -72,100 +72,104 @@ This framework provides the core building blocks for creating systems where mult
 
 ### Core Components
 
+#### System Architecture Overview
+
 ```mermaid
-graph TD
-    A[NoOrg Framework] --> B(Core);
-    A --> C(Agents);
-    A --> D(Examples);
-    A --> E(Utils);
-    A --> F(Docs);
-    A --> G(Tests);
-
-    B --> B1(Events);
-    B --> B2(Integration);
-    B --> B3(Messaging);
-    B --> B4(Monitoring);
-    B --> B5(MultiAgent);
-    B --> B6(Storage);
-    B --> B7(Units);
-
-    B2 --> B2a(Patterns);
-
-    C --> C1(Architectures);
-    C --> C2(Communication);
-    C --> C3(Discovery);
-    C --> C4(Orchestration);
-    C --> C5(Relationships);
-    C --> C6(Workflow);
-
-    B7 --> B7a(Discovery);
-    B7 --> B7b(Orchestration);
-    B7 --> B7c(Relationships);
-    B7 --> B7d(Workflow);
-
-    subgraph "High-Level Structure"
-        A
+graph TB
+    subgraph "User Layer"
+        UI[User Interface/API]
     end
 
-    subgraph "Core Components"
-        B
-        B1
-        B2
-        B2a
-        B3
-        B4
-        B5
-        B6
-        B7
-        B7a
-        B7b
-        B7c
-        B7d
+    subgraph "Coordination Layer"
+        MC[MultiAgentCoordinator]
+        DS[AgentDiscoveryService]
+        AO[AgentOrchestrator]
     end
 
-    subgraph "Agent Components"
-        C
-        C1
-        C2
-        C3
-        C4
-        C5
-        C6
+    subgraph "Agent Layer"
+        AGENTS[Specialized Agents<br/>16+ Domain Experts<br/>Analysis • Writing • Research<br/>Finance • Legal • Planning<br/>...]
     end
 
-    subgraph "Supporting Modules"
-        D
-        E
-        F
-        G
+    subgraph "Core Infrastructure"
+        EV[EventSystem]
+        MSG[Messaging]
+        MON[Monitoring]
+        STOR[Storage]
+        INT[Integration<br/>Patterns]
     end
 
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#ccf,stroke:#333,stroke-width:2px
-    style D fill:#cfc,stroke:#333,stroke-width:1px
-    style E fill:#cfc,stroke:#333,stroke-width:1px
-    style F fill:#ffc,stroke:#333,stroke-width:1px
-    style G fill:#ffc,stroke:#333,stroke-width:1px
+    UI --> MC
+    MC --> DS
+    DS --> AO
+    AO --> AGENTS
+    AGENTS --> EV
+    EV --> MSG
+    MSG --> MON
+    MON --> STOR
+    STOR --> INT
+    INT --> MC
 
-    style B1 fill:#fcf,stroke:#666,stroke-width:1px
-    style B2 fill:#fcf,stroke:#666,stroke-width:1px
-    style B2a fill:#fdf,stroke:#999,stroke-width:1px
-    style B3 fill:#fcf,stroke:#666,stroke-width:1px
-    style B4 fill:#fcf,stroke:#666,stroke-width:1px
-    style B5 fill:#fcf,stroke:#666,stroke-width:1px
-    style B6 fill:#fcf,stroke:#666,stroke-width:1px
-    style B7 fill:#fcf,stroke:#666,stroke-width:1px
-    style B7a fill:#fdf,stroke:#999,stroke-width:1px
-    style B7b fill:#fdf,stroke:#999,stroke-width:1px
-    style B7c fill:#fdf,stroke:#999,stroke-width:1px
-    style B7d fill:#fdf,stroke:#999,stroke-width:1px
+    style UI fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style MC fill:#fff3e0,stroke:#e65100,stroke-width:3px
+    style DS fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style AO fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style AGENTS fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style EV fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    style MSG fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    style MON fill:#fff8e1,stroke:#f57f17,stroke-width:2px
+    style STOR fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    style INT fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+```
 
-    style C1 fill:#ddf,stroke:#666,stroke-width:1px
-    style C2 fill:#ddf,stroke:#666,stroke-width:1px
-    style C3 fill:#ddf,stroke:#666,stroke-width:1px
-    style C4 fill:#ddf,stroke:#666,stroke-width:1px
-    style C5 fill:#ddf,stroke:#666,stroke-width:1px
-    style C6 fill:#ddf,stroke:#666,stroke-width:1px
+#### Multi-Agent Coordination Flow
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant MC as MultiAgentCoordinator
+    participant DS as AgentDiscoveryService
+    participant AO as AgentOrchestrator
+    participant AG as Specialized Agents
+    participant EV as EventSystem
+
+    U->>MC: Submit Workflow Request
+    MC->>DS: Discover Available Agents
+    DS-->>MC: Agent Capabilities & Status
+    MC->>AO: Create Task Assignments
+    AO->>AG: Execute Tasks in Parallel
+    AG-->>EV: Emit Task Results
+    EV-->>AO: Process Results
+    AO-->>MC: Aggregate Results
+    MC-->>U: Return Final Output
+
+    Note over AG: Agents process tasks<br/>concurrently with<br/>specialized capabilities
+    Note over EV: Event-driven<br/>communication<br/>enables loose coupling
+```
+
+#### Resilience Patterns Integration
+
+```mermaid
+flowchart TD
+    A[Task Request] --> B{Circuit Breaker<br/>Check}
+    B -->|Closed| C[Rate Limiter]
+    B -->|Open| D[Circuit Open<br/>Fast Fail]
+    C --> E{Bulkhead<br/>Available?}
+    E -->|No| F[Bulkhead Full<br/>Queue/Retry]
+    E -->|Yes| G[Timeout Wrapper]
+    G --> H[Retry Logic]
+    H --> I[Execute Task]
+    I --> J{Task Success?}
+    J -->|Yes| K[Return Result]
+    J -->|No| L[Log Failure]
+    L --> M{Max Retries<br/>Exceeded?}
+    M -->|No| H
+    M -->|Yes| N[Fail Task]
+
+    style A fill:#e3f2fd,stroke:#1976d2
+    style K fill:#e8f5e8,stroke:#2e7d32
+    style N fill:#ffebee,stroke:#c62828
+    style D fill:#fff3e0,stroke:#f57c00
+    style F fill:#fff3e0,stroke:#f57c00
 ```
 
 The framework consists of several key components:
@@ -174,10 +178,10 @@ The framework consists of several key components:
 2. **[Event System](docs/core/index.md#event-system)**: A central pub/sub infrastructure for communication across the system.
 3. **[Storage System](docs/core/index.md#storage-system)**: Persistent and in-memory storage mechanisms for system state.
 4. **[Multi-agent Framework](docs/agents/multiagent-system.md)**:
-   - **[Discovery](docs/agents/modules/core/discovery.md)**: Mechanisms for agents to find each other in the system.
-   - **[Orchestration](docs/agents/modules/core/orchestration.md)**: Coordination of tasks across available agents.
-   - **[Relationships](docs/agents/modules/core/relationships.md)**: Management of agent connections and collaborations.
-   - **[Workflow](docs/agents/modules/core/workflow.md)**: Execution of multi-step processes across agents.
+   - **[Discovery](docs/agents/modules/core/communication.md)**: Mechanisms for agents to find each other in the system.
+   - **[Orchestration](docs/agents/modules/core/behavior.md)**: Coordination of tasks across available agents.
+   - **[Relationships](docs/agents/modules/core/state.md)**: Management of agent connections and collaborations.
+   - **[Workflow](docs/agents/modules/core/behavior.md)**: Execution of multi-step processes across agents.
 
 ## Integration Patterns
 
@@ -346,93 +350,7 @@ docs/               # Generated documentation
 scripts/            # Build and utility scripts
 ```
 
-### Basic Usage
 
-```typescript
-import { 
-  CircuitBreaker, 
-  Retry, 
-  AgentDiscoveryService, 
-  AgentOrchestrator 
-} from './src/core';
-
-// Setup discovery service
-const discovery = AgentDiscoveryService.getInstance();
-
-// Register an agent
-await discovery.registerAgent({
-  id: 'agent-1',
-  name: 'Data Processing Agent',
-  capabilities: ['data-processing', 'transformation'],
-  status: 'active',
-  metadata: { maxConcurrent: 5 }
-});
-
-// Set up orchestrator
-const orchestrator = AgentOrchestrator.getInstance();
-
-// Submit a task
-const task = await orchestrator.submitTask({
-  id: 'task-1',
-  type: 'data-processing',
-  priority: 5,
-  params: { dataUrl: 'https://example.com/data.json' },
-  requiredCapabilities: ['data-processing'],
-  timeout: 30000
-});
-
-// Get task status
-const status = orchestrator.getTaskStatus('task-1');
-console.log(`Task status: ${status.status}`);
-```
-
-## Development
-
-### Project Structure
-
-```
-src/
-├── core/
-│   ├── events/         - Event system
-│   ├── integration/    - Integration patterns
-│   │   └── patterns/   - Resilience patterns
-│   ├── messaging/      - Message formats and protocols
-│   ├── monitoring/     - System monitoring
-│   ├── multiagent/     - Agent interfaces and base classes
-│   ├── storage/        - Storage mechanisms
-│   └── units/          - Organizational units
-│       ├── agents/     - Agent implementations
-│       ├── discovery/  - Agent discovery
-│       ├── orchestration/ - Task coordination
-│       ├── relationships/ - Agent relationships
-│       ├── state/      - State management
-│       └── workflow/   - Workflow execution
-├── examples/           - Example implementations
-└── utils/              - Utility functions
-```
-
-For a complete architectural overview, see the [System Architecture Documentation](docs/architecture/system-architecture.md).
-
-### Testing
-
-```bash
-# Run all tests
-npm test
-
-# Run specific test suite
-npm test -- --grep "Discovery"
-```
-
-For detailed testing documentation, see [Testing Strategy](docs/testing/README.md).
-
-### Advanced Patterns
-
-The framework supports advanced patterns and use cases:
-
-- [Active Inference and POMDP models](docs/agents/architectures/active-inference.md)
-- [LLM-powered agents](docs/agents/architectures/llm-agents.md)
-- [Hybrid workflows](docs/agents/operations/hybrid-workflows.md)
-- [Stigmergic coordination](docs/agents/multiagent-coordination-system.md#stigmergic-environment)
 
 ## Documentation
 
@@ -644,7 +562,7 @@ kubectl apply -f k8s/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](docs/development/contributing.md) for details.
+We welcome contributions! Please see our [Contributing Guide](docs/development/contribution-guidelines.md) for details.
 
 ### Development Workflow
 
@@ -695,11 +613,11 @@ npm run docs:deploy
 - [ ] Develop monitoring dashboard
 - [ ] Create deployment tools
 
-For a complete view of planned features, see the [Development Roadmap](docs/development/roadmap.md).
+For a complete view of planned features, see the [Development Guide](docs/development/index.md).
 
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](docs/development/contributing.md) for details.
+Contributions are welcome! Please see [CONTRIBUTING.md](docs/development/contribution-guidelines.md) for details.
 
 ## License
 
