@@ -371,6 +371,6 @@ const optimizedResults = await storage.query('users.active', {
 
 ## Related Documentation
 
-- [Storage System API Reference](../../docs/core/index.md#storage-system)
+- [Storage System API Reference](../../docs/core/index.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)
 - [Monitoring Integration](../monitoring/README.md)

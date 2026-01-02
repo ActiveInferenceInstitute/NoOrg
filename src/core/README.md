@@ -11,9 +11,62 @@ The core systems are designed to be:
 - **Observable**: Provide extensive monitoring and metrics
 - **Secure**: Include security measures and access controls
 
-## Core Components
+## Core Components Architecture
 
-### Event System (`events/`)
+```mermaid
+graph TB
+    subgraph "Core Systems"
+        EV[Event System]
+        MSG[Message System]
+        MON[Monitoring System]
+        STOR[Storage System]
+        MA[Multi-Agent Coordination]
+        UNITS[Units System]
+    end
+
+    subgraph "Integration Patterns"
+        CB[Circuit Breaker]
+        RETRY[Retry]
+        TIMEOUT[Timeout]
+        BULK[Bulkhead]
+        RATE[Rate Limiter]
+        CACHE[Cache Aside]
+        SAGA[Saga]
+        RR[Request-Response]
+    end
+
+    subgraph "Data Flow"
+        AGENTS[Agents] --> MA
+        MA --> EV
+        MA --> MSG
+        MA --> STOR
+        EV --> MON
+        MSG --> MON
+        STOR --> MON
+        MA --> MON
+        UNITS --> MA
+
+        MA --> CB
+        MA --> RETRY
+        MA --> TIMEOUT
+        MA --> BULK
+        MA --> RATE
+        MA --> CACHE
+        MA --> SAGA
+        MA --> RR
+    end
+
+    style MA fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style EV fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style MSG fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style MON fill:#fff8e1,stroke:#f57f17,stroke-width:2px
+    style STOR fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    style UNITS fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+```
+
+### Core Components
+
+#### Event System (`events/`)
 Publish/subscribe messaging infrastructure for decoupled communication.
 
 **Key Features:**

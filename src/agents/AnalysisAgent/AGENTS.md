@@ -2,43 +2,34 @@
 
 ## Overview
 
-The **AnalysisAgent** specializes in analyzing datasets, extracting insights, creating visualizations, and generating statistical reports. It extends the AbstractAgent base class to provide comprehensive data analysis capabilities.
+The **AnalysisAgent** specializes in analyzing data and generating insights through AI-powered analysis. It extends the BaseAgent class to provide basic data analysis capabilities using OpenAI's language models.
 
 ## Core Capabilities
 
-- **Data Analysis** - Exploratory, descriptive, inferential, diagnostic, and predictive analysis
-- **Statistical Testing** - Hypothesis testing, correlation analysis, regression modeling
-- **Trend Analysis** - Time series analysis, pattern detection, forecasting
-- **Outlier Detection** - Anomaly detection and impact assessment
-- **Visualization Generation** - Chart creation, configuration, and code generation
-- **Report Generation** - Executive, technical, and comprehensive reports
+- **Data Analysis** - Basic data analysis using AI to extract insights, trends, and recommendations
+- **Report Generation** - Generate reports in text, JSON, or markdown formats
+- **Pattern Recognition** - Identify patterns and trends in datasets
+- **Insight Extraction** - Extract key insights from structured and unstructured data
 
 ## Interface
 
 ### Constructor
 
 ```typescript
-constructor(config: AgentConfig)
+constructor(name: string, config: AgentConfig)
 ```
 
 **Parameters:**
+- `name` (string): Human-readable name for the agent
 - `config` (AgentConfig): Configuration object containing agent settings
 
 **Example:**
 ```typescript
-const analysisAgent = new AnalysisAgent({
+const analysisAgent = new AnalysisAgent('Data Analyst', {
   id: 'analysis-001',
-  name: 'Data Analysis Specialist',
-  type: 'analysis',
-  description: 'Expert in data analysis and insights extraction',
-  capabilities: ['data-analysis', 'statistics', 'visualization'],
-  status: 'available',
-  preferredModel: 'gpt-4o',
-  metadata: {
-    analysisDepth: 'comprehensive',
-    visualizationFramework: 'plotly',
-    statisticalTests: ['t-test', 'chi-square', 'correlation']
-  }
+  capabilities: ['data-analysis'],
+  preferredModel: 'o3-mini',
+  metadata: {}
 });
 ```
 
@@ -46,198 +37,103 @@ const analysisAgent = new AnalysisAgent({
 
 #### analyzeData()
 
-Performs comprehensive data analysis and extracts insights.
+Analyzes data using AI to extract insights, trends, and recommendations.
 
 ```typescript
-async analyzeData(
-  data: any,
-  options?: {
-    analysisType?: 'exploratory' | 'descriptive' | 'inferential' | 'diagnostic' | 'predictive';
-    focusAreas?: string[];
-    includeVisualizationSuggestions?: boolean;
-    includeStatisticalTests?: boolean;
-    includeTrends?: boolean;
-    includeCorrelations?: boolean;
-    includeOutliers?: boolean;
-    includeRecommendations?: boolean;
-    checkCache?: boolean;
-  }
-): Promise<AnalysisResult>
+async analyzeData(data: any): Promise<{
+  insights: string[];
+  trends: string[];
+  recommendations: string[];
+  confidence: number;
+  processingTime: number;
+}>
 ```
 
 **Parameters:**
-- `data` (any): Dataset to analyze (array of objects or similar structure)
-- `options` (object, optional): Analysis configuration options
+- `data` (any): Data to analyze (can be any JSON-serializable object)
 
-**Returns:** `Promise<AnalysisResult>` - Comprehensive analysis results
-
-**Example:**
-```typescript
-const analysisResult = await analysisAgent.analyzeData(dataset, {
-  analysisType: 'comprehensive',
-  focusAreas: ['profitability', 'growth', 'efficiency'],
-  includeVisualizationSuggestions: true,
-  includeStatisticalTests: true,
-  includeRecommendations: true
-});
-
-console.log('Analysis Summary:', analysisResult.summary);
-console.log('Key Insights:', analysisResult.keyInsights);
-console.log('Statistical Tests:', analysisResult.statisticalTests);
-```
-
-#### createVisualization()
-
-Generates visualization configurations and code.
-
-```typescript
-async createVisualization(
-  data: any,
-  options?: {
-    visualizationType?: 'bar' | 'line' | 'scatter' | 'pie' | 'histogram' | 'heatmap' | 'box' | 'radar' | 'auto';
-    variables?: string[];
-    title?: string;
-    purpose?: string;
-    palette?: string[];
-    includeCode?: boolean;
-    framework?: 'matplotlib' | 'plotly' | 'seaborn' | 'ggplot' | 'chart.js' | 'd3' | 'echarts';
-    checkCache?: boolean;
-  }
-): Promise<VisualizationResult>
-```
-
-**Parameters:**
-- `data` (any): Data to visualize
-- `options` (object, optional): Visualization configuration
-
-**Returns:** `Promise<VisualizationResult>` - Visualization configuration and code
+**Returns:** `Promise<Object>` - Analysis results containing:
+- `insights` (string[]): Key insights extracted from the data
+- `trends` (string[]): Identified trends and patterns
+- `recommendations` (string[]): Actionable recommendations
+- `confidence` (number): Confidence score (0-1)
+- `processingTime` (number): Processing time in milliseconds
 
 **Example:**
 ```typescript
-const vizConfig = await analysisAgent.createVisualization(salesData, {
-  visualizationType: 'line',
-  variables: ['revenue', 'month'],
-  title: 'Monthly Revenue Trends',
-  purpose: 'Show revenue growth over time',
-  framework: 'plotly',
-  includeCode: true
-});
+const data = {
+  sales: [100, 150, 120, 180, 200],
+  months: ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+};
 
-console.log('Visualization Type:', vizConfig.visualizationType);
-console.log('Generated Code:', vizConfig.code);
+const result = await analysisAgent.analyzeData(data);
+
+console.log('Insights:', result.insights);
+console.log('Trends:', result.trends);
+console.log('Recommendations:', result.recommendations);
+console.log('Confidence:', result.confidence);
+console.log('Processing Time:', result.processingTime + 'ms');
 ```
 
 #### generateReport()
 
-Creates formatted reports based on analysis results.
+Generates a formatted report from data in the specified format.
 
 ```typescript
-async generateReport(
-  data: any,
-  options?: {
-    reportType?: 'executive' | 'technical' | 'comprehensive';
-    sections?: string[];
-    audience?: 'executives' | 'analysts' | 'stakeholders' | 'technical';
-    includeExecutiveSummary?: boolean;
-    includeMethodology?: boolean;
-    includeVisualizations?: boolean;
-    includeRecommendations?: boolean;
-    checkCache?: boolean;
-  }
-): Promise<ReportResult>
+async generateReport(data: any, format: 'text' | 'json' | 'markdown'): Promise<string>
 ```
 
 **Parameters:**
-- `data` (any): Data or analysis results to report on
-- `options` (object, optional): Report configuration
+- `data` (any): Data to generate report from
+- `format` ('text' | 'json' | 'markdown'): Output format for the report
 
-**Returns:** `Promise<ReportResult>` - Structured report
+**Returns:** `Promise<string>` - Formatted report content
 
 **Example:**
 ```typescript
-const report = await analysisAgent.generateReport(analysisResults, {
-  reportType: 'executive',
-  audience: 'executives',
-  includeExecutiveSummary: true,
-  includeVisualizations: true,
-  includeRecommendations: true
-});
+const analysisData = await analysisAgent.analyzeData(someData);
+const report = await analysisAgent.generateReport(analysisData, 'markdown');
 
-console.log('Report Title:', report.title);
-console.log('Sections:', report.sections.length);
-console.log('Key Findings:', report.keyFindings);
+console.log('Generated Report:');
+console.log(report);
 ```
 
 ## Configuration Options
 
-### Agent Configuration
+The AnalysisAgent uses standard AgentConfig options:
 
 ```typescript
-interface AnalysisAgentConfig extends AgentConfig {
-  analysisDepth?: 'basic' | 'detailed' | 'comprehensive';
-  defaultVisualizationFramework?: 'matplotlib' | 'plotly' | 'seaborn' | 'chart.js';
-  statisticalTestDefaults?: string[];
-  reportTemplate?: 'executive' | 'technical' | 'comprehensive';
-  cacheTTL?: number; // Cache time-to-live in milliseconds
-}
-```
-
-### Runtime Options
-
-```typescript
-interface AnalysisOptions {
-  analysisType?: 'exploratory' | 'descriptive' | 'inferential' | 'diagnostic' | 'predictive';
-  focusAreas?: string[];
-  includeVisualizationSuggestions?: boolean;
-  includeStatisticalTests?: boolean;
-  includeTrends?: boolean;
-  includeCorrelations?: boolean;
-  includeOutliers?: boolean;
-  includeRecommendations?: boolean;
-  checkCache?: boolean;
+interface AgentConfig {
+  id?: string;
+  capabilities?: string[];
+  preferredModel?: string;
+  metadata?: Record<string, any>;
 }
 ```
 
 ## Error Handling
 
-The AnalysisAgent includes comprehensive error handling:
+Basic error handling through the BaseAgent class:
 
 ```typescript
 try {
   const result = await analysisAgent.analyzeData(data);
+  console.log('Analysis complete:', result);
 } catch (error) {
-  if (error instanceof AnalysisError) {
-    console.error('Analysis failed:', error.message);
-    console.error('Suggestions:', error.suggestions);
-  } else {
-    console.error('Unexpected error:', error);
-  }
+  console.error('Analysis failed:', error.message);
+  // Agent status automatically updated to 'error' by BaseAgent
 }
 ```
 
-**Common Error Types:**
-- `DataValidationError` - Invalid data format or structure
-- `AnalysisTimeoutError` - Analysis exceeded time limits
-- `StatisticalError` - Statistical computation failures
-- `VisualizationError` - Chart generation failures
-
 ## Performance Characteristics
 
-### Computational Complexity
-- **Basic Analysis**: O(n) - Linear with dataset size
-- **Comprehensive Analysis**: O(n²) - Quadratic for correlation analysis
-- **Statistical Tests**: O(n) to O(n²) depending on test type
-
-### Memory Usage
-- **Small Datasets** (< 1,000 records): ~10MB
-- **Medium Datasets** (1,000-10,000 records): ~50MB
-- **Large Datasets** (10,000+ records): ~200MB+
-
 ### Processing Time
-- **Basic Analysis**: 1-5 seconds
-- **Comprehensive Analysis**: 5-30 seconds
-- **Report Generation**: 2-10 seconds
-- **Visualization Creation**: 1-3 seconds
+- **Typical Analysis**: 2-5 seconds (depends on data size and OpenAI response time)
+- **Report Generation**: 1-3 seconds
+
+### Resource Usage
+- **Memory**: Minimal additional memory beyond base agent requirements
+- **API Calls**: 1-2 OpenAI API calls per analysis operation
 
 ## Integration Examples
 
@@ -245,238 +141,129 @@ try {
 
 ```typescript
 // Register the agent
-const agentId = await coordinator.registerAgent(analysisAgent.getAgentInfo());
+const agentId = await coordinator.registerAgent({
+  id: 'analysis-agent',
+  name: 'Data Analyst',
+  type: 'analysis',
+  capabilities: ['data-analysis'],
+  status: 'available'
+});
 
 // Create analysis task
 const taskId = await coordinator.createTask({
-  name: 'Customer Segmentation Analysis',
-  description: 'Analyze customer data to identify segments',
-  type: 'data-analysis',
-  priority: 'high',
+  name: 'Sales Data Analysis',
+  description: 'Analyze sales data for insights',
+  type: 'analysis',
   metadata: {
-    requiredCapabilities: ['data-analysis', 'statistics'],
-    dataSource: 'customer_database',
-    analysisType: 'descriptive'
+    data: { sales: [100, 200, 150, 300] }
   }
 });
 
 // Execute the analysis
 await coordinator.assignTask(taskId, agentId);
-const result = await coordinator.getTask(taskId);
-console.log('Analysis complete:', result.results);
+// Task will be processed automatically
 ```
 
-### With Other Agents
+### Basic Usage
 
 ```typescript
-// Research Agent provides data
-const researchData = await researchAgent.gatherData(topic);
+// Direct usage
+const salesData = {
+  revenue: [10000, 15000, 12000, 18000, 22000],
+  months: ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+};
 
-// Analysis Agent processes the data
-const analysis = await analysisAgent.analyzeData(researchData, {
-  analysisType: 'comprehensive',
-  includeRecommendations: true
-});
+const analysis = await analysisAgent.analyzeData(salesData);
 
-// Writing Agent creates report
-const report = await writingAgent.generateContent(
-  `Analysis Results: ${analysis.summary}`,
-  {
-    format: 'blog-post',
-    tone: 'professional',
-    includeRecommendations: true
-  }
-);
+// Generate a markdown report
+const report = await analysisAgent.generateReport(analysis, 'markdown');
+console.log(report);
 ```
 
 ## Best Practices
 
-### 1. Data Preparation
+### Data Formatting
 ```typescript
-// Ensure data is properly formatted
-const cleanedData = await dataAgent.cleanData(rawData);
+// Structure data clearly for better analysis
+const salesData = {
+  revenue: [10000, 15000, 12000, 18000, 22000],
+  periods: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
+  categories: ['Product A', 'Product B', 'Product C']
+};
 
-// Validate data structure
-const validatedData = await dataAgent.validateSchema(cleanedData, schema);
-
-// Analysis works best with clean, structured data
+const analysis = await analysisAgent.analyzeData(salesData);
 ```
 
-### 2. Analysis Configuration
+### Report Formats
 ```typescript
-// Start with basic analysis to understand data
-const basicAnalysis = await analysisAgent.analyzeData(data, {
-  analysisType: 'exploratory'
-});
-
-// Then do comprehensive analysis based on findings
-const comprehensiveAnalysis = await analysisAgent.analyzeData(data, {
-  analysisType: 'comprehensive',
-  focusAreas: basicAnalysis.keyInsights,
-  includeRecommendations: true
-});
+// Choose appropriate format for your use case
+const textReport = await analysisAgent.generateReport(data, 'text');
+const markdownReport = await analysisAgent.generateReport(data, 'markdown');
+const jsonData = await analysisAgent.generateReport(data, 'json');
 ```
 
-### 3. Visualization Best Practices
+### Error Handling
 ```typescript
-// Choose appropriate visualization types
-const chartConfig = await analysisAgent.createVisualization(data, {
-  visualizationType: 'auto', // Let agent suggest best type
-  variables: ['revenue', 'month'],
-  purpose: 'Show revenue trends over time'
-});
-
-// Use consistent frameworks
-const consistentCharts = await analysisAgent.createVisualization(data, {
-  framework: 'plotly', // Consistent with project standards
-  includeCode: true
-});
-```
-
-### 4. Report Generation
-```typescript
-// Tailor reports to audience
-const executiveReport = await analysisAgent.generateReport(analysis, {
-  reportType: 'executive',
-  audience: 'executives',
-  includeExecutiveSummary: true
-});
-
-const technicalReport = await analysisAgent.generateReport(analysis, {
-  reportType: 'technical',
-  audience: 'analysts',
-  includeMethodology: true
-});
-```
-
-## Advanced Usage
-
-### Custom Statistical Tests
-
-```typescript
-// Define custom statistical tests
-const customTests = [
-  {
-    name: 'Custom Correlation Test',
-    variables: ['feature1', 'feature2'],
-    testFunction: (data: any[]) => customCorrelationTest(data)
-  }
-];
-
-// Run analysis with custom tests
-const result = await analysisAgent.analyzeData(data, {
-  includeStatisticalTests: true,
-  customTests: customTests
-});
-```
-
-### Real-time Analysis
-
-```typescript
-// Set up real-time analysis monitoring
-const analysisStream = analysisAgent.createAnalysisStream();
-
-analysisStream.on('data', (partialResult) => {
-  console.log('Partial analysis:', partialResult);
-});
-
-analysisStream.on('complete', (finalResult) => {
-  console.log('Analysis complete:', finalResult);
-});
-
-await analysisStream.start(data);
-```
-
-### Batch Processing
-
-```typescript
-// Process multiple datasets
-const batchResults = await Promise.all(
-  datasets.map(dataset =>
-    analysisAgent.analyzeData(dataset, { analysisType: 'basic' })
-  )
-);
-
-// Aggregate results
-const aggregatedInsights = analysisAgent.aggregateResults(batchResults);
+try {
+  const result = await analysisAgent.analyzeData(largeDataset);
+  console.log('Analysis confidence:', result.confidence);
+} catch (error) {
+  console.error('Analysis failed, trying simpler data:', error.message);
+  // Fallback to smaller dataset or different approach
+}
 ```
 
 ## Troubleshooting
 
 ### Common Issues
 
-#### 1. "Data validation failed"
-**Cause:** Invalid data format or structure
+#### OpenAI API Errors
+**Cause:** API key issues, rate limits, or network problems
 **Solution:**
 ```typescript
-// Validate data first
-const validation = await dataAgent.validateData(inputData);
-if (!validation.valid) {
-  console.error('Data issues:', validation.errors);
-  // Fix data issues before analysis
+// Check API key configuration
+console.log('API Key configured:', !!process.env.OPENAI_API_KEY);
+
+// Use different model if rate limited
+const result = await analysisAgent.analyzeData(data); // Will use fallback model
+```
+
+#### Large Data Processing
+**Cause:** Data too large for single API call
+**Solution:**
+```typescript
+// Break large datasets into smaller chunks
+const chunks = splitDataIntoChunks(largeData, 100);
+const results = [];
+for (const chunk of chunks) {
+  const result = await analysisAgent.analyzeData(chunk);
+  results.push(result);
 }
 ```
 
-#### 2. "Analysis timeout"
-**Cause:** Dataset too large or complex analysis
+#### Processing Timeouts
+**Cause:** Complex data or slow API responses
 **Solution:**
 ```typescript
-// Use smaller datasets or simpler analysis
-const result = await analysisAgent.analyzeData(data.slice(0, 1000), {
-  analysisType: 'basic'
-});
+// Simplify data structure
+const simplified = extractKeyFields(complexData);
+const result = await analysisAgent.analyzeData(simplified);
 ```
 
-#### 3. "Statistical test failed"
-**Cause:** Insufficient data or inappropriate test
-**Solution:**
-```typescript
-// Check data requirements for statistical tests
-const requirements = analysisAgent.getStatisticalTestRequirements(testName);
-if (data.length < requirements.minSampleSize) {
-  // Use different test or collect more data
-}
-```
+## Performance Optimization
 
-### Performance Optimization
-
-1. **Enable caching** for repeated analyses
-2. **Use appropriate analysis types** for data size
-3. **Batch similar analyses** to reduce overhead
-4. **Monitor memory usage** for large datasets
-
-### Debug Mode
-
-```typescript
-// Enable detailed logging
-analysisAgent.setLogLevel('debug');
-
-// Get detailed error information
-try {
-  await analysisAgent.analyzeData(data);
-} catch (error) {
-  console.error('Detailed error:', error.details);
-  console.error('Stack trace:', error.stack);
-}
-```
+1. **Data Simplification**: Remove unnecessary fields before analysis
+2. **Chunking**: Process large datasets in smaller pieces
+3. **Caching**: Cache results for similar data patterns
+4. **Model Selection**: Use appropriate models for task complexity
 
 ## Version History
 
-- **v1.0.0** - Initial release with core analysis capabilities
-- **v1.1.0** - Added visualization generation and report creation
-- **v1.2.0** - Enhanced statistical testing and caching
-- **v1.3.0** - Added real-time analysis and batch processing
+- **v1.0.0** - Initial release with basic analysis and reporting capabilities
 
-## Support
+## Dependencies
 
-For issues and questions:
-- Check the [troubleshooting guide](../../../docs/troubleshooting/index.md)
-- Review the [API reference](../../../docs/api/reference.md)
-- File issues in the [GitHub repository](https://github.com/noorg/noorg/issues)
-
----
-
-**Last Updated:** 2025-09-29
-**Version:** 1.3.0
-**License:** CC BY-NC-SA 4.0
+- BaseAgent (framework core)
+- OpenAI API (for AI-powered analysis)
+- SharedStateManager (for state management)
 

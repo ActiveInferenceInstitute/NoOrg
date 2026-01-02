@@ -125,7 +125,7 @@ The Event System integrates with:
 
 ## Related Documentation
 
-- [Event System API Reference](../../docs/core/index.md#event-system)
+- [Event System API Reference](../../docs/core/index.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)
-- [Monitoring Integration](../../../docs/monitoring/README.md)
+- [Monitoring Integration](../../../docs/monitoring/monitoring-system.md)
 

@@ -2,15 +2,15 @@
 
 ## Overview
 
-The **CreativeWritingAgent** specializes in generating creative content including stories, blog posts, marketing copy, poems, dialogue, and other forms of creative writing. It extends the AbstractAgent base class to provide comprehensive content generation capabilities.
+The **CreativeWritingAgent** specializes in generating creative content including stories, blog posts, marketing copy, poems, dialogue, and other forms of creative writing. It extends the AbstractAgent base class and includes intelligent caching for improved performance.
 
 ## Core Capabilities
 
-- **Content Generation** - Stories, blog posts, marketing copy, poems, dialogue
-- **Style Adaptation** - Emulate specific writing styles and tones
-- **Content Refinement** - Revise and improve existing content
-- **Format Optimization** - Adapt content for different formats and audiences
-- **Creative Enhancement** - Add creativity, engagement, and impact
+- **Content Generation** - Generate content in various formats (stories, blog posts, marketing copy, poems, dialogue)
+- **Content Refinement** - Revise and improve existing content based on feedback
+- **Style Adaptation** - Generate content in specific writing styles
+- **Intelligent Caching** - Cache generated content to improve performance for repeated requests
+- **Format Support** - Support for multiple output formats and tones
 
 ## Interface
 

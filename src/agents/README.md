@@ -30,6 +30,73 @@ This directory contains 16 specialized agent implementations, each designed for 
 
 ## Architecture
 
+### Agent Hierarchy and Relationships
+
+```mermaid
+graph TD
+    subgraph "Base Framework"
+        AA[AbstractAgent] --> LIFECYCLE[Lifecycle Management]
+        AA --> STATE[State Management]
+        AA --> ERROR[Error Handling]
+        AA --> COMM[Communication]
+        AA --> MONITOR[Monitoring]
+    end
+
+    subgraph "Specialized Agents"
+        AA --> ANA[AnalysisAgent]
+        AA --> CRE[CreativeWritingAgent]
+        AA --> DEV[DevelopmentAgent]
+        AA --> DAT[DataAnalysisAgent]
+        AA --> FIN[FinanceAgent]
+        AA --> LEG[LegalAgent]
+        AA --> MAR[MarketingAgent]
+        AA --> POMDP[ActiveInferencePOMDPAgent]
+        AA --> CUS[CustomerSupportAgent]
+        AA --> FINR[FinalReviewAgent]
+        AA --> PLA[PlanningAgent]
+        AA --> RES[ResearchAgent]
+        AA --> REV[ReviewAgent]
+        AA --> REVI[RevisionAgent]
+        AA --> WRI[WritingAgent]
+        AA --> HR[HRAgent]
+    end
+
+    subgraph "Agent Capabilities"
+        ANA --> DATA_ANALYSIS[Data Analysis]
+        CRE --> CONTENT_CREATION[Content Creation]
+        DEV --> CODE_GENERATION[Code Generation]
+        DAT --> STATISTICAL_ANALYSIS[Statistical Analysis]
+        FIN --> FINANCIAL_MODELING[Financial Modeling]
+        LEG --> LEGAL_PROCESSING[Legal Processing]
+        MAR --> MARKETING_STRATEGY[Marketing Strategy]
+        POMDP --> DECISION_MAKING[Advanced Decision Making]
+        CUS --> CUSTOMER_SERVICE[Customer Service]
+        FINR --> QUALITY_ASSURANCE[Quality Assurance]
+        PLA --> STRATEGIC_PLANNING[Strategic Planning]
+        RES --> INFORMATION_GATHERING[Information Gathering]
+        REV --> CONTENT_EVALUATION[Content Evaluation]
+        REVI --> CONTENT_IMPROVEMENT[Content Improvement]
+        WRI --> PROFESSIONAL_WRITING[Professional Writing]
+        HR --> HUMAN_RESOURCES[Human Resources]
+    end
+
+    subgraph "Integration Points"
+        ALL_AGENTS{{All Agents}} --> COORDINATOR[MultiAgentCoordinator]
+        COORDINATOR --> EVENT_SYSTEM[Event System]
+        COORDINATOR --> SHARED_STATE[Shared State Manager]
+        COORDINATOR --> TASK_MANAGER[Task Manager]
+        COORDINATOR --> AGENT_REGISTRY[Agent Registry]
+    end
+
+    style AA fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style COORDINATOR fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style LIFECYCLE fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    style STATE fill:#e8f5e8,stroke:#2e7d32,stroke-width:1px
+    style ERROR fill:#ffebee,stroke:#c62828,stroke-width:1px
+    style COMM fill:#e3f2fd,stroke:#1976d2,stroke-width:1px
+    style MONITOR fill:#fff8e1,stroke:#f57f17,stroke-width:1px
+```
+
 ### Base Agent (`AbstractAgent.ts`)
 All agents extend the AbstractAgent class which provides:
 - **Lifecycle Management**: Initialization, status tracking, shutdown

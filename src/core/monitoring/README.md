@@ -289,6 +289,6 @@ console.log('Collection enabled:', monitoring.isCollectionEnabled());
 
 ## Related Documentation
 
-- [Monitoring System API Reference](../../docs/core/index.md#monitoring-system)
+- [Monitoring System API Reference](../../docs/core/index.md)
 - [Event System Integration](../events/README.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)

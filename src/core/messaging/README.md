@@ -243,6 +243,6 @@ messageSystem.enableBatching('data.updates', {
 
 ## Related Documentation
 
-- [Message System API Reference](../../docs/core/index.md#message-system)
+- [Message System API Reference](../../docs/core/index.md)
 - [Event System Integration](../events/README.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)
