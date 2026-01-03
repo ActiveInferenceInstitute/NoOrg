@@ -1,37 +1,22 @@
 # Repository Structure
 
-Generated: 2025-03-13T10:42:31.970652
-Root: /home/trim/Documents/operations/agents
+Generated: 2026-01-02T15:05:04.304085
+Root: /Users/4d/Documents/GitHub/NoOrg/agents
 
 ## Directory Tree
 ```
-/home/trim/Documents/operations/agents
+/Users/4d/Documents/GitHub/NoOrg/agents
 └── agents/
-    ├── _templates/
-    │   ├── agent-spec.md (3643 bytes)
-    │   ├── behavior-doc.md (3409 bytes)
-    │   ├── implementation-guide.md (4735 bytes)
-    │   └── protocol-doc.md (3921 bytes)
     ├── architectures/
+    │   ├── AGENTS.md (7811 bytes)
     │   ├── cognitive-models.md (1582 bytes)
     │   ├── decision-frameworks.md (2117 bytes)
     │   ├── fractal-architecture.md (37774 bytes)
     │   └── perception-systems.md (2567 bytes)
-    ├── behaviors/
-    │   ├── action-patterns.md (3318 bytes)
-    │   ├── active-inference.md (5704 bytes)
-    │   ├── learning-patterns.md (2845 bytes)
-    │   └── reasoning-models.md (2945 bytes)
     ├── communication/
     │   ├── interaction-patterns.md (3724 bytes)
     │   ├── message-formats.md (3667 bytes)
     │   └── protocols.md (3234 bytes)
-    ├── concepts/
-    │   ├── complex-systems-theory.md (20455 bytes)
-    │   ├── emergence.md (12262 bytes)
-    │   ├── fractal-organization.md (7553 bytes)
-    │   ├── organizational-complexity.md (47013 bytes)
-    │   └── self-organization.md (14536 bytes)
     ├── examples/
     │   ├── coordination-behavior.md (5689 bytes)
     │   ├── coordination-protocol.md (7609 bytes)
@@ -61,146 +46,7 @@ Root: /home/trim/Documents/operations/agents
     │   ├── agent_learning_implementation_guide.md (12308 bytes)
     │   ├── agent_pattern_implementation_guide.md (13493 bytes)
     │   ├── agent_swarm_implementation_guide.md (13538 bytes)
-    │   ├── cursor_mcp_tool_guide.md (6712 bytes)
-    │   ├── federated-communication.md (20001 bytes)
-    │   └── fractal-nesting.md (20702 bytes)
-    ├── implementations/
-    │   ├── analysis_dependencies.ts (4348 bytes)
-    │   ├── analysis_tools.ts (40700 bytes)
-    │   ├── code_management.ts (9780 bytes)
-    │   ├── deployment_system.ts (25880 bytes)
-    │   ├── documentation_system.ts (6757 bytes)
-    │   ├── quality_assurance.ts (6918 bytes)
-    │   ├── repository_hooks.ts (5923 bytes)
-    │   ├── review_system.ts (15086 bytes)
-    │   ├── swarm_coordination_system.ts (29420 bytes)
-    │   ├── task_management.ts (15574 bytes)
-    │   └── workflow_automation.ts (11794 bytes)
-    ├── swarm_pong_test/
-    │   ├── .benchmarks/
-    │   ├── .pytest_cache/
-    │   │   ├── v/
-    │   │   │   ├── cache/
-    │   │   │   │   ├── lastfailed (2 bytes)
-    │   │   │   │   ├── nodeids (427 bytes)
-    │   │   │   │   └── stepwise (2 bytes)
-    │   │   │   └── randomly_seed (10 bytes)
-    │   │   ├── .gitignore (37 bytes)
-    │   │   ├── CACHEDIR.TAG (191 bytes)
-    │   │   └── README.md (302 bytes)
-    │   ├── checkpoints/
-    │   │   └── model_gen_0.pt (8112 bytes)
-    │   ├── pong/
-    │   │   ├── __init__.py (213 bytes)
-    │   │   ├── game.py (7332 bytes)
-    │   │   ├── swarm_agent.py (7494 bytes)
-    │   │   └── trainer.py (7527 bytes)
-    │   ├── tests/
-    │   │   └── test_pong.py (3825 bytes)
-    │   ├── README.md (2415 bytes)
-    │   ├── main.py (1006 bytes)
-    │   ├── requirements.txt (197 bytes)
-    │   ├── swarm_pong_README.md (311 bytes)
-    │   └── training_progress.png (66347 bytes)
-    ├── swarm_sort_test/
-    │   ├── .pytest_cache/
-    │   │   ├── v/
-    │   │   │   ├── cache/
-    │   │   │   │   ├── lastfailed (2 bytes)
-    │   │   │   │   ├── nodeids (333 bytes)
-    │   │   │   │   └── stepwise (2 bytes)
-    │   │   │   └── randomly_seed (9 bytes)
-    │   │   ├── .gitignore (37 bytes)
-    │   │   ├── CACHEDIR.TAG (191 bytes)
-    │   │   └── README.md (302 bytes)
-    │   ├── logs/
-    │   │   └── swarm_sort.log (880 bytes)
-    │   ├── results/
-    │   │   └── sort_results.json (1993 bytes)
-    │   ├── visualizations/
-    │   │   ├── agent_utilization.png (122203 bytes)
-    │   │   ├── combined_metrics.png (269945 bytes)
-    │   │   ├── operations.png (120216 bytes)
-    │   │   ├── sorting_animation.gif (474063 bytes)
-    │   │   └── time_complexity.png (129272 bytes)
-    │   ├── main.py (1346 bytes)
-    │   ├── pytest.ini (79 bytes)
-    │   ├── requirements.txt (93 bytes)
-    │   ├── swarm_sort.py (3274 bytes)
-    │   ├── swarm_sort_README.md (4740 bytes)
-    │   └── test_swarm_sort.py (16248 bytes)
-    ├── swarm_test/
-    │   ├── agents/
-    │   │   └── swarm_test/
-    │   │       └── docs/
-    │   ├── docs/
-    │   │   ├── METRICS.md (4918 bytes)
-    │   │   ├── README.md (1537 bytes)
-    │   │   ├── TEST_CASES.md (11142 bytes)
-    │   │   ├── TEST_SUITE.md (5963 bytes)
-    │   │   └── VISUALIZATION.md (5920 bytes)
-    │   ├── logs/
-    │   │   ├── basic_coordination_1740013642666.log (5613 bytes)
-    │   │   ├── fault_tolerance_1740013648207.log (375 bytes)
-    │   │   ├── fault_tolerance_1740013648211.log (8966 bytes)
-    │   │   ├── performance_1740013658259.log (10489 bytes)
-    │   │   ├── scalability_1740013647850.log (363 bytes)
-    │   │   ├── scalability_1740013647852.log (5965 bytes)
-    │   │   ├── task_visualization_1740013671239.log (379 bytes)
-    │   │   ├── test_runner_1740013642663.log (3305 bytes)
-    │   │   └── test_runner_1740013642663_metrics.json (1578 bytes)
-    │   ├── results/
-    │   │   ├── basic_coordination.json (484 bytes)
-    │   │   ├── fault_tolerance.json (15180 bytes)
-    │   │   ├── performance.json (467 bytes)
-    │   │   ├── scalability.json (208 bytes)
-    │   │   └── test_report.json (614 bytes)
-    │   ├── types/
-    │   │   └── gif-encoder-2.d.ts (302 bytes)
-    │   ├── visualization/
-    │   │   ├── README.md (3187 bytes)
-    │   │   ├── chart_generator.ts (18436 bytes)
-    │   │   └── hanoi_visualizer.ts (11242 bytes)
-    │   ├── visualizations/
-    │   │   ├── basic_coordination_resource_utilization.html (2115 bytes)
-    │   │   ├── basic_coordination_resource_utilization.png (22673 bytes)
-    │   │   ├── basic_coordination_task_distribution.html (1625 bytes)
-    │   │   ├── basic_coordination_task_distribution.png (20647 bytes)
-    │   │   ├── basic_coordination_task_duration_distribution.html (2031 bytes)
-    │   │   ├── basic_coordination_task_duration_distribution.png (32290 bytes)
-    │   │   ├── basic_coordination_task_success_rate.html (1385 bytes)
-    │   │   ├── basic_coordination_task_success_rate.png (25859 bytes)
-    │   │   ├── fault_tolerance_resource_utilization.html (0 bytes)
-    │   │   ├── fault_tolerance_resource_utilization.png (31873 bytes)
-    │   │   ├── fault_tolerance_task_distribution.html (1256 bytes)
-    │   │   ├── fault_tolerance_task_distribution.png (14766 bytes)
-    │   │   ├── fault_tolerance_task_duration_distribution.html (4738 bytes)
-    │   │   ├── fault_tolerance_task_duration_distribution.png (115440 bytes)
-    │   │   ├── fault_tolerance_task_success_rate.html (1412 bytes)
-    │   │   ├── fault_tolerance_task_success_rate.png (25859 bytes)
-    │   │   ├── performance_resource_utilization.html (1236 bytes)
-    │   │   ├── performance_resource_utilization.png (21316 bytes)
-    │   │   ├── performance_task_distribution.html (1627 bytes)
-    │   │   ├── performance_task_distribution.png (20711 bytes)
-    │   │   ├── performance_task_duration_distribution.html (18157 bytes)
-    │   │   ├── performance_task_duration_distribution.png (148215 bytes)
-    │   │   ├── performance_task_success_rate.html (1271 bytes)
-    │   │   ├── performance_task_success_rate.png (25859 bytes)
-    │   │   ├── task_visualization_hanoi.gif (91271 bytes)
-    │   │   ├── task_visualization_hanoi.html (6596 bytes)
-    │   │   ├── task_visualization_resource_utilization.html (1563 bytes)
-    │   │   └── task_visualization_task_distribution.html (1410 bytes)
-    │   ├── README.md (5291 bytes)
-    │   ├── logger.ts (9113 bytes)
-    │   ├── simple_test_runner.ts (5257 bytes)
-    │   ├── task_generators.ts (6264 bytes)
-    │   ├── test_cases.ts (23018 bytes)
-    │   ├── test_config.ts (6088 bytes)
-    │   ├── test_runner.ts (7033 bytes)
-    │   ├── test_utils.ts (30657 bytes)
-    │   ├── types.d.ts (300 bytes)
-    │   ├── validation_utils.ts (9156 bytes)
-    │   └── visualization_utils.ts (12196 bytes)
+    │   └── cursor_mcp_tool_guide.md (6712 bytes)
     ├── system/
     │   ├── agent_analysis_framework.md (6029 bytes)
     │   ├── agent_analytics_framework.md (12771 bytes)
@@ -265,8 +111,9 @@ Root: /home/trim/Documents/operations/agents
     │   ├── monitoring.py (1718 bytes)
     │   ├── prioritization.py (4675 bytes)
     │   ├── scheduling.py (13404 bytes)
-    │   └── workflow.py (12088 bytes)
+    │   └── workflow.py (12712 bytes)
     ├── types/
+    │   ├── AGENTS.md (7496 bytes)
     │   ├── code_management.ts (2303 bytes)
     │   ├── coordination-metrics.ts (8650 bytes)
     │   ├── coordination-support.ts (5982 bytes)
@@ -279,6 +126,8 @@ Root: /home/trim/Documents/operations/agents
     │   ├── swarm.ts (4386 bytes)
     │   ├── task.ts (2582 bytes)
     │   └── workflow.ts (2495 bytes)
+    ├── AGENTS.md (3117 bytes)
+    ├── README.md (2070 bytes)
     ├── __init__.py (64 bytes)
     └── types.ts (1492 bytes)
 ```

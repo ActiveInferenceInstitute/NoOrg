@@ -96,12 +96,10 @@ class TestRepositoryStructure:
         expected_directories = [
             "agents",
             "docs",
-            "frameworks",
-            "operations",
             "tests",
             "units",
-            "templates",
-            "meta",
+            "src",
+            "examples",
         ]
         
         for dir_name in expected_directories:

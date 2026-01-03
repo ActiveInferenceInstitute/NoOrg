@@ -4,6 +4,9 @@ import { TaskManager } from '../core/multiagent/TaskManager';
 import { AgentRegistry } from '../core/multiagent/AgentRegistry';
 import { OpenAIClient } from '../core/multiagent/OpenAIClient';
 import { PromptManager } from '../core/multiagent/PromptManager';
+import { ResearchAgent } from '../agents/ResearchAgent';
+import { AnalysisAgent } from '../agents/AnalysisAgent';
+import { PlanningAgent } from '../agents/PlanningAgent';
 import * as dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
 import * as fs from 'fs';
@@ -56,22 +59,28 @@ async function runComplexResearchWorkflow() {
   
   // Create specialized agents
   const researchAgent = new ResearchAgent('Research Specialist', {
+    id: 'research-agent-001',
+    type: 'research',
     sharedState,
     openAIClient,
     description: 'Expert in gathering and analyzing information from various sources',
     capabilities: ['research', 'source-verification', 'fact-checking'],
     preferredModel: 'o3-mini'
   });
-  
+
   const analysisAgent = new AnalysisAgent('Data Analyst', {
+    id: 'analysis-agent-001',
+    type: 'analysis',
     sharedState,
     openAIClient,
     description: 'Specialized in analyzing and synthesizing complex information',
     capabilities: ['data-analysis', 'pattern-recognition', 'insight-generation'],
     preferredModel: 'o3-mini'
   });
-  
+
   const planningAgent = new PlanningAgent('Content Planner', {
+    id: 'planning-agent-001',
+    type: 'planning',
     sharedState,
     openAIClient,
     description: 'Expert in creating detailed content outlines and structure',

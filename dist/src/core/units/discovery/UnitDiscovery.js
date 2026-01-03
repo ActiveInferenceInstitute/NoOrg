@@ -131,9 +131,8 @@ class UnitDiscovery {
                     // Try to find README.md or primary unit file
                     const description = this.unitParser.extractDescription(unitPath, unitName);
                     // Extract capabilities from README or defaults
-                    const capabilities = this.unitParser.extractCapabilities(unitPath) || [
-                        { name: 'general_management', description: 'General organizational management' }
-                    ];
+                    const parsedCapabilities = this.unitParser.extractCapabilities(unitPath);
+                    const capabilities = parsedCapabilities || ['general_management'];
                     // Create unit object
                     const unit = {
                         id: unitId,

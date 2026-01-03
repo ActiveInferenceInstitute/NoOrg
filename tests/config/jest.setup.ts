@@ -31,4 +31,10 @@ process.env = {
   TEMPERATURE: '0.7',
 };
 
+// Cleanup after all tests
+afterAll(async () => {
+  // Give time for async operations to complete
+  await new Promise(resolve => setTimeout(resolve, 100));
+});
+
 

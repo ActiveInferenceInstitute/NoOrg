@@ -39,6 +39,9 @@ const TaskManager_1 = require("../core/multiagent/TaskManager");
 const AgentRegistry_1 = require("../core/multiagent/AgentRegistry");
 const OpenAIClient_1 = require("../core/multiagent/OpenAIClient");
 const PromptManager_1 = require("../core/multiagent/PromptManager");
+const ResearchAgent_1 = require("../agents/ResearchAgent");
+const AnalysisAgent_1 = require("../agents/AnalysisAgent");
+const PlanningAgent_1 = require("../agents/PlanningAgent");
 const dotenv = __importStar(require("dotenv"));
 const uuid_1 = require("uuid");
 const fs = __importStar(require("fs"));
@@ -80,21 +83,27 @@ async function runComplexResearchWorkflow() {
     await coordinator.initialize();
     console.log('Coordinator initialized');
     // Create specialized agents
-    const researchAgent = new ResearchAgent('Research Specialist', {
+    const researchAgent = new ResearchAgent_1.ResearchAgent('Research Specialist', {
+        id: 'research-agent-001',
+        type: 'research',
         sharedState,
         openAIClient,
         description: 'Expert in gathering and analyzing information from various sources',
         capabilities: ['research', 'source-verification', 'fact-checking'],
         preferredModel: 'o3-mini'
     });
-    const analysisAgent = new AnalysisAgent('Data Analyst', {
+    const analysisAgent = new AnalysisAgent_1.AnalysisAgent('Data Analyst', {
+        id: 'analysis-agent-001',
+        type: 'analysis',
         sharedState,
         openAIClient,
         description: 'Specialized in analyzing and synthesizing complex information',
         capabilities: ['data-analysis', 'pattern-recognition', 'insight-generation'],
         preferredModel: 'o3-mini'
     });
-    const planningAgent = new PlanningAgent('Content Planner', {
+    const planningAgent = new PlanningAgent_1.PlanningAgent('Content Planner', {
+        id: 'planning-agent-001',
+        type: 'planning',
         sharedState,
         openAIClient,
         description: 'Expert in creating detailed content outlines and structure',

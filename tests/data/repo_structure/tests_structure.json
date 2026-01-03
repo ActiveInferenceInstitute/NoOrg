@@ -1,66 +1,102 @@
 {
-  "root": "/home/trim/Documents/operations/tests",
-  "generated": "2025-03-13T10:42:31.841848",
+  "root": "/Users/4d/Documents/GitHub/NoOrg/tests",
+  "generated": "2026-01-02T15:05:04.322771",
   "structure": {
     "name": "tests",
-    "modified": "2025-03-13T10:42:16.781118",
+    "modified": "2026-01-02T14:44:37.930286",
     "type": "directory",
     "children": [
       {
-        "name": ".benchmarks",
-        "modified": "2025-02-12T14:37:31.739866",
+        "name": "config",
+        "modified": "2026-01-02T13:59:47.284082",
         "type": "directory",
-        "children": []
+        "children": [
+          {
+            "name": "AGENTS.md",
+            "size": 368,
+            "modified": "2026-01-02T14:04:00.372861",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "README.md",
+            "size": 460,
+            "modified": "2026-01-02T14:04:00.372854",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "jest.setup.ts",
+            "size": 858,
+            "modified": "2026-01-02T14:41:22.691046",
+            "type": "file",
+            "extension": "ts"
+          },
+          {
+            "name": "pytest.ini",
+            "size": 1477,
+            "modified": "2026-01-02T13:51:28.864454",
+            "type": "file",
+            "extension": "ini"
+          },
+          {
+            "name": "tsconfig.json",
+            "size": 266,
+            "modified": "2026-01-02T13:51:28.864515",
+            "type": "file",
+            "extension": "json"
+          }
+        ]
       },
       {
         "name": "data",
-        "modified": "2025-03-13T10:41:07.745899",
+        "modified": "2026-01-02T13:59:48.193172",
         "type": "directory",
         "children": [
           {
             "name": "codebase_relationships",
-            "modified": "2025-03-13T10:41:17.863931",
+            "modified": "2026-01-02T13:51:28.865522",
             "type": "directory",
             "children": [
               {
                 "name": "README.md",
                 "size": 1151,
-                "modified": "2025-03-13T10:41:17.863931",
+                "modified": "2026-01-02T13:51:28.864916",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "dependency_metrics.json",
-                "size": 183,
-                "modified": "2025-03-13T10:42:31.742165",
+                "size": 185,
+                "modified": "2026-01-02T15:04:34.806819",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "dependency_metrics.md",
-                "size": 225,
-                "modified": "2025-03-13T10:42:31.742165",
+                "size": 227,
+                "modified": "2026-01-02T15:04:34.806911",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "markdown_links.json",
-                "size": 142574,
-                "modified": "2025-03-13T10:42:31.823166",
+                "size": 281412,
+                "modified": "2026-01-02T15:04:34.763225",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "python_dependencies.json",
-                "size": 164344,
-                "modified": "2025-03-13T10:42:31.685165",
+                "size": 84177,
+                "modified": "2026-01-02T15:04:34.679130",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "typescript_dependencies.json",
-                "size": 162133,
-                "modified": "2025-03-13T10:42:31.779166",
+                "size": 70311,
+                "modified": "2026-01-02T15:04:34.701627",
                 "type": "file",
                 "extension": "json"
               }
@@ -68,13 +104,13 @@
           },
           {
             "name": "metrics",
-            "modified": "2025-02-12T15:31:41.545630",
+            "modified": "2026-01-02T13:51:28.865771",
             "type": "directory",
             "children": [
               {
                 "name": "sample_metrics.json",
                 "size": 3548,
-                "modified": "2025-02-12T15:31:47.632649",
+                "modified": "2026-01-02T13:51:28.865805",
                 "type": "file",
                 "extension": "json"
               }
@@ -82,97 +118,111 @@
           },
           {
             "name": "repo_structure",
-            "modified": "2025-03-13T10:41:17.863931",
+            "modified": "2026-01-02T13:51:28.867356",
             "type": "directory",
             "children": [
               {
                 "name": "README.md",
                 "size": 1071,
-                "modified": "2025-03-13T10:41:17.863931",
+                "modified": "2026-01-02T13:51:28.865928",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "agents_structure.json",
-                "size": 59343,
-                "modified": "2025-03-13T10:41:07.762899",
+                "size": 25730,
+                "modified": "2026-01-02T15:05:04.303990",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "agents_structure.md",
-                "size": 15457,
-                "modified": "2025-03-13T10:41:07.770899",
+                "size": 7107,
+                "modified": "2026-01-02T15:05:04.305412",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "docs_structure.json",
-                "size": 81628,
-                "modified": "2025-03-13T10:41:07.804899",
+                "size": 127409,
+                "modified": "2026-01-02T15:05:04.314848",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "docs_structure.md",
-                "size": 19991,
-                "modified": "2025-03-13T10:41:07.813900",
+                "size": 31431,
+                "modified": "2026-01-02T15:05:04.321902",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "file_extensions.json",
-                "size": 202,
-                "modified": "2025-03-13T10:42:31.836166",
+                "size": 1182,
+                "modified": "2026-01-02T15:04:34.603423",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "file_extensions.md",
-                "size": 276,
-                "modified": "2025-03-13T10:42:31.835166",
+                "size": 1256,
+                "modified": "2026-01-02T15:04:34.603278",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "frameworks_structure.json",
                 "size": 22434,
-                "modified": "2025-03-13T10:41:07.777899",
+                "modified": "2026-01-02T13:51:28.866787",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "frameworks_structure.md",
                 "size": 5486,
-                "modified": "2025-03-13T10:41:07.779899",
+                "modified": "2026-01-02T13:51:28.866898",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "operations_structure.json",
+                "size": 241,
+                "modified": "2026-01-02T13:51:28.866953",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "operations_structure.md",
+                "size": 202,
+                "modified": "2026-01-02T13:51:28.867012",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "repository_structure.json",
-                "size": 251001,
-                "modified": "2025-03-13T10:41:17.358930",
+                "size": 822104,
+                "modified": "2026-01-02T15:05:04.253563",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "repository_structure.md",
-                "size": 60386,
-                "modified": "2025-03-13T10:41:07.963900",
+                "size": 199786,
+                "modified": "2026-01-02T15:05:04.300153",
                 "type": "file",
                 "extension": "md"
               },
               {
                 "name": "tests_structure.json",
-                "size": 15644,
-                "modified": "2025-03-13T10:41:07.834899",
+                "size": 46730,
+                "modified": "2026-01-02T15:04:34.332543",
                 "type": "file",
                 "extension": "json"
               },
               {
                 "name": "tests_structure.md",
-                "size": 3629,
-                "modified": "2025-03-13T10:41:07.837899",
+                "size": 11787,
+                "modified": "2026-01-02T15:04:34.334981",
                 "type": "file",
                 "extension": "md"
               }
@@ -180,13 +230,13 @@
           },
           {
             "name": "resources",
-            "modified": "2025-02-12T15:31:13.313540",
+            "modified": "2026-01-02T13:51:28.867492",
             "type": "directory",
             "children": [
               {
                 "name": "resource_pools.json",
                 "size": 2788,
-                "modified": "2025-02-12T15:31:20.041561",
+                "modified": "2026-01-02T13:51:28.867522",
                 "type": "file",
                 "extension": "json"
               }
@@ -194,29 +244,36 @@
           },
           {
             "name": "tasks",
-            "modified": "2025-02-12T15:30:48.811461",
+            "modified": "2026-01-02T13:51:28.867635",
             "type": "directory",
             "children": [
               {
                 "name": "sample_tasks.json",
                 "size": 2190,
-                "modified": "2025-02-12T15:30:54.612480",
+                "modified": "2026-01-02T13:51:28.867665",
                 "type": "file",
                 "extension": "json"
               }
             ]
           },
           {
+            "name": "AGENTS.md",
+            "size": 516,
+            "modified": "2026-01-02T14:04:00.372877",
+            "type": "file",
+            "extension": "md"
+          },
+          {
             "name": "README.md",
             "size": 2048,
-            "modified": "2025-03-11T07:20:53.966324",
+            "modified": "2026-01-02T13:51:28.864783",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "schemas.json",
             "size": 1,
-            "modified": "2025-02-12T15:32:31.385789",
+            "modified": "2026-01-02T13:51:28.867576",
             "type": "file",
             "extension": "json"
           }
@@ -224,40 +281,495 @@
       },
       {
         "name": "fixtures",
-        "modified": "2025-02-12T15:34:26.773159",
+        "modified": "2026-01-02T14:09:49.108423",
         "type": "directory",
         "children": []
       },
       {
         "name": "integration",
-        "modified": "2025-02-12T15:34:28.773165",
+        "modified": "2026-01-02T13:59:49.169633",
         "type": "directory",
         "children": [
           {
-            "name": "task",
-            "modified": "2025-02-12T15:34:13.898118",
+            "name": "multiagent",
+            "modified": "2026-01-02T13:59:50.964983",
             "type": "directory",
             "children": [
               {
+                "name": "AGENTS.md",
+                "size": 308,
+                "modified": "2026-01-02T14:04:00.373503",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "README.md",
+                "size": 448,
+                "modified": "2026-01-02T14:04:00.381775",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "test_agent_coordination.ts",
+                "size": 14381,
+                "modified": "2026-01-02T14:42:38.062183",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_coordinator_and_registry.ts",
+                "size": 8246,
+                "modified": "2026-01-02T13:51:28.868251",
+                "type": "file",
+                "extension": "ts"
+              }
+            ]
+          },
+          {
+            "name": "task",
+            "modified": "2026-01-02T13:59:52.464987",
+            "type": "directory",
+            "children": [
+              {
+                "name": "AGENTS.md",
+                "size": 201,
+                "modified": "2026-01-02T14:04:00.373502",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "README.md",
+                "size": 326,
+                "modified": "2026-01-02T14:04:00.389443",
+                "type": "file",
+                "extension": "md"
+              },
+              {
                 "name": "__init__.py",
                 "size": 0,
-                "modified": "2025-02-12T15:34:13.898118",
+                "modified": "2026-01-02T13:51:28.868322",
                 "type": "file",
                 "extension": "py"
               },
               {
                 "name": "test_task_execution.py",
                 "size": 11163,
-                "modified": "2025-02-12T15:36:20.173522",
+                "modified": "2026-01-02T13:51:28.868875",
                 "type": "file",
                 "extension": "py"
               }
             ]
           },
           {
+            "name": "AGENTS.md",
+            "size": 600,
+            "modified": "2026-01-02T14:04:00.372867",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "README.md",
+            "size": 424,
+            "modified": "2026-01-02T13:51:28.867772",
+            "type": "file",
+            "extension": "md"
+          },
+          {
             "name": "__init__.py",
             "size": 0,
-            "modified": "2025-02-12T15:34:13.898118",
+            "modified": "2026-01-02T13:51:28.867800",
+            "type": "file",
+            "extension": "py"
+          },
+          {
+            "name": "llm-agent-communication.test.ts",
+            "size": 19883,
+            "modified": "2026-01-02T14:43:36.740982",
+            "type": "file",
+            "extension": "ts"
+          },
+          {
+            "name": "test_comprehensive_system_integration.ts",
+            "size": 25685,
+            "modified": "2026-01-02T13:51:28.868964",
+            "type": "file",
+            "extension": "ts"
+          },
+          {
+            "name": "test_real_multiagent_workflow.py",
+            "size": 20427,
+            "modified": "2026-01-02T14:41:17.301143",
+            "type": "file",
+            "extension": "py"
+          }
+        ]
+      },
+      {
+        "name": "logs",
+        "modified": "2026-01-02T13:51:28.869678",
+        "type": "directory",
+        "children": [
+          {
+            "name": "test-run-2025-03-28T18-36-10.168Z.log",
+            "size": 28774,
+            "modified": "2026-01-02T13:51:28.869233",
+            "type": "file",
+            "extension": "log"
+          },
+          {
+            "name": "test_agent_coordination-2025-03-28T18-36-10.168Z.log",
+            "size": 11034,
+            "modified": "2026-01-02T13:51:28.869386",
+            "type": "file",
+            "extension": "log"
+          },
+          {
+            "name": "test_coordinator_and_registry-2025-03-28T18-36-10.168Z.log",
+            "size": 1606,
+            "modified": "2026-01-02T13:51:28.869451",
+            "type": "file",
+            "extension": "log"
+          },
+          {
+            "name": "test_end_to_end_workflow-2025-03-28T18-36-10.168Z.log",
+            "size": 2671,
+            "modified": "2026-01-02T13:51:28.869517",
+            "type": "file",
+            "extension": "log"
+          },
+          {
+            "name": "test_openai_client-2025-03-28T18-36-10.168Z.log",
+            "size": 1523,
+            "modified": "2026-01-02T13:51:28.869577",
+            "type": "file",
+            "extension": "log"
+          },
+          {
+            "name": "test_shared_state_manager-2025-03-28T18-36-10.168Z.log",
+            "size": 2006,
+            "modified": "2026-01-02T13:51:28.869647",
+            "type": "file",
+            "extension": "log"
+          },
+          {
+            "name": "test_task_manager-2025-03-28T18-36-10.168Z.log",
+            "size": 6324,
+            "modified": "2026-01-02T13:51:28.869750",
+            "type": "file",
+            "extension": "log"
+          }
+        ]
+      },
+      {
+        "name": "output",
+        "modified": "2026-01-02T13:51:28.870085",
+        "type": "directory",
+        "children": [
+          {
+            "name": "qualifier-prep-2025-04-21T18-49-16-662Z",
+            "modified": "2026-01-02T13:51:28.870493",
+            "type": "directory",
+            "children": [
+              {
+                "name": "intermediate_steps",
+                "modified": "2026-01-02T13:51:28.872328",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "step_02_Planner_Pro_planning_prompt.json",
+                    "size": 1401,
+                    "modified": "2026-01-02T13:51:28.870610",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_02_Planner_Pro_planning_response.json",
+                    "size": 3890,
+                    "modified": "2026-01-02T13:51:28.870684",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_02_Planner_Pro_planning_result.txt",
+                    "size": 2964,
+                    "modified": "2026-01-02T13:51:28.870745",
+                    "type": "file",
+                    "extension": "txt"
+                  },
+                  {
+                    "name": "step_03_Researcher_Alpha_research_prompt.json",
+                    "size": 4624,
+                    "modified": "2026-01-02T13:51:28.870843",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_03_Researcher_Alpha_research_response.json",
+                    "size": 6782,
+                    "modified": "2026-01-02T13:51:28.870946",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_03_Researcher_Alpha_research_result.txt",
+                    "size": 5911,
+                    "modified": "2026-01-02T13:51:28.871048",
+                    "type": "file",
+                    "extension": "txt"
+                  },
+                  {
+                    "name": "step_04_Synthesizer_Supreme_synthesis_prompt.json",
+                    "size": 10655,
+                    "modified": "2026-01-02T13:51:28.871186",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_04_Synthesizer_Supreme_synthesis_response.json",
+                    "size": 5282,
+                    "modified": "2026-01-02T13:51:28.871291",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_04_Synthesizer_Supreme_synthesis_result.txt",
+                    "size": 4438,
+                    "modified": "2026-01-02T13:51:28.871397",
+                    "type": "file",
+                    "extension": "txt"
+                  },
+                  {
+                    "name": "step_05_Outline_Architect_outlining_prompt.json",
+                    "size": 15178,
+                    "modified": "2026-01-02T13:51:28.871466",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_05_Outline_Architect_outlining_response.json",
+                    "size": 4700,
+                    "modified": "2026-01-02T13:51:28.871597",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_05_Outline_Architect_outlining_result.txt",
+                    "size": 3780,
+                    "modified": "2026-01-02T13:51:28.871689",
+                    "type": "file",
+                    "extension": "txt"
+                  },
+                  {
+                    "name": "step_06_Academic_Writer_writing_prompt.json",
+                    "size": 19214,
+                    "modified": "2026-01-02T13:51:28.871766",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_06_Academic_Writer_writing_response.json",
+                    "size": 17634,
+                    "modified": "2026-01-02T13:51:28.871841",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_06_Academic_Writer_writing_result.txt",
+                    "size": 16521,
+                    "modified": "2026-01-02T13:51:28.871916",
+                    "type": "file",
+                    "extension": "txt"
+                  },
+                  {
+                    "name": "step_07_Editor_Extraordinaire_editing_prompt.json",
+                    "size": 35943,
+                    "modified": "2026-01-02T13:51:28.871997",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_07_Editor_Extraordinaire_editing_response.json",
+                    "size": 17625,
+                    "modified": "2026-01-02T13:51:28.872064",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_07_Editor_Extraordinaire_editing_result.txt",
+                    "size": 16506,
+                    "modified": "2026-01-02T13:51:28.872143",
+                    "type": "file",
+                    "extension": "txt"
+                  },
+                  {
+                    "name": "step_08_Markdown_Master_formatting_prompt.json",
+                    "size": 52739,
+                    "modified": "2026-01-02T13:51:28.872221",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_08_Markdown_Master_formatting_response.json",
+                    "size": 17820,
+                    "modified": "2026-01-02T13:51:28.872294",
+                    "type": "file",
+                    "extension": "json"
+                  },
+                  {
+                    "name": "step_08_Markdown_Master_formatting_result.txt",
+                    "size": 16729,
+                    "modified": "2026-01-02T13:51:28.872356",
+                    "type": "file",
+                    "extension": "txt"
+                  }
+                ]
+              },
+              {
+                "name": "_workflow_report.json",
+                "size": 7049,
+                "modified": "2026-01-02T13:51:28.870195",
+                "type": "file",
+                "extension": "json"
+              },
+              {
+                "name": "_workflow_visualization.mmd",
+                "size": 731,
+                "modified": "2026-01-02T13:51:28.870257",
+                "type": "file",
+                "extension": "mmd"
+              },
+              {
+                "name": "_workflow_visualization.png",
+                "size": 28440,
+                "modified": "2026-01-02T13:51:28.870373",
+                "type": "file",
+                "extension": "png"
+              },
+              {
+                "name": "final_qualifier_document.md",
+                "size": 16814,
+                "modified": "2026-01-02T13:51:28.870458",
+                "type": "file",
+                "extension": "md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "performance",
+        "modified": "2026-01-02T14:09:52.832697",
+        "type": "directory",
+        "children": [
+          {
+            "name": "AGENTS.md",
+            "size": 197,
+            "modified": "2026-01-02T14:04:00.394270",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "README.md",
+            "size": 317,
+            "modified": "2026-01-02T14:04:00.396698",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "test_coordinator_performance.py",
+            "size": 15247,
+            "modified": "2026-01-02T14:41:29.268186",
+            "type": "file",
+            "extension": "py"
+          }
+        ]
+      },
+      {
+        "name": "reports",
+        "modified": "2026-01-02T14:00:13.218641",
+        "type": "directory",
+        "children": [
+          {
+            "name": "AGENTS.md",
+            "size": 418,
+            "modified": "2026-01-02T14:04:00.396787",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "README.md",
+            "size": 281,
+            "modified": "2026-01-02T14:04:00.396752",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "component-verification-2025-03-28T18-36-10.168Z.json",
+            "size": 2949,
+            "modified": "2026-01-02T13:51:28.872769",
+            "type": "file",
+            "extension": "json"
+          },
+          {
+            "name": "final_test_summary.md",
+            "size": 1785,
+            "modified": "2026-01-02T13:51:28.872833",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "test-report-2025-03-28T18-36-10.168Z.md",
+            "size": 3378,
+            "modified": "2026-01-02T13:51:28.872895",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "test-summary-2025-03-28T18-36-10.168Z.md",
+            "size": 650,
+            "modified": "2026-01-02T13:51:28.872954",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "test_report.md",
+            "size": 6684,
+            "modified": "2026-01-02T13:51:28.873051",
+            "type": "file",
+            "extension": "md"
+          }
+        ]
+      },
+      {
+        "name": "runners",
+        "modified": "2026-01-02T14:00:11.362401",
+        "type": "directory",
+        "children": [
+          {
+            "name": "AGENTS.md",
+            "size": 200,
+            "modified": "2026-01-02T14:04:00.394294",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "README.md",
+            "size": 301,
+            "modified": "2026-01-02T14:04:00.394293",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "run_js.js",
+            "size": 7320,
+            "modified": "2026-01-02T13:51:28.873259",
+            "type": "file",
+            "extension": "js"
+          },
+          {
+            "name": "run_py.py",
+            "size": 6136,
+            "modified": "2026-01-02T13:51:28.873352",
             "type": "file",
             "extension": "py"
           }
@@ -265,83 +777,135 @@
       },
       {
         "name": "system",
-        "modified": "2025-02-12T15:34:28.784165",
+        "modified": "2026-01-02T13:59:54.623019",
         "type": "directory",
         "children": [
           {
-            "name": "scenarios",
-            "modified": "2025-02-12T15:34:13.898118",
+            "name": "multiagent",
+            "modified": "2026-01-02T13:59:56.735715",
             "type": "directory",
             "children": [
               {
+                "name": "AGENTS.md",
+                "size": 343,
+                "modified": "2026-01-02T14:04:00.394140",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "README.md",
+                "size": 474,
+                "modified": "2026-01-02T14:04:00.389885",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "test_end_to_end_workflow.ts",
+                "size": 12763,
+                "modified": "2026-01-02T14:42:43.389734",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_organizational_units.ts",
+                "size": 10505,
+                "modified": "2026-01-02T13:51:28.873870",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_real_llm_workflow.ts",
+                "size": 15119,
+                "modified": "2026-01-02T13:51:28.873952",
+                "type": "file",
+                "extension": "ts"
+              }
+            ]
+          },
+          {
+            "name": "scenarios",
+            "modified": "2026-01-02T13:59:58.126297",
+            "type": "directory",
+            "children": [
+              {
+                "name": "AGENTS.md",
+                "size": 180,
+                "modified": "2026-01-02T14:04:00.394145",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "README.md",
+                "size": 299,
+                "modified": "2026-01-02T14:04:00.394104",
+                "type": "file",
+                "extension": "md"
+              },
+              {
                 "name": "__init__.py",
                 "size": 0,
-                "modified": "2025-02-12T15:34:13.898118",
+                "modified": "2026-01-02T13:51:28.874018",
                 "type": "file",
                 "extension": "py"
               },
               {
                 "name": "test_task_workflow.py",
-                "size": 12601,
-                "modified": "2025-02-12T15:37:33.215755",
+                "size": 12818,
+                "modified": "2026-01-02T14:43:27.578213",
                 "type": "file",
                 "extension": "py"
               }
             ]
           },
           {
+            "name": "AGENTS.md",
+            "size": 481,
+            "modified": "2026-01-02T14:04:00.381786",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "README.md",
+            "size": 444,
+            "modified": "2026-01-02T14:04:00.381741",
+            "type": "file",
+            "extension": "md"
+          },
+          {
             "name": "__init__.py",
             "size": 0,
-            "modified": "2025-02-12T15:34:13.898118",
+            "modified": "2026-01-02T13:51:28.873524",
             "type": "file",
             "extension": "py"
+          },
+          {
+            "name": "test_end_to_end_multiagent.ts",
+            "size": 15397,
+            "modified": "2026-01-02T13:51:28.874568",
+            "type": "file",
+            "extension": "ts"
           }
         ]
       },
       {
         "name": "tests",
-        "modified": "2025-02-12T15:30:36.305421",
+        "modified": "2026-01-02T13:51:28.875378",
         "type": "directory",
         "children": [
           {
-            "name": "data",
-            "modified": "2025-02-12T15:30:36.305421",
-            "type": "directory",
-            "children": [
-              {
-                "name": "metrics",
-                "modified": "2025-02-12T15:30:36.305421",
-                "type": "directory",
-                "children": []
-              },
-              {
-                "name": "resources",
-                "modified": "2025-02-12T15:30:36.305421",
-                "type": "directory",
-                "children": []
-              },
-              {
-                "name": "tasks",
-                "modified": "2025-02-12T15:30:36.305421",
-                "type": "directory",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "integration",
-            "modified": "2025-02-12T15:29:00.184113",
+            "modified": "2026-01-02T13:51:28.875127",
             "type": "directory",
             "children": [
               {
                 "name": "task",
-                "modified": "2025-02-12T15:29:00.184113",
+                "modified": "2026-01-02T13:51:28.875166",
                 "type": "directory",
                 "children": [
                   {
                     "name": "__init__.py",
                     "size": 0,
-                    "modified": "2025-02-12T15:29:00.184113",
+                    "modified": "2026-01-02T13:51:28.875165",
                     "type": "file",
                     "extension": "py"
                   }
@@ -350,7 +914,7 @@
               {
                 "name": "__init__.py",
                 "size": 0,
-                "modified": "2025-02-12T15:29:00.184113",
+                "modified": "2026-01-02T13:51:28.875074",
                 "type": "file",
                 "extension": "py"
               }
@@ -358,18 +922,18 @@
           },
           {
             "name": "system",
-            "modified": "2025-02-12T15:29:00.184113",
+            "modified": "2026-01-02T13:51:28.875289",
             "type": "directory",
             "children": [
               {
                 "name": "scenarios",
-                "modified": "2025-02-12T15:29:00.184113",
+                "modified": "2026-01-02T13:51:28.875333",
                 "type": "directory",
                 "children": [
                   {
                     "name": "__init__.py",
                     "size": 0,
-                    "modified": "2025-02-12T15:29:00.184113",
+                    "modified": "2026-01-02T13:51:28.875332",
                     "type": "file",
                     "extension": "py"
                   }
@@ -378,7 +942,7 @@
               {
                 "name": "__init__.py",
                 "size": 0,
-                "modified": "2025-02-12T15:29:00.184113",
+                "modified": "2026-01-02T13:51:28.875244",
                 "type": "file",
                 "extension": "py"
               }
@@ -386,18 +950,18 @@
           },
           {
             "name": "unit",
-            "modified": "2025-02-12T15:29:00.184113",
+            "modified": "2026-01-02T13:51:28.875458",
             "type": "directory",
             "children": [
               {
                 "name": "task",
-                "modified": "2025-02-12T15:29:00.184113",
+                "modified": "2026-01-02T13:51:28.875513",
                 "type": "directory",
                 "children": [
                   {
                     "name": "__init__.py",
                     "size": 0,
-                    "modified": "2025-02-12T15:29:00.184113",
+                    "modified": "2026-01-02T13:51:28.875512",
                     "type": "file",
                     "extension": "py"
                   }
@@ -406,7 +970,7 @@
               {
                 "name": "__init__.py",
                 "size": 0,
-                "modified": "2025-02-12T15:29:00.184113",
+                "modified": "2026-01-02T13:51:28.875414",
                 "type": "file",
                 "extension": "py"
               }
@@ -415,7 +979,7 @@
           {
             "name": "__init__.py",
             "size": 0,
-            "modified": "2025-02-12T15:29:00.184113",
+            "modified": "2026-01-02T13:51:28.874991",
             "type": "file",
             "extension": "py"
           }
@@ -423,183 +987,505 @@
       },
       {
         "name": "unit",
-        "modified": "2025-02-12T15:34:28.832165",
+        "modified": "2026-01-02T14:00:01.826794",
         "type": "directory",
         "children": [
           {
-            "name": "task",
-            "modified": "2025-02-12T15:34:13.898118",
+            "name": "agents",
+            "modified": "2026-01-02T13:51:28.876892",
             "type": "directory",
             "children": [
               {
+                "name": "AGENTS.md",
+                "size": 7538,
+                "modified": "2026-01-02T13:51:28.876019",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "test_active_inference_pomdp_agent.ts",
+                "size": 15427,
+                "modified": "2026-01-02T13:51:28.876114",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_analysis_agent.ts",
+                "size": 17572,
+                "modified": "2026-01-02T13:51:28.876260",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_creative_writing_agent.ts",
+                "size": 17174,
+                "modified": "2026-01-02T13:51:28.876369",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_customer_support_agent.ts",
+                "size": 21782,
+                "modified": "2026-01-02T13:51:28.876431",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_data_analysis_agent.ts",
+                "size": 20902,
+                "modified": "2026-01-02T13:51:28.876493",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_development_agent.ts",
+                "size": 18702,
+                "modified": "2026-01-02T13:51:28.876551",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_finance_agent.ts",
+                "size": 16731,
+                "modified": "2026-01-02T13:51:28.876656",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_hr_agent.ts",
+                "size": 19727,
+                "modified": "2026-01-02T13:51:28.876757",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_legal_agent.ts",
+                "size": 19677,
+                "modified": "2026-01-02T13:51:28.876863",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_marketing_agent.ts",
+                "size": 15947,
+                "modified": "2026-01-02T13:51:28.876950",
+                "type": "file",
+                "extension": "ts"
+              }
+            ]
+          },
+          {
+            "name": "core",
+            "modified": "2026-01-02T14:00:03.658297",
+            "type": "directory",
+            "children": [
+              {
+                "name": "AGENTS.md",
+                "size": 370,
+                "modified": "2026-01-02T14:04:00.394268",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "README.md",
+                "size": 533,
+                "modified": "2026-01-02T14:04:00.394199",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "test_event_system.ts",
+                "size": 9264,
+                "modified": "2026-01-02T13:51:28.877121",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_message_system.ts",
+                "size": 14259,
+                "modified": "2026-01-02T13:51:28.877205",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_monitoring_system.ts",
+                "size": 13633,
+                "modified": "2026-01-02T13:51:28.877295",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_storage_system.ts",
+                "size": 18018,
+                "modified": "2026-01-02T13:51:28.877365",
+                "type": "file",
+                "extension": "ts"
+              }
+            ]
+          },
+          {
+            "name": "integration",
+            "modified": "2026-01-02T13:51:28.877530",
+            "type": "directory",
+            "children": [
+              {
+                "name": "RateLimiterTest.ts",
+                "size": 6028,
+                "modified": "2026-01-02T13:51:28.877504",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "RetryTest.ts",
+                "size": 4205,
+                "modified": "2026-01-02T13:51:28.877597",
+                "type": "file",
+                "extension": "ts"
+              }
+            ]
+          },
+          {
+            "name": "multiagent",
+            "modified": "2026-01-02T14:00:05.347070",
+            "type": "directory",
+            "children": [
+              {
+                "name": "AGENTS.md",
+                "size": 312,
+                "modified": "2026-01-02T14:04:00.394221",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "README.md",
+                "size": 454,
+                "modified": "2026-01-02T14:04:00.394209",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "test_openai_client.ts",
+                "size": 8113,
+                "modified": "2026-01-02T13:51:28.877727",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_shared_state_manager.ts",
+                "size": 12502,
+                "modified": "2026-01-02T15:02:32.119030",
+                "type": "file",
+                "extension": "ts"
+              },
+              {
+                "name": "test_task_manager.ts",
+                "size": 22658,
+                "modified": "2026-01-02T15:02:16.855132",
+                "type": "file",
+                "extension": "ts"
+              }
+            ]
+          },
+          {
+            "name": "task",
+            "modified": "2026-01-02T14:00:07.101251",
+            "type": "directory",
+            "children": [
+              {
+                "name": "AGENTS.md",
+                "size": 440,
+                "modified": "2026-01-02T14:04:00.396692",
+                "type": "file",
+                "extension": "md"
+              },
+              {
+                "name": "README.md",
+                "size": 567,
+                "modified": "2026-01-02T14:04:00.394234",
+                "type": "file",
+                "extension": "md"
+              },
+              {
                 "name": "__init__.py",
                 "size": 0,
-                "modified": "2025-02-12T15:34:13.898118",
+                "modified": "2026-01-02T13:51:28.877997",
                 "type": "file",
                 "extension": "py"
               },
               {
                 "name": "test_task_dependencies.py",
                 "size": 8724,
-                "modified": "2025-02-12T15:19:20.634190",
+                "modified": "2026-01-02T13:51:28.879409",
                 "type": "file",
                 "extension": "py"
               },
               {
                 "name": "test_task_ingestion.py",
                 "size": 6851,
-                "modified": "2025-02-12T14:28:06.882066",
+                "modified": "2026-01-02T14:41:00.265217",
                 "type": "file",
                 "extension": "py"
               },
               {
                 "name": "test_task_prioritization.py",
                 "size": 7528,
-                "modified": "2025-02-12T15:19:20.634190",
+                "modified": "2026-01-02T13:51:28.879609",
                 "type": "file",
                 "extension": "py"
               },
               {
                 "name": "test_task_scheduling.py",
                 "size": 1,
-                "modified": "2025-02-12T15:13:26.344982",
+                "modified": "2026-01-02T13:51:28.879666",
                 "type": "file",
                 "extension": "py"
               },
               {
                 "name": "test_task_workflow.py",
                 "size": 10724,
-                "modified": "2025-02-12T15:35:11.764303",
+                "modified": "2026-01-02T13:51:28.879796",
                 "type": "file",
                 "extension": "py"
               }
             ]
           },
           {
+            "name": "AGENTS.md",
+            "size": 1017,
+            "modified": "2026-01-02T14:04:00.394192",
+            "type": "file",
+            "extension": "md"
+          },
+          {
+            "name": "README.md",
+            "size": 557,
+            "modified": "2026-01-02T14:04:00.394159",
+            "type": "file",
+            "extension": "md"
+          },
+          {
             "name": "__init__.py",
             "size": 0,
-            "modified": "2025-02-12T15:34:13.898118",
+            "modified": "2026-01-02T13:51:28.875665",
             "type": "file",
             "extension": "py"
+          },
+          {
+            "name": "agent-coordination.test.ts",
+            "size": 13354,
+            "modified": "2026-01-02T14:43:13.957223",
+            "type": "file",
+            "extension": "ts"
           }
         ]
       },
       {
         "name": "utils",
-        "modified": "2025-03-11T07:28:02.206046",
+        "modified": "2026-01-02T14:00:08.307840",
         "type": "directory",
         "children": [
           {
+            "name": "reporting",
+            "modified": "2026-01-02T13:51:28.880623",
+            "type": "directory",
+            "children": [
+              {
+                "name": "final_test_summary.js",
+                "size": 3955,
+                "modified": "2026-01-02T13:51:28.880595",
+                "type": "file",
+                "extension": "js"
+              },
+              {
+                "name": "test_report.js",
+                "size": 7596,
+                "modified": "2026-01-02T13:51:28.880697",
+                "type": "file",
+                "extension": "js"
+              }
+            ]
+          },
+          {
+            "name": "verification",
+            "modified": "2026-01-02T13:51:28.881148",
+            "type": "directory",
+            "children": [
+              {
+                "name": "manual_test.js",
+                "size": 1854,
+                "modified": "2026-01-02T13:51:28.881119",
+                "type": "file",
+                "extension": "js"
+              },
+              {
+                "name": "test_manual_workflow.js",
+                "size": 7142,
+                "modified": "2026-01-02T13:51:28.881221",
+                "type": "file",
+                "extension": "js"
+              }
+            ]
+          },
+          {
+            "name": "AGENTS.md",
+            "size": 559,
+            "modified": "2026-01-02T14:04:00.394253",
+            "type": "file",
+            "extension": "md"
+          },
+          {
             "name": "README.md",
             "size": 1926,
-            "modified": "2025-03-11T07:21:17.834422",
+            "modified": "2026-01-02T13:51:28.880023",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "__init__.py",
             "size": 130,
-            "modified": "2025-03-11T07:25:42.755486",
+            "modified": "2026-01-02T13:51:28.880084",
             "type": "file",
             "extension": "py"
           },
           {
             "name": "file_structure_mapper.py",
             "size": 8230,
-            "modified": "2025-03-11T07:31:21.415846",
+            "modified": "2026-01-02T13:51:28.880484",
             "type": "file",
             "extension": "py"
+          },
+          {
+            "name": "test-helpers.ts",
+            "size": 10214,
+            "modified": "2026-01-02T13:51:28.880859",
+            "type": "file",
+            "extension": "ts"
+          },
+          {
+            "name": "test_helpers.ts",
+            "size": 8107,
+            "modified": "2026-01-02T13:51:28.880966",
+            "type": "file",
+            "extension": "ts"
           }
         ]
       },
       {
+        "name": "AGENTS.md",
+        "size": 26221,
+        "modified": "2026-01-02T14:02:33.293583",
+        "type": "file",
+        "extension": "md"
+      },
+      {
         "name": "README.md",
-        "size": 5596,
-        "modified": "2025-03-11T07:23:28.896949",
+        "size": 10029,
+        "modified": "2026-01-02T13:51:28.863269",
         "type": "file",
         "extension": "md"
       },
       {
-        "name": "TEST_EXECUTION_README.md",
-        "size": 6944,
-        "modified": "2025-03-13T10:42:06.942087",
+        "name": "TEST_FIXES_SUMMARY.md",
+        "size": 5786,
+        "modified": "2026-01-02T14:44:37.930390",
         "type": "file",
         "extension": "md"
       },
       {
-        "name": "TEST_SUMMARY.md",
-        "size": 1120,
-        "modified": "2025-03-13T10:42:18.633124",
+        "name": "TEST_SUITE_REPORT.md",
+        "size": 6677,
+        "modified": "2026-01-02T14:15:19.129150",
         "type": "file",
         "extension": "md"
       },
       {
         "name": "__init__.py",
         "size": 0,
-        "modified": "2025-02-12T15:34:13.898118",
+        "modified": "2026-01-02T13:51:28.863295",
         "type": "file",
         "extension": "py"
       },
       {
         "name": "conftest.py",
-        "size": 10348,
-        "modified": "2025-02-12T15:30:28.723397",
+        "size": 10394,
+        "modified": "2026-01-02T14:40:50.999878",
         "type": "file",
         "extension": "py"
       },
       {
-        "name": "pytest.ini",
-        "size": 1477,
-        "modified": "2025-02-12T15:29:17.989170",
+        "name": "multiagent-collaboration-test.js",
+        "size": 21551,
+        "modified": "2026-01-02T13:51:28.869836",
         "type": "file",
-        "extension": "ini"
+        "extension": "js"
+      },
+      {
+        "name": "multiagent-tests-README.md",
+        "size": 3801,
+        "modified": "2026-01-02T13:51:28.869917",
+        "type": "file",
+        "extension": "md"
+      },
+      {
+        "name": "organization-units-demo.js",
+        "size": 4480,
+        "modified": "2026-01-02T13:51:28.870016",
+        "type": "file",
+        "extension": "js"
+      },
+      {
+        "name": "package.json",
+        "size": 1511,
+        "modified": "2026-01-02T13:51:28.872416",
+        "type": "file",
+        "extension": "json"
+      },
+      {
+        "name": "phd-qualifier-prep-test.js",
+        "size": 37375,
+        "modified": "2026-01-02T13:51:28.872656",
+        "type": "file",
+        "extension": "js"
       },
       {
         "name": "requirements.txt",
-        "size": 1299,
-        "modified": "2025-03-11T07:22:31.270718",
+        "size": 972,
+        "modified": "2026-01-02T13:51:28.873111",
         "type": "file",
         "extension": "txt"
       },
       {
-        "name": "run_structure_analysis.py",
-        "size": 6512,
-        "modified": "2025-03-11T07:20:53.966324",
+        "name": "simple-openai-test.js",
+        "size": 3293,
+        "modified": "2026-01-02T13:51:28.873410",
         "type": "file",
-        "extension": "py"
-      },
-      {
-        "name": "run_tests.py",
-        "size": 4245,
-        "modified": "2025-02-12T15:34:13.898118",
-        "type": "file",
-        "extension": "py"
+        "extension": "js"
       },
       {
         "name": "test_codebase_relationships.py",
-        "size": 9269,
-        "modified": "2025-03-11T07:27:51.840005",
+        "size": 9234,
+        "modified": "2026-01-02T14:41:24.766868",
         "type": "file",
         "extension": "py"
       },
       {
         "name": "test_repo_structure.py",
-        "size": 7853,
-        "modified": "2025-03-11T07:30:23.869615",
+        "size": 7799,
+        "modified": "2026-01-02T14:41:13.494252",
         "type": "file",
         "extension": "py"
       },
       {
         "name": "test_workflow.py",
-        "size": 6103,
-        "modified": "2025-02-12T15:19:20.634190",
+        "size": 6835,
+        "modified": "2026-01-02T14:44:19.156582",
         "type": "file",
         "extension": "py"
       },
       {
         "name": "utils.py",
         "size": 12093,
-        "modified": "2025-02-12T15:33:27.016968",
+        "modified": "2026-01-02T13:51:28.879928",
         "type": "file",
         "extension": "py"
       }

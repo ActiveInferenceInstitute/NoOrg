@@ -64,4 +64,51 @@ export interface SharedStateManager {
    * Update the status of an agent in shared state
    */
   updateAgentStatus(name: string, status: string): Promise<void>;
+  
+  /**
+   * Watch state changes at a specific path (alias for subscribe)
+   * @param path Path to watch
+   * @param callback Callback function
+   */
+  watchState(path: string, callback: (path: string, value: unknown, metadata?: any) => void): void;
+  
+  /**
+   * Unwatch state changes (alias for unsubscribe)
+   * @param path Path to unwatch
+   * @param callback Callback function to remove
+   */
+  unwatchState(path: string, callback: (path: string, value: unknown, metadata?: any) => void): void;
+  
+  /**
+   * Sync state from external source with conflict resolution
+   * @param externalState External state to sync
+   * @param strategy Conflict resolution strategy
+   */
+  syncState(externalState: Record<string, any>, strategy: string | ((local: any, external: any) => any)): void;
+  
+  /**
+   * Resolve conflicts between local and external values
+   * @param localValue Local value
+   * @param externalValue External value
+   * @param strategy Resolution strategy
+   * @returns Resolved value
+   */
+  resolveConflicts(localValue: any, externalValue: any, strategy: string | ((local: any, external: any) => any)): any;
+  
+  /**
+   * Mark a path as persisted
+   * @param path Path to persist
+   */
+  persistState(path: string): void;
+  
+  /**
+   * Load persisted state
+   * @param state State object to load
+   */
+  loadPersistedState(state: Record<string, any>): void;
+  
+  /**
+   * Clear ephemeral (non-persisted) state
+   */
+  clearEphemeralState(): void;
 } 

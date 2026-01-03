@@ -31,10 +31,22 @@ Interface for task lifecycle management.
 **Key Methods:**
 - `createTask()` - Create a new task
 - `assignTask()` - Assign task to agent
+- `unassignTask()` - Unassign task from agent
+- `reassignTask()` - Reassign task to different agent
+- `updateTask()` - Update task properties
 - `startTask()` - Start task execution
 - `completeTask()` - Mark task as completed
 - `failTask()` - Mark task as failed
+- `cancelTask()` - Cancel a task
 - `getTask()` - Get task by ID
+- `listTasks()` - List tasks with filtering
+- `getReadyTasks()` - Get tasks ready for execution
+- `countTasksByStatus()` - Count tasks by status
+- `areDependenciesSatisfied()` - Check task dependencies
+- `getTaskHistory()` - Get task history
+- `estimateTaskDuration()` - Estimate task duration
+- `getTaskStatistics()` - Get task statistics
+- `cleanupOldTasks()` - Clean up old tasks
 
 ### SharedStateManager
 
@@ -43,9 +55,22 @@ Interface for shared state management.
 **Key Methods:**
 - `setState()` - Set state value
 - `getState()` - Get state value
+- `getFullState()` - Get entire state object
 - `subscribe()` - Subscribe to state changes
+- `unsubscribe()` - Unsubscribe from state changes
+- `watchState()` - Watch state changes (alias for subscribe)
+- `unwatchState()` - Unwatch state changes (alias for unsubscribe)
+- `syncState()` - Sync state from external source
+- `resolveConflicts()` - Resolve state conflicts
+- `persistState()` - Mark path as persisted
+- `loadPersistedState()` - Load persisted state
+- `clearEphemeralState()` - Clear non-persisted state
 - `clearState()` - Clear all state
-- `saveState()` - Persist state
+- `loadState()` - Load state from storage
+- `saveState()` - Persist state to storage
+- `registerAgent()` - Register agent in shared state
+- `updateAgentStatus()` - Update agent status
+- `configurePersistence()` - Configure persistence settings
 
 ### OpenAIClient
 

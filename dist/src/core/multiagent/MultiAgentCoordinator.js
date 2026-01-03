@@ -54,77 +54,17 @@ const logger = winston.createLogger({
     ]
 });
 /**
- * Convert string capabilities to Capability objects
- */
-function convertCapabilities(capabilities) {
-    return capabilities.map(cap => ({
-        name: cap,
-        description: `Capability: ${cap}`,
-        parameters: {}
-    }));
-}
-/**
- * Convert Capability objects to string capabilities
- */
-function convertCapabilitiesToString(capabilities) {
-    return capabilities.map(cap => cap.name);
-}
-/**
- * Convert string status to AgentStatus
- */
-function convertStatusToAgentStatus(status) {
-    const now = Date.now();
-    return {
-        id: 'temp-id', // Will be replaced
-        name: 'temp-name', // Will be replaced
-        type: 'temp-type', // Will be replaced
-        status: status === 'initializing' ? 'available' : status,
-        lastActive: now,
-        capabilities: [],
-        metadata: {},
-        state: status === 'initializing' ? 'available' : status,
-        lastUpdated: now,
-        healthStatus: {
-            isHealthy: status !== 'error',
-            errors: status === 'error' ? ['Status error'] : [],
-            lastHeartbeat: now
-        },
-        metrics: {}
-    };
-}
-/**
- * Convert AgentStatus to string status
- */
-function convertStatusToString(status) {
-    const validStatuses = ['available', 'busy', 'offline', 'error', 'initializing'];
-    return validStatuses.includes(status.state)
-        ? status.state
-        : 'offline';
-}
-/**
  * Convert AgentType to Agent
  */
 function convertAgentTypeToAgent(agentType) {
     const now = Date.now();
-    const agentStatus = convertStatusToAgentStatus(agentType.status);
-    // Update status with agent-specific values
-    agentStatus.id = agentType.id;
-    agentStatus.name = agentType.name;
-    agentStatus.type = agentType.type;
-    const capabilities = Array.isArray(agentType.capabilities)
-        ? agentType.capabilities.map(cap => ({
-            name: cap,
-            description: `Capability: ${cap}`,
-            parameters: {}
-        }))
-        : [];
     const agent = {
         id: agentType.id,
         name: agentType.name,
         type: agentType.type,
         description: agentType.description || '',
-        capabilities,
-        status: agentStatus,
+        capabilities: agentType.capabilities,
+        status: agentType.status,
         metadata: {
             ...(agentType.metadata || {}),
             preferredModel: agentType.preferredModel,
@@ -143,14 +83,12 @@ function convertAgentTypeToAgent(agentType) {
  */
 function convertAgentToAgentType(agent) {
     const metadata = agent.metadata || {};
-    const capabilities = convertCapabilitiesToString(agent.capabilities);
-    const status = convertStatusToString(agent.status);
     const agentType = {
         id: agent.id,
         name: agent.name,
         type: agent.type,
-        capabilities,
-        status,
+        capabilities: agent.capabilities,
+        status: agent.status,
         metadata: metadata || {},
         description: metadata.description || '',
         preferredModel: metadata.preferredModel || '',
@@ -412,25 +350,8 @@ class MultiAgentCoordinator {
             // Ensure all agents are marked as offline
             for (const agent of this.agents.values()) {
                 try {
-                    if (agent.status && typeof agent.status === 'object' && agent.status.state !== 'offline') {
-                        // Add check for agent.status type before spreading
-                        const updatedStatus = typeof agent.status === 'object'
-                            ? { ...agent.status, state: 'offline' }
-                            : {
-                                id: agent.id,
-                                name: agent.name,
-                                type: agent.type,
-                                status: 'offline', // Use literal type
-                                lastActive: Date.now(),
-                                capabilities: [],
-                                metadata: {},
-                                state: 'offline', // Use literal type
-                                lastUpdated: Date.now(),
-                                healthStatus: { isHealthy: true, errors: [], lastHeartbeat: Date.now() },
-                                metrics: {}
-                            };
-                        // Ensure the combined type matches what updateAgent expects (Partial<Agent>)
-                        await this.agentRegistry.updateAgent(agent.id, { status: updatedStatus });
+                    if (agent.status !== 'offline') {
+                        await this.agentRegistry.updateAgent(agent.id, { status: 'offline' });
                     }
                 }
                 catch (error) {
@@ -455,13 +376,9 @@ class MultiAgentCoordinator {
             this.logger.info(`Registering agent with data: ${JSON.stringify(agentData)}`);
             const agentId = (0, uuid_1.v4)();
             const now = Date.now();
-            const capabilities = convertCapabilities(agentData.capabilities || []);
+            const capabilities = agentData.capabilities || [];
             const initialStatus = agentData.status || 'available';
-            const agentStatus = convertStatusToAgentStatus(initialStatus);
-            // Update status with agent-specific values
-            agentStatus.id = agentId;
-            agentStatus.name = agentData.name;
-            agentStatus.type = agentData.type;
+            const agentStatus = initialStatus;
             const coreAgent = {
                 id: agentId,
                 name: agentData.name,
@@ -494,7 +411,7 @@ class MultiAgentCoordinator {
                 name: agentData.name,
                 type: agentData.type,
                 capabilities: Array.isArray(agentData.capabilities)
-                    ? convertCapabilities(agentData.capabilities)
+                    ? agentData.capabilities
                     : [],
                 status: agentData.status,
                 registeredAt: Date.now()
@@ -648,7 +565,7 @@ class MultiAgentCoordinator {
             await this.sharedStateManager.setState(`agents.${agentId}.assignedTasks`, [task.id]);
             console.info(`Task ${task.id} assigned to agent ${agentId}`);
             // Start the task if it's assigned and the agent is available
-            if (agent.status.state === 'available') {
+            if (agent.status === 'available') {
                 await this.startTask(task.id);
             }
         }
@@ -787,42 +704,11 @@ class MultiAgentCoordinator {
             // createdAt and type typically shouldn't be updated
             // Convert capabilities if present
             if (updates.capabilities) {
-                coreUpdates.capabilities = convertCapabilities(updates.capabilities);
+                coreUpdates.capabilities = updates.capabilities;
             }
             // Convert status if present
             if (updates.status) {
-                // Handle string status or potential object status from AgentType
-                if (typeof updates.status === 'string') {
-                    coreUpdates.status = convertStatusToAgentStatus(updates.status);
-                    coreUpdates.status.id = agent.id; // Ensure IDs match
-                    coreUpdates.status.name = agent.name;
-                    coreUpdates.status.type = agent.type;
-                }
-                else {
-                    // If it's somehow already an AgentStatus-like object (though AgentType defines it as string literals)
-                    // This case might indicate an inconsistency elsewhere, but handle defensively
-                    this.logger.warn(`Received unexpected object status in updateAgent for ${agentId}. Attempting conversion.`);
-                    coreUpdates.status = {
-                        id: agent.id,
-                        name: agent.name,
-                        type: agent.type,
-                        status: updates.status.state || updates.status.status || 'offline',
-                        lastActive: Date.now(),
-                        capabilities: agent.capabilities, // Keep existing capabilities
-                        metadata: agent.metadata, // Keep existing metadata
-                        state: updates.status.state || updates.status.status || 'offline',
-                        lastUpdated: Date.now(),
-                        healthStatus: { isHealthy: true, errors: [], lastHeartbeat: Date.now() }, // Default health
-                        metrics: {}
-                    };
-                    // Ensure the status literal is valid
-                    const validStates = ['available', 'busy', 'offline', 'error'];
-                    if (!validStates.includes(coreUpdates.status.state)) {
-                        this.logger.warn(`Invalid state found in status update: ${coreUpdates.status.state}. Defaulting to offline.`);
-                        coreUpdates.status.state = 'offline';
-                        coreUpdates.status.status = 'offline';
-                    }
-                }
+                coreUpdates.status = updates.status;
             }
             // Update internal agent map first for consistency
             const updatedInternalAgent = { ...agent, ...coreUpdates };
@@ -1139,27 +1025,8 @@ class MultiAgentCoordinator {
                     return internalAgent;
                 }
                 else {
-                    // Use the conversion function, ensuring it provides all fields
-                    // Or manually construct, ensuring all fields are present
-                    const agentStatus = convertStatusToAgentStatus(regAgent.status);
-                    agentStatus.id = regAgent.id;
-                    agentStatus.name = regAgent.name;
-                    agentStatus.type = regAgent.type;
-                    const capabilities = Array.isArray(regAgent.capabilities)
-                        ? regAgent.capabilities.map(cap => ({ name: cap, description: `Capability: ${cap}`, parameters: {} }))
-                        : [];
-                    return {
-                        id: regAgent.id,
-                        name: regAgent.name,
-                        type: regAgent.type,
-                        description: regAgent.description || '',
-                        capabilities,
-                        status: agentStatus,
-                        metadata: regAgent.metadata || {},
-                        preferredModel: regAgent.preferredModel || '',
-                        createdAt: regAgent.createdAt || Date.now(),
-                        lastActive: regAgent.lastActive || Date.now()
-                    };
+                    // Registry agent should already be compatible with core Agent interface
+                    return regAgent;
                 }
             });
             // Prepare state object
@@ -1239,25 +1106,6 @@ class MultiAgentCoordinator {
         }
     }
     // --- End State Persistence Methods ---
-    createAgentStatus(agent) {
-        return {
-            id: agent.id,
-            name: agent.name,
-            type: agent.type,
-            status: agent.status.status,
-            lastActive: agent.lastActive,
-            capabilities: agent.capabilities,
-            metadata: agent.metadata,
-            state: agent.status.state,
-            lastUpdated: Date.now(),
-            healthStatus: {
-                isHealthy: true,
-                errors: [],
-                lastHeartbeat: Date.now()
-            },
-            metrics: {}
-        };
-    }
     createStateUpdateOptions(agent, action) {
         return {
             modifiedBy: agent.id,
@@ -1278,23 +1126,7 @@ class MultiAgentCoordinator {
             type: agentData.type,
             description: agentData.description || '',
             capabilities: agentData.capabilities || [],
-            status: {
-                id: agentData.id,
-                name: agentData.name,
-                type: agentData.type,
-                status: 'available',
-                lastActive: now,
-                capabilities: agentData.capabilities || [],
-                metadata: {},
-                state: 'available',
-                lastUpdated: now,
-                healthStatus: {
-                    isHealthy: true,
-                    errors: [],
-                    lastHeartbeat: now
-                },
-                metrics: {}
-            },
+            status: 'available',
             metadata: agentData.metadata || {},
             preferredModel: agentData.preferredModel || 'default',
             createdAt: agentData.createdAt || now,

@@ -201,6 +201,154 @@ Executes a workflow.
 
 **Returns:** `Promise<any>` - Workflow result
 
+#### findAgentsByCapability()
+
+```typescript
+public async findAgentsByCapability(capability: string): Promise<AgentType[]>
+```
+
+Finds agents by capability (wrapper for AgentRegistry method).
+
+**Parameters:**
+- `capability` (string): Capability to search for
+
+**Returns:** `Promise<AgentType[]>` - Array of agents with the capability
+
+**Behavior:**
+- Delegates to AgentRegistry.findAgentsByCapability()
+- Converts Agent[] to AgentType[]
+
+#### updateAgentStatus()
+
+```typescript
+public async updateAgentStatus(agentId: string, status: string): Promise<boolean>
+```
+
+Updates agent status (wrapper for AgentRegistry method).
+
+**Parameters:**
+- `agentId` (string): Agent ID
+- `status` (string): New status
+
+**Returns:** `Promise<boolean>` - Success status
+
+**Behavior:**
+- Delegates to AgentRegistry.updateAgentStatus()
+
+#### getReadyTasks()
+
+```typescript
+public async getReadyTasks(): Promise<Task[]>
+```
+
+Gets ready tasks (wrapper for TaskManager method).
+
+**Returns:** `Promise<Task[]>` - Array of ready tasks
+
+**Behavior:**
+- Delegates to TaskManager.getReadyTasks()
+
+#### areDependenciesSatisfied()
+
+```typescript
+public async areDependenciesSatisfied(taskId: string): Promise<boolean>
+```
+
+Checks if task dependencies are satisfied (wrapper for TaskManager method).
+
+**Parameters:**
+- `taskId` (string): Task ID
+
+**Returns:** `Promise<boolean>` - True if dependencies satisfied
+
+**Behavior:**
+- Delegates to TaskManager.areDependenciesSatisfied()
+
+#### getAgent()
+
+```typescript
+public async getAgent(agentId: string): Promise<Agent | null>
+```
+
+Gets agent by ID.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+
+**Returns:** `Promise<Agent | null>` - Agent or null
+
+#### listAgents()
+
+```typescript
+public async listAgents(filter?: AgentFilter): Promise<AgentType[]>
+```
+
+Lists agents with optional filtering.
+
+**Parameters:**
+- `filter` (AgentFilter, optional): Filter criteria
+
+**Returns:** `Promise<AgentType[]>` - Array of agents
+
+#### assignTask()
+
+```typescript
+public async assignTask(taskId: string, agentId: string): Promise<void>
+```
+
+Assigns a task to an agent.
+
+**Parameters:**
+- `taskId` (string): Task ID
+- `agentId` (string): Agent ID
+
+**Returns:** `Promise<void>`
+
+#### createTask()
+
+```typescript
+public async createTask(
+  taskData: Omit<Task, 'id' | 'status' | 'createdAt' | 'updatedAt'>
+): Promise<string | null>
+```
+
+Creates a new task.
+
+**Parameters:**
+- `taskData` (Omit<Task, 'id' | 'status' | 'createdAt' | 'updatedAt'>): Task data
+
+**Returns:** `Promise<string | null>` - Task ID or null
+
+#### getTaskManager()
+
+```typescript
+public getTaskManager(): TaskManager
+```
+
+Gets the underlying task manager.
+
+**Returns:** `TaskManager` - Task manager instance
+
+#### getAgentRegistry()
+
+```typescript
+public getAgentRegistry(): AgentRegistry
+```
+
+Gets the underlying agent registry.
+
+**Returns:** `AgentRegistry` - Agent registry instance
+
+#### getSharedStateManager()
+
+```typescript
+public getSharedStateManager(): SharedStateManager
+```
+
+Gets the underlying shared state manager.
+
+**Returns:** `SharedStateManager` - Shared state manager instance
+
 ## AgentRegistry
 
 ### Static Methods
@@ -461,6 +609,159 @@ Checks if task dependencies are satisfied.
 
 **Returns:** `Promise<boolean>` - True if dependencies satisfied
 
+#### unassignTask()
+
+```typescript
+public async unassignTask(taskId: string): Promise<void>
+```
+
+Unassigns a task from its current agent.
+
+**Parameters:**
+- `taskId` (string): Task ID
+
+**Returns:** `Promise<void>`
+
+**Behavior:**
+- Removes assignment from task
+- Sets status back to 'pending'
+- Clears assignedAt timestamp
+
+#### reassignTask()
+
+```typescript
+public async reassignTask(taskId: string, newAgentId: string): Promise<void>
+```
+
+Reassigns a task to a different agent.
+
+**Parameters:**
+- `taskId` (string): Task ID
+- `newAgentId` (string): New agent ID
+
+**Returns:** `Promise<void>`
+
+**Behavior:**
+- Updates assignedTo field
+- Maintains reassignment history in metadata
+- Updates status to 'assigned'
+
+#### updateTask()
+
+```typescript
+public async updateTask(
+  taskId: string,
+  updates: Partial<Omit<Task, 'id' | 'createdAt'>>
+): Promise<void>
+```
+
+Updates task properties.
+
+**Parameters:**
+- `taskId` (string): Task ID
+- `updates` (Partial<Omit<Task, 'id' | 'createdAt'>>): Task updates
+
+**Returns:** `Promise<void>`
+
+**Behavior:**
+- Merges metadata if both exist
+- Updates updatedAt timestamp
+- Updates shared state
+
+#### getReadyTasks()
+
+```typescript
+public async getReadyTasks(): Promise<Task[]>
+```
+
+Gets tasks that are ready to be executed (dependencies satisfied).
+
+**Returns:** `Promise<Task[]>` - Array of ready tasks
+
+**Behavior:**
+- Returns tasks with status 'pending'
+- Only includes tasks where all dependencies are completed
+
+#### countTasksByStatus()
+
+```typescript
+public async countTasksByStatus(): Promise<Record<TaskStatus, number>>
+```
+
+Counts tasks by status.
+
+**Returns:** `Promise<Record<TaskStatus, number>>` - Object with counts for each status
+
+**Behavior:**
+- Returns counts for: pending, assigned, in-progress, completed, failed, cancelled
+
+#### getTaskHistory()
+
+```typescript
+public async getTaskHistory(taskId: string): Promise<TaskHistory[]>
+```
+
+Gets task history including all state changes.
+
+**Parameters:**
+- `taskId` (string): Task ID
+
+**Returns:** `Promise<TaskHistory[]>` - Array of history events
+
+**Behavior:**
+- Includes: created, assigned, started, completed, failed, reassigned events
+- Sorted by timestamp
+
+#### estimateTaskDuration()
+
+```typescript
+public async estimateTaskDuration(task: Task): Promise<number>
+```
+
+Estimates task duration based on historical data.
+
+**Parameters:**
+- `task` (Task): Task to estimate
+
+**Returns:** `Promise<number>` - Estimated duration in milliseconds
+
+**Behavior:**
+- Uses historical data from similar tasks
+- Adjusts based on priority
+- Returns default estimate if no historical data
+
+#### getTaskStatistics()
+
+```typescript
+public async getTaskStatistics(): Promise<TaskStatistics>
+```
+
+Gets task statistics.
+
+**Returns:** `Promise<TaskStatistics>` - Statistics object
+
+**Behavior:**
+- Includes: total count, counts by status, counts by priority
+- Calculates average processing time
+- Calculates success rate
+
+#### cleanupOldTasks()
+
+```typescript
+public async cleanupOldTasks(olderThan: number): Promise<number>
+```
+
+Cleans up old completed tasks.
+
+**Parameters:**
+- `olderThan` (number): Timestamp - remove tasks older than this
+
+**Returns:** `Promise<number>` - Number of tasks removed
+
+**Behavior:**
+- Removes completed or failed tasks older than specified timestamp
+- Updates shared state
+
 ## SharedStateManager
 
 ### Static Methods
@@ -637,6 +938,135 @@ Configures persistence settings.
 - `saveInterval` (number, optional): Auto-save interval in ms (default: 60000)
 
 **Returns:** `void`
+
+#### watchState()
+
+```typescript
+public watchState(path: string, callback: StateChangeCallback): void
+```
+
+Watches state changes at a specific path (alias for subscribe).
+
+**Parameters:**
+- `path` (string): Path to watch
+- `callback` (StateChangeCallback): Callback function
+
+**Returns:** `void`
+
+**Behavior:**
+- Alias for subscribe() method
+- Provides more intuitive naming for watching state
+
+#### unwatchState()
+
+```typescript
+public unwatchState(path: string, callback: StateChangeCallback): void
+```
+
+Unwatches state changes (alias for unsubscribe).
+
+**Parameters:**
+- `path` (string): Path to unwatch
+- `callback` (StateChangeCallback): Callback function to remove
+
+**Returns:** `void`
+
+**Behavior:**
+- Finds subscription by path and callback
+- Removes the subscription
+
+#### syncState()
+
+```typescript
+public syncState(
+  externalState: Record<string, any>,
+  strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)
+): void
+```
+
+Syncs state from external source with conflict resolution.
+
+**Parameters:**
+- `externalState` (Record<string, any>): External state to sync
+- `strategy` (ConflictResolutionStrategy | function): Resolution strategy
+
+**Returns:** `void`
+
+**Behavior:**
+- Merges external state into local state
+- Resolves conflicts using specified strategy
+- Supports 'last-write-wins', 'merge', or custom strategy
+
+#### resolveConflicts()
+
+```typescript
+public resolveConflicts(
+  localValue: any,
+  externalValue: any,
+  strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)
+): any
+```
+
+Resolves conflicts between local and external values.
+
+**Parameters:**
+- `localValue` (any): Local value
+- `externalValue` (any): External value
+- `strategy` (ConflictResolutionStrategy | function): Resolution strategy
+
+**Returns:** `any` - Resolved value
+
+**Behavior:**
+- Applies conflict resolution strategy
+- Supports 'last-write-wins', 'merge', or custom function
+
+#### persistState()
+
+```typescript
+public persistState(path: string): void
+```
+
+Marks a path as persisted.
+
+**Parameters:**
+- `path` (string): Path to persist
+
+**Returns:** `void`
+
+**Behavior:**
+- Marks path for persistence
+- Used by clearEphemeralState() to preserve persisted paths
+
+#### loadPersistedState()
+
+```typescript
+public loadPersistedState(state: Record<string, any>): void
+```
+
+Loads persisted state.
+
+**Parameters:**
+- `state` (Record<string, any>): State object to load
+
+**Returns:** `void`
+
+**Behavior:**
+- Merges provided state into current state
+- Used for loading persisted state from storage
+
+#### clearEphemeralState()
+
+```typescript
+public clearEphemeralState(): void
+```
+
+Clears ephemeral (non-persisted) state.
+
+**Returns:** `void`
+
+**Behavior:**
+- Removes all state except paths marked as persisted
+- Preserves persisted paths
 
 ## OpenAIClient
 
@@ -833,34 +1263,168 @@ Updates agent status.
 
 ## AgentHealthMonitor
 
-### Methods
+### Static Methods
 
-#### checkHealth()
+#### getInstance()
 
 ```typescript
-public async checkHealth(agentId: string): Promise<HealthStatus>
+public static getInstance(agentRegistry?: AgentRegistry): AgentHealthMonitor
 ```
 
-Checks agent health.
+Gets singleton instance.
+
+**Parameters:**
+- `agentRegistry` (AgentRegistry, optional): Agent registry instance (required for first initialization)
+
+**Returns:** `AgentHealthMonitor` - Singleton instance
+
+### Instance Methods
+
+#### setThresholds()
+
+```typescript
+public setThresholds(thresholds: Partial<HealthThresholds>): void
+```
+
+Sets health thresholds.
+
+**Parameters:**
+- `thresholds` (Partial<HealthThresholds>): Threshold configuration
+
+**Returns:** `void`
+
+#### registerHealthCheck()
+
+```typescript
+public async registerHealthCheck(
+  agentId: string,
+  check: Omit<HealthCheck, 'id'>
+): Promise<string>
+```
+
+Registers a health check for an agent.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+- `check` (Omit<HealthCheck, 'id'>): Health check configuration
+
+**Returns:** `Promise<string>` - Health check ID
+
+#### unregisterHealthCheck()
+
+```typescript
+public async unregisterHealthCheck(agentId: string, checkId: string): Promise<void>
+```
+
+Unregisters a health check.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+- `checkId` (string): Health check ID
+
+**Returns:** `Promise<void>`
+
+#### performHealthCheck()
+
+```typescript
+public async performHealthCheck(agentId: string, checkId: string): Promise<HealthCheckResult>
+```
+
+Performs a health check.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+- `checkId` (string): Health check ID
+
+**Returns:** `Promise<HealthCheckResult>` - Health check result
+
+#### getHealthStatus()
+
+```typescript
+public async getHealthStatus(agentId: string): Promise<HealthStatus | null>
+```
+
+Gets health status for an agent.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+
+**Returns:** `Promise<HealthStatus | null>` - Health status or null
+
+#### monitorAgent()
+
+```typescript
+public async monitorAgent(agentId: string): Promise<HealthStatus>
+```
+
+Monitors agent and returns current status.
 
 **Parameters:**
 - `agentId` (string): Agent ID
 
 **Returns:** `Promise<HealthStatus>` - Health status
 
-#### monitorAgent()
+**Behavior:**
+- Performs all registered health checks
+- Calculates metrics
+- Returns comprehensive health status
+
+#### generateHealthReport()
 
 ```typescript
-public monitorAgent(agentId: string, interval: number): void
+public async generateHealthReport(agentId: string): Promise<HealthReport>
 ```
 
-Starts monitoring an agent.
+Generates comprehensive health report.
 
 **Parameters:**
 - `agentId` (string): Agent ID
-- `interval` (number): Check interval in ms
 
-**Returns:** `void`
+**Returns:** `Promise<HealthReport>` - Health report
+
+#### startMonitoring()
+
+```typescript
+public async startMonitoring(agentId: string): Promise<void>
+```
+
+Starts continuous monitoring for an agent.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+
+**Returns:** `Promise<void>`
+
+**Behavior:**
+- Registers default health checks if none exist
+- Starts periodic monitoring
+
+#### stopMonitoring()
+
+```typescript
+public async stopMonitoring(agentId: string): Promise<void>
+```
+
+Stops continuous monitoring for an agent.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+
+**Returns:** `Promise<void>`
+
+#### resolveIssue()
+
+```typescript
+public async resolveIssue(agentId: string, issueId: string): Promise<void>
+```
+
+Resolves a health issue.
+
+**Parameters:**
+- `agentId` (string): Agent ID
+- `issueId` (string): Issue ID
+
+**Returns:** `Promise<void>`
 
 ## Related Documentation
 

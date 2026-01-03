@@ -23,7 +23,7 @@ describe('Multiagent Coordination', () => {
             (0, globals_1.expect)(retrievedAgent?.id).toBe(registeredId);
             (0, globals_1.expect)(retrievedAgent?.name).toBe('Test Research Agent');
             (0, globals_1.expect)(retrievedAgent?.type).toBe('research');
-            (0, globals_1.expect)(retrievedAgent?.capabilities.map(c => c.name)).toEqual(globals_1.expect.arrayContaining(['research', 'web-search']));
+            (0, globals_1.expect)(retrievedAgent?.capabilities).toEqual(globals_1.expect.arrayContaining(['research', 'web-search']));
             // Cleanup
             await fixture.coordinator.stop();
         });

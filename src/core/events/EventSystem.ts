@@ -79,13 +79,13 @@ export class EventSystem {
       sourceId: options?.sourceId,
       metadata: options?.metadata
     };
-    
+
     this.storeEvent(event);
     this.eventEmitter.emit(type, event);
-    
+
     // Also emit to wildcard listeners
     this.eventEmitter.emit('*', event);
-    
+
     // Update correlation map if this event has a correlation ID
     if (event.correlationId) {
       if (!this.correlationMap.has(event.correlationId)) {
@@ -95,6 +95,17 @@ export class EventSystem {
     }
 
     return event;
+  }
+
+  /**
+   * Alias for emit() method for compatibility with existing code
+   */
+  public publish(type: string, payload: any, options?: {
+    correlationId?: string;
+    sourceId?: string;
+    metadata?: Record<string, any>;
+  }): EventDefinition {
+    return this.emit(type, payload, options);
   }
 
   public on(type: string, handler: (event: EventDefinition) => void): void {

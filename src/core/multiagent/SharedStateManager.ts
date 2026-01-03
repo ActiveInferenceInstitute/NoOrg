@@ -236,6 +236,7 @@ export class SharedStateManager implements ISharedStateManager {
    */
   public async updateAgentStatus(name: string, status: string): Promise<void> {
     await this.setState(`agents.${name}.status`, status, {
+      modifiedBy: 'SharedStateManager',
       metadata: {
         action: 'updateAgentStatus',
         timestamp: new Date().toISOString(),
@@ -384,6 +385,112 @@ export class SharedStateManager implements ISharedStateManager {
       current = current[part];
     }
     current[lastPart] = value;
+  }
+
+  /**
+   * Watch state changes at a specific path (alias for subscribe)
+   * @param path Path to watch
+   * @param callback Callback function
+   */
+  public watchState(path: string, callback: StateChangeCallback): void {
+    this.subscribe(path, callback);
+  }
+
+  /**
+   * Unwatch state changes (alias for unsubscribe)
+   * @param path Path to unwatch
+   * @param callback Callback function to remove
+   */
+  public unwatchState(path: string, callback: StateChangeCallback): void {
+    // Find subscription by path and callback
+    for (const [id, sub] of this.subscriptionCallbacks.entries()) {
+      if (sub.path === path && sub.callback === callback) {
+        this.unsubscribe(id);
+        return;
+      }
+    }
+  }
+
+  /**
+   * Sync state from external source with conflict resolution
+   * @param externalState External state to sync
+   * @param strategy Conflict resolution strategy
+   */
+  public syncState(externalState: Record<string, any>, strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)): void {
+    for (const [path, externalValue] of Object.entries(externalState)) {
+      const localValue = this.getNestedValue(this.state, path);
+      
+      if (localValue !== undefined && localValue !== externalValue) {
+        // Conflict detected - resolve it
+        const resolvedValue = typeof strategy === 'function' 
+          ? strategy(localValue, externalValue)
+          : this.resolveConflicts(localValue, externalValue, strategy);
+        this.setNestedValue(this.state, path, resolvedValue);
+      } else {
+        // No conflict - just set the value
+        this.setNestedValue(this.state, path, externalValue);
+      }
+    }
+  }
+
+  /**
+   * Resolve conflicts between local and external values
+   * @param localValue Local value
+   * @param externalValue External value
+   * @param strategy Resolution strategy
+   * @returns Resolved value
+   */
+  public resolveConflicts(localValue: any, externalValue: any, strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)): any {
+    if (typeof strategy === 'function') {
+      return strategy(localValue, externalValue);
+    }
+
+    switch (strategy) {
+      case 'last-write-wins':
+        return externalValue;
+      case 'merge':
+        if (typeof localValue === 'object' && typeof externalValue === 'object' && localValue !== null && externalValue !== null) {
+          return { ...localValue, ...externalValue };
+        }
+        return externalValue;
+      default:
+        return externalValue;
+    }
+  }
+
+  private persistedPaths: Set<string> = new Set();
+
+  /**
+   * Mark a path as persisted
+   * @param path Path to persist
+   */
+  public persistState(path: string): void {
+    this.persistedPaths.add(path);
+  }
+
+  /**
+   * Load persisted state
+   * @param state State object to load
+   */
+  public loadPersistedState(state: Record<string, any>): void {
+    this.state = { ...this.state, ...state };
+  }
+
+  /**
+   * Clear ephemeral (non-persisted) state
+   */
+  public clearEphemeralState(): void {
+    const newState: Record<string, any> = {};
+    
+    // Keep only persisted paths
+    for (const path of this.persistedPaths) {
+      const value = this.getNestedValue(this.state, path);
+      if (value !== undefined) {
+        this.setNestedValue(newState, path, value);
+      }
+    }
+    
+    this.state = newState;
   }
 
   // --- Optional Methods (Example Implementations - Review if needed) ---

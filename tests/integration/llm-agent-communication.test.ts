@@ -81,7 +81,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
       expect(jsonResponse).to.have.property('role');
       expect(jsonResponse).to.have.property('capabilities').that.is.an('array');
       expect(jsonResponse.capabilities).to.have.lengthOf(3);
-    }).timeout(30000);
+    });
     
     it('should use structured messages format for conversation', async () => {
       const messages: LLMMessage[] = [
@@ -108,7 +108,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
       expect(jsonResponse).to.have.property('priority').that.is.a('string');
       expect(['high', 'medium', 'low']).to.include(jsonResponse.priority);
       expect(jsonResponse).to.have.property('estimatedDuration').that.is.a('number');
-    }).timeout(30000);
+    });
   });
   
   describe('Agent-to-Agent Communication', () => {
@@ -213,7 +213,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
         expect(sessionState.data.analysis).to.have.property('importance').that.is.a('string');
         expect(sessionState.data.analysis).to.have.property('suggestedActions').that.is.an('array');
       }
-    }).timeout(60000);
+    }, 60000);
   });
   
   describe('Multi-step LLM Agent Task Processing', () => {
@@ -396,7 +396,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
         expect(finalTask.metadata?.finalResult).to.have.property('content').that.is.a('string');
         expect(finalTask.metadata?.finalResult).to.have.property('keyTakeaways').that.is.an('array');
       }
-    }).timeout(120000);
+    }, 120000);
   });
   
   describe('LLM Utility Functions', () => {
@@ -414,7 +414,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
       expect(response.usage.total_tokens).to.equal(
         response.usage.prompt_tokens + response.usage.completion_tokens
       );
-    }).timeout(30000);
+    });
     
     it('should generate embeddings for text', async () => {
       const text = 'Quantum computing uses quantum phenomena to perform operations on data.';
@@ -432,7 +432,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
       embedding.forEach(value => {
         expect(value).to.be.a('number');
       });
-    }).timeout(30000);
+    });
     
     it('should retrieve available models', async () => {
       const models = await openAIClient.getAvailableModels();
@@ -444,7 +444,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
       
       expect(models).to.be.an('array');
       expect(models.length).to.be.greaterThan(0);
-    }).timeout(30000);
+    });
     
     it('should get model information', async () => {
       const defaultModel = openAIClient.getDefaultModel();
@@ -462,6 +462,6 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
         expect(modelInfo.contextWindow).to.be.a('number');
         expect(modelInfo.capabilities).to.be.an('array');
       }
-    }).timeout(30000);
+    });
   });
 }); 

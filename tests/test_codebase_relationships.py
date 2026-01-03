@@ -116,7 +116,7 @@ class TestCodebaseRelationships:
     def test_document_python_dependencies(self, repo_root, output_dir):
         """Test documenting Python import dependencies."""
         python_deps = {}
-        for dir_name in ['agents', 'frameworks', 'operations', 'tests']:
+        for dir_name in ['agents', 'src', 'tests', 'examples']:
             dir_path = repo_root / dir_name
             if dir_path.exists():
                 deps = self._scan_directory_dependencies(dir_path)
@@ -135,7 +135,7 @@ class TestCodebaseRelationships:
     def test_document_typescript_dependencies(self, repo_root, output_dir):
         """Test documenting TypeScript/JavaScript import dependencies."""
         ts_deps = {}
-        for dir_name in ['agents', 'frameworks', 'operations']:
+        for dir_name in ['agents', 'src', 'examples']:
             dir_path = repo_root / dir_name
             if dir_path.exists():
                 deps = self._scan_directory_dependencies(dir_path)
@@ -183,7 +183,7 @@ class TestCodebaseRelationships:
             }
         }
         
-        for dir_name in ['agents', 'frameworks', 'operations', 'docs', 'meta', 'tests']:
+        for dir_name in ['agents', 'src', 'docs', 'tests', 'examples']:
             dir_path = repo_root / dir_name
             if dir_path.exists():
                 for root, _, files in os.walk(dir_path):

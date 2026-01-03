@@ -31,8 +31,8 @@ export declare class MultiAgentCoordinator {
         sharedStateManager?: SharedStateManager;
         taskManager?: TaskManager;
         agentRegistry?: AgentRegistry;
-        openAIClient?: OpenAIClient;
-        promptManager?: PromptManager;
+        openAIClient?: OpenAIClientInterface;
+        promptManager?: PromptManagerInterface;
         stateFilePath?: string;
         executionConfig?: Partial<MultiAgentCoordinator['executionConfig']>;
         coordinationStrategy?: 'centralized' | 'decentralized' | 'hybrid';
@@ -173,7 +173,6 @@ export declare class MultiAgentCoordinator {
      * @param filePath The path to the file from which state should be loaded.
      */
     loadState(filePath: string): Promise<boolean>;
-    private createAgentStatus;
     private createStateUpdateOptions;
     private createAgent;
     completeTask(taskId: string, agentId: string): Promise<void>;

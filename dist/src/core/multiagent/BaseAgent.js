@@ -49,7 +49,13 @@ class BaseAgent {
         try {
             this.status = 'idle';
             this.lastError = null;
-            await this.sharedState.registerAgent(this.config.name, this);
+            await this.sharedState.registerAgent(this.config.name, {
+                id: this.config.id,
+                name: this.config.name,
+                type: this.constructor.name,
+                status: this.status,
+                lastActive: Date.now()
+            });
         }
         catch (error) {
             this.status = 'error';

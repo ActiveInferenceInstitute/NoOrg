@@ -1,5 +1,4 @@
 import { BaseAgent } from './BaseAgent';
-import { Agent } from './types';
 export interface ResearchPath {
     id: string;
     name: string;
@@ -16,8 +15,13 @@ export interface WorkflowStage {
     metadata?: Record<string, any>;
 }
 export interface AgentWithInfo extends BaseAgent {
-    initialize(): Promise<boolean>;
-    getAgentInfo(): Agent;
+    initialize(): Promise<void>;
+    getAgentInfo(): {
+        name: string;
+        type: string;
+        status: string;
+        lastError: Error | null;
+    };
     shutdown(): Promise<boolean>;
 }
 /**
@@ -70,14 +74,85 @@ export interface ResearchAgentInterface extends BaseAgentInterface {
  * Interface for analysis agents
  */
 export interface AnalysisAgentInterface extends BaseAgentInterface {
-    analyzeData(data: any): Promise<{
-        insights: string[];
-        trends: string[];
-        recommendations: string[];
+    analyzeData(data: any, options?: {
+        analysisType?: 'exploratory' | 'descriptive' | 'inferential' | 'diagnostic' | 'predictive';
+        focusAreas?: string[];
+        includeVisualizationSuggestions?: boolean;
+        includeStatisticalTests?: boolean;
+        includeTrends?: boolean;
+        includeCorrelations?: boolean;
+        includeOutliers?: boolean;
+        includeRecommendations?: boolean;
+        checkCache?: boolean;
+    }): Promise<{
+        summary: string;
+        keyInsights: string[];
+        statistics: Record<string, any>;
+        visualizationSuggestions?: Array<{
+            type: string;
+            description: string;
+            variables: string[];
+            purpose: string;
+        }>;
+        statisticalTests?: Array<{
+            name: string;
+            variables: string[];
+            result: any;
+            interpretation: string;
+            significance?: number;
+        }>;
+        trends?: Array<{
+            variable: string;
+            trend: string;
+            magnitude: number;
+            interpretation: string;
+        }>;
+        correlations?: Array<{
+            variables: string[];
+            coefficient: number;
+            strength: 'weak' | 'moderate' | 'strong';
+            direction: 'positive' | 'negative' | 'none';
+            interpretation: string;
+        }>;
+        outliers?: Array<{
+            variable: string;
+            values: any[];
+            impact: string;
+        }>;
+        recommendations?: string[];
         confidence: number;
         processingTime: number;
     }>;
-    generateReport(data: any, format: 'text' | 'json' | 'markdown'): Promise<string>;
+    generateReport(data: any, options?: {
+        reportType?: 'executive' | 'technical' | 'comprehensive';
+        sections?: string[];
+        audience?: 'executives' | 'analysts' | 'stakeholders' | 'technical';
+        includeExecutiveSummary?: boolean;
+        includeMethodology?: boolean;
+        includeVisualizations?: boolean;
+        includeRecommendations?: boolean;
+        checkCache?: boolean;
+    }): Promise<{
+        title: string;
+        summary: string;
+        sections: Array<{
+            title: string;
+            content: string;
+            subsections?: Array<{
+                title: string;
+                content: string;
+            }>;
+        }>;
+        keyFindings: string[];
+        recommendations: string[];
+        metadata: {
+            reportType: string;
+            audience: string;
+            generatedAt: string;
+            dataSource: string;
+        };
+        processingTime: number;
+    }>;
 }
 /**
  * Interface for planning agents

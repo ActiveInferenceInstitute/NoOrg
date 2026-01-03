@@ -149,7 +149,7 @@ class LLMAgent {
                 model: modelToUse,
                 systemPrompt: this.systemPrompt,
                 temperature: 0.7,
-                maxTokens: config.DEFAULT_MAX_TOKENS || 2000
+                maxTokens: 2000
             };
             // Use sendPrompt if available, otherwise use createCompletion
             // @ts-ignore - We're being flexible about method names here

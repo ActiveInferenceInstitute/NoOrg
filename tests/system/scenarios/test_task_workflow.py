@@ -5,7 +5,7 @@ import pytest
 import asyncio
 import logging
 from typing import Dict, List
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 pytestmark = [pytest.mark.system, pytest.mark.asyncio]
 
@@ -22,7 +22,7 @@ class TestTaskWorkflow:
     ):
         """Test complete task lifecycle from submission to completion."""
         # Setup test environment
-        start_time = datetime.utcnow()
+        start_time = datetime.now(timezone.utc)
         task_id = sample_task["id"]
         workflow_state = {}
         
@@ -32,7 +32,7 @@ class TestTaskWorkflow:
             
             # Submit task
             workflow_state["submission"] = {
-                "timestamp": datetime.utcnow(),
+                "timestamp": datetime.now(timezone.utc),
                 "task": sample_task
             }
             await mock_db.set(f"task:{task_id}:submission", workflow_state["submission"])
@@ -46,20 +46,20 @@ class TestTaskWorkflow:
             allocation = {
                 "cpu": sample_task["requirements"]["cpu"],
                 "memory": sample_task["requirements"]["memory"],
-                "allocated_at": datetime.utcnow().isoformat()
+                "allocated_at": datetime.now(timezone.utc).isoformat()
             }
             workflow_state["allocation"] = allocation
             await mock_db.set(f"task:{task_id}:allocation", allocation)
             
             # Phase 3: Task Execution
             logger.info("Executing task")
-            execution_start = datetime.utcnow()
+            execution_start = datetime.now(timezone.utc)
             
             # Simulate task execution with progress updates
             progress_updates = []
             for progress in range(0, 101, 20):
                 progress_update = {
-                    "timestamp": datetime.utcnow().isoformat(),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
                     "progress": progress,
                     "metrics": {
                         "cpu_usage": 0.5 + (progress / 200),
@@ -74,7 +74,7 @@ class TestTaskWorkflow:
                 )
                 await asyncio.sleep(0.1)  # Simulate work
             
-            execution_end = datetime.utcnow()
+            execution_end = datetime.now(timezone.utc)
             execution_time = (execution_end - execution_start).total_seconds()
             
             workflow_state["execution"] = {
@@ -101,7 +101,7 @@ class TestTaskWorkflow:
             # Phase 5: Resource Cleanup
             logger.info("Cleaning up resources")
             cleanup = {
-                "timestamp": datetime.utcnow().isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "resources_released": allocation
             }
             workflow_state["cleanup"] = cleanup
@@ -111,7 +111,7 @@ class TestTaskWorkflow:
             logger.info("Performing final verification")
             
             # Verify workflow completion
-            end_time = datetime.utcnow()
+            end_time = datetime.now(timezone.utc)
             total_duration = (end_time - start_time).total_seconds()
             
             workflow_state["summary"] = {
@@ -132,7 +132,7 @@ class TestTaskWorkflow:
             logger.error(f"Task workflow failed: {str(e)}")
             workflow_state["summary"] = {
                 "start_time": start_time.isoformat(),
-                "end_time": datetime.utcnow().isoformat(),
+                "end_time": datetime.now(timezone.utc).isoformat(),
                 "status": "failed",
                 "error": str(e)
             }
@@ -147,33 +147,33 @@ class TestTaskWorkflow:
     ):
         """Test multiple concurrent task workflows."""
         # Setup test environment
-        start_time = datetime.utcnow()
+        start_time = datetime.now(timezone.utc)
         workflow_states = {}
         
         async def execute_workflow(task: Dict) -> Dict:
             """Execute single task workflow."""
             task_id = task["id"]
-            state = {"task": task, "start_time": datetime.utcnow().isoformat()}
+            state = {"task": task, "start_time": datetime.now(timezone.utc).isoformat()}
             
             try:
                 # Allocation
                 allocation = {
                     "cpu": task["requirements"]["cpu"],
                     "memory": task["requirements"]["memory"],
-                    "allocated_at": datetime.utcnow().isoformat()
+                    "allocated_at": datetime.now(timezone.utc).isoformat()
                 }
                 state["allocation"] = allocation
                 
                 # Execution
                 await asyncio.sleep(0.2)  # Simulate varying execution times
                 state["execution"] = {
-                    "start_time": datetime.utcnow().isoformat(),
+                    "start_time": datetime.now(timezone.utc).isoformat(),
                     "status": "completed"
                 }
                 
                 # Cleanup
                 state["cleanup"] = {
-                    "timestamp": datetime.utcnow().isoformat(),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
                     "status": "completed"
                 }
                 
@@ -183,7 +183,7 @@ class TestTaskWorkflow:
                 state["status"] = "failed"
                 state["error"] = str(e)
             
-            state["end_time"] = datetime.utcnow().isoformat()
+            state["end_time"] = datetime.now(timezone.utc).isoformat()
             await mock_db.set(f"task:{task_id}:workflow", state)
             return state
         
@@ -192,7 +192,7 @@ class TestTaskWorkflow:
         workflow_states = await asyncio.gather(*tasks)
         
         # Verify results
-        end_time = datetime.utcnow()
+        end_time = datetime.now(timezone.utc)
         total_duration = (end_time - start_time).total_seconds()
         
         assert len(workflow_states) == len(task_batch)
@@ -230,7 +230,7 @@ class TestTaskWorkflow:
                 result = await execute_with_error(sample_task)
             except Exception as e:
                 workflow_state["first_attempt"] = {
-                    "timestamp": datetime.utcnow().isoformat(),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
                     "status": "failed",
                     "error": str(e)
                 }
@@ -241,7 +241,7 @@ class TestTaskWorkflow:
                 
                 # Implement recovery
                 workflow_state["recovery"] = {
-                    "timestamp": datetime.utcnow().isoformat(),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
                     "action": "retry"
                 }
                 await mock_db.set(
@@ -252,7 +252,7 @@ class TestTaskWorkflow:
             # Second attempt - should succeed
             result = await execute_with_error(sample_task)
             workflow_state["second_attempt"] = {
-                "timestamp": datetime.utcnow().isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "status": "completed"
             }
             await mock_db.set(
@@ -278,17 +278,17 @@ class TestTaskWorkflow:
     ):
         """Test workflow performance under load."""
         # Setup test environment
-        start_time = datetime.utcnow()
+        start_time = datetime.now(timezone.utc)
         performance_metrics = []
         
         async def execute_workflow(task: Dict) -> Dict:
             """Execute workflow and collect performance metrics."""
-            task_start = datetime.utcnow()
+            task_start = datetime.now(timezone.utc)
             
             # Simulate workflow execution
             await asyncio.sleep(0.1)  # Base execution time
             
-            task_end = datetime.utcnow()
+            task_end = datetime.now(timezone.utc)
             duration = (task_end - task_start).total_seconds()
             
             metrics = {
@@ -307,7 +307,7 @@ class TestTaskWorkflow:
         results = await asyncio.gather(*tasks)
         
         # Calculate performance metrics
-        end_time = datetime.utcnow()
+        end_time = datetime.now(timezone.utc)
         total_duration = (end_time - start_time).total_seconds()
         
         throughput = len(results) / total_duration

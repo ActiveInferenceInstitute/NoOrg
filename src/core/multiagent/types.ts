@@ -21,7 +21,7 @@ export interface AgentConfig {
   name: string;
   type: string;
   description?: string;
-  capabilities?: Capability[];
+  capabilities?: string[];
   metadata?: Record<string, unknown>;
   preferredModel?: string;
   sharedState?: any;
@@ -37,7 +37,7 @@ export interface AgentStatus {
   type: string;
   status: 'available' | 'busy' | 'offline' | 'error';
   lastActive: number;
-  capabilities: Capability[];
+  capabilities: string[];
   metadata: Record<string, unknown>;
   state: 'available' | 'busy' | 'offline' | 'error';
   lastUpdated: number;
@@ -57,7 +57,7 @@ export interface BaseAgent {
   name: string;
   type: string;
   description: string;
-  capabilities: Capability[];
+  capabilities: string[];
   status: AgentStatus;
   metadata: Record<string, unknown>;
   preferredModel: string;
@@ -65,7 +65,18 @@ export interface BaseAgent {
   lastActive: number;
 }
 
-export interface Agent extends BaseAgent {}
+export interface Agent {
+  id: string;
+  name: string;
+  type: string;
+  description?: string;
+  capabilities: string[];
+  status: string;
+  metadata?: Record<string, any>;
+  preferredModel?: string;
+  lastActive: number;
+  createdAt: number;
+}
 
 export interface AgentIO {
   input: Record<string, unknown>;
@@ -81,11 +92,14 @@ export interface AgentFilter {
 
 // --- Task Types ---
 
+export type TaskStatus = 'pending' | 'assigned' | 'in-progress' | 'completed' | 'failed' | 'cancelled';
+export type TaskPriority = 'low' | 'medium' | 'high' | 'critical';
+
 export interface Task {
   id: string;
   name: string;
   description: string;
-  status: 'pending' | 'assigned' | 'in-progress' | 'completed' | 'failed';
+  status: TaskStatus;
   assignedTo?: string;
   createdAt: number;
   updatedAt: number;
@@ -96,14 +110,21 @@ export interface Task {
   type?: string;
   results?: any;
   processingTime?: number;
-  priority?: 'low' | 'medium' | 'high' | 'critical';
+  priority?: TaskPriority;
   dependsOn?: string[];
+  assignedAt?: number;
+  startedAt?: number;
+  cancelledAt?: number;
+  cancelReason?: string;
+  result?: any;
+  dependencies?: string[];
 }
 
 export interface TaskResult {
   success: boolean;
   data?: any;
   error?: string;
+  outcome?: string;
   metrics?: {
     startTime: number;
     endTime: number;
@@ -218,10 +239,10 @@ export interface OptimizationResult {
  */
 export interface StateMetadata {
   action: string;
-  agentId: string;
-  agentName: string;
-  agentType: string;
   timestamp: string;
+  agentId?: string;
+  agentName?: string;
+  agentType?: string;
 }
 
 /**

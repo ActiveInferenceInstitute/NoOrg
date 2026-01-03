@@ -270,6 +270,7 @@ class SharedStateManager {
      */
     async updateAgentStatus(name, status) {
         await this.setState(`agents.${name}.status`, status, {
+            modifiedBy: 'SharedStateManager',
             metadata: {
                 action: 'updateAgentStatus',
                 timestamp: new Date().toISOString(),

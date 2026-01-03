@@ -633,26 +633,29 @@ class UnitStateManager {
     setupDistributedSync() {
         // Listen for state change events from other instances
         this.eventSystem.on('state:change', (event) => {
-            if (event.sourceId !== this.sourceId) {
-                this.applyRemoteOperation(event.operation);
+            const stateEvent = event.payload;
+            if (stateEvent.sourceId !== this.sourceId) {
+                this.applyRemoteOperation(stateEvent.operation);
             }
         });
         // Listen for state sync requests
         this.eventSystem.on('state:sync:request', (event) => {
-            if (event.sourceId !== this.sourceId) {
+            const syncEvent = event.payload;
+            if (syncEvent.sourceId !== this.sourceId) {
                 // Respond with our operations
                 this.eventSystem.emit('state:sync:response', {
                     operations: this.operationLog,
                     sourceId: this.sourceId,
-                    targetId: event.sourceId,
+                    targetId: syncEvent.sourceId,
                     timestamp: Date.now()
                 });
             }
         });
         // Listen for state sync responses
         this.eventSystem.on('state:sync:response', (event) => {
-            if (event.targetId === this.sourceId) {
-                this.syncState(event.operations);
+            const responseEvent = event.payload;
+            if (responseEvent.targetId === this.sourceId) {
+                this.syncState(responseEvent.operations);
             }
         });
         // Request initial sync

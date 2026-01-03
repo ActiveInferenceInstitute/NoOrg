@@ -246,48 +246,74 @@ export class MultiAgentCoordinator {
 ### AgentRegistry (`multiagent/AgentRegistry.ts`)
 ```typescript
 export class AgentRegistry implements IAgentRegistry {
-    constructor()
+    static getInstance(): AgentRegistry
+    constructor(stateManager?: SharedStateManager)
 
-    async register(agent: AbstractAgent): Promise<string>
-    async unregister(agentId: string): Promise<boolean>
-    async getAgent(agentId: string): Promise<AbstractAgent | null>
-    async listAgents(filter?: AgentFilter): Promise<AbstractAgent[]>
-    async updateAgentStatus(agentId: string, status: AgentStatus): Promise<void>
-    async getAgentStatus(agentId: string): Promise<AgentStatus | null>
-    async discoverAgents(criteria?: AgentFilter): Promise<AbstractAgent[]>
+    async registerAgent(agent: Agent): Promise<boolean>
+    async unregisterAgent(agentId: string): Promise<boolean>
+    async updateAgent(agentId: string, updates: Partial<Agent>): Promise<boolean>
+    async getAgent(agentId: string): Promise<Agent | null>
+    async listAgents(filter?: AgentFilter): Promise<AgentType[]>
+    async findAgentsByCapability(capability: string): Promise<Agent[]>
+    async findAgentsByType(type: string): Promise<Agent[]>
+    async getAgentCapabilities(agentId: string): Promise<string[]>
+    async updateAgentStatus(agentId: string, status: string): Promise<boolean>
+    async updateAgentCapabilities(agentId: string, capabilities: string[]): Promise<boolean>
+    async getAgentCountsByStatus(): Promise<Record<AgentStatus['state'], number>>
 }
 ```
 
 ### SharedStateManager (`multiagent/SharedStateManager.ts`)
 ```typescript
 export class SharedStateManager implements ISharedStateManager {
-    constructor()
+    static getInstance(persistencePath?: string, autoSave?: boolean, saveInterval?: number): SharedStateManager
+    private constructor(persistencePath?: string, autoSave?: boolean, saveInterval?: number)
 
-    async initialize(): Promise<void>
-    async getState<T>(key: string): Promise<T | null>
-    async setState<T>(key: string, value: T): Promise<void>
-    async updateState<T>(key: string, updater: (current: T | null) => T): Promise<T>
-    async deleteState(key: string): Promise<boolean>
-    async listStateKeys(prefix?: string): Promise<string[]>
-    async clearAllState(): Promise<void>
-    async getStateMetadata(key: string): Promise<StateMetadata | null>
+    async getState(path: string): Promise<unknown>
+    async setState(path: string, value: unknown, options?: StateUpdateOptions): Promise<void>
+    getFullState(): Record<string, unknown>
+    async clearState(): Promise<void>
+    async loadState(): Promise<void>
+    async saveState(): Promise<void>
+    subscribe(path: string, callback: StateChangeCallback): string
+    unsubscribe(subscriptionId: string): void
+    async registerAgent(name: string, agentInfo: Record<string, unknown>): Promise<boolean>
+    async updateAgentStatus(name: string, status: string): Promise<void>
+    configurePersistence(path?: string, autoSave?: boolean, saveInterval?: number): void
+    watchState(path: string, callback: StateChangeCallback): void
+    unwatchState(path: string, callback: StateChangeCallback): void
+    syncState(externalState: Record<string, any>, strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)): void
+    resolveConflicts(localValue: any, externalValue: any, strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)): any
+    persistState(path: string): void
+    loadPersistedState(state: Record<string, any>): void
+    clearEphemeralState(): void
 }
 ```
 
 ### TaskManager (`multiagent/TaskManager.ts`)
 ```typescript
 export class TaskManager implements ITaskManager {
-    constructor(sharedStateManager: ISharedStateManager)
+    static getInstance(): TaskManager
+    constructor(stateManager?: SharedStateManager)
 
-    async createTask(task: Task): Promise<string>
-    async getTask(taskId: string): Promise<Task | null>
-    async updateTask(taskId: string, updates: Partial<Task>): Promise<void>
-    async deleteTask(taskId: string): Promise<void>
+    async createTask(taskData: Partial<Task>): Promise<string>
+    async getTask(taskId: string): Promise<Task | undefined>
+    async updateTask(taskId: string, updates: Partial<Omit<Task, 'id' | 'createdAt'>>): Promise<void>
     async listTasks(filter?: TaskFilter): Promise<Task[]>
     async assignTask(taskId: string, agentId: string): Promise<void>
-    async completeTask(taskId: string, result: TaskResult): Promise<void>
-    async failTask(taskId: string, error: Error): Promise<void>
-    async getTaskQueueLength(): Promise<number>
+    async unassignTask(taskId: string): Promise<void>
+    async reassignTask(taskId: string, newAgentId: string): Promise<void>
+    async startTask(taskId: string): Promise<void>
+    async completeTask(taskId: string, result: TaskResult | { outcome?: string; data?: any }): Promise<void>
+    async failTask(taskId: string, error: Error | { message: string; details?: any }): Promise<void>
+    async cancelTask(taskId: string, reason?: string): Promise<void>
+    async areDependenciesSatisfied(taskId: string): Promise<boolean>
+    async getReadyTasks(): Promise<Task[]>
+    async countTasksByStatus(): Promise<Record<TaskStatus, number>>
+    async getTaskHistory(taskId: string): Promise<TaskHistory[]>
+    async estimateTaskDuration(task: Task): Promise<number>
+    async getTaskStatistics(): Promise<TaskStatistics>
+    async cleanupOldTasks(olderThan: number): Promise<number>
 }
 ```
 

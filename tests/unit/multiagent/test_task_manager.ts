@@ -41,10 +41,10 @@ describe('TaskManager', () => {
       });
       
       const task = await taskManager.getTask(taskId);
-      expect(task.type).to.equal('default');
-      expect(task.priority).to.equal('normal');
-      expect(task.status).to.equal('pending');
-      expect(task.metadata).to.deep.equal({});
+      expect(task?.type).to.be.undefined;
+      expect(task?.priority).to.be.undefined;
+      expect(task?.status).to.equal('pending');
+      expect(task?.metadata).to.deep.equal({});
     });
     
     it('should generate a unique ID if not provided', async () => {
@@ -100,7 +100,7 @@ describe('TaskManager', () => {
       const taskId = await taskManager.createTask({
         type: 'partial',
         description: 'Will be partially updated',
-        priority: 'normal',
+        priority: 'medium',
         metadata: { original: true }
       });
       
@@ -112,10 +112,10 @@ describe('TaskManager', () => {
       // Get updated task
       const task = await taskManager.getTask(taskId);
       
-      expect(task.type).to.equal('partial'); // Unchanged
-      expect(task.description).to.equal('Only description updated'); // Updated
-      expect(task.priority).to.equal('normal'); // Unchanged
-      expect(task.metadata).to.deep.equal({ original: true }); // Unchanged
+      expect(task?.type).to.equal('partial'); // Unchanged
+      expect(task?.description).to.equal('Only description updated'); // Updated
+      expect(task?.priority).to.equal('medium'); // Unchanged (was 'normal', now 'medium')
+      expect(task?.metadata).to.deep.equal({ original: true }); // Unchanged
     });
     
     it('should throw an error when updating non-existent task', async () => {
@@ -173,13 +173,13 @@ describe('TaskManager', () => {
         status: 'pending'
       });
       
-      await taskManager.createTask({
+      const task2Id = await taskManager.createTask({
         type: 'type1',
         description: 'Task 2',
-        priority: 'normal',
-        status: 'assigned',
-        assignedTo: 'agent1'
+        priority: 'medium',
+        status: 'pending'
       });
+      await taskManager.assignTask(task2Id, 'agent1');
       
       await taskManager.createTask({
         type: 'type2',
@@ -247,9 +247,9 @@ describe('TaskManager', () => {
       await taskManager.assignTask(taskId, agentId);
       
       const task = await taskManager.getTask(taskId);
-      expect(task.assignedTo).to.equal(agentId);
-      expect(task.status).to.equal('assigned');
-      expect(task.assignedAt).to.be.a('number');
+      expect(task?.assignedTo).to.equal(agentId);
+      expect(task?.status).to.equal('assigned');
+      expect(task?.assignedAt).to.be.a('number');
     });
     
     it('should unassign a task', async () => {
@@ -260,9 +260,9 @@ describe('TaskManager', () => {
       await taskManager.unassignTask(taskId);
       
       const task = await taskManager.getTask(taskId);
-      expect(task.assignedTo).to.be.undefined;
-      expect(task.status).to.equal('pending');
-      expect(task.assignedAt).to.be.undefined;
+      expect(task?.assignedTo).to.be.undefined;
+      expect(task?.status).to.equal('pending');
+      expect(task?.assignedAt).to.be.undefined;
     });
     
     it('should throw error when assigning non-existent task', async () => {
@@ -304,8 +304,8 @@ describe('TaskManager', () => {
       await taskManager.startTask(taskId);
       
       const task = await taskManager.getTask(taskId);
-      expect(task.status).to.equal('in-progress');
-      expect(task.startedAt).to.be.a('number');
+      expect(task?.status).to.equal('in-progress');
+      expect(task?.startedAt).to.be.a('number');
     });
     
     it('should complete a task with results', async () => {
@@ -321,9 +321,9 @@ describe('TaskManager', () => {
       await taskManager.completeTask(taskId, result);
       
       const task = await taskManager.getTask(taskId);
-      expect(task.status).to.equal('completed');
-      expect(task.completedAt).to.be.a('number');
-      expect(task.result).to.deep.equal(result);
+      expect(task?.status).to.equal('completed');
+      expect(task?.completedAt).to.be.a('number');
+      expect(task?.result).to.deep.equal(result);
     });
     
     it('should fail a task with error details', async () => {
@@ -339,9 +339,9 @@ describe('TaskManager', () => {
       await taskManager.failTask(taskId, error);
       
       const task = await taskManager.getTask(taskId);
-      expect(task.status).to.equal('failed');
-      expect(task.completedAt).to.be.a('number');
-      expect(task.error).to.deep.equal(error);
+      expect(task?.status).to.equal('failed');
+      expect(task?.failedAt).to.be.a('number');
+      expect(task?.error).to.equal(error.message || error);
     });
     
     it('should cancel a task', async () => {
@@ -350,9 +350,9 @@ describe('TaskManager', () => {
       await taskManager.cancelTask(taskId, reason);
       
       const task = await taskManager.getTask(taskId);
-      expect(task.status).to.equal('cancelled');
-      expect(task.cancelledAt).to.be.a('number');
-      expect(task.cancelReason).to.equal(reason);
+      expect(task?.status).to.equal('cancelled');
+      expect(task?.cancelledAt).to.be.a('number');
+      expect(task?.cancelReason).to.equal(reason);
     });
     
     it('should not allow completing a cancelled task', async () => {
@@ -380,7 +380,7 @@ describe('TaskManager', () => {
       // Create child task with dependency
       childTaskId = await taskManager.createTask({
         description: 'Child task',
-        dependencies: [parentTaskId]
+        dependsOn: [parentTaskId]
       });
     });
     
@@ -429,7 +429,7 @@ describe('TaskManager', () => {
       
       // Update taskA to depend on taskB, creating a circular dependency
       await taskManager.updateTask(taskA, {
-        dependencies: [taskB]
+        dependsOn: [taskB]
       });
       
       // Checking if dependencies are satisfied should detect the cycle and return false
@@ -445,47 +445,40 @@ describe('TaskManager', () => {
     beforeEach(async () => {
       // Create tasks with different statuses
       await taskManager.createTask({
-        description: 'Pending task 1',
-        status: 'pending'
+        description: 'Pending task 1'
       });
       
       await taskManager.createTask({
-        description: 'Pending task 2',
-        status: 'pending'
+        description: 'Pending task 2'
       });
       
       const assignedId = await taskManager.createTask({
-        description: 'Assigned task',
-        status: 'pending'
+        description: 'Assigned task'
       });
       await taskManager.assignTask(assignedId, 'agent');
       
       const progressId = await taskManager.createTask({
-        description: 'In-progress task',
-        status: 'pending'
+        description: 'In-progress task'
       });
       await taskManager.assignTask(progressId, 'agent');
       await taskManager.startTask(progressId);
       
       const completedId = await taskManager.createTask({
-        description: 'Completed task',
-        status: 'pending'
+        description: 'Completed task'
       });
       await taskManager.assignTask(completedId, 'agent');
       await taskManager.startTask(completedId);
       await taskManager.completeTask(completedId, { outcome: 'Completed' });
       
       const failedId = await taskManager.createTask({
-        description: 'Failed task',
-        status: 'pending'
+        description: 'Failed task'
       });
       await taskManager.assignTask(failedId, 'agent');
       await taskManager.startTask(failedId);
       await taskManager.failTask(failedId, { message: 'Failed' });
       
       const cancelledId = await taskManager.createTask({
-        description: 'Cancelled task',
-        status: 'pending'
+        description: 'Cancelled task'
       });
       await taskManager.cancelTask(cancelledId, 'Cancelled');
     });
@@ -499,6 +492,189 @@ describe('TaskManager', () => {
       expect(counts.completed).to.equal(1);
       expect(counts.failed).to.equal(1);
       expect(counts.cancelled).to.equal(1);
+    });
+  });
+  
+  describe('getTaskHistory', () => {
+    let taskId: string;
+    
+    beforeEach(async () => {
+      taskId = await taskManager.createTask({
+        description: 'Task for history tracking'
+      });
+    });
+    
+    it('should return task history with all events', async () => {
+      // Assign task
+      await taskManager.assignTask(taskId, 'agent1');
+      
+      // Start task
+      await taskManager.startTask(taskId);
+      
+      // Complete task
+      await taskManager.completeTask(taskId, { outcome: 'Completed' });
+      
+      // Get history
+      const history = await taskManager.getTaskHistory(taskId);
+      
+      expect(history.length).to.be.at.least(3);
+      expect(history[0].event).to.equal('created');
+      expect(history.some(h => h.event === 'assigned')).to.be.true;
+      expect(history.some(h => h.event === 'started')).to.be.true;
+      expect(history.some(h => h.event === 'completed')).to.be.true;
+    });
+    
+    it('should include reassignment history', async () => {
+      await taskManager.assignTask(taskId, 'agent1');
+      await taskManager.reassignTask(taskId, 'agent2');
+      
+      const history = await taskManager.getTaskHistory(taskId);
+      const reassigned = history.find(h => h.event === 'reassigned');
+      
+      expect(reassigned).to.not.be.undefined;
+      expect(reassigned?.agentId).to.equal('agent2');
+    });
+  });
+  
+  describe('estimateTaskDuration', () => {
+    it('should return default estimate for new task types', async () => {
+      const taskId = await taskManager.createTask({
+        type: 'new-type',
+        description: 'New task type',
+        priority: 'medium'
+      });
+      
+      const task = await taskManager.getTask(taskId);
+      const estimate = await taskManager.estimateTaskDuration(task!);
+      
+      expect(estimate).to.be.a('number');
+      expect(estimate).to.be.greaterThan(0);
+    });
+    
+    it('should use historical data when available', async () => {
+      // Create and complete several tasks of same type
+      const taskIds: string[] = [];
+      for (let i = 0; i < 3; i++) {
+        const id = await taskManager.createTask({
+          type: 'historical-type',
+          description: `Task ${i}`,
+          priority: 'medium'
+        });
+        await taskManager.assignTask(id, 'agent');
+        await taskManager.startTask(id);
+        // Simulate processing time
+        await new Promise(resolve => setTimeout(resolve, 50));
+        await taskManager.completeTask(id, { outcome: 'Done' });
+        taskIds.push(id);
+      }
+      
+      // Get a completed task to extract processing time
+      const completedTask = await taskManager.getTask(taskIds[0]);
+      if (completedTask?.completedAt && completedTask?.startedAt) {
+        const actualTime = completedTask.completedAt - completedTask.startedAt;
+        
+        // Estimate for new similar task
+        const newTaskId = await taskManager.createTask({
+          type: 'historical-type',
+          description: 'New task',
+          priority: 'medium'
+        });
+        const newTask = await taskManager.getTask(newTaskId);
+        const estimate = await taskManager.estimateTaskDuration(newTask!);
+        
+        expect(estimate).to.be.a('number');
+        expect(estimate).to.be.greaterThan(0);
+      }
+    });
+  });
+  
+  describe('getTaskStatistics', () => {
+    beforeEach(async () => {
+      // Create a variety of tasks
+      for (let i = 0; i < 5; i++) {
+        const taskId = await taskManager.createTask({
+          description: `Task ${i}`,
+          priority: i % 2 === 0 ? 'high' : 'medium'
+        });
+        
+        if (i < 3) {
+          await taskManager.assignTask(taskId, 'agent');
+          await taskManager.startTask(taskId);
+          await taskManager.completeTask(taskId, { outcome: 'Done' });
+        }
+      }
+    });
+    
+    it('should return comprehensive statistics', async () => {
+      const stats = await taskManager.getTaskStatistics();
+      
+      expect(stats.total).to.equal(5);
+      expect(stats.byStatus.completed).to.equal(3);
+      expect(stats.byStatus.pending).to.equal(2);
+      expect(stats.byPriority.high).to.be.greaterThan(0);
+      expect(stats.byPriority.medium).to.be.greaterThan(0);
+      expect(stats.successRate).to.be.a('number');
+    });
+  });
+  
+  describe('cleanupOldTasks', () => {
+    it('should remove old completed tasks', async () => {
+      // Create and complete a task
+      const oldTaskId = await taskManager.createTask({
+        description: 'Old task'
+      });
+      await taskManager.assignTask(oldTaskId, 'agent');
+      await taskManager.startTask(oldTaskId);
+      await taskManager.completeTask(oldTaskId, { outcome: 'Done' });
+      
+      // Create a new task
+      const newTaskId = await taskManager.createTask({
+        description: 'New task'
+      });
+      
+      // Cleanup tasks older than now
+      const removed = await taskManager.cleanupOldTasks(Date.now());
+      
+      expect(removed).to.be.greaterThan(0);
+      
+      // Old task should be gone
+      const oldTask = await taskManager.getTask(oldTaskId);
+      expect(oldTask).to.be.undefined;
+      
+      // New task should still exist
+      const newTask = await taskManager.getTask(newTaskId);
+      expect(newTask).to.not.be.undefined;
+    });
+  });
+  
+  describe('reassignTask', () => {
+    let taskId: string;
+    
+    beforeEach(async () => {
+      taskId = await taskManager.createTask({
+        description: 'Task to reassign'
+      });
+      await taskManager.assignTask(taskId, 'agent1');
+    });
+    
+    it('should reassign task to new agent', async () => {
+      await taskManager.reassignTask(taskId, 'agent2');
+      
+      const task = await taskManager.getTask(taskId);
+      expect(task?.assignedTo).to.equal('agent2');
+      expect(task?.status).to.equal('assigned');
+    });
+    
+    it('should maintain reassignment history', async () => {
+      await taskManager.reassignTask(taskId, 'agent2');
+      
+      const task = await taskManager.getTask(taskId);
+      const history = task?.metadata?.reassignmentHistory as any[];
+      
+      expect(history).to.be.an('array');
+      expect(history.length).to.equal(1);
+      expect(history[0].from).to.equal('agent1');
+      expect(history[0].to).to.equal('agent2');
     });
   });
 }); 

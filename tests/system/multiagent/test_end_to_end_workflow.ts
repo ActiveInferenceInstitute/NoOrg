@@ -137,10 +137,10 @@ While still in its early stages, quantum computing promises to revolutionize fie
     });
     
     // Create MultiAgentCoordinator
-    coordinator = new MultiAgentCoordinator({
+    coordinator = new MultiAgentCoordinator('End-to-End Test Coordinator', {
       agentRegistry,
       taskManager,
-      sharedState,
+      sharedStateManager: sharedState,
       promptManager,
       openAIClient
     });
@@ -210,7 +210,7 @@ While still in its early stages, quantum computing promises to revolutionize fie
         type: 'content_creation',
         description: `Create a blog post about ${testTopic} based on research findings`,
         priority: 'high',
-        dependencies: [researchTaskId],
+        dependsOn: [researchTaskId],
         metadata: {
           format: 'blog-post',
           tone: 'professional',
@@ -224,6 +224,8 @@ While still in its early stages, quantum computing promises to revolutionize fie
       
       expect(researchTask).to.not.be.undefined;
       expect(writingTask).to.not.be.undefined;
+      expect(researchTask?.status).to.equal('pending');
+      expect(writingTask?.status).to.equal('pending');
       
       logStream.write(`Research task created with ID: ${researchTaskId}\n`);
       logStream.write(`Content task created with ID: ${writingTaskId}\n\n`);
@@ -244,7 +246,7 @@ While still in its early stages, quantum computing promises to revolutionize fie
       });
       
       // Store research results in shared state
-      sharedState.setState(`tasks.${researchTaskId}.results`, researchResults);
+      await sharedState.setState(`tasks.${researchTaskId}.results`, researchResults);
       
       // Complete research task
       await taskManager.completeTask(researchTaskId, {
@@ -252,11 +254,11 @@ While still in its early stages, quantum computing promises to revolutionize fie
         data: researchResults
       });
       
-      logStream.write(`Research task completed with ${researchResults.findings?.length || 0} findings\n\n`);
+      logStream.write(`Research task completed with ${(researchResults as any).findings?.length || 0} findings\n\n`);
       
       // Verify research task is completed
       const updatedResearchTask = await taskManager.getTask(researchTaskId);
-      expect(updatedResearchTask.status).to.equal('completed');
+      expect(updatedResearchTask?.status).to.equal('completed');
       
       // Step 5: Verify content task is ready (dependencies satisfied)
       logStream.write('Step 5: Checking if content task is ready\n');
@@ -281,7 +283,7 @@ While still in its early stages, quantum computing promises to revolutionize fie
       });
       
       // Store content in shared state
-      sharedState.setState(`tasks.${writingTaskId}.results`, content);
+      await sharedState.setState(`tasks.${writingTaskId}.results`, content);
       
       // Complete content task
       await taskManager.completeTask(writingTaskId, {
@@ -293,7 +295,7 @@ While still in its early stages, quantum computing promises to revolutionize fie
       
       // Verify content task is completed
       const updatedContentTask = await taskManager.getTask(writingTaskId);
-      expect(updatedContentTask.status).to.equal('completed');
+      expect(updatedContentTask?.status).to.equal('completed');
       
       // Step 8: Save generated content to output file
       const contentFilePath = path.join(testOutputDir, 'generated_content.md');
@@ -311,7 +313,7 @@ While still in its early stages, quantum computing promises to revolutionize fie
         writingTaskId,
         timeCompleted: new Date().toISOString(),
         metrics: {
-          researchFindings: researchResults.findings?.length || 0,
+          researchFindings: (researchResults as any).findings?.length || 0,
           contentWordCount: content.wordCount,
           totalTokensUsed: 500, // From our stubbed responses
           processingTime: {

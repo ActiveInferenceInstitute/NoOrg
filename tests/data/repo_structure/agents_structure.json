@@ -1,111 +1,48 @@
 {
-  "root": "/home/trim/Documents/operations/agents",
-  "generated": "2025-03-13T10:42:31.952619",
+  "root": "/Users/4d/Documents/GitHub/NoOrg/agents",
+  "generated": "2026-01-02T15:05:04.302061",
   "structure": {
     "name": "agents",
-    "modified": "2025-02-24T07:22:28.791411",
+    "modified": "2026-01-02T13:51:28.640389",
     "type": "directory",
     "children": [
       {
-        "name": "_templates",
-        "modified": "2025-02-12T10:57:28.138814",
-        "type": "directory",
-        "children": [
-          {
-            "name": "agent-spec.md",
-            "size": 3643,
-            "modified": "2025-02-12T10:57:41.939860",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "behavior-doc.md",
-            "size": 3409,
-            "modified": "2025-02-12T10:57:41.946860",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "implementation-guide.md",
-            "size": 4735,
-            "modified": "2025-02-12T10:57:41.946860",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "protocol-doc.md",
-            "size": 3921,
-            "modified": "2025-02-12T10:57:41.946860",
-            "type": "file",
-            "extension": "md"
-          }
-        ]
-      },
-      {
         "name": "architectures",
-        "modified": "2025-02-24T07:17:17.990775",
+        "modified": "2026-01-02T13:51:28.623419",
         "type": "directory",
         "children": [
+          {
+            "name": "AGENTS.md",
+            "size": 7811,
+            "modified": "2026-01-02T13:51:28.623139",
+            "type": "file",
+            "extension": "md"
+          },
           {
             "name": "cognitive-models.md",
             "size": 1582,
-            "modified": "2025-02-12T10:53:59.025128",
+            "modified": "2026-01-02T13:51:28.623197",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "decision-frameworks.md",
             "size": 2117,
-            "modified": "2025-02-12T10:53:59.045128",
+            "modified": "2026-01-02T13:51:28.623253",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "fractal-architecture.md",
             "size": 37774,
-            "modified": "2025-02-24T07:43:43.346019",
+            "modified": "2026-01-02T13:51:28.623358",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "perception-systems.md",
             "size": 2567,
-            "modified": "2025-02-12T10:53:59.045128",
-            "type": "file",
-            "extension": "md"
-          }
-        ]
-      },
-      {
-        "name": "behaviors",
-        "modified": "2025-02-18T14:34:54.534894",
-        "type": "directory",
-        "children": [
-          {
-            "name": "action-patterns.md",
-            "size": 3318,
-            "modified": "2025-02-12T10:53:59.048128",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "active-inference.md",
-            "size": 5704,
-            "modified": "2025-02-18T14:39:03.124846",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "learning-patterns.md",
-            "size": 2845,
-            "modified": "2025-02-12T10:53:59.045128",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "reasoning-models.md",
-            "size": 2945,
-            "modified": "2025-02-12T10:53:59.045128",
+            "modified": "2026-01-02T13:51:28.623452",
             "type": "file",
             "extension": "md"
           }
@@ -113,69 +50,27 @@
       },
       {
         "name": "communication",
-        "modified": "2025-02-12T10:53:48.286093",
+        "modified": "2026-01-02T13:51:28.623651",
         "type": "directory",
         "children": [
           {
             "name": "interaction-patterns.md",
             "size": 3724,
-            "modified": "2025-02-12T10:53:59.049128",
+            "modified": "2026-01-02T13:51:28.623544",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "message-formats.md",
             "size": 3667,
-            "modified": "2025-02-12T10:53:59.049128",
+            "modified": "2026-01-02T13:51:28.623623",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "protocols.md",
             "size": 3234,
-            "modified": "2025-02-12T10:53:59.049128",
-            "type": "file",
-            "extension": "md"
-          }
-        ]
-      },
-      {
-        "name": "concepts",
-        "modified": "2025-02-24T07:42:04.798817",
-        "type": "directory",
-        "children": [
-          {
-            "name": "complex-systems-theory.md",
-            "size": 20455,
-            "modified": "2025-02-24T07:39:35.308511",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "emergence.md",
-            "size": 12262,
-            "modified": "2025-02-24T07:28:33.059156",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "fractal-organization.md",
-            "size": 7553,
-            "modified": "2025-02-24T07:42:17.302843",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "organizational-complexity.md",
-            "size": 47013,
-            "modified": "2025-02-24T07:55:16.746305",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "self-organization.md",
-            "size": 14536,
-            "modified": "2025-02-24T07:28:33.059156",
+            "modified": "2026-01-02T13:51:28.623689",
             "type": "file",
             "extension": "md"
           }
@@ -183,146 +78,146 @@
       },
       {
         "name": "examples",
-        "modified": "2025-02-12T12:01:58.926867",
+        "modified": "2026-01-02T13:51:28.625762",
         "type": "directory",
         "children": [
           {
             "name": "coordination-behavior.md",
             "size": 5689,
-            "modified": "2025-02-12T11:06:51.189664",
+            "modified": "2026-01-02T13:51:28.623832",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "coordination-protocol.md",
             "size": 7609,
-            "modified": "2025-02-12T11:06:51.190665",
+            "modified": "2026-01-02T13:51:28.623945",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "coordinator-agent.md",
             "size": 5443,
-            "modified": "2025-02-12T11:06:51.189664",
+            "modified": "2026-01-02T13:51:28.624050",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "coordinator-implementation-guide.md",
             "size": 11476,
-            "modified": "2025-02-12T11:06:51.190665",
+            "modified": "2026-01-02T13:51:28.624191",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "learning-agent.md",
             "size": 6012,
-            "modified": "2025-02-12T11:56:47.463812",
+            "modified": "2026-01-02T13:51:28.624288",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "learning-behavior.md",
             "size": 5961,
-            "modified": "2025-02-12T11:56:47.463812",
+            "modified": "2026-01-02T13:51:28.624387",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "learning-implementation-guide.md",
             "size": 15255,
-            "modified": "2025-02-12T12:02:23.980952",
+            "modified": "2026-01-02T13:51:28.624472",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "learning-protocol.md",
             "size": 8306,
-            "modified": "2025-02-12T11:56:47.463812",
+            "modified": "2026-01-02T13:51:28.624614",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "monitoring-agent.md",
             "size": 5785,
-            "modified": "2025-02-12T11:34:07.239180",
+            "modified": "2026-01-02T13:51:28.624725",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "monitoring-behavior.md",
             "size": 5475,
-            "modified": "2025-02-12T11:34:07.239180",
+            "modified": "2026-01-02T13:51:28.624830",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "monitoring-implementation-guide.md",
             "size": 15166,
-            "modified": "2025-02-12T11:44:05.127222",
+            "modified": "2026-01-02T13:51:28.624915",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "monitoring-protocol.md",
             "size": 7777,
-            "modified": "2025-02-12T11:34:07.239180",
+            "modified": "2026-01-02T13:51:28.625033",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "resource-management-behavior.md",
             "size": 5686,
-            "modified": "2025-02-12T11:12:51.180866",
+            "modified": "2026-01-02T13:51:28.625143",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "resource-management-protocol.md",
             "size": 8145,
-            "modified": "2025-02-12T11:12:51.180866",
+            "modified": "2026-01-02T13:51:28.625243",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "resource-manager-agent.md",
             "size": 5536,
-            "modified": "2025-02-12T11:12:51.180866",
+            "modified": "2026-01-02T13:51:28.625337",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "resource-manager-implementation-guide.md",
             "size": 13233,
-            "modified": "2025-02-12T11:34:07.239180",
+            "modified": "2026-01-02T13:51:28.625409",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-execution-behavior.md",
             "size": 5035,
-            "modified": "2025-02-12T11:02:22.050779",
+            "modified": "2026-01-02T13:51:28.625523",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-execution-protocol.md",
             "size": 5789,
-            "modified": "2025-02-12T11:02:22.050779",
+            "modified": "2026-01-02T13:51:28.625631",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-executor-agent.md",
             "size": 4481,
-            "modified": "2025-02-12T11:02:22.050779",
+            "modified": "2026-01-02T13:51:28.625727",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-executor-implementation.md",
             "size": 7625,
-            "modified": "2025-02-12T11:02:22.050779",
+            "modified": "2026-01-02T13:51:28.625837",
             "type": "file",
             "extension": "md"
           }
@@ -330,1432 +225,461 @@
       },
       {
         "name": "guides",
-        "modified": "2025-02-24T07:57:21.134877",
+        "modified": "2026-01-02T13:51:28.626408",
         "type": "directory",
         "children": [
           {
             "name": "agent_analytics_implementation_guide.md",
             "size": 12528,
-            "modified": "2025-02-18T14:39:36.028973",
+            "modified": "2026-01-02T13:51:28.625975",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_api_implementation_guide.md",
             "size": 13784,
-            "modified": "2025-02-18T14:36:21.529227",
+            "modified": "2026-01-02T13:51:28.626037",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_architecture_implementation_guide.md",
             "size": 1,
-            "modified": "2025-02-18T14:28:00.275294",
+            "modified": "2026-01-02T13:51:28.626092",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_coordination_toolkit_guide.md",
             "size": 24420,
-            "modified": "2025-02-19T05:51:00.635638",
+            "modified": "2026-01-02T13:51:28.626159",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_learning_implementation_guide.md",
             "size": 12308,
-            "modified": "2025-02-18T14:44:58.313208",
+            "modified": "2026-01-02T13:51:28.626243",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_pattern_implementation_guide.md",
             "size": 13493,
-            "modified": "2025-02-18T14:25:22.926672",
+            "modified": "2026-01-02T13:51:28.626311",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_swarm_implementation_guide.md",
             "size": 13538,
-            "modified": "2025-02-18T14:32:55.713439",
+            "modified": "2026-01-02T13:51:28.626383",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "cursor_mcp_tool_guide.md",
             "size": 6712,
-            "modified": "2025-02-18T14:22:16.904937",
+            "modified": "2026-01-02T13:51:28.626478",
             "type": "file",
             "extension": "md"
-          },
-          {
-            "name": "federated-communication.md",
-            "size": 20001,
-            "modified": "2025-02-24T08:04:08.869308",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "fractal-nesting.md",
-            "size": 20702,
-            "modified": "2025-02-24T08:09:00.448337",
-            "type": "file",
-            "extension": "md"
-          }
-        ]
-      },
-      {
-        "name": "implementations",
-        "modified": "2025-02-19T08:33:37.099677",
-        "type": "directory",
-        "children": [
-          {
-            "name": "analysis_dependencies.ts",
-            "size": 4348,
-            "modified": "2025-02-19T05:51:00.649638",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "analysis_tools.ts",
-            "size": 40700,
-            "modified": "2025-02-19T06:12:54.852312",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "code_management.ts",
-            "size": 9780,
-            "modified": "2025-02-19T06:24:30.084380",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "deployment_system.ts",
-            "size": 25880,
-            "modified": "2025-02-19T08:37:56.955609",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "documentation_system.ts",
-            "size": 6757,
-            "modified": "2025-02-19T06:24:49.257460",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "quality_assurance.ts",
-            "size": 6918,
-            "modified": "2025-02-19T06:42:06.467792",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "repository_hooks.ts",
-            "size": 5923,
-            "modified": "2025-02-19T06:21:13.160563",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "review_system.ts",
-            "size": 15086,
-            "modified": "2025-02-19T06:42:06.479792",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "swarm_coordination_system.ts",
-            "size": 29420,
-            "modified": "2025-02-19T15:02:34.859914",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "task_management.ts",
-            "size": 15574,
-            "modified": "2025-02-19T06:35:10.837041",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "workflow_automation.ts",
-            "size": 11794,
-            "modified": "2025-02-19T06:31:34.030140",
-            "type": "file",
-            "extension": "ts"
-          }
-        ]
-      },
-      {
-        "name": "swarm_pong_test",
-        "modified": "2025-02-20T12:18:44.049402",
-        "type": "directory",
-        "children": [
-          {
-            "name": ".benchmarks",
-            "modified": "2025-02-20T12:00:45.454772",
-            "type": "directory",
-            "children": []
-          },
-          {
-            "name": ".pytest_cache",
-            "modified": "2025-02-20T12:00:45.446772",
-            "type": "directory",
-            "children": [
-              {
-                "name": "v",
-                "modified": "2025-02-20T12:00:47.481779",
-                "type": "directory",
-                "children": [
-                  {
-                    "name": "cache",
-                    "modified": "2025-02-20T12:00:47.481779",
-                    "type": "directory",
-                    "children": [
-                      {
-                        "name": "lastfailed",
-                        "size": 2,
-                        "modified": "2025-02-20T12:11:01.730846",
-                        "type": "file",
-                        "extension": null
-                      },
-                      {
-                        "name": "nodeids",
-                        "size": 427,
-                        "modified": "2025-02-20T12:18:57.221447",
-                        "type": "file",
-                        "extension": null
-                      },
-                      {
-                        "name": "stepwise",
-                        "size": 2,
-                        "modified": "2025-02-20T12:18:57.222446",
-                        "type": "file",
-                        "extension": null
-                      }
-                    ]
-                  },
-                  {
-                    "name": "randomly_seed",
-                    "size": 10,
-                    "modified": "2025-02-20T12:18:42.066396",
-                    "type": "file",
-                    "extension": null
-                  }
-                ]
-              },
-              {
-                "name": ".gitignore",
-                "size": 37,
-                "modified": "2025-02-20T12:00:45.446772",
-                "type": "file",
-                "extension": null
-              },
-              {
-                "name": "CACHEDIR.TAG",
-                "size": 191,
-                "modified": "2025-02-20T12:00:45.446772",
-                "type": "file",
-                "extension": "TAG"
-              },
-              {
-                "name": "README.md",
-                "size": 302,
-                "modified": "2025-02-20T12:00:45.446772",
-                "type": "file",
-                "extension": "md"
-              }
-            ]
-          },
-          {
-            "name": "checkpoints",
-            "modified": "2025-02-20T12:19:24.927540",
-            "type": "directory",
-            "children": [
-              {
-                "name": "model_gen_0.pt",
-                "size": 8112,
-                "modified": "2025-02-20T12:19:24.928540",
-                "type": "file",
-                "extension": "pt"
-              }
-            ]
-          },
-          {
-            "name": "pong",
-            "modified": "2025-02-20T12:00:47.229778",
-            "type": "directory",
-            "children": [
-              {
-                "name": "__init__.py",
-                "size": 213,
-                "modified": "2025-02-20T12:00:08.397647",
-                "type": "file",
-                "extension": "py"
-              },
-              {
-                "name": "game.py",
-                "size": 7332,
-                "modified": "2025-02-20T12:21:59.029058",
-                "type": "file",
-                "extension": "py"
-              },
-              {
-                "name": "swarm_agent.py",
-                "size": 7494,
-                "modified": "2025-02-20T12:22:09.223093",
-                "type": "file",
-                "extension": "py"
-              },
-              {
-                "name": "trainer.py",
-                "size": 7527,
-                "modified": "2025-02-20T12:21:59.029058",
-                "type": "file",
-                "extension": "py"
-              }
-            ]
-          },
-          {
-            "name": "tests",
-            "modified": "2025-02-20T12:00:47.217778",
-            "type": "directory",
-            "children": [
-              {
-                "name": "test_pong.py",
-                "size": 3825,
-                "modified": "2025-02-20T12:14:46.116601",
-                "type": "file",
-                "extension": "py"
-              }
-            ]
-          },
-          {
-            "name": "README.md",
-            "size": 2415,
-            "modified": "2025-02-20T11:59:09.225448",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "main.py",
-            "size": 1006,
-            "modified": "2025-02-20T11:58:46.294371",
-            "type": "file",
-            "extension": "py"
-          },
-          {
-            "name": "requirements.txt",
-            "size": 197,
-            "modified": "2025-02-20T12:14:46.114601",
-            "type": "file",
-            "extension": "txt"
-          },
-          {
-            "name": "swarm_pong_README.md",
-            "size": 311,
-            "modified": "2025-02-20T12:22:22.571138",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "training_progress.png",
-            "size": 66347,
-            "modified": "2025-02-20T12:21:29.876960",
-            "type": "file",
-            "extension": "png"
-          }
-        ]
-      },
-      {
-        "name": "swarm_sort_test",
-        "modified": "2025-02-20T11:41:46.321938",
-        "type": "directory",
-        "children": [
-          {
-            "name": ".pytest_cache",
-            "modified": "2025-02-20T11:41:46.321938",
-            "type": "directory",
-            "children": [
-              {
-                "name": "v",
-                "modified": "2025-02-20T11:41:49.654949",
-                "type": "directory",
-                "children": [
-                  {
-                    "name": "cache",
-                    "modified": "2025-02-20T11:42:40.510120",
-                    "type": "directory",
-                    "children": [
-                      {
-                        "name": "lastfailed",
-                        "size": 2,
-                        "modified": "2025-02-20T11:51:12.874845",
-                        "type": "file",
-                        "extension": null
-                      },
-                      {
-                        "name": "nodeids",
-                        "size": 333,
-                        "modified": "2025-02-20T11:51:12.874845",
-                        "type": "file",
-                        "extension": null
-                      },
-                      {
-                        "name": "stepwise",
-                        "size": 2,
-                        "modified": "2025-02-20T11:51:12.874845",
-                        "type": "file",
-                        "extension": null
-                      }
-                    ]
-                  },
-                  {
-                    "name": "randomly_seed",
-                    "size": 9,
-                    "modified": "2025-02-20T11:51:00.237802",
-                    "type": "file",
-                    "extension": null
-                  }
-                ]
-              },
-              {
-                "name": ".gitignore",
-                "size": 37,
-                "modified": "2025-02-20T11:41:46.321938",
-                "type": "file",
-                "extension": null
-              },
-              {
-                "name": "CACHEDIR.TAG",
-                "size": 191,
-                "modified": "2025-02-20T11:41:46.321938",
-                "type": "file",
-                "extension": "TAG"
-              },
-              {
-                "name": "README.md",
-                "size": 302,
-                "modified": "2025-02-20T11:41:46.320938",
-                "type": "file",
-                "extension": "md"
-              }
-            ]
-          },
-          {
-            "name": "logs",
-            "modified": "2025-02-20T11:40:49.557747",
-            "type": "directory",
-            "children": [
-              {
-                "name": "swarm_sort.log",
-                "size": 880,
-                "modified": "2025-02-20T11:40:49.566747",
-                "type": "file",
-                "extension": "log"
-              }
-            ]
-          },
-          {
-            "name": "results",
-            "modified": "2025-02-20T11:40:49.566747",
-            "type": "directory",
-            "children": [
-              {
-                "name": "sort_results.json",
-                "size": 1993,
-                "modified": "2025-02-20T11:40:49.566747",
-                "type": "file",
-                "extension": "json"
-              }
-            ]
-          },
-          {
-            "name": "visualizations",
-            "modified": "2025-02-20T11:45:32.739700",
-            "type": "directory",
-            "children": [
-              {
-                "name": "agent_utilization.png",
-                "size": 122203,
-                "modified": "2025-02-20T11:51:05.320819",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "combined_metrics.png",
-                "size": 269945,
-                "modified": "2025-02-20T11:51:05.804821",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "operations.png",
-                "size": 120216,
-                "modified": "2025-02-20T11:51:04.919818",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "sorting_animation.gif",
-                "size": 474063,
-                "modified": "2025-02-20T11:51:12.857845",
-                "type": "file",
-                "extension": "gif"
-              },
-              {
-                "name": "time_complexity.png",
-                "size": 129272,
-                "modified": "2025-02-20T11:51:04.513817",
-                "type": "file",
-                "extension": "png"
-              }
-            ]
-          },
-          {
-            "name": "main.py",
-            "size": 1346,
-            "modified": "2025-02-20T11:39:35.593498",
-            "type": "file",
-            "extension": "py"
-          },
-          {
-            "name": "pytest.ini",
-            "size": 79,
-            "modified": "2025-02-20T11:44:05.416406",
-            "type": "file",
-            "extension": "ini"
-          },
-          {
-            "name": "requirements.txt",
-            "size": 93,
-            "modified": "2025-02-20T11:40:10.179614",
-            "type": "file",
-            "extension": "txt"
-          },
-          {
-            "name": "swarm_sort.py",
-            "size": 3274,
-            "modified": "2025-02-20T11:40:10.179614",
-            "type": "file",
-            "extension": "py"
-          },
-          {
-            "name": "swarm_sort_README.md",
-            "size": 4740,
-            "modified": "2025-02-20T11:59:43.165562",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "test_swarm_sort.py",
-            "size": 16248,
-            "modified": "2025-02-20T11:51:44.984953",
-            "type": "file",
-            "extension": "py"
-          }
-        ]
-      },
-      {
-        "name": "swarm_test",
-        "modified": "2025-02-19T17:11:03.869241",
-        "type": "directory",
-        "children": [
-          {
-            "name": "agents",
-            "modified": "2025-02-19T14:39:28.946169",
-            "type": "directory",
-            "children": [
-              {
-                "name": "swarm_test",
-                "modified": "2025-02-19T14:39:28.946169",
-                "type": "directory",
-                "children": [
-                  {
-                    "name": "docs",
-                    "modified": "2025-02-19T14:39:28.946169",
-                    "type": "directory",
-                    "children": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "docs",
-            "modified": "2025-02-19T15:50:58.608575",
-            "type": "directory",
-            "children": [
-              {
-                "name": "METRICS.md",
-                "size": 4918,
-                "modified": "2025-02-19T14:33:23.688956",
-                "type": "file",
-                "extension": "md"
-              },
-              {
-                "name": "README.md",
-                "size": 1537,
-                "modified": "2025-02-19T14:40:13.713317",
-                "type": "file",
-                "extension": "md"
-              },
-              {
-                "name": "TEST_CASES.md",
-                "size": 11142,
-                "modified": "2025-02-19T14:35:28.998372",
-                "type": "file",
-                "extension": "md"
-              },
-              {
-                "name": "TEST_SUITE.md",
-                "size": 5963,
-                "modified": "2025-02-19T15:52:27.938906",
-                "type": "file",
-                "extension": "md"
-              },
-              {
-                "name": "VISUALIZATION.md",
-                "size": 5920,
-                "modified": "2025-02-19T15:11:13.111785",
-                "type": "file",
-                "extension": "md"
-              }
-            ]
-          },
-          {
-            "name": "logs",
-            "modified": "2025-02-19T17:08:00.443662",
-            "type": "directory",
-            "children": [
-              {
-                "name": "basic_coordination_1740013642666.log",
-                "size": 5613,
-                "modified": "2025-02-19T17:07:27.846559",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "fault_tolerance_1740013648207.log",
-                "size": 375,
-                "modified": "2025-02-19T17:07:38.257592",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "fault_tolerance_1740013648211.log",
-                "size": 8966,
-                "modified": "2025-02-19T17:07:38.257592",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "performance_1740013658259.log",
-                "size": 10489,
-                "modified": "2025-02-19T17:07:51.237633",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "scalability_1740013647850.log",
-                "size": 363,
-                "modified": "2025-02-19T17:07:28.200560",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "scalability_1740013647852.log",
-                "size": 5965,
-                "modified": "2025-02-19T17:07:28.198560",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "task_visualization_1740013671239.log",
-                "size": 379,
-                "modified": "2025-02-19T17:08:00.440662",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "test_runner_1740013642663.log",
-                "size": 3305,
-                "modified": "2025-02-19T17:08:00.444662",
-                "type": "file",
-                "extension": "log"
-              },
-              {
-                "name": "test_runner_1740013642663_metrics.json",
-                "size": 1578,
-                "modified": "2025-02-19T17:08:00.443662",
-                "type": "file",
-                "extension": "json"
-              }
-            ]
-          },
-          {
-            "name": "results",
-            "modified": "2025-02-19T17:08:00.443662",
-            "type": "directory",
-            "children": [
-              {
-                "name": "basic_coordination.json",
-                "size": 484,
-                "modified": "2025-02-19T17:07:27.845559",
-                "type": "file",
-                "extension": "json"
-              },
-              {
-                "name": "fault_tolerance.json",
-                "size": 15180,
-                "modified": "2025-02-19T17:07:38.256592",
-                "type": "file",
-                "extension": "json"
-              },
-              {
-                "name": "performance.json",
-                "size": 467,
-                "modified": "2025-02-19T17:07:51.236633",
-                "type": "file",
-                "extension": "json"
-              },
-              {
-                "name": "scalability.json",
-                "size": 208,
-                "modified": "2025-02-19T17:07:28.197560",
-                "type": "file",
-                "extension": "json"
-              },
-              {
-                "name": "test_report.json",
-                "size": 614,
-                "modified": "2025-02-19T17:08:00.443662",
-                "type": "file",
-                "extension": "json"
-              }
-            ]
-          },
-          {
-            "name": "types",
-            "modified": "2025-02-19T16:33:54.733150",
-            "type": "directory",
-            "children": [
-              {
-                "name": "gif-encoder-2.d.ts",
-                "size": 302,
-                "modified": "2025-02-19T16:33:56.296155",
-                "type": "file",
-                "extension": "ts"
-              }
-            ]
-          },
-          {
-            "name": "visualization",
-            "modified": "2025-02-19T15:39:58.858114",
-            "type": "directory",
-            "children": [
-              {
-                "name": "README.md",
-                "size": 3187,
-                "modified": "2025-02-19T15:23:56.107563",
-                "type": "file",
-                "extension": "md"
-              },
-              {
-                "name": "chart_generator.ts",
-                "size": 18436,
-                "modified": "2025-02-19T15:41:13.395392",
-                "type": "file",
-                "extension": "ts"
-              },
-              {
-                "name": "hanoi_visualizer.ts",
-                "size": 11242,
-                "modified": "2025-02-19T16:48:18.269114",
-                "type": "file",
-                "extension": "ts"
-              }
-            ]
-          },
-          {
-            "name": "visualizations",
-            "modified": "2025-02-20T00:58:44.005074",
-            "type": "directory",
-            "children": [
-              {
-                "name": "basic_coordination_resource_utilization.html",
-                "size": 2115,
-                "modified": "2025-02-19T17:07:25.858552",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "basic_coordination_resource_utilization.png",
-                "size": 22673,
-                "modified": "2025-02-19T17:07:26.730555",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "basic_coordination_task_distribution.html",
-                "size": 1625,
-                "modified": "2025-02-19T17:07:26.798555",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "basic_coordination_task_distribution.png",
-                "size": 20647,
-                "modified": "2025-02-19T17:07:27.770559",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "basic_coordination_task_duration_distribution.html",
-                "size": 2031,
-                "modified": "2025-02-19T17:07:23.873546",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "basic_coordination_task_duration_distribution.png",
-                "size": 32290,
-                "modified": "2025-02-19T17:07:24.869549",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "basic_coordination_task_success_rate.html",
-                "size": 1385,
-                "modified": "2025-02-19T17:07:24.939549",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "basic_coordination_task_success_rate.png",
-                "size": 25859,
-                "modified": "2025-02-19T17:07:25.777552",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "fault_tolerance_resource_utilization.html",
-                "size": 0,
-                "modified": "2025-02-20T00:58:44.111075",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "fault_tolerance_resource_utilization.png",
-                "size": 31873,
-                "modified": "2025-02-19T17:07:37.277589",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "fault_tolerance_task_distribution.html",
-                "size": 1256,
-                "modified": "2025-02-20T00:58:44.098075",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "fault_tolerance_task_distribution.png",
-                "size": 14766,
-                "modified": "2025-02-19T17:07:38.178591",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "fault_tolerance_task_duration_distribution.html",
-                "size": 4738,
-                "modified": "2025-02-19T17:07:34.354579",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "fault_tolerance_task_duration_distribution.png",
-                "size": 115440,
-                "modified": "2025-02-19T17:07:35.222582",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "fault_tolerance_task_success_rate.html",
-                "size": 1412,
-                "modified": "2025-02-20T00:58:43.874074",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "fault_tolerance_task_success_rate.png",
-                "size": 25859,
-                "modified": "2025-02-19T17:07:36.315585",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "performance_resource_utilization.html",
-                "size": 1236,
-                "modified": "2025-02-20T00:58:43.992074",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "performance_resource_utilization.png",
-                "size": 21316,
-                "modified": "2025-02-19T17:07:50.051629",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "performance_task_distribution.html",
-                "size": 1627,
-                "modified": "2025-02-19T17:07:50.129629",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "performance_task_distribution.png",
-                "size": 20711,
-                "modified": "2025-02-19T17:07:51.146632",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "performance_task_duration_distribution.html",
-                "size": 18157,
-                "modified": "2025-02-19T17:07:46.900619",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "performance_task_duration_distribution.png",
-                "size": 148215,
-                "modified": "2025-02-19T17:07:47.968622",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "performance_task_success_rate.html",
-                "size": 1271,
-                "modified": "2025-02-20T00:58:43.963074",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "performance_task_success_rate.png",
-                "size": 25859,
-                "modified": "2025-02-19T17:07:48.950625",
-                "type": "file",
-                "extension": "png"
-              },
-              {
-                "name": "task_visualization_hanoi.gif",
-                "size": 91271,
-                "modified": "2025-02-19T17:08:00.439662",
-                "type": "file",
-                "extension": "gif"
-              },
-              {
-                "name": "task_visualization_hanoi.html",
-                "size": 6596,
-                "modified": "2025-02-19T17:07:58.755656",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "task_visualization_resource_utilization.html",
-                "size": 1563,
-                "modified": "2025-02-20T00:58:43.994074",
-                "type": "file",
-                "extension": "html"
-              },
-              {
-                "name": "task_visualization_task_distribution.html",
-                "size": 1410,
-                "modified": "2025-02-20T00:58:44.005074",
-                "type": "file",
-                "extension": "html"
-              }
-            ]
-          },
-          {
-            "name": "README.md",
-            "size": 5291,
-            "modified": "2025-02-19T14:39:54.382253",
-            "type": "file",
-            "extension": "md"
-          },
-          {
-            "name": "logger.ts",
-            "size": 9113,
-            "modified": "2025-02-19T17:09:58.338034",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "simple_test_runner.ts",
-            "size": 5257,
-            "modified": "2025-02-19T14:45:11.957319",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "task_generators.ts",
-            "size": 6264,
-            "modified": "2025-02-19T15:50:24.025446",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "test_cases.ts",
-            "size": 23018,
-            "modified": "2025-02-19T16:54:18.768307",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "test_config.ts",
-            "size": 6088,
-            "modified": "2025-02-19T14:37:48.114834",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "test_runner.ts",
-            "size": 7033,
-            "modified": "2025-02-19T15:32:11.532381",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "test_utils.ts",
-            "size": 30657,
-            "modified": "2025-02-19T16:40:19.798398",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "types.d.ts",
-            "size": 300,
-            "modified": "2025-02-19T09:46:01.547052",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "validation_utils.ts",
-            "size": 9156,
-            "modified": "2025-02-19T14:37:12.243715",
-            "type": "file",
-            "extension": "ts"
-          },
-          {
-            "name": "visualization_utils.ts",
-            "size": 12196,
-            "modified": "2025-02-19T17:18:29.033467",
-            "type": "file",
-            "extension": "ts"
           }
         ]
       },
       {
         "name": "system",
-        "modified": "2025-02-19T05:05:59.435896",
+        "modified": "2026-01-02T13:51:28.639289",
         "type": "directory",
         "children": [
           {
             "name": "agent_analysis_framework.md",
             "size": 6029,
-            "modified": "2025-02-18T13:58:55.105325",
+            "modified": "2026-01-02T13:51:28.626612",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_analytics_framework.md",
             "size": 12771,
-            "modified": "2025-02-18T14:39:36.028973",
+            "modified": "2026-01-02T13:51:28.626680",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_api_framework.md",
             "size": 9258,
-            "modified": "2025-02-18T14:36:47.849328",
+            "modified": "2026-01-02T13:51:28.626802",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_architecture_framework.md",
             "size": 11093,
-            "modified": "2025-02-18T14:28:56.192515",
+            "modified": "2026-01-02T13:51:28.626933",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_code_analysis_framework.md",
             "size": 5821,
-            "modified": "2025-02-18T13:58:55.094325",
+            "modified": "2026-01-02T13:51:28.627037",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_communication_framework.md",
             "size": 7461,
-            "modified": "2025-02-18T14:08:26.007632",
+            "modified": "2026-01-02T13:51:28.627160",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_coordination_toolkit.md",
             "size": 8879,
-            "modified": "2025-02-19T05:08:15.559621",
+            "modified": "2026-01-02T13:51:28.627307",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_cursor_integration_framework.md",
             "size": 8125,
-            "modified": "2025-02-18T14:14:00.568976",
+            "modified": "2026-01-02T13:51:28.627436",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_deployment_framework.md",
             "size": 6060,
-            "modified": "2025-02-18T13:58:55.094325",
+            "modified": "2026-01-02T13:51:28.627567",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_documentation_framework.md",
             "size": 5930,
-            "modified": "2025-02-18T13:58:55.105325",
+            "modified": "2026-01-02T13:51:28.627682",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_execution_framework.md",
             "size": 5935,
-            "modified": "2025-02-18T13:50:17.361324",
+            "modified": "2026-01-02T13:51:28.627787",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_integration_framework.md",
             "size": 1,
-            "modified": "2025-02-18T14:00:49.887789",
+            "modified": "2026-01-02T13:51:28.627854",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_learning_framework.md",
             "size": 14702,
-            "modified": "2025-02-18T14:45:01.872221",
+            "modified": "2026-01-02T13:51:28.627936",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_mcp_framework.md",
             "size": 8284,
-            "modified": "2025-02-18T14:22:16.904937",
+            "modified": "2026-01-02T13:51:28.628059",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_monitoring_framework.md",
             "size": 5845,
-            "modified": "2025-02-18T13:58:55.094325",
+            "modified": "2026-01-02T13:51:28.628237",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_orchestration_framework.md",
             "size": 7771,
-            "modified": "2025-02-18T14:06:46.678231",
+            "modified": "2026-01-02T13:51:28.628437",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_pattern_framework.md",
             "size": 9897,
-            "modified": "2025-02-18T14:25:22.926672",
+            "modified": "2026-01-02T13:51:28.628626",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_perception_framework.md",
             "size": 7121,
-            "modified": "2025-02-18T14:11:44.376434",
+            "modified": "2026-01-02T13:51:28.629553",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_planning_framework.md",
             "size": 5442,
-            "modified": "2025-02-18T13:52:54.804911",
+            "modified": "2026-01-02T13:51:28.629662",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_resource_framework.md",
             "size": 6836,
-            "modified": "2025-02-18T14:02:50.718278",
+            "modified": "2026-01-02T13:51:28.629788",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_security_framework.md",
             "size": 6935,
-            "modified": "2025-02-18T14:11:44.376434",
+            "modified": "2026-01-02T13:51:28.629910",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_swarm_framework.md",
             "size": 11724,
-            "modified": "2025-02-18T14:32:55.712439",
+            "modified": "2026-01-02T13:51:28.630117",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_swarm_implementation_guide.md",
             "size": 4542,
-            "modified": "2025-02-18T14:32:55.713439",
+            "modified": "2026-01-02T13:51:28.635422",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_testing_framework.md",
             "size": 5954,
-            "modified": "2025-02-18T13:58:55.094325",
+            "modified": "2026-01-02T13:51:28.635604",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_tool_framework.md",
             "size": 8247,
-            "modified": "2025-02-18T14:14:00.567976",
+            "modified": "2026-01-02T13:51:28.635774",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "agent_workflow_framework.md",
             "size": 6617,
-            "modified": "2025-02-18T14:01:58.625067",
+            "modified": "2026-01-02T13:51:28.635885",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "api-documentation.md",
             "size": 13276,
-            "modified": "2025-02-12T12:38:09.316145",
+            "modified": "2026-01-02T13:51:28.635972",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-learning.md",
             "size": 12096,
-            "modified": "2025-02-12T13:33:07.152922",
+            "modified": "2026-01-02T13:51:28.636117",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-project-lifecycle.md",
             "size": 13712,
-            "modified": "2025-02-12T13:45:25.911153",
+            "modified": "2026-01-02T13:51:28.636201",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-project-reporting.md",
             "size": 10163,
-            "modified": "2025-02-12T13:45:25.911153",
+            "modified": "2026-01-02T13:51:28.636345",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-task-execution.md",
             "size": 14835,
-            "modified": "2025-02-12T13:33:07.152922",
+            "modified": "2026-01-02T13:51:28.636426",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-task-integration.md",
             "size": 7316,
-            "modified": "2025-02-12T14:15:09.210648",
+            "modified": "2026-01-02T13:51:28.636532",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-task-management.md",
             "size": 14777,
-            "modified": "2025-02-12T13:33:07.152922",
+            "modified": "2026-01-02T13:51:28.636627",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-task-monitoring.md",
             "size": 10632,
-            "modified": "2025-02-12T13:55:48.360115",
+            "modified": "2026-01-02T13:51:28.636787",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-task-orchestration.md",
             "size": 11344,
-            "modified": "2025-02-12T14:05:07.201828",
+            "modified": "2026-01-02T13:51:28.636947",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous-task-recovery.md",
             "size": 11280,
-            "modified": "2025-02-12T14:15:09.210648",
+            "modified": "2026-01-02T13:51:28.637078",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "autonomous_agent_framework.md",
             "size": 5887,
-            "modified": "2025-02-18T13:52:54.804911",
+            "modified": "2026-01-02T13:51:28.637177",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "configuration-reference.md",
             "size": 8099,
-            "modified": "2025-02-12T12:38:09.316145",
+            "modified": "2026-01-02T13:51:28.637278",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "data-model-specifications.md",
             "size": 11529,
-            "modified": "2025-02-12T12:38:09.316145",
+            "modified": "2026-01-02T13:51:28.637408",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "development-guide.md",
             "size": 19239,
-            "modified": "2025-02-12T12:41:46.519861",
+            "modified": "2026-01-02T13:51:28.637518",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "performance-tuning-guide.md",
             "size": 8432,
-            "modified": "2025-02-12T12:53:23.080177",
+            "modified": "2026-01-02T13:51:28.637675",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "project-task-management-guide.md",
             "size": 8393,
-            "modified": "2025-02-12T12:54:56.679494",
+            "modified": "2026-01-02T13:51:28.637803",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "protocol-implementations.md",
             "size": 18128,
-            "modified": "2025-02-12T12:38:09.316145",
+            "modified": "2026-01-02T13:51:28.637878",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "system-deployment-guide.md",
             "size": 10125,
-            "modified": "2025-02-12T12:06:53.607865",
+            "modified": "2026-01-02T13:51:28.638015",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "system-disaster-recovery.md",
             "size": 8303,
-            "modified": "2025-02-12T12:10:57.191689",
+            "modified": "2026-01-02T13:51:28.638144",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "system-integration-guide.md",
             "size": 12091,
-            "modified": "2025-02-12T12:06:53.607865",
+            "modified": "2026-01-02T13:51:28.638270",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "system-operations-manual.md",
             "size": 9846,
-            "modified": "2025-02-12T12:06:53.607865",
+            "modified": "2026-01-02T13:51:28.638391",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "system-security-guide.md",
             "size": 9239,
-            "modified": "2025-02-12T12:10:57.191689",
+            "modified": "2026-01-02T13:51:28.638514",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-communication-protocols.md",
             "size": 12211,
-            "modified": "2025-02-12T13:05:37.602660",
+            "modified": "2026-01-02T13:51:28.638649",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-deployment-guide.md",
             "size": 9528,
-            "modified": "2025-02-12T13:09:24.579415",
+            "modified": "2026-01-02T13:51:28.638776",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-execution-implementation.md",
             "size": 14470,
-            "modified": "2025-02-12T12:57:51.329084",
+            "modified": "2026-01-02T13:51:28.638865",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-performance-analysis.md",
             "size": 11854,
-            "modified": "2025-02-12T13:09:24.579415",
+            "modified": "2026-01-02T13:51:28.639000",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "task-recovery-procedures.md",
             "size": 12966,
-            "modified": "2025-02-12T13:05:37.602660",
+            "modified": "2026-01-02T13:51:28.639085",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "technical-implementation-guide.md",
             "size": 17623,
-            "modified": "2025-02-12T12:19:15.047365",
+            "modified": "2026-01-02T13:51:28.639173",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "testing-guide.md",
             "size": 14855,
-            "modified": "2025-02-12T12:41:46.519861",
+            "modified": "2026-01-02T13:51:28.639256",
             "type": "file",
             "extension": "md"
           },
           {
             "name": "troubleshooting-guide.md",
             "size": 12221,
-            "modified": "2025-02-12T12:38:09.317145",
+            "modified": "2026-01-02T13:51:28.639392",
             "type": "file",
             "extension": "md"
           }
@@ -1763,55 +687,55 @@
       },
       {
         "name": "task",
-        "modified": "2025-02-12T15:18:02.975925",
+        "modified": "2026-01-02T13:51:28.640216",
         "type": "directory",
         "children": [
           {
             "name": "__init__.py",
             "size": 46,
-            "modified": "2025-02-12T15:19:20.623189",
+            "modified": "2026-01-02T13:51:28.639513",
             "type": "file",
             "extension": "py"
           },
           {
             "name": "dependencies.py",
             "size": 1,
-            "modified": "2025-02-12T15:15:43.939451",
+            "modified": "2026-01-02T13:51:28.639880",
             "type": "file",
             "extension": "py"
           },
           {
             "name": "execution.py",
             "size": 1895,
-            "modified": "2025-02-12T15:19:20.623189",
+            "modified": "2026-01-02T13:51:28.639944",
             "type": "file",
             "extension": "py"
           },
           {
             "name": "monitoring.py",
             "size": 1718,
-            "modified": "2025-02-12T15:19:20.623189",
+            "modified": "2026-01-02T13:51:28.640010",
             "type": "file",
             "extension": "py"
           },
           {
             "name": "prioritization.py",
             "size": 4675,
-            "modified": "2025-02-12T15:19:20.634190",
+            "modified": "2026-01-02T13:51:28.640121",
             "type": "file",
             "extension": "py"
           },
           {
             "name": "scheduling.py",
             "size": 13404,
-            "modified": "2025-02-12T15:19:20.634190",
+            "modified": "2026-01-02T13:51:28.640190",
             "type": "file",
             "extension": "py"
           },
           {
             "name": "workflow.py",
-            "size": 12088,
-            "modified": "2025-02-12T15:19:20.634190",
+            "size": 12712,
+            "modified": "2026-01-02T14:44:20.740776",
             "type": "file",
             "extension": "py"
           }
@@ -1819,106 +743,127 @@
       },
       {
         "name": "types",
-        "modified": "2025-02-19T08:34:10.361796",
+        "modified": "2026-01-02T13:51:28.641320",
         "type": "directory",
         "children": [
           {
+            "name": "AGENTS.md",
+            "size": 7496,
+            "modified": "2026-01-02T13:51:28.640496",
+            "type": "file",
+            "extension": "md"
+          },
+          {
             "name": "code_management.ts",
             "size": 2303,
-            "modified": "2025-02-19T06:42:06.467792",
+            "modified": "2026-01-02T13:51:28.640551",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "coordination-metrics.ts",
             "size": 8650,
-            "modified": "2025-02-19T05:51:00.636638",
+            "modified": "2026-01-02T13:51:28.640669",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "coordination-support.ts",
             "size": 5982,
-            "modified": "2025-02-19T05:51:00.635638",
+            "modified": "2026-01-02T13:51:28.640762",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "coordination.ts",
             "size": 7836,
-            "modified": "2025-02-19T06:02:51.382611",
+            "modified": "2026-01-02T13:51:28.640862",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "deployment.ts",
             "size": 2889,
-            "modified": "2025-02-19T08:32:00.551331",
+            "modified": "2026-01-02T13:51:28.640929",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "documentation.ts",
             "size": 1054,
-            "modified": "2025-02-19T06:24:30.083380",
+            "modified": "2026-01-02T13:51:28.640984",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "quality.ts",
             "size": 2974,
-            "modified": "2025-02-19T06:42:06.468792",
+            "modified": "2026-01-02T13:51:28.641043",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "review.ts",
             "size": 3656,
-            "modified": "2025-02-19T06:42:06.468792",
+            "modified": "2026-01-02T13:51:28.641101",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "shared.ts",
             "size": 1790,
-            "modified": "2025-02-19T06:21:13.160563",
+            "modified": "2026-01-02T13:51:28.641153",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "swarm.ts",
             "size": 4386,
-            "modified": "2025-02-19T15:51:21.256660",
+            "modified": "2026-01-02T13:51:28.641245",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "task.ts",
             "size": 2582,
-            "modified": "2025-02-19T06:35:10.837041",
+            "modified": "2026-01-02T13:51:28.641295",
             "type": "file",
             "extension": "ts"
           },
           {
             "name": "workflow.ts",
             "size": 2495,
-            "modified": "2025-02-19T06:31:34.030140",
+            "modified": "2026-01-02T13:51:28.641351",
             "type": "file",
             "extension": "ts"
           }
         ]
       },
       {
+        "name": "AGENTS.md",
+        "size": 3117,
+        "modified": "2026-01-02T13:51:28.622809",
+        "type": "file",
+        "extension": "md"
+      },
+      {
+        "name": "README.md",
+        "size": 2070,
+        "modified": "2026-01-02T13:51:28.622864",
+        "type": "file",
+        "extension": "md"
+      },
+      {
         "name": "__init__.py",
         "size": 64,
-        "modified": "2025-02-12T15:19:20.623189",
+        "modified": "2026-01-02T13:51:28.622916",
         "type": "file",
         "extension": "py"
       },
       {
         "name": "types.ts",
         "size": 1492,
-        "modified": "2025-02-19T14:48:43.011042",
+        "modified": "2026-01-02T13:51:28.640366",
         "type": "file",
         "extension": "ts"
       }

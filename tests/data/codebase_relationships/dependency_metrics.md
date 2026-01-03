@@ -1,13 +1,13 @@
 # Codebase Dependency Metrics
 
-- Total Files: 771
-- Files with Dependencies: 549
-- Total Dependencies: 6796
+- Total Files: 1090
+- Files with Dependencies: 794
+- Total Dependencies: 8108
 
 ## Dependencies by Type
 
 | Type | Count |
 |------|-------|
-| python | 191 |
-| typescript | 74 |
-| markdown | 6531 |
+| python | 199 |
+| typescript | 688 |
+| markdown | 7221 |

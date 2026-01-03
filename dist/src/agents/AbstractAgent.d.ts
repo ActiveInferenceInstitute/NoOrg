@@ -1,6 +1,7 @@
 import { Agent, AgentType } from './types';
 import { OpenAIClient } from '../core/multiagent/OpenAIClient';
 import { SharedStateManager } from '../core/multiagent/SharedStateManager';
+import { Logger } from '../core/multiagent/Logger';
 /**
  * Base options for constructing an AbstractAgent.
  */
@@ -33,6 +34,7 @@ export declare abstract class AbstractAgent implements Agent {
     readonly createdAt: number;
     protected openAIClient: OpenAIClient;
     protected sharedState: SharedStateManager;
+    protected logger: Logger;
     protected isInitialized: boolean;
     /**
      * Constructs a new AbstractAgent.

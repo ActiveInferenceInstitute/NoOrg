@@ -42,25 +42,42 @@ import { CreativeWritingAgent } from './src/agents/CreativeWritingAgent';
 
 async function runWorkflow() {
   // Initialize coordinator
-  const coordinator = new MultiAgentCoordinator();
+  const coordinator = new MultiAgentCoordinator('My Coordinator');
+  await coordinator.initialize();
 
   // Create agents
   const analysisAgent = new AnalysisAgent('Data Analyst');
   const writingAgent = new CreativeWritingAgent('Content Writer');
 
   // Register agents
-  await coordinator.registerAgent(analysisAgent);
-  await coordinator.registerAgent(writingAgent);
-
-  // Execute workflow
-  const result = await coordinator.executeWorkflow({
-    tasks: [
-      { agent: 'Data Analyst', action: 'analyze', data: dataset },
-      { agent: 'Content Writer', action: 'write', data: analysisResult }
-    ]
+  await coordinator.registerAgent({
+    name: 'Data Analyst',
+    type: 'analysis',
+    capabilities: ['data-analysis'],
+    status: 'available'
+  });
+  await coordinator.registerAgent({
+    name: 'Content Writer',
+    type: 'writing',
+    capabilities: ['content-creation'],
+    status: 'available'
   });
 
-  console.log('Workflow completed:', result);
+  // Create and assign tasks
+  const taskId = await coordinator.createTask({
+    description: 'Analyze dataset and create report',
+    priority: 'high'
+  });
+  
+  // Find suitable agent
+  const agents = await coordinator.findAgentsByCapability('data-analysis');
+  if (agents.length > 0) {
+    await coordinator.assignTask(taskId!, agents[0].id);
+  }
+
+  // Get task status
+  const task = await coordinator.getTask(taskId!);
+  console.log('Task status:', task?.status);
 }
 
 runWorkflow();

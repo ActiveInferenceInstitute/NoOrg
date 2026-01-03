@@ -1,8 +1,16 @@
-# Integration Pattern Examples
+# Integration Patterns Examples
 
-Demonstrations of the resilience patterns (circuit breaker, retry, timeout, bulkhead, rate limiter, request-response). Each script should be runnable with `ts-node` and clearly show input, expected behavior, and observable outputs.
+Examples demonstrating integration patterns for multi-agent systems.
 
-- Keep dependencies minimal; reuse shared utility functions where possible.
-- Document prerequisites (API keys, env vars) at the top of each example.
-- Prefer deterministic scenarios so they can run in CI.
+## Overview
 
+Examples showcase:
+- Circuit breaker patterns
+- Retry mechanisms
+- Rate limiting
+- Timeout handling
+
+## Related Documentation
+
+- [Examples README](../README.md)
+- [Integration Patterns Documentation](../../src/core/integration/README.md)

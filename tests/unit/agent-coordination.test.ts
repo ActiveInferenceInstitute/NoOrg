@@ -29,7 +29,7 @@ describe('Multiagent Coordination', () => {
       expect(retrievedAgent?.id).toBe(registeredId);
       expect(retrievedAgent?.name).toBe('Test Research Agent');
       expect(retrievedAgent?.type).toBe('research');
-      expect(retrievedAgent?.capabilities.map(c => c.name)).toEqual(expect.arrayContaining(['research', 'web-search']));
+      expect(retrievedAgent?.capabilities).toEqual(expect.arrayContaining(['research', 'web-search']));
       
       // Cleanup
       await fixture.coordinator.stop();
@@ -306,20 +306,22 @@ describe('Multiagent Coordination', () => {
       await fixture.taskManager.updateTask(taskId, { status: 'in-progress' });
       
       // Update shared state with research results
-      fixture.sharedStateManager.setState(`tasks.${taskId}.research_results`, {
+      const researchResults = {
         topic: 'AI coordination',
         sources: ['Source 1', 'Source 2'],
         findings: 'Key findings from research'
-      });
+      };
+      await fixture.sharedStateManager.setState(`tasks.${taskId}.research_results`, researchResults);
       
       // Then, the analysis agent would analyze the results
       await fixture.taskManager.assignTask(taskId, analysisAgent.id);
       
       // Update shared state with analysis results
-      fixture.sharedStateManager.setState(`tasks.${taskId}.analysis_results`, {
+      const analysisResults = {
         insights: ['Insight 1', 'Insight 2'],
         recommendations: ['Recommendation 1', 'Recommendation 2']
-      });
+      };
+      await fixture.sharedStateManager.setState(`tasks.${taskId}.analysis_results`, analysisResults);
       
       // Complete the task
       await fixture.taskManager.updateTask(taskId, { 
@@ -327,8 +329,8 @@ describe('Multiagent Coordination', () => {
         metadata: {
           ...compositionTask.metadata,
           result: {
-            research: fixture.sharedStateManager.getState(`tasks.${taskId}.research_results`),
-            analysis: fixture.sharedStateManager.getState(`tasks.${taskId}.analysis_results`)
+            research: researchResults,
+            analysis: analysisResults
           }
         }
       });

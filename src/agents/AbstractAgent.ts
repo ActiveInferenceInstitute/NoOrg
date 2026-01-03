@@ -1,4 +1,5 @@
-import { Agent, AgentType, Capability as AgentCapability } from './types';
+import { Agent, AgentType } from './types';
+import { Capability } from '../core/multiagent/types';
 import { OpenAIClient } from '../core/multiagent/OpenAIClient';
 import { SharedStateManager } from '../core/multiagent/SharedStateManager';
 import { Logger } from '../core/multiagent/Logger';

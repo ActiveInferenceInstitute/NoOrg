@@ -22,5 +22,6 @@ module.exports = {
   testTimeout: 30000,
   verbose: true,
   clearMocks: true,
-  restoreMocks: true
+  restoreMocks: true,
+  forceExit: true
 };

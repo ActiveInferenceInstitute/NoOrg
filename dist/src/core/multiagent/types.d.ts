@@ -15,7 +15,7 @@ export interface AgentConfig {
     name: string;
     type: string;
     description?: string;
-    capabilities?: Capability[];
+    capabilities?: string[];
     metadata?: Record<string, unknown>;
     preferredModel?: string;
     sharedState?: any;
@@ -30,7 +30,7 @@ export interface AgentStatus {
     type: string;
     status: 'available' | 'busy' | 'offline' | 'error';
     lastActive: number;
-    capabilities: Capability[];
+    capabilities: string[];
     metadata: Record<string, unknown>;
     state: 'available' | 'busy' | 'offline' | 'error';
     lastUpdated: number;
@@ -49,14 +49,24 @@ export interface BaseAgent {
     name: string;
     type: string;
     description: string;
-    capabilities: Capability[];
+    capabilities: string[];
     status: AgentStatus;
     metadata: Record<string, unknown>;
     preferredModel: string;
     createdAt: number;
     lastActive: number;
 }
-export interface Agent extends BaseAgent {
+export interface Agent {
+    id: string;
+    name: string;
+    type: string;
+    description?: string;
+    capabilities: string[];
+    status: string;
+    metadata?: Record<string, any>;
+    preferredModel?: string;
+    lastActive: number;
+    createdAt: number;
 }
 export interface AgentIO {
     input: Record<string, unknown>;
@@ -189,10 +199,10 @@ export interface OptimizationResult {
  */
 export interface StateMetadata {
     action: string;
-    agentId: string;
-    agentName: string;
-    agentType: string;
     timestamp: string;
+    agentId?: string;
+    agentName?: string;
+    agentType?: string;
 }
 /**
  * State change callback

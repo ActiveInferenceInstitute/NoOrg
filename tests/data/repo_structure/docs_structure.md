@@ -1,11 +1,11 @@
 # Repository Structure
 
-Generated: 2025-03-13T10:42:32.015169
-Root: /home/trim/Documents/operations/docs
+Generated: 2026-01-02T15:05:04.315003
+Root: /Users/4d/Documents/GitHub/NoOrg/docs
 
 ## Directory Tree
 ```
-/home/trim/Documents/operations/docs
+/Users/4d/Documents/GitHub/NoOrg/docs
 └── docs/
     ├── agents/
     │   ├── architectures/
@@ -27,9 +27,13 @@ Root: /home/trim/Documents/operations/docs
     │   ├── operations/
     │   │   ├── agent-operations.md (6393 bytes)
     │   │   └── task-operations.md (9517 bytes)
-    │   └── task/
-    │       └── implementation.md (5788 bytes)
+    │   ├── task/
+    │   │   └── implementation.md (5788 bytes)
+    │   ├── AGENTS.md (7395 bytes)
+    │   ├── multiagent-coordination-system.md (18475 bytes)
+    │   └── multiagent-system.md (9425 bytes)
     ├── ai/
+    │   ├── README.md (1235 bytes)
     │   ├── agent-framework.md (3092 bytes)
     │   └── agi-safety.md (3561 bytes)
     ├── analysis/
@@ -38,7 +42,8 @@ Root: /home/trim/Documents/operations/docs
     ├── analytics/
     │   └── analytics-platform.md (4441 bytes)
     ├── api/
-    │   └── index.md (5787 bytes)
+    │   ├── index.md (5787 bytes)
+    │   └── reference.md (25685 bytes)
     ├── architecture/
     │   ├── system-architecture.md (3023 bytes)
     │   ├── tag-hierarchy.md (8224 bytes)
@@ -53,9 +58,13 @@ Root: /home/trim/Documents/operations/docs
     │   ├── note-refactoring.md (9473 bytes)
     │   └── templater-workflows.md (9583 bytes)
     ├── configuration/
+    │   ├── README.md (1399 bytes)
     │   ├── obsidian-configuration.md (6847 bytes)
     │   └── obsidian-settings.md (5526 bytes)
     ├── core/
+    │   ├── integration/
+    │   │   └── patterns/
+    │   │       └── README.md (6150 bytes)
     │   ├── core-documentation.md (6552 bytes)
     │   ├── getting-started.md (2573 bytes)
     │   └── index.md (3853 bytes)
@@ -76,8 +85,117 @@ Root: /home/trim/Documents/operations/docs
     │   ├── release-management.md (5396 bytes)
     │   ├── testing-strategy.md (5658 bytes)
     │   └── version-control.md (5097 bytes)
-    ├── experiments/
+    ├── dialogs/
+    │   └── 1-whose_on_first.md (5086 bytes)
     ├── frameworks/
+    │   ├── Events/
+    │   │   ├── Command/
+    │   │   │   ├── Roles/
+    │   │   │   │   ├── command_center_director.md (4720 bytes)
+    │   │   │   │   ├── security_coordinator.md (4917 bytes)
+    │   │   │   │   └── technical_operations_manager.md (5067 bytes)
+    │   │   │   ├── command_center_operations.md (6549 bytes)
+    │   │   │   ├── crisis_protocols.md (6637 bytes)
+    │   │   │   ├── decision_matrix.md (4836 bytes)
+    │   │   │   └── event_command_center.md (6072 bytes)
+    │   │   ├── Emergency/
+    │   │   │   └── event_emergency_procedures.md (6650 bytes)
+    │   │   ├── Monitoring/
+    │   │   │   └── event_monitoring_dashboard.md (4661 bytes)
+    │   │   ├── Operations/
+    │   │   │   └── event_operations_guide.md (5894 bytes)
+    │   │   └── Planning/
+    │   │       └── event_planning_checklist.md (5590 bytes)
+    │   ├── Risk_Management/
+    │   │   ├── Risk_Appetite_Framework/
+    │   │   │   └── risk_appetite_framework.md (6131 bytes)
+    │   │   ├── Risk_Assessment_Methodology/
+    │   │   │   └── risk_assessment_methodology.md (6098 bytes)
+    │   │   └── Risk_Control_Matrix/
+    │   │       └── risk_control_matrix.md (5901 bytes)
+    │   ├── Security/
+    │   │   ├── cognitive_security_framework.md (8871 bytes)
+    │   │   ├── digital_security_framework.md (9763 bytes)
+    │   │   ├── physical_security_framework.md (7574 bytes)
+    │   │   ├── security_framework.md (9873 bytes)
+    │   │   └── security_framework_integration.md (8749 bytes)
+    │   ├── Technical/
+    │   │   ├── Analytics/
+    │   │   │   ├── analytics_future.md (3475 bytes)
+    │   │   │   ├── analytics_infrastructure.md (3489 bytes)
+    │   │   │   ├── analytics_integration.md (3511 bytes)
+    │   │   │   ├── analytics_intelligence.md (3467 bytes)
+    │   │   │   ├── analytics_platform.md (3529 bytes)
+    │   │   │   ├── analytics_research.md (3446 bytes)
+    │   │   │   ├── data_operations.md (3404 bytes)
+    │   │   │   ├── predictive_analytics.md (3343 bytes)
+    │   │   │   ├── prescriptive_analytics.md (3350 bytes)
+    │   │   │   └── realtime_analytics.md (3283 bytes)
+    │   │   ├── Assets/
+    │   │   │   ├── Advanced/
+    │   │   │   │   ├── asset_features.md (2998 bytes)
+    │   │   │   │   ├── knowledge_integration.md (2982 bytes)
+    │   │   │   │   ├── security_enhancement.md (3100 bytes)
+    │   │   │   │   └── token_features.md (3184 bytes)
+    │   │   │   ├── Analytics/
+    │   │   │   │   ├── market_analytics.md (3744 bytes)
+    │   │   │   │   ├── performance_analytics.md (3797 bytes)
+    │   │   │   │   ├── risk_analytics.md (3935 bytes)
+    │   │   │   │   └── value_analytics.md (3823 bytes)
+    │   │   │   ├── Infrastructure/
+    │   │   │   │   ├── integration_system.md (3991 bytes)
+    │   │   │   │   └── trading_system.md (3969 bytes)
+    │   │   │   ├── asset_classification.md (10143 bytes)
+    │   │   │   ├── asset_management.md (9061 bytes)
+    │   │   │   ├── asset_protection.md (9919 bytes)
+    │   │   │   └── token_framework.md (8288 bytes)
+    │   │   ├── DevOps/
+    │   │   │   ├── build_automation.md (10183 bytes)
+    │   │   │   ├── build_optimization.md (4814 bytes)
+    │   │   │   ├── code_management.md (4262 bytes)
+    │   │   │   ├── deployment_automation.md (11287 bytes)
+    │   │   │   ├── deployment_strategy.md (5425 bytes)
+    │   │   │   ├── devops_framework.md (11637 bytes)
+    │   │   │   ├── infrastructure_code.md (11808 bytes)
+    │   │   │   ├── release_automation.md (5386 bytes)
+    │   │   │   ├── release_coordination.md (5568 bytes)
+    │   │   │   ├── repository_management.md (7954 bytes)
+    │   │   │   └── test_automation.md (5314 bytes)
+    │   │   ├── Governance/
+    │   │   │   └── governance_enhancement.md (3449 bytes)
+    │   │   ├── Implementation/
+    │   │   │   ├── continuous_integration.md (3373 bytes)
+    │   │   │   ├── devsecops_framework.md (3421 bytes)
+    │   │   │   └── quality_assurance.md (3418 bytes)
+    │   │   ├── Infrastructure/
+    │   │   │   ├── storage_system.md (10146 bytes)
+    │   │   │   └── technical_infrastructure_framework.md (6453 bytes)
+    │   │   ├── Integration/
+    │   │   │   └── integration_enhancement.md (3391 bytes)
+    │   │   ├── Performance/
+    │   │   │   └── performance_optimization.md (3512 bytes)
+    │   │   ├── Platform/
+    │   │   │   ├── platform_analytics.md (2819 bytes)
+    │   │   │   ├── platform_architecture.md (3451 bytes)
+    │   │   │   ├── platform_compliance.md (2799 bytes)
+    │   │   │   ├── platform_development.md (2981 bytes)
+    │   │   │   ├── platform_integration.md (3377 bytes)
+    │   │   │   ├── platform_operations.md (3396 bytes)
+    │   │   │   ├── platform_operations_framework.md (3543 bytes)
+    │   │   │   └── platform_security.md (2799 bytes)
+    │   │   └── Security/
+    │   │       ├── application_security.md (9806 bytes)
+    │   │       ├── data_security.md (10069 bytes)
+    │   │       ├── identity_management.md (10252 bytes)
+    │   │       ├── network_security.md (10101 bytes)
+    │   │       ├── security_analytics.md (6855 bytes)
+    │   │       ├── security_architecture.md (10195 bytes)
+    │   │       ├── security_compliance.md (6439 bytes)
+    │   │       ├── security_governance.md (10245 bytes)
+    │   │       ├── security_operations.md (7168 bytes)
+    │   │       ├── security_training.md (7695 bytes)
+    │   │       ├── threat_management.md (8520 bytes)
+    │   │       └── zero_trust_architecture.md (7062 bytes)
     │   ├── agent-framework.md (7447 bytes)
     │   ├── agent_framework.md (4695 bytes)
     │   ├── experiment-management.md (8595 bytes)
@@ -135,6 +253,7 @@ Root: /home/trim/Documents/operations/docs
     │   ├── slack-integration.md (10097 bytes)
     │   └── teams-integration.md (10211 bytes)
     ├── knowledge/
+    │   ├── README.md (1346 bytes)
     │   ├── archival-procedures.md (9800 bytes)
     │   ├── content-analysis.md (4422 bytes)
     │   ├── feedback-loops.md (9778 bytes)
@@ -144,7 +263,13 @@ Root: /home/trim/Documents/operations/docs
     │   ├── knowledge_base.md (3656 bytes)
     │   ├── retention-policies.md (9819 bytes)
     │   └── semantic-search.md (3996 bytes)
+    ├── language/
+    │   └── case/
+    │       └── organizational_case.md (9228 bytes)
+    ├── legal/
+    │   └── README.md (1340 bytes)
     ├── maintenance/
+    │   ├── README.md (1404 bytes)
     │   ├── annual-audit.md (9251 bytes)
     │   ├── archive-process.md (9226 bytes)
     │   ├── contact-information.md (9394 bytes)
@@ -163,18 +288,33 @@ Root: /home/trim/Documents/operations/docs
     │   ├── template-updates.md (7961 bytes)
     │   └── weekly-review.md (9102 bytes)
     ├── meta/
+    │   ├── comprehensive_final_assessment.md (15559 bytes)
+    │   ├── comprehensive_improvement_assessment.md (35365 bytes)
     │   ├── core-documentation.md (6199 bytes)
+    │   ├── documentation-about-documentation.md (4772 bytes)
     │   ├── documentation-hierarchy.md (5438 bytes)
     │   ├── documentation-workflow.md (5033 bytes)
     │   ├── documentation_architecture.md (5900 bytes)
     │   ├── documentation_enhancement_project.md (3700 bytes)
     │   ├── documentation_unit_index.md (3462 bytes)
+    │   ├── final_implementation_summary.md (16649 bytes)
     │   ├── git-workflow.md (5503 bytes)
+    │   ├── implementation_progress.md (10954 bytes)
+    │   ├── integration_framework.md (5055 bytes)
+    │   ├── knowledge_management.md (3854 bytes)
     │   ├── metadata-standards.md (5146 bytes)
+    │   ├── metadata_standards.md (3177 bytes)
     │   ├── naming-conventions.md (4020 bytes)
     │   ├── obsidian-configuration.md (4862 bytes)
     │   ├── obsidian-style-guide.md (14622 bytes)
-    │   └── style-guide.md (4185 bytes)
+    │   ├── quality_assurance.md (4453 bytes)
+    │   ├── repository_structure.md (3986 bytes)
+    │   ├── search_taxonomy.md (3671 bytes)
+    │   ├── semantic_versioning.md (3845 bytes)
+    │   ├── style-guide.md (4185 bytes)
+    │   ├── template-usage-guide.md (5317 bytes)
+    │   ├── template_framework.md (5323 bytes)
+    │   └── version_control.md (3744 bytes)
     ├── metrics/
     │   ├── adoption-metrics.md (1 bytes)
     │   ├── content-updates.md (8496 bytes)
@@ -231,11 +371,14 @@ Root: /home/trim/Documents/operations/docs
     │   ├── custom-views.md (9527 bytes)
     │   ├── quick-access.md (9419 bytes)
     │   └── smart-navigation.md (9429 bytes)
+    ├── notation/
+    │   └── tool_of_thought_notation.md (18214 bytes)
     ├── onboarding/
     │   └── index.md (16547 bytes)
     ├── operations/
     │   ├── capacity-planning.md (1 bytes)
     │   ├── change-management.md (5456 bytes)
+    │   ├── deployment-guide.md (11172 bytes)
     │   ├── incident-response.md (5452 bytes)
     │   ├── index.md (11337 bytes)
     │   ├── maintenance-tasks.md (5824 bytes)
@@ -285,7 +428,38 @@ Root: /home/trim/Documents/operations/docs
     │   ├── project-guidelines.md (4098 bytes)
     │   ├── project-lifecycle.md (4988 bytes)
     │   └── task-framework.md (4751 bytes)
+    ├── prompts/
+    │   ├── README.md (9124 bytes)
+    │   ├── ai_model_development.md (14738 bytes)
+    │   ├── code_analysis_and_modification.md (14697 bytes)
+    │   ├── code_quality_testing.md (12854 bytes)
+    │   ├── codebase_compatibility_and_integration.md (17169 bytes)
+    │   ├── collaborative_development.md (16102 bytes)
+    │   ├── comprehensive_reasoning.md (6556 bytes)
+    │   ├── continuous_learning.md (13898 bytes)
+    │   ├── creative_thinking.md (14670 bytes)
+    │   ├── data_decision_making.md (15115 bytes)
+    │   ├── devops_cicd.md (15210 bytes)
+    │   ├── effective_communication.md (11191 bytes)
+    │   ├── ethical_agency.md (9620 bytes)
+    │   ├── human_ai_collaboration.md (15669 bytes)
+    │   ├── intelligence_analysis.md (15018 bytes)
+    │   ├── knowledge_management.md (17108 bytes)
+    │   ├── methodical_diligence.md (9178 bytes)
+    │   ├── performance_optimization.md (16181 bytes)
+    │   ├── refactoring_maintenance.md (13613 bytes)
+    │   ├── requirements_engineering.md (14496 bytes)
+    │   ├── secure_coding.md (13677 bytes)
+    │   ├── self_assessment_and_metacognition.md (15356 bytes)
+    │   ├── software_architecture.md (14788 bytes)
+    │   ├── software_design_principles.md (12678 bytes)
+    │   ├── strategic_intelligence.md (15184 bytes)
+    │   ├── strategic_planning.md (12264 bytes)
+    │   ├── system_design_architecture.md (19004 bytes)
+    │   ├── technical_problem_solving.md (12102 bytes)
+    │   └── thoughtful_exploration.md (10330 bytes)
     ├── quality/
+    │   ├── README.md (1535 bytes)
     │   └── qa-process.md (4971 bytes)
     ├── reference/
     │   └── reference-moc.md (4558 bytes)
@@ -338,38 +512,53 @@ Root: /home/trim/Documents/operations/docs
     │   ├── backup-system.md (7674 bytes)
     │   └── knowledge-management.md (8869 bytes)
     ├── templates/
-    │   ├── agents/
     │   ├── analysis/
     │   │   └── strategic_analysis_template.md (4656 bytes)
-    │   ├── analytics/
     │   ├── core/
     │   │   └── base-template.md (557 bytes)
     │   ├── documentation/
     │   │   └── documentation-template.md (1 bytes)
-    │   ├── experiments/
     │   ├── policy/
     │   │   └── governance_policy_template.md (3962 bytes)
     │   ├── process/
     │   │   └── operational_process_template.md (4242 bytes)
     │   ├── project/
     │   │   └── project-template.md (1 bytes)
-    │   ├── research/
     │   ├── README-template.md (1270 bytes)
+    │   ├── audit_template.md (3254 bytes)
+    │   ├── charter_template.md (3976 bytes)
+    │   ├── committee_template.md (5806 bytes)
     │   ├── decision-record-template.md (3747 bytes)
+    │   ├── deployment_release_template.md (6854 bytes)
+    │   ├── event_template.md (3345 bytes)
     │   ├── feedback-template.md (8196 bytes)
+    │   ├── framework_template.md (3866 bytes)
     │   ├── guide-template.md (4971 bytes)
     │   ├── incident-template.md (3978 bytes)
+    │   ├── incident_response_template.md (4848 bytes)
+    │   ├── integration_template.md (6754 bytes)
     │   ├── meeting-notes-template.md (2671 bytes)
     │   ├── meeting-template.md (7737 bytes)
     │   ├── policy-template.md (4897 bytes)
+    │   ├── policy_template.md (4534 bytes)
+    │   ├── procedure_template.md (6522 bytes)
     │   ├── process-template.md (4630 bytes)
+    │   ├── process_template.md (4962 bytes)
     │   ├── project-management-template.md (3672 bytes)
     │   ├── project-template.md (5982 bytes)
+    │   ├── project_template.md (6256 bytes)
+    │   ├── report_template.md (24278 bytes)
     │   ├── review-template.md (9098 bytes)
+    │   ├── review_testing_template.md (6151 bytes)
+    │   ├── sop_template.md (22039 bytes)
     │   ├── status-report-template.md (8126 bytes)
     │   ├── system-documentation-template.md (5427 bytes)
+    │   ├── system_template.md (5086 bytes)
     │   ├── task-template.md (2288 bytes)
+    │   ├── task_completion_template.md (6066 bytes)
+    │   ├── training_template.md (1 bytes)
     │   ├── unit_documentation_template.md (2256 bytes)
+    │   ├── unit_template.md (16845 bytes)
     │   └── workflow-template.md (3778 bytes)
     ├── testing/
     │   ├── index.md (20890 bytes)
@@ -386,6 +575,7 @@ Root: /home/trim/Documents/operations/docs
     │   ├── index.md (4288 bytes)
     │   └── monitoring-tools.md (5020 bytes)
     ├── training/
+    │   ├── README.md (1308 bytes)
     │   ├── best-practices.md (8780 bytes)
     │   ├── contribution-guidelines.md (8403 bytes)
     │   ├── quick-start.md (8494 bytes)
@@ -397,7 +587,10 @@ Root: /home/trim/Documents/operations/docs
     │   ├── user-guides.md (8301 bytes)
     │   └── workshop-materials.md (9232 bytes)
     ├── troubleshooting/
+    │   ├── README.md (1224 bytes)
     │   └── index.md (10815 bytes)
+    ├── ux/
+    │   └── README.md (1356 bytes)
     ├── visual/
     │   ├── custom-themes.md (8167 bytes)
     │   ├── graph-customization.md (9291 bytes)
@@ -408,6 +601,9 @@ Root: /home/trim/Documents/operations/docs
     │   ├── research-workflow.md (8656 bytes)
     │   └── version-control-workflow.md (9065 bytes)
     ├── 000-home.md (2880 bytes)
+    ├── README.md (616 bytes)
     ├── index.md (3536 bytes)
-    └── master-index.md (8001 bytes)
+    ├── master-index.md (8119 bytes)
+    ├── multi_agent_workflow.md (8492 bytes)
+    └── openai-client.md (6429 bytes)
 ```

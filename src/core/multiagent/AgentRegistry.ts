@@ -140,12 +140,15 @@ export class AgentRegistry implements IAgentRegistry {
     if (this.agents.has(agent.id)) {
       throw new Error(`Agent with ID ${agent.id} already exists`);
     }
-    
+
     this.agents.set(agent.id, { ...agent });
-    
+
+    // Index agent capabilities
+    this.indexCapabilities(agent);
+
     // Update shared state
     await this.stateManager.setState(`agents.${agent.id}`, agent);
-    
+
     return true;
   }
 
@@ -155,15 +158,19 @@ export class AgentRegistry implements IAgentRegistry {
    * @returns True if successful
    */
   async unregisterAgent(agentId: string): Promise<boolean> {
-    if (!this.agents.has(agentId)) {
+    const agent = this.agents.get(agentId);
+    if (!agent) {
       throw new Error(`Agent with ID ${agentId} not found`);
     }
-    
+
+    // Remove from capability index
+    this.removeFromCapabilityIndex(agent);
+
     this.agents.delete(agentId);
-    
+
     // Update shared state
     await this.stateManager.setState(`agents.${agentId}`, undefined);
-    
+
     return true;
   }
 
@@ -213,18 +220,12 @@ export class AgentRegistry implements IAgentRegistry {
       }
       
       if (filter.status && filter.status.length > 0) {
-        agents = agents.filter(agent => 
-          filter.status?.includes(typeof agent.status === 'string' ? agent.status : agent.status.state)
-        );
+        agents = agents.filter(agent => filter.status?.includes(agent.status));
       }
-      
+
       if (filter.capabilities && filter.capabilities.length > 0) {
-        agents = agents.filter(agent => 
-          filter.capabilities?.some(cap => 
-            agent.capabilities.some(agentCap => 
-              typeof agentCap === 'string' ? agentCap === cap : agentCap.name === cap
-            )
-          )
+        agents = agents.filter(agent =>
+          filter.capabilities?.some(cap => agent.capabilities.includes(cap))
         );
       }
       
@@ -255,8 +256,8 @@ export class AgentRegistry implements IAgentRegistry {
       name: agent.name,
       type: agent.type,
       description: agent.description || '',
-      capabilities: agent.capabilities.map(cap => typeof cap === 'string' ? cap : cap.name),
-      status: typeof agent.status === 'string' ? agent.status : agent.status.state,
+      capabilities: agent.capabilities,
+      status: agent.status,
       metadata: agent.metadata || {},
       preferredModel: agent.preferredModel || '',
       lastActive: agent.lastActive || Date.now(),
@@ -270,7 +271,7 @@ export class AgentRegistry implements IAgentRegistry {
    * @param capabilities New capabilities
    * @returns Success status
    */
-  async updateAgentCapabilities(agentId: string, capabilities: Capability[]): Promise<boolean> {
+  async updateAgentCapabilities(agentId: string, capabilities: string[]): Promise<boolean> {
     try {
       const agent = this.agents.get(agentId);
       if (!agent) {
@@ -278,7 +279,7 @@ export class AgentRegistry implements IAgentRegistry {
       }
 
       // Remove old capabilities from index
-      this.removeFromCapabilitiesIndex(agent);
+      this.removeFromCapabilityIndex(agent);
 
       // Update agent capabilities
       agent.capabilities = capabilities;
@@ -303,7 +304,7 @@ export class AgentRegistry implements IAgentRegistry {
    * @param status New status
    * @returns Success status
    */
-  async updateAgentStatus(agentId: string, status: AgentStatus): Promise<boolean> {
+  async updateAgentStatus(agentId: string, status: string): Promise<boolean> {
     try {
       const agent = this.agents.get(agentId);
       if (!agent) {
@@ -323,7 +324,7 @@ export class AgentRegistry implements IAgentRegistry {
    * @param agentId Agent ID
    * @returns Agent status or null
    */
-  async getAgentStatus(agentId: string): Promise<AgentStatus | null> {
+  async getAgentStatus(agentId: string): Promise<string | null> {
     const agent = this.agents.get(agentId);
     return agent?.status || null;
   }
@@ -335,7 +336,7 @@ export class AgentRegistry implements IAgentRegistry {
    */
   async isAgentAvailable(agentId: string): Promise<boolean> {
     const status = await this.getAgentStatus(agentId);
-    return status?.state === 'available' && status.healthStatus.isHealthy;
+    return status === 'available';
   }
 
   /**
@@ -352,7 +353,7 @@ export class AgentRegistry implements IAgentRegistry {
       return false;
     }
 
-    if (!agent.status || !agent.status.state) {
+    if (!agent.status) {
       return false;
     }
 
@@ -365,11 +366,23 @@ export class AgentRegistry implements IAgentRegistry {
    */
   private indexCapabilities(agent: Agent): void {
     agent.capabilities.forEach(capability => {
-      const cap = typeof capability === 'string' ? { name: capability } : capability;
-      if (!this.capabilityIndex.has(cap.name)) {
-        this.capabilityIndex.set(cap.name, new Set());
+      if (!this.capabilityIndex.has(capability)) {
+        this.capabilityIndex.set(capability, new Set());
       }
-      this.capabilityIndex.get(cap.name)?.add(agent.id);
+      this.capabilityIndex.get(capability)?.add(agent.id);
+    });
+  }
+
+  private removeFromCapabilityIndex(agent: Agent): void {
+    agent.capabilities.forEach(capability => {
+      const agentSet = this.capabilityIndex.get(capability);
+      if (agentSet) {
+        agentSet.delete(agent.id);
+        // Clean up empty sets
+        if (agentSet.size === 0) {
+          this.capabilityIndex.delete(capability);
+        }
+      }
     });
   }
 
@@ -400,10 +413,7 @@ export class AgentRegistry implements IAgentRegistry {
     const agents = Array.from(this.agents.values());
 
     return agents.filter(agent => {
-      const matchingCapability = agent.capabilities.find(c => (typeof c === 'string' ? c : c.name) === capability);
-      if (!matchingCapability) return false;
-
-      return true;
+      return agent.capabilities.includes(capability);
     });
   }
 
@@ -421,7 +431,7 @@ export class AgentRegistry implements IAgentRegistry {
    * @returns Agents in the specified state
    */
   async getAgentsByState(state: AgentStatus['state']): Promise<Agent[]> {
-    return Array.from(this.agents.values()).filter(agent => agent.status.state === state);
+    return Array.from(this.agents.values()).filter(agent => agent.status === state);
   }
 
   /**
@@ -454,9 +464,7 @@ export class AgentRegistry implements IAgentRegistry {
     };
 
     for (const agent of this.agents.values()) {
-        const statusKey = (typeof agent.status === 'object' && agent.status !== null && 'state' in agent.status)
-                          ? agent.status.state
-                          : (typeof agent.status === 'string' ? agent.status : 'offline');
+        const statusKey = agent.status;
 
         if (Object.prototype.hasOwnProperty.call(counts, statusKey)) {
              counts[statusKey as keyof typeof counts]++;
@@ -528,7 +536,7 @@ export class AgentRegistry implements IAgentRegistry {
         return [];
       }
 
-      return agent.capabilities.map(cap => typeof cap === 'string' ? cap : cap.name);
+      return agent.capabilities;
     } catch (error: any) {
       console.error(`Failed to get agent capabilities: ${error.message}`);
       return [];

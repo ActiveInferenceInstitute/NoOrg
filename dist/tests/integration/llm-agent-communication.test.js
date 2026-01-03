@@ -103,7 +103,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
             (0, chai_1.expect)(jsonResponse).to.have.property('role');
             (0, chai_1.expect)(jsonResponse).to.have.property('capabilities').that.is.an('array');
             (0, chai_1.expect)(jsonResponse.capabilities).to.have.lengthOf(3);
-        }).timeout(30000);
+        });
         it('should use structured messages format for conversation', async () => {
             const messages = [
                 { role: 'system', content: 'You are a helpful assistant that responds in JSON format.' },
@@ -126,7 +126,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
             (0, chai_1.expect)(jsonResponse).to.have.property('priority').that.is.a('string');
             (0, chai_1.expect)(['high', 'medium', 'low']).to.include(jsonResponse.priority);
             (0, chai_1.expect)(jsonResponse).to.have.property('estimatedDuration').that.is.a('number');
-        }).timeout(30000);
+        });
     });
     describe('Agent-to-Agent Communication', () => {
         let fixture;
@@ -373,7 +373,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
             (0, chai_1.expect)(response.usage.total_tokens).to.be.a('number');
             // Verify total is sum of prompt and completion
             (0, chai_1.expect)(response.usage.total_tokens).to.equal(response.usage.prompt_tokens + response.usage.completion_tokens);
-        }).timeout(30000);
+        });
         it('should generate embeddings for text', async () => {
             const text = 'Quantum computing uses quantum phenomena to perform operations on data.';
             const embedding = await openAIClient.generateEmbedding(text);
@@ -387,7 +387,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
             embedding.forEach(value => {
                 (0, chai_1.expect)(value).to.be.a('number');
             });
-        }).timeout(30000);
+        });
         it('should retrieve available models', async () => {
             const models = await openAIClient.getAvailableModels();
             console.log(`\n=== Available Models ===`);
@@ -396,7 +396,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
             console.log(`======================\n`);
             (0, chai_1.expect)(models).to.be.an('array');
             (0, chai_1.expect)(models.length).to.be.greaterThan(0);
-        }).timeout(30000);
+        });
         it('should get model information', async () => {
             const defaultModel = openAIClient.getDefaultModel();
             const modelInfo = await openAIClient.getModelInfo(defaultModel);
@@ -411,7 +411,7 @@ describe.skip('LLM Agent Communication Integration Tests', () => {
                 (0, chai_1.expect)(modelInfo.contextWindow).to.be.a('number');
                 (0, chai_1.expect)(modelInfo.capabilities).to.be.an('array');
             }
-        }).timeout(30000);
+        });
     });
 });
 //# sourceMappingURL=llm-agent-communication.test.js.map

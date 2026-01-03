@@ -6,6 +6,7 @@ import sys
 import json
 import uuid
 import pytest
+import pytest_asyncio
 import asyncio
 import logging
 import tempfile
@@ -69,7 +70,7 @@ def test_config():
     }
 
 # Database fixtures
-@pytest.fixture
+@pytest_asyncio.fixture
 async def mock_db():
     """Create a mock database for testing."""
     class AsyncDictKeys:
@@ -248,7 +249,7 @@ async def mock_storage(temp_storage):
     return MockStorage(temp_storage)
 
 # Error injection fixtures
-@pytest.fixture
+@pytest_asyncio.fixture
 async def error_generator():
     """Generate various types of errors for testing."""
     class ErrorGenerator:
@@ -347,7 +348,7 @@ def generate_test_data(schema: Dict) -> Dict:
     return result
 
 # Cleanup fixtures
-@pytest.fixture(autouse=True)
+@pytest_asyncio.fixture(autouse=True)
 async def cleanup_tasks():
     """Cleanup any resources after each test."""
     yield

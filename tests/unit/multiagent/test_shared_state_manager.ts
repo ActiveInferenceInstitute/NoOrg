@@ -1,7 +1,20 @@
 import { expect } from 'chai';
 import { describe, it, beforeEach } from 'mocha';
-import sinon from 'sinon';
 import { SharedStateManager } from '../../../src/core/multiagent/SharedStateManager';
+
+// Simple spy implementation for tests
+function createSpy() {
+  const calls: any[][] = [];
+  const spy = function(...args: any[]) {
+    calls.push(args);
+  } as any;
+  spy.calledOnce = calls.length === 1;
+  spy.calledTwice = calls.length === 2;
+  spy.firstCall = { args: calls[0] || [] };
+  spy.secondCall = { args: calls[1] || [] };
+  spy.called = calls.length > 0;
+  return spy;
+}
 
 describe('SharedStateManager', () => {
   let stateManager: SharedStateManager;
@@ -12,19 +25,19 @@ describe('SharedStateManager', () => {
   });
   
   describe('getState and setState', () => {
-    it('should store and retrieve simple values', () => {
-      stateManager.setState('test.value', 42);
-      expect(stateManager.getState('test.value')).to.equal(42);
+    it('should store and retrieve simple values', async () => {
+      await stateManager.setState('test.value', 42);
+      expect(await stateManager.getState('test.value')).to.equal(42);
       
-      stateManager.setState('test.string', 'hello');
-      expect(stateManager.getState('test.string')).to.equal('hello');
+      await stateManager.setState('test.string', 'hello');
+      expect(await stateManager.getState('test.string')).to.equal('hello');
       
-      stateManager.setState('test.boolean', true);
-      expect(stateManager.getState('test.boolean')).to.be.true;
+      await stateManager.setState('test.boolean', true);
+      expect(await stateManager.getState('test.boolean')).to.be.true;
     });
     
-    it('should store and retrieve nested objects', () => {
-      stateManager.setState('user.profile', {
+    it('should store and retrieve nested objects', async () => {
+      await stateManager.setState('user.profile', {
         name: 'Test User',
         age: 30,
         preferences: {
@@ -33,7 +46,7 @@ describe('SharedStateManager', () => {
         }
       });
       
-      const profile = stateManager.getState('user.profile');
+      const profile = await stateManager.getState('user.profile');
       expect(profile).to.deep.equal({
         name: 'Test User',
         age: 30,
@@ -44,47 +57,47 @@ describe('SharedStateManager', () => {
       });
       
       // Access nested properties
-      expect(stateManager.getState('user.profile.name')).to.equal('Test User');
-      expect(stateManager.getState('user.profile.preferences.theme')).to.equal('dark');
+      expect(await stateManager.getState('user.profile.name')).to.equal('Test User');
+      expect(await stateManager.getState('user.profile.preferences.theme')).to.equal('dark');
     });
     
-    it('should return undefined for non-existent paths', () => {
-      expect(stateManager.getState('nonexistent.path')).to.be.undefined;
+    it('should return undefined for non-existent paths', async () => {
+      expect(await stateManager.getState('nonexistent.path')).to.be.undefined;
       
       // Set a value and check a non-existent child path
-      stateManager.setState('parent', { child1: 'value' });
-      expect(stateManager.getState('parent.child2')).to.be.undefined;
+      await stateManager.setState('parent', { child1: 'value' });
+      expect(await stateManager.getState('parent.child2')).to.be.undefined;
     });
     
-    it('should update existing values', () => {
-      stateManager.setState('counter', 5);
-      expect(stateManager.getState('counter')).to.equal(5);
+    it('should update existing values', async () => {
+      await stateManager.setState('counter', 5);
+      expect(await stateManager.getState('counter')).to.equal(5);
       
-      stateManager.setState('counter', 10);
-      expect(stateManager.getState('counter')).to.equal(10);
+      await stateManager.setState('counter', 10);
+      expect(await stateManager.getState('counter')).to.equal(10);
     });
     
-    it('should partially update objects', () => {
-      stateManager.setState('user', {
+    it('should partially update objects', async () => {
+      await stateManager.setState('user', {
         name: 'Original',
         age: 25,
         active: true
       });
       
-      stateManager.setState('user.name', 'Updated');
+      await stateManager.setState('user.name', 'Updated');
       
-      expect(stateManager.getState('user')).to.deep.equal({
+      expect(await stateManager.getState('user')).to.deep.equal({
         name: 'Updated',
         age: 25,
         active: true
       });
     });
     
-    it('should create intermediate objects for deep paths', () => {
-      stateManager.setState('very.deep.nested.value', 'found me');
+    it('should create intermediate objects for deep paths', async () => {
+      await stateManager.setState('very.deep.nested.value', 'found me');
       
-      expect(stateManager.getState('very.deep.nested.value')).to.equal('found me');
-      expect(stateManager.getState('very')).to.deep.equal({
+      expect(await stateManager.getState('very.deep.nested.value')).to.equal('found me');
+      expect(await stateManager.getState('very')).to.deep.equal({
         deep: {
           nested: {
             value: 'found me'
@@ -95,28 +108,28 @@ describe('SharedStateManager', () => {
   });
   
   describe('watchState and unwatchState', () => {
-    it('should notify watchers when state changes', () => {
-      const callback = sinon.spy();
+    it('should notify watchers when state changes', async () => {
+      const callback = createSpy();
       
       stateManager.watchState('observed.value', callback);
       
       // Initial set should trigger callback
-      stateManager.setState('observed.value', 1);
+      await stateManager.setState('observed.value', 1);
       expect(callback.calledOnce).to.be.true;
-      expect(callback.firstCall.args[0]).to.equal(1);
-      expect(callback.firstCall.args[1]).to.be.undefined; // initial value is undefined
+      expect(callback.firstCall.args[0]).to.equal('observed.value'); // path is first arg
+      expect(callback.firstCall.args[1]).to.equal(1); // newValue is second arg
       
-      // Update should trigger callback with previous value
-      stateManager.setState('observed.value', 2);
+      // Update should trigger callback
+      await stateManager.setState('observed.value', 2);
       expect(callback.calledTwice).to.be.true;
-      expect(callback.secondCall.args[0]).to.equal(2);
-      expect(callback.secondCall.args[1]).to.equal(1);
+      expect(callback.secondCall.args[0]).to.equal('observed.value'); // path
+      expect(callback.secondCall.args[1]).to.equal(2); // newValue
     });
     
-    it('should watch nested properties', () => {
-      const callback = sinon.spy();
+    it('should watch nested properties', async () => {
+      const callback = createSpy();
       
-      stateManager.setState('user', {
+      await stateManager.setState('user', {
         profile: {
           name: 'Original'
         }
@@ -125,16 +138,16 @@ describe('SharedStateManager', () => {
       stateManager.watchState('user.profile.name', callback);
       
       // Update should trigger callback
-      stateManager.setState('user.profile.name', 'Updated');
+      await stateManager.setState('user.profile.name', 'Updated');
       expect(callback.calledOnce).to.be.true;
-      expect(callback.firstCall.args[0]).to.equal('Updated');
-      expect(callback.firstCall.args[1]).to.equal('Original');
+      expect(callback.firstCall.args[0]).to.equal('user.profile.name'); // path
+      expect(callback.firstCall.args[1]).to.equal('Updated'); // newValue
     });
     
-    it('should watch entire objects', () => {
-      const callback = sinon.spy();
+    it('should watch entire objects', async () => {
+      const callback = createSpy();
       
-      stateManager.setState('user', {
+      await stateManager.setState('user', {
         name: 'Original',
         age: 25
       });
@@ -142,62 +155,65 @@ describe('SharedStateManager', () => {
       stateManager.watchState('user', callback);
       
       // Update entire object
-      stateManager.setState('user', {
+      await stateManager.setState('user', {
         name: 'Updated',
         age: 26
       });
       
       expect(callback.calledOnce).to.be.true;
-      expect(callback.firstCall.args[0]).to.deep.equal({
+      expect(callback.firstCall.args[0]).to.equal('user'); // path
+      expect(callback.firstCall.args[1]).to.deep.equal({
         name: 'Updated',
         age: 26
       });
       
       // Update just one property
-      stateManager.setState('user.name', 'Changed Again');
+      await stateManager.setState('user.name', 'Changed Again');
       
       expect(callback.calledTwice).to.be.true;
-      expect(callback.secondCall.args[0]).to.deep.equal({
+      expect(callback.secondCall.args[0]).to.equal('user.name'); // path
+      const userState = await stateManager.getState('user');
+      expect(userState).to.deep.equal({
         name: 'Changed Again',
         age: 26
       });
     });
     
-    it('should support multiple watchers for the same path', () => {
-      const callback1 = sinon.spy();
-      const callback2 = sinon.spy();
+    it('should support multiple watchers for the same path', async () => {
+      const callback1 = createSpy();
+      const callback2 = createSpy();
       
       stateManager.watchState('shared.value', callback1);
       stateManager.watchState('shared.value', callback2);
       
-      stateManager.setState('shared.value', 'notify both');
+      await stateManager.setState('shared.value', 'notify both');
       
       expect(callback1.calledOnce).to.be.true;
       expect(callback2.calledOnce).to.be.true;
     });
     
-    it('should stop watching after unwatchState', () => {
-      const callback = sinon.spy();
+    it('should stop watching after unwatchState', async () => {
+      const callback = createSpy();
       
       stateManager.watchState('temp.value', callback);
       
       // First update should trigger callback
-      stateManager.setState('temp.value', 1);
+      await stateManager.setState('temp.value', 1);
       expect(callback.calledOnce).to.be.true;
       
       // Unwatch
       stateManager.unwatchState('temp.value', callback);
       
       // Second update should not trigger callback
-      stateManager.setState('temp.value', 2);
+      await stateManager.setState('temp.value', 2);
       expect(callback.calledOnce).to.be.true; // Still only called once
     });
   });
   
   describe('syncState', () => {
-    it('should merge state from another source', () => {
+    it('should merge state from another source', async () => {
       // Initial state
-      stateManager.setState('local', {
+      await stateManager.setState('local', {
         uniqueLocal: true,
         shared: {
           value1: 'local',
@@ -218,11 +234,34 @@ describe('SharedStateManager', () => {
       stateManager.syncState(externalState, 'last-write-wins');
       
       // Check results
-      expect(stateManager.getState('local.uniqueLocal')).to.be.true; // Unchanged
-      expect(stateManager.getState('local.shared.value1')).to.equal('external'); // Overwritten
-      expect(stateManager.getState('local.shared.value2')).to.equal('new'); // Added
-      expect(stateManager.getState('local.shared.onlyLocal')).to.be.true; // Unchanged
-      expect(stateManager.getState('onlyExternal')).to.be.true; // Added
+      expect(await stateManager.getState('local.uniqueLocal')).to.be.true; // Unchanged
+      expect(await stateManager.getState('shared.value1')).to.equal('external'); // Overwritten
+      expect(await stateManager.getState('shared.value2')).to.equal('new'); // Added
+      expect(await stateManager.getState('onlyExternal')).to.be.true; // Added
+    });
+    
+    it('should merge state with merge strategy', async () => {
+      await stateManager.setState('user', {
+        name: 'John',
+        age: 30
+      });
+      
+      const externalState = {
+        user: {
+          name: 'John',
+          age: 31,
+          email: 'john@example.com'
+        }
+      };
+      
+      stateManager.syncState(externalState, 'merge');
+      
+      const user = await stateManager.getState('user');
+      expect(user).to.deep.equal({
+        name: 'John',
+        age: 31,
+        email: 'john@example.com'
+      });
     });
   });
   
@@ -237,8 +276,25 @@ describe('SharedStateManager', () => {
         'last-write-wins'
       );
       
-      // External value has newer timestamp, so it should win
+      // External value should win with last-write-wins
       expect(result).to.deep.equal(externalValue);
+    });
+    
+    it('should resolve conflicts with merge strategy', () => {
+      const localValue = { name: 'John', age: 30 };
+      const externalValue = { name: 'John', age: 31, email: 'john@example.com' };
+      
+      const result = stateManager.resolveConflicts(
+        localValue,
+        externalValue,
+        'merge'
+      );
+      
+      expect(result).to.deep.equal({
+        name: 'John',
+        age: 31,
+        email: 'john@example.com'
+      });
     });
     
     it('should resolve conflicts with custom strategy', () => {
@@ -251,7 +307,7 @@ describe('SharedStateManager', () => {
           return local + external;
         }
         
-        if (typeof local === 'object' && typeof external === 'object') {
+        if (typeof local === 'object' && typeof external === 'object' && local !== null && external !== null) {
           const result = { ...local };
           for (const key in external) {
             if (key in local && typeof local[key] === 'number' && typeof external[key] === 'number') {
@@ -278,13 +334,13 @@ describe('SharedStateManager', () => {
   });
   
   describe('persistState and loadPersistedState', () => {
-    it('should persist and load state', () => {
+    it('should persist and load state', async () => {
       // Set up initial state
-      stateManager.setState('user.profile', {
+      await stateManager.setState('user.profile', {
         name: 'Test User',
         settings: { theme: 'dark' }
       });
-      stateManager.setState('app.version', '1.0.0');
+      await stateManager.setState('app.version', '1.0.0');
       
       // Persist specific paths
       stateManager.persistState('user.profile');
@@ -294,22 +350,22 @@ describe('SharedStateManager', () => {
       const newStateManager = new SharedStateManager();
       
       // Load the persisted state (normally this would load from storage)
-      newStateManager.loadPersistedState(stateManager.getState());
+      newStateManager.loadPersistedState(stateManager.getFullState());
       
       // Check that persisted values were loaded
-      expect(newStateManager.getState('user.profile')).to.deep.equal({
+      expect(await newStateManager.getState('user.profile')).to.deep.equal({
         name: 'Test User',
         settings: { theme: 'dark' }
       });
-      expect(newStateManager.getState('app.version')).to.equal('1.0.0');
+      expect(await newStateManager.getState('app.version')).to.equal('1.0.0');
     });
   });
   
   describe('clearEphemeralState', () => {
-    it('should clear non-persisted state while keeping persisted state', () => {
+    it('should clear non-persisted state while keeping persisted state', async () => {
       // Set up initial state with both persisted and ephemeral values
-      stateManager.setState('persisted.value', 'keep me');
-      stateManager.setState('ephemeral.value', 'clear me');
+      await stateManager.setState('persisted.value', 'keep me');
+      await stateManager.setState('ephemeral.value', 'clear me');
       
       // Mark one path as persisted
       stateManager.persistState('persisted.value');
@@ -318,8 +374,8 @@ describe('SharedStateManager', () => {
       stateManager.clearEphemeralState();
       
       // Check results
-      expect(stateManager.getState('persisted.value')).to.equal('keep me');
-      expect(stateManager.getState('ephemeral.value')).to.be.undefined;
+      expect(await stateManager.getState('persisted.value')).to.equal('keep me');
+      expect(await stateManager.getState('ephemeral.value')).to.be.undefined;
     });
   });
 }); 

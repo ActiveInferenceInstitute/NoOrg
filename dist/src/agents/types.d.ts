@@ -7,7 +7,7 @@ export interface Agent {
     type: string;
     description?: string;
     capabilities: string[];
-    status: 'initializing' | 'available' | 'busy' | 'offline' | 'error';
+    status: string;
     metadata?: Record<string, any>;
     preferredModel?: string;
     lastActive: number;

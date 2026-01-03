@@ -103,7 +103,7 @@ export class LLMAgent implements Agent {
         model: modelToUse,
         systemPrompt: this.systemPrompt,
         temperature: 0.7,
-        maxTokens: config.DEFAULT_MAX_TOKENS || 2000
+        maxTokens: 2000
       };
       
       // Use sendPrompt if available, otherwise use createCompletion

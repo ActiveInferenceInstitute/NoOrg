@@ -6,6 +6,96 @@ The Multi-Agent Coordination System provides the core infrastructure for managin
 
 This system enables the creation, coordination, and management of multiple specialized AI agents that can work together to accomplish complex tasks. It provides the foundation for building sophisticated multi-agent applications.
 
+## System Architecture
+
+```mermaid
+graph TB
+    subgraph "Coordination Layer"
+        MAC[MultiAgentCoordinator<br/>Orchestrates agents and tasks]
+    end
+    
+    subgraph "Management Components"
+        AR[AgentRegistry<br/>Agent registration and discovery]
+        TM[TaskManager<br/>Task lifecycle management]
+        SSM[SharedStateManager<br/>State synchronization]
+    end
+    
+    subgraph "Agent Layer"
+        AG1[AnalysisAgent]
+        AG2[WritingAgent]
+        AG3[ResearchAgent]
+        AGN[+13 Specialized Agents]
+    end
+    
+    subgraph "Support Services"
+        PM[PromptManager<br/>Template management]
+        OAI[OpenAIClient<br/>LLM integration]
+        AHM[AgentHealthMonitor<br/>Health tracking]
+    end
+    
+    MAC --> AR
+    MAC --> TM
+    MAC --> SSM
+    MAC --> PM
+    MAC --> OAI
+    
+    AR --> AG1
+    AR --> AG2
+    AR --> AG3
+    AR --> AGN
+    
+    TM --> AG1
+    TM --> AG2
+    TM --> AG3
+    
+    SSM --> AG1
+    SSM --> AG2
+    SSM --> AG3
+    
+    AHM --> AR
+    
+    style MAC fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style AR fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style TM fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style SSM fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style PM fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style OAI fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+```
+
+## Task Lifecycle Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Coordinator as MultiAgentCoordinator
+    participant TM as TaskManager
+    participant AR as AgentRegistry
+    participant Agent
+    participant SSM as SharedStateManager
+    
+    User->>Coordinator: createTask()
+    Coordinator->>TM: createTask()
+    TM->>SSM: setState('tasks.{id}')
+    TM-->>Coordinator: taskId
+    
+    Coordinator->>AR: findAgentsByCapability()
+    AR-->>Coordinator: [agents]
+    
+    Coordinator->>TM: assignTask(taskId, agentId)
+    TM->>SSM: setState('tasks.{id}.assignedTo')
+    TM-->>Coordinator: success
+    
+    Coordinator->>Agent: executeTask()
+    Agent->>SSM: setState('tasks.{id}.progress')
+    Agent-->>Coordinator: result
+    
+    Coordinator->>TM: completeTask(taskId, result)
+    TM->>SSM: setState('tasks.{id}.status')
+    TM-->>Coordinator: success
+    
+    Coordinator-->>User: task completed
+```
+
 ## Core Components
 
 ### MultiAgentCoordinator
@@ -24,7 +114,7 @@ The central coordinator that manages agent registration, task distribution, and 
 import { MultiAgentCoordinator } from './MultiAgentCoordinator';
 
 // Create coordinator
-const coordinator = new MultiAgentCoordinator({
+const coordinator = new MultiAgentCoordinator('My Coordinator', {
   taskManager: taskManager,
   agentRegistry: agentRegistry,
   sharedStateManager: sharedStateManager,
@@ -38,15 +128,25 @@ await coordinator.initialize();
 await coordinator.registerAgent(analysisAgent);
 await coordinator.registerAgent(writingAgent);
 
+// Find agents by capability
+const analysisAgents = await coordinator.findAgentsByCapability('data-analysis');
+
 // Submit tasks
-const taskId = await coordinator.submitTask({
+const taskId = await coordinator.createTask({
   type: 'complex-analysis',
   description: 'Analyze market trends and generate report',
   priority: 'high'
 });
 
-// Monitor execution
-const status = await coordinator.getTaskStatus(taskId);
+// Assign and execute
+await coordinator.assignTask(taskId!, analysisAgents[0].id);
+const task = await coordinator.getTask(taskId!);
+
+// Get ready tasks
+const readyTasks = await coordinator.getReadyTasks();
+
+// Check dependencies
+const depsSatisfied = await coordinator.areDependenciesSatisfied(taskId!);
 ```
 
 ### AgentRegistry
@@ -96,7 +196,7 @@ const taskManager = new TaskManager();
 // Create task
 const taskId = await taskManager.createTask({
   type: 'data-processing',
-  title: 'Process customer data',
+  name: 'Process customer data',
   description: 'Analyze and clean customer dataset',
   priority: 'medium',
   metadata: { source: 'database' }
@@ -107,7 +207,18 @@ await taskManager.assignTask(taskId, 'agent-id');
 
 // Track task progress
 const task = await taskManager.getTask(taskId);
-console.log(`Task status: ${task.status}`);
+console.log(`Task status: ${task?.status}`);
+
+// Get ready tasks (dependencies satisfied)
+const readyTasks = await taskManager.getReadyTasks();
+
+// Get task statistics
+const stats = await taskManager.getTaskStatistics();
+console.log(`Total tasks: ${stats.total}, Completed: ${stats.byStatus.completed}`);
+
+// Get task history
+const history = await taskManager.getTaskHistory(taskId);
+console.log(`Task has ${history.length} history events`);
 ```
 
 ### SharedStateManager
@@ -137,6 +248,24 @@ const currentPhase = await stateManager.getState('workflow.current');
 const subscriptionId = stateManager.subscribe('workflow.*', (path, value) => {
   console.log(`State changed: ${path} = ${value}`);
 });
+
+// Watch state (alias for subscribe)
+stateManager.watchState('workflow.current', (path, value) => {
+  console.log(`Watched path changed: ${path} = ${value}`);
+});
+
+// Sync state from external source
+stateManager.syncState({
+  'external.data': 'synced value',
+  'workflow.phase': 'updated'
+}, 'last-write-wins');
+
+// Persist state
+stateManager.persistState('workflow.current');
+stateManager.persistState('user.preferences');
+
+// Clear ephemeral state (keeps persisted)
+stateManager.clearEphemeralState();
 ```
 
 ### OpenAIClient
@@ -230,6 +359,37 @@ Monitors agent health and performance.
 - Failure detection
 - Recovery mechanisms
 
+**Usage:**
+```typescript
+import { AgentHealthMonitor } from './AgentHealthMonitor';
+import { AgentRegistry } from './AgentRegistry';
+
+const registry = AgentRegistry.getInstance();
+const healthMonitor = AgentHealthMonitor.getInstance(registry);
+
+// Register custom health check
+await healthMonitor.registerHealthCheck('agent-1', {
+  name: 'response-time-check',
+  description: 'Check agent response time',
+  enabled: true,
+  interval: 5000,
+  timeout: 1000,
+  checkFunction: async (agent) => {
+    // Custom health check logic
+    return { healthy: true, message: 'Agent responding' };
+  }
+});
+
+// Monitor agent
+const status = await healthMonitor.monitorAgent('agent-1');
+console.log(`Agent healthy: ${status.healthy}`);
+
+// Get health report
+const report = await healthMonitor.generateHealthReport('agent-1');
+console.log(`Uptime: ${report.metrics.uptime}%`);
+console.log(`Success rate: ${report.metrics.successRate}%`);
+```
+
 ## Configuration
 
 ### Coordinator Configuration
@@ -263,17 +423,40 @@ interface AgentConfig {
 - **Conditional Workflows**: Branching based on conditions
 - **Iterative Workflows**: Loops and retries
 
-### Workflow Builder
+### Task Dependencies
+
+Tasks can have dependencies on other tasks:
+
 ```typescript
-import { WorkflowBuilder } from './WorkflowBuilder';
+// Create parent task
+const parentTaskId = await taskManager.createTask({
+  description: 'Research phase',
+  type: 'research'
+});
 
-const workflow = new WorkflowBuilder('data-analysis-workflow')
-  .addTask('research', { type: 'research', agent: 'research-agent' })
-  .addTask('analysis', { type: 'analysis', agent: 'analysis-agent', dependsOn: ['research'] })
-  .addTask('report', { type: 'writing', agent: 'writing-agent', dependsOn: ['analysis'] })
-  .build();
+// Create child task with dependency
+const childTaskId = await taskManager.createTask({
+  description: 'Analysis phase',
+  type: 'analysis',
+  dependsOn: [parentTaskId]
+});
 
-await workflow.execute();
+// Check if dependencies are satisfied
+const ready = await taskManager.areDependenciesSatisfied(childTaskId);
+console.log(`Child task ready: ${ready}`); // false until parent completes
+
+// Complete parent
+await taskManager.assignTask(parentTaskId, 'research-agent');
+await taskManager.startTask(parentTaskId);
+await taskManager.completeTask(parentTaskId, { outcome: 'Research complete' });
+
+// Now child is ready
+const readyAfter = await taskManager.areDependenciesSatisfied(childTaskId);
+console.log(`Child task ready: ${readyAfter}`); // true
+
+// Get all ready tasks
+const readyTasks = await taskManager.getReadyTasks();
+console.log(`Ready tasks: ${readyTasks.length}`);
 ```
 
 ## Error Handling
@@ -299,14 +482,31 @@ try {
 Built-in monitoring capabilities:
 
 ```typescript
-// Get system metrics
-const metrics = coordinator.getMetrics();
+// Get task statistics
+const stats = await taskManager.getTaskStatistics();
+console.log(`Total tasks: ${stats.total}`);
+console.log(`Completed: ${stats.byStatus.completed}`);
+console.log(`Success rate: ${stats.successRate}%`);
+console.log(`Avg processing time: ${stats.avgProcessingTime}ms`);
+
+// Get task history
+const history = await taskManager.getTaskHistory(taskId);
+history.forEach(event => {
+  console.log(`${event.event} at ${new Date(event.timestamp).toISOString()}`);
+});
+
+// Estimate task duration
+const estimate = await taskManager.estimateTaskDuration(task);
+console.log(`Estimated duration: ${estimate}ms`);
+
+// Count tasks by status
+const counts = await taskManager.countTasksByStatus();
+console.log(`Pending: ${counts.pending}, In Progress: ${counts['in-progress']}`);
 
 // Monitor agent health
-const health = agentRegistry.getAgentHealth();
-
-// Track task performance
-const performance = taskManager.getPerformanceStats();
+const healthMonitor = new AgentHealthMonitor();
+const health = await healthMonitor.checkHealth(agentId);
+console.log(`Agent health: ${health.isHealthy ? 'healthy' : 'unhealthy'}`);
 ```
 
 ## Integration

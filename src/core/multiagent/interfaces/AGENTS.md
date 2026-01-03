@@ -237,6 +237,116 @@ Checks if task dependencies are satisfied.
 
 **Returns:** `Promise<boolean>` - True if dependencies satisfied
 
+#### unassignTask()
+
+```typescript
+unassignTask(taskId: string): Promise<void>
+```
+
+Unassigns a task from its current agent.
+
+**Parameters:**
+- `taskId` (string): Task ID
+
+**Returns:** `Promise<void>`
+
+#### reassignTask()
+
+```typescript
+reassignTask(taskId: string, newAgentId: string): Promise<void>
+```
+
+Reassigns a task to a different agent.
+
+**Parameters:**
+- `taskId` (string): Task ID
+- `newAgentId` (string): New agent ID
+
+**Returns:** `Promise<void>`
+
+#### updateTask()
+
+```typescript
+updateTask(taskId: string, updates: Partial<Omit<Task, 'id' | 'createdAt'>>): Promise<void>
+```
+
+Updates task properties.
+
+**Parameters:**
+- `taskId` (string): Task ID
+- `updates` (Partial<Omit<Task, 'id' | 'createdAt'>>): Task updates
+
+**Returns:** `Promise<void>`
+
+#### getReadyTasks()
+
+```typescript
+getReadyTasks(): Promise<Task[]>
+```
+
+Gets tasks that are ready to be executed (dependencies satisfied).
+
+**Returns:** `Promise<Task[]>` - Array of ready tasks
+
+#### countTasksByStatus()
+
+```typescript
+countTasksByStatus(): Promise<Record<string, number>>
+```
+
+Counts tasks by status.
+
+**Returns:** `Promise<Record<string, number>>` - Object with counts for each status
+
+#### getTaskHistory()
+
+```typescript
+getTaskHistory(taskId: string): Promise<any[]>
+```
+
+Gets task history including all state changes.
+
+**Parameters:**
+- `taskId` (string): Task ID
+
+**Returns:** `Promise<any[]>` - Array of history events
+
+#### estimateTaskDuration()
+
+```typescript
+estimateTaskDuration(task: Task): Promise<number>
+```
+
+Estimates task duration based on historical data.
+
+**Parameters:**
+- `task` (Task): Task to estimate
+
+**Returns:** `Promise<number>` - Estimated duration in milliseconds
+
+#### getTaskStatistics()
+
+```typescript
+getTaskStatistics(): Promise<any>
+```
+
+Gets task statistics.
+
+**Returns:** `Promise<any>` - Statistics object
+
+#### cleanupOldTasks()
+
+```typescript
+cleanupOldTasks(olderThan: number): Promise<number>
+```
+
+Cleans up old completed tasks.
+
+**Parameters:**
+- `olderThan` (number): Timestamp - remove tasks older than this
+
+**Returns:** `Promise<number>` - Number of tasks removed
+
 ## SharedStateManager Interface
 
 ### Methods
@@ -373,6 +483,112 @@ Updates agent status.
 - `status` (string): New status
 
 **Returns:** `Promise<void>`
+
+#### watchState()
+
+```typescript
+watchState(
+  path: string,
+  callback: (path: string, value: unknown, metadata?: any) => void
+): void
+```
+
+Watches state changes at a specific path (alias for subscribe).
+
+**Parameters:**
+- `path` (string): Path to watch
+- `callback` (function): Callback function
+
+**Returns:** `void`
+
+#### unwatchState()
+
+```typescript
+unwatchState(
+  path: string,
+  callback: (path: string, value: unknown, metadata?: any) => void
+): void
+```
+
+Unwatches state changes (alias for unsubscribe).
+
+**Parameters:**
+- `path` (string): Path to unwatch
+- `callback` (function): Callback function to remove
+
+**Returns:** `void`
+
+#### syncState()
+
+```typescript
+syncState(
+  externalState: Record<string, any>,
+  strategy: string | ((local: any, external: any) => any)
+): void
+```
+
+Syncs state from external source with conflict resolution.
+
+**Parameters:**
+- `externalState` (Record<string, any>): External state to sync
+- `strategy` (string | function): Resolution strategy ('last-write-wins', 'merge', or custom function)
+
+**Returns:** `void`
+
+#### resolveConflicts()
+
+```typescript
+resolveConflicts(
+  localValue: any,
+  externalValue: any,
+  strategy: string | ((local: any, external: any) => any)
+): any
+```
+
+Resolves conflicts between local and external values.
+
+**Parameters:**
+- `localValue` (any): Local value
+- `externalValue` (any): External value
+- `strategy` (string | function): Resolution strategy
+
+**Returns:** `any` - Resolved value
+
+#### persistState()
+
+```typescript
+persistState(path: string): void
+```
+
+Marks a path as persisted.
+
+**Parameters:**
+- `path` (string): Path to persist
+
+**Returns:** `void`
+
+#### loadPersistedState()
+
+```typescript
+loadPersistedState(state: Record<string, any>): void
+```
+
+Loads persisted state.
+
+**Parameters:**
+- `state` (Record<string, any>): State object to load
+
+**Returns:** `void`
+
+#### clearEphemeralState()
+
+```typescript
+clearEphemeralState(): void
+```
+
+Clears ephemeral (non-persisted) state.
+
+**Returns:** `void`
 
 ## OpenAIClient Interface
 

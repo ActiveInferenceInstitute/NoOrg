@@ -29,85 +29,22 @@ const logger = winston.createLogger({
   ]
 });
 
-/**
- * Convert string capabilities to Capability objects
- */
-function convertCapabilities(capabilities: string[]): Capability[] {
-  return capabilities.map(cap => ({
-    name: cap,
-    description: `Capability: ${cap}`,
-    parameters: {}
-  }));
-}
 
-/**
- * Convert Capability objects to string capabilities
- */
-function convertCapabilitiesToString(capabilities: Capability[]): string[] {
-  return capabilities.map(cap => cap.name);
-}
 
-/**
- * Convert string status to AgentStatus
- */
-function convertStatusToAgentStatus(status: AgentType['status']): AgentStatus {
-  const now = Date.now();
-  return {
-    id: 'temp-id', // Will be replaced
-    name: 'temp-name', // Will be replaced
-    type: 'temp-type', // Will be replaced
-    status: status === 'initializing' ? 'available' : status,
-    lastActive: now,
-    capabilities: [],
-    metadata: {},
-    state: status === 'initializing' ? 'available' : status,
-    lastUpdated: now,
-    healthStatus: {
-      isHealthy: status !== 'error',
-      errors: status === 'error' ? ['Status error'] : [],
-      lastHeartbeat: now
-    },
-    metrics: {}
-  };
-}
-
-/**
- * Convert AgentStatus to string status
- */
-function convertStatusToString(status: AgentStatus): AgentType['status'] {
-  const validStatuses: AgentType['status'][] = ['available', 'busy', 'offline', 'error', 'initializing'];
-  return validStatuses.includes(status.state as AgentType['status']) 
-    ? status.state as AgentType['status']
-    : 'offline';
-}
 
 /**
  * Convert AgentType to Agent
  */
 function convertAgentTypeToAgent(agentType: AgentType): Agent {
   const now = Date.now();
-  const agentStatus = convertStatusToAgentStatus(agentType.status);
-  
-  // Update status with agent-specific values
-  agentStatus.id = agentType.id;
-  agentStatus.name = agentType.name;
-  agentStatus.type = agentType.type;
-  
-  const capabilities = Array.isArray(agentType.capabilities) 
-    ? agentType.capabilities.map(cap => ({
-        name: cap,
-        description: `Capability: ${cap}`,
-        parameters: {}
-      }))
-    : [];
 
   const agent: Agent = {
     id: agentType.id,
     name: agentType.name,
     type: agentType.type,
     description: agentType.description || '',
-    capabilities,
-    status: agentStatus,
+    capabilities: agentType.capabilities,
+    status: agentType.status,
     metadata: {
       ...(agentType.metadata || {}),
       preferredModel: agentType.preferredModel,
@@ -128,15 +65,13 @@ function convertAgentTypeToAgent(agentType: AgentType): Agent {
  */
 function convertAgentToAgentType(agent: Agent): AgentType {
   const metadata = agent.metadata || {};
-  const capabilities = convertCapabilitiesToString(agent.capabilities);
-  const status = convertStatusToString(agent.status);
 
   const agentType: AgentType = {
     id: agent.id,
     name: agent.name,
     type: agent.type,
-    capabilities,
-    status,
+    capabilities: agent.capabilities,
+    status: agent.status,
     metadata: metadata || {},
     description: metadata.description as string || '',
     preferredModel: metadata.preferredModel as string || '',
@@ -165,7 +100,7 @@ function convertTaskStatusToAgentStatus(status: Task['status']): AgentStatus['st
 /**
  * Convert agent status to task status
  */
-function convertAgentStatusToTaskStatus(status: AgentStatus['state']): Task['status'] {
+function convertAgentStatusToTaskStatus(status: string): Task['status'] {
   switch (status) {
     case 'busy':
       return 'in-progress';
@@ -229,8 +164,8 @@ export class MultiAgentCoordinator {
       sharedStateManager?: SharedStateManager;
       taskManager?: TaskManager;
       agentRegistry?: AgentRegistry;
-      openAIClient?: OpenAIClient;
-      promptManager?: PromptManager;
+      openAIClient?: OpenAIClientInterface;
+      promptManager?: PromptManagerInterface;
       stateFilePath?: string;
       executionConfig?: Partial<MultiAgentCoordinator['executionConfig']>;
       coordinationStrategy?: 'centralized' | 'decentralized' | 'hybrid';
@@ -371,25 +306,8 @@ export class MultiAgentCoordinator {
       // Ensure all agents are marked as offline
       for (const agent of this.agents.values()) {
         try {
-          if (agent.status && typeof agent.status === 'object' && agent.status.state !== 'offline') {
-            // Add check for agent.status type before spreading
-            const updatedStatus = typeof agent.status === 'object' 
-              ? { ...agent.status, state: 'offline' as const } 
-              : { // Ensure this default object conforms to AgentStatus
-                  id: agent.id, 
-                  name: agent.name, 
-                  type: agent.type, 
-                  status: 'offline' as const, // Use literal type
-                  lastActive: Date.now(), 
-                  capabilities: [], 
-                  metadata: {}, 
-                  state: 'offline' as const, // Use literal type
-                  lastUpdated: Date.now(), 
-                  healthStatus: {isHealthy: true, errors: [], lastHeartbeat: Date.now()}, 
-                  metrics: {} 
-                };
-            // Ensure the combined type matches what updateAgent expects (Partial<Agent>)
-            await this.agentRegistry.updateAgent(agent.id, { status: updatedStatus as AgentStatus });
+          if (agent.status !== 'offline') {
+            await this.agentRegistry.updateAgent(agent.id, { status: 'offline' });
           }
         } catch (error: any) {
           this.logger.error(`Failed to update agent ${agent.id} status to offline during stop: ${error.message}`);
@@ -414,14 +332,10 @@ export class MultiAgentCoordinator {
       this.logger.info(`Registering agent with data: ${JSON.stringify(agentData)}`);
       const agentId = uuidv4();
       const now = Date.now();
-      const capabilities = convertCapabilities(agentData.capabilities || []);
+      const capabilities = agentData.capabilities || [];
       const initialStatus = agentData.status || 'available';
-      const agentStatus = convertStatusToAgentStatus(initialStatus);
+      const agentStatus = initialStatus;
       
-      // Update status with agent-specific values
-      agentStatus.id = agentId;
-      agentStatus.name = agentData.name;
-      agentStatus.type = agentData.type;
       
       const coreAgent: Agent = {
         id: agentId,
@@ -457,8 +371,8 @@ export class MultiAgentCoordinator {
         id: agentId,
         name: agentData.name,
         type: agentData.type,
-        capabilities: Array.isArray(agentData.capabilities) 
-          ? convertCapabilities(agentData.capabilities) 
+        capabilities: Array.isArray(agentData.capabilities)
+          ? agentData.capabilities
           : [],
         status: agentData.status,
         registeredAt: Date.now()
@@ -631,7 +545,7 @@ export class MultiAgentCoordinator {
       console.info(`Task ${task.id} assigned to agent ${agentId}`);
       
       // Start the task if it's assigned and the agent is available
-      if (agent.status.state === 'available') {
+      if (agent.status === 'available') {
         await this.startTask(task.id);
       }
     } catch (error: any) {
@@ -777,42 +691,12 @@ export class MultiAgentCoordinator {
 
       // Convert capabilities if present
       if (updates.capabilities) {
-        coreUpdates.capabilities = convertCapabilities(updates.capabilities);
+        coreUpdates.capabilities = updates.capabilities;
       }
       
       // Convert status if present
       if (updates.status) {
-        // Handle string status or potential object status from AgentType
-        if (typeof updates.status === 'string') {
-             coreUpdates.status = convertStatusToAgentStatus(updates.status);
-             coreUpdates.status.id = agent.id; // Ensure IDs match
-             coreUpdates.status.name = agent.name;
-             coreUpdates.status.type = agent.type;
-        } else {
-             // If it's somehow already an AgentStatus-like object (though AgentType defines it as string literals)
-             // This case might indicate an inconsistency elsewhere, but handle defensively
-             this.logger.warn(`Received unexpected object status in updateAgent for ${agentId}. Attempting conversion.`);
-             coreUpdates.status = { // Reconstruct AgentStatus defensively
-                id: agent.id,
-                name: agent.name,
-                type: agent.type,
-                status: (updates.status as any).state || (updates.status as any).status || 'offline',
-                lastActive: Date.now(),
-                capabilities: agent.capabilities, // Keep existing capabilities
-                metadata: agent.metadata, // Keep existing metadata
-                state: (updates.status as any).state || (updates.status as any).status || 'offline',
-                lastUpdated: Date.now(),
-                healthStatus: { isHealthy: true, errors: [], lastHeartbeat: Date.now() }, // Default health
-                metrics: {}
-             } as AgentStatus;
-             // Ensure the status literal is valid
-             const validStates: AgentStatus['state'][] = ['available', 'busy', 'offline', 'error'];
-             if (!validStates.includes(coreUpdates.status.state)) {
-                 this.logger.warn(`Invalid state found in status update: ${coreUpdates.status.state}. Defaulting to offline.`);
-                 coreUpdates.status.state = 'offline';
-                 coreUpdates.status.status = 'offline';
-             }
-        }
+        coreUpdates.status = updates.status;
       }
 
       // Update internal agent map first for consistency
@@ -1117,6 +1001,42 @@ export class MultiAgentCoordinator {
   getAgentRegistry(): AgentRegistry {
     return this.agentRegistry;
   }
+
+  /**
+   * Find agents by capability
+   * @param capability Capability to search for
+   * @returns Array of agents with the capability
+   */
+  async findAgentsByCapability(capability: string): Promise<AgentType[]> {
+    const agents = await this.agentRegistry.findAgentsByCapability(capability);
+    return agents.map(agent => convertAgentToAgentType(agent));
+  }
+
+  /**
+   * Update agent status
+   * @param agentId Agent ID
+   * @param status New status
+   */
+  async updateAgentStatus(agentId: string, status: string): Promise<boolean> {
+    return await this.agentRegistry.updateAgentStatus(agentId, status);
+  }
+
+  /**
+   * Get ready tasks (dependencies satisfied)
+   * @returns Array of ready tasks
+   */
+  async getReadyTasks(): Promise<Task[]> {
+    return await this.taskManager.getReadyTasks();
+  }
+
+  /**
+   * Check if task dependencies are satisfied
+   * @param taskId Task ID
+   * @returns True if dependencies are satisfied
+   */
+  async areDependenciesSatisfied(taskId: string): Promise<boolean> {
+    return await this.taskManager.areDependenciesSatisfied(taskId);
+  }
   
   /**
    * Get the underlying shared state manager
@@ -1170,29 +1090,8 @@ export class MultiAgentCoordinator {
         if (internalAgent) {
           return internalAgent;
         } else {
-          // Use the conversion function, ensuring it provides all fields
-          // Or manually construct, ensuring all fields are present
-          const agentStatus = convertStatusToAgentStatus(regAgent.status);
-          agentStatus.id = regAgent.id;
-          agentStatus.name = regAgent.name;
-          agentStatus.type = regAgent.type;
-          
-          const capabilities = Array.isArray(regAgent.capabilities) 
-            ? regAgent.capabilities.map(cap => ({ name: cap, description: `Capability: ${cap}`, parameters: {} }))
-            : [];
-
-          return {
-            id: regAgent.id,
-            name: regAgent.name,
-            type: regAgent.type,
-            description: regAgent.description || '',
-            capabilities,
-            status: agentStatus,
-            metadata: regAgent.metadata || {},
-            preferredModel: regAgent.preferredModel || '',
-            createdAt: regAgent.createdAt || Date.now(),
-            lastActive: regAgent.lastActive || Date.now()
-          };
+          // Registry agent should already be compatible with core Agent interface
+          return regAgent;
         }
       });
 
@@ -1282,25 +1181,6 @@ export class MultiAgentCoordinator {
 
   // --- End State Persistence Methods ---
 
-  private createAgentStatus(agent: Agent): AgentStatus {
-    return {
-      id: agent.id,
-      name: agent.name,
-      type: agent.type,
-      status: agent.status.status,
-      lastActive: agent.lastActive,
-      capabilities: agent.capabilities,
-      metadata: agent.metadata,
-      state: agent.status.state,
-      lastUpdated: Date.now(),
-      healthStatus: {
-        isHealthy: true,
-        errors: [],
-        lastHeartbeat: Date.now()
-      },
-      metrics: {}
-    };
-  }
 
   private createStateUpdateOptions(agent: Agent, action: string): StateUpdateOptions {
     return {
@@ -1323,23 +1203,7 @@ export class MultiAgentCoordinator {
       type: agentData.type,
       description: agentData.description || '',
       capabilities: agentData.capabilities || [],
-      status: {
-        id: agentData.id,
-        name: agentData.name,
-        type: agentData.type,
-        status: 'available',
-        lastActive: now,
-        capabilities: agentData.capabilities || [],
-        metadata: {},
-        state: 'available',
-        lastUpdated: now,
-        healthStatus: {
-          isHealthy: true,
-          errors: [],
-          lastHeartbeat: now
-        },
-        metrics: {}
-      },
+      status: 'available',
       metadata: agentData.metadata || {},
       preferredModel: agentData.preferredModel || 'default',
       createdAt: agentData.createdAt || now,

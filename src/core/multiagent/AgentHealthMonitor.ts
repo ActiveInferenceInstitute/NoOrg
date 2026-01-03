@@ -473,8 +473,8 @@ export class AgentHealthMonitor {
       description: 'Check if agent is reachable',
       checkFunction: async (agent: Agent) => {
         return {
-          healthy: agent.status.state === 'available' || agent.status.state === 'busy',
-          message: `Agent status: ${agent.status.state}`
+          healthy: agent.status === 'available' || agent.status === 'busy',
+          message: `Agent status: ${agent.status}`
         };
       },
       interval: 30000, // 30 seconds
@@ -487,7 +487,7 @@ export class AgentHealthMonitor {
       name: 'Heartbeat',
       description: 'Check last heartbeat time',
       checkFunction: async (agent: Agent) => {
-        const lastHeartbeat = agent.status.healthStatus?.lastHeartbeat || 0;
+        const lastHeartbeat = agent.lastActive;
         const timeSinceHeartbeat = Date.now() - lastHeartbeat;
         const healthy = timeSinceHeartbeat < 60000; // 1 minute
 

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AbstractAgent = void 0;
+const Logger_1 = require("../core/multiagent/Logger");
 const uuid_1 = require("uuid");
 /**
  * Abstract base class for all agents in the multiagent system.
@@ -84,6 +85,12 @@ class AbstractAgent {
             writable: true,
             value: void 0
         });
+        Object.defineProperty(this, "logger", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: void 0
+        });
         Object.defineProperty(this, "isInitialized", {
             enumerable: true,
             configurable: true,
@@ -104,6 +111,8 @@ class AbstractAgent {
         // Store required services
         this.openAIClient = options.openAIClient;
         this.sharedState = options.sharedState;
+        // Initialize logger
+        this.logger = new Logger_1.Logger(`AbstractAgent-${this.name}`, 'info');
     }
     /**
      * Initializes the agent, setting its status to 'available' and registering in shared state.
@@ -111,10 +120,10 @@ class AbstractAgent {
      */
     async initialize() {
         if (this.isInitialized) {
-            console.warn(`Agent ${this.name} (${this.id}) already initialized.`);
+            this.logger.warn('Agent already initialized', { agentId: this.id, agentName: this.name });
             return true;
         }
-        console.info(`Initializing agent ${this.name} (${this.id})...`);
+        this.logger.info('Initializing agent', { agentId: this.id, agentName: this.name, type: this.type });
         try {
             // Register initial agent state in shared state
             this.updateSharedState({ status: 'initializing', lastActive: Date.now() });
@@ -123,11 +132,16 @@ class AbstractAgent {
             // Mark agent as available
             this.isInitialized = true;
             this.updateStatus('available'); // This also updates shared state
-            console.info(`Agent ${this.name} (${this.id}) initialized successfully.`);
+            this.logger.info('Agent initialized successfully', { agentId: this.id, agentName: this.name });
             return true;
         }
         catch (error) {
-            console.error(`Failed to initialize agent ${this.name} (${this.id}): ${error.message}`, error.stack);
+            this.logger.error('Failed to initialize agent', {
+                agentId: this.id,
+                agentName: this.name,
+                error: error.message,
+                stack: error.stack
+            });
             this.updateStatus('error'); // This also updates shared state
             this.isInitialized = false; // Ensure it's marked as not initialized on failure
             return false;
@@ -147,7 +161,12 @@ class AbstractAgent {
         if (this.status === newStatus) {
             return; // No change needed
         }
-        console.debug(`Agent ${this.name} (${this.id}) status changing from ${this.status} to ${newStatus}.`);
+        this.logger.debug('Agent status changing', {
+            agentId: this.id,
+            agentName: this.name,
+            fromStatus: this.status,
+            toStatus: newStatus
+        });
         this.status = newStatus;
         this.lastActive = Date.now();
         this.updateSharedState({ status: this.status, lastActive: this.lastActive });
@@ -184,7 +203,11 @@ class AbstractAgent {
             this.sharedState.setState(`agents.${this.id}`, newState);
         }
         catch (error) {
-            console.error(`Failed to update shared state for agent ${this.name} (${this.id}): ${error.message}`);
+            this.logger.error('Failed to update shared state', {
+                agentId: this.id,
+                agentName: this.name,
+                error: error.message
+            });
         }
     }
     /**
@@ -194,20 +217,25 @@ class AbstractAgent {
      */
     async shutdown() {
         if (this.status === 'offline') {
-            console.warn(`Agent ${this.name} (${this.id}) already offline.`);
+            this.logger.warn('Agent already offline', { agentId: this.id, agentName: this.name });
             return true;
         }
-        console.info(`Shutting down agent ${this.name} (${this.id})...`);
+        this.logger.info('Shutting down agent', { agentId: this.id, agentName: this.name });
         try {
             // Perform any subclass-specific shutdown logic
             await this.onShutdown();
             this.updateStatus('offline');
             this.isInitialized = false; // Mark as not initialized
-            console.info(`Agent ${this.name} (${this.id}) shut down successfully.`);
+            this.logger.info('Agent shut down successfully', { agentId: this.id, agentName: this.name });
             return true;
         }
         catch (error) {
-            console.error(`Error during shutdown for agent ${this.name} (${this.id}): ${error.message}`, error.stack);
+            this.logger.error('Error during agent shutdown', {
+                agentId: this.id,
+                agentName: this.name,
+                error: error.message,
+                stack: error.stack
+            });
             // Still attempt to mark as offline, even if onShutdown fails
             this.updateStatus('offline');
             this.isInitialized = false;

@@ -40,6 +40,14 @@ export declare class EventSystem {
         sourceId?: string;
         metadata?: Record<string, any>;
     }): EventDefinition;
+    /**
+     * Alias for emit() method for compatibility with existing code
+     */
+    publish(type: string, payload: any, options?: {
+        correlationId?: string;
+        sourceId?: string;
+        metadata?: Record<string, any>;
+    }): EventDefinition;
     on(type: string, handler: (event: EventDefinition) => void): void;
     off(type: string, handler: (event: EventDefinition) => void): void;
     private storeEvent;

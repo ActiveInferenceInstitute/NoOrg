@@ -1,17 +1,84 @@
 # Source Code Directory
 
-This directory contains the core source code for the multi-agent operations framework. It's organized into several subdirectories, each with a specific purpose.
+This directory contains the core source code for the multi-agent operations framework. It's organized into several subdirectories, each with a specific purpose and well-defined responsibilities.
 
-## Directory Structure
+## Directory Structure & Data Flow
 
-- **agents/**: Contains various agent implementations that serve different roles in the multi-agent system. All agents extend the `AbstractAgent` class.
-- **core/**: Contains the core systems and fundamental infrastructure components needed for the operations platform, including event handling, messaging, storage, and monitoring capabilities.
-- **diagrams/**: Utilities for generating diagrams and visualizations of the system.
-- **docs/**: Documentation for the multi-agent system, including specifications and integration guides.
-- **examples/**: Example implementations and demos showcasing how to use the framework.
+```mermaid
+graph TB
+    subgraph "Entry Points"
+        IDX[index.ts]
+    end
+
+    subgraph "Agent Layer"
+        AG[agents/]
+        AA[AbstractAgent.ts]
+        SP[Specialized Agents]
+    end
+
+    subgraph "Core Infrastructure"
+        CO[core/]
+        EV[events/]
+        MSG[messaging/]
+        MON[monitoring/]
+        STOR[storage/]
+        MA[multiagent/]
+        INT[integration/]
+        UNITS[units/]
+    end
+
+    subgraph "Supporting Systems"
+        CONF[config/]
+        DIAG[diagrams/]
+        DOCS[docs/]
+        EX[examples/]
+        PROMPTS[prompts/]
+        SCRIPTS[scripts/]
+        UTIL[utils/]
+    end
+
+    IDX --> AG
+    IDX --> CO
+    AG --> AA
+    AA --> SP
+    CO --> EV
+    CO --> MSG
+    CO --> MON
+    CO --> STOR
+    CO --> MA
+    CO --> INT
+    CO --> UNITS
+
+    AG --> EV
+    AG --> MSG
+    AG --> MON
+    AG --> STOR
+
+    SP --> UTIL
+    MA --> CONF
+    DIAG --> UTIL
+    EX --> AG
+    EX --> CO
+    PROMPTS --> AG
+
+    style IDX fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style AG fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style CO fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style CONF fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    style UTIL fill:#fff8e1,stroke:#f57f17,stroke-width:1px
+```
+
+### Directory Descriptions
+
+- **agents/**: Contains 16+ specialized agent implementations that serve different roles in the multi-agent system. All agents extend the `AbstractAgent` class and implement domain-specific capabilities.
+- **core/**: Contains the fundamental infrastructure components including event handling, messaging, storage, monitoring, multi-agent coordination, integration patterns, and organizational units.
+- **config/**: Configuration management and validation utilities for the framework.
+- **diagrams/**: Utilities for generating Mermaid diagrams and system visualizations.
+- **docs/**: Comprehensive documentation for the multi-agent system, specifications, and integration guides.
+- **examples/**: Example implementations and demos showcasing framework usage patterns.
 - **prompts/**: Contains prompt templates used by agents for various tasks and communication patterns.
-- **scripts/**: Utility scripts for maintenance, auditing, and other operational tasks.
-- **utils/**: Common utility functions and helper classes used throughout the codebase.
+- **scripts/**: Utility scripts for maintenance, auditing, and operational tasks.
+- **utils/**: Common utility functions, helpers, and shared services used throughout the codebase.
 
 ## Key Components
 

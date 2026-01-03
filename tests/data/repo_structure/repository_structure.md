@@ -1,45 +1,33 @@
 # Repository Structure
 
-Generated: 2025-03-13T10:42:32.029902
-Root: /home/trim/Documents/operations
+Generated: 2026-01-02T15:05:04.256764
+Root: /Users/4d/Documents/GitHub/NoOrg
 
 ## Directory Tree
 ```
-/home/trim/Documents/operations
-└── operations/
+/Users/4d/Documents/GitHub/NoOrg
+└── NoOrg/
     ├── .benchmarks/
+    ├── .github/
+    │   └── workflows/
+    │       └── ci.yml (8558 bytes)
     ├── .obsidian/
     │   ├── app.json (2 bytes)
-    │   ├── appearance.json (53 bytes)
+    │   ├── appearance.json (2 bytes)
     │   ├── core-plugins.json (658 bytes)
-    │   ├── graph.json (560 bytes)
-    │   └── workspace.json (7024 bytes)
+    │   ├── graph.json (512 bytes)
+    │   └── workspace.json (7552 bytes)
     ├── agents/
-    │   ├── _templates/
-    │   │   ├── agent-spec.md (3643 bytes)
-    │   │   ├── behavior-doc.md (3409 bytes)
-    │   │   ├── implementation-guide.md (4735 bytes)
-    │   │   └── protocol-doc.md (3921 bytes)
     │   ├── architectures/
+    │   │   ├── AGENTS.md (7811 bytes)
     │   │   ├── cognitive-models.md (1582 bytes)
     │   │   ├── decision-frameworks.md (2117 bytes)
     │   │   ├── fractal-architecture.md (37774 bytes)
     │   │   └── perception-systems.md (2567 bytes)
-    │   ├── behaviors/
-    │   │   ├── action-patterns.md (3318 bytes)
-    │   │   ├── active-inference.md (5704 bytes)
-    │   │   ├── learning-patterns.md (2845 bytes)
-    │   │   └── reasoning-models.md (2945 bytes)
     │   ├── communication/
     │   │   ├── interaction-patterns.md (3724 bytes)
     │   │   ├── message-formats.md (3667 bytes)
     │   │   └── protocols.md (3234 bytes)
-    │   ├── concepts/
-    │   │   ├── complex-systems-theory.md (20455 bytes)
-    │   │   ├── emergence.md (12262 bytes)
-    │   │   ├── fractal-organization.md (7553 bytes)
-    │   │   ├── organizational-complexity.md (47013 bytes)
-    │   │   └── self-organization.md (14536 bytes)
     │   ├── examples/
     │   │   ├── coordination-behavior.md (5689 bytes)
     │   │   ├── coordination-protocol.md (7609 bytes)
@@ -69,10 +57,93 @@ Root: /home/trim/Documents/operations
     │   │   ├── agent_learning_implementation_guide.md (12308 bytes)
     │   │   ├── agent_pattern_implementation_guide.md (13493 bytes)
     │   │   ├── agent_swarm_implementation_guide.md (13538 bytes)
-    │   │   ├── cursor_mcp_tool_guide.md (6712 bytes)
-    │   │   ├── federated-communication.md (20001 bytes)
-    │   │   └── fractal-nesting.md (20702 bytes)
+    │   │   └── cursor_mcp_tool_guide.md (6712 bytes)
+    │   ├── system/
+    │   │   ├── agent_analysis_framework.md (6029 bytes)
+    │   │   ├── agent_analytics_framework.md (12771 bytes)
+    │   │   ├── agent_api_framework.md (9258 bytes)
+    │   │   ├── agent_architecture_framework.md (11093 bytes)
+    │   │   ├── agent_code_analysis_framework.md (5821 bytes)
+    │   │   ├── agent_communication_framework.md (7461 bytes)
+    │   │   ├── agent_coordination_toolkit.md (8879 bytes)
+    │   │   ├── agent_cursor_integration_framework.md (8125 bytes)
+    │   │   ├── agent_deployment_framework.md (6060 bytes)
+    │   │   ├── agent_documentation_framework.md (5930 bytes)
+    │   │   ├── agent_execution_framework.md (5935 bytes)
+    │   │   ├── agent_integration_framework.md (1 bytes)
+    │   │   ├── agent_learning_framework.md (14702 bytes)
+    │   │   ├── agent_mcp_framework.md (8284 bytes)
+    │   │   ├── agent_monitoring_framework.md (5845 bytes)
+    │   │   ├── agent_orchestration_framework.md (7771 bytes)
+    │   │   ├── agent_pattern_framework.md (9897 bytes)
+    │   │   ├── agent_perception_framework.md (7121 bytes)
+    │   │   ├── agent_planning_framework.md (5442 bytes)
+    │   │   ├── agent_resource_framework.md (6836 bytes)
+    │   │   ├── agent_security_framework.md (6935 bytes)
+    │   │   ├── agent_swarm_framework.md (11724 bytes)
+    │   │   ├── agent_swarm_implementation_guide.md (4542 bytes)
+    │   │   ├── agent_testing_framework.md (5954 bytes)
+    │   │   ├── agent_tool_framework.md (8247 bytes)
+    │   │   ├── agent_workflow_framework.md (6617 bytes)
+    │   │   ├── api-documentation.md (13276 bytes)
+    │   │   ├── autonomous-learning.md (12096 bytes)
+    │   │   ├── autonomous-project-lifecycle.md (13712 bytes)
+    │   │   ├── autonomous-project-reporting.md (10163 bytes)
+    │   │   ├── autonomous-task-execution.md (14835 bytes)
+    │   │   ├── autonomous-task-integration.md (7316 bytes)
+    │   │   ├── autonomous-task-management.md (14777 bytes)
+    │   │   ├── autonomous-task-monitoring.md (10632 bytes)
+    │   │   ├── autonomous-task-orchestration.md (11344 bytes)
+    │   │   ├── autonomous-task-recovery.md (11280 bytes)
+    │   │   ├── autonomous_agent_framework.md (5887 bytes)
+    │   │   ├── configuration-reference.md (8099 bytes)
+    │   │   ├── data-model-specifications.md (11529 bytes)
+    │   │   ├── development-guide.md (19239 bytes)
+    │   │   ├── performance-tuning-guide.md (8432 bytes)
+    │   │   ├── project-task-management-guide.md (8393 bytes)
+    │   │   ├── protocol-implementations.md (18128 bytes)
+    │   │   ├── system-deployment-guide.md (10125 bytes)
+    │   │   ├── system-disaster-recovery.md (8303 bytes)
+    │   │   ├── system-integration-guide.md (12091 bytes)
+    │   │   ├── system-operations-manual.md (9846 bytes)
+    │   │   ├── system-security-guide.md (9239 bytes)
+    │   │   ├── task-communication-protocols.md (12211 bytes)
+    │   │   ├── task-deployment-guide.md (9528 bytes)
+    │   │   ├── task-execution-implementation.md (14470 bytes)
+    │   │   ├── task-performance-analysis.md (11854 bytes)
+    │   │   ├── task-recovery-procedures.md (12966 bytes)
+    │   │   ├── technical-implementation-guide.md (17623 bytes)
+    │   │   ├── testing-guide.md (14855 bytes)
+    │   │   └── troubleshooting-guide.md (12221 bytes)
+    │   ├── task/
+    │   │   ├── __init__.py (46 bytes)
+    │   │   ├── dependencies.py (1 bytes)
+    │   │   ├── execution.py (1895 bytes)
+    │   │   ├── monitoring.py (1718 bytes)
+    │   │   ├── prioritization.py (4675 bytes)
+    │   │   ├── scheduling.py (13404 bytes)
+    │   │   └── workflow.py (12712 bytes)
+    │   ├── types/
+    │   │   ├── AGENTS.md (7496 bytes)
+    │   │   ├── code_management.ts (2303 bytes)
+    │   │   ├── coordination-metrics.ts (8650 bytes)
+    │   │   ├── coordination-support.ts (5982 bytes)
+    │   │   ├── coordination.ts (7836 bytes)
+    │   │   ├── deployment.ts (2889 bytes)
+    │   │   ├── documentation.ts (1054 bytes)
+    │   │   ├── quality.ts (2974 bytes)
+    │   │   ├── review.ts (3656 bytes)
+    │   │   ├── shared.ts (1790 bytes)
+    │   │   ├── swarm.ts (4386 bytes)
+    │   │   ├── task.ts (2582 bytes)
+    │   │   └── workflow.ts (2495 bytes)
+    │   ├── AGENTS.md (3117 bytes)
+    │   ├── README.md (2070 bytes)
+    │   ├── __init__.py (64 bytes)
+    │   └── types.ts (1492 bytes)
+    ├── archive/
     │   ├── implementations/
+    │   │   ├── README.md (2519 bytes)
     │   │   ├── analysis_dependencies.ts (4348 bytes)
     │   │   ├── analysis_tools.ts (40700 bytes)
     │   │   ├── code_management.ts (9780 bytes)
@@ -85,7 +156,6 @@ Root: /home/trim/Documents/operations
     │   │   ├── task_management.ts (15574 bytes)
     │   │   └── workflow_automation.ts (11794 bytes)
     │   ├── swarm_pong_test/
-    │   │   ├── .benchmarks/
     │   │   ├── checkpoints/
     │   │   │   └── model_gen_0.pt (8112 bytes)
     │   │   ├── pong/
@@ -118,9 +188,6 @@ Root: /home/trim/Documents/operations
     │   │   ├── swarm_sort_README.md (4740 bytes)
     │   │   └── test_swarm_sort.py (16248 bytes)
     │   ├── swarm_test/
-    │   │   ├── agents/
-    │   │   │   └── swarm_test/
-    │   │   │       └── docs/
     │   │   ├── docs/
     │   │   │   ├── METRICS.md (4918 bytes)
     │   │   │   ├── README.md (1537 bytes)
@@ -189,87 +256,254 @@ Root: /home/trim/Documents/operations
     │   │   ├── types.d.ts (300 bytes)
     │   │   ├── validation_utils.ts (9156 bytes)
     │   │   └── visualization_utils.ts (12196 bytes)
-    │   ├── system/
-    │   │   ├── agent_analysis_framework.md (6029 bytes)
-    │   │   ├── agent_analytics_framework.md (12771 bytes)
-    │   │   ├── agent_api_framework.md (9258 bytes)
-    │   │   ├── agent_architecture_framework.md (11093 bytes)
-    │   │   ├── agent_code_analysis_framework.md (5821 bytes)
-    │   │   ├── agent_communication_framework.md (7461 bytes)
-    │   │   ├── agent_coordination_toolkit.md (8879 bytes)
-    │   │   ├── agent_cursor_integration_framework.md (8125 bytes)
-    │   │   ├── agent_deployment_framework.md (6060 bytes)
-    │   │   ├── agent_documentation_framework.md (5930 bytes)
-    │   │   ├── agent_execution_framework.md (5935 bytes)
-    │   │   ├── agent_integration_framework.md (1 bytes)
-    │   │   ├── agent_learning_framework.md (14702 bytes)
-    │   │   ├── agent_mcp_framework.md (8284 bytes)
-    │   │   ├── agent_monitoring_framework.md (5845 bytes)
-    │   │   ├── agent_orchestration_framework.md (7771 bytes)
-    │   │   ├── agent_pattern_framework.md (9897 bytes)
-    │   │   ├── agent_perception_framework.md (7121 bytes)
-    │   │   ├── agent_planning_framework.md (5442 bytes)
-    │   │   ├── agent_resource_framework.md (6836 bytes)
-    │   │   ├── agent_security_framework.md (6935 bytes)
-    │   │   ├── agent_swarm_framework.md (11724 bytes)
-    │   │   ├── agent_swarm_implementation_guide.md (4542 bytes)
-    │   │   ├── agent_testing_framework.md (5954 bytes)
-    │   │   ├── agent_tool_framework.md (8247 bytes)
-    │   │   ├── agent_workflow_framework.md (6617 bytes)
-    │   │   ├── api-documentation.md (13276 bytes)
-    │   │   ├── autonomous-learning.md (12096 bytes)
-    │   │   ├── autonomous-project-lifecycle.md (13712 bytes)
-    │   │   ├── autonomous-project-reporting.md (10163 bytes)
-    │   │   ├── autonomous-task-execution.md (14835 bytes)
-    │   │   ├── autonomous-task-integration.md (7316 bytes)
-    │   │   ├── autonomous-task-management.md (14777 bytes)
-    │   │   ├── autonomous-task-monitoring.md (10632 bytes)
-    │   │   ├── autonomous-task-orchestration.md (11344 bytes)
-    │   │   ├── autonomous-task-recovery.md (11280 bytes)
-    │   │   ├── autonomous_agent_framework.md (5887 bytes)
-    │   │   ├── configuration-reference.md (8099 bytes)
-    │   │   ├── data-model-specifications.md (11529 bytes)
-    │   │   ├── development-guide.md (19239 bytes)
-    │   │   ├── performance-tuning-guide.md (8432 bytes)
-    │   │   ├── project-task-management-guide.md (8393 bytes)
-    │   │   ├── protocol-implementations.md (18128 bytes)
-    │   │   ├── system-deployment-guide.md (10125 bytes)
-    │   │   ├── system-disaster-recovery.md (8303 bytes)
-    │   │   ├── system-integration-guide.md (12091 bytes)
-    │   │   ├── system-operations-manual.md (9846 bytes)
-    │   │   ├── system-security-guide.md (9239 bytes)
-    │   │   ├── task-communication-protocols.md (12211 bytes)
-    │   │   ├── task-deployment-guide.md (9528 bytes)
-    │   │   ├── task-execution-implementation.md (14470 bytes)
-    │   │   ├── task-performance-analysis.md (11854 bytes)
-    │   │   ├── task-recovery-procedures.md (12966 bytes)
-    │   │   ├── technical-implementation-guide.md (17623 bytes)
-    │   │   ├── testing-guide.md (14855 bytes)
-    │   │   └── troubleshooting-guide.md (12221 bytes)
-    │   ├── task/
-    │   │   ├── __init__.py (46 bytes)
-    │   │   ├── dependencies.py (1 bytes)
-    │   │   ├── execution.py (1895 bytes)
-    │   │   ├── monitoring.py (1718 bytes)
-    │   │   ├── prioritization.py (4675 bytes)
-    │   │   ├── scheduling.py (13404 bytes)
-    │   │   └── workflow.py (12088 bytes)
-    │   ├── types/
-    │   │   ├── code_management.ts (2303 bytes)
-    │   │   ├── coordination-metrics.ts (8650 bytes)
-    │   │   ├── coordination-support.ts (5982 bytes)
-    │   │   ├── coordination.ts (7836 bytes)
-    │   │   ├── deployment.ts (2889 bytes)
-    │   │   ├── documentation.ts (1054 bytes)
-    │   │   ├── quality.ts (2974 bytes)
-    │   │   ├── review.ts (3656 bytes)
-    │   │   ├── shared.ts (1790 bytes)
-    │   │   ├── swarm.ts (4386 bytes)
-    │   │   ├── task.ts (2582 bytes)
-    │   │   └── workflow.ts (2495 bytes)
-    │   ├── __init__.py (64 bytes)
-    │   └── types.ts (1492 bytes)
-    ├── archive/
+    │   └── README.md (2355 bytes)
+    ├── coverage/
+    │   ├── lcov-report/
+    │   │   ├── src/
+    │   │   │   ├── agents/
+    │   │   │   │   ├── AbstractAgent.ts.html (37200 bytes)
+    │   │   │   │   ├── ActiveInferencePOMDPAgent.ts.html (73648 bytes)
+    │   │   │   │   ├── AnalysisAgent.ts.html (47670 bytes)
+    │   │   │   │   ├── CalmTechnologyAgent.ts.html (222882 bytes)
+    │   │   │   │   ├── CreativeWritingAgent.ts.html (84662 bytes)
+    │   │   │   │   ├── CustomerSupportAgent.ts.html (93296 bytes)
+    │   │   │   │   ├── DataAnalysisAgent.ts.html (108465 bytes)
+    │   │   │   │   ├── DevelopmentAgent.ts.html (88095 bytes)
+    │   │   │   │   ├── FinalReviewAgent.ts.html (36898 bytes)
+    │   │   │   │   ├── FinanceAgent.ts.html (103047 bytes)
+    │   │   │   │   ├── HRAgent.ts.html (85327 bytes)
+    │   │   │   │   ├── LegalAgent.ts.html (93901 bytes)
+    │   │   │   │   ├── MarketingAgent.ts.html (57773 bytes)
+    │   │   │   │   ├── PlanningAgent.ts.html (16471 bytes)
+    │   │   │   │   ├── ResearchAgent.ts.html (46349 bytes)
+    │   │   │   │   ├── ReviewAgent.ts.html (18884 bytes)
+    │   │   │   │   ├── RevisionAgent.ts.html (7557 bytes)
+    │   │   │   │   ├── WritingAgent.ts.html (25973 bytes)
+    │   │   │   │   └── index.html (15712 bytes)
+    │   │   │   ├── config/
+    │   │   │   │   ├── index.html (4407 bytes)
+    │   │   │   │   └── validator.ts.html (48168 bytes)
+    │   │   │   ├── core/
+    │   │   │   │   ├── events/
+    │   │   │   │   │   ├── EventSystem.ts.html (57841 bytes)
+    │   │   │   │   │   └── index.html (4456 bytes)
+    │   │   │   │   ├── integration/
+    │   │   │   │   │   └── patterns/
+    │   │   │   │   │       ├── Bulkhead.ts.html (27749 bytes)
+    │   │   │   │   │       ├── CacheAside.ts.html (26421 bytes)
+    │   │   │   │   │       ├── CircuitBreaker.ts.html (26744 bytes)
+    │   │   │   │   │       ├── RateLimiter.ts.html (41942 bytes)
+    │   │   │   │   │       ├── RequestResponsePattern.ts.html (20356 bytes)
+    │   │   │   │   │       ├── Retry.ts.html (28274 bytes)
+    │   │   │   │   │       ├── Saga.ts.html (38004 bytes)
+    │   │   │   │   │       ├── Timeout.ts.html (24538 bytes)
+    │   │   │   │   │       ├── index.html (9673 bytes)
+    │   │   │   │   │       └── index.ts.html (8434 bytes)
+    │   │   │   │   ├── messaging/
+    │   │   │   │   │   ├── MessageSystem.ts.html (16078 bytes)
+    │   │   │   │   │   └── index.html (4459 bytes)
+    │   │   │   │   ├── monitoring/
+    │   │   │   │   │   ├── HealthCheckManager.ts.html (56946 bytes)
+    │   │   │   │   │   ├── MonitoringSystem.ts.html (26251 bytes)
+    │   │   │   │   │   └── index.html (5151 bytes)
+    │   │   │   │   ├── multiagent/
+    │   │   │   │   │   ├── AgentHealthMonitor.ts.html (80950 bytes)
+    │   │   │   │   │   ├── AgentRegistry.ts.html (78728 bytes)
+    │   │   │   │   │   ├── BaseAgent.ts.html (15536 bytes)
+    │   │   │   │   │   ├── Logger.ts.html (15191 bytes)
+    │   │   │   │   │   ├── MultiAgentCoordinator.ts.html (186300 bytes)
+    │   │   │   │   │   ├── OpenAIClient.ts.html (122031 bytes)
+    │   │   │   │   │   ├── PromptManager.ts.html (30425 bytes)
+    │   │   │   │   │   ├── SharedStateManager.new.ts.html (19089 bytes)
+    │   │   │   │   │   ├── SharedStateManager.ts.html (66039 bytes)
+    │   │   │   │   │   ├── TaskManager.ts.html (84770 bytes)
+    │   │   │   │   │   └── index.html (10777 bytes)
+    │   │   │   │   ├── storage/
+    │   │   │   │   │   ├── StorageSystem.ts.html (87103 bytes)
+    │   │   │   │   │   └── index.html (4464 bytes)
+    │   │   │   │   └── units/
+    │   │   │   │       ├── agents/
+    │   │   │   │       │   ├── LLMAgent.ts.html (37860 bytes)
+    │   │   │   │       │   ├── UnitAgentFactory.ts.html (33464 bytes)
+    │   │   │   │       │   └── index.html (5143 bytes)
+    │   │   │   │       ├── discovery/
+    │   │   │   │       │   ├── AgentDiscoveryService.ts.html (41010 bytes)
+    │   │   │   │       │   ├── UnitDiscovery.ts.html (36744 bytes)
+    │   │   │   │       │   ├── UnitParser.ts.html (33455 bytes)
+    │   │   │   │       │   └── index.html (5829 bytes)
+    │   │   │   │       ├── orchestration/
+    │   │   │   │       │   ├── AgentOrchestrator.ts.html (73320 bytes)
+    │   │   │   │       │   ├── TaskOrchestrator.ts.html (118586 bytes)
+    │   │   │   │       │   └── index.html (5195 bytes)
+    │   │   │   │       ├── relationships/
+    │   │   │   │       │   ├── RelationshipManager.ts.html (95771 bytes)
+    │   │   │   │       │   └── index.html (4530 bytes)
+    │   │   │   │       ├── state/
+    │   │   │   │       │   ├── UnitStateManager.ts.html (148307 bytes)
+    │   │   │   │       │   └── index.html (4508 bytes)
+    │   │   │   │       ├── workflow/
+    │   │   │   │       │   ├── WorkflowBuilder.ts.html (33118 bytes)
+    │   │   │   │       │   ├── WorkflowEngine.ts.html (164233 bytes)
+    │   │   │   │       │   └── index.html (5169 bytes)
+    │   │   │   │       ├── OrganizationalCompositionManager.ts.html (51882 bytes)
+    │   │   │   │       ├── OrganizationalStructureManager.ts.html (42158 bytes)
+    │   │   │   │       ├── UnitDeploymentManager.ts.html (49818 bytes)
+    │   │   │   │       ├── UnitInterface.ts.html (31815 bytes)
+    │   │   │   │       └── index.html (6555 bytes)
+    │   │   │   ├── examples/
+    │   │   │   │   ├── basic_coordination.ts.html (21493 bytes)
+    │   │   │   │   ├── complex_research_workflow.ts.html (53773 bytes)
+    │   │   │   │   ├── index.html (8598 bytes)
+    │   │   │   │   ├── multi_agent_workflow.ts.html (46483 bytes)
+    │   │   │   │   ├── organization-demo.ts.html (47418 bytes)
+    │   │   │   │   ├── parallel_research_workflow.ts.html (68904 bytes)
+    │   │   │   │   ├── strategic-risk-innovation-workflow.ts.html (134195 bytes)
+    │   │   │   │   └── thin_orchestration_example.ts.html (88242 bytes)
+    │   │   │   ├── utils/
+    │   │   │   │   ├── internationalization/
+    │   │   │   │   │   ├── i18n.ts.html (69790 bytes)
+    │   │   │   │   │   └── index.html (4465 bytes)
+    │   │   │   │   ├── visualization/
+    │   │   │   │   │   ├── index.html (4493 bytes)
+    │   │   │   │   │   └── workflowVisualizer.ts.html (67277 bytes)
+    │   │   │   │   ├── DataGenerationManager.ts.html (80057 bytes)
+    │   │   │   │   ├── ProjectConfigGenerator.ts.html (38518 bytes)
+    │   │   │   │   ├── exampleConfigGenerator.ts.html (23184 bytes)
+    │   │   │   │   ├── exampleDataGenerationUsage.ts.html (23039 bytes)
+    │   │   │   │   └── index.html (6505 bytes)
+    │   │   │   ├── index.html (4354 bytes)
+    │   │   │   └── index.ts.html (11469 bytes)
+    │   │   ├── base.css (5394 bytes)
+    │   │   ├── block-navigation.js (2655 bytes)
+    │   │   ├── favicon.png (445 bytes)
+    │   │   ├── index.html (17252 bytes)
+    │   │   ├── prettify.css (676 bytes)
+    │   │   ├── prettify.js (17590 bytes)
+    │   │   ├── sort-arrow-sprite.png (138 bytes)
+    │   │   └── sorter.js (6181 bytes)
+    │   ├── src/
+    │   │   ├── agents/
+    │   │   │   ├── AbstractAgent.ts.html (37200 bytes)
+    │   │   │   ├── ActiveInferencePOMDPAgent.ts.html (73648 bytes)
+    │   │   │   ├── AnalysisAgent.ts.html (47670 bytes)
+    │   │   │   ├── CalmTechnologyAgent.ts.html (222882 bytes)
+    │   │   │   ├── CreativeWritingAgent.ts.html (84662 bytes)
+    │   │   │   ├── CustomerSupportAgent.ts.html (93296 bytes)
+    │   │   │   ├── DataAnalysisAgent.ts.html (108465 bytes)
+    │   │   │   ├── DevelopmentAgent.ts.html (88095 bytes)
+    │   │   │   ├── FinalReviewAgent.ts.html (36898 bytes)
+    │   │   │   ├── FinanceAgent.ts.html (103047 bytes)
+    │   │   │   ├── HRAgent.ts.html (85327 bytes)
+    │   │   │   ├── LegalAgent.ts.html (93901 bytes)
+    │   │   │   ├── MarketingAgent.ts.html (57773 bytes)
+    │   │   │   ├── PlanningAgent.ts.html (16471 bytes)
+    │   │   │   ├── ResearchAgent.ts.html (46349 bytes)
+    │   │   │   ├── ReviewAgent.ts.html (18884 bytes)
+    │   │   │   ├── RevisionAgent.ts.html (7557 bytes)
+    │   │   │   ├── WritingAgent.ts.html (25973 bytes)
+    │   │   │   └── index.html (15712 bytes)
+    │   │   ├── config/
+    │   │   │   ├── index.html (4407 bytes)
+    │   │   │   └── validator.ts.html (48168 bytes)
+    │   │   ├── core/
+    │   │   │   ├── events/
+    │   │   │   │   ├── EventSystem.ts.html (57841 bytes)
+    │   │   │   │   └── index.html (4456 bytes)
+    │   │   │   ├── integration/
+    │   │   │   │   └── patterns/
+    │   │   │   │       ├── Bulkhead.ts.html (27749 bytes)
+    │   │   │   │       ├── CacheAside.ts.html (26421 bytes)
+    │   │   │   │       ├── CircuitBreaker.ts.html (26744 bytes)
+    │   │   │   │       ├── RateLimiter.ts.html (41942 bytes)
+    │   │   │   │       ├── RequestResponsePattern.ts.html (20356 bytes)
+    │   │   │   │       ├── Retry.ts.html (28274 bytes)
+    │   │   │   │       ├── Saga.ts.html (38004 bytes)
+    │   │   │   │       ├── Timeout.ts.html (24538 bytes)
+    │   │   │   │       ├── index.html (9673 bytes)
+    │   │   │   │       └── index.ts.html (8434 bytes)
+    │   │   │   ├── messaging/
+    │   │   │   │   ├── MessageSystem.ts.html (16078 bytes)
+    │   │   │   │   └── index.html (4459 bytes)
+    │   │   │   ├── monitoring/
+    │   │   │   │   ├── HealthCheckManager.ts.html (56946 bytes)
+    │   │   │   │   ├── MonitoringSystem.ts.html (26251 bytes)
+    │   │   │   │   └── index.html (5151 bytes)
+    │   │   │   ├── multiagent/
+    │   │   │   │   ├── AgentHealthMonitor.ts.html (80950 bytes)
+    │   │   │   │   ├── AgentRegistry.ts.html (78728 bytes)
+    │   │   │   │   ├── BaseAgent.ts.html (15536 bytes)
+    │   │   │   │   ├── Logger.ts.html (15191 bytes)
+    │   │   │   │   ├── MultiAgentCoordinator.ts.html (186300 bytes)
+    │   │   │   │   ├── OpenAIClient.ts.html (122031 bytes)
+    │   │   │   │   ├── PromptManager.ts.html (30425 bytes)
+    │   │   │   │   ├── SharedStateManager.new.ts.html (19089 bytes)
+    │   │   │   │   ├── SharedStateManager.ts.html (66039 bytes)
+    │   │   │   │   ├── TaskManager.ts.html (84770 bytes)
+    │   │   │   │   └── index.html (10777 bytes)
+    │   │   │   ├── storage/
+    │   │   │   │   ├── StorageSystem.ts.html (87103 bytes)
+    │   │   │   │   └── index.html (4464 bytes)
+    │   │   │   └── units/
+    │   │   │       ├── agents/
+    │   │   │       │   ├── LLMAgent.ts.html (37860 bytes)
+    │   │   │       │   ├── UnitAgentFactory.ts.html (33464 bytes)
+    │   │   │       │   └── index.html (5143 bytes)
+    │   │   │       ├── discovery/
+    │   │   │       │   ├── AgentDiscoveryService.ts.html (41010 bytes)
+    │   │   │       │   ├── UnitDiscovery.ts.html (36744 bytes)
+    │   │   │       │   ├── UnitParser.ts.html (33455 bytes)
+    │   │   │       │   └── index.html (5829 bytes)
+    │   │   │       ├── orchestration/
+    │   │   │       │   ├── AgentOrchestrator.ts.html (73320 bytes)
+    │   │   │       │   ├── TaskOrchestrator.ts.html (118586 bytes)
+    │   │   │       │   └── index.html (5195 bytes)
+    │   │   │       ├── relationships/
+    │   │   │       │   ├── RelationshipManager.ts.html (95771 bytes)
+    │   │   │       │   └── index.html (4530 bytes)
+    │   │   │       ├── state/
+    │   │   │       │   ├── UnitStateManager.ts.html (148307 bytes)
+    │   │   │       │   └── index.html (4508 bytes)
+    │   │   │       ├── workflow/
+    │   │   │       │   ├── WorkflowBuilder.ts.html (33118 bytes)
+    │   │   │       │   ├── WorkflowEngine.ts.html (164233 bytes)
+    │   │   │       │   └── index.html (5169 bytes)
+    │   │   │       ├── OrganizationalCompositionManager.ts.html (51882 bytes)
+    │   │   │       ├── OrganizationalStructureManager.ts.html (42158 bytes)
+    │   │   │       ├── UnitDeploymentManager.ts.html (49818 bytes)
+    │   │   │       ├── UnitInterface.ts.html (31815 bytes)
+    │   │   │       └── index.html (6555 bytes)
+    │   │   ├── examples/
+    │   │   │   ├── basic_coordination.ts.html (21493 bytes)
+    │   │   │   ├── complex_research_workflow.ts.html (53773 bytes)
+    │   │   │   ├── index.html (8598 bytes)
+    │   │   │   ├── multi_agent_workflow.ts.html (46483 bytes)
+    │   │   │   ├── organization-demo.ts.html (47418 bytes)
+    │   │   │   ├── parallel_research_workflow.ts.html (68904 bytes)
+    │   │   │   ├── strategic-risk-innovation-workflow.ts.html (134195 bytes)
+    │   │   │   └── thin_orchestration_example.ts.html (88242 bytes)
+    │   │   ├── utils/
+    │   │   │   ├── internationalization/
+    │   │   │   │   ├── i18n.ts.html (69790 bytes)
+    │   │   │   │   └── index.html (4465 bytes)
+    │   │   │   ├── visualization/
+    │   │   │   │   ├── index.html (4493 bytes)
+    │   │   │   │   └── workflowVisualizer.ts.html (67277 bytes)
+    │   │   │   ├── DataGenerationManager.ts.html (80057 bytes)
+    │   │   │   ├── ProjectConfigGenerator.ts.html (38518 bytes)
+    │   │   │   ├── exampleConfigGenerator.ts.html (23184 bytes)
+    │   │   │   ├── exampleDataGenerationUsage.ts.html (23039 bytes)
+    │   │   │   └── index.html (6505 bytes)
+    │   │   ├── index.html (4354 bytes)
+    │   │   └── index.ts.html (11469 bytes)
+    │   ├── base.css (5394 bytes)
+    │   ├── block-navigation.js (2655 bytes)
+    │   ├── favicon.png (445 bytes)
+    │   ├── index.html (17252 bytes)
+    │   ├── lcov.info (179683 bytes)
+    │   ├── prettify.css (676 bytes)
+    │   ├── prettify.js (17590 bytes)
+    │   ├── sort-arrow-sprite.png (138 bytes)
+    │   └── sorter.js (6181 bytes)
     ├── docs/
     │   ├── agents/
     │   │   ├── architectures/
@@ -291,9 +525,13 @@ Root: /home/trim/Documents/operations
     │   │   ├── operations/
     │   │   │   ├── agent-operations.md (6393 bytes)
     │   │   │   └── task-operations.md (9517 bytes)
-    │   │   └── task/
-    │   │       └── implementation.md (5788 bytes)
+    │   │   ├── task/
+    │   │   │   └── implementation.md (5788 bytes)
+    │   │   ├── AGENTS.md (7395 bytes)
+    │   │   ├── multiagent-coordination-system.md (18475 bytes)
+    │   │   └── multiagent-system.md (9425 bytes)
     │   ├── ai/
+    │   │   ├── README.md (1235 bytes)
     │   │   ├── agent-framework.md (3092 bytes)
     │   │   └── agi-safety.md (3561 bytes)
     │   ├── analysis/
@@ -302,7 +540,8 @@ Root: /home/trim/Documents/operations
     │   ├── analytics/
     │   │   └── analytics-platform.md (4441 bytes)
     │   ├── api/
-    │   │   └── index.md (5787 bytes)
+    │   │   ├── index.md (5787 bytes)
+    │   │   └── reference.md (25685 bytes)
     │   ├── architecture/
     │   │   ├── system-architecture.md (3023 bytes)
     │   │   ├── tag-hierarchy.md (8224 bytes)
@@ -317,9 +556,13 @@ Root: /home/trim/Documents/operations
     │   │   ├── note-refactoring.md (9473 bytes)
     │   │   └── templater-workflows.md (9583 bytes)
     │   ├── configuration/
+    │   │   ├── README.md (1399 bytes)
     │   │   ├── obsidian-configuration.md (6847 bytes)
     │   │   └── obsidian-settings.md (5526 bytes)
     │   ├── core/
+    │   │   ├── integration/
+    │   │   │   └── patterns/
+    │   │   │       └── README.md (6150 bytes)
     │   │   ├── core-documentation.md (6552 bytes)
     │   │   ├── getting-started.md (2573 bytes)
     │   │   └── index.md (3853 bytes)
@@ -340,8 +583,117 @@ Root: /home/trim/Documents/operations
     │   │   ├── release-management.md (5396 bytes)
     │   │   ├── testing-strategy.md (5658 bytes)
     │   │   └── version-control.md (5097 bytes)
-    │   ├── experiments/
+    │   ├── dialogs/
+    │   │   └── 1-whose_on_first.md (5086 bytes)
     │   ├── frameworks/
+    │   │   ├── Events/
+    │   │   │   ├── Command/
+    │   │   │   │   ├── Roles/
+    │   │   │   │   │   ├── command_center_director.md (4720 bytes)
+    │   │   │   │   │   ├── security_coordinator.md (4917 bytes)
+    │   │   │   │   │   └── technical_operations_manager.md (5067 bytes)
+    │   │   │   │   ├── command_center_operations.md (6549 bytes)
+    │   │   │   │   ├── crisis_protocols.md (6637 bytes)
+    │   │   │   │   ├── decision_matrix.md (4836 bytes)
+    │   │   │   │   └── event_command_center.md (6072 bytes)
+    │   │   │   ├── Emergency/
+    │   │   │   │   └── event_emergency_procedures.md (6650 bytes)
+    │   │   │   ├── Monitoring/
+    │   │   │   │   └── event_monitoring_dashboard.md (4661 bytes)
+    │   │   │   ├── Operations/
+    │   │   │   │   └── event_operations_guide.md (5894 bytes)
+    │   │   │   └── Planning/
+    │   │   │       └── event_planning_checklist.md (5590 bytes)
+    │   │   ├── Risk_Management/
+    │   │   │   ├── Risk_Appetite_Framework/
+    │   │   │   │   └── risk_appetite_framework.md (6131 bytes)
+    │   │   │   ├── Risk_Assessment_Methodology/
+    │   │   │   │   └── risk_assessment_methodology.md (6098 bytes)
+    │   │   │   └── Risk_Control_Matrix/
+    │   │   │       └── risk_control_matrix.md (5901 bytes)
+    │   │   ├── Security/
+    │   │   │   ├── cognitive_security_framework.md (8871 bytes)
+    │   │   │   ├── digital_security_framework.md (9763 bytes)
+    │   │   │   ├── physical_security_framework.md (7574 bytes)
+    │   │   │   ├── security_framework.md (9873 bytes)
+    │   │   │   └── security_framework_integration.md (8749 bytes)
+    │   │   ├── Technical/
+    │   │   │   ├── Analytics/
+    │   │   │   │   ├── analytics_future.md (3475 bytes)
+    │   │   │   │   ├── analytics_infrastructure.md (3489 bytes)
+    │   │   │   │   ├── analytics_integration.md (3511 bytes)
+    │   │   │   │   ├── analytics_intelligence.md (3467 bytes)
+    │   │   │   │   ├── analytics_platform.md (3529 bytes)
+    │   │   │   │   ├── analytics_research.md (3446 bytes)
+    │   │   │   │   ├── data_operations.md (3404 bytes)
+    │   │   │   │   ├── predictive_analytics.md (3343 bytes)
+    │   │   │   │   ├── prescriptive_analytics.md (3350 bytes)
+    │   │   │   │   └── realtime_analytics.md (3283 bytes)
+    │   │   │   ├── Assets/
+    │   │   │   │   ├── Advanced/
+    │   │   │   │   │   ├── asset_features.md (2998 bytes)
+    │   │   │   │   │   ├── knowledge_integration.md (2982 bytes)
+    │   │   │   │   │   ├── security_enhancement.md (3100 bytes)
+    │   │   │   │   │   └── token_features.md (3184 bytes)
+    │   │   │   │   ├── Analytics/
+    │   │   │   │   │   ├── market_analytics.md (3744 bytes)
+    │   │   │   │   │   ├── performance_analytics.md (3797 bytes)
+    │   │   │   │   │   ├── risk_analytics.md (3935 bytes)
+    │   │   │   │   │   └── value_analytics.md (3823 bytes)
+    │   │   │   │   ├── Infrastructure/
+    │   │   │   │   │   ├── integration_system.md (3991 bytes)
+    │   │   │   │   │   └── trading_system.md (3969 bytes)
+    │   │   │   │   ├── asset_classification.md (10143 bytes)
+    │   │   │   │   ├── asset_management.md (9061 bytes)
+    │   │   │   │   ├── asset_protection.md (9919 bytes)
+    │   │   │   │   └── token_framework.md (8288 bytes)
+    │   │   │   ├── DevOps/
+    │   │   │   │   ├── build_automation.md (10183 bytes)
+    │   │   │   │   ├── build_optimization.md (4814 bytes)
+    │   │   │   │   ├── code_management.md (4262 bytes)
+    │   │   │   │   ├── deployment_automation.md (11287 bytes)
+    │   │   │   │   ├── deployment_strategy.md (5425 bytes)
+    │   │   │   │   ├── devops_framework.md (11637 bytes)
+    │   │   │   │   ├── infrastructure_code.md (11808 bytes)
+    │   │   │   │   ├── release_automation.md (5386 bytes)
+    │   │   │   │   ├── release_coordination.md (5568 bytes)
+    │   │   │   │   ├── repository_management.md (7954 bytes)
+    │   │   │   │   └── test_automation.md (5314 bytes)
+    │   │   │   ├── Governance/
+    │   │   │   │   └── governance_enhancement.md (3449 bytes)
+    │   │   │   ├── Implementation/
+    │   │   │   │   ├── continuous_integration.md (3373 bytes)
+    │   │   │   │   ├── devsecops_framework.md (3421 bytes)
+    │   │   │   │   └── quality_assurance.md (3418 bytes)
+    │   │   │   ├── Infrastructure/
+    │   │   │   │   ├── storage_system.md (10146 bytes)
+    │   │   │   │   └── technical_infrastructure_framework.md (6453 bytes)
+    │   │   │   ├── Integration/
+    │   │   │   │   └── integration_enhancement.md (3391 bytes)
+    │   │   │   ├── Performance/
+    │   │   │   │   └── performance_optimization.md (3512 bytes)
+    │   │   │   ├── Platform/
+    │   │   │   │   ├── platform_analytics.md (2819 bytes)
+    │   │   │   │   ├── platform_architecture.md (3451 bytes)
+    │   │   │   │   ├── platform_compliance.md (2799 bytes)
+    │   │   │   │   ├── platform_development.md (2981 bytes)
+    │   │   │   │   ├── platform_integration.md (3377 bytes)
+    │   │   │   │   ├── platform_operations.md (3396 bytes)
+    │   │   │   │   ├── platform_operations_framework.md (3543 bytes)
+    │   │   │   │   └── platform_security.md (2799 bytes)
+    │   │   │   └── Security/
+    │   │   │       ├── application_security.md (9806 bytes)
+    │   │   │       ├── data_security.md (10069 bytes)
+    │   │   │       ├── identity_management.md (10252 bytes)
+    │   │   │       ├── network_security.md (10101 bytes)
+    │   │   │       ├── security_analytics.md (6855 bytes)
+    │   │   │       ├── security_architecture.md (10195 bytes)
+    │   │   │       ├── security_compliance.md (6439 bytes)
+    │   │   │       ├── security_governance.md (10245 bytes)
+    │   │   │       ├── security_operations.md (7168 bytes)
+    │   │   │       ├── security_training.md (7695 bytes)
+    │   │   │       ├── threat_management.md (8520 bytes)
+    │   │   │       └── zero_trust_architecture.md (7062 bytes)
     │   │   ├── agent-framework.md (7447 bytes)
     │   │   ├── agent_framework.md (4695 bytes)
     │   │   ├── experiment-management.md (8595 bytes)
@@ -399,6 +751,7 @@ Root: /home/trim/Documents/operations
     │   │   ├── slack-integration.md (10097 bytes)
     │   │   └── teams-integration.md (10211 bytes)
     │   ├── knowledge/
+    │   │   ├── README.md (1346 bytes)
     │   │   ├── archival-procedures.md (9800 bytes)
     │   │   ├── content-analysis.md (4422 bytes)
     │   │   ├── feedback-loops.md (9778 bytes)
@@ -408,7 +761,13 @@ Root: /home/trim/Documents/operations
     │   │   ├── knowledge_base.md (3656 bytes)
     │   │   ├── retention-policies.md (9819 bytes)
     │   │   └── semantic-search.md (3996 bytes)
+    │   ├── language/
+    │   │   └── case/
+    │   │       └── organizational_case.md (9228 bytes)
+    │   ├── legal/
+    │   │   └── README.md (1340 bytes)
     │   ├── maintenance/
+    │   │   ├── README.md (1404 bytes)
     │   │   ├── annual-audit.md (9251 bytes)
     │   │   ├── archive-process.md (9226 bytes)
     │   │   ├── contact-information.md (9394 bytes)
@@ -427,18 +786,33 @@ Root: /home/trim/Documents/operations
     │   │   ├── template-updates.md (7961 bytes)
     │   │   └── weekly-review.md (9102 bytes)
     │   ├── meta/
+    │   │   ├── comprehensive_final_assessment.md (15559 bytes)
+    │   │   ├── comprehensive_improvement_assessment.md (35365 bytes)
     │   │   ├── core-documentation.md (6199 bytes)
+    │   │   ├── documentation-about-documentation.md (4772 bytes)
     │   │   ├── documentation-hierarchy.md (5438 bytes)
     │   │   ├── documentation-workflow.md (5033 bytes)
     │   │   ├── documentation_architecture.md (5900 bytes)
     │   │   ├── documentation_enhancement_project.md (3700 bytes)
     │   │   ├── documentation_unit_index.md (3462 bytes)
+    │   │   ├── final_implementation_summary.md (16649 bytes)
     │   │   ├── git-workflow.md (5503 bytes)
+    │   │   ├── implementation_progress.md (10954 bytes)
+    │   │   ├── integration_framework.md (5055 bytes)
+    │   │   ├── knowledge_management.md (3854 bytes)
     │   │   ├── metadata-standards.md (5146 bytes)
+    │   │   ├── metadata_standards.md (3177 bytes)
     │   │   ├── naming-conventions.md (4020 bytes)
     │   │   ├── obsidian-configuration.md (4862 bytes)
     │   │   ├── obsidian-style-guide.md (14622 bytes)
-    │   │   └── style-guide.md (4185 bytes)
+    │   │   ├── quality_assurance.md (4453 bytes)
+    │   │   ├── repository_structure.md (3986 bytes)
+    │   │   ├── search_taxonomy.md (3671 bytes)
+    │   │   ├── semantic_versioning.md (3845 bytes)
+    │   │   ├── style-guide.md (4185 bytes)
+    │   │   ├── template-usage-guide.md (5317 bytes)
+    │   │   ├── template_framework.md (5323 bytes)
+    │   │   └── version_control.md (3744 bytes)
     │   ├── metrics/
     │   │   ├── adoption-metrics.md (1 bytes)
     │   │   ├── content-updates.md (8496 bytes)
@@ -495,11 +869,14 @@ Root: /home/trim/Documents/operations
     │   │   ├── custom-views.md (9527 bytes)
     │   │   ├── quick-access.md (9419 bytes)
     │   │   └── smart-navigation.md (9429 bytes)
+    │   ├── notation/
+    │   │   └── tool_of_thought_notation.md (18214 bytes)
     │   ├── onboarding/
     │   │   └── index.md (16547 bytes)
     │   ├── operations/
     │   │   ├── capacity-planning.md (1 bytes)
     │   │   ├── change-management.md (5456 bytes)
+    │   │   ├── deployment-guide.md (11172 bytes)
     │   │   ├── incident-response.md (5452 bytes)
     │   │   ├── index.md (11337 bytes)
     │   │   ├── maintenance-tasks.md (5824 bytes)
@@ -549,7 +926,38 @@ Root: /home/trim/Documents/operations
     │   │   ├── project-guidelines.md (4098 bytes)
     │   │   ├── project-lifecycle.md (4988 bytes)
     │   │   └── task-framework.md (4751 bytes)
+    │   ├── prompts/
+    │   │   ├── README.md (9124 bytes)
+    │   │   ├── ai_model_development.md (14738 bytes)
+    │   │   ├── code_analysis_and_modification.md (14697 bytes)
+    │   │   ├── code_quality_testing.md (12854 bytes)
+    │   │   ├── codebase_compatibility_and_integration.md (17169 bytes)
+    │   │   ├── collaborative_development.md (16102 bytes)
+    │   │   ├── comprehensive_reasoning.md (6556 bytes)
+    │   │   ├── continuous_learning.md (13898 bytes)
+    │   │   ├── creative_thinking.md (14670 bytes)
+    │   │   ├── data_decision_making.md (15115 bytes)
+    │   │   ├── devops_cicd.md (15210 bytes)
+    │   │   ├── effective_communication.md (11191 bytes)
+    │   │   ├── ethical_agency.md (9620 bytes)
+    │   │   ├── human_ai_collaboration.md (15669 bytes)
+    │   │   ├── intelligence_analysis.md (15018 bytes)
+    │   │   ├── knowledge_management.md (17108 bytes)
+    │   │   ├── methodical_diligence.md (9178 bytes)
+    │   │   ├── performance_optimization.md (16181 bytes)
+    │   │   ├── refactoring_maintenance.md (13613 bytes)
+    │   │   ├── requirements_engineering.md (14496 bytes)
+    │   │   ├── secure_coding.md (13677 bytes)
+    │   │   ├── self_assessment_and_metacognition.md (15356 bytes)
+    │   │   ├── software_architecture.md (14788 bytes)
+    │   │   ├── software_design_principles.md (12678 bytes)
+    │   │   ├── strategic_intelligence.md (15184 bytes)
+    │   │   ├── strategic_planning.md (12264 bytes)
+    │   │   ├── system_design_architecture.md (19004 bytes)
+    │   │   ├── technical_problem_solving.md (12102 bytes)
+    │   │   └── thoughtful_exploration.md (10330 bytes)
     │   ├── quality/
+    │   │   ├── README.md (1535 bytes)
     │   │   └── qa-process.md (4971 bytes)
     │   ├── reference/
     │   │   └── reference-moc.md (4558 bytes)
@@ -602,38 +1010,53 @@ Root: /home/trim/Documents/operations
     │   │   ├── backup-system.md (7674 bytes)
     │   │   └── knowledge-management.md (8869 bytes)
     │   ├── templates/
-    │   │   ├── agents/
     │   │   ├── analysis/
     │   │   │   └── strategic_analysis_template.md (4656 bytes)
-    │   │   ├── analytics/
     │   │   ├── core/
     │   │   │   └── base-template.md (557 bytes)
     │   │   ├── documentation/
     │   │   │   └── documentation-template.md (1 bytes)
-    │   │   ├── experiments/
     │   │   ├── policy/
     │   │   │   └── governance_policy_template.md (3962 bytes)
     │   │   ├── process/
     │   │   │   └── operational_process_template.md (4242 bytes)
     │   │   ├── project/
     │   │   │   └── project-template.md (1 bytes)
-    │   │   ├── research/
     │   │   ├── README-template.md (1270 bytes)
+    │   │   ├── audit_template.md (3254 bytes)
+    │   │   ├── charter_template.md (3976 bytes)
+    │   │   ├── committee_template.md (5806 bytes)
     │   │   ├── decision-record-template.md (3747 bytes)
+    │   │   ├── deployment_release_template.md (6854 bytes)
+    │   │   ├── event_template.md (3345 bytes)
     │   │   ├── feedback-template.md (8196 bytes)
+    │   │   ├── framework_template.md (3866 bytes)
     │   │   ├── guide-template.md (4971 bytes)
     │   │   ├── incident-template.md (3978 bytes)
+    │   │   ├── incident_response_template.md (4848 bytes)
+    │   │   ├── integration_template.md (6754 bytes)
     │   │   ├── meeting-notes-template.md (2671 bytes)
     │   │   ├── meeting-template.md (7737 bytes)
     │   │   ├── policy-template.md (4897 bytes)
+    │   │   ├── policy_template.md (4534 bytes)
+    │   │   ├── procedure_template.md (6522 bytes)
     │   │   ├── process-template.md (4630 bytes)
+    │   │   ├── process_template.md (4962 bytes)
     │   │   ├── project-management-template.md (3672 bytes)
     │   │   ├── project-template.md (5982 bytes)
+    │   │   ├── project_template.md (6256 bytes)
+    │   │   ├── report_template.md (24278 bytes)
     │   │   ├── review-template.md (9098 bytes)
+    │   │   ├── review_testing_template.md (6151 bytes)
+    │   │   ├── sop_template.md (22039 bytes)
     │   │   ├── status-report-template.md (8126 bytes)
     │   │   ├── system-documentation-template.md (5427 bytes)
+    │   │   ├── system_template.md (5086 bytes)
     │   │   ├── task-template.md (2288 bytes)
+    │   │   ├── task_completion_template.md (6066 bytes)
+    │   │   ├── training_template.md (1 bytes)
     │   │   ├── unit_documentation_template.md (2256 bytes)
+    │   │   ├── unit_template.md (16845 bytes)
     │   │   └── workflow-template.md (3778 bytes)
     │   ├── testing/
     │   │   ├── index.md (20890 bytes)
@@ -650,6 +1073,7 @@ Root: /home/trim/Documents/operations
     │   │   ├── index.md (4288 bytes)
     │   │   └── monitoring-tools.md (5020 bytes)
     │   ├── training/
+    │   │   ├── README.md (1308 bytes)
     │   │   ├── best-practices.md (8780 bytes)
     │   │   ├── contribution-guidelines.md (8403 bytes)
     │   │   ├── quick-start.md (8494 bytes)
@@ -661,7 +1085,10 @@ Root: /home/trim/Documents/operations
     │   │   ├── user-guides.md (8301 bytes)
     │   │   └── workshop-materials.md (9232 bytes)
     │   ├── troubleshooting/
+    │   │   ├── README.md (1224 bytes)
     │   │   └── index.md (10815 bytes)
+    │   ├── ux/
+    │   │   └── README.md (1356 bytes)
     │   ├── visual/
     │   │   ├── custom-themes.md (8167 bytes)
     │   │   ├── graph-customization.md (9291 bytes)
@@ -672,238 +1099,1039 @@ Root: /home/trim/Documents/operations
     │   │   ├── research-workflow.md (8656 bytes)
     │   │   └── version-control-workflow.md (9065 bytes)
     │   ├── 000-home.md (2880 bytes)
+    │   ├── README.md (616 bytes)
     │   ├── index.md (3536 bytes)
-    │   └── master-index.md (8001 bytes)
-    ├── frameworks/
-    │   ├── Events/
-    │   │   ├── Command/
-    │   │   │   ├── Roles/
-    │   │   │   │   ├── command_center_director.md (4720 bytes)
-    │   │   │   │   ├── security_coordinator.md (4917 bytes)
-    │   │   │   │   └── technical_operations_manager.md (5067 bytes)
-    │   │   │   ├── command_center_operations.md (6549 bytes)
-    │   │   │   ├── crisis_protocols.md (6637 bytes)
-    │   │   │   ├── decision_matrix.md (4836 bytes)
-    │   │   │   └── event_command_center.md (6072 bytes)
-    │   │   ├── Emergency/
-    │   │   │   └── event_emergency_procedures.md (6650 bytes)
-    │   │   ├── Monitoring/
-    │   │   │   └── event_monitoring_dashboard.md (4661 bytes)
-    │   │   ├── Operations/
-    │   │   │   └── event_operations_guide.md (5894 bytes)
-    │   │   └── Planning/
-    │   │       └── event_planning_checklist.md (5590 bytes)
-    │   ├── Risk_Management/
-    │   │   ├── Risk_Appetite_Framework/
-    │   │   │   └── risk_appetite_framework.md (6131 bytes)
-    │   │   ├── Risk_Assessment_Methodology/
-    │   │   │   └── risk_assessment_methodology.md (6098 bytes)
-    │   │   └── Risk_Control_Matrix/
-    │   │       └── risk_control_matrix.md (5901 bytes)
-    │   ├── Technical/
-    │   │   ├── Analytics/
-    │   │   │   ├── analytics_future.md (3475 bytes)
-    │   │   │   ├── analytics_infrastructure.md (3489 bytes)
-    │   │   │   ├── analytics_integration.md (3511 bytes)
-    │   │   │   ├── analytics_intelligence.md (3467 bytes)
-    │   │   │   ├── analytics_platform.md (3529 bytes)
-    │   │   │   ├── analytics_research.md (3446 bytes)
-    │   │   │   ├── data_operations.md (3404 bytes)
-    │   │   │   ├── predictive_analytics.md (3343 bytes)
-    │   │   │   ├── prescriptive_analytics.md (3350 bytes)
-    │   │   │   └── realtime_analytics.md (3283 bytes)
-    │   │   ├── Assets/
-    │   │   │   ├── Advanced/
-    │   │   │   │   ├── asset_features.md (2998 bytes)
-    │   │   │   │   ├── knowledge_integration.md (2982 bytes)
-    │   │   │   │   ├── security_enhancement.md (3100 bytes)
-    │   │   │   │   └── token_features.md (3184 bytes)
-    │   │   │   ├── Analytics/
-    │   │   │   │   ├── market_analytics.md (3744 bytes)
-    │   │   │   │   ├── performance_analytics.md (3797 bytes)
-    │   │   │   │   ├── risk_analytics.md (3935 bytes)
-    │   │   │   │   └── value_analytics.md (3823 bytes)
-    │   │   │   ├── Infrastructure/
-    │   │   │   │   ├── integration_system.md (3991 bytes)
-    │   │   │   │   └── trading_system.md (3969 bytes)
-    │   │   │   ├── asset_classification.md (10143 bytes)
-    │   │   │   ├── asset_management.md (9061 bytes)
-    │   │   │   ├── asset_protection.md (9919 bytes)
-    │   │   │   └── token_framework.md (8288 bytes)
-    │   │   ├── DevOps/
-    │   │   │   └── devops_framework.md (8301 bytes)
-    │   │   ├── Governance/
-    │   │   │   └── governance_enhancement.md (3449 bytes)
-    │   │   ├── Implementation/
-    │   │   │   ├── continuous_integration.md (3373 bytes)
-    │   │   │   ├── devsecops_framework.md (3421 bytes)
-    │   │   │   └── quality_assurance.md (3418 bytes)
-    │   │   ├── Infrastructure/
-    │   │   │   ├── storage_system.md (10146 bytes)
-    │   │   │   └── technical_infrastructure_framework.md (6453 bytes)
-    │   │   ├── Integration/
-    │   │   │   └── integration_enhancement.md (3391 bytes)
-    │   │   ├── Performance/
-    │   │   │   └── performance_optimization.md (3512 bytes)
-    │   │   ├── Platform/
-    │   │   │   ├── platform_analytics.md (2819 bytes)
-    │   │   │   ├── platform_architecture.md (3451 bytes)
-    │   │   │   ├── platform_compliance.md (2799 bytes)
-    │   │   │   ├── platform_development.md (2981 bytes)
-    │   │   │   ├── platform_integration.md (3377 bytes)
-    │   │   │   ├── platform_operations.md (3396 bytes)
-    │   │   │   ├── platform_operations_framework.md (3543 bytes)
-    │   │   │   └── platform_security.md (2799 bytes)
-    │   │   └── Security/
-    │   │       ├── application_security.md (9806 bytes)
-    │   │       ├── data_security.md (10069 bytes)
-    │   │       ├── identity_management.md (10252 bytes)
-    │   │       ├── network_security.md (10101 bytes)
-    │   │       ├── security_analytics.md (6855 bytes)
-    │   │       ├── security_architecture.md (10195 bytes)
-    │   │       ├── security_compliance.md (6439 bytes)
-    │   │       ├── security_governance.md (10245 bytes)
-    │   │       ├── security_operations.md (7168 bytes)
-    │   │       ├── security_training.md (7695 bytes)
-    │   │       ├── threat_management.md (8520 bytes)
-    │   │       └── zero_trust_architecture.md (7062 bytes)
-    │   └── core/
-    │       ├── events/
-    │       ├── integration/
-    │       │   └── patterns/
-    │       ├── messaging/
-    │       ├── monitoring/
-    │       └── storage/
-    ├── meta/
-    │   ├── documentation-about-documentation.md (4772 bytes)
-    │   ├── integration_framework.md (5055 bytes)
-    │   ├── knowledge_management.md (3854 bytes)
-    │   ├── metadata_standards.md (3177 bytes)
-    │   ├── quality_assurance.md (4453 bytes)
-    │   ├── repository_structure.md (3986 bytes)
-    │   ├── search_taxonomy.md (3671 bytes)
-    │   ├── semantic_versioning.md (3845 bytes)
-    │   ├── template-usage-guide.md (5317 bytes)
-    │   ├── template_framework.md (5323 bytes)
-    │   └── version_control.md (3744 bytes)
-    ├── operations/
+    │   ├── master-index.md (8119 bytes)
+    │   ├── multi_agent_workflow.md (8492 bytes)
+    │   └── openai-client.md (6429 bytes)
+    ├── examples/
+    │   ├── calm_tech/
+    │   │   ├── AGENTS.md (207 bytes)
+    │   │   ├── README.md (295 bytes)
+    │   │   ├── ambient_notifications.ts (24076 bytes)
+    │   │   ├── calm_tech_info.md (9610 bytes)
+    │   │   ├── calm_tech_workflow.ts (27545 bytes)
+    │   │   ├── comprehensive_demo.ts (16632 bytes)
+    │   │   ├── peripheral_awareness.ts (26630 bytes)
+    │   │   └── resilient_design.ts (32286 bytes)
+    │   ├── cognicism/
+    │   │   ├── AGENTS.md (187 bytes)
+    │   │   ├── README.md (263 bytes)
+    │   │   ├── cognicism-config.json (6735 bytes)
+    │   │   ├── cognicism-workflow.ts (131156 bytes)
+    │   │   ├── cognicism_glossary.md (7272 bytes)
+    │   │   ├── cognicism_visualizations.py (26444 bytes)
+    │   │   ├── demo-interactive.js (25668 bytes)
+    │   │   ├── run-demo.js (3761 bytes)
+    │   │   ├── setup.sh (7470 bytes)
+    │   │   └── test-cognicism.js (27674 bytes)
+    │   ├── integration-patterns/
+    │   │   ├── AGENTS.md (211 bytes)
+    │   │   ├── README.md (353 bytes)
+    │   │   └── resilient-api-client.ts (7030 bytes)
+    │   ├── lexdao/
+    │   │   ├── .github/
+    │   │   │   └── workflows/
+    │   │   │       └── ci-cd.yml (11742 bytes)
+    │   │   ├── __tests__/
+    │   │   │   ├── agents.test.ts (16161 bytes)
+    │   │   │   ├── setup.ts (4321 bytes)
+    │   │   │   └── workflow.test.ts (9774 bytes)
+    │   │   ├── utils/
+    │   │   │   └── data-validator.ts (23539 bytes)
+    │   │   ├── .env.example (6591 bytes)
+    │   │   ├── .gitignore (5119 bytes)
+    │   │   ├── AGENTS.md (189 bytes)
+    │   │   ├── Dockerfile (4675 bytes)
+    │   │   ├── README.md (271 bytes)
+    │   │   ├── constitution-parser.ts (17338 bytes)
+    │   │   ├── dao-analytics.ts (33546 bytes)
+    │   │   ├── docker-compose.yml (6376 bytes)
+    │   │   ├── jest.config.js (1649 bytes)
+    │   │   ├── lexdao_constitution.md (31157 bytes)
+    │   │   ├── lexdao_visualizer.py (28929 bytes)
+    │   │   ├── lexdao_workflow.ts (96190 bytes)
+    │   │   ├── nginx.conf (5124 bytes)
+    │   │   ├── overview.md (10949 bytes)
+    │   │   ├── package.json (2410 bytes)
+    │   │   ├── proposal-generator.ts (23801 bytes)
+    │   │   ├── run-demo.ts (20347 bytes)
+    │   │   ├── setup.sh (4512 bytes)
+    │   │   └── tsconfig.json (1439 bytes)
+    │   ├── 1-event-storage-example.ts (11856 bytes)
+    │   ├── 10-dynamic-org-generator-example.ts (39183 bytes)
+    │   ├── 2-relationship-management-example.ts (24009 bytes)
+    │   ├── 3-state-management-example.ts (35024 bytes)
+    │   ├── 4-workflow-engine-example.ts (24125 bytes)
+    │   ├── 5-integrated-operations-example.ts (10140 bytes)
+    │   ├── 6-openai-agent-example.ts (7536 bytes)
+    │   ├── 7-multi-unit-llm-flow-example.ts (27802 bytes)
+    │   ├── 8-hybrid-agent-workflow-example.ts (113339 bytes)
+    │   ├── 9-active-inference-pomdp-example.ts (41436 bytes)
+    │   ├── 9-calm-tech-org-ergonomics-example.ts (105851 bytes)
+    │   ├── README.md (7621 bytes)
+    │   ├── comprehensive-multi-agent-workflow.ts (12283 bytes)
+    │   ├── run-active-inference-demo.js (1382 bytes)
+    │   ├── run-dynamic-org-generator.js (1690 bytes)
+    │   ├── run-examples.js (9384 bytes)
+    │   ├── run-workflow-demo.js (1604 bytes)
+    │   └── workflow_visualization.log (107 bytes)
+    ├── logs/
+    │   ├── coordinator.log (9672 bytes)
+    │   ├── multiagentcoordinator.log (178763 bytes)
+    │   └── sharedstatemanager.log (186860 bytes)
+    ├── output/
+    │   ├── active-inference-pomdp-2025-04-25T17-03-29.661Z/
+    │   │   ├── intermediates/
+    │   │   │   ├── belief_frames/
+    │   │   │   │   ├── belief_frame_000.png (7772 bytes)
+    │   │   │   │   ├── belief_frame_000.svg (2668 bytes)
+    │   │   │   │   ├── belief_frame_001.png (8568 bytes)
+    │   │   │   │   └── belief_frame_001.svg (2679 bytes)
+    │   │   │   ├── active_inference_results.json (19690 bytes)
+    │   │   │   └── temperature_extraction.json (1476 bytes)
+    │   │   ├── llm_outputs/
+    │   │   │   ├── report_generation.json (5571 bytes)
+    │   │   │   └── temperature_extraction.json (1450 bytes)
+    │   │   ├── logs/
+    │   │   │   └── workflow.log (3551 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── belief_animation.gif (10956 bytes)
+    │   │   │   ├── belief_history.png (7709 bytes)
+    │   │   │   ├── belief_history.svg (450 bytes)
+    │   │   │   ├── free_energy.png (9172 bytes)
+    │   │   │   ├── free_energy.svg (462 bytes)
+    │   │   │   ├── observation_action_history.png (6721 bytes)
+    │   │   │   ├── observation_action_history.svg (347 bytes)
+    │   │   │   ├── observation_model.png (6463 bytes)
+    │   │   │   ├── observation_model.svg (281 bytes)
+    │   │   │   ├── transition_model.png (6037 bytes)
+    │   │   │   └── transition_model.svg (283 bytes)
+    │   │   ├── active_inference_pomdp_report.html (6904 bytes)
+    │   │   ├── active_inference_pomdp_report.md (4613 bytes)
+    │   │   └── workflow_results.json (1082 bytes)
+    │   ├── active-inference-pomdp-2025-04-25T21-53-09.156Z/
+    │   │   ├── intermediates/
+    │   │   │   ├── belief_frames/
+    │   │   │   │   ├── belief_frame_000.png (7772 bytes)
+    │   │   │   │   ├── belief_frame_000.svg (2668 bytes)
+    │   │   │   │   ├── belief_frame_001.png (8585 bytes)
+    │   │   │   │   └── belief_frame_001.svg (2676 bytes)
+    │   │   │   ├── active_inference_results.json (19687 bytes)
+    │   │   │   └── temperature_extraction.json (1547 bytes)
+    │   │   ├── llm_outputs/
+    │   │   │   ├── report_generation.json (5348 bytes)
+    │   │   │   └── temperature_extraction.json (1480 bytes)
+    │   │   ├── logs/
+    │   │   │   └── workflow.log (3579 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── belief_animation.gif (10964 bytes)
+    │   │   │   ├── belief_history.png (7709 bytes)
+    │   │   │   ├── belief_history.svg (450 bytes)
+    │   │   │   ├── free_energy.png (9172 bytes)
+    │   │   │   ├── free_energy.svg (462 bytes)
+    │   │   │   ├── observation_action_history.png (6721 bytes)
+    │   │   │   ├── observation_action_history.svg (347 bytes)
+    │   │   │   ├── observation_model.png (6463 bytes)
+    │   │   │   ├── observation_model.svg (281 bytes)
+    │   │   │   ├── transition_model.png (6037 bytes)
+    │   │   │   └── transition_model.svg (283 bytes)
+    │   │   ├── active_inference_pomdp_report.html (7092 bytes)
+    │   │   ├── active_inference_pomdp_report.md (4416 bytes)
+    │   │   └── workflow_results.json (1080 bytes)
+    │   ├── butterfly-car-design-2025-04-25T20-50-58.725Z/
+    │   │   ├── images/
+    │   │   │   ├── abstract.png (1881235 bytes)
+    │   │   │   ├── abstract_prompt.txt (453 bytes)
+    │   │   │   ├── logo.png (423501 bytes)
+    │   │   │   ├── logo_prompt.txt (337 bytes)
+    │   │   │   ├── system.png (1819097 bytes)
+    │   │   │   └── system_prompt.txt (440 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── architecture_designer_1745614299929_input.json (6954 bytes)
+    │   │   │   ├── architecture_designer_1745614319529_output.json (4848 bytes)
+    │   │   │   ├── data_architect_1745614319532_input.json (9805 bytes)
+    │   │   │   ├── data_architect_1745614332749_output.json (3136 bytes)
+    │   │   │   ├── engagement_strategist_1745614269532_input.json (5155 bytes)
+    │   │   │   ├── engagement_strategist_1745614299924_output.json (4509 bytes)
+    │   │   │   ├── project_manager_1745614332752_input.json (1673 bytes)
+    │   │   │   ├── project_manager_1745614348771_output.json (5078 bytes)
+    │   │   │   ├── requirements_analyzer_1745614258737_input.json (1579 bytes)
+    │   │   │   ├── requirements_analyzer_1745614269526_output.json (3326 bytes)
+    │   │   │   ├── requirements_analyzer_1745614349312_input.json (1483 bytes)
+    │   │   │   ├── requirements_analyzer_1745614349316_input.json (1358 bytes)
+    │   │   │   ├── requirements_analyzer_1745614355541_output.json (2019 bytes)
+    │   │   │   └── requirements_analyzer_1745614356400_output.json (1626 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── chart_generator_1745614270036.html (971 bytes)
+    │   │   │   ├── map_generator_1745614319537.html (1819 bytes)
+    │   │   │   ├── workflow_dashboard.html (23766 bytes)
+    │   │   │   └── workflow_diagram.mmd (5077 bytes)
+    │   │   ├── workflow.log (8077 bytes)
+    │   │   └── workflow_outputs.json (162105 bytes)
+    │   ├── butterfly-car-design-2025-04-25T21-49-23.554Z/
+    │   │   ├── images/
+    │   │   │   ├── abstract.png (1567168 bytes)
+    │   │   │   ├── abstract_prompt.txt (453 bytes)
+    │   │   │   ├── logo.png (585826 bytes)
+    │   │   │   ├── logo_prompt.txt (337 bytes)
+    │   │   │   ├── system.png (1822884 bytes)
+    │   │   │   └── system_prompt.txt (440 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── architecture_designer_1745617785906_input.json (6890 bytes)
+    │   │   │   ├── architecture_designer_1745617801191_output.json (5331 bytes)
+    │   │   │   ├── data_architect_1745617801197_input.json (10212 bytes)
+    │   │   │   ├── data_architect_1745617817246_output.json (4124 bytes)
+    │   │   │   ├── engagement_strategist_1745617772300_input.json (5091 bytes)
+    │   │   │   ├── engagement_strategist_1745617785902_output.json (4693 bytes)
+    │   │   │   ├── project_manager_1745617817249_input.json (1673 bytes)
+    │   │   │   ├── project_manager_1745617833195_output.json (4601 bytes)
+    │   │   │   ├── requirements_analyzer_1745617763564_input.json (1579 bytes)
+    │   │   │   ├── requirements_analyzer_1745617772293_output.json (3262 bytes)
+    │   │   │   ├── requirements_analyzer_1745617833725_input.json (1483 bytes)
+    │   │   │   ├── requirements_analyzer_1745617833736_input.json (1358 bytes)
+    │   │   │   ├── requirements_analyzer_1745617838942_output.json (1454 bytes)
+    │   │   │   └── requirements_analyzer_1745617839375_output.json (2200 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── chart_generator_1745617772801.html (971 bytes)
+    │   │   │   ├── map_generator_1745617801200.html (1819 bytes)
+    │   │   │   ├── workflow_dashboard.html (23764 bytes)
+    │   │   │   └── workflow_diagram.mmd (5077 bytes)
+    │   │   ├── workflow.log (8076 bytes)
+    │   │   └── workflow_outputs.json (167535 bytes)
+    │   ├── dynamic-org-generator-2025-04-25T22-25-18.679Z/
+    │   │   ├── data/
+    │   │   │   ├── organization_schema.json (5645 bytes)
+    │   │   │   └── task_execution_result.json (2960 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── org_analyzer_1745619918697_input.json (357 bytes)
+    │   │   │   ├── org_analyzer_1745619935573_output.json (7101 bytes)
+    │   │   │   ├── task_executor_1745619935578_input.json (246 bytes)
+    │   │   │   └── task_executor_1745619942800_output.json (4124 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── org_chart.html (8832 bytes)
+    │   │   │   ├── org_chart.mmd (2108 bytes)
+    │   │   │   ├── workflow_diagram.html (4188 bytes)
+    │   │   │   └── workflow_diagram.mmd (459 bytes)
+    │   │   ├── index.html (5500 bytes)
+    │   │   └── workflow.log (1960 bytes)
+    │   ├── dynamic-org-generator-2025-04-25T22-28-29.835Z/
+    │   │   ├── data/
+    │   │   │   ├── organization_schema.json (7700 bytes)
+    │   │   │   └── task_execution_result.json (3570 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── org_analyzer_1745620109845_input.json (616 bytes)
+    │   │   │   ├── org_analyzer_1745620128154_output.json (9370 bytes)
+    │   │   │   ├── task_executor_1745620128157_input.json (225 bytes)
+    │   │   │   └── task_executor_1745620137070_output.json (4766 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── org_chart.html (11717 bytes)
+    │   │   │   ├── org_chart.mmd (3073 bytes)
+    │   │   │   ├── workflow_diagram.html (5333 bytes)
+    │   │   │   └── workflow_diagram.mmd (963 bytes)
+    │   │   ├── index.html (5568 bytes)
+    │   │   └── workflow.log (2196 bytes)
+    │   ├── event-storage-2025-04-24T22-23-03.322Z/
+    │   │   ├── events/
+    │   │   │   ├── storage:set/
+    │   │   │   │   ├── 1745533383332-210697.json (244 bytes)
+    │   │   │   │   ├── 1745533383333-292913.json (244 bytes)
+    │   │   │   │   ├── 1745533383333-453114.json (244 bytes)
+    │   │   │   │   ├── 1745533383333-537610.json (244 bytes)
+    │   │   │   │   ├── 1745533383334-399661.json (144 bytes)
+    │   │   │   │   └── 1745533383334-833804.json (140 bytes)
+    │   │   │   ├── storage:transaction:begin/
+    │   │   │   │   └── 1745533383333-605886.json (121 bytes)
+    │   │   │   ├── storage:transaction:rollback/
+    │   │   │   │   └── 1745533383336-326580.json (124 bytes)
+    │   │   │   ├── system:startup/
+    │   │   │   │   └── 1745533383331-195567.json (240 bytes)
+    │   │   │   ├── user:login/
+    │   │   │   │   └── 1745533383327-878094.json (270 bytes)
+    │   │   │   └── user:logout/
+    │   │   │       └── 1745533383329-566008.json (241 bytes)
+    │   │   ├── event-stats.json (241 bytes)
+    │   │   ├── event-storage-example.log (1891 bytes)
+    │   │   ├── event-visualization.html (6392 bytes)
+    │   │   └── summary.md (2417 bytes)
+    │   ├── hybrid-agent-workflow-2025-04-25T16-27-08.768Z/
+    │   │   ├── images/
+    │   │   │   ├── micro-ant-brain-extractor_abstract.png (1867822 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_abstract_prompt.txt (307 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_logo.png (2033409 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_logo_prompt.txt (275 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_system.png (1737743 bytes)
+    │   │   │   └── micro-ant-brain-extractor_system_prompt.txt (286 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── architecture_designer_1745598454085_input.json (7341 bytes)
+    │   │   │   ├── architecture_designer_1745598470522_output.json (4560 bytes)
+    │   │   │   ├── data_architect_1745598470523_input.json (9259 bytes)
+    │   │   │   ├── data_architect_1745598484527_output.json (4585 bytes)
+    │   │   │   ├── engagement_strategist_1745598441109_input.json (4715 bytes)
+    │   │   │   ├── engagement_strategist_1745598454080_output.json (4753 bytes)
+    │   │   │   ├── project_manager_1745598484530_input.json (1529 bytes)
+    │   │   │   ├── project_manager_1745598503577_output.json (5625 bytes)
+    │   │   │   ├── requirements_analyzer_1745598428777_input.json (1384 bytes)
+    │   │   │   ├── requirements_analyzer_1745598441104_output.json (3080 bytes)
+    │   │   │   ├── requirements_analyzer_1745598504095_input.json (1339 bytes)
+    │   │   │   └── requirements_analyzer_1745598508457_output.json (1482 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── chart_generator_1745598441614.html (971 bytes)
+    │   │   │   ├── map_generator_1745598470523.html (1819 bytes)
+    │   │   │   ├── workflow_dashboard.html (21909 bytes)
+    │   │   │   └── workflow_diagram.mmd (4363 bytes)
+    │   │   ├── workflow.log (6768 bytes)
+    │   │   └── workflow_outputs.json (167783 bytes)
+    │   ├── hybrid-agent-workflow-2025-04-25T18-18-56.525Z/
+    │   │   ├── images/
+    │   │   │   ├── micro-ant-brain-extractor_abstract.png (2105151 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_abstract_prompt.txt (307 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_logo.png (611708 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_logo_prompt.txt (275 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_system.png (1859587 bytes)
+    │   │   │   └── micro-ant-brain-extractor_system_prompt.txt (286 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── architecture_designer_1745605166704_input.json (7056 bytes)
+    │   │   │   ├── architecture_designer_1745605181906_output.json (4447 bytes)
+    │   │   │   ├── data_architect_1745605181907_input.json (8795 bytes)
+    │   │   │   ├── data_architect_1745605195417_output.json (3844 bytes)
+    │   │   │   ├── engagement_strategist_1745605149592_input.json (4457 bytes)
+    │   │   │   ├── engagement_strategist_1745605166703_output.json (4244 bytes)
+    │   │   │   ├── project_manager_1745605195418_input.json (1584 bytes)
+    │   │   │   ├── project_manager_1745605210106_output.json (3518 bytes)
+    │   │   │   ├── requirements_analyzer_1745605136533_input.json (1439 bytes)
+    │   │   │   ├── requirements_analyzer_1745605149590_output.json (2768 bytes)
+    │   │   │   ├── requirements_analyzer_1745605210625_input.json (1353 bytes)
+    │   │   │   └── requirements_analyzer_1745605217661_output.json (2132 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── chart_generator_1745605150097.html (971 bytes)
+    │   │   │   ├── map_generator_1745605181907.html (1819 bytes)
+    │   │   │   ├── workflow_dashboard.html (21910 bytes)
+    │   │   │   └── workflow_diagram.mmd (4363 bytes)
+    │   │   ├── workflow.log (6738 bytes)
+    │   │   └── workflow_outputs.json (154728 bytes)
+    │   ├── hybrid-agent-workflow-2025-04-25T20-07-45.960Z/
+    │   │   ├── intermediates/
+    │   │   │   ├── engagement_strategist_1745611677951_input.json (4784 bytes)
+    │   │   │   ├── engagement_strategist_1745611703077_output.json (3853 bytes)
+    │   │   │   ├── requirements_analyzer_1745611665963_input.json (1439 bytes)
+    │   │   │   └── requirements_analyzer_1745611677948_output.json (3095 bytes)
+    │   │   ├── visualizations/
+    │   │   │   └── chart_generator_1745611678453.html (971 bytes)
+    │   │   └── workflow.log (2901 bytes)
+    │   ├── hybrid-agent-workflow-2025-04-25T20-16-55.337Z/
+    │   │   ├── images/
+    │   │   │   ├── micro-ant-brain-extractor_abstract.png (1265813 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_abstract_prompt.txt (344 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_logo.png (1337024 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_logo_prompt.txt (286 bytes)
+    │   │   │   ├── micro-ant-brain-extractor_system.png (1671841 bytes)
+    │   │   │   └── micro-ant-brain-extractor_system_prompt.txt (308 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── architecture_designer_1745612243716_input.json (6201 bytes)
+    │   │   │   ├── architecture_designer_1745612257161_output.json (4575 bytes)
+    │   │   │   ├── data_architect_1745612257168_input.json (8820 bytes)
+    │   │   │   ├── data_architect_1745612276508_output.json (4269 bytes)
+    │   │   │   ├── engagement_strategist_1745612226101_input.json (4327 bytes)
+    │   │   │   ├── engagement_strategist_1745612243704_output.json (5230 bytes)
+    │   │   │   ├── project_manager_1745612276513_input.json (1584 bytes)
+    │   │   │   ├── project_manager_1745612291082_output.json (4282 bytes)
+    │   │   │   ├── requirements_analyzer_1745612215344_input.json (1439 bytes)
+    │   │   │   ├── requirements_analyzer_1745612226096_output.json (2638 bytes)
+    │   │   │   ├── requirements_analyzer_1745612291595_input.json (1353 bytes)
+    │   │   │   ├── requirements_analyzer_1745612291596_input.json (1362 bytes)
+    │   │   │   ├── requirements_analyzer_1745612299734_output.json (2110 bytes)
+    │   │   │   └── requirements_analyzer_1745612300576_output.json (2370 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── chart_generator_1745612226611.html (971 bytes)
+    │   │   │   ├── map_generator_1745612257173.html (1819 bytes)
+    │   │   │   ├── workflow_dashboard.html (23707 bytes)
+    │   │   │   └── workflow_diagram.mmd (5077 bytes)
+    │   │   ├── workflow.log (7782 bytes)
+    │   │   └── workflow_outputs.json (161517 bytes)
+    │   ├── hybrid-agent-workflow-2025-04-25T20-43-06.183Z/
+    │   │   ├── intermediates/
+    │   │   │   ├── engagement_strategist_1745613795583_input.json (4266 bytes)
+    │   │   │   ├── requirements_analyzer_1745613786188_input.json (1489 bytes)
+    │   │   │   └── requirements_analyzer_1745613795579_output.json (2529 bytes)
+    │   │   ├── visualizations/
+    │   │   │   └── chart_generator_1745613796094.html (971 bytes)
+    │   │   └── workflow.log (2098 bytes)
+    │   ├── hybrid-agent-workflow-2025-04-25T20-48-04.129Z/
+    │   │   ├── images/
+    │   │   │   ├── abstract.png (1998490 bytes)
+    │   │   │   ├── abstract_prompt.txt (453 bytes)
+    │   │   │   ├── logo.png (962000 bytes)
+    │   │   │   ├── logo_prompt.txt (337 bytes)
+    │   │   │   ├── system.png (1918132 bytes)
+    │   │   │   └── system_prompt.txt (440 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── architecture_designer_1745614107998_input.json (6670 bytes)
+    │   │   │   ├── architecture_designer_1745614124158_output.json (4455 bytes)
+    │   │   │   ├── data_architect_1745614124163_input.json (9279 bytes)
+    │   │   │   ├── data_architect_1745614138026_output.json (3630 bytes)
+    │   │   │   ├── engagement_strategist_1745614094575_input.json (4871 bytes)
+    │   │   │   ├── engagement_strategist_1745614107993_output.json (4118 bytes)
+    │   │   │   ├── project_manager_1745614138029_input.json (1673 bytes)
+    │   │   │   ├── project_manager_1745614154196_output.json (4602 bytes)
+    │   │   │   ├── requirements_analyzer_1745614084138_input.json (1579 bytes)
+    │   │   │   ├── requirements_analyzer_1745614094573_output.json (3042 bytes)
+    │   │   │   ├── requirements_analyzer_1745614154738_input.json (1483 bytes)
+    │   │   │   ├── requirements_analyzer_1745614154741_input.json (1358 bytes)
+    │   │   │   ├── requirements_analyzer_1745614159533_output.json (1630 bytes)
+    │   │   │   └── requirements_analyzer_1745614161253_output.json (2129 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── chart_generator_1745614095080.html (971 bytes)
+    │   │   │   ├── map_generator_1745614124166.html (1819 bytes)
+    │   │   │   ├── workflow_dashboard.html (23766 bytes)
+    │   │   │   └── workflow_diagram.mmd (5077 bytes)
+    │   │   ├── workflow.log (8079 bytes)
+    │   │   └── workflow_outputs.json (159392 bytes)
+    │   ├── integrated-operations-2025-04-24T22-16-08/
+    │   │   ├── visualizations/
+    │   │   │   ├── workflow-ed4d8045-c605-4f84-8366-101605527e19-summary.md (977 bytes)
+    │   │   │   ├── workflow-ed4d8045-c605-4f84-8366-101605527e19.dot (625 bytes)
+    │   │   │   └── workflow-ed4d8045-c605-4f84-8366-101605527e19.html (4348 bytes)
+    │   │   ├── integrated-operations.log (1355 bytes)
+    │   │   ├── integrated-report.html (861 bytes)
+    │   │   ├── integration-report.md (1699 bytes)
+    │   │   └── workflow-results.json (484 bytes)
+    │   ├── lexdao-governance-workflow-2025-04-25T22-25-01.100Z/
+    │   │   ├── llm_outputs/
+    │   │   │   └── legal_advisor_1745619914220.json (12705 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── proposals_visualization.svg (1698 bytes)
+    │   │   │   ├── treasury_animation.svg (3488 bytes)
+    │   │   │   └── treasury_visualization.svg (1934 bytes)
+    │   │   └── workflow.log (12243 bytes)
+    │   ├── lexdao-governance-workflow-2025-04-25T22-31-04.290Z/
+    │   │   ├── llm_outputs/
+    │   │   │   └── legal_advisor_1745620277193.json (12963 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── proposals_visualization.svg (1698 bytes)
+    │   │   │   ├── treasury_animation.svg (3488 bytes)
+    │   │   │   └── treasury_visualization.svg (1934 bytes)
+    │   │   └── workflow.log (22577 bytes)
+    │   ├── lexdao-governance-workflow-2025-04-25T22-36-57.877Z/
+    │   │   ├── llm_outputs/
+    │   │   │   └── legal_advisor_1745620637365.json (13351 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── proposals_visualization.svg (1698 bytes)
+    │   │   │   ├── treasury_animation.svg (3488 bytes)
+    │   │   │   └── treasury_visualization.svg (1934 bytes)
+    │   │   └── workflow.log (25074 bytes)
+    │   ├── multi-unit-llm-flow-2025-04-24T22-42-15.101Z/
+    │   │   ├── events/
+    │   │   │   ├── process:stage:complete/
+    │   │   │   │   ├── 1745534547937-561310.json (380 bytes)
+    │   │   │   │   ├── 1745534586515-85778.json (370 bytes)
+    │   │   │   │   ├── 1745534611223-707441.json (366 bytes)
+    │   │   │   │   ├── 1745534642728-630335.json (387 bytes)
+    │   │   │   │   ├── 1745534661426-454579.json (371 bytes)
+    │   │   │   │   ├── 1745534690264-75479.json (375 bytes)
+    │   │   │   │   ├── 1745534716254-742070.json (379 bytes)
+    │   │   │   │   ├── 1745534744760-335362.json (373 bytes)
+    │   │   │   │   ├── 1745534772539-430296.json (387 bytes)
+    │   │   │   │   └── 1745534804645-887259.json (381 bytes)
+    │   │   │   └── process:stage:start/
+    │   │   │       ├── 1745534535107-816311.json (310 bytes)
+    │   │   │       ├── 1745534547941-390551.json (300 bytes)
+    │   │   │       ├── 1745534586516-552141.json (296 bytes)
+    │   │   │       ├── 1745534611226-411844.json (304 bytes)
+    │   │   │       ├── 1745534642730-996022.json (300 bytes)
+    │   │   │       ├── 1745534661430-541471.json (306 bytes)
+    │   │   │       ├── 1745534690267-270187.json (308 bytes)
+    │   │   │       ├── 1745534716256-651637.json (302 bytes)
+    │   │   │       ├── 1745534744762-148848.json (316 bytes)
+    │   │   │       └── 1745534772547-2447.json (309 bytes)
+    │   │   ├── board_review_output.json (2433 bytes)
+    │   │   ├── board_review_prompt.txt (8397 bytes)
+    │   │   ├── board_review_response.txt (2440 bytes)
+    │   │   ├── brand_development_output.json (3356 bytes)
+    │   │   ├── brand_development_prompt.txt (7654 bytes)
+    │   │   ├── brand_development_response.txt (3283 bytes)
+    │   │   ├── concept_refinement_output.json (3337 bytes)
+    │   │   ├── concept_refinement_prompt.txt (10818 bytes)
+    │   │   ├── concept_refinement_response.txt (3336 bytes)
+    │   │   ├── final_deliverable_output.json (3684 bytes)
+    │   │   ├── final_deliverable_prompt.txt (1638 bytes)
+    │   │   ├── final_deliverable_response.txt (3705 bytes)
+    │   │   ├── idea_generation_output.json (4650 bytes)
+    │   │   ├── idea_generation_prompt.txt (3022 bytes)
+    │   │   ├── idea_generation_response.txt (4649 bytes)
+    │   │   ├── implementation_roadmap_output.json (3928 bytes)
+    │   │   ├── implementation_roadmap_prompt.txt (11304 bytes)
+    │   │   ├── implementation_roadmap_response.txt (3419 bytes)
+    │   │   ├── market_research_output.json (3008 bytes)
+    │   │   ├── market_research_prompt.txt (1515 bytes)
+    │   │   ├── market_research_response.txt (3011 bytes)
+    │   │   ├── process_execution.log (1333 bytes)
+    │   │   ├── process_flow.mmd (1968 bytes)
+    │   │   ├── process_metrics.json (2909 bytes)
+    │   │   ├── process_outputs.json (34778 bytes)
+    │   │   ├── process_summary.md (2649 bytes)
+    │   │   ├── process_visualization.html (5850 bytes)
+    │   │   ├── process_visualization.log (104 bytes)
+    │   │   ├── security_assessment_output.json (3543 bytes)
+    │   │   ├── security_assessment_prompt.txt (4540 bytes)
+    │   │   ├── security_assessment_response.txt (3542 bytes)
+    │   │   ├── situation_assessment_output.json (1854 bytes)
+    │   │   ├── situation_assessment_prompt.txt (1080 bytes)
+    │   │   ├── situation_assessment_response.txt (1814 bytes)
+    │   │   ├── technical_planning_output.json (3575 bytes)
+    │   │   ├── technical_planning_prompt.txt (7947 bytes)
+    │   │   └── technical_planning_response.txt (3575 bytes)
+    │   ├── multi-unit-llm-flow-2025-04-24T22-51-09.851Z/
+    │   │   ├── events/
+    │   │   │   ├── process:stage:complete/
+    │   │   │   │   ├── 1745535085730-827178.json (380 bytes)
+    │   │   │   │   ├── 1745535110877-125149.json (384 bytes)
+    │   │   │   │   ├── 1745535137295-230473.json (366 bytes)
+    │   │   │   │   ├── 1745535167551-907543.json (375 bytes)
+    │   │   │   │   ├── 1745535183153-38147.json (370 bytes)
+    │   │   │   │   ├── 1745535209269-839671.json (377 bytes)
+    │   │   │   │   ├── 1745535234537-917842.json (379 bytes)
+    │   │   │   │   ├── 1745535257923-721684.json (385 bytes)
+    │   │   │   │   ├── 1745535306961-823248.json (387 bytes)
+    │   │   │   │   └── 1745535333538-535383.json (382 bytes)
+    │   │   │   └── process:stage:start/
+    │   │   │       ├── 1745535069856-381374.json (310 bytes)
+    │   │   │       ├── 1745535085733-499503.json (300 bytes)
+    │   │   │       ├── 1745535110879-376835.json (296 bytes)
+    │   │   │       ├── 1745535137298-326917.json (304 bytes)
+    │   │   │       ├── 1745535167552-41488.json (299 bytes)
+    │   │   │       ├── 1745535183156-107319.json (306 bytes)
+    │   │   │       ├── 1745535209271-166444.json (308 bytes)
+    │   │   │       ├── 1745535234539-455610.json (302 bytes)
+    │   │   │       ├── 1745535257926-954386.json (316 bytes)
+    │   │   │       └── 1745535306967-566146.json (311 bytes)
+    │   │   ├── board_review_output.json (2081 bytes)
+    │   │   ├── board_review_prompt.txt (7333 bytes)
+    │   │   ├── board_review_response.txt (2080 bytes)
+    │   │   ├── brand_development_output.json (2737 bytes)
+    │   │   ├── brand_development_prompt.txt (7313 bytes)
+    │   │   ├── brand_development_response.txt (2736 bytes)
+    │   │   ├── concept_refinement_output.json (3078 bytes)
+    │   │   ├── concept_refinement_prompt.txt (9402 bytes)
+    │   │   ├── concept_refinement_response.txt (2997 bytes)
+    │   │   ├── final_deliverable_output.json (3905 bytes)
+    │   │   ├── final_deliverable_prompt.txt (1568 bytes)
+    │   │   ├── final_deliverable_response.txt (3916 bytes)
+    │   │   ├── idea_generation_output.json (3040 bytes)
+    │   │   ├── idea_generation_prompt.txt (3047 bytes)
+    │   │   ├── idea_generation_response.txt (3039 bytes)
+    │   │   ├── implementation_roadmap_output.json (5197 bytes)
+    │   │   ├── implementation_roadmap_prompt.txt (9521 bytes)
+    │   │   ├── implementation_roadmap_response.txt (5196 bytes)
+    │   │   ├── market_research_output.json (2996 bytes)
+    │   │   ├── market_research_prompt.txt (1275 bytes)
+    │   │   ├── market_research_response.txt (2995 bytes)
+    │   │   ├── process_execution.log (1333 bytes)
+    │   │   ├── process_flow.mmd (1968 bytes)
+    │   │   ├── process_metrics.json (2924 bytes)
+    │   │   ├── process_outputs.json (31827 bytes)
+    │   │   ├── process_summary.md (2593 bytes)
+    │   │   ├── process_visualization.html (5850 bytes)
+    │   │   ├── process_visualization.log (104 bytes)
+    │   │   ├── security_assessment_output.json (2731 bytes)
+    │   │   ├── security_assessment_prompt.txt (4329 bytes)
+    │   │   ├── security_assessment_response.txt (2740 bytes)
+    │   │   ├── situation_assessment_output.json (1949 bytes)
+    │   │   ├── situation_assessment_prompt.txt (1010 bytes)
+    │   │   ├── situation_assessment_response.txt (1877 bytes)
+    │   │   ├── technical_planning_output.json (2699 bytes)
+    │   │   ├── technical_planning_prompt.txt (6847 bytes)
+    │   │   └── technical_planning_response.txt (2719 bytes)
+    │   ├── openai-agent-2025-04-24T22-22-46.722Z/
+    │   │   ├── agent-report.md (1975 bytes)
+    │   │   └── agent-results.json (2434 bytes)
+    │   ├── relationship-management-example-2025-04-24T22-15-17/
+    │   │   ├── events/
+    │   │   │   ├── relationships:created/
+    │   │   │   │   ├── 1745532917090-827728.json (399 bytes)
+    │   │   │   │   ├── 1745532917095-203298.json (402 bytes)
+    │   │   │   │   ├── 1745532917095-622790.json (397 bytes)
+    │   │   │   │   ├── 1745532917096-332113.json (406 bytes)
+    │   │   │   │   ├── 1745532917096-613404.json (385 bytes)
+    │   │   │   │   ├── 1745532917097-408435.json (398 bytes)
+    │   │   │   │   ├── 1745532917097-513080.json (398 bytes)
+    │   │   │   │   ├── 1745532917097-684124.json (395 bytes)
+    │   │   │   │   ├── 1745532917098-15763.json (456 bytes)
+    │   │   │   │   ├── 1745532917098-317088.json (456 bytes)
+    │   │   │   │   ├── 1745532917098-481360.json (397 bytes)
+    │   │   │   │   ├── 1745532917099-876057.json (448 bytes)
+    │   │   │   │   ├── 1745532917100-489395.json (402 bytes)
+    │   │   │   │   ├── 1745532917101-339513.json (389 bytes)
+    │   │   │   │   ├── 1745532917103-854148.json (458 bytes)
+    │   │   │   │   └── 1745532917108-256855.json (414 bytes)
+    │   │   │   ├── relationships:deleted/
+    │   │   │   │   └── 1745532917107-63113.json (180 bytes)
+    │   │   │   ├── relationships:permissions:updated/
+    │   │   │   │   ├── 1745532917104-162191.json (455 bytes)
+    │   │   │   │   ├── 1745532917104-628165.json (441 bytes)
+    │   │   │   │   ├── 1745532917104-870611.json (463 bytes)
+    │   │   │   │   └── 1745532917104-963028.json (435 bytes)
+    │   │   │   ├── relationships:unit:added/
+    │   │   │   │   └── 1745532917099-101982.json (227 bytes)
+    │   │   │   └── storage:set/
+    │   │   │       ├── 1745532917117-270016.json (143 bytes)
+    │   │   │       ├── 1745532917118-243706.json (143 bytes)
+    │   │   │       ├── 1745532917118-253892.json (143 bytes)
+    │   │   │       ├── 1745532917118-337472.json (143 bytes)
+    │   │   │       ├── 1745532917118-340421.json (143 bytes)
+    │   │   │       ├── 1745532917118-370888.json (143 bytes)
+    │   │   │       ├── 1745532917118-468089.json (143 bytes)
+    │   │   │       ├── 1745532917118-528707.json (143 bytes)
+    │   │   │       ├── 1745532917118-734011.json (143 bytes)
+    │   │   │       ├── 1745532917118-8269.json (141 bytes)
+    │   │   │       ├── 1745532917118-854873.json (143 bytes)
+    │   │   │       ├── 1745532917118-980771.json (143 bytes)
+    │   │   │       ├── 1745532917118-989221.json (143 bytes)
+    │   │   │       ├── 1745532917119-160813.json (143 bytes)
+    │   │   │       ├── 1745532917119-23639.json (142 bytes)
+    │   │   │       ├── 1745532917119-336479.json (143 bytes)
+    │   │   │       ├── 1745532917119-374726.json (143 bytes)
+    │   │   │       ├── 1745532917119-427054.json (143 bytes)
+    │   │   │       ├── 1745532917119-550514.json (143 bytes)
+    │   │   │       ├── 1745532917119-595545.json (143 bytes)
+    │   │   │       ├── 1745532917119-713949.json (143 bytes)
+    │   │   │       ├── 1745532917119-847357.json (143 bytes)
+    │   │   │       └── 1745532917119-865175.json (143 bytes)
+    │   │   ├── storage/
+    │   │   │   └── cmVsYXRpb25zaGlwTWFuYWdlcg==.json (6654 bytes)
+    │   │   ├── executive-structure.json (436 bytes)
+    │   │   ├── final-state.json (5871 bytes)
+    │   │   ├── initial-units.json (706 bytes)
+    │   │   ├── permissions-overview.md (914 bytes)
+    │   │   ├── relationship-graph.json (3583 bytes)
+    │   │   ├── relationship-management.log (3557 bytes)
+    │   │   ├── relationship-summary.md (1948 bytes)
+    │   │   ├── relationship-visualization.html (4461 bytes)
+    │   │   └── summary.json (182 bytes)
+    │   ├── state-management-example-2025-04-24T22-15-25/
+    │   │   ├── state/
+    │   │   │   ├── development_unit/
+    │   │   │   │   └── state.json (457 bytes)
+    │   │   │   ├── operations_unit/
+    │   │   │   │   └── state.json (49 bytes)
+    │   │   │   ├── project_alpha/
+    │   │   │   │   └── state.json (1036 bytes)
+    │   │   │   └── research_unit/
+    │   │   │       └── state.json (564 bytes)
+    │   │   ├── all-final-states.json (2394 bytes)
+    │   │   ├── conflict-resolution-demo.md (1145 bytes)
+    │   │   ├── development_unit-final-state.json (457 bytes)
+    │   │   ├── development_unit-state-tree.md (1280 bytes)
+    │   │   ├── operations_unit-final-state.json (49 bytes)
+    │   │   ├── operations_unit-state-tree.md (283 bytes)
+    │   │   ├── project_alpha-final-state.json (1036 bytes)
+    │   │   ├── project_alpha-state-tree.md (2610 bytes)
+    │   │   ├── research_unit-final-state.json (564 bytes)
+    │   │   ├── research_unit-state-tree.md (1551 bytes)
+    │   │   ├── state-flow-visualization.html (3494 bytes)
+    │   │   ├── state-flows.json (472 bytes)
+    │   │   ├── state-management-summary.md (3066 bytes)
+    │   │   ├── state-management.log (2074 bytes)
+    │   │   ├── summary.json (640 bytes)
+    │   │   └── unit-setup.json (370 bytes)
+    │   ├── stealth-kids-crypto-wallet-2025-04-25T21-54-10.120Z/
+    │   │   ├── images/
+    │   │   │   ├── abstract.png (2080878 bytes)
+    │   │   │   ├── abstract_prompt.txt (446 bytes)
+    │   │   │   ├── logo.png (1968066 bytes)
+    │   │   │   ├── logo_prompt.txt (327 bytes)
+    │   │   │   ├── system.png (2328001 bytes)
+    │   │   │   └── system_prompt.txt (454 bytes)
+    │   │   ├── intermediates/
+    │   │   │   ├── architecture_designer_1745618075273_input.json (7130 bytes)
+    │   │   │   ├── architecture_designer_1745618088198_output.json (4277 bytes)
+    │   │   │   ├── data_architect_1745618088204_input.json (9557 bytes)
+    │   │   │   ├── data_architect_1745618102051_output.json (4206 bytes)
+    │   │   │   ├── engagement_strategist_1745618062573_input.json (5320 bytes)
+    │   │   │   ├── engagement_strategist_1745618075263_output.json (5618 bytes)
+    │   │   │   ├── project_manager_1745618102052_input.json (1676 bytes)
+    │   │   │   ├── project_manager_1745618119723_output.json (5534 bytes)
+    │   │   │   ├── requirements_analyzer_1745618050132_input.json (1582 bytes)
+    │   │   │   ├── requirements_analyzer_1745618062571_output.json (3487 bytes)
+    │   │   │   ├── requirements_analyzer_1745618120253_input.json (1467 bytes)
+    │   │   │   ├── requirements_analyzer_1745618120256_input.json (1348 bytes)
+    │   │   │   ├── requirements_analyzer_1745618125211_output.json (1947 bytes)
+    │   │   │   └── requirements_analyzer_1745618126644_output.json (2077 bytes)
+    │   │   ├── visualizations/
+    │   │   │   ├── chart_generator_1745618063076.html (971 bytes)
+    │   │   │   ├── map_generator_1745618088208.html (1819 bytes)
+    │   │   │   ├── workflow_dashboard.html (23763 bytes)
+    │   │   │   └── workflow_diagram.mmd (5077 bytes)
+    │   │   ├── workflow.log (8091 bytes)
+    │   │   └── workflow_outputs.json (167373 bytes)
+    │   └── workflow-engine-2025-04-24T22-15-40.109Z/
+    │       ├── visualizations/
+    │       │   ├── workflow-3a22603b-54d0-44b2-859e-d20b8cd4eb12-summary.md (1611 bytes)
+    │       │   ├── workflow-3a22603b-54d0-44b2-859e-d20b8cd4eb12.dot (1857 bytes)
+    │       │   └── workflow-3a22603b-54d0-44b2-859e-d20b8cd4eb12.html (6849 bytes)
+    │       ├── workflow-engine-example.log (3250 bytes)
+    │       ├── workflow-report.md (2659 bytes)
+    │       └── workflow-results.json (1626 bytes)
+    ├── scripts/
+    │   ├── AGENTS.md (503 bytes)
+    │   ├── README.md (771 bytes)
+    │   ├── advanced-performance-analyzer.js (23519 bytes)
+    │   ├── advanced-security-scanner.js (34219 bytes)
+    │   ├── generate-docs-structure.js (7976 bytes)
+    │   ├── performance-optimizer.js (12699 bytes)
+    │   └── security-scanner.js (19248 bytes)
     ├── src/
-    │   └── core/
-    │       ├── events/
-    │       │   └── EventSystem.ts (1350 bytes)
-    │       ├── integration/
-    │       │   └── patterns/
-    │       │       ├── Bulkhead.ts (4090 bytes)
-    │       │       ├── CircuitBreaker.ts (3992 bytes)
-    │       │       ├── RequestResponsePattern.ts (3150 bytes)
-    │       │       ├── Timeout.ts (3605 bytes)
-    │       │       └── index.ts (532 bytes)
-    │       ├── messaging/
-    │       │   └── MessageSystem.ts (2368 bytes)
-    │       ├── monitoring/
-    │       │   └── MonitoringSystem.ts (3884 bytes)
-    │       ├── storage/
-    │       │   └── StorageSystem.ts (3856 bytes)
-    │       └── README.md (3293 bytes)
-    ├── templates/
-    │   ├── committee/
-    │   │   └── committee_template.md (5806 bytes)
+    │   ├── agents/
+    │   │   ├── ActiveInferencePOMDPAgent/
+    │   │   │   └── AGENTS.md (5010 bytes)
+    │   │   ├── AnalysisAgent/
+    │   │   │   └── AGENTS.md (7100 bytes)
+    │   │   ├── CalmTechnologyAgent/
+    │   │   │   └── AGENTS.md (17647 bytes)
+    │   │   ├── CreativeWritingAgent/
+    │   │   │   └── AGENTS.md (12032 bytes)
+    │   │   ├── CustomerSupportAgent/
+    │   │   │   └── AGENTS.md (12878 bytes)
+    │   │   ├── DataAnalysisAgent/
+    │   │   │   └── AGENTS.md (7743 bytes)
+    │   │   ├── DevelopmentAgent/
+    │   │   │   └── AGENTS.md (5156 bytes)
+    │   │   ├── FinalReviewAgent/
+    │   │   │   └── AGENTS.md (4988 bytes)
+    │   │   ├── FinanceAgent/
+    │   │   │   └── AGENTS.md (5459 bytes)
+    │   │   ├── HRAgent/
+    │   │   │   └── AGENTS.md (5581 bytes)
+    │   │   ├── LegalAgent/
+    │   │   │   └── AGENTS.md (5872 bytes)
+    │   │   ├── MarketingAgent/
+    │   │   │   └── AGENTS.md (4677 bytes)
+    │   │   ├── PlanningAgent/
+    │   │   │   └── AGENTS.md (4695 bytes)
+    │   │   ├── ResearchAgent/
+    │   │   │   └── AGENTS.md (5021 bytes)
+    │   │   ├── ReviewAgent/
+    │   │   │   └── AGENTS.md (4470 bytes)
+    │   │   ├── RevisionAgent/
+    │   │   │   └── AGENTS.md (4420 bytes)
+    │   │   ├── WritingAgent/
+    │   │   │   └── AGENTS.md (4628 bytes)
+    │   │   ├── AGENTS.md (18567 bytes)
+    │   │   ├── AbstractAgent.ts (8308 bytes)
+    │   │   ├── ActiveInferencePOMDPAgent.ts (14746 bytes)
+    │   │   ├── AnalysisAgent.ts (9776 bytes)
+    │   │   ├── CalmTechnologyAgent.ts (48505 bytes)
+    │   │   ├── CreativeWritingAgent.ts (22205 bytes)
+    │   │   ├── CustomerSupportAgent.ts (21239 bytes)
+    │   │   ├── DataAnalysisAgent.ts (29630 bytes)
+    │   │   ├── DevelopmentAgent.ts (19805 bytes)
+    │   │   ├── FinalReviewAgent.ts (6552 bytes)
+    │   │   ├── FinanceAgent.ts (23789 bytes)
+    │   │   ├── HRAgent.ts (19645 bytes)
+    │   │   ├── LegalAgent.ts (21450 bytes)
+    │   │   ├── MarketingAgent.ts (12729 bytes)
+    │   │   ├── PlanningAgent.ts (2724 bytes)
+    │   │   ├── README.md (10369 bytes)
+    │   │   ├── ResearchAgent.ts (9215 bytes)
+    │   │   ├── ReviewAgent.ts (3130 bytes)
+    │   │   ├── RevisionAgent.ts (924 bytes)
+    │   │   ├── WritingAgent.ts (4491 bytes)
+    │   │   └── types.ts (2398 bytes)
+    │   ├── config/
+    │   │   ├── AGENTS.md (2258 bytes)
+    │   │   ├── README.md (421 bytes)
+    │   │   └── validator.ts (9063 bytes)
     │   ├── core/
-    │   ├── documentation/
-    │   ├── event/
-    │   │   └── event_template.md (3345 bytes)
-    │   ├── framework/
-    │   │   └── framework_template.md (3866 bytes)
-    │   ├── governance/
-    │   ├── integration/
-    │   │   └── integration_template.md (6754 bytes)
-    │   ├── policy/
-    │   │   └── policy_template.md (4534 bytes)
-    │   ├── procedure/
-    │   │   └── procedure_template.md (6522 bytes)
-    │   ├── process/
-    │   │   └── process_template.md (4962 bytes)
-    │   ├── system/
-    │   │   └── system_template.md (5086 bytes)
-    │   ├── unit/
-    │   │   └── unit_template.md (16845 bytes)
-    │   ├── audit_template.md (3254 bytes)
-    │   ├── charter_template.md (3976 bytes)
-    │   ├── deployment_release_template.md (6854 bytes)
-    │   ├── incident_response_template.md (4848 bytes)
-    │   ├── project_template.md (6256 bytes)
-    │   ├── report_template.md (24278 bytes)
-    │   ├── review_testing_template.md (6151 bytes)
-    │   ├── sop_template.md (22039 bytes)
-    │   ├── task_completion_template.md (6066 bytes)
-    │   └── training_template.md (1 bytes)
+    │   │   ├── events/
+    │   │   │   ├── AGENTS.md (11982 bytes)
+    │   │   │   ├── EventSystem.ts (10516 bytes)
+    │   │   │   └── README.md (3681 bytes)
+    │   │   ├── integration/
+    │   │   │   ├── patterns/
+    │   │   │   │   ├── AGENTS.md (12886 bytes)
+    │   │   │   │   ├── Bulkhead.ts (4104 bytes)
+    │   │   │   │   ├── CacheAside.ts (3721 bytes)
+    │   │   │   │   ├── CircuitBreaker.ts (4006 bytes)
+    │   │   │   │   ├── RateLimiter.ts (7131 bytes)
+    │   │   │   │   ├── RequestResponsePattern.ts (3184 bytes)
+    │   │   │   │   ├── Retry.ts (4354 bytes)
+    │   │   │   │   ├── Saga.ts (6076 bytes)
+    │   │   │   │   ├── Timeout.ts (3619 bytes)
+    │   │   │   │   └── index.ts (754 bytes)
+    │   │   │   ├── AGENTS.md (17229 bytes)
+    │   │   │   └── README.md (8087 bytes)
+    │   │   ├── messaging/
+    │   │   │   ├── AGENTS.md (8087 bytes)
+    │   │   │   ├── MessageSystem.ts (2402 bytes)
+    │   │   │   └── README.md (6376 bytes)
+    │   │   ├── monitoring/
+    │   │   │   ├── AGENTS.md (15829 bytes)
+    │   │   │   ├── HealthCheckManager.ts (9710 bytes)
+    │   │   │   ├── MonitoringSystem.ts (4086 bytes)
+    │   │   │   └── README.md (8170 bytes)
+    │   │   ├── multiagent/
+    │   │   │   ├── interfaces/
+    │   │   │   │   ├── AGENTS.md (11941 bytes)
+    │   │   │   │   ├── AgentRegistry.ts (1701 bytes)
+    │   │   │   │   ├── OpenAIClient.ts (529 bytes)
+    │   │   │   │   ├── PromptManager.ts (948 bytes)
+    │   │   │   │   ├── README.md (3281 bytes)
+    │   │   │   │   ├── SharedStateManager.ts (3226 bytes)
+    │   │   │   │   └── TaskManager.ts (3244 bytes)
+    │   │   │   ├── organizational/
+    │   │   │   │   ├── AGENTS.md (3679 bytes)
+    │   │   │   │   ├── AgentManager.js (1107 bytes)
+    │   │   │   │   ├── LLMClient.js (4509 bytes)
+    │   │   │   │   ├── README.md (2084 bytes)
+    │   │   │   │   ├── SharedStateManager.js (3151 bytes)
+    │   │   │   │   ├── TaskManager.js (4108 bytes)
+    │   │   │   │   ├── UnitDiscovery.js (11198 bytes)
+    │   │   │   │   ├── WorkflowCoordinator.js (5687 bytes)
+    │   │   │   │   └── types.js (9866 bytes)
+    │   │   │   ├── AGENTS.md (27025 bytes)
+    │   │   │   ├── AgentHealthMonitor.ts (14479 bytes)
+    │   │   │   ├── AgentRegistry.ts (15259 bytes)
+    │   │   │   ├── BaseAgent.ts (2261 bytes)
+    │   │   │   ├── LLMClientInterface.ts (3100 bytes)
+    │   │   │   ├── Logger.ts (2736 bytes)
+    │   │   │   ├── MultiAgentCoordinator.ts (42491 bytes)
+    │   │   │   ├── OpenAIClient.ts (26772 bytes)
+    │   │   │   ├── PromptManager.ts (5589 bytes)
+    │   │   │   ├── README.md (14734 bytes)
+    │   │   │   ├── SharedStateManager.ts (18784 bytes)
+    │   │   │   ├── TaskManager.ts (17736 bytes)
+    │   │   │   ├── types.ts (24767 bytes)
+    │   │   │   └── workflow_types.ts (5597 bytes)
+    │   │   ├── storage/
+    │   │   │   ├── AGENTS.md (11562 bytes)
+    │   │   │   ├── README.md (8455 bytes)
+    │   │   │   └── StorageSystem.ts (14885 bytes)
+    │   │   ├── units/
+    │   │   │   ├── agents/
+    │   │   │   │   ├── AGENTS.md (5897 bytes)
+    │   │   │   │   ├── LLMAgent.ts (7718 bytes)
+    │   │   │   │   ├── UnitAgentFactory.ts (6388 bytes)
+    │   │   │   │   └── types.ts (1587 bytes)
+    │   │   │   ├── discovery/
+    │   │   │   │   ├── AGENTS.md (3621 bytes)
+    │   │   │   │   ├── AgentDiscoveryService.ts (7056 bytes)
+    │   │   │   │   ├── README.md (2165 bytes)
+    │   │   │   │   ├── UnitDiscovery.ts (7664 bytes)
+    │   │   │   │   └── UnitParser.ts (6535 bytes)
+    │   │   │   ├── orchestration/
+    │   │   │   │   ├── AGENTS.md (2242 bytes)
+    │   │   │   │   ├── AgentOrchestrator.ts (13656 bytes)
+    │   │   │   │   ├── README.md (1643 bytes)
+    │   │   │   │   └── TaskOrchestrator.ts (23375 bytes)
+    │   │   │   ├── relationships/
+    │   │   │   │   ├── AGENTS.md (3042 bytes)
+    │   │   │   │   ├── README.md (1469 bytes)
+    │   │   │   │   └── RelationshipManager.ts (18006 bytes)
+    │   │   │   ├── state/
+    │   │   │   │   ├── AGENTS.md (2334 bytes)
+    │   │   │   │   ├── README.md (1295 bytes)
+    │   │   │   │   └── UnitStateManager.ts (27566 bytes)
+    │   │   │   ├── workflow/
+    │   │   │   │   ├── AGENTS.md (3878 bytes)
+    │   │   │   │   ├── README.md (2041 bytes)
+    │   │   │   │   ├── WorkflowBuilder.ts (6032 bytes)
+    │   │   │   │   └── WorkflowEngine.ts (30129 bytes)
+    │   │   │   ├── AGENTS.md (22273 bytes)
+    │   │   │   ├── OrganizationalCompositionManager.ts (9585 bytes)
+    │   │   │   ├── OrganizationalStructureManager.ts (7636 bytes)
+    │   │   │   ├── README.md (11753 bytes)
+    │   │   │   ├── UnitDeploymentManager.ts (9365 bytes)
+    │   │   │   └── UnitInterface.ts (5557 bytes)
+    │   │   ├── AGENTS.md (22426 bytes)
+    │   │   └── README.md (10354 bytes)
+    │   ├── diagrams/
+    │   │   ├── AGENTS.md (857 bytes)
+    │   │   ├── README.md (2621 bytes)
+    │   │   └── mermaidUtils.js (5867 bytes)
+    │   ├── docs/
+    │   │   ├── AGENTS.md (491 bytes)
+    │   │   ├── MultiAgentCoordinator.md (8617 bytes)
+    │   │   ├── MultiAgentSystem_README.md (6149 bytes)
+    │   │   ├── README.md (581 bytes)
+    │   │   └── organizational_collaboration_spec.md (11739 bytes)
+    │   ├── examples/
+    │   │   ├── AGENTS.md (5201 bytes)
+    │   │   ├── Multiagent_Examples_README.md (2546 bytes)
+    │   │   ├── README.md (602 bytes)
+    │   │   ├── basic_coordination.ts (4050 bytes)
+    │   │   ├── complex_research_workflow.ts (11917 bytes)
+    │   │   ├── multi_agent_workflow.ts (10237 bytes)
+    │   │   ├── organization-demo.ts (10030 bytes)
+    │   │   ├── organizationalUnitsDemo.js (57669 bytes)
+    │   │   ├── parallel_research_workflow.ts (14957 bytes)
+    │   │   ├── run_organizational_planning.js (7079 bytes)
+    │   │   ├── strategic-risk-innovation-workflow.js (25703 bytes)
+    │   │   ├── strategic-risk-innovation-workflow.ts (29151 bytes)
+    │   │   └── thin_orchestration_example.ts (18142 bytes)
+    │   ├── prompts/
+    │   │   ├── AGENTS.md (3172 bytes)
+    │   │   ├── README.md (711 bytes)
+    │   │   ├── agent_coordination.prompt (518 bytes)
+    │   │   ├── conflict_resolution.prompt (458 bytes)
+    │   │   ├── content_creation.txt (278 bytes)
+    │   │   ├── problem_decomposition.prompt (384 bytes)
+    │   │   ├── research_task.txt (326 bytes)
+    │   │   ├── state_sync.prompt (297 bytes)
+    │   │   ├── system_role.prompt (491 bytes)
+    │   │   └── task_coordination.txt (320 bytes)
+    │   ├── scripts/
+    │   │   ├── AGENTS.md (364 bytes)
+    │   │   ├── README.md (2137 bytes)
+    │   │   ├── fix_and_check_units.py (6320 bytes)
+    │   │   └── units_audit.log (193192 bytes)
+    │   ├── utils/
+    │   │   ├── internationalization/
+    │   │   │   ├── AGENTS.md (1484 bytes)
+    │   │   │   ├── README.md (725 bytes)
+    │   │   │   └── i18n.ts (12782 bytes)
+    │   │   ├── visualization/
+    │   │   │   ├── AGENTS.md (682 bytes)
+    │   │   │   ├── README.md (780 bytes)
+    │   │   │   └── workflowVisualizer.ts (13451 bytes)
+    │   │   ├── AGENTS.md (3016 bytes)
+    │   │   ├── DataGenerationManager.ts (19282 bytes)
+    │   │   ├── Logger.js (8492 bytes)
+    │   │   ├── OpenAIClient.js (2635 bytes)
+    │   │   ├── ProjectConfigGenerator.ts (8552 bytes)
+    │   │   ├── README.md (2120 bytes)
+    │   │   ├── exampleConfigGenerator.ts (4718 bytes)
+    │   │   └── exampleDataGenerationUsage.ts (5019 bytes)
+    │   ├── AGENTS.md (9764 bytes)
+    │   ├── README.md (5404 bytes)
+    │   └── index.ts (1329 bytes)
     ├── tests/
-    │   ├── .benchmarks/
+    │   ├── config/
+    │   │   ├── AGENTS.md (368 bytes)
+    │   │   ├── README.md (460 bytes)
+    │   │   ├── jest.setup.ts (858 bytes)
+    │   │   ├── pytest.ini (1477 bytes)
+    │   │   └── tsconfig.json (266 bytes)
     │   ├── data/
     │   │   ├── codebase_relationships/
     │   │   │   ├── README.md (1151 bytes)
-    │   │   │   ├── dependency_metrics.json (183 bytes)
-    │   │   │   ├── dependency_metrics.md (225 bytes)
-    │   │   │   ├── markdown_links.json (142574 bytes)
-    │   │   │   ├── python_dependencies.json (164344 bytes)
-    │   │   │   └── typescript_dependencies.json (162133 bytes)
+    │   │   │   ├── dependency_metrics.json (185 bytes)
+    │   │   │   ├── dependency_metrics.md (227 bytes)
+    │   │   │   ├── markdown_links.json (281412 bytes)
+    │   │   │   ├── python_dependencies.json (84177 bytes)
+    │   │   │   └── typescript_dependencies.json (70311 bytes)
     │   │   ├── metrics/
     │   │   │   └── sample_metrics.json (3548 bytes)
     │   │   ├── repo_structure/
     │   │   │   ├── README.md (1071 bytes)
-    │   │   │   ├── agents_structure.json (59343 bytes)
-    │   │   │   ├── agents_structure.md (15457 bytes)
-    │   │   │   ├── docs_structure.json (81628 bytes)
-    │   │   │   ├── docs_structure.md (19991 bytes)
-    │   │   │   ├── file_extensions.json (202 bytes)
-    │   │   │   ├── file_extensions.md (276 bytes)
+    │   │   │   ├── agents_structure.json (25730 bytes)
+    │   │   │   ├── agents_structure.md (7107 bytes)
+    │   │   │   ├── docs_structure.json (127409 bytes)
+    │   │   │   ├── docs_structure.md (31431 bytes)
+    │   │   │   ├── file_extensions.json (1182 bytes)
+    │   │   │   ├── file_extensions.md (1256 bytes)
     │   │   │   ├── frameworks_structure.json (22434 bytes)
     │   │   │   ├── frameworks_structure.md (5486 bytes)
     │   │   │   ├── operations_structure.json (241 bytes)
     │   │   │   ├── operations_structure.md (202 bytes)
-    │   │   │   ├── repository_structure.json (252067 bytes)
-    │   │   │   ├── repository_structure.md (60386 bytes)
-    │   │   │   ├── tests_structure.json (17871 bytes)
-    │   │   │   └── tests_structure.md (4127 bytes)
+    │   │   │   ├── repository_structure.json (822104 bytes)
+    │   │   │   ├── repository_structure.md (199722 bytes)
+    │   │   │   ├── tests_structure.json (46730 bytes)
+    │   │   │   └── tests_structure.md (11787 bytes)
     │   │   ├── resources/
     │   │   │   └── resource_pools.json (2788 bytes)
     │   │   ├── tasks/
     │   │   │   └── sample_tasks.json (2190 bytes)
+    │   │   ├── AGENTS.md (516 bytes)
     │   │   ├── README.md (2048 bytes)
     │   │   └── schemas.json (1 bytes)
     │   ├── fixtures/
-    │   ├── htmlcov/
-    │   │   ├── .gitignore (27 bytes)
-    │   │   ├── class_index.html (9947 bytes)
-    │   │   ├── coverage_html_cb_6fb7b396.js (25474 bytes)
-    │   │   ├── favicon_32_cb_58284776.png (1732 bytes)
-    │   │   ├── function_index.html (22087 bytes)
-    │   │   ├── index.html (6663 bytes)
-    │   │   ├── keybd_closed_cb_ce680311.png (9004 bytes)
-    │   │   ├── status.json (2831 bytes)
-    │   │   ├── style_cb_8e611ae1.css (14077 bytes)
-    │   │   ├── z_1c90a013c10e5ea6___init___py.html (5398 bytes)
-    │   │   ├── z_4c18de143e8ffdda___init___py.html (5118 bytes)
-    │   │   ├── z_4c18de143e8ffdda_dependencies_py.html (4756 bytes)
-    │   │   ├── z_4c18de143e8ffdda_execution_py.html (19836 bytes)
-    │   │   ├── z_4c18de143e8ffdda_monitoring_py.html (17485 bytes)
-    │   │   ├── z_4c18de143e8ffdda_prioritization_py.html (39923 bytes)
-    │   │   └── z_4c18de143e8ffdda_scheduling_py.html (105710 bytes)
     │   ├── integration/
+    │   │   ├── multiagent/
+    │   │   │   ├── AGENTS.md (308 bytes)
+    │   │   │   ├── README.md (448 bytes)
+    │   │   │   ├── test_agent_coordination.ts (14381 bytes)
+    │   │   │   └── test_coordinator_and_registry.ts (8246 bytes)
     │   │   ├── task/
+    │   │   │   ├── AGENTS.md (201 bytes)
+    │   │   │   ├── README.md (326 bytes)
     │   │   │   ├── __init__.py (0 bytes)
     │   │   │   └── test_task_execution.py (11163 bytes)
-    │   │   └── __init__.py (0 bytes)
+    │   │   ├── AGENTS.md (600 bytes)
+    │   │   ├── README.md (424 bytes)
+    │   │   ├── __init__.py (0 bytes)
+    │   │   ├── llm-agent-communication.test.ts (19883 bytes)
+    │   │   ├── test_comprehensive_system_integration.ts (25685 bytes)
+    │   │   └── test_real_multiagent_workflow.py (20427 bytes)
+    │   ├── logs/
+    │   │   ├── test-run-2025-03-28T18-36-10.168Z.log (28774 bytes)
+    │   │   ├── test_agent_coordination-2025-03-28T18-36-10.168Z.log (11034 bytes)
+    │   │   ├── test_coordinator_and_registry-2025-03-28T18-36-10.168Z.log (1606 bytes)
+    │   │   ├── test_end_to_end_workflow-2025-03-28T18-36-10.168Z.log (2671 bytes)
+    │   │   ├── test_openai_client-2025-03-28T18-36-10.168Z.log (1523 bytes)
+    │   │   ├── test_shared_state_manager-2025-03-28T18-36-10.168Z.log (2006 bytes)
+    │   │   └── test_task_manager-2025-03-28T18-36-10.168Z.log (6324 bytes)
+    │   ├── output/
+    │   │   └── qualifier-prep-2025-04-21T18-49-16-662Z/
+    │   │       ├── intermediate_steps/
+    │   │       │   ├── step_02_Planner_Pro_planning_prompt.json (1401 bytes)
+    │   │       │   ├── step_02_Planner_Pro_planning_response.json (3890 bytes)
+    │   │       │   ├── step_02_Planner_Pro_planning_result.txt (2964 bytes)
+    │   │       │   ├── step_03_Researcher_Alpha_research_prompt.json (4624 bytes)
+    │   │       │   ├── step_03_Researcher_Alpha_research_response.json (6782 bytes)
+    │   │       │   ├── step_03_Researcher_Alpha_research_result.txt (5911 bytes)
+    │   │       │   ├── step_04_Synthesizer_Supreme_synthesis_prompt.json (10655 bytes)
+    │   │       │   ├── step_04_Synthesizer_Supreme_synthesis_response.json (5282 bytes)
+    │   │       │   ├── step_04_Synthesizer_Supreme_synthesis_result.txt (4438 bytes)
+    │   │       │   ├── step_05_Outline_Architect_outlining_prompt.json (15178 bytes)
+    │   │       │   ├── step_05_Outline_Architect_outlining_response.json (4700 bytes)
+    │   │       │   ├── step_05_Outline_Architect_outlining_result.txt (3780 bytes)
+    │   │       │   ├── step_06_Academic_Writer_writing_prompt.json (19214 bytes)
+    │   │       │   ├── step_06_Academic_Writer_writing_response.json (17634 bytes)
+    │   │       │   ├── step_06_Academic_Writer_writing_result.txt (16521 bytes)
+    │   │       │   ├── step_07_Editor_Extraordinaire_editing_prompt.json (35943 bytes)
+    │   │       │   ├── step_07_Editor_Extraordinaire_editing_response.json (17625 bytes)
+    │   │       │   ├── step_07_Editor_Extraordinaire_editing_result.txt (16506 bytes)
+    │   │       │   ├── step_08_Markdown_Master_formatting_prompt.json (52739 bytes)
+    │   │       │   ├── step_08_Markdown_Master_formatting_response.json (17820 bytes)
+    │   │       │   └── step_08_Markdown_Master_formatting_result.txt (16729 bytes)
+    │   │       ├── _workflow_report.json (7049 bytes)
+    │   │       ├── _workflow_visualization.mmd (731 bytes)
+    │   │       ├── _workflow_visualization.png (28440 bytes)
+    │   │       └── final_qualifier_document.md (16814 bytes)
+    │   ├── performance/
+    │   │   ├── AGENTS.md (197 bytes)
+    │   │   ├── README.md (317 bytes)
+    │   │   └── test_coordinator_performance.py (15247 bytes)
+    │   ├── reports/
+    │   │   ├── AGENTS.md (418 bytes)
+    │   │   ├── README.md (281 bytes)
+    │   │   ├── component-verification-2025-03-28T18-36-10.168Z.json (2949 bytes)
+    │   │   ├── final_test_summary.md (1785 bytes)
+    │   │   ├── test-report-2025-03-28T18-36-10.168Z.md (3378 bytes)
+    │   │   ├── test-summary-2025-03-28T18-36-10.168Z.md (650 bytes)
+    │   │   └── test_report.md (6684 bytes)
+    │   ├── runners/
+    │   │   ├── AGENTS.md (200 bytes)
+    │   │   ├── README.md (301 bytes)
+    │   │   ├── run_js.js (7320 bytes)
+    │   │   └── run_py.py (6136 bytes)
     │   ├── system/
+    │   │   ├── multiagent/
+    │   │   │   ├── AGENTS.md (343 bytes)
+    │   │   │   ├── README.md (474 bytes)
+    │   │   │   ├── test_end_to_end_workflow.ts (12763 bytes)
+    │   │   │   ├── test_organizational_units.ts (10505 bytes)
+    │   │   │   └── test_real_llm_workflow.ts (15119 bytes)
     │   │   ├── scenarios/
+    │   │   │   ├── AGENTS.md (180 bytes)
+    │   │   │   ├── README.md (299 bytes)
     │   │   │   ├── __init__.py (0 bytes)
-    │   │   │   └── test_task_workflow.py (12601 bytes)
-    │   │   └── __init__.py (0 bytes)
+    │   │   │   └── test_task_workflow.py (12818 bytes)
+    │   │   ├── AGENTS.md (481 bytes)
+    │   │   ├── README.md (444 bytes)
+    │   │   ├── __init__.py (0 bytes)
+    │   │   └── test_end_to_end_multiagent.ts (15397 bytes)
     │   ├── tests/
-    │   │   ├── data/
-    │   │   │   ├── metrics/
-    │   │   │   ├── resources/
-    │   │   │   └── tasks/
     │   │   ├── integration/
     │   │   │   ├── task/
     │   │   │   │   └── __init__.py (0 bytes)
@@ -918,174 +2146,1157 @@ Root: /home/trim/Documents/operations
     │   │   │   └── __init__.py (0 bytes)
     │   │   └── __init__.py (0 bytes)
     │   ├── unit/
+    │   │   ├── agents/
+    │   │   │   ├── AGENTS.md (7538 bytes)
+    │   │   │   ├── test_active_inference_pomdp_agent.ts (15427 bytes)
+    │   │   │   ├── test_analysis_agent.ts (17572 bytes)
+    │   │   │   ├── test_creative_writing_agent.ts (17174 bytes)
+    │   │   │   ├── test_customer_support_agent.ts (21782 bytes)
+    │   │   │   ├── test_data_analysis_agent.ts (20902 bytes)
+    │   │   │   ├── test_development_agent.ts (18702 bytes)
+    │   │   │   ├── test_finance_agent.ts (16731 bytes)
+    │   │   │   ├── test_hr_agent.ts (19727 bytes)
+    │   │   │   ├── test_legal_agent.ts (19677 bytes)
+    │   │   │   └── test_marketing_agent.ts (15947 bytes)
+    │   │   ├── core/
+    │   │   │   ├── AGENTS.md (370 bytes)
+    │   │   │   ├── README.md (533 bytes)
+    │   │   │   ├── test_event_system.ts (9264 bytes)
+    │   │   │   ├── test_message_system.ts (14259 bytes)
+    │   │   │   ├── test_monitoring_system.ts (13633 bytes)
+    │   │   │   └── test_storage_system.ts (18018 bytes)
+    │   │   ├── integration/
+    │   │   │   ├── RateLimiterTest.ts (6028 bytes)
+    │   │   │   └── RetryTest.ts (4205 bytes)
+    │   │   ├── multiagent/
+    │   │   │   ├── AGENTS.md (312 bytes)
+    │   │   │   ├── README.md (454 bytes)
+    │   │   │   ├── test_openai_client.ts (8113 bytes)
+    │   │   │   ├── test_shared_state_manager.ts (12502 bytes)
+    │   │   │   └── test_task_manager.ts (22658 bytes)
     │   │   ├── task/
+    │   │   │   ├── AGENTS.md (440 bytes)
+    │   │   │   ├── README.md (567 bytes)
     │   │   │   ├── __init__.py (0 bytes)
     │   │   │   ├── test_task_dependencies.py (8724 bytes)
     │   │   │   ├── test_task_ingestion.py (6851 bytes)
     │   │   │   ├── test_task_prioritization.py (7528 bytes)
     │   │   │   ├── test_task_scheduling.py (1 bytes)
     │   │   │   └── test_task_workflow.py (10724 bytes)
-    │   │   └── __init__.py (0 bytes)
+    │   │   ├── AGENTS.md (1017 bytes)
+    │   │   ├── README.md (557 bytes)
+    │   │   ├── __init__.py (0 bytes)
+    │   │   └── agent-coordination.test.ts (13354 bytes)
     │   ├── utils/
+    │   │   ├── reporting/
+    │   │   │   ├── final_test_summary.js (3955 bytes)
+    │   │   │   └── test_report.js (7596 bytes)
+    │   │   ├── verification/
+    │   │   │   ├── manual_test.js (1854 bytes)
+    │   │   │   └── test_manual_workflow.js (7142 bytes)
+    │   │   ├── AGENTS.md (559 bytes)
     │   │   ├── README.md (1926 bytes)
     │   │   ├── __init__.py (130 bytes)
-    │   │   └── file_structure_mapper.py (8230 bytes)
-    │   ├── README.md (5596 bytes)
-    │   ├── TEST_EXECUTION_README.md (6944 bytes)
-    │   ├── TEST_SUMMARY.md (1120 bytes)
+    │   │   ├── file_structure_mapper.py (8230 bytes)
+    │   │   ├── test-helpers.ts (10214 bytes)
+    │   │   └── test_helpers.ts (8107 bytes)
+    │   ├── AGENTS.md (26221 bytes)
+    │   ├── README.md (10029 bytes)
+    │   ├── TEST_FIXES_SUMMARY.md (5786 bytes)
+    │   ├── TEST_SUITE_REPORT.md (6677 bytes)
     │   ├── __init__.py (0 bytes)
-    │   ├── conftest.py (10348 bytes)
-    │   ├── pytest.ini (1477 bytes)
-    │   ├── requirements.txt (1299 bytes)
-    │   ├── run_structure_analysis.py (6512 bytes)
-    │   ├── run_tests.py (4245 bytes)
-    │   ├── test_codebase_relationships.py (9269 bytes)
-    │   ├── test_repo_structure.py (7853 bytes)
-    │   ├── test_workflow.py (6103 bytes)
+    │   ├── conftest.py (10394 bytes)
+    │   ├── multiagent-collaboration-test.js (21551 bytes)
+    │   ├── multiagent-tests-README.md (3801 bytes)
+    │   ├── organization-units-demo.js (4480 bytes)
+    │   ├── package.json (1511 bytes)
+    │   ├── phd-qualifier-prep-test.js (37375 bytes)
+    │   ├── requirements.txt (972 bytes)
+    │   ├── simple-openai-test.js (3293 bytes)
+    │   ├── test_codebase_relationships.py (9234 bytes)
+    │   ├── test_repo_structure.py (7799 bytes)
+    │   ├── test_workflow.py (6835 bytes)
     │   └── utils.py (12093 bytes)
     ├── units/
+    │   ├── .obsidian/
+    │   │   ├── app.json (2 bytes)
+    │   │   ├── appearance.json (2 bytes)
+    │   │   ├── core-plugins.json (658 bytes)
+    │   │   ├── graph.json (512 bytes)
+    │   │   └── workspace.json (6949 bytes)
     │   ├── Administration/
-    │   │   └── administration_unit.md (6811 bytes)
-    │   ├── Advisory_Board/
-    │   │   ├── Advisory_Charter/
-    │   │   │   └── advisory_charter.md (5873 bytes)
-    │   │   ├── Committees/
-    │   │   │   ├── Audit_Committee/
-    │   │   │   │   └── audit_committee.md (6394 bytes)
-    │   │   │   ├── Compliance_Committee/
-    │   │   │   │   └── compliance_committee.md (6498 bytes)
-    │   │   │   ├── Ethics_Committee/
-    │   │   │   │   └── ethics_committee.md (6436 bytes)
-    │   │   │   ├── Governance_Committee/
-    │   │   │   │   └── governance_committee.md (6527 bytes)
-    │   │   │   ├── Innovation_Committee/
-    │   │   │   │   └── innovation_committee.md (6599 bytes)
-    │   │   │   ├── Risk_Committee/
-    │   │   │   │   └── risk_committee.md (6350 bytes)
-    │   │   │   ├── Strategy_Committee/
-    │   │   │   │   └── strategy_committee.md (6456 bytes)
-    │   │   │   ├── committee_charters.md (7353 bytes)
-    │   │   │   ├── committee_resources.md (6459 bytes)
-    │   │   │   ├── governance_frameworks.md (5453 bytes)
-    │   │   │   ├── operational_procedures.md (5314 bytes)
-    │   │   │   ├── oversight_policies.md (5480 bytes)
-    │   │   │   └── strategic_policies.md (5332 bytes)
-    │   │   ├── Ethics_Charter/
-    │   │   │   └── ethics_charter.md (6437 bytes)
-    │   │   ├── Reporting_Structure/
-    │   │   │   └── reporting_structure.md (6246 bytes)
-    │   │   ├── Risk_Charter/
-    │   │   │   └── risk_charter.md (6302 bytes)
-    │   │   ├── Scientific_Charter/
-    │   │   │   └── scientific_charter.md (6570 bytes)
-    │   │   ├── Technology_Charter/
-    │   │   │   └── technology_charter.md (6882 bytes)
-    │   │   └── Working_Groups/
-    │   │       ├── Performance_Group/
-    │   │       │   └── performance_group_charter.md (5989 bytes)
-    │   │       ├── Risk_Group/
-    │   │       │   └── risk_group_charter.md (5781 bytes)
-    │   │       ├── Special_Projects/
-    │   │       │   └── special_projects_charter.md (5796 bytes)
-    │   │       ├── Strategy_Group/
-    │   │       │   └── strategy_group_charter.md (5909 bytes)
-    │   │       ├── Technology_Group/
-    │   │       │   └── technology_group_charter.md (6282 bytes)
-    │   │       └── working_groups.md (6122 bytes)
-    │   ├── Audit/
-    │   │   └── audit_unit.md (6709 bytes)
-    │   ├── Board_of_Directors/
-    │   │   ├── Board_Charter/
-    │   │   │   └── board_charter.md (5416 bytes)
-    │   │   ├── Committee_Structure/
-    │   │   │   └── committee_structure.md (5985 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   └── administration_meeting_notes.md (1511 bytes)
     │   │   ├── Policies/
-    │   │   │   └── board_governance_policy.md (6170 bytes)
-    │   │   └── board_of_directors_unit.md (6895 bytes)
-    │   ├── Business_Development/
-    │   │   └── business_development_unit.md (6931 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── administrationunit.md (2506 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── administration_processes.md (2387 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── administration_reports.md (2560 bytes)
+    │   │   ├── Charter.md (3179 bytes)
+    │   │   ├── README.md (1152 bytes)
+    │   │   └── index.md (166 bytes)
+    │   ├── AdvisoryBoard/
+    │   │   ├── Committees/
+    │   │   │   ├── AuditCommittee/
+    │   │   │   │   └── auditcommittee.md (6394 bytes)
+    │   │   │   ├── ComplianceCommittee/
+    │   │   │   │   └── compliancecommittee.md (6498 bytes)
+    │   │   │   ├── EthicsCommittee/
+    │   │   │   │   └── ethicscommittee.md (6436 bytes)
+    │   │   │   ├── GovernanceCommittee/
+    │   │   │   │   └── governancecommittee.md (6527 bytes)
+    │   │   │   ├── InnovationCommittee/
+    │   │   │   │   └── innovationcommittee.md (6599 bytes)
+    │   │   │   ├── RiskCommittee/
+    │   │   │   │   ├── README.md (2454 bytes)
+    │   │   │   │   └── riskcommittee.md (6350 bytes)
+    │   │   │   ├── StrategyCommittee/
+    │   │   │   │   ├── README.md (2955 bytes)
+    │   │   │   │   └── strategycommittee.md (6456 bytes)
+    │   │   │   ├── CommitteeList.md (4256 bytes)
+    │   │   │   ├── README.md (2471 bytes)
+    │   │   │   ├── committeecharters.md (7353 bytes)
+    │   │   │   ├── committeeresources.md (6459 bytes)
+    │   │   │   ├── governanceframeworks.md (5453 bytes)
+    │   │   │   ├── operationalprocedures.md (5314 bytes)
+    │   │   │   ├── oversightpolicies.md (5480 bytes)
+    │   │   │   └── strategicpolicies.md (5332 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (2979 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── ConflictOfInterest.md (3895 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (2348 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── advisoryboardunit.md (7579 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── README.md (2538 bytes)
+    │   │   │   └── RiskAdvisoryProcess.md (6203 bytes)
+    │   │   ├── ReportingStructure/
+    │   │   │   ├── README.md (3029 bytes)
+    │   │   │   └── reportingstructure.md (6246 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── EnterpriseRiskReview.md (6056 bytes)
+    │   │   │   └── README.md (3229 bytes)
+    │   │   ├── WorkingGroups/
+    │   │   │   ├── PerformanceGroup/
+    │   │   │   │   └── performancegroupcharter.md (5989 bytes)
+    │   │   │   ├── RiskGroup/
+    │   │   │   │   ├── README.md (2605 bytes)
+    │   │   │   │   └── riskgroupcharter.md (5781 bytes)
+    │   │   │   ├── SpecialProjects/
+    │   │   │   │   └── specialprojectscharter.md (5796 bytes)
+    │   │   │   ├── StrategyGroup/
+    │   │   │   │   └── strategygroupcharter.md (5909 bytes)
+    │   │   │   ├── TechnologyGroup/
+    │   │   │   │   └── technologygroupcharter.md (6282 bytes)
+    │   │   │   ├── README.md (2364 bytes)
+    │   │   │   └── workinggroups.md (6122 bytes)
+    │   │   ├── Charter.md (32112 bytes)
+    │   │   ├── README.md (3573 bytes)
+    │   │   └── index.md (1088 bytes)
+    │   ├── Audit/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (386 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── audit_policies.md (2423 bytes)
+    │   │   │   ├── auditunit.md (6709 bytes)
+    │   │   │   ├── code_of_ethics.md (4159 bytes)
+    │   │   │   ├── confidentiality_policy.md (3283 bytes)
+    │   │   │   ├── independence_policy.md (3526 bytes)
+    │   │   │   └── reporting_standards.md (3130 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── README.md (392 bytes)
+    │   │   │   ├── audit_execution.md (2516 bytes)
+    │   │   │   ├── audit_followup_process.md (3244 bytes)
+    │   │   │   ├── audit_planning.md (1928 bytes)
+    │   │   │   ├── audit_reporting.md (2670 bytes)
+    │   │   │   ├── compliance_auditing.md (2715 bytes)
+    │   │   │   └── control_evaluation.md (3137 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (568 bytes)
+    │   │   ├── Charter.md (3731 bytes)
+    │   │   ├── README.md (53 bytes)
+    │   │   └── index.md (157 bytes)
+    │   ├── BoardOfDirectors/
+    │   │   ├── CommitteeStructure/
+    │   │   │   ├── AuditCommittee/
+    │   │   │   │   └── audit_committee_charter.md (5833 bytes)
+    │   │   │   ├── RiskCommittee/
+    │   │   │   │   └── risk_committee_charter.md (5462 bytes)
+    │   │   │   └── committeestructure.md (5985 bytes)
+    │   │   ├── Leadership/
+    │   │   │   └── BoardChair.md (3009 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── 2024-Q2-Meeting.md (6148 bytes)
+    │   │   │   └── README.md (1227 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (8680 bytes)
+    │   │   │   ├── README.md (1197 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (8532 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── boardgovernancepolicy.md (6170 bytes)
+    │   │   │   └── boardofdirectorsunit.md (6895 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── BoardMeetingProcess.md (6885 bytes)
+    │   │   │   ├── README.md (1442 bytes)
+    │   │   │   └── StrategicPlanning.md (8744 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── BoardMeetingTemplate.md (9386 bytes)
+    │   │   │   └── README.md (1596 bytes)
+    │   │   ├── Charter.md (5416 bytes)
+    │   │   ├── README.md (3001 bytes)
+    │   │   └── index.md (1347 bytes)
+    │   ├── BusinessDevelopment/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── businessdevelopment_meeting_notes.md (1945 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── businessdevelopment_policies.md (2698 bytes)
+    │   │   │   └── businessdevelopmentunit.md (6931 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── businessdevelopment_processes.md (2763 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── businessdevelopment_reports.md (3036 bytes)
+    │   │   ├── Charter.md (3495 bytes)
+    │   │   ├── README.md (1282 bytes)
+    │   │   └── index.md (171 bytes)
     │   ├── Compliance/
-    │   │   └── compliance_unit.md (6972 bytes)
-    │   ├── Customer_Support/
-    │   │   └── customer_support_unit.md (6746 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── ComplianceCommittee/
+    │   │   │   │   └── 2024-05-15.md (4338 bytes)
+    │   │   │   └── README.md (1419 bytes)
+    │   │   ├── Organization/
+    │   │   │   ├── ComplianceCommittee.md (5001 bytes)
+    │   │   │   ├── README.md (868 bytes)
+    │   │   │   └── TeamStructure.md (4066 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── CodeOfConduct.md (3328 bytes)
+    │   │   │   ├── ComplianceFramework.md (4350 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (1061 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── complianceunit.md (6972 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── MonitoringProcedures.md (3820 bytes)
+    │   │   │   ├── README.md (1102 bytes)
+    │   │   │   └── RiskAssessment.md (4853 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── ComplianceDashboard.md (3965 bytes)
+    │   │   │   └── README.md (1034 bytes)
+    │   │   ├── Charter.md (4390 bytes)
+    │   │   ├── README.md (1194 bytes)
+    │   │   └── index.md (1521 bytes)
+    │   ├── CustomerSupport/
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── 2025-04-25-WeeklyOperations.md (6285 bytes)
+    │   │   │   └── README.md (2370 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── ContentStyleGuide.md (10714 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── QualityStandards.md (8604 bytes)
+    │   │   │   ├── README.md (1956 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── RiskManagementProtocol.md (7438 bytes)
+    │   │   │   ├── ServiceLevelAgreements.md (4360 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── customer_support_policy.md (2463 bytes)
+    │   │   │   └── customersupportunit.md (8243 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── CustomerCommunication.md (8975 bytes)
+    │   │   │   ├── EscalationProcedures.md (7502 bytes)
+    │   │   │   ├── KnowledgeManagement.md (7589 bytes)
+    │   │   │   ├── QualityAssurance.md (8719 bytes)
+    │   │   │   ├── README.md (2646 bytes)
+    │   │   │   ├── RiskIdentification.md (9726 bytes)
+    │   │   │   ├── TicketManagement.md (6537 bytes)
+    │   │   │   ├── escalation_process.md (4656 bytes)
+    │   │   │   └── ticket_handling_process.md (4025 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── CSATReport.md (7273 bytes)
+    │   │   │   ├── README.md (2630 bytes)
+    │   │   │   ├── RiskReport.md (9520 bytes)
+    │   │   │   └── SLAComplianceReport.md (9006 bytes)
+    │   │   ├── Resources/
+    │   │   │   ├── QualityScorecard.md (9174 bytes)
+    │   │   │   └── README.md (3887 bytes)
+    │   │   ├── Charter.md (11734 bytes)
+    │   │   ├── README.md (2937 bytes)
+    │   │   └── index.md (951 bytes)
     │   ├── Development/
-    │   │   └── development_unit.md (7013 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   └── development_meeting_notes.md (2866 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── development_policies.md (2831 bytes)
+    │   │   │   └── developmentunit.md (7013 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── development_processes.md (3094 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── development_reports.md (3665 bytes)
+    │   │   ├── Charter.md (4177 bytes)
+    │   │   ├── README.md (1511 bytes)
+    │   │   └── index.md (163 bytes)
     │   ├── Education/
-    │   │   └── education_unit.md (6879 bytes)
-    │   ├── Ethics_Advisory_Board/
-    │   │   └── ethics_advisory_board_unit.md (6815 bytes)
+    │   │   ├── Curriculum/
+    │   │   │   ├── Technical/
+    │   │   │   │   └── AIPrinciples.md (6921 bytes)
+    │   │   │   ├── AssessmentStrategy.md (5538 bytes)
+    │   │   │   └── README.md (3379 bytes)
+    │   │   ├── Initiatives/
+    │   │   │   ├── AI_Literacy.md (7454 bytes)
+    │   │   │   └── README.md (4980 bytes)
+    │   │   ├── KPIs/
+    │   │   │   └── README.md (2971 bytes)
+    │   │   ├── LanguageLearning/
+    │   │   │   ├── CulturalContext/
+    │   │   │   │   └── CulturalIntelligenceGuide.md (8317 bytes)
+    │   │   │   ├── Programs/
+    │   │   │   │   └── BusinessLanguageProgram.md (10348 bytes)
+    │   │   │   ├── Technologies/
+    │   │   │   │   └── TechnologyIntegration.md (10479 bytes)
+    │   │   │   ├── LanguageLearningStrategy.md (8159 bytes)
+    │   │   │   ├── ProficiencyFramework.md (8386 bytes)
+    │   │   │   └── README.md (2644 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── Initiatives/
+    │   │   │   │   └── README.md (4087 bytes)
+    │   │   │   └── README.md (3130 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (3440 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── educationunit.md (15655 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── README.md (3195 bytes)
+    │   │   ├── Programs/
+    │   │   │   └── README.md (2141 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (2822 bytes)
+    │   │   ├── Resources/
+    │   │   │   ├── Technical/
+    │   │   │   │   └── AI/
+    │   │   │   │       └── README.md (2503 bytes)
+    │   │   │   ├── EducationalTechnologyStrategy.md (6990 bytes)
+    │   │   │   └── README.md (2751 bytes)
+    │   │   ├── Charter.md (3917 bytes)
+    │   │   ├── README.md (1333 bytes)
+    │   │   ├── RiskAssessment.md (6361 bytes)
+    │   │   ├── StrategicPlan.md (4883 bytes)
+    │   │   ├── Team.md (4702 bytes)
+    │   │   └── index.md (1687 bytes)
+    │   ├── EthicsAdvisoryBoard/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── meeting_notes_template.md (2412 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── ethics_advisory_board_policies.md (4721 bytes)
+    │   │   │   └── ethicsadvisoryboardunit.md (6815 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── ethics_advisory_board_processes.md (6826 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── ethics_advisory_board_report_template.md (2864 bytes)
+    │   │   ├── Charter.md (5866 bytes)
+    │   │   ├── README.md (2020 bytes)
+    │   │   └── index.md (171 bytes)
     │   ├── Executive/
-    │   │   └── executive_unit.md (5854 bytes)
-    │   ├── Executive_Committee/
-    │   │   ├── Decision_Framework/
-    │   │   │   └── decision_framework.md (5708 bytes)
-    │   │   ├── Executive_Charter/
-    │   │   │   └── executive_charter.md (5246 bytes)
-    │   │   ├── Operating_Procedures/
-    │   │   │   └── operating_procedures.md (1 bytes)
-    │   │   └── executive_committee_unit.md (7007 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (565 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── CodeOfConduct.md (4049 bytes)
+    │   │   │   ├── CommunicationPolicy.md (4000 bytes)
+    │   │   │   ├── ConflictOfInterestPolicy.md (3847 bytes)
+    │   │   │   ├── DelegationOfAuthority.md (4637 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (650 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── executiveunit.md (5854 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── CrisisManagementProcess.md (5904 bytes)
+    │   │   │   ├── DecisionMakingFramework.md (4687 bytes)
+    │   │   │   ├── PerformanceReviewProcess.md (5340 bytes)
+    │   │   │   ├── README.md (737 bytes)
+    │   │   │   └── StrategicPlanningProcess.md (5052 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── AnnualStrategicReportTemplate.md (3768 bytes)
+    │   │   │   ├── QuarterlyBusinessReviewTemplate.md (3289 bytes)
+    │   │   │   └── README.md (524 bytes)
+    │   │   ├── Charter.md (3319 bytes)
+    │   │   ├── README.md (777 bytes)
+    │   │   └── index.md (161 bytes)
+    │   ├── ExecutiveCommittee/
+    │   │   ├── DecisionFramework/
+    │   │   │   ├── README.md (778 bytes)
+    │   │   │   └── decisionframework.md (5708 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (670 bytes)
+    │   │   ├── OperatingProcedures/
+    │   │   │   ├── README.md (618 bytes)
+    │   │   │   └── operatingprocedures.md (1 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── executivecommitteeunit.md (13170 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── README.md (735 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (867 bytes)
+    │   │   ├── Charter.md (5246 bytes)
+    │   │   ├── README.md (79 bytes)
+    │   │   └── index.md (170 bytes)
     │   ├── Facilities/
-    │   │   └── facilities_unit.md (6947 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   └── meeting_notes_template.md (3035 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── facilities_policies.md (6223 bytes)
+    │   │   │   └── facilitiesunit.md (6947 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── facilities_processes.md (7369 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── facilities_report_template.md (3352 bytes)
+    │   │   ├── Charter.md (6933 bytes)
+    │   │   ├── README.md (2697 bytes)
+    │   │   └── index.md (162 bytes)
     │   ├── Finance/
-    │   │   └── finance_unit.md (5081 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── AuditCommitteeMeetings/
+    │   │   │   │   ├── Q2FinancialReview.md (6676 bytes)
+    │   │   │   │   └── README.md (3399 bytes)
+    │   │   │   └── README.md (4190 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── FinancialControlPolicy.md (7225 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (4196 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── financeunit.md (5081 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── BudgetingProcess.md (7340 bytes)
+    │   │   │   └── README.md (4773 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── ManagementReports/
+    │   │   │   │   └── FinancialDashboard.md (8447 bytes)
+    │   │   │   └── README.md (4976 bytes)
+    │   │   ├── Charter.md (5873 bytes)
+    │   │   ├── README.md (3796 bytes)
+    │   │   └── index.md (1359 bytes)
     │   ├── Governance/
-    │   │   └── governance_unit.md (6933 bytes)
-    │   ├── Human_Resources/
-    │   │   └── human_resources_unit.md (6783 bytes)
-    │   ├── IT/
-    │   │   └── it_unit.md (6785 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── Meeting_Minutes_Template.md (1270 bytes)
+    │   │   │   └── README.md (249 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Code_of_Conduct.md (198 bytes)
+    │   │   │   ├── Conflict_of_Interest_Policy.md (196 bytes)
+    │   │   │   ├── Data_Governance_Policy.md (188 bytes)
+    │   │   │   ├── Delegation_of_Authority_Policy.md (204 bytes)
+    │   │   │   ├── Policy_Template.md (995 bytes)
+    │   │   │   ├── Policy_on_Policies.md (205 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (388 bytes)
+    │   │   │   ├── Records_Management_Policy.md (96 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── Whistleblower_Policy.md (229 bytes)
+    │   │   │   └── governanceunit.md (6933 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Decision_Making_Framework.md (278 bytes)
+    │   │   │   ├── Policy_Development_Process.md (287 bytes)
+    │   │   │   ├── Process_Template.md (1649 bytes)
+    │   │   │   └── README.md (315 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── Governance_Report_Template.md (1488 bytes)
+    │   │   │   └── README.md (296 bytes)
+    │   │   ├── Charter.md (49 bytes)
+    │   │   ├── README.md (212 bytes)
+    │   │   ├── governanceunit.md (10772 bytes)
+    │   │   └── index.md (162 bytes)
+    │   ├── HumanResources/
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── HRTeamMeetingTemplate.md (3625 bytes)
+    │   │   │   └── README.md (826 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── CodeOfConductPolicy.md (4415 bytes)
+    │   │   │   ├── CompensationPolicy.md (5136 bytes)
+    │   │   │   ├── EmployeeHandbook.md (4604 bytes)
+    │   │   │   ├── LeavePolicy.md (5813 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (1592 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── hr_policies.md (5394 bytes)
+    │   │   │   └── humanresourcesunit.md (6783 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── OffboardingProcess.md (7089 bytes)
+    │   │   │   ├── OnboardingProcess.md (7002 bytes)
+    │   │   │   ├── PerformanceManagementProcess.md (6510 bytes)
+    │   │   │   ├── README.md (1460 bytes)
+    │   │   │   ├── RecruitmentProcess.md (6272 bytes)
+    │   │   │   └── hr_processes.md (9183 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── HRMetricsDashboardTemplate.md (3694 bytes)
+    │   │   │   ├── README.md (1510 bytes)
+    │   │   │   └── hr_report_template.md (1 bytes)
+    │   │   ├── Charter.md (5630 bytes)
+    │   │   ├── README.md (3651 bytes)
+    │   │   └── index.md (166 bytes)
+    │   ├── InformationTechnology/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (1979 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── AcceptableUsePolicy.md (4939 bytes)
+    │   │   │   ├── ChangeManagementPolicy.md (4318 bytes)
+    │   │   │   ├── DataSecurityPolicy.md (4508 bytes)
+    │   │   │   ├── DisasterRecoveryPolicy.md (3720 bytes)
+    │   │   │   ├── EmailUsagePolicy.md (3169 bytes)
+    │   │   │   ├── HardwareLifecyclePolicy.md (3018 bytes)
+    │   │   │   ├── IncidentResponsePolicy.md (4246 bytes)
+    │   │   │   ├── PasswordPolicy.md (3302 bytes)
+    │   │   │   ├── PositionsPersonas.md (2007 bytes)
+    │   │   │   ├── README.md (1654 bytes)
+    │   │   │   ├── RemoteAccessPolicy.md (3848 bytes)
+    │   │   │   ├── Resources.md (2843 bytes)
+    │   │   │   ├── Responsibilities.md (2587 bytes)
+    │   │   │   ├── SkillsRoles.md (4350 bytes)
+    │   │   │   └── SoftwareUsagePolicy.md (3350 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── AccessRequestProcedure.md (2747 bytes)
+    │   │   │   ├── ChangeManagementProcedure.md (2912 bytes)
+    │   │   │   ├── DataBackupRecoveryProcedure.md (2869 bytes)
+    │   │   │   ├── HardwareProcurement.md (2579 bytes)
+    │   │   │   ├── HelpDeskProcedure.md (4171 bytes)
+    │   │   │   ├── IncidentResponseProcedure.md (2375 bytes)
+    │   │   │   ├── NetworkMonitoringProcedure.md (2762 bytes)
+    │   │   │   ├── NewUserOnboarding.md (2906 bytes)
+    │   │   │   ├── README.md (2008 bytes)
+    │   │   │   ├── SoftwareUpdateProcess.md (2614 bytes)
+    │   │   │   └── UserOffboardingProcedure.md (2342 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (3060 bytes)
+    │   │   ├── Charter.md (3305 bytes)
+    │   │   ├── README.md (1038 bytes)
+    │   │   └── index.md (173 bytes)
     │   ├── Innovation/
-    │   │   └── innovation_unit.md (6862 bytes)
+    │   │   ├── Diagrams/
+    │   │   │   ├── Idea_Management_Process_Diagram.md (1787 bytes)
+    │   │   │   └── Innovation_Lifecycle_Process_Diagram.md (2315 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── 2024-01-15_Innovation_Meeting.md (1911 bytes)
+    │   │   │   └── README.md (106 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Experimentation_Policy.md (4666 bytes)
+    │   │   │   ├── IP_Protection_Policy.md (2015 bytes)
+    │   │   │   ├── Idea_Submission_Policy.md (4711 bytes)
+    │   │   │   ├── Innovation_Funding_Policy.md (5261 bytes)
+    │   │   │   ├── Intellectual_Property_Policy.md (5183 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (178 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── innovationunit.md (6862 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Experiment_Tracking_Process.md (5626 bytes)
+    │   │   │   ├── Idea_Management_Process.md (5246 bytes)
+    │   │   │   ├── Idea_Submission_Process.md (1758 bytes)
+    │   │   │   ├── Innovation_Lifecycle_Process.md (6086 bytes)
+    │   │   │   ├── Prototyping_Process.md (5664 bytes)
+    │   │   │   ├── README.md (195 bytes)
+    │   │   │   └── Stage_Gate_Process.md (2927 bytes)
+    │   │   ├── Projects/
+    │   │   │   ├── Project_Phoenix.md (1808 bytes)
+    │   │   │   └── README.md (840 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── Experiment_Results_Template.md (2915 bytes)
+    │   │   │   ├── Innovation_Pipeline_Report_Template.md (4038 bytes)
+    │   │   │   ├── Q1_Innovation_Report.md (2630 bytes)
+    │   │   │   ├── Quarterly_Innovation_Review_Template.md (4039 bytes)
+    │   │   │   └── README.md (140 bytes)
+    │   │   ├── Templates/
+    │   │   │   ├── Experiment_Plan_Template.md (4751 bytes)
+    │   │   │   ├── Idea_Submission_Form.md (2289 bytes)
+    │   │   │   └── Project_Proposal_Template.md (2548 bytes)
+    │   │   ├── Charter.md (6582 bytes)
+    │   │   ├── Innovation_Overview.md (989 bytes)
+    │   │   ├── Interfaces.md (3944 bytes)
+    │   │   ├── Performance_Metrics.md (2397 bytes)
+    │   │   ├── README.md (1608 bytes)
+    │   │   ├── Related_Links.md (1084 bytes)
+    │   │   ├── Resources.md (2232 bytes)
+    │   │   ├── Responsibilities.md (2358 bytes)
+    │   │   ├── Risk_Management.md (1685 bytes)
+    │   │   ├── Strategic_Management.md (2146 bytes)
+    │   │   └── index.md (162 bytes)
     │   ├── Intelligence/
-    │   │   └── intelligence_unit.md (7065 bytes)
-    │   ├── Knowledge_Management/
-    │   │   └── knowledge_management_unit.md (6792 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Counterintelligence_Awareness_Policy.md (3916 bytes)
+    │   │   │   ├── Data_Handling_Policy.md (4015 bytes)
+    │   │   │   ├── Ethical_Guidelines.md (4660 bytes)
+    │   │   │   ├── Intelligence_Data_Classification_Guideline.md (1 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Reporting_Policy.md (4294 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── intelligenceunit.md (7065 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Intelligence_Cycle.md (4378 bytes)
+    │   │   │   ├── Intelligence_Production_Process.md (6679 bytes)
+    │   │   │   ├── Source_Management_Process.md (5044 bytes)
+    │   │   │   └── Threat_Assessment_Process.md (5294 bytes)
+    │   │   ├── Charter.md (4098 bytes)
+    │   │   ├── README.md (333 bytes)
+    │   │   ├── Tools_and_Resources.md (3117 bytes)
+    │   │   └── index.md (164 bytes)
+    │   ├── KnowledgeManagement/
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── 2024-Q1-KnowledgeCapturePilotKickoff.md (5486 bytes)
+    │   │   │   └── README.md (1041 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── CommunityOfPracticePolicy.md (10807 bytes)
+    │   │   │   ├── DataClassificationPolicy.md (9059 bytes)
+    │   │   │   ├── KnowledgeCreationPolicy.md (7299 bytes)
+    │   │   │   ├── KnowledgeRetentionPolicy.md (7984 bytes)
+    │   │   │   ├── KnowledgeSharingPolicy.md (7656 bytes)
+    │   │   │   ├── PositionsPersonas.md (9717 bytes)
+    │   │   │   ├── README.md (470 bytes)
+    │   │   │   ├── Resources.md (12441 bytes)
+    │   │   │   ├── Responsibilities.md (11542 bytes)
+    │   │   │   ├── SkillsRoles.md (17590 bytes)
+    │   │   │   └── knowledgemanagementunit.md (6792 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── BestPracticeIdentificationProcess.md (7741 bytes)
+    │   │   │   ├── CoPLifecycleProcess.md (11628 bytes)
+    │   │   │   ├── KnowledgeAssetRetirementProcess.md (9945 bytes)
+    │   │   │   ├── KnowledgeCaptureProcess.md (6516 bytes)
+    │   │   │   ├── KnowledgeReviewProcess.md (6858 bytes)
+    │   │   │   ├── KnowledgeSharingProcess.md (11632 bytes)
+    │   │   │   ├── LessonsLearnedProcess.md (10910 bytes)
+    │   │   │   └── README.md (698 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── 2024-Q1-KnowledgeCapturePilotReport.md (9372 bytes)
+    │   │   │   └── README.md (1190 bytes)
+    │   │   ├── Charter.md (5224 bytes)
+    │   │   ├── README.md (432 bytes)
+    │   │   ├── StrategicPlan.md (1 bytes)
+    │   │   └── index.md (1986 bytes)
     │   ├── Legal/
-    │   │   └── legal_unit.md (13060 bytes)
+    │   │   ├── Compliance/
+    │   │   │   └── README.md (1644 bytes)
+    │   │   ├── Contracts/
+    │   │   │   └── README.md (1277 bytes)
+    │   │   ├── CorporateGovernance/
+    │   │   │   └── README.md (1593 bytes)
+    │   │   ├── IntellectualProperty/
+    │   │   │   └── README.md (1735 bytes)
+    │   │   ├── Litigation/
+    │   │   │   └── README.md (1883 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   └── .gitkeep (1 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── CodeOfConduct_LegalImplications.md (1167 bytes)
+    │   │   │   ├── CompliancePolicyOverview.md (1285 bytes)
+    │   │   │   ├── ContractManagementPolicy.md (1638 bytes)
+    │   │   │   ├── DataPrivacyPolicy.md (1490 bytes)
+    │   │   │   ├── IntellectualPropertyPolicy.md (1679 bytes)
+    │   │   │   ├── LitigationHoldPolicy.md (1993 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (1254 bytes)
+    │   │   │   ├── RecordsRetentionPolicy.md (2460 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── legalunit.md (13060 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── ComplianceReportingProcess.md (5318 bytes)
+    │   │   │   ├── ContractReviewProcess.md (3765 bytes)
+    │   │   │   ├── LegalHoldProcess.md (6566 bytes)
+    │   │   │   ├── LitigationManagementProcess.md (4615 bytes)
+    │   │   │   ├── OutsideCounselManagementProcess.md (5118 bytes)
+    │   │   │   ├── PolicyManagementProcess.md (5735 bytes)
+    │   │   │   └── README.md (1149 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── .gitkeep (1 bytes)
+    │   │   ├── Charter.md (3016 bytes)
+    │   │   ├── Interfaces.md (1734 bytes)
+    │   │   ├── Legal_Overview.md (1216 bytes)
+    │   │   ├── OrgChart.md (1940 bytes)
+    │   │   ├── Performance_Metrics.md (1315 bytes)
+    │   │   ├── README.md (1634 bytes)
+    │   │   ├── Related_Links.md (364 bytes)
+    │   │   ├── Resources.md (867 bytes)
+    │   │   ├── Responsibilities.md (1749 bytes)
+    │   │   ├── Risk_Management.md (1029 bytes)
+    │   │   ├── Strategic_Management.md (1115 bytes)
+    │   │   └── index.md (157 bytes)
     │   ├── Marketing/
-    │   │   └── marketing_unit.md (2025 bytes)
-    │   ├── Marketing_Communications/
-    │   │   └── marketing_communications_unit.md (6814 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── marketingunit.md (2025 bytes)
+    │   │   ├── Charter.md (0 bytes)
+    │   │   ├── README.md (61 bytes)
+    │   │   └── index.md (161 bytes)
+    │   ├── MarketingCommunications/
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── marketingcommunicationsunit.md (6814 bytes)
+    │   │   ├── Charter.md (0 bytes)
+    │   │   ├── README.md (89 bytes)
+    │   │   └── index.md (175 bytes)
+    │   ├── MetaGovernance/
+    │   │   ├── Patterns/
+    │   │   │   └── Decision-Making/
+    │   │   │       └── ConsentProcess.md (11092 bytes)
+    │   │   ├── Policies/
+    │   │   │   └── Cross_Boundary_Coordination_Policy.md (7837 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Framework_Adaptation_Process.md (7560 bytes)
+    │   │   │   └── Governance_Pattern_Development.md (8266 bytes)
+    │   │   ├── Templates/
+    │   │   │   ├── CircleCharterTemplate.md (6520 bytes)
+    │   │   │   └── PatternDocumentationTemplate.md (6111 bytes)
+    │   │   ├── AdaptiveRuleSystems.md (8745 bytes)
+    │   │   ├── Charter.md (7704 bytes)
+    │   │   ├── CrossOrganizationalGovernance.md (6740 bytes)
+    │   │   ├── FractalGovernanceFramework.md (5230 bytes)
+    │   │   ├── GovernancePatternLibrary.md (9363 bytes)
+    │   │   ├── Integration_With_Traditional_Governance.md (14410 bytes)
+    │   │   ├── README.md (351 bytes)
+    │   │   ├── ResponsibilitiesAndAuthorities.md (10170 bytes)
+    │   │   ├── ScaleFreeGovernance.md (6148 bytes)
+    │   │   ├── index.md (700 bytes)
+    │   │   └── metaGovernance.md (4152 bytes)
     │   ├── Operations/
-    │   │   └── operations_unit.md (6862 bytes)
-    │   ├── Organizational_Development/
-    │   │   └── organizational_development_unit.md (7002 bytes)
-    │   ├── Product_Management/
-    │   │   └── product_management_unit.md (6842 bytes)
-    │   ├── Quality_Assurance/
-    │   │   └── quality_assurance_unit.md (6833 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── README.md (823 bytes)
+    │   │   │   └── Template_Operations_BiWeekly_Sync.md (3235 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (2321 bytes)
+    │   │   │   ├── README.md (1000 bytes)
+    │   │   │   ├── Resources.md (3154 bytes)
+    │   │   │   ├── Responsibilities.md (2490 bytes)
+    │   │   │   ├── SkillsRoles.md (2562 bytes)
+    │   │   │   └── operationsunit.md (9610 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── ProcessManagement.md (5430 bytes)
+    │   │   │   ├── QualityControl.md (4769 bytes)
+    │   │   │   ├── README.md (1873 bytes)
+    │   │   │   ├── ResourceOptimization.md (4190 bytes)
+    │   │   │   ├── ServiceDelivery.md (5055 bytes)
+    │   │   │   └── SupplyChainManagement.md (5971 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── README.md (1352 bytes)
+    │   │   │   └── Template_Operations_Monthly_Report.md (4849 bytes)
+    │   │   ├── Charter.md (8775 bytes)
+    │   │   ├── README.md (2476 bytes)
+    │   │   └── index.md (162 bytes)
+    │   ├── OrganizationalDevelopment/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (1185 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Compensation_Philosophy.md (8077 bytes)
+    │   │   │   ├── Employee_Engagement_Policy.md (8179 bytes)
+    │   │   │   ├── Employee_Relations_Policy.md (8576 bytes)
+    │   │   │   ├── Learning_Development_Policy.md (7676 bytes)
+    │   │   │   ├── Performance_Management_Policy.md (7965 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (505 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── Succession_Planning_Policy.md (8887 bytes)
+    │   │   │   ├── Talent_Acquisition_Policy.md (7462 bytes)
+    │   │   │   └── organizationaldevelopmentunit.md (7002 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Conflict_Resolution_Process.md (6738 bytes)
+    │   │   │   ├── Employee_Offboarding_Process.md (5905 bytes)
+    │   │   │   ├── Onboarding_Process.md (6447 bytes)
+    │   │   │   ├── Performance_Review_Cycle.md (6719 bytes)
+    │   │   │   ├── README.md (1756 bytes)
+    │   │   │   ├── Succession_Planning_Process.md (6342 bytes)
+    │   │   │   └── Training_Needs_Analysis_Process.md (6568 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (2337 bytes)
+    │   │   ├── Charter.md (4932 bytes)
+    │   │   ├── README.md (4564 bytes)
+    │   │   └── index.md (177 bytes)
+    │   ├── ProductManagement/
+    │   │   ├── Policies/
+    │   │   │   ├── Market_Research_Ethics_Policy.md (5402 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Pricing_Policy.md (6136 bytes)
+    │   │   │   ├── Product_Lifecycle_Management_Policy.md (7368 bytes)
+    │   │   │   ├── Product_Roadmap_Policy.md (5940 bytes)
+    │   │   │   ├── README.md (695 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── productmanagementunit.md (6842 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Product_Discovery_Process.md (5898 bytes)
+    │   │   │   └── Roadmap_Prioritization_Process.md (6188 bytes)
+    │   │   ├── Charter.md (5898 bytes)
+    │   │   ├── README.md (2023 bytes)
+    │   │   └── index.md (169 bytes)
+    │   ├── QualityAssurance/
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── Automation_Strategy_Meeting.md (6244 bytes)
+    │   │   │   ├── QA_Weekly_2025-04-15.md (5469 bytes)
+    │   │   │   └── README.md (1691 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Audit_Policy.md (5442 bytes)
+    │   │   │   ├── Defect_Management_Policy.md (5926 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Quality_Standards_Policy.md (5148 bytes)
+    │   │   │   ├── README.md (1032 bytes)
+    │   │   │   ├── Release_Criteria_Policy.md (5547 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── Test_Strategy_Policy.md (4837 bytes)
+    │   │   │   └── qualityassuranceunit.md (6833 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Bug_Triage_Process.md (2738 bytes)
+    │   │   │   ├── README.md (2107 bytes)
+    │   │   │   ├── Test_Automation_Process.md (3459 bytes)
+    │   │   │   └── Test_Planning_Process.md (6413 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── Automation_Coverage_Report_Template.md (6207 bytes)
+    │   │   │   ├── Defect_Analysis_Report_Template.md (5107 bytes)
+    │   │   │   └── README.md (1839 bytes)
+    │   │   ├── Charter.md (4725 bytes)
+    │   │   ├── README.md (1366 bytes)
+    │   │   └── index.md (1388 bytes)
     │   ├── Research/
-    │   │   └── research_unit.md (7005 bytes)
-    │   ├── Research_Development/
-    │   │   └── research_development_unit.md (6871 bytes)
-    │   ├── Risk_Advisory_Board/
-    │   │   └── risk_advisory_board_unit.md (6641 bytes)
-    │   ├── Risk_Management/
-    │   │   └── risk_management_unit.md (6631 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── 2024-05-21_ResearchUnit_Sync_Example.md (2325 bytes)
+    │   │   │   ├── README.md (930 bytes)
+    │   │   │   └── Template_Meeting_Notes.md (1296 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Collaboration_Policy.md (4521 bytes)
+    │   │   │   ├── Data_Handling_Policy.md (4527 bytes)
+    │   │   │   ├── Lab_Safety_Policy.md (4894 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Publication_Policy.md (4746 bytes)
+    │   │   │   ├── README.md (780 bytes)
+    │   │   │   ├── Research_Ethics_Policy.md (4102 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── index.md (851 bytes)
+    │   │   │   └── researchunit.md (7005 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── DMP_Creation_Process.md (4184 bytes)
+    │   │   │   ├── Data_Analysis_Workflow.md (4328 bytes)
+    │   │   │   ├── Peer_Review_Process.md (3574 bytes)
+    │   │   │   ├── Publication_Workflow.md (4347 bytes)
+    │   │   │   ├── README.md (793 bytes)
+    │   │   │   ├── Research_Project_Lifecycle.md (4215 bytes)
+    │   │   │   └── index.md (1109 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── Example_ProjectAlpha_ProgressReport_2024-Q2.md (3238 bytes)
+    │   │   │   ├── README.md (805 bytes)
+    │   │   │   ├── Template_Research_Report.md (3608 bytes)
+    │   │   │   └── index.md (1388 bytes)
+    │   │   ├── Training_and_Skills/
+    │   │   │   ├── Experimental_Design_Principles.md (3476 bytes)
+    │   │   │   ├── Literature_Review_Guide.md (3320 bytes)
+    │   │   │   └── README.md (977 bytes)
+    │   │   ├── Charter.md (3838 bytes)
+    │   │   ├── Collaboration.md (3080 bytes)
+    │   │   ├── FocusAreas.md (1469 bytes)
+    │   │   ├── Methodologies.md (1962 bytes)
+    │   │   ├── README.md (2109 bytes)
+    │   │   ├── Structure.md (1335 bytes)
+    │   │   ├── Tools.md (1669 bytes)
+    │   │   └── index.md (646 bytes)
+    │   ├── ResearchDevelopment/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (430 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Data_Management_Policy.md (3518 bytes)
+    │   │   │   ├── Intellectual_Property_Policy.md (4113 bytes)
+    │   │   │   ├── Lab_Safety_Policy.md (4745 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Research_Ethics_Policy.md (4728 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── researchdevelopmentunit.md (6871 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Experiment_Design_Process.md (4877 bytes)
+    │   │   │   ├── Idea_Generation_Process.md (3857 bytes)
+    │   │   │   ├── Peer_Review_Process.md (5550 bytes)
+    │   │   │   ├── Project_Proposal_Process.md (4269 bytes)
+    │   │   │   └── Technology_Transfer_Process.md (5980 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (378 bytes)
+    │   │   ├── Charter.md (2550 bytes)
+    │   │   ├── README.md (857 bytes)
+    │   │   └── index.md (171 bytes)
+    │   ├── RiskAdvisoryBoard/
+    │   │   ├── Policies/
+    │   │   │   ├── Confidentiality_Policy.md (3726 bytes)
+    │   │   │   ├── Conflict_of_Interest_Policy.md (4308 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── RiskAdvisoryBoard_Operating_Principles.md (3888 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── riskadvisoryboardunit.md (6641 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── Risk_Review_Process.md (1691 bytes)
+    │   │   ├── Charter.md (4991 bytes)
+    │   │   ├── README.md (1874 bytes)
+    │   │   └── index.md (169 bytes)
+    │   ├── RiskManagement/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (2201 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (1691 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── RiskAppetite.md (6292 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── riskmanagement_policy.md (8269 bytes)
+    │   │   │   └── riskmanagementunit.md (6785 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── README.md (2266 bytes)
+    │   │   │   ├── RiskAssessment.md (7835 bytes)
+    │   │   │   ├── risk_assessment.md (5829 bytes)
+    │   │   │   ├── risk_identification.md (5915 bytes)
+    │   │   │   ├── risk_monitoring.md (6794 bytes)
+    │   │   │   └── risk_treatment.md (6899 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── JointOperationsReport.md (5916 bytes)
+    │   │   │   ├── README.md (2416 bytes)
+    │   │   │   └── RiskDashboard.md (7119 bytes)
+    │   │   ├── Charter.md (11211 bytes)
+    │   │   ├── README.md (2762 bytes)
+    │   │   └── index.md (166 bytes)
     │   ├── Sales/
-    │   │   └── sales_unit.md (19204 bytes)
-    │   ├── Scientific_Advisory_Board/
-    │   │   └── scientific_advisory_board_unit.md (7001 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── README.md (325 bytes)
+    │   │   │   └── template_meeting_notes.md (1206 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (183 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── sales_policies.md (1995 bytes)
+    │   │   │   └── salesunit.md (19204 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── README.md (179 bytes)
+    │   │   │   └── sales_process_overview.md (2662 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── README.md (372 bytes)
+    │   │   │   ├── template_performance_report.md (3067 bytes)
+    │   │   │   └── template_sales_report.md (3612 bytes)
+    │   │   ├── Charter.md (606 bytes)
+    │   │   ├── README.md (138 bytes)
+    │   │   └── index.md (157 bytes)
+    │   ├── ScientificAdvisoryBoard/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (287 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (224 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── scientificadvisoryboardunit.md (5989 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── README.md (291 bytes)
+    │   │   │   ├── sab_meeting_planning_execution.md (5264 bytes)
+    │   │   │   ├── sab_member_selection_onboarding.md (4381 bytes)
+    │   │   │   ├── sab_recommendation_reporting.md (4618 bytes)
+    │   │   │   └── scientific_review_advisory_process.md (3926 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (275 bytes)
+    │   │   ├── Charter.md (1717 bytes)
+    │   │   ├── README.md (89 bytes)
+    │   │   └── index.md (175 bytes)
     │   ├── Security/
-    │   │   ├── Cognitive_Security/
-    │   │   │   └── cognitive_security_unit.md (7142 bytes)
-    │   │   ├── Digital_Security/
-    │   │   │   └── digital_security_unit.md (5885 bytes)
-    │   │   ├── Physical_Security/
-    │   │   │   └── physical_security_unit.md (6350 bytes)
-    │   │   └── security_unit.md (7336 bytes)
+    │   │   ├── CognitiveSecurity/
+    │   │   │   ├── cognitivedefenseframework.md (14864 bytes)
+    │   │   │   └── cognitivesecurityunit.md (7142 bytes)
+    │   │   ├── DigitalSecurity/
+    │   │   │   ├── cybersecurityframework.md (11526 bytes)
+    │   │   │   └── digitalsecurityunit.md (5857 bytes)
+    │   │   ├── PhysicalSecurity/
+    │   │   │   ├── physicalsecurityunit.md (6350 bytes)
+    │   │   │   └── standardoperatingprocedures.md (8353 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── securitydocumentcatalog.md (8249 bytes)
+    │   │   │   ├── securitystrategy.md (14489 bytes)
+    │   │   │   └── securityunit.md (11482 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── incidentresponse.md (12387 bytes)
+    │   │   │   └── securitydomainintegration.md (16080 bytes)
+    │   │   ├── Charter.md (0 bytes)
+    │   │   ├── README.md (4408 bytes)
+    │   │   └── index.md (160 bytes)
     │   ├── Strategy/
-    │   │   └── strategy_unit.md (6888 bytes)
-    │   ├── Supply_Chain/
-    │   │   └── supply_chain_unit.md (7019 bytes)
-    │   ├── Technology_Advisory_Board/
-    │   │   └── technology_advisory_board_unit.md (7122 bytes)
-    │   ├── Training_Development/
-    │   │   └── training_development_unit.md (6980 bytes)
-    │   └── unit_directory.md (34746 bytes)
-    ├── README.md (41047 bytes)
-    ├── package-lock.json (218736 bytes)
-    ├── package.json (744 bytes)
-    ├── toplevel_readme.md (3134 bytes)
-    └── tsconfig.json (566 bytes)
+    │   │   ├── MeetingNotes/
+    │   │   │   ├── Meeting_Minutes_Template.md (1270 bytes)
+    │   │   │   └── README.md (279 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── Competitive_Intelligence_Ethics_Policy.md (216 bytes)
+    │   │   │   ├── Confidentiality_Policy_Strategy.md (237 bytes)
+    │   │   │   ├── Market_Analysis_Policy.md (250 bytes)
+    │   │   │   ├── Policy_Template.md (995 bytes)
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (409 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   ├── Strategic_Planning_Policy.md (238 bytes)
+    │   │   │   └── strategyunit.md (6888 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── Competitor_Analysis_Process.md (257 bytes)
+    │   │   │   ├── Market_Intelligence_Process.md (317 bytes)
+    │   │   │   ├── Process_Template.md (1649 bytes)
+    │   │   │   ├── README.md (422 bytes)
+    │   │   │   ├── Scenario_Planning_Process.md (249 bytes)
+    │   │   │   ├── Strategic_Initiative_Management_Process.md (258 bytes)
+    │   │   │   └── Strategic_Planning_Cycle.md (326 bytes)
+    │   │   ├── Reports/
+    │   │   │   ├── README.md (447 bytes)
+    │   │   │   └── Strategy_Report_Template.md (1782 bytes)
+    │   │   ├── Charter.md (0 bytes)
+    │   │   ├── Innovation_Projects.md (189 bytes)
+    │   │   ├── Interfaces.md (2478 bytes)
+    │   │   ├── KPIs.md (2126 bytes)
+    │   │   ├── Key_Processes.md (1896 bytes)
+    │   │   ├── README.md (430 bytes)
+    │   │   ├── Related_Links.md (190 bytes)
+    │   │   ├── Resources.md (1477 bytes)
+    │   │   ├── Responsibilities.md (1001 bytes)
+    │   │   ├── Strategy_Overview.md (1078 bytes)
+    │   │   ├── index.md (160 bytes)
+    │   │   └── strategyunit.md (11952 bytes)
+    │   ├── SupplyChain/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (205 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (296 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── supplychainunit.md (7019 bytes)
+    │   │   ├── Processes/
+    │   │   │   └── README.md (302 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (273 bytes)
+    │   │   ├── Charter.md (1000 bytes)
+    │   │   ├── InventoryManagement.md (481 bytes)
+    │   │   ├── Logistics.md (418 bytes)
+    │   │   ├── Procurement.md (416 bytes)
+    │   │   ├── README.md (1052 bytes)
+    │   │   ├── SupplierManagement.md (395 bytes)
+    │   │   ├── SupplyChainRiskManagement.md (418 bytes)
+    │   │   └── index.md (344 bytes)
+    │   ├── TechnologyAdvisoryBoard/
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── technologyadvisoryboardunit.md (7122 bytes)
+    │   │   ├── Charter.md (0 bytes)
+    │   │   ├── README.md (89 bytes)
+    │   │   └── index.md (175 bytes)
+    │   ├── TrainingDevelopment/
+    │   │   ├── MeetingNotes/
+    │   │   │   └── README.md (245 bytes)
+    │   │   ├── Policies/
+    │   │   │   ├── PositionsPersonas.md (0 bytes)
+    │   │   │   ├── README.md (249 bytes)
+    │   │   │   ├── Resources.md (0 bytes)
+    │   │   │   ├── Responsibilities.md (0 bytes)
+    │   │   │   ├── SkillsRoles.md (0 bytes)
+    │   │   │   └── trainingdevelopmentunit.md (10927 bytes)
+    │   │   ├── Processes/
+    │   │   │   ├── README.md (300 bytes)
+    │   │   │   ├── instructional_design_development.md (5471 bytes)
+    │   │   │   ├── training_delivery_management.md (5081 bytes)
+    │   │   │   ├── training_evaluation_reporting.md (5714 bytes)
+    │   │   │   └── training_needs_analysis.md (4678 bytes)
+    │   │   ├── Reports/
+    │   │   │   └── README.md (240 bytes)
+    │   │   ├── Charter.md (1888 bytes)
+    │   │   ├── README.md (81 bytes)
+    │   │   └── index.md (171 bytes)
+    │   ├── AGENTS.md (444 bytes)
+    │   ├── README.md (643 bytes)
+    │   └── unitdirectory.md (45588 bytes)
+    ├── .dockerignore (702 bytes)
+    ├── .env copy.example (64 bytes)
+    ├── .env.example (5694 bytes)
+    ├── .eslintrc.js (3964 bytes)
+    ├── .gitignore (17 bytes)
+    ├── .prettierrc (206 bytes)
+    ├── CHANGELOG.md (6528 bytes)
+    ├── DOCUMENTATION_COMPLETENESS_REPORT.md (9764 bytes)
+    ├── Dockerfile (4173 bytes)
+    ├── LICENSE.md (1131 bytes)
+    ├── NoOrg.md (13052 bytes)
+    ├── README.md (21264 bytes)
+    ├── agents_dirs.txt (1270 bytes)
+    ├── all_dirs.txt (12313 bytes)
+    ├── docker-compose.yml (4247 bytes)
+    ├── jest.config.js (620 bytes)
+    ├── missing_agents_md.txt (11043 bytes)
+    ├── package-lock.json (468714 bytes)
+    ├── package.json (6030 bytes)
+    └── tsconfig.json (2715 bytes)
 ```

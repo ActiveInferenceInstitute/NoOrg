@@ -77,9 +77,15 @@ export class TaskManager implements ITaskManager {
       throw new Error(`Task ${taskId} not found`);
     }
     
+    if (task.status === 'completed' || task.status === 'failed' || task.status === 'cancelled') {
+      throw new Error(`Task ${taskId} cannot be assigned because it is ${task.status}`);
+    }
+    
+    const now = Date.now();
     task.assignedTo = agentId;
     task.status = 'assigned';
-    task.updatedAt = Date.now();
+    task.updatedAt = now;
+    task.assignedAt = now;
     
     this.tasks.set(taskId, task);
     
@@ -101,8 +107,10 @@ export class TaskManager implements ITaskManager {
       throw new Error(`Task ${taskId} must be assigned before starting`);
     }
     
+    const now = Date.now();
     task.status = 'in-progress';
-    task.updatedAt = Date.now();
+    task.updatedAt = now;
+    task.startedAt = now;
     
     this.tasks.set(taskId, task);
     
@@ -115,10 +123,14 @@ export class TaskManager implements ITaskManager {
    * @param taskId Task ID
    * @param result Task result
    */
-  async completeTask(taskId: string, result: TaskResult): Promise<void> {
+  async completeTask(taskId: string, result: TaskResult | { outcome?: string; data?: any }): Promise<void> {
     const task = this.tasks.get(taskId);
     if (!task) {
       throw new Error(`Task ${taskId} not found`);
+    }
+    
+    if (task.status === 'cancelled') {
+      throw new Error(`Task ${taskId} cannot be completed because it is cancelled`);
     }
     
     const now = Date.now();
@@ -126,10 +138,11 @@ export class TaskManager implements ITaskManager {
     task.status = 'completed';
     task.updatedAt = now;
     task.completedAt = now;
-    task.results = result.data;
+    task.results = (result as TaskResult).data || (result as any).data;
+    task.result = result;
     
-    if (result.metrics?.duration) {
-      task.processingTime = result.metrics.duration;
+    if ((result as TaskResult).metrics?.duration) {
+      task.processingTime = (result as TaskResult).metrics.duration;
     }
     
     this.tasks.set(taskId, task);
@@ -141,9 +154,9 @@ export class TaskManager implements ITaskManager {
   /**
    * Fail a task
    * @param taskId Task ID
-   * @param error Error
+   * @param error Error or error object
    */
-  async failTask(taskId: string, error: Error): Promise<void> {
+  async failTask(taskId: string, error: Error | { message: string; details?: any }): Promise<void> {
     const task = this.tasks.get(taskId);
     if (!task) {
       throw new Error(`Task ${taskId} not found`);
@@ -154,7 +167,7 @@ export class TaskManager implements ITaskManager {
     task.status = 'failed';
     task.updatedAt = now;
     task.failedAt = now;
-    task.error = error.message;
+    task.error = error instanceof Error ? error.message : error.message;
     
     this.tasks.set(taskId, task);
     
@@ -165,16 +178,19 @@ export class TaskManager implements ITaskManager {
   /**
    * Cancel a task
    * @param taskId Task ID
+   * @param reason Optional cancellation reason
    */
-  async cancelTask(taskId: string): Promise<void> {
+  async cancelTask(taskId: string, reason?: string): Promise<void> {
     const task = this.tasks.get(taskId);
     if (!task) {
       throw new Error(`Task ${taskId} not found`);
     }
     
-    task.status = 'failed';  // We'll use 'failed' since our status doesn't include 'cancelled'
-    task.updatedAt = Date.now();
-    task.error = 'Task cancelled';
+    const now = Date.now();
+    task.status = 'cancelled';
+    task.updatedAt = now;
+    task.cancelledAt = now;
+    task.cancelReason = reason || 'Task cancelled';
     
     this.tasks.set(taskId, task);
     
@@ -185,34 +201,44 @@ export class TaskManager implements ITaskManager {
   /**
    * Get a task by ID
    * @param taskId Task ID
-   * @returns Task
+   * @returns Task or undefined if not found
    */
-  async getTask(taskId: string): Promise<Task> {
+  async getTask(taskId: string): Promise<Task | undefined> {
     const task = this.tasks.get(taskId);
     if (!task) {
-      throw new Error(`Task ${taskId} not found`);
+      return undefined;
     }
     return { ...task };
   }
 
   /**
    * List tasks with optional filtering
-   * @param filter Optional filter
+   * @param filter Optional filter (supports both old format with single values and new format with arrays)
    * @returns Array of tasks
    */
-  async listTasks(filter?: TaskFilter): Promise<Task[]> {
+  async listTasks(filter?: TaskFilter | { type?: string; status?: string; priority?: string; assignedTo?: string }): Promise<Task[]> {
     let tasks = Array.from(this.tasks.values());
     
     if (filter) {
-      if (filter.types && filter.types.length > 0) {
+      // Handle legacy format with single string values
+      if ('type' in filter && typeof (filter as any).type === 'string') {
+        const typeValue = (filter as any).type;
+        tasks = tasks.filter(task => task.type === typeValue);
+      } else if (filter.types && filter.types.length > 0) {
         tasks = tasks.filter(task => task.type && filter.types?.includes(task.type));
       }
       
-      if (filter.status && filter.status.length > 0) {
+      if ('status' in filter && typeof (filter as any).status === 'string') {
+        const statusValue = (filter as any).status;
+        tasks = tasks.filter(task => task.status === statusValue);
+      } else if (filter.status && filter.status.length > 0) {
         tasks = tasks.filter(task => filter.status?.includes(task.status));
       }
       
-      if (filter.priority && filter.priority.length > 0) {
+      if ('priority' in filter && typeof (filter as any).priority === 'string') {
+        const priorityValue = (filter as any).priority;
+        tasks = tasks.filter(task => task.priority === priorityValue);
+      } else if (filter.priority && filter.priority.length > 0) {
         tasks = tasks.filter(task => task.priority && filter.priority?.includes(task.priority));
       }
       
@@ -537,6 +563,11 @@ export class TaskManager implements ITaskManager {
       throw new Error(`Task ${taskId} not found`);
     }
 
+    // Merge metadata if both exist
+    if (updates.metadata && task.metadata) {
+      updates.metadata = { ...task.metadata, ...updates.metadata };
+    }
+
     // Update task properties
     const updatedTask = {
       ...task,
@@ -549,6 +580,44 @@ export class TaskManager implements ITaskManager {
 
     // Update shared state
     await this.stateManager.setState(`tasks.${taskId}`, updatedTask);
+  }
+
+  /**
+   * Get tasks that are ready to be executed (dependencies satisfied)
+   * @returns Array of ready tasks
+   */
+  async getReadyTasks(): Promise<Task[]> {
+    const allTasks = Array.from(this.tasks.values());
+    const readyTasks: Task[] = [];
+
+    for (const task of allTasks) {
+      if (task.status === 'pending' && await this.areDependenciesSatisfied(task.id)) {
+        readyTasks.push(task);
+      }
+    }
+
+    return readyTasks;
+  }
+
+  /**
+   * Count tasks by status
+   * @returns Object with counts for each status
+   */
+  async countTasksByStatus(): Promise<Record<TaskStatus, number>> {
+    const counts: Record<string, number> = {
+      pending: 0,
+      assigned: 0,
+      'in-progress': 0,
+      completed: 0,
+      failed: 0,
+      cancelled: 0
+    };
+
+    for (const task of this.tasks.values()) {
+      counts[task.status] = (counts[task.status] || 0) + 1;
+    }
+
+    return counts as Record<TaskStatus, number>;
   }
 }
 

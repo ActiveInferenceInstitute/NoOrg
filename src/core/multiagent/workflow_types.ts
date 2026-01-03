@@ -20,8 +20,13 @@ export interface WorkflowStage {
 }
 
 export interface AgentWithInfo extends BaseAgent {
-  initialize(): Promise<boolean>;
-  getAgentInfo(): Agent;
+  initialize(): Promise<void>;
+  getAgentInfo(): {
+    name: string;
+    type: string;
+    status: string;
+    lastError: Error | null;
+  };
   shutdown(): Promise<boolean>;
 }
 

@@ -111,6 +111,12 @@ class EventSystem {
         }
         return event;
     }
+    /**
+     * Alias for emit() method for compatibility with existing code
+     */
+    publish(type, payload, options) {
+        return this.emit(type, payload, options);
+    }
     on(type, handler) {
         this.eventEmitter.on(type, handler);
     }

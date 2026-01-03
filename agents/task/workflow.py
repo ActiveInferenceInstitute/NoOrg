@@ -90,8 +90,13 @@ class TaskWorkflowManager:
         await self._db.set(f"workflow_execution:{workflow_id}", execution)
         
         try:
-            # Execute stages
-            stages = workflow.get("stages", [{"tasks": workflow["tasks"]}])
+            # Execute stages - if no stages defined, create one from tasks
+            if "stages" in workflow and workflow["stages"]:
+                stages = workflow["stages"]
+            else:
+                # Create a single stage from tasks
+                stages = [{"tasks": [task.get("id") if isinstance(task, dict) else task for task in workflow["tasks"]]}]
+            
             for stage in stages:
                 stage_result = await self._execute_stage(workflow_id, stage)
                 execution["stages"].append(stage_result)
@@ -325,7 +330,16 @@ class TaskWorkflowManager:
         
         # Execute tasks in stage
         tasks_completed = 0
-        for task_id in stage["tasks"]:
+        # Handle both list of task dicts and list of task IDs
+        task_list = stage.get("tasks", [])
+        if task_list and isinstance(task_list[0], dict):
+            task_ids = [task.get("id") or task.get("name") for task in task_list]
+        else:
+            task_ids = task_list
+        
+        for task_id in task_ids:
+            if not task_id:
+                continue
             # Get task state
             state = await self._db.get(f"workflow_state:{workflow_id}")
             task_state = state["task_states"].get(task_id, {

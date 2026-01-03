@@ -79,20 +79,20 @@ export declare class AgentRegistry implements IAgentRegistry {
      * @param capabilities New capabilities
      * @returns Success status
      */
-    updateAgentCapabilities(agentId: string, capabilities: Capability[]): Promise<boolean>;
+    updateAgentCapabilities(agentId: string, capabilities: string[]): Promise<boolean>;
     /**
      * Update agent status
      * @param agentId Agent ID
      * @param status New status
      * @returns Success status
      */
-    updateAgentStatus(agentId: string, status: AgentStatus): Promise<boolean>;
+    updateAgentStatus(agentId: string, status: string): Promise<boolean>;
     /**
      * Get agent status
      * @param agentId Agent ID
      * @returns Agent status or null
      */
-    getAgentStatus(agentId: string): Promise<AgentStatus | null>;
+    getAgentStatus(agentId: string): Promise<string | null>;
     /**
      * Check if agent is available
      * @param agentId Agent ID
@@ -110,6 +110,7 @@ export declare class AgentRegistry implements IAgentRegistry {
      * @param agent Agent to index
      */
     private indexCapabilities;
+    private removeFromCapabilityIndex;
     /**
      * Remove agent from capabilities index
      * @param agent Agent to remove
