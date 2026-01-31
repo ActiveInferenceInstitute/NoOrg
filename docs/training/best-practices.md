@@ -50,7 +50,7 @@ content_creation:
       - review_status
       - expiration_date
       - related_documents
-```
+```text
 
 ### Creation Management
 ```python
@@ -81,7 +81,7 @@ class ContentCreator:
     def ensure_quality(self):
         """Ensure content quality"""
         pass
-```
+```text
 
 ## 📂 Organization
 
@@ -115,7 +115,7 @@ class ContentCreator:
     }
   }
 }
-```
+```text
 
 ### Organization Management
 ```python
@@ -146,7 +146,7 @@ class OrganizationManager:
     def optimize_structure(self):
         """Optimize organizational structure"""
         pass
-```
+```text
 
 ## 🔄 Maintenance
 
@@ -188,7 +188,7 @@ maintenance_practices:
       - version_archives
       - recovery_planning
       - retention_policies
-```
+```text
 
 ### Maintenance Management
 ```python
@@ -219,7 +219,7 @@ class MaintenanceManager:
     def track_maintenance(self):
         """Track maintenance activities"""
         pass
-```
+```text
 
 ## 👥 Collaboration
 
@@ -261,7 +261,7 @@ collaboration_practices:
       - role_definition
       - communication_standards
       - process_documentation
-```
+```text
 
 ### Collaboration Management
 ```python
@@ -292,7 +292,7 @@ class CollaborationManager:
     def facilitate_teamwork(self):
         """Facilitate team collaboration"""
         pass
-```
+```text
 
 ## 📚 References
 

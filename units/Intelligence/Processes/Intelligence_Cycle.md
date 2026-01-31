@@ -17,7 +17,7 @@ graph LR
     E --> A;  // Feedback loop impacting planning
     E --> F((6. Feedback));
     F --> A;
-```
+```text
 
 ## 3. Phase Descriptions
 

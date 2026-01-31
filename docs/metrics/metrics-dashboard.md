@@ -19,7 +19,7 @@ graph TD
     A --> C[User Metrics]
     A --> D[Performance Metrics]
     A --> E[Business Metrics]
-```
+```text
 
 ### Dashboard Architecture
 1. **Data Sources**

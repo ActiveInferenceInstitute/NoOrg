@@ -48,7 +48,7 @@ flowchart TD
     Resolved -->|No| Reassess[Reassess Escalation Path]
     Reassess --> Type
     Document --> Close[Close Escalation]
-```
+```text
 
 ## Escalation Types
 

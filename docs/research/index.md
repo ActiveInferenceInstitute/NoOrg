@@ -140,7 +140,7 @@ graph TB
     
     DataScience --> DataPlatform
     DataPlatform --> Platform
-```
+```text
 
 ## Machine Learning Pipeline
 
@@ -224,7 +224,7 @@ graph TB
     end
     
     Development --> Operations
-```
+```text
 
 ## Analytics System
 
@@ -311,14 +311,14 @@ graph TB
     
     Collection --> Processing
     Processing --> Presentation
-```
+```text
 
 ## Related Documentation
 - [Data Science Guide](data-science/guide.md)
 - [ML Operations](ml/operations.md)
 - [Analytics Platform](analytics/platform.md)
 - [Research Framework](research/framework.md)
-- [Data Governance](governance/data.md)
+- [Data Governance](../agents/modules/integration/data.md)
 
 ---
 

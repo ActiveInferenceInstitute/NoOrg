@@ -19,7 +19,7 @@ The **MarketingAgent** specializes in creating marketing strategies, campaign pl
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -41,7 +41,7 @@ async createCampaignStrategy(
     checkCache?: boolean;
   }
 ): Promise<CampaignStrategyResult>
-```
+```text
 
 #### analyzeAudience()
 
@@ -57,7 +57,7 @@ async analyzeAudience(
     region?: string;
   }
 ): Promise<AudienceAnalysisResult>
-```
+```text
 
 ## Configuration Options
 
@@ -72,7 +72,7 @@ interface MarketingAgentConfig extends AgentConfig {
   channelPreferences?: string[];
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -115,7 +115,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -139,7 +139,7 @@ const campaign = await marketingAgent.createCampaignStrategy(brief, {
   goals: ['brand-awareness', 'lead-generation', 'customer-retention'],
   budget: '$25,000'
 });
-```
+```text
 
 ### Audience Segmentation
 
@@ -153,7 +153,7 @@ const segments = await marketingAgent.analyzeAudience(description, {
 
 console.log('Audience Segments:', segments.segments);
 console.log('Buyer Personas:', segments.personas);
-```
+```text
 
 ## Version History
 

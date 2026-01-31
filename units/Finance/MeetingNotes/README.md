@@ -20,7 +20,7 @@ graph TD
     MeetingNotes --> Reports[Financial Reports]
     
     class Actions,Decisions,Reports externalEntity;
-```
+```text
 
 ## Meeting Categories
 

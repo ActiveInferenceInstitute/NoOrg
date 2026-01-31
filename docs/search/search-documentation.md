@@ -43,7 +43,7 @@ search_syntax:
       - numeric: 'field:[min TO max]'
       - date: 'date:[2024-01-01 TO 2024-12-31]'
       - alphabetical: 'title:[a TO z]'
-```
+```text
 
 ### Intelligent Features
 ```json
@@ -75,7 +75,7 @@ search_syntax:
     }
   }
 }
-```
+```text
 
 ## 📚 Best Practices
 
@@ -103,7 +103,7 @@ query_guidelines:
       - relevance_tuning: "Adjust for relevance"
       - precision_balance: "Balance precision/recall"
       - context_utilization: "Use context effectively"
-```
+```text
 
 ### LLM Integration
 ```python
@@ -134,7 +134,7 @@ class SearchBestPractices:
     def enhance_search(self):
         """Enhance search capabilities"""
         pass
-```
+```text
 
 ## 📝 Examples
 
@@ -172,7 +172,7 @@ search_examples:
       - query: '(title:search OR content:search) AND tags:documentation NOT draft:true'
         description: "Complex combined query"
         usage: "Advanced filtering and combination"
-```
+```text
 
 ### LLM Examples
 ```python
@@ -203,7 +203,7 @@ class SearchExamples:
     def showcase_features(self):
         """Showcase advanced features"""
         pass
-```
+```text
 
 ## 🔧 Troubleshooting
 
@@ -240,7 +240,7 @@ troubleshooting:
           - "Optimize query structure"
           - "Reduce query complexity"
           - "Use efficient filters"
-```
+```text
 
 ### Intelligent Resolution
 ```python
@@ -271,7 +271,7 @@ class TroubleshootingGuide:
     def prevent_problems(self):
         """Prevent common problems"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

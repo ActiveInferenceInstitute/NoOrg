@@ -29,7 +29,7 @@ bdi_architecture:
     type: "plan_library"
     selection: "means_ends_analysis"
     commitment: "open_minded"
-```
+```text
 
 ### Memory Systems
 - Working Memory
@@ -48,7 +48,7 @@ graph TD
     D --> E[Action Selection]
     E --> F[Execution]
     F --> A
-```
+```text
 
 ### Learning Mechanisms
 - Reinforcement Learning

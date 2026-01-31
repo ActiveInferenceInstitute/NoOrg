@@ -70,7 +70,7 @@ graph TD
         Doc1 & Doc2 --> P
         Doc3 --> N
     end
-```
+```text
 
 ## 5. Roles and Responsibilities
 

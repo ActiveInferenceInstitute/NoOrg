@@ -44,7 +44,7 @@ content_validation:
       - validation_reports
       - quality_assessments
       - improvement_recommendations
-```
+```text
 
 ### Validation Management
 ```python
@@ -75,7 +75,7 @@ class ContentValidator:
     def track_validation(self):
         """Track validation process"""
         pass
-```
+```text
 
 ## 📋 Format Checking
 
@@ -109,7 +109,7 @@ class ContentValidator:
     }
   }
 }
-```
+```text
 
 ### Format Management
 ```python
@@ -140,7 +140,7 @@ class FormatManager:
     def enforce_standards(self):
         """Enforce format standards"""
         pass
-```
+```text
 
 ## 🔄 Cross-reference Verification
 
@@ -176,7 +176,7 @@ cross_reference:
       - status_tracking
       - issue_logging
       - resolution_monitoring
-```
+```text
 
 ### Reference Management
 ```python
@@ -207,7 +207,7 @@ class ReferenceVerifier:
     def maintain_integrity(self):
         """Maintain reference integrity"""
         pass
-```
+```text
 
 ## 🔍 Consistency Review
 
@@ -243,7 +243,7 @@ consistency_review:
       - review_records
       - change_tracking
       - improvement_history
-```
+```text
 
 ### Consistency Management
 ```python
@@ -274,7 +274,7 @@ class ConsistencyManager:
     def maintain_standards(self):
         """Maintain consistency standards"""
         pass
-```
+```text
 
 ## 📊 Analytics and Reporting
 
@@ -308,7 +308,7 @@ class ConsistencyManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

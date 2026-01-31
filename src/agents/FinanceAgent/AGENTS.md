@@ -19,7 +19,7 @@ The **FinanceAgent** specializes in financial analysis, budgeting, forecasting, 
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -39,7 +39,7 @@ async analyzeFinancialData(
     checkCache?: boolean;
   }
 ): Promise<FinancialAnalysisResult>
-```
+```text
 
 #### createBudget()
 
@@ -62,7 +62,7 @@ async createBudget(
     checkCache?: boolean;
   }
 ): Promise<BudgetResult>
-```
+```text
 
 #### createForecast()
 
@@ -81,7 +81,7 @@ async createForecast(
     checkCache?: boolean;
   }
 ): Promise<ForecastResult>
-```
+```text
 
 ## Configuration Options
 
@@ -96,7 +96,7 @@ interface FinanceAgentConfig extends AgentConfig {
   riskTolerance?: 'conservative' | 'moderate' | 'aggressive';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -139,7 +139,7 @@ const taskId = await coordinator.createTask({
 // Execute the analysis
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -166,7 +166,7 @@ const multiCurrencyAnalysis = await financeAgent.analyzeFinancialData(data, {
     exchangeRates: rateData
   }
 });
-```
+```text
 
 ### Scenario Planning
 
@@ -178,7 +178,7 @@ const scenarios = await financeAgent.createForecast(historicalData, {
   includeScenarios: true,
   scenarioTypes: ['optimistic', 'pessimistic', 'most-likely']
 });
-```
+```text
 
 ## Version History
 

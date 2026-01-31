@@ -4,7 +4,7 @@ Generated: 2025-03-13T10:42:31.985413
 Root: /home/trim/Documents/operations/frameworks
 
 ## Directory Tree
-```
+```text
 /home/trim/Documents/operations/frameworks
 └── frameworks/
     ├── Events/
@@ -106,4 +106,4 @@ Root: /home/trim/Documents/operations/frameworks
         ├── messaging/
         ├── monitoring/
         └── storage/
-```
+```text

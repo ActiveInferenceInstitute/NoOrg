@@ -32,7 +32,7 @@ graph TD
     Processes --> BoardOfDirectors
     Reports --> BoardOfDirectors
     Meetings --> BoardOfDirectors
-```
+```text
 
 ## Key Documents
 

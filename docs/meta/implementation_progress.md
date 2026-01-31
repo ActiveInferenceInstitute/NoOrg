@@ -285,7 +285,7 @@
     "jest": "^29.0.0" // Already exists
   }
 }
-```
+```text
 
 No new dependencies required for Phase 1 completions! ✅
 

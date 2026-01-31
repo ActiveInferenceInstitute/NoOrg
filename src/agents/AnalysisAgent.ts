@@ -70,6 +70,10 @@ export class AnalysisAgent extends BaseAgent implements AnalysisAgentInterface {
     confidence: number;
     processingTime: number;
   }> {
+    if (data === null || data === undefined) {
+      throw new Error('Data parameter is required for analysis');
+    }
+
     this.updateStatus('busy');
     const startTime = Date.now();
 
@@ -102,7 +106,7 @@ export class AnalysisAgent extends BaseAgent implements AnalysisAgentInterface {
         maxTokens: 3000
       });
 
-      const result = this.parseAnalysisResponse(response, data, options);
+      const result = this.parseAnalysisResponse(response, data, options, startTime);
 
       // Cache result if requested
       if (options?.checkCache) {
@@ -181,11 +185,16 @@ export class AnalysisAgent extends BaseAgent implements AnalysisAgentInterface {
         maxTokens: 4000
       });
 
-      const result = this.parseReportResponse(response, options);
+      const result = this.parseReportResponse(response, options, startTime);
 
       this.updateStatus('idle');
       return result;
     } catch (error: any) {
+      this.logger.error('Report generation failed', {
+        error: error.message,
+        processingTime: Date.now() - startTime,
+        reportType: options?.reportType
+      });
       this.handleError(error);
       throw error;
     }
@@ -237,14 +246,15 @@ export class AnalysisAgent extends BaseAgent implements AnalysisAgentInterface {
     return prompt;
   }
 
-  private parseAnalysisResponse(response: string, data: any, options?: any): any {
+  private parseAnalysisResponse(response: string, data: any, options?: any, startTime?: number): any {
+    const elapsed = startTime ? Date.now() - startTime : 0;
     try {
       // Try to parse as JSON first
       const parsed = JSON.parse(response);
       return {
         ...parsed,
         confidence: parsed.confidence || 0.85,
-        processingTime: Date.now() - Date.now() // This will be overridden
+        processingTime: elapsed
       };
     } catch {
       // Fallback to text parsing
@@ -254,12 +264,13 @@ export class AnalysisAgent extends BaseAgent implements AnalysisAgentInterface {
         statistics: {},
         recommendations: response.split('\n').filter(line => line.includes('recommend')).slice(0, 3),
         confidence: 0.8,
-        processingTime: Date.now() - Date.now()
+        processingTime: elapsed
       };
     }
   }
 
-  private parseReportResponse(response: string, options?: any): any {
+  private parseReportResponse(response: string, options?: any, startTime?: number): any {
+    const elapsed = startTime ? Date.now() - startTime : 0;
     // Parse the report response into structured format
     const sections = response.split('\n## ').map(section => {
       const lines = section.split('\n');
@@ -272,15 +283,15 @@ export class AnalysisAgent extends BaseAgent implements AnalysisAgentInterface {
       title: sections[0]?.title || 'Analysis Report',
       summary: sections.find(s => s.title.toLowerCase().includes('summary'))?.content || '',
       sections: sections.slice(1),
-      keyFindings: sections.find(s => s.title.toLowerCase().includes('finding'))?.content.split('\n- ') || [],
-      recommendations: sections.find(s => s.title.toLowerCase().includes('recommend'))?.content.split('\n- ') || [],
+      keyFindings: sections.find(s => s.title.toLowerCase().includes('finding'))?.content?.split('\n- ') || [],
+      recommendations: sections.find(s => s.title.toLowerCase().includes('recommend'))?.content?.split('\n- ') || [],
       metadata: {
         reportType: options?.reportType || 'comprehensive',
         audience: options?.audience || 'analysts',
         generatedAt: new Date().toISOString(),
         dataSource: 'analysis'
       },
-      processingTime: Date.now() - Date.now()
+      processingTime: elapsed
     };
   }
 

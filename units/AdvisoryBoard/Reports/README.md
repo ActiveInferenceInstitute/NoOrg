@@ -20,7 +20,7 @@ graph TD
     WorkingGroups[Working Groups] --> Reports
     
     class Committees,WorkingGroups,Organizational externalEntity;
-```
+```text
 
 ## Report Categories
 

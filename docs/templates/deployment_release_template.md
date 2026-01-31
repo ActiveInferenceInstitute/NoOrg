@@ -20,7 +20,7 @@ graph TB
     H2[DB<br>Stable]
     H3[Cache<br>Optimal]
     end
-```
+```text
 
 ## 🔄 Deployment Pipeline
 ```mermaid
@@ -52,7 +52,7 @@ graph LR
     Build --> Test
     Test --> Deploy
     Deploy --> Verify
-```
+```text
 
 ## 📈 Release Progress
 ```mermaid
@@ -75,7 +75,7 @@ gantt
     section Post-Release
     Monitoring       :d1, after c2, 2d
     Stabilization    :d2, after d1, 3d
-```
+```text
 
 ## 🎯 Release Readiness
 ```mermaid
@@ -91,7 +91,7 @@ radar
     data
         Current: 95, 92, 88, 90, 85, 87
         Required: 100, 95, 90, 95, 90, 90
-```
+```text
 
 ## 🔍 Environment Health
 ```mermaid
@@ -119,7 +119,7 @@ graph TB
     
     Infrastructure --> Metrics
     Metrics --> Alerts
-```
+```text
 
 ## ⚡ Performance Baseline
 ```mermaid
@@ -130,7 +130,7 @@ xychart-beta
     y-axis "Throughput (rps)" 0 --> 1000
     line [150, 160, 155, 165, 158]
     line [800, 850, 820, 840, 860]
-```
+```text
 
 ## 🔄 Rollback Strategy
 ```mermaid
@@ -146,7 +146,7 @@ stateDiagram-v2
     VerifyRollback --> Monitoring: Success
     VerifyRollback --> Assessment: Failure
     Continue --> Monitoring
-```
+```text
 
 ## 📋 Deployment Checklist
 ```mermaid
@@ -164,7 +164,7 @@ mindmap
             Monitor
             Validate
             Communicate
-```
+```text
 
 ## 🔐 Security Gates
 ```mermaid
@@ -186,7 +186,7 @@ graph LR
     
     Code --> Runtime
     Runtime --> Infrastructure
-```
+```text
 
 ## Deployment Documentation
 
@@ -225,7 +225,7 @@ graph TB
     
     Metrics --> Alerts
     Alerts --> Dashboard
-```
+```text
 
 ### 🔄 Rollback Procedures
 ```mermaid
@@ -240,7 +240,7 @@ graph TD
     Execute --> Verify[Verify System]
     Verify -->|Success| Complete[Complete]
     Verify -->|Failure| Assess
-```
+```text
 
 ## Release Management
 
@@ -253,7 +253,7 @@ xychart-beta
     y-axis "Success Rate %" 0 --> 100
     line [45, 40, 35, 30]
     line [85, 90, 92, 95]
-```
+```text
 
 ### 🎯 Release Impact
 ```mermaid
@@ -268,7 +268,7 @@ quadrantChart
     Component1: [0.8, 0.3]
     Component2: [0.4, 0.7]
     Component3: [0.6, 0.5]
-```
+```text
 
 ### 📊 Service Health
 ```mermaid
@@ -284,7 +284,7 @@ radar
     data
         Current: 99.9, 95, 98, 85, 80, 90
         Target: 99.99, 99, 99, 90, 85, 95
-```
+```text
 
 ## Post-Deployment
 
@@ -311,7 +311,7 @@ graph LR
     
     Functional --> Performance
     Performance --> Security
-```
+```text
 
 ### 📈 Monitoring Dashboard
 ```mermaid
@@ -333,7 +333,7 @@ graph TB
     B2[Transactions<br>5k]
     B3[Revenue<br>$100k]
     end
-```
+```text
 
 ---
 **Metadata**

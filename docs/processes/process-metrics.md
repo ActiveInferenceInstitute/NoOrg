@@ -44,7 +44,7 @@ performance_metrics:
       target: "<20% of capacity"
       critical_threshold: "50% of capacity"
       measurement: "queue_length"
-```
+```text
 
 ### Performance Analysis
 ```python
@@ -75,7 +75,7 @@ class PerformanceAnalyzer:
     def generate_insights(self):
         """Generate performance insights"""
         pass
-```
+```text
 
 ## 🎯 Quality Metrics
 
@@ -111,7 +111,7 @@ class PerformanceAnalyzer:
     }
   }
 }
-```
+```text
 
 ### Quality Assessment
 ```python
@@ -142,7 +142,7 @@ class QualityAssessor:
     def generate_report(self):
         """Generate quality report"""
         pass
-```
+```text
 
 ## 🎯 Success Criteria
 
@@ -182,7 +182,7 @@ success_criteria:
     - metric: "stakeholder_satisfaction"
       target: ">90%"
       weight: 0.3
-```
+```text
 
 ### Success Evaluation
 ```python
@@ -213,7 +213,7 @@ class SuccessEvaluator:
     def generate_scorecard(self):
         """Generate success scorecard"""
         pass
-```
+```text
 
 ## 📈 Measurement System
 
@@ -235,7 +235,7 @@ class SuccessEvaluator:
     }
   }
 }
-```
+```text
 
 ### Analysis Framework
 ```python
@@ -266,7 +266,7 @@ class MetricsAnalyzer:
     def generate_insights(self):
         """Generate analytical insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -293,7 +293,7 @@ improvement_metrics:
       - customer_impact
       - operational_impact
     measurement: "comparative_analysis"
-```
+```text
 
 ### Improvement Process
 ```python
@@ -324,7 +324,7 @@ class ImprovementTracker:
     def assess_effectiveness(self):
         """Assess improvement effectiveness"""
         pass
-```
+```text
 
 ## 📚 References
 

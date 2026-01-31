@@ -79,7 +79,7 @@ npm run test:coverage
 
 # Run in CI mode (faster, no watch mode)
 npm run test:ci
-```
+```text
 
 ### Running Specific Test Categories
 ```bash
@@ -100,7 +100,7 @@ npm run test:agents
 
 # Core system tests only
 npm run test:core
-```
+```text
 
 ### Running Individual Test Files
 ```bash
@@ -112,7 +112,7 @@ npm test -- --verbose tests/unit/agents/test_analysis_agent.ts
 
 # Run with debug output
 DEBUG=* npm test tests/integration/test_comprehensive_system_integration.ts
-```
+```text
 
 ## Test Configuration
 
@@ -200,7 +200,7 @@ export function createMockOpenAIClient() {
 export function createTestDataset() {
   return Array.from({ length: 100 }, (_, i) => ({ id: i, value: Math.random() }));
 }
-```
+```text
 
 ## Coverage Goals
 
@@ -220,7 +220,7 @@ open coverage/lcov-report/index.html
 
 # Generate coverage summary
 npm run coverage:summary
-```
+```text
 
 ## Performance Testing
 
@@ -241,7 +241,7 @@ describe('Performance Tests', () => {
     expect(results).toHaveLength(1000);
   });
 });
-```
+```text
 
 ### Memory Testing
 ```typescript
@@ -259,7 +259,7 @@ it('should not leak memory during extended operations', async () => {
 
   expect(memoryIncrease).toBeLessThan(50 * 1024 * 1024); // < 50MB increase
 });
-```
+```text
 
 ## Debugging Tests
 
@@ -273,7 +273,7 @@ npm test -- --verbose tests/unit/agents/test_analysis_agent.ts
 
 # Run with inspector for debugging
 node --inspect-brk node_modules/.bin/jest tests/unit/core/test_event_system.ts
-```
+```text
 
 ### Test Logging
 ```typescript
@@ -284,7 +284,7 @@ logger.info('Starting test execution');
 // Log test data and expectations
 logger.debug('Test data:', testData);
 logger.debug('Expected result:', expectedResult);
-```
+```text
 
 ## Continuous Integration
 
@@ -310,7 +310,7 @@ jobs:
       - run: npm ci
       - run: npm run test:ci
       - run: npm run test:coverage
-```
+```text
 
 ## Troubleshooting
 
@@ -328,8 +328,8 @@ jobs:
 
 ## Related Documentation
 
-- [Testing Strategy](../../../docs/testing/index.md)
-- [Testing Standards](../../../docs/testing/testing-standards.md)
-- [Performance Testing](../../../docs/testing/performance-testing.md)
-- [Test Helpers](../../../tests/utils/README.md)
-- [CI/CD Pipeline](../../../.github/workflows/ci.yml)
+- [Testing Strategy](../docs/index.md)
+- [Testing Standards](../docs/testing/testing-standards.md)
+- [Performance Testing](../docs/testing/performance-testing.md)
+- [Test Helpers](../README.md)
+- [CI/CD Pipeline](../.github/workflows/ci.yml)

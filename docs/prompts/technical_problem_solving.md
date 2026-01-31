@@ -41,7 +41,7 @@ mindmap
       Attempt history
       Result tracking
       Knowledge accumulation
-```
+```text
 
 ## Problem Diagnosis Framework
 1. **Problem definition**
@@ -107,7 +107,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Troubleshooting Techniques
 1. **Divide and conquer**
@@ -168,7 +168,7 @@ graph TD
     E --> E3[Resource monitoring]
     E --> E4[Execution path tracing]
     E --> E5[Failure state capture]
-```
+```text
 
 ## Solution Implementation
 1. **Targeted intervention**
@@ -219,7 +219,7 @@ flowchart TD
     B --> E[Solution Deployment]
     C --> E
     D --> F[Future Prevention]
-```
+```text
 
 ## Special Technical Problem Types
 1. **Performance issues**
@@ -280,7 +280,7 @@ graph TD
     E --> E3[Encryption examination]
     E --> E4[Permission analysis]
     E --> E5[Vulnerability assessment]
-```
+```text
 
 ## When Traditional Debugging Fails
 - Take a step back and reconsider fundamental assumptions
@@ -322,7 +322,7 @@ flowchart LR
     G --> G1[Problem redefinition]
     G --> G2[Goal reassessment]
     G --> G3[Alternate framing]
-```
+```text
 
 ## Technical Problem-Solving Process Model
 ```mermaid
@@ -364,4 +364,4 @@ graph TB
     R -.-> E
     R -.-> J
     R -.-> O
-``` 
+```text 

@@ -63,7 +63,7 @@ flowchart TD
     G -->|Confirmed Risk| H
     H --> I[Joint Assessment]
     I --> J[Response Plan Development]
-```
+```text
 
 ### Escalation Timeframes
 

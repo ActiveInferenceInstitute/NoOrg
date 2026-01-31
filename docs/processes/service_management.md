@@ -26,7 +26,7 @@ related_documents:
   - [[processes/data_management]]
   - [[security/service_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the operational processes and procedures for managing service integrations within the agent system, providing comprehensive guidelines for service lifecycle management, monitoring, and maintenance.
@@ -42,7 +42,7 @@ graph TD
     C --> D[Monitoring]
     D --> E[Maintenance]
     E --> F[Retirement]
-```
+```text
 
 #### 1.2 Stage Processes
 ```python
@@ -62,7 +62,7 @@ class ServiceLifecycle:
             await self.start_operation()
             await self.enable_monitoring()
             await self.schedule_maintenance()
-```
+```text
 
 ### 2. Service Discovery
 #### 2.1 Discovery Process
@@ -79,7 +79,7 @@ class ServiceDiscovery:
         analysis = await self.analyzer.analyze_services(services)
         validated = await self.validator.validate_services(analysis)
         await self.registry.register_services(validated)
-```
+```text
 
 #### 2.2 Discovery Methods
 - Network Discovery
@@ -102,7 +102,7 @@ class ServiceIntegration:
         execution = await self.executor.execute_plan(plan)
         validation = await self.validator.validate_integration(execution)
         await self.monitor.start_monitoring(validation)
-```
+```text
 
 #### 3.2 Integration Steps
 1. Requirements Analysis
@@ -128,7 +128,7 @@ class ServiceOperations:
             await self.scheduler.schedule_tasks()
             await self.monitor.track_performance()
             await self.handler.handle_errors()
-```
+```text
 
 #### 4.2 Operation Types
 - Service Requests
@@ -151,7 +151,7 @@ class ServiceMonitoring:
         analysis = await self.analyzer.analyze_metrics(metrics)
         alerts = await self.alerter.process_alerts(analysis)
         await self.reporter.generate_reports(analysis)
-```
+```text
 
 #### 5.2 Monitoring Areas
 - Performance Metrics
@@ -174,7 +174,7 @@ class ServiceMaintenance:
         execution = await self.executor.execute_maintenance(schedule)
         validation = await self.validator.validate_maintenance(execution)
         await self.reporter.report_maintenance(validation)
-```
+```text
 
 #### 6.2 Maintenance Types
 - Routine Maintenance
@@ -199,7 +199,7 @@ class ProcessImplementation:
     async def setup_automation(self, automation):
         # Automation setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Process Structure
@@ -216,7 +216,7 @@ class WorkflowManager:
         self.router = TaskRouter()
         self.scheduler = TaskScheduler()
         self.monitor = WorkflowMonitor()
-```
+```text
 
 #### 2.2 Workflow Types
 - Linear Workflows
@@ -247,7 +247,7 @@ class ProcessQuality:
     async def measure_performance(self, metrics):
         # Performance measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -279,7 +279,7 @@ class ProcessSecurity:
     async def audit_execution(self, execution):
         # Audit logging logic
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Access Control
@@ -329,7 +329,7 @@ class ProcessPattern:
         self.workflow = WorkflowEngine()
         self.executor = ProcessExecutor()
         self.monitor = ProcessMonitor()
-```
+```text
 
 ### B. Workflow Patterns
 ```python
@@ -339,7 +339,7 @@ class WorkflowPattern:
         self.engine = WorkflowEngine()
         self.router = TaskRouter()
         self.scheduler = TaskScheduler()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -349,4 +349,4 @@ class ProcessSecurityPattern:
         self.validator = SecurityValidator()
         self.control = AccessControl()
         self.audit = AuditLogger()
-``` 
+```text 

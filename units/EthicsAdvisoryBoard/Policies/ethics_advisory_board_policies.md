@@ -72,7 +72,7 @@ graph LR
 
     G(Policy Governance) -- Annual Review --> P1 & P2 & P3 & P4 & P5;
 
-```
+```text
 
 ---
 Version: 1.0

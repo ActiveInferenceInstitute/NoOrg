@@ -28,7 +28,7 @@ graph TD
     StrategyCommittee -.-> StrategyWorkingGroup[Strategy Working Group]
     
     class StrategyUnit,StrategyWorkingGroup externalEntity;
-```
+```text
 
 ## Key Responsibilities
 

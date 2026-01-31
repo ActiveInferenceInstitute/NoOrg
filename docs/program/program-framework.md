@@ -19,7 +19,7 @@ graph TD
     A --> C[Governance Model]
     A --> D[Resource Management]
     A --> E[Portfolio Management]
-```
+```text
 
 ### Framework Layers
 1. **Management Layers**

@@ -52,7 +52,7 @@ access_policies:
       - unauthorized_access
       - suspicious_activity
       - policy_violations
-```
+```text
 
 ### Data Protection
 ```python
@@ -89,7 +89,7 @@ class SecurityPolicy:
     def audit_compliance(self):
         """Audit security compliance"""
         pass
-```
+```text
 
 ## 🔄 Operational Policies
 
@@ -134,7 +134,7 @@ class SecurityPolicy:
     }
   }
 }
-```
+```text
 
 ### Incident Response
 ```python
@@ -175,7 +175,7 @@ class OperationalPolicy:
     def document_incident(self):
         """Document incident details"""
         pass
-```
+```text
 
 ## 📜 Compliance Policies
 
@@ -212,7 +212,7 @@ compliance_policies:
         - segregation_of_duties
         - change_control
         - documentation
-```
+```text
 
 ### Audit Management
 ```python
@@ -254,7 +254,7 @@ class CompliancePolicy:
     def track_compliance(self):
         """Track compliance status"""
         pass
-```
+```text
 
 ## 📊 Policy Management
 
@@ -288,7 +288,7 @@ class CompliancePolicy:
     }
   }
 }
-```
+```text
 
 ### Policy Enforcement
 ```python
@@ -319,7 +319,7 @@ class PolicyEnforcement:
     def handle_violations(self):
         """Handle policy violations"""
         pass
-```
+```text
 
 ## 📈 Metrics and Reporting
 
@@ -343,7 +343,7 @@ policy_metrics:
     - regulatory_violations
     - remediation_status
     measurement: "status_tracking"
-```
+```text
 
 ### Reporting Framework
 ```python
@@ -374,7 +374,7 @@ class PolicyReporting:
     def analyze_compliance(self):
         """Analyze compliance status"""
         pass
-```
+```text
 
 ## 📚 References
 

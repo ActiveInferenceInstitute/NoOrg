@@ -26,7 +26,7 @@ graph TD
     StrategyCommittee --> AdvisoryBoard
 
     AdvisoryBoard[Advisory Board]
-```
+```text
 
 ## Committee Structure
 

@@ -92,7 +92,7 @@ const frontendId = await structureManager.createUnit({
   ],
   parent: engineeringId
 });
-```
+```text
 
 ### Creating and Deploying a Composition
 
@@ -126,7 +126,7 @@ const deploymentId = await deploymentManager.deployComposition({
 // Get the deployment status
 const deployment = await deploymentManager.getDeploymentStatus(deploymentId);
 console.log(`Created ${deployment.createdAgents.length} agents`);
-```
+```text
 
 ### Creating and Executing a Workflow
 
@@ -181,7 +181,7 @@ await workflowManager.startWorkflow(workflowId);
 // Get workflow status
 const workflow = await workflowManager.getWorkflowStatus(workflowId);
 console.log(`Workflow status: ${workflow.status}`);
-```
+```text
 
 ## Complex Workflow Example
 
@@ -276,7 +276,7 @@ runStrategicInnovationWorkflow()
   .catch(error => {
     console.error(`Error running workflow: ${error.message}`);
   });
-```
+```text
 
 The example provides detailed console output showing the progression through the workflow steps, the status of each step, and the final results of the workflow.
 

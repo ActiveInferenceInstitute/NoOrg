@@ -48,7 +48,7 @@ branch_naming:
       - issue_reference
       - brief_description
       - version_inclusion
-```
+```text
 
 ### Branch Management
 ```python
@@ -79,7 +79,7 @@ class BranchManager:
     def ensure_compliance(self):
         """Ensure naming compliance"""
         pass
-```
+```text
 
 ## 💬 Commit Message Standards
 
@@ -115,7 +115,7 @@ class BranchManager:
     }
   }
 }
-```
+```text
 
 ### Message Management
 ```python
@@ -146,7 +146,7 @@ class CommitManager:
     def ensure_quality(self):
         """Ensure message quality"""
         pass
-```
+```text
 
 ## 👥 Code Review Guidelines
 
@@ -191,7 +191,7 @@ review_guidelines:
           - discussion
           - resolution
           - verification
-```
+```text
 
 ### Review Management
 ```python
@@ -222,7 +222,7 @@ class ReviewManager:
     def track_progress(self):
         """Track review progress"""
         pass
-```
+```text
 
 ## 🔄 Merge Procedures
 
@@ -267,7 +267,7 @@ merge_procedures:
           - functionality_test
           - performance_verify
           - monitoring_setup
-```
+```text
 
 ### Merge Management
 ```python
@@ -298,7 +298,7 @@ class MergeManager:
     def ensure_quality(self):
         """Ensure merge quality"""
         pass
-```
+```text
 
 ## 🌳 Fractal Git Best Practices
 
@@ -338,7 +338,7 @@ fractal_practices:
             - "Document pattern changes"
             - "Maintain backward compatibility"
             - "Plan for future extensions"
-```
+```text
 
 ### Workflow Guidelines
 ```json
@@ -386,7 +386,7 @@ fractal_practices:
     }
   }
 }
-```
+```text
 
 ## 📚 Obsidian Best Practices
 
@@ -426,7 +426,7 @@ vault_practices:
             - "Implement clear tagging"
             - "Maintain property standards"
             - "Document metadata usage"
-```
+```text
 
 ### Link Management
 ```json
@@ -474,7 +474,7 @@ vault_practices:
     }
   }
 }
-```
+```text
 
 ## 🔄 Integration Best Practices
 
@@ -514,7 +514,7 @@ integration_practices:
             - "Document automation rules"
             - "Maintain automation logs"
             - "Monitor automation health"
-```
+```text
 
 ### Maintenance Guidelines
 ```python
@@ -564,7 +564,7 @@ class MaintenanceGuidelines:
         self._optimize_performance()
         self._update_documentation()
         self._validate_implementation()
-```
+```text
 
 ## 📚 References
 

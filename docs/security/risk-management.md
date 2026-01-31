@@ -19,7 +19,7 @@ graph TD
     A --> C[Risk Analysis]
     A --> D[Risk Treatment]
     A --> E[Risk Monitoring]
-```
+```text
 
 ### Risk Architecture
 1. **Risk Layers**

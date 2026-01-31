@@ -48,7 +48,7 @@ light_theme:
           - h2: "1.75rem"
           - h3: "1.5rem"
           - body: "1rem"
-```
+```text
 
 ### Theme Management
 ```python
@@ -79,7 +79,7 @@ class LightThemeManager:
     def enhance_visuals(self):
         """Enhance visual elements"""
         pass
-```
+```text
 
 ## 🌙 Dark Theme
 
@@ -121,7 +121,7 @@ class LightThemeManager:
     }
   }
 }
-```
+```text
 
 ### Theme Management
 ```python
@@ -152,7 +152,7 @@ class DarkThemeManager:
     def enhance_comfort(self):
         """Enhance visual comfort"""
         pass
-```
+```text
 
 ## 🔆 High Contrast
 
@@ -190,7 +190,7 @@ high_contrast:
           weight: "medium"
           spacing: "enhanced"
           size: "adjustable"
-```
+```text
 
 ### Theme Management
 ```python
@@ -221,7 +221,7 @@ class HighContrastManager:
     def enhance_accessibility(self):
         """Enhance accessibility features"""
         pass
-```
+```text
 
 ## 🖨️ Print-Friendly
 
@@ -258,7 +258,7 @@ print_friendly:
       - page_breaks:
           smart_insertion: true
           preservation: "content_logical"
-```
+```text
 
 ### Theme Management
 ```python
@@ -289,7 +289,7 @@ class PrintThemeManager:
     def enhance_printing(self):
         """Enhance print output"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

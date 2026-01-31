@@ -46,7 +46,7 @@ flowchart TD
     I --> J(Report Quality Performance)
     E -- No --> J
     J --> K(End/Continuous Cycle)
-```
+```text
 
 1. Step 1: Plan Quality Control Activities
    - Action: Schedule audits, define sampling plans, prepare checklists based on standards.

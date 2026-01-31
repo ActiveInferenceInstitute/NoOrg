@@ -4,12 +4,12 @@
 This document outlines the organization's integrated security strategy, providing a comprehensive approach to security across physical, digital, and cognitive domains. The strategy aligns with the organization's objectives while establishing a cohesive security posture that addresses the full spectrum of security challenges.
 
 ## Strategic Framework Reference
-This strategy implements the principles and methodologies defined in the [Security Framework](/frameworks/Security/security_framework.md), which serves as the master framework for all security domains. The domain-specific frameworks further detail implementation approaches for each security area:
+This strategy implements the principles and methodologies defined in the [Security Framework](../../../docs/frameworks/Security/security_framework.md), which serves as the master framework for all security domains. The domain-specific frameworks further detail implementation approaches for each security area:
 
-- [Physical Security Framework](/frameworks/Security/physical_security_framework.md)
-- [Digital Security Framework](/frameworks/Security/digital_security_framework.md)
-- [Cognitive Security Framework](/frameworks/Security/cognitive_security_framework.md)
-- [Security Framework Integration](/frameworks/Security/security_framework_integration.md)
+- [Physical Security Framework](../../../docs/frameworks/Security/physical_security_framework.md)
+- [Digital Security Framework](../../../docs/frameworks/Security/digital_security_framework.md)
+- [Cognitive Security Framework](../../../docs/frameworks/Security/cognitive_security_framework.md)
+- [Security Framework Integration](../../../docs/frameworks/Security/security_framework_integration.md)
 
 ## Vision and Mission
 

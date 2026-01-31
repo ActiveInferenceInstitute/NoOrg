@@ -4,7 +4,7 @@ Generated: 2026-01-02T15:05:04.326093
 Root: /Users/4d/Documents/GitHub/NoOrg/tests
 
 ## Directory Tree
-```
+```text
 /Users/4d/Documents/GitHub/NoOrg/tests
 └── tests/
     ├── config/
@@ -219,4 +219,4 @@ Root: /Users/4d/Documents/GitHub/NoOrg/tests
     ├── test_repo_structure.py (7799 bytes)
     ├── test_workflow.py (6835 bytes)
     └── utils.py (12093 bytes)
-```
+```text

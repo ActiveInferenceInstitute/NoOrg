@@ -26,7 +26,7 @@ related_documents:
   - [[processes/resource_management]]
   - [[processes/monitoring_processes]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the capacity planning framework for the agent system, providing comprehensive planning, analysis, and management capabilities for system capacity across all components.
@@ -43,7 +43,7 @@ class CapacityManager:
         self.predictor = CapacityPredictor()
         self.optimizer = CapacityOptimizer()
         self.monitor = CapacityMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Analysis Engine]
     C --> F[Planning Engine]
     D --> G[Prediction Engine]
-```
+```text
 
 ### 2. Capacity Analysis
 #### 2.1 Analysis System
@@ -71,7 +71,7 @@ class CapacityAnalyzer:
         correlation = await self.correlator.correlate_metrics(profile)
         assessment = await self.assessor.assess_impact(correlation)
         return await self.engine.analyze_results(assessment)
-```
+```text
 
 #### 2.2 Analysis Types
 - Usage Analysis
@@ -94,7 +94,7 @@ class CapacityPlanner:
         optimization = await self.optimizer.optimize_resources(model)
         plan = await self.engine.create_plan(optimization)
         return await self.validator.validate_plan(plan)
-```
+```text
 
 #### 3.2 Planning Types
 - Resource Planning
@@ -117,7 +117,7 @@ class CapacityPredictor:
         trends = await self.analyzer.analyze_trends(model)
         prediction = await self.engine.predict_growth(trends)
         return await self.validator.validate_prediction(prediction)
-```
+```text
 
 #### 4.2 Prediction Types
 - Growth Prediction
@@ -140,7 +140,7 @@ class CapacityOptimizer:
         execution = await self.executor.execute_plan(optimization)
         validation = await self.validator.validate_optimization(execution)
         return await self.engine.apply_optimization(validation)
-```
+```text
 
 #### 5.2 Optimization Types
 - Resource Optimization
@@ -163,7 +163,7 @@ class CapacityMonitor:
         analysis = await self.analyzer.analyze_usage(collection)
         alerts = await self.alerter.process_alerts(analysis)
         return await self.reporter.generate_report(analysis)
-```
+```text
 
 #### 6.2 Monitoring Types
 - Usage Monitoring
@@ -188,7 +188,7 @@ class PlanningImplementation:
     async def setup_monitoring(self, monitoring):
         # Monitoring setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Planning Architecture
@@ -205,7 +205,7 @@ class ResourceManagement:
         self.scheduler = ResourceScheduler()
         self.controller = ResourceController()
         self.monitor = ResourceMonitor()
-```
+```text
 
 #### 2.2 Management Types
 - Allocation Management
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_effectiveness(self, metrics):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class PlanningCompliance:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Planning Standards
@@ -318,7 +318,7 @@ class PlanningPattern:
         self.analyzer = CapacityAnalyzer()
         self.planner = CapacityPlanner()
         self.predictor = CapacityPredictor()
-```
+```text
 
 ### B. Optimization Patterns
 ```python
@@ -328,7 +328,7 @@ class OptimizationPattern:
         self.engine = OptimizationEngine()
         self.planner = OptimizationPlanner()
         self.executor = OptimizationExecutor()
-```
+```text
 
 ### C. Monitoring Patterns
 ```python
@@ -338,4 +338,4 @@ class MonitoringPattern:
         self.collector = MetricCollector()
         self.analyzer = UsageAnalyzer()
         self.reporter = ReportGenerator()
-``` 
+```text 

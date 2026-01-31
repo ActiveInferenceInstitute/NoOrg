@@ -43,7 +43,7 @@ graph TD
     A --> C[Dependencies]
     A --> D[Related Content]
     A --> E[Parent/Child]
-```
+```text
 
 ### Concept Relationships
 - Is-A relationships
@@ -83,7 +83,7 @@ node:
       properties:
         strength: float
         context: string
-```
+```text
 
 ### Query Capabilities
 1. **Path Finding**

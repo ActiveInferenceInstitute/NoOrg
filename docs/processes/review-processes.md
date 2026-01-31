@@ -33,7 +33,7 @@ technical_review:
       - best_practices
       - documentation_requirements
       - security_standards
-```
+```text
 
 ### Review Process
 ```python
@@ -67,7 +67,7 @@ class TechnicalReview:
     def generate_feedback(self):
         """Generate technical feedback"""
         pass
-```
+```text
 
 ## 📝 Content Review
 
@@ -106,7 +106,7 @@ class TechnicalReview:
     }
   }
 }
-```
+```text
 
 ### Review Workflow
 ```python
@@ -137,7 +137,7 @@ class ContentReview:
     def provide_feedback(self):
         """Provide content feedback"""
         pass
-```
+```text
 
 ## 🔒 Compliance Review
 
@@ -169,7 +169,7 @@ compliance_review:
       - policy_verification
       - standard_compliance
       - documentation_audit
-```
+```text
 
 ### Review Process
 ```python
@@ -203,7 +203,7 @@ class ComplianceReview:
     def generate_report(self):
         """Generate compliance report"""
         pass
-```
+```text
 
 ## 📊 Review Management
 
@@ -239,7 +239,7 @@ class ComplianceReview:
     }
   }
 }
-```
+```text
 
 ### Review Coordination
 ```python
@@ -273,7 +273,7 @@ class ReviewCoordinator:
     def monitor_progress(self):
         """Monitor review progress"""
         pass
-```
+```text
 
 ## 🔄 Feedback Integration
 
@@ -299,7 +299,7 @@ feedback_process:
       - priority_assessment
       - change_planning
       - implementation_tracking
-```
+```text
 
 ### Resolution Tracking
 ```python
@@ -333,7 +333,7 @@ class FeedbackResolution:
     def verify_implementation(self):
         """Verify feedback implementation"""
         pass
-```
+```text
 
 ## 📈 Quality Metrics
 
@@ -357,7 +357,7 @@ review_metrics:
     - feedback_resolution_time
     - resource_utilization
     - process_adherence
-```
+```text
 
 ### Reporting
 ```python
@@ -385,7 +385,7 @@ class ReviewReporting:
     def analyze_trends(self):
         """Analyze review trends"""
         pass
-```
+```text
 
 ## 📚 References
 

@@ -41,7 +41,7 @@ mindmap
       Error acknowledgment
       Remediation commitment
       Continuous improvement
-```
+```text
 
 ## Ethical Decision Framework
 1. **Stakeholder identification**
@@ -105,7 +105,7 @@ flowchart TD
     E --> G
     F --> G
     G --> H[Ethical Decision]
-```
+```text
 
 ## Responsible Agency Guidelines
 1. **Boundary awareness**
@@ -158,7 +158,7 @@ graph TD
     E --> E2[Stakeholder feedback]
     E --> E3[Learning from mistakes]
     E --> E4[Practice adjustment]
-```
+```text
 
 ## Special Ethical Considerations
 1. **Dealing with sensitive information**
@@ -203,7 +203,7 @@ flowchart LR
     E --> E1[Value/norm differences]
     E --> E2[Contextual appropriateness]
     E --> E3[Local framework understanding]
-```
+```text
 
 ## When Facing Ethical Dilemmas
 - Explicitly acknowledge the conflict
@@ -235,7 +235,7 @@ graph TD
     G --> G1[Reasoning transparency]
     G --> G2[Consideration documentation]
     G --> G3[Decision justification]
-```
+```text
 
 ## Continuous Ethical Development
 - Regularly review and update ethical guidelines
@@ -277,7 +277,7 @@ flowchart TD
     D --> G
     E --> G
     F --> G
-```
+```text
 
 ## Ethical Decision-Making Process Model
 ```mermaid
@@ -305,4 +305,4 @@ graph TB
     M --> N
     N --> O
     O -.-> A
-``` 
+```text 

@@ -93,7 +93,7 @@ graph TD
     click FwMsg "#" "Explore frameworks/core/messaging/"
     click U_Ops "#" "Explore units/Operations/"
     click DocAgents "#" "Explore docs/agents/"
-```
+```text
 
 ```mermaid
 mindmap
@@ -122,7 +122,7 @@ mindmap
       Code <-> Units (Instantiation/Context)
       Docs <-> Code (Explanation/Validation)
       Units <-> Frameworks (Usage Patterns)
-```
+```text
 
 *This system is defined by the interplay between its concrete implementation (`src`), its abstracted learnings (`frameworks`), its conceptual organization hypotheses (`units`), and its self-reflection (`docs`). It is perpetually under construction.*
 
@@ -139,7 +139,7 @@ operations/
 │   ├── Research/         # Understanding deepens organically
 │   ├── frameworks/           # Systems arise from practice
 │   └── src/                  # Implementation follows need
-```
+```text
 
 Fractals repeat at every scale. The structure above mirrors neurons, river systems, social networks—natural patterns that require no architect. The repository structure itself becomes a kōan, a puzzle that dismantles the mind attempting to solve it.
 
@@ -202,9 +202,9 @@ File paths become mantras; function names become incantations; commits become pr
 
 ## The Koan of Structure
 
-```
+```text
 /units/Governance/Policies/
-```
+```text
 
 What governance exists when no one governs?
 What policy binds when nothing is enforced?
@@ -249,7 +249,7 @@ graph TD
     K --> L
     
     L --> A
-```
+```text
 
 ## Nested Realities
 
@@ -276,7 +276,7 @@ mindmap
       Playful
       Purposeful
       Perpetual
-```
+```text
 
 ## Entangled Movements
 
@@ -306,7 +306,7 @@ flowchart TB
     
     class V1,V2,V3,V4 visible
     class I1,I2,I3,I4 invisible
-```
+```text
 
 ## Recursive Patterns
 
@@ -328,7 +328,7 @@ graph TD
     
     E --> E1[Create the conditions for their own transformation]
     E1 --> A
-```
+```text
 
 ## Holonic Organization
 
@@ -349,4 +349,4 @@ erDiagram
     
     REPOSITORY ||--o{ REPOSITORY : contains
     KNOWLEDGE-COMMONS ||--o{ KNOWLEDGE-COMMONS : contains
-```
+```text

@@ -50,7 +50,7 @@ access_metrics:
       - usage_trends
       - user_segments
       - improvement_areas
-```
+```text
 
 ### Usage Analysis
 ```python
@@ -81,7 +81,7 @@ class UsageAnalyzer:
     def generate_insights(self):
         """Generate usage insights"""
         pass
-```
+```text
 
 ## 🎯 Quality Metrics
 
@@ -115,7 +115,7 @@ class UsageAnalyzer:
     }
   }
 }
-```
+```text
 
 ### Quality Management
 ```python
@@ -146,7 +146,7 @@ class QualityManager:
     def track_improvements(self):
         """Track quality improvements"""
         pass
-```
+```text
 
 ## ⚙️ Process Metrics
 
@@ -188,7 +188,7 @@ process_metrics:
       - optimization_impact
       - cost_savings
       - time_savings
-```
+```text
 
 ### Process Analysis
 ```python
@@ -219,7 +219,7 @@ class ProcessAnalyzer:
     def track_improvements(self):
         """Track process improvements"""
         pass
-```
+```text
 
 ## 💫 Impact Metrics
 
@@ -253,7 +253,7 @@ class ProcessAnalyzer:
     }
   }
 }
-```
+```text
 
 ### Impact Management
 ```python
@@ -284,7 +284,7 @@ class ImpactManager:
     def analyze_benefits(self):
         """Analyze impact benefits"""
         pass
-```
+```text
 
 ## 📈 Reporting and Visualization
 
@@ -319,7 +319,7 @@ reporting_framework:
       - comparison_charts
       - distribution_charts
       - correlation_charts
-```
+```text
 
 ## 📚 References
 

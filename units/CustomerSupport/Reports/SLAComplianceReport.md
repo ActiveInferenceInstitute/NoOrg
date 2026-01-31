@@ -18,7 +18,7 @@ gauge
     axisWidth 50
     axisLabel Threshold
     threshold 95
-```
+```text
 
 ## Key Performance Metrics
 
@@ -110,7 +110,7 @@ graph LR
         H18 --- H19[7pm: 5%]
         H19 --- H20[8pm: 3%]
     end
-```
+```text
 
 ### Day of Week Analysis
 
@@ -195,7 +195,7 @@ graph LR
         W10 --> W11[W11: 94.4%]
         W11 --> W12[W12: 94.7%]
     end
-```
+```text
 
 ## Next Steps and Recommendations
 

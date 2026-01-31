@@ -26,7 +26,7 @@ related_documents:
   - [[processes/data_management]]
   - [[frameworks/security_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the security framework for data integration within the agent system, providing comprehensive data protection, privacy controls, and compliance requirements for data handling across all stages of the data lifecycle.
@@ -43,7 +43,7 @@ class DataSecurityManager:
         self.privacy = PrivacyControls()
         self.audit = AuditSystem()
         self.monitor = SecurityMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Authorization]
     C --> F[Encryption]
     D --> G[Anonymization]
-```
+```text
 
 ### 2. Data Protection
 #### 2.1 Protection System
@@ -72,7 +72,7 @@ class DataProtection:
         masked = await self.masking.mask_sensitive_data(encrypted)
         tokenized = await self.tokenization.tokenize_data(masked)
         return tokenized
-```
+```text
 
 #### 2.2 Protection Methods
 - Data Encryption
@@ -95,7 +95,7 @@ class DataAccess:
         authz = await self.authorizer.authorize(auth)
         enforcement = await self.enforcer.enforce_policy(authz)
         await self.monitor.log_access(enforcement)
-```
+```text
 
 #### 3.2 Access Models
 - Role-based Access
@@ -118,7 +118,7 @@ class PrivacyControl:
         consent = await self.consent.verify_consent(classification)
         anonymized = await self.anonymizer.anonymize_data(data, consent)
         await self.lifecycle.manage_lifecycle(anonymized)
-```
+```text
 
 #### 4.2 Privacy Methods
 - Data Anonymization
@@ -141,7 +141,7 @@ class DataAudit:
         analysis = await self.analyzer.analyze_log(log)
         report = await self.reporter.generate_report(analysis)
         await self.alerter.process_alerts(analysis)
-```
+```text
 
 #### 5.2 Audit Areas
 - Data Access
@@ -166,7 +166,7 @@ class SecurityImplementation:
     async def setup_monitoring(self, monitoring):
         # Monitoring setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Security Architecture
@@ -183,7 +183,7 @@ class SecurityControls:
         self.access = AccessControls()
         self.privacy = PrivacyControls()
         self.audit = AuditControls()
-```
+```text
 
 #### 2.2 Control Types
 - Preventive Controls
@@ -214,7 +214,7 @@ class SecurityQuality:
     async def measure_effectiveness(self, metrics):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -246,7 +246,7 @@ class DataProtectionCompliance:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Protection Areas
 - Data Privacy
@@ -296,7 +296,7 @@ class SecurityPattern:
         self.controls = SecurityControls()
         self.validator = SecurityValidator()
         self.monitor = SecurityMonitor()
-```
+```text
 
 ### B. Privacy Patterns
 ```python
@@ -306,7 +306,7 @@ class PrivacyPattern:
         self.anonymizer = DataAnonymizer()
         self.classifier = DataClassifier()
         self.consent = ConsentManager()
-```
+```text
 
 ### C. Compliance Patterns
 ```python
@@ -316,4 +316,4 @@ class CompliancePattern:
         self.validator = ComplianceValidator()
         self.monitor = ComplianceMonitor()
         self.reporter = ComplianceReporter()
-``` 
+```text 

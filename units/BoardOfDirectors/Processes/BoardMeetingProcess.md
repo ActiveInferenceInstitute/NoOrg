@@ -22,7 +22,7 @@ flowchart TD
     F --> G[Action Item Follow-up]
     G --> H[Meeting Evaluation]
     H --> A
-```
+```text
 
 ## 📅 Pre-Meeting Phase
 ### Meeting Planning

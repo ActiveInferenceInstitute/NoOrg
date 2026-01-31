@@ -19,7 +19,7 @@ graph TD
     B --> C[Pattern Analysis]
     C --> D[Issue Detection]
     D --> E[Alert Generation]
-```
+```text
 
 ### Monitoring Tools
 1. **System Monitoring**

@@ -23,7 +23,7 @@ capabilities:
   - coalition_formation
   - performance_optimization
   - system_monitoring
-```
+```text
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ system_requirements:
       - cryptography: "latest"
     message_broker: "RabbitMQ >=3.8"
     service_registry: "Consul >=1.9"
-```
+```text
 
 ### Knowledge Prerequisites
 - Distributed Systems Architecture
@@ -93,7 +93,7 @@ classDiagram
     CoordinatorAgent --> CoordinationPlanner
     CoordinatorAgent --> MessageHandler
     CoordinatorAgent --> MonitoringSystem
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -110,7 +110,7 @@ integration:
     - message_broker
     - service_registry
     - monitoring_system
-```
+```text
 
 ## Implementation Steps
 
@@ -148,7 +148,7 @@ class CoordinatorAgent:
         await self._initialize_components()
         await self._setup_monitoring()
         self.logger.info("Coordinator Agent started successfully")
-```
+```text
 
 ### 2. State Management Implementation
 ```python
@@ -172,7 +172,7 @@ class StateManager:
     async def _validate_state(self, state: AgentState):
         # Implement state validation logic
         pass
-```
+```text
 
 ### 3. Coordination Planning
 ```python
@@ -199,7 +199,7 @@ class CoordinationPlanner:
         )
         
         return plan
-```
+```text
 
 ### 4. Message Handling
 ```python
@@ -226,7 +226,7 @@ class MessageHandler:
     async def send_directive(self, directive: Dict):
         # Implement directive sending logic
         pass
-```
+```text
 
 ### 5. Monitoring Setup
 ```python
@@ -257,7 +257,7 @@ class MonitoringSystem:
     async def collect_metrics(self):
         # Implement metrics collection logic
         pass
-```
+```text
 
 ## Testing & Validation
 
@@ -289,7 +289,7 @@ class TestCoordinatorAgent:
         )
         await coordinator.state_manager.track_agent_state("test_agent", state)
         assert "test_agent" in coordinator.state_manager.agent_states
-```
+```text
 
 ### Integration Tests
 ```python
@@ -306,7 +306,7 @@ class TestCoordinatorIntegration:
         
         await coordinator.message_handler.process_message(test_message)
         # Verify state updates and directive generation
-```
+```text
 
 ## Performance Optimization
 
@@ -322,7 +322,7 @@ optimization:
   monitoring:
     metric_collection_interval: "1s"
     retention_period: "24h"
-```
+```text
 
 ### Resource Management
 ```python
@@ -334,7 +334,7 @@ class ResourceManager:
     async def optimize_allocation(self):
         # Implement resource optimization logic
         pass
-```
+```text
 
 ## Security Implementation
 
@@ -355,7 +355,7 @@ class SecurityManager:
     def encrypt_message(self, message: Dict) -> bytes:
         # Implement message encryption
         pass
-```
+```text
 
 ### Authorization
 ```python
@@ -366,7 +366,7 @@ class AuthorizationManager:
     async def check_permission(self, agent_id: str, action: str) -> bool:
         # Implement permission checking
         pass
-```
+```text
 
 ## Deployment
 
@@ -383,7 +383,7 @@ deployment:
       - LOG_LEVEL=INFO
     volumes:
       - ./config:/app/config
-```
+```text
 
 ### Health Checks
 ```python
@@ -395,7 +395,7 @@ class HealthCheck:
             "state_manager": await self._check_state_manager()
         }
         return checks
-```
+```text
 
 ## Troubleshooting
 
@@ -411,7 +411,7 @@ troubleshooting:
     - symptom: "High message latency"
       check: "Monitor message queue size and processing time"
       solution: "Adjust batch size and processing intervals"
-```
+```text
 
 ### Logging Strategy
 ```python
@@ -425,7 +425,7 @@ class LogManager:
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
         # Setup handlers and formatters
-```
+```text
 
 ## Maintenance
 

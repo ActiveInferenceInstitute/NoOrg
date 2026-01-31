@@ -80,7 +80,7 @@ const calmAgent = new CalmTechnologyAgent({
     healthCheckInterval: 30000
   }
 });
-```
+```text
 
 ### Event-Driven Communication
 ```typescript
@@ -98,7 +98,7 @@ calmAgent.eventSystem?.on('ambient:notification:request', async (event) => {
     event.context
   );
 });
-```
+```text
 
 ### Multi-Agent Coordination
 ```typescript
@@ -122,7 +122,7 @@ await coordinator.executeWorkflow({
     }
   ]
 });
-```
+```text
 
 ## Configuration Options
 
@@ -134,7 +134,7 @@ interface AttentionThresholds {
   distracted: { minLoad: number; maxTransitions: number };
   unavailable: { minLoad: number; maxTransitions: number };
 }
-```
+```text
 
 ### Ambient Channels
 ```typescript
@@ -144,7 +144,7 @@ interface AmbientChannels {
   tactile: boolean;       // Vibration and haptic feedback
   spatial: boolean;       // Physical positioning and movement
 }
-```
+```text
 
 ### Resilience Configuration
 ```typescript
@@ -153,7 +153,7 @@ interface ResilienceConfig {
   fallbackModes: string[];         // Available fallback strategies
   healthCheckInterval: number;     // System health monitoring frequency (ms)
 }
-```
+```text
 
 ### Monitoring Configuration
 ```typescript
@@ -163,7 +163,7 @@ interface MonitoringConfig {
   userSatisfactionMetrics: boolean; // Collect user experience data
   systemPerformanceMetrics: boolean; // Track system performance
 }
-```
+```text
 
 ## Usage Examples
 
@@ -186,7 +186,7 @@ const assessment = await calmAgent.executeTask({
 console.log(`Current state: ${assessment.currentState}`);
 console.log(`Cognitive load: ${(assessment.cognitiveLoad * 100).toFixed(1)}%`);
 console.log(`Recommendations: ${assessment.recommendations.join(', ')}`);
-```
+```text
 
 ### Ambient Notification
 ```typescript
@@ -204,7 +204,7 @@ const notificationId = await calmAgent.executeTask({
     }
   }
 });
-```
+```text
 
 ### Interface Adaptation
 ```typescript
@@ -221,7 +221,7 @@ await calmAgent.executeTask({
     adaptationStrategy: 'notification_adaptation'
   }
 });
-```
+```text
 
 ### System Failure Handling
 ```typescript
@@ -233,7 +233,7 @@ await calmAgent.executeTask({
     severity: 'major'
   }
 });
-```
+```text
 
 ## Performance Characteristics
 
@@ -271,7 +271,7 @@ const result = await coordinator.executeWorkflow({
     { agent: 'planning', action: 'generate_recommendations' }
   ]
 });
-```
+```text
 
 ### With Core Systems
 - **Event System**: Publishes attention changes, ambient notifications, system health
@@ -337,7 +337,7 @@ const workAgent = new CalmTechnologyAgent({
     spatial: true    // Physical positioning for awareness
   }
 });
-```
+```text
 
 ### Healthcare Environment Setup
 ```typescript
@@ -355,7 +355,7 @@ const healthcareAgent = new CalmTechnologyAgent({
     spatial: false   // Minimal spatial positioning in clinical settings
   }
 });
-```
+```text
 
 ## Testing & Validation
 
@@ -389,7 +389,7 @@ const notificationId = await agent.sendAmbientNotification(
 
 const activeNotifications = agent.getActiveNotifications();
 assert(activeNotifications.has(notificationId));
-```
+```text
 
 ### Performance Benchmarks
 - **Attention Assessment**: < 50ms average response time
@@ -425,10 +425,10 @@ assert(activeNotifications.has(notificationId));
 
 ## Related Documentation
 
-- [AbstractAgent Base Class](./AbstractAgent.ts)
+- [AbstractAgent Base Class](../AbstractAgent.ts)
 - [Multi-Agent Coordination](../../../src/core/multiagent/README.md)
 - [Event System](../../../src/core/events/README.md)
-- [State Management](../../../src/core/state/README.md)
+- [State Management](../../../README.md)
 - [Calm Technology Example](../../../examples/calm_tech/README.md)
 - [Agent Testing](../../../tests/unit/agents/README.md)
 

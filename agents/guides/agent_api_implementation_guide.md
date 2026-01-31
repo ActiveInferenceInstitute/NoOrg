@@ -292,7 +292,7 @@ class BaseAPIEngine implements APIEngine {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ### Request Manager Implementation
 ```typescript
@@ -483,7 +483,7 @@ class BaseRequestManager implements RequestManager {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ## 🔗 Related Resources
 

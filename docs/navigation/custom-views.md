@@ -55,7 +55,7 @@ project_dashboards:
           filters: "dynamic"
           drill_down: "contextual"
           updates: "real_time"
-```
+```text
 
 ### Dashboard Management
 ```python
@@ -86,7 +86,7 @@ class DashboardManager:
     def enhance_intelligence(self):
         """Enhance dashboard intelligence"""
         pass
-```
+```text
 
 ## 👥 Team Views
 
@@ -123,7 +123,7 @@ class DashboardManager:
     }
   }
 }
-```
+```text
 
 ### View Management
 ```python
@@ -154,7 +154,7 @@ class TeamViewManager:
     def enhance_collaboration(self):
         """Enhance team collaboration"""
         pass
-```
+```text
 
 ## 📋 Status Boards
 
@@ -201,7 +201,7 @@ status_boards:
           frequency: "real_time"
           notification: "smart_alert"
           interaction: "responsive"
-```
+```text
 
 ### Board Management
 ```python
@@ -232,7 +232,7 @@ class BoardManager:
     def enhance_monitoring(self):
         """Enhance status monitoring"""
         pass
-```
+```text
 
 ## ⏱️ Timeline Views
 
@@ -279,7 +279,7 @@ timeline_views:
           view_options: "configurable"
           preferences: "persistent"
           updates: "dynamic"
-```
+```text
 
 ### Timeline Management
 ```python
@@ -310,7 +310,7 @@ class TimelineManager:
     def enhance_visualization(self):
         """Enhance timeline visualization"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

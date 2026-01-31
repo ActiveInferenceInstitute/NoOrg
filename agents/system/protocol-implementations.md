@@ -41,7 +41,7 @@ graph TD
         MON --> MQ
         LEARN --> MQ
     end
-```
+```text
 
 ## Core Protocols
 
@@ -99,7 +99,7 @@ class TaskProtocol:
         except Exception as e:
             await self._handle_status_error(task_id, status, e)
             raise
-```
+```text
 
 ### Coordination Protocol
 ```python
@@ -156,7 +156,7 @@ class CoordinationProtocol:
         except Exception as e:
             await self._handle_status_error(agent_id, status, e)
             raise
-```
+```text
 
 ### Resource Protocol
 ```python
@@ -213,7 +213,7 @@ class ResourceProtocol:
         except Exception as e:
             await self._handle_status_error(resource_id, status, e)
             raise
-```
+```text
 
 ### Monitoring Protocol
 ```python
@@ -270,7 +270,7 @@ class MonitoringProtocol:
         except Exception as e:
             await self._handle_alert_error(alert, e)
             raise
-```
+```text
 
 ### Learning Protocol
 ```python
@@ -330,7 +330,7 @@ class LearningProtocol:
         except Exception as e:
             await self._handle_metric_error(metrics, e)
             raise
-```
+```text
 
 ## Transport Layer
 
@@ -392,7 +392,7 @@ class MessageBroker:
         except Exception as e:
             await self._handle_publish_error(topic, message, e)
             raise
-```
+```text
 
 ### Message Serialization
 ```python
@@ -437,7 +437,7 @@ class MessageSerializer:
         except Exception as e:
             await self._handle_deserialization_error(data, e)
             raise
-```
+```text
 
 ## Protocol Security
 
@@ -470,7 +470,7 @@ class ProtocolAuthentication:
         except Exception as e:
             await self._handle_auth_error(credentials, e)
             raise
-```
+```text
 
 ### Encryption
 ```python
@@ -510,7 +510,7 @@ class ProtocolEncryption:
         except Exception as e:
             await self._handle_decryption_error(e)
             raise
-```
+```text
 
 ## Error Handling
 
@@ -534,7 +534,7 @@ class AuthenticationError(ProtocolError):
 class TransportError(ProtocolError):
     """Protocol transport error"""
     pass
-```
+```text
 
 ### Error Handling
 ```python
@@ -567,7 +567,7 @@ class ErrorHandler:
                 "Error handling failed",
                 extra={"original_error": str(error)}
             )
-```
+```text
 
 ## Documentation
 

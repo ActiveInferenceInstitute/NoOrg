@@ -53,7 +53,7 @@ responsive_design:
           device_context: "real_time"
           user_preferences: "learned"
           usage_patterns: "analyzed"
-```
+```text
 
 ### Design Management
 ```python
@@ -84,7 +84,7 @@ class ResponsiveManager:
     def enhance_adaptation(self):
         """Enhance design adaptation"""
         pass
-```
+```text
 
 ## 👆 Touch Optimization
 
@@ -124,7 +124,7 @@ class ResponsiveManager:
     }
   }
 }
-```
+```text
 
 ### Touch Management
 ```python
@@ -155,7 +155,7 @@ class TouchManager:
     def enhance_interaction(self):
         """Enhance touch interaction"""
         pass
-```
+```text
 
 ## 📵 Offline Access
 
@@ -197,7 +197,7 @@ offline_access:
           strategy: "intelligent"
           prioritization: "dynamic"
           cleanup: "automated"
-```
+```text
 
 ### Offline Management
 ```python
@@ -228,7 +228,7 @@ class OfflineManager:
     def enhance_availability(self):
         """Enhance offline availability"""
         pass
-```
+```text
 
 ## 🔄 Sync Management
 
@@ -270,7 +270,7 @@ sync_management:
           analysis: "comprehensive"
           strategy: "intelligent"
           learning: "continuous"
-```
+```text
 
 ### Sync Management
 ```python
@@ -301,7 +301,7 @@ class SyncManager:
     def enhance_efficiency(self):
         """Enhance sync efficiency"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

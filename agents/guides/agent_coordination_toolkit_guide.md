@@ -191,7 +191,7 @@ class BaseTaskOrchestrator implements TaskOrchestrator {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ### Resource Allocator Implementation
 ```typescript
@@ -361,7 +361,7 @@ class BaseResourceAllocator implements ResourceAllocator {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ### State Synchronizer Implementation
 ```typescript
@@ -525,7 +525,7 @@ class BaseStateSynchronizer implements StateSynchronizer {
 
   // Additional protected methods for internal functionality...
 }
-```
+```text
 
 ### Monitoring System Implementation
 ```typescript
@@ -747,7 +747,7 @@ class BaseSystemMonitor implements SystemMonitor {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ## 🔗 Related Resources
 

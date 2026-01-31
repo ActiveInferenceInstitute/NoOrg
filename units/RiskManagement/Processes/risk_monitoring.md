@@ -40,7 +40,7 @@ graph TD
         J3(Escalation Reports)
         J --> J1; J --> J2; J --> J3;
     end
-```
+```text
 
 ### 3.1. Monitor Risks and Controls
 - **Activity:** Continuously or periodically track identified risks and the performance of associated controls and treatment plans. Activities include:

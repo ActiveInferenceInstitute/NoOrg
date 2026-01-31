@@ -59,7 +59,7 @@ graph TD
         I --> Delivery[[training_delivery_management]];
         I --> Evaluation[[training_evaluation_reporting]];
     end
-```
+```text
 
 ## Roles & Responsibilities
 *   **Instructional Designer:** Leads the design and development process, creates design documents, develops materials, conducts reviews.

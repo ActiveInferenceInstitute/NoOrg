@@ -4,7 +4,7 @@ Generated: 2026-01-02T15:05:04.315003
 Root: /Users/4d/Documents/GitHub/NoOrg/docs
 
 ## Directory Tree
-```
+```text
 /Users/4d/Documents/GitHub/NoOrg/docs
 └── docs/
     ├── agents/
@@ -606,4 +606,4 @@ Root: /Users/4d/Documents/GitHub/NoOrg/docs
     ├── master-index.md (8119 bytes)
     ├── multi_agent_workflow.md (8492 bytes)
     └── openai-client.md (6429 bytes)
-```
+```text

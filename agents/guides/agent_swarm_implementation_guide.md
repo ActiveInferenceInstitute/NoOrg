@@ -270,7 +270,7 @@ class BaseSwarmController implements SwarmController {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ### Coordination Engine Implementation
 ```typescript
@@ -458,7 +458,7 @@ class BaseCoordinationEngine implements CoordinationEngine {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ## 🔗 Related Resources
 

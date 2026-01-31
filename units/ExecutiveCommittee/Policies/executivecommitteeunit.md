@@ -36,7 +36,7 @@ graph TD
     style Chair fill:#add,stroke:#333,stroke-width:2px
     style Members fill:#dde,stroke:#333,stroke-width:1px
     style Support fill:#eee,stroke:#666,stroke-width:1px
-```
+```text
 
 - **Chair:** [[Chief_Executive_Officer]]
 - **Core Members:** Typically includes [[Chief_Financial_Officer]], [[Chief_Operating_Officer]], [[Chief_Technology_Officer]], and potentially other C-suite executives (e.g., Chief Risk Officer, Chief Marketing Officer, Chief Human Resources Officer) depending on organizational structure.
@@ -73,7 +73,7 @@ sequenceDiagram
     EC->>Units: Communicate Decision & Delegate Actions
     EC->>EC: Log Decision & Track Implementation
     Units-->>EC: Report on Implementation Progress
-```
+```text
 
 1.  [[strategic_planning_execution_cycle]]: Translating Board strategy into operational plans.
 2.  [[performance_review_management_cycle]]: Monthly/Quarterly review of KPIs and operational results.
@@ -106,7 +106,7 @@ graph TD
     style Board fill:#ccf,stroke:#333,stroke-width:1px
     style Audit fill:#fec,stroke:#333,stroke-width:1px
     style Advisory fill:#fec,stroke:#333,stroke-width:1px
-```
+```text
 
 ### Internal Primary
 -   [[BoardOfDirectors]]: Receives strategic direction, provides reports, seeks key approvals.

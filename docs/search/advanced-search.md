@@ -55,7 +55,7 @@ full_text_search:
           method: "adaptive"
           resources: "optimized"
           distribution: "efficient"
-```
+```text
 
 ### Search Management
 ```python
@@ -86,7 +86,7 @@ class FullTextSearchManager:
     def enhance_intelligence(self):
         """Enhance search intelligence"""
         pass
-```
+```text
 
 ## 🏷️ Tag-Based Search
 
@@ -122,7 +122,7 @@ class FullTextSearchManager:
     }
   }
 }
-```
+```text
 
 ### Tag Management
 ```python
@@ -153,7 +153,7 @@ class TagSearchManager:
     def enhance_suggestions(self):
         """Enhance tag suggestions"""
         pass
-```
+```text
 
 ## 📊 Metadata Search
 
@@ -195,7 +195,7 @@ metadata_search:
           ranking: "intelligent"
           filtering: "context_aware"
           presentation: "adaptive"
-```
+```text
 
 ### Metadata Management
 ```python
@@ -226,7 +226,7 @@ class MetadataSearchManager:
     def enhance_analysis(self):
         """Enhance metadata analysis"""
         pass
-```
+```text
 
 ## 🔄 Combined Queries
 
@@ -268,7 +268,7 @@ combined_queries:
           processing: "optimized"
           delivery: "streamlined"
           caching: "adaptive"
-```
+```text
 
 ### Query Management
 ```python
@@ -299,7 +299,7 @@ class CombinedQueryManager:
     def enhance_processing(self):
         """Enhance query processing"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

@@ -26,7 +26,7 @@ related_documents:
   - [[agents/modules/core/behavior]]
   - [[agents/modules/core/communication]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the system module for agents, providing comprehensive system management, monitoring, and control capabilities that build upon the core agent modules.
@@ -43,7 +43,7 @@ class SystemManager:
         self.resources = ResourceManager()
         self.health = HealthManager()
         self.config = ConfigManager()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Metrics Collection]
     C --> F[Control Actions]
     D --> G[Resource Pool]
-```
+```text
 
 ### 2. System Operations
 #### 2.1 Base Operations
@@ -77,7 +77,7 @@ class SystemOperations:
     async def monitor_operation(self, operation):
         # Operation monitoring logic
         pass
-```
+```text
 
 #### 2.2 Operation Types
 - Resource Operations
@@ -94,7 +94,7 @@ class SystemMonitor:
         self.analyzers = DataAnalyzers()
         self.alerts = AlertSystem()
         self.reporters = ReportGenerator()
-```
+```text
 
 #### 3.2 Monitoring Areas
 - Resource Usage
@@ -118,7 +118,7 @@ class ResourceManager:
             allocation = await self.allocate_resources(requirements)
             await self.monitor_usage(allocation)
             return allocation
-```
+```text
 
 #### 4.2 Resource Types
 - Compute Resources
@@ -143,7 +143,7 @@ class SystemImplementation:
     async def configure_controls(self, settings):
         # Control configuration logic
         pass
-```
+```text
 
 #### 1.2 Development Standards
 - Component Structure
@@ -159,7 +159,7 @@ class SystemController:
         self.controls = ControlRegistry()
         self.policies = PolicyEngine()
         self.executor = ControlExecutor()
-```
+```text
 
 #### 2.2 Control Operations
 - State Control
@@ -190,7 +190,7 @@ class QualityMonitor:
     async def generate_reports(self):
         # Report generation logic
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -222,7 +222,7 @@ class SystemSecurity:
     async def audit_action(self, action):
         # Audit logging logic
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Access Control
@@ -272,7 +272,7 @@ class SystemPattern:
         self.monitor = SystemMonitor()
         self.controller = SystemController()
         self.resources = ResourceManager()
-```
+```text
 
 ### B. Control Patterns
 ```python
@@ -282,7 +282,7 @@ class ControlPattern:
         self.executor = ControlExecutor()
         self.validator = ControlValidator()
         self.monitor = ControlMonitor()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -292,4 +292,4 @@ class SystemSecurityPattern:
         self.access = AccessControl()
         self.validator = SecurityValidator()
         self.audit = AuditLogger()
-``` 
+```text 

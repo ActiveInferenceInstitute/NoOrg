@@ -26,7 +26,7 @@ interface CircuitBreakerConfig {
   halfOpenTimeout?: number;
   monitorInterval?: number;
 }
-```
+```text
 
 #### CircuitBreakerState
 
@@ -37,7 +37,7 @@ interface CircuitBreakerState {
   status: 'CLOSED' | 'OPEN' | 'HALF_OPEN';
   lastStatusChange: number;
 }
-```
+```text
 
 ### CircuitBreaker Class
 
@@ -50,7 +50,7 @@ public static getBreaker(
   name: string,
   config?: Partial<CircuitBreakerConfig>
 ): CircuitBreaker
-```
+```text
 
 Gets or creates a circuit breaker instance.
 
@@ -66,7 +66,7 @@ Gets or creates a circuit breaker instance.
 
 ```typescript
 public wrap<T>(fn: WrappedFunction<T>): WrappedFunction<T>
-```
+```text
 
 Wraps a function with circuit breaker logic.
 
@@ -82,7 +82,7 @@ public async execute<T>(
   fn: WrappedFunction<T>,
   ...args: any[]
 ): Promise<T>
-```
+```text
 
 Executes a function with circuit breaker protection.
 
@@ -98,7 +98,7 @@ Executes a function with circuit breaker protection.
 
 ```typescript
 public getState(): CircuitBreakerState
-```
+```text
 
 Gets current circuit breaker state.
 
@@ -108,7 +108,7 @@ Gets current circuit breaker state.
 
 ```typescript
 public reset(): void
-```
+```text
 
 Resets circuit breaker to CLOSED state.
 
@@ -128,7 +128,7 @@ interface RetryConfig {
   backoffFactor?: number;
   retryableErrors?: Array<string | RegExp>;
 }
-```
+```text
 
 #### RetryMetrics
 
@@ -140,7 +140,7 @@ interface RetryMetrics {
   lastAttemptTime: number;
   lastError: Error | null;
 }
-```
+```text
 
 ### Retry Class
 
@@ -153,7 +153,7 @@ public static getRetrier(
   name: string,
   config?: Partial<RetryConfig>
 ): Retry
-```
+```text
 
 Gets or creates a retry instance.
 
@@ -169,7 +169,7 @@ Gets or creates a retry instance.
 
 ```typescript
 public wrap<T>(fn: WrappedFunction<T>): WrappedFunction<T>
-```
+```text
 
 Wraps a function with retry logic.
 
@@ -185,7 +185,7 @@ public async execute<T>(
   fn: WrappedFunction<T>,
   ...args: any[]
 ): Promise<T>
-```
+```text
 
 Executes a function with retry logic.
 
@@ -199,7 +199,7 @@ Executes a function with retry logic.
 
 ```typescript
 public getMetrics(): RetryMetrics
-```
+```text
 
 Gets retry metrics.
 
@@ -218,7 +218,7 @@ interface RateLimiterConfig {
   maxQueueSize?: number;
   queueTimeout?: number;
 }
-```
+```text
 
 #### RateLimiterMetrics
 
@@ -233,7 +233,7 @@ interface RateLimiterMetrics {
   periodStart: number;
   requestsInCurrentPeriod: number;
 }
-```
+```text
 
 ### RateLimiter Class
 
@@ -246,7 +246,7 @@ public static getLimiter(
   name: string,
   config?: Partial<RateLimiterConfig>
 ): RateLimiter
-```
+```text
 
 Gets or creates a rate limiter instance.
 
@@ -262,7 +262,7 @@ Gets or creates a rate limiter instance.
 
 ```typescript
 public wrap<T>(fn: WrappedFunction<T>): WrappedFunction<T>
-```
+```text
 
 Wraps a function with rate limiting.
 
@@ -278,7 +278,7 @@ public async execute<T>(
   fn: WrappedFunction<T>,
   ...args: any[]
 ): Promise<T>
-```
+```text
 
 Executes a function with rate limiting.
 
@@ -294,7 +294,7 @@ Executes a function with rate limiting.
 
 ```typescript
 public getMetrics(): RateLimiterMetrics
-```
+```text
 
 Gets rate limiter metrics.
 
@@ -316,7 +316,7 @@ interface TimeoutConfig {
     maxDelay: number;
   };
 }
-```
+```text
 
 #### TimeoutMetrics
 
@@ -329,7 +329,7 @@ interface TimeoutMetrics {
   failureCount: number;
   averageExecutionTime: number;
 }
-```
+```text
 
 ### Timeout Class
 
@@ -342,7 +342,7 @@ public static getTimeout(
   name: string,
   config: TimeoutConfig
 ): Timeout
-```
+```text
 
 Gets or creates a timeout instance.
 
@@ -358,7 +358,7 @@ Gets or creates a timeout instance.
 
 ```typescript
 public async execute<T>(task: () => Promise<T>): Promise<T>
-```
+```text
 
 Executes a task with timeout protection.
 
@@ -373,7 +373,7 @@ Executes a task with timeout protection.
 
 ```typescript
 public getMetrics(): TimeoutMetrics
-```
+```text
 
 Gets timeout metrics.
 
@@ -391,7 +391,7 @@ interface BulkheadConfig {
   queueSize: number;
   timeout: number;
 }
-```
+```text
 
 #### BulkheadMetrics
 
@@ -402,7 +402,7 @@ interface BulkheadMetrics {
   completedExecutions: number;
   rejectedRequests: number;
 }
-```
+```text
 
 ### Bulkhead Class
 
@@ -415,7 +415,7 @@ public static getBulkhead(
   name: string,
   config?: Partial<BulkheadConfig>
 ): Bulkhead
-```
+```text
 
 Gets or creates a bulkhead instance.
 
@@ -431,7 +431,7 @@ Gets or creates a bulkhead instance.
 
 ```typescript
 public wrap<T>(fn: WrappedFunction<T>): WrappedFunction<T>
-```
+```text
 
 Wraps a function with bulkhead isolation.
 
@@ -447,7 +447,7 @@ public async execute<T>(
   fn: WrappedFunction<T>,
   ...args: any[]
 ): Promise<T>
-```
+```text
 
 Executes a function with bulkhead isolation.
 
@@ -463,7 +463,7 @@ Executes a function with bulkhead isolation.
 
 ```typescript
 public getMetrics(): BulkheadMetrics
-```
+```text
 
 Gets bulkhead metrics.
 
@@ -482,7 +482,7 @@ public async get<T>(
   key: string,
   loader: (key: string) => Promise<T>
 ): Promise<T>
-```
+```text
 
 Gets value from cache or loads it.
 
@@ -496,7 +496,7 @@ Gets value from cache or loads it.
 
 ```typescript
 public async set<T>(key: string, value: T): Promise<void>
-```
+```text
 
 Sets a value in cache.
 
@@ -510,7 +510,7 @@ Sets a value in cache.
 
 ```typescript
 public async invalidate(key: string): Promise<void>
-```
+```text
 
 Invalidates a cache entry.
 
@@ -533,7 +533,7 @@ public addStep(
   action: (context: any) => Promise<any>,
   compensation?: (context: any) => Promise<any>
 ): void
-```
+```text
 
 Adds a step to the saga.
 
@@ -548,7 +548,7 @@ Adds a step to the saga.
 
 ```typescript
 public async execute(context: any): Promise<any>
-```
+```text
 
 Executes the saga.
 
@@ -575,7 +575,7 @@ interface Request {
   payload: any;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 #### Response
 
@@ -587,7 +587,7 @@ interface Response {
   error?: Error;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 #### RequestHandler
 
@@ -595,7 +595,7 @@ interface Response {
 interface RequestHandler {
   (request: Request): Promise<Response>;
 }
-```
+```text
 
 ### RequestResponsePattern Class
 
@@ -608,7 +608,7 @@ public registerHandler(
   type: string,
   handler: RequestHandler
 ): void
-```
+```text
 
 Registers a request handler.
 
@@ -622,7 +622,7 @@ Registers a request handler.
 
 ```typescript
 public async sendRequest(request: Request): Promise<Response>
-```
+```text
 
 Sends a request and waits for response.
 
@@ -652,7 +652,7 @@ try {
 } catch (error) {
   // Handle circuit breaker open or API error
 }
-```
+```text
 
 ### Retry
 
@@ -668,7 +668,7 @@ const retry = Retry.getRetrier('api', {
 const result = await retry.execute(async () => {
   return await unreliableOperation();
 });
-```
+```text
 
 ### Rate Limiter
 
@@ -683,7 +683,7 @@ const limiter = RateLimiter.getLimiter('api', {
 const result = await limiter.execute(async () => {
   return await apiCall();
 });
-```
+```text
 
 ### Timeout
 
@@ -698,7 +698,7 @@ const timeout = Timeout.getTimeout('api', {
 const result = await timeout.execute(async () => {
   return await longRunningOperation();
 });
-```
+```text
 
 ### Combining Patterns
 
@@ -714,7 +714,7 @@ const operation = timeout.execute(() =>
     })
   )
 );
-```
+```text
 
 ## Event Integration
 

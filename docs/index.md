@@ -38,7 +38,7 @@ graph TB
     Core --> Research
     Research --> Integration
     Integration --> Governance
-```
+```text
 
 ## Documentation Structure
 
@@ -49,7 +49,7 @@ graph TB
 - [Setup](setup/README.md) - System setup and configuration
 
 ### Research & Analytics
-- [Experiments](experiments/README.md) - Experiment documentation and results
+- [Experiments](../README.md) - Experiment documentation and results
 - [Analytics](analytics/README.md) - Data analysis and insights
 - [Metrics](metrics/README.md) - System and performance metrics
 - [Research](research/README.md) - Research methodologies and findings
@@ -90,14 +90,14 @@ graph LR
     C --> D
     G --> L[Analytics Pipeline]
     K --> M[Metrics Dashboard]
-```
+```text
 
 ## Quick Links
-- [Todo List](todo.md)
-- [Getting Started](setup/getting-started.md)
-- [Contributing Guidelines](development/contributing.md)
-- [API Reference](reference/api.md)
-- [System Architecture](architecture/overview.md)
+- [Todo List](AGENTS.md)
+- [Getting Started](core/getting-started.md)
+- [Contributing Guidelines](development/AGENTS.md)
+- [API Reference](reference/AGENTS.md)
+- [System Architecture](../examples/lexdao/overview.md)
 
 ## Documentation Guidelines
 

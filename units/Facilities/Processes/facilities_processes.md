@@ -90,7 +90,7 @@ sequenceDiagram
         deactivate FM System
     end
 
-```
+```text
 
 ---
 Version: 1.0

@@ -40,7 +40,7 @@ graph TD
     P[COI Mgmt \n [[conflict_of_interest_management_sab]]] ---> D;
     P ---> E;
     P ---> F;
-```
+```text
 
 ## Interfaces
 ### Internal Primary
@@ -132,7 +132,7 @@ graph LR
     IM -->|Manages Records with| Legal
     SABM -->|Advises| Exec
     SABM -->|Advises| RnD
-```
+```text
 
 ## Performance Metrics (Internal Process)
 - Timeliness of meeting material distribution

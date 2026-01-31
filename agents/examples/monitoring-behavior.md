@@ -24,7 +24,7 @@ behavior_model:
   category: "system_observation"
   complexity: "high"
   adaptability: "dynamic"
-```
+```text
 
 ## Implementation
 
@@ -42,7 +42,7 @@ graph TD
     H[Alert Rules] -.-> D
     I[Learning System] -.-> C
     I -.-> D
-```
+```text
 
 ### State Machine
 ```yaml
@@ -96,7 +96,7 @@ states:
         condition: recovery_successful
       - to: failed
         condition: recovery_failed
-```
+```text
 
 ## Interaction Pattern
 
@@ -113,7 +113,7 @@ inputs:
       priority: high
     - type: anomaly_detected
       priority: medium
-```
+```text
 
 ### Output Generation
 ```yaml
@@ -128,7 +128,7 @@ outputs:
       destination: monitoring_system
     - type: health_status
       destination: system_dashboard
-```
+```text
 
 ## Learning & Adaptation
 
@@ -145,7 +145,7 @@ learning:
     - optimize_alert_accuracy
     - reduce_false_positives
     - improve_prediction_accuracy
-```
+```text
 
 ### Adaptation Rules
 ```yaml
@@ -160,7 +160,7 @@ adaptation:
   constraints:
     - maintain_detection_rate
     - limit_alert_frequency
-```
+```text
 
 ## Integration
 
@@ -180,7 +180,7 @@ communication:
   external:
     - target: monitored_systems
       protocol: [[protocols#metric-collection]]
-```
+```text
 
 ## Performance
 
@@ -197,7 +197,7 @@ metrics:
       threshold: 0.99
     - metric: detection_latency
       threshold: 100ms
-```
+```text
 
 ### Optimization
 ```yaml
@@ -209,7 +209,7 @@ optimization:
     - name: batch_processing
       trigger: processing_backlog
       action: increase_batch_size
-```
+```text
 
 ## Safety & Validation
 
@@ -228,7 +228,7 @@ safety:
     - metrics_stored
     - alerts_delivered
     - actions_logged
-```
+```text
 
 ### Validation Methods
 ```yaml
@@ -241,7 +241,7 @@ validation:
     - data_reprocessing
     - alert_verification
     - action_rollback
-```
+```text
 
 ## Maintenance
 

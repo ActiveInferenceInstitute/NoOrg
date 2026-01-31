@@ -8,7 +8,7 @@ The Legal Unit provides comprehensive legal support across the organization, ens
 
 *   **[Charter](./Charter.md):** Defines the mission, scope, and authority of the Legal Unit.
 *   **[Organizational Chart](./OrgChart.md):** Visual representation of the Legal Unit structure.
-*   **[Interactions](./Interactions.md):** Diagram illustrating how Legal interacts with other units.
+*   **[Interactions](AGENTS.md):** Diagram illustrating how Legal interacts with other units.
 *   **[Policies](./Policies/README.md):** Formal policies governing legal and compliance matters.
 *   **[Processes](./Processes/README.md):** Standard operating procedures for legal tasks.
 *   **[Meeting Notes](./MeetingNotes/README.md):** Records of key meetings within the Legal Unit.

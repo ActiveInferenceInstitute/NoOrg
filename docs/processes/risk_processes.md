@@ -27,7 +27,7 @@ related_processes:
   - [[processes/quality_processes]]
   - [[processes/compliance_processes]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document details the operational processes and procedures that implement the [[frameworks/risk_management|Risk Management Framework]], ensuring comprehensive risk identification, assessment, and control across the organization.
@@ -43,7 +43,7 @@ graph TD
     C --> D[Risk Monitoring]
     D --> E[Risk Review]
     E --> A
-```
+```text
 
 #### 1.2 Key Components
 - Risk Teams

@@ -24,9 +24,9 @@ const promptManager = PromptManager.getInstance();
 const prompt = await promptManager.getPrompt('analysis-prompt', {
   data: analysisData
 });
-```
+```text
 
 ## Related Documentation
 
-- [Prompt Manager](../../core/multiagent/README.md#prompt-manager)
+- [Prompt Manager](../../README.md#prompt-manager)
 - [Source Code Documentation](../README.md)

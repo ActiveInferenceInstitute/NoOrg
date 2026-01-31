@@ -37,7 +37,7 @@ The Head of Legal reports directly to the [Specify Reporting Line, e.g., Chief E
 
 ## 5. Key Interactions
 
-The Legal Unit collaborates closely with all other organizational units. Key interactions are outlined in [./Interactions.md](./Interactions.md).
+The Legal Unit collaborates closely with all other organizational units. Key interactions are outlined in [./Interactions.md](AGENTS.md).
 
 ## 6. Review and Updates
 

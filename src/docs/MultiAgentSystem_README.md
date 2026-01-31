@@ -82,7 +82,7 @@ const coordinator = new MultiAgentCoordinator(
 );
 
 await coordinator.initialize();
-```
+```text
 
 ### Creating and Registering Agents
 
@@ -104,7 +104,7 @@ const agentId = await coordinator.registerAgent({
   capabilities: capabilities.map(c => c.name),
   status: 'available'
 });
-```
+```text
 
 ### Creating and Running Tasks
 
@@ -124,7 +124,7 @@ await coordinator.assignTask(taskId, agentId);
 
 // Run task workflow
 await coordinator.start();
-```
+```text
 
 ## Development Recommendations
 
@@ -168,7 +168,7 @@ agent.capabilities = [
   { name: 'research', description: 'Research capability', parameters: {} },
   { name: 'writing', description: 'Writing capability', parameters: {} }
 ];
-```
+```text
 
 ### Task Assignment Issues
 
@@ -178,7 +178,7 @@ task.status = 'started'; // Invalid status
 
 // ✅ Correct - using valid task status
 task.status = 'in-progress'; // Valid status
-```
+```text
 
 ### Agent Status Tracking
 
@@ -193,4 +193,4 @@ agent.status = {
   healthStatus: { isHealthy: true, errors: [], lastHeartbeat: Date.now() },
   metrics: {}
 };
-``` 
+```text 

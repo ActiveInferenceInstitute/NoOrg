@@ -9,24 +9,31 @@ This directory is maintained for historical reference and migration purposes onl
 ## Contents
 
 ### `/architectures/`
+
 Legacy agent architecture documentation and specifications.
 
 ### `/communication/`
+
 Old communication protocols and message formats.
 
 ### `/examples/`
+
 Historical examples of agent usage and coordination.
 
 ### `/guides/`
+
 Legacy implementation guides and best practices.
 
 ### `/system/`
+
 Old system-level agent specifications.
 
 ### `/task/`
+
 Legacy task management and execution frameworks.
 
 ### `/types/`
+
 Historical type definitions for agents.
 
 ## Migration Status
@@ -51,13 +58,14 @@ All agents in this directory have been successfully migrated to the current fram
 ## Historical Value
 
 This archive provides:
+
 - **Learning Resource**: Understanding how the framework evolved
 - **Migration Examples**: Showing progression from old to new implementations
 - **Research Material**: Studying different architectural approaches
 
 ## Related Documentation
 
-- [Current Agent Framework](../../../src/agents/README.md)
-- [Agent Documentation](../../../docs/agents/README.md)
-- [Migration Guide](../../../docs/development/migration-guide.md)
-- [Current Test Coverage](../../../tests/unit/agents/README.md)
+- [Current Agent Framework](../README.md)
+- [Agent Documentation](../README.md)
+- [Migration Guide](../docs/development/migration-guide.md)
+- [Current Test Coverage](../README.md)

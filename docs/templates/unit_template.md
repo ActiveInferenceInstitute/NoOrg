@@ -17,7 +17,7 @@ graph TB
     S1 --- M1
     S2 --- M2
     S3 --- M1
-```
+```text
 
 ## Overview
 **Unit Type**: [Executive/Advisory/Operational/Support]
@@ -41,7 +41,7 @@ mindmap
         Values
             Core Principles
             Culture
-```
+```text
 
 ## Organizational Structure
 ### Leadership
@@ -66,7 +66,7 @@ orgChart
     deputy --> leader2
     leader1 --> team1
     leader2 --> team2
-```
+```text
 
 ### Sub-Units
 - [[sub_units/sub_unit_1|Sub Unit 1]] - [Brief description]
@@ -86,7 +86,7 @@ quadrantChart
     Capability1: [0.8, 0.9]
     Capability2: [0.3, 0.6]
     Capability3: [0.5, 0.2]
-```
+```text
 
 ## Resource Utilization
 ```mermaid
@@ -95,7 +95,7 @@ pie title Resource Distribution
     "Technology" : 25
     "Operations" : 20
     "Development" : 20
-```
+```text
 
 ## Decision Flow
 ```mermaid
@@ -107,7 +107,7 @@ stateDiagram-v2
     Implementation --> Review
     Review --> [*]
     Review --> Analysis: Needs Revision
-```
+```text
 
 ## Process Flow
 ```mermaid
@@ -122,7 +122,7 @@ flowchart LR
     C
     D
     end
-```
+```text
 
 ### Core Processes
 1. [[processes/process_1|Process 1]] - [Brief description]
@@ -149,7 +149,7 @@ flowchart LR
     end
     
     Internal <--> External
-```
+```text
 
 ## Budget Allocation
 ```mermaid
@@ -162,7 +162,7 @@ sankey-beta
     Operations [35] -> Support [15]
     Development [25] -> Projects [15]
     Development [25] -> Innovation [10]
-```
+```text
 
 ## Interface Map
 ```mermaid
@@ -183,7 +183,7 @@ graph TB
     Unit --> P2
     Unit -.-> S1
     Unit -.-> S2
-```
+```text
 
 ### Primary Interfaces
 - [[units/interface_unit_1|Interface Unit 1]] - [Nature of interaction]
@@ -208,7 +208,7 @@ graph LR
     
     C1 --> T1
     C2 --> T2
-```
+```text
 
 ### Core Systems
 - [[systems/system_1|System 1]] - [Purpose]
@@ -231,7 +231,7 @@ mindmap
         Frameworks
             [[frameworks/framework_1]]
             [[frameworks/framework_2]]
-```
+```text
 
 ## Performance Metrics
 ### KPI Dashboard
@@ -242,7 +242,7 @@ xychart-beta
     y-axis "Performance (%)" 0 --> 100
     line [80, 82, 85, 88, 86, 90]
     line [70, 75, 72, 78, 82, 85]
-```
+```text
 
 ### Key Performance Indicators (KPIs)
 1. [KPI 1]
@@ -327,7 +327,7 @@ quadrantChart
     quadrant-4 Medium Priority
     Risk1: [0.8, 0.4]
     Risk2: [0.3, 0.7]
-```
+```text
 
 ## Innovation Timeline
 ```mermaid
@@ -342,7 +342,7 @@ gantt
     section Planned Improvements
     Improvement 1   :b1, 2024-04-01, 45d
     Improvement 2   :b2, after b1, 30d
-```
+```text
 
 ## Risk Assessment
 ### Risk Trend Analysis
@@ -358,7 +358,7 @@ timeline
     section Q3 2024
         High Risk Count : 2
         Medium Risk Count : 5
-```
+```text
 
 ## Compliance Tracking
 ```mermaid
@@ -372,7 +372,7 @@ gitGraph
     merge audit
     commit id: "Remediation"
     commit id: "Verification"
-```
+```text
 
 ## Innovation Pipeline
 ```mermaid
@@ -387,7 +387,7 @@ journey
     section Implementation
       Rollout: 3: Team
       Review: 5: Team
-```
+```text
 
 ## Dependencies Map
 ```mermaid
@@ -411,7 +411,7 @@ graph TB
     E2 --> I2
     I1 --> S1
     I2 --> S2
-```
+```text
 
 ## Operational Health
 ```mermaid
@@ -426,7 +426,7 @@ radar
     data
         Current: 85, 90, 75, 80, 95
         Target: 90, 95, 85, 85, 100
-```
+```text
 
 ## 📊 Resource Optimization
 ```mermaid
@@ -440,7 +440,7 @@ sankey-beta
     Technology [30] -> Tools [10]
     Operations [30] -> Maintenance [20]
     Operations [30] -> Support [10]
-```
+```text
 
 ## 🎯 Strategic Initiatives
 ```mermaid
@@ -458,7 +458,7 @@ timeline
     section Q4 2024
         Initiative 1 : Review
         Initiative 2 : Optimization
-```
+```text
 
 ## 🔄 Process Maturity
 ```mermaid
@@ -474,7 +474,7 @@ radar
     data
         Current: 85, 75, 80, 70, 85, 90
         Target: 90, 85, 85, 80, 90, 95
-```
+```text
 
 ## 📈 Performance Trends
 ```mermaid
@@ -485,7 +485,7 @@ xychart-beta
     y-axis "Output Units" 0 --> 1000
     line [85, 87, 90, 88, 92, 95]
     line [750, 800, 850, 820, 880, 900]
-```
+```text
 
 ## 🔍 Quality Metrics
 ```mermaid
@@ -500,7 +500,7 @@ quadrantChart
     Metric1: [0.8, 0.9]
     Metric2: [0.4, 0.6]
     Metric3: [0.7, 0.3]
-```
+```text
 
 ## ⚡ Operational Efficiency
 ```mermaid
@@ -525,7 +525,7 @@ graph TB
     
     Inputs --> Processing
     Processing --> Outputs
-```
+```text
 
 ## 🔐 Risk Management
 ```mermaid
@@ -547,7 +547,7 @@ mindmap
             Incident Plan
             Recovery
             Communication
-```
+```text
 
 ## 📊 Stakeholder Analysis
 ```mermaid
@@ -562,7 +562,7 @@ quadrantChart
     Stakeholder1: [0.9, 0.8]
     Stakeholder2: [0.3, 0.7]
     Stakeholder3: [0.6, 0.2]
-```
+```text
 
 ## 🔄 Change Management
 ```mermaid
@@ -576,7 +576,7 @@ gitGraph
     merge change
     commit id: "Implementation"
     commit id: "Validation"
-```
+```text
 
 ## 📈 Value Stream
 ```mermaid
@@ -591,7 +591,7 @@ journey
     section Output
       Delivery: 3: Team
       Feedback: 5: Team
-```
+```text
 
 ## 📊 Capacity Planning
 ```mermaid
@@ -602,7 +602,7 @@ xychart-beta
     y-axis "Projected Need %" 0 --> 150
     line [75, 80, 85, 90]
     line [70, 85, 100, 120]
-```
+```text
 
 ## 🔄 Knowledge Transfer
 ```mermaid
@@ -624,7 +624,7 @@ mindmap
             Subject Matter
             Technical
             Domain
-```
+```text
 
 ## 🎯 Strategic Initiatives Map
 ```mermaid
@@ -646,7 +646,7 @@ graph TB
     
     S1 & S2 --> M1 & M2
     M1 & M2 --> L1 & L2
-```
+```text
 
 ## ⚡ Competency Matrix
 ```mermaid
@@ -662,7 +662,7 @@ radar
     data
         Current: 85, 75, 90, 80, 70, 85
         Required: 90, 85, 95, 85, 80, 90
-```
+```text
 
 ## 📈 Quality Metrics Dashboard
 ```mermaid
@@ -684,7 +684,7 @@ graph TB
     I2[Implementations<br>8]
     I3[Impact<br>High]
     end
-```
+```text
 
 ## 🔍 Process Optimization
 ```mermaid
@@ -709,7 +709,7 @@ graph LR
     
     Current --> Optimized
     Optimized --> Benefits
-```
+```text
 
 ## 🎯 Succession Planning
 ```mermaid
@@ -727,7 +727,7 @@ mindmap
             Skills Gap
             Training Programs
             Mentorship
-```
+```text
 
 ## ⚡ Innovation Pipeline
 ```mermaid
@@ -742,7 +742,7 @@ timeline
     section Implementation
         Pilot Program : Q3 2024
         Full Rollout : Q4 2024
-```
+```text
 
 ## 📊 Stakeholder Engagement Matrix
 ```mermaid
@@ -758,7 +758,7 @@ quadrantChart
     Stakeholder2: [0.4, 0.3]
     Stakeholder3: [0.7, 0.6]
     Stakeholder4: [0.2, 0.9]
-```
+```text
 
 ## 🔄 Change Impact Analysis
 ```mermaid
@@ -780,7 +780,7 @@ mindmap
             Structure
             Reporting Lines
             Communication
-```
+```text
 
 ---
 **Metadata**

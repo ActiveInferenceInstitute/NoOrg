@@ -37,7 +37,7 @@ system_requirements:
     message_broker: "RabbitMQ >=3.8"
     service_registry: "Consul >=1.9"
     monitoring: "Prometheus >=2.30"
-```
+```text
 
 ## Architecture
 
@@ -79,7 +79,7 @@ classDiagram
     ResourceManager --> AllocationEngine
     ResourceManager --> MonitoringSystem
     ResourceManager --> ResourceController
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -97,7 +97,7 @@ integration:
     - service_registry
     - monitoring_system
     - metrics_storage
-```
+```text
 
 ## Implementation Steps
 
@@ -134,7 +134,7 @@ class ResourceManager:
         await self._setup_monitoring()
         await self._start_message_consumers()
         self.logger.info("Resource Manager started successfully")
-```
+```text
 
 ### 2. Resource Registry Implementation
 ```python
@@ -171,7 +171,7 @@ class ResourceRegistry:
                 raise KeyError(f"Resource {resource_id} not found")
             self.resources[resource_id].status = status
             self.resources[resource_id].last_updated = datetime.utcnow()
-```
+```text
 
 ### 3. Allocation Engine Implementation
 ```python
@@ -209,7 +209,7 @@ class AllocationEngine:
         """Optimize current resource allocation"""
         # Implement allocation optimization logic
         pass
-```
+```text
 
 ### 4. Monitoring System Implementation
 ```python
@@ -244,7 +244,7 @@ class MonitoringSystem:
         """Collect resource metrics"""
         # Implement metrics collection logic
         pass
-```
+```text
 
 ### 5. Resource Controller Implementation
 ```python
@@ -278,7 +278,7 @@ class ResourceController:
         plan = self.active_allocations[allocation_id]
         await self._release_resources(plan)
         del self.active_allocations[allocation_id]
-```
+```text
 
 ## Testing & Validation
 
@@ -307,7 +307,7 @@ class TestResourceManager:
         )
         await resource_manager.registry.register_resource(resource)
         assert "test_resource" in resource_manager.registry.resources
-```
+```text
 
 ### Integration Tests
 ```python
@@ -325,7 +325,7 @@ class TestResourceIntegration:
         
         result = await manager.allocation_engine.process_request(request)
         assert result["status"] == "allocated"
-```
+```text
 
 ## Performance Optimization
 
@@ -341,7 +341,7 @@ optimization:
   caching:
     resource_state_ttl: "5s"
     allocation_plan_cache_size: 1000
-```
+```text
 
 ### Resource Pool Management
 ```python
@@ -355,7 +355,7 @@ class ResourcePool:
         """Optimize resource pools"""
         # Implement pool optimization logic
         pass
-```
+```text
 
 ## Security Implementation
 
@@ -379,7 +379,7 @@ class SecurityManager:
         """Encrypt allocation data"""
         # Implement allocation encryption
         pass
-```
+```text
 
 ### Authorization
 ```python
@@ -392,7 +392,7 @@ class AuthorizationManager:
         """Check requester permissions"""
         # Implement permission checking
         pass
-```
+```text
 
 ## Deployment
 
@@ -410,7 +410,7 @@ deployment:
     volumes:
       - ./config:/app/config
       - ./data:/app/data
-```
+```text
 
 ### Health Checks
 ```python
@@ -425,7 +425,7 @@ class HealthCheck:
             "allocation_engine": await self._check_engine()
         }
         return checks
-```
+```text
 
 ## Troubleshooting
 
@@ -441,7 +441,7 @@ troubleshooting:
     - symptom: "High allocation latency"
       check: "Monitor allocation queue and resource utilization"
       solution: "Optimize allocation strategy or add resources"
-```
+```text
 
 ### Logging Strategy
 ```python
@@ -457,7 +457,7 @@ class LogManager:
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
         # Setup handlers and formatters
-```
+```text
 
 ## Maintenance
 

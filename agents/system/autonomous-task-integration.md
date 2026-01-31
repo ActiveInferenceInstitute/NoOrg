@@ -37,7 +37,7 @@ graph TD
         MA --> OP[Optimization]
         OP --> RP[Report Generation]
     end
-```
+```text
 
 ## Task Ingestion System
 
@@ -76,7 +76,7 @@ class TaskIngestionSystem:
         except Exception as e:
             await self._handle_ingestion_error(e, task_request)
             raise
-```
+```text
 
 ### Task Distribution System
 ```python
@@ -123,7 +123,7 @@ class TaskDistributionSystem:
         except Exception as e:
             await self._handle_distribution_error(e, task)
             raise
-```
+```text
 
 ## Performance Management
 
@@ -161,7 +161,7 @@ class PerformanceMonitor:
         except Exception as e:
             await self._handle_monitoring_error(e, execution)
             raise
-```
+```text
 
 ## Integration Configuration
 
@@ -188,7 +188,7 @@ task_configuration:
         - load_balancing
         - capability_matching
         - priority_based
-```
+```text
 
 ### Distribution Configuration
 ```yaml
@@ -208,7 +208,7 @@ distribution_configuration:
       auto_scaling: true
       load_balancing: true
       resource_pooling: true
-```
+```text
 
 ## Best Practices
 
@@ -232,7 +232,7 @@ integration_best_practices:
     - analyze_effectively
     - optimize_continuously
     - report_accurately
-```
+```text
 
 ### Reliability Best Practices
 ```yaml
@@ -254,7 +254,7 @@ reliability_best_practices:
     - optimize_resources
     - improve_efficiency
     - maintain_performance
-```
+```text
 
 ## Documentation
 

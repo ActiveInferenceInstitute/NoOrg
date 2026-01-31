@@ -19,7 +19,7 @@ graph TD
     A --> C[Network Services]
     A --> D[Network Security]
     A --> E[Network Operations]
-```
+```text
 
 ### Network Architecture
 1. **Network Layers**

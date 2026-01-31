@@ -46,7 +46,7 @@ graph TD
     B --> C[Organization]
     C --> D[Publication]
     D --> E[Maintenance]
-```
+```text
 
 #### Components
 - Template automation

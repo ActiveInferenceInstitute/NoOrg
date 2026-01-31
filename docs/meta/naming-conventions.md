@@ -21,48 +21,48 @@ This document defines the standardized naming conventions for files, folders, an
 - Use standard file extensions
 
 ### File Naming Pattern
-```
+```text
 [category]-[type]-[description].[ext]
-```
+```text
 
 ### Examples
-```
+```text
 incident-process-escalation.md
 security-policy-access-control.md
 user-guide-obsidian-setup.md
 template-meeting-notes.md
-```
+```text
 
 ## 🗂️ Directory Structure
 
 ### Root Level
-```
+```text
 docs/
 ├── processes/
 ├── policies/
 ├── guides/
 ├── reference/
 └── setup/
-```
+```text
 
 ### Subdirectory Pattern
-```
+```text
 [category]/[subcategory]/[topic]/
-```
+```text
 
 ### Examples
-```
+```text
 processes/incident/escalation/
 policies/security/access-control/
 guides/user/getting-started/
-```
+```text
 
 ## 📝 Document Titles
 
 ### Title Format
-```
+```text
 [Category]: [Description] - [Subtype]
-```
+```text
 
 ### Examples
 - Process: Incident Escalation - Standard Operating Procedure
@@ -73,38 +73,38 @@ guides/user/getting-started/
 ## 🏷️ Asset Naming
 
 ### Image Files
-```
+```text
 [YYYY-MM-DD]-[category]-[description].[ext]
-```
+```text
 
 ### Examples
-```
+```text
 2024-03-15-process-flow-diagram.png
 2024-03-15-system-architecture.svg
 2024-03-15-user-interface-mockup.jpg
-```
+```text
 
 ### Attachments
-```
+```text
 [YYYY-MM-DD]-[type]-[description].[ext]
-```
+```text
 
 ### Examples
-```
+```text
 2024-03-15-report-quarterly-review.pdf
 2024-03-15-presentation-project-status.pptx
 2024-03-15-spreadsheet-metrics.xlsx
-```
+```text
 
 ## 🔤 Content Elements
 
 ### Heading Format
-```
+```text
 Level 1: # Main Title
 Level 2: ## Major Section
 Level 3: ### Subsection
 Level 4: #### Detail Section
-```
+```text
 
 ### Link Text
 - Use descriptive text
@@ -116,35 +116,35 @@ Level 4: #### Detail Section
 [[incident-process|Incident Management Process]]
 [[access-control|Access Control Policy]]
 [[obsidian-setup#configuration|Obsidian Configuration]]
-```
+```text
 
 ## 🏷️ Tag Naming
 
 ### Tag Format
-```
+```text
 #category-type-descriptor
-```
+```text
 
 ### Examples
-```
+```text
 #process-incident-escalation
 #policy-security-access
 #guide-user-setup
-```
+```text
 
 ## 📊 Version Naming
 
 ### Version Format
-```
+```text
 v[major].[minor].[patch]
-```
+```text
 
 ### Examples
-```
+```text
 v1.0.0 - Initial release
 v1.1.0 - Feature update
 v1.1.1 - Bug fix
-```
+```text
 
 ## 🔍 Search Optimization
 
@@ -155,11 +155,11 @@ v1.1.1 - Bug fix
 - Support findability
 
 ### Examples
-```
+```text
 security-access-control-policy.md
 incident-response-procedure.md
 user-onboarding-guide.md
-```
+```text
 
 ## 📱 Mobile Compatibility
 
@@ -170,37 +170,37 @@ user-onboarding-guide.md
 - Support touch navigation
 
 ### Examples
-```
+```text
 proc-inc-esc.md      # Process - Incident Escalation
 pol-sec-acc.md       # Policy - Security Access
 guide-setup.md       # Setup Guide
-```
+```text
 
 ## 🔄 Naming Patterns
 
 ### Templates
-```
+```text
 template-[type]-[purpose].md
-```
+```text
 
 ### Examples
-```
+```text
 template-process-documentation.md
 template-policy-standard.md
 template-guide-howto.md
-```
+```text
 
 ### Maps of Content
-```
+```text
 [category]-moc.md
-```
+```text
 
 ### Examples
-```
+```text
 processes-moc.md
 policies-moc.md
 guides-moc.md
-```
+```text
 
 ## ⚡ Quick Reference
 

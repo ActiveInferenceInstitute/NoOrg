@@ -58,7 +58,7 @@ access_controls:
           - force_push: "blocked"
           - deletion: "admin_only"
           - merge_strategy: "squash"
-```
+```text
 
 ### Access Management
 ```python
@@ -89,7 +89,7 @@ class AccessManager:
     def enforce_policies(self):
         """Enforce security policies"""
         pass
-```
+```text
 
 ## 🔐 Secret Management
 
@@ -132,7 +132,7 @@ class AccessManager:
     }
   }
 }
-```
+```text
 
 ### Secret Management
 ```python
@@ -163,7 +163,7 @@ class SecretManager:
     def handle_incidents(self):
         """Handle security incidents"""
         pass
-```
+```text
 
 ## 📊 Audit Procedures
 
@@ -208,7 +208,7 @@ audit_procedures:
           scope: "access_patterns"
           assignee: "compliance_team"
           reporting: "management_summary"
-```
+```text
 
 ### Audit Management
 ```python
@@ -239,7 +239,7 @@ class AuditManager:
     def generate_reports(self):
         """Generate audit reports"""
         pass
-```
+```text
 
 ## ✅ Compliance Checks
 
@@ -288,7 +288,7 @@ compliance_checks:
           prioritization: "risk_based"
           timeline: "sla_driven"
           verification: "multi_level"
-```
+```text
 
 ### Compliance Management
 ```python
@@ -319,7 +319,7 @@ class ComplianceManager:
     def track_remediation(self):
         """Track remediation progress"""
         pass
-```
+```text
 
 ## 🤖 LLM Security Considerations
 
@@ -358,7 +358,7 @@ llm_security:
           authentication: "mutual"
           communication: "encrypted"
           validation: "message_signing"
-```
+```text
 
 ## 📚 References
 

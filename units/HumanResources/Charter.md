@@ -114,7 +114,7 @@ graph TD
     Legal -- Collaborates (Compliance, Issues) --> HRUnit
     IT -- Supports (Systems) --> HRUnit
     ComplianceUnit -- Collaborates (Policy) --> HRUnit
-```
+```text
 
 ---
 Approved By: [[Approving Authority]]

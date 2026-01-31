@@ -6,7 +6,7 @@
 
 ```typescript
 export function generateWorkflowDOT(workflow: Workflow): string
-```
+```text
 
 Generates DOT-formatted graph for Graphviz.
 
@@ -19,7 +19,7 @@ Generates DOT-formatted graph for Graphviz.
 
 ```typescript
 export function generateWorkflowMermaid(workflow: Workflow): string
-```
+```text
 
 Generates Mermaid diagram syntax.
 

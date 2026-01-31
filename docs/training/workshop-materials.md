@@ -53,7 +53,7 @@ practical_exercises:
           - workflow_automation
           - pipeline_creation
           - performance_optimization
-```
+```text
 
 ### Exercise Management
 ```python
@@ -84,7 +84,7 @@ class ExerciseManager:
     def track_progress(self):
         """Track exercise progress"""
         pass
-```
+```text
 
 ## 📊 Use Cases
 
@@ -118,7 +118,7 @@ class ExerciseManager:
     }
   }
 }
-```
+```text
 
 ### Case Management
 ```python
@@ -149,7 +149,7 @@ class CaseManager:
     def evaluate_results(self):
         """Evaluate case results"""
         pass
-```
+```text
 
 ## 🌟 Best Practices
 
@@ -194,7 +194,7 @@ best_practices:
           - review_processes
           - feedback_loops
           - knowledge_sharing
-```
+```text
 
 ### Practice Management
 ```python
@@ -225,7 +225,7 @@ class PracticeManager:
     def assess_effectiveness(self):
         """Assess practice effectiveness"""
         pass
-```
+```text
 
 ## 💡 Tips and Tricks
 
@@ -270,7 +270,7 @@ advanced_tips:
           - documentation_quality
           - process_efficiency
           - collaboration_effectiveness
-```
+```text
 
 ### Tips Management
 ```python
@@ -301,7 +301,7 @@ class TipsManager:
     def optimize_usage(self):
         """Optimize tip usage"""
         pass
-```
+```text
 
 ## 📚 References
 

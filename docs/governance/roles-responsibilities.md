@@ -33,7 +33,7 @@ content_owners:
       - assign_reviewers
       - establish_standards
       - delegate_tasks
-```
+```text
 
 ### Content Reviewers
 ```python
@@ -67,7 +67,7 @@ class ReviewerRole:
     def provide_feedback(self):
         """Provide review feedback"""
         pass
-```
+```text
 
 ### Content Contributors
 ```json
@@ -103,7 +103,7 @@ class ReviewerRole:
     }
   }
 }
-```
+```text
 
 ## 🔄 Workflow Roles
 
@@ -128,7 +128,7 @@ process_owners:
       - completion_rates
       - quality_scores
       - turnaround_time
-```
+```text
 
 ### Quality Assurance
 ```python
@@ -162,7 +162,7 @@ class QARole:
     def generate_report(self):
         """Generate quality report"""
         pass
-```
+```text
 
 ## 🛠️ Technical Roles
 
@@ -187,7 +187,7 @@ system_admin:
       - optimization
       - troubleshooting
       - capacity_planning
-```
+```text
 
 ### Tool Specialists
 ```python
@@ -221,7 +221,7 @@ class ToolSpecialist:
     def provide_support(self):
         """Provide tool support"""
         pass
-```
+```text
 
 ## 📊 Governance Roles
 
@@ -258,7 +258,7 @@ class ToolSpecialist:
     }
   }
 }
-```
+```text
 
 ### Stakeholder Representatives
 ```yaml
@@ -283,7 +283,7 @@ stakeholder_roles:
       - content_suggestions
       - accessibility_review
       - user_advocacy
-```
+```text
 
 ## 🔍 Oversight and Reporting
 
@@ -313,7 +313,7 @@ class ReportingStructure:
     def escalate_issues(self):
         """Escalate role-related issues"""
         pass
-```
+```text
 
 ### Performance Metrics
 ```yaml
@@ -335,7 +335,7 @@ role_metrics:
     - knowledge_sharing
     - cross_functional_work
     - feedback_implementation
-```
+```text
 
 ## 📚 References
 

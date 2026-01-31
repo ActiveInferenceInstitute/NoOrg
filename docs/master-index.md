@@ -100,7 +100,7 @@ graph TB
     CoreSystems --> ResearchPlatform
     ResearchPlatform --> Integration
     Integration --> Governance
-```
+```text
 
 ## Documentation Structure
 
@@ -152,7 +152,7 @@ graph TB
     RootDocs --> CoreDocs
     CoreDocs --> ProcessDocs
     ProcessDocs --> Standards
-```
+```text
 
 ## System Workflows
 
@@ -190,7 +190,7 @@ sequenceDiagram
         CI->>QA: Validation
         QA->>Prod: Production Deploy
     end
-```
+```text
 
 ### Incident Management
 ```mermaid
@@ -227,7 +227,7 @@ sequenceDiagram
         Dev->>Ops: Update Procedures
         Ops->>Mgmt: Update Policies
     end
-```
+```text
 
 ## Cross-cutting Concerns
 
@@ -272,7 +272,7 @@ graph TB
     
     EdgeSecurity --> AppSecurity
     AppSecurity --> DataSecurity
-```
+```text
 
 ## Quick Navigation
 
@@ -283,19 +283,19 @@ graph TB
 - [Security Documentation](security/index.md)
 
 ### Research & Analytics Documentation
-- [Data Science Guide](research/data-science/index.md)
-- [Analytics Platform](research/analytics/index.md)
-- [Experiment Framework](research/experiments/index.md)
+- [Data Science Guide](index.md)
+- [Analytics Platform](index.md)
+- [Experiment Framework](index.md)
 
 ### Tools & Integration Documentation
-- [Development Tools](tools/development/index.md)
-- [Automation Framework](tools/automation/index.md)
-- [Monitoring System](tools/monitoring/index.md)
+- [Development Tools](index.md)
+- [Automation Framework](index.md)
+- [Monitoring System](index.md)
 
 ### Standards & Governance
-- [Coding Standards](standards/coding/index.md)
-- [Architecture Guidelines](standards/architecture/index.md)
-- [Security Policies](standards/security/index.md)
+- [Coding Standards](index.md)
+- [Architecture Guidelines](index.md)
+- [Security Policies](index.md)
 
 ### Agents Documentation
 - [MultiAgent System](agents/multiagent-system.md) - Framework for composing AI agent teams

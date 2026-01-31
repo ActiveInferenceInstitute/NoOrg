@@ -291,7 +291,7 @@ graph LR
     G -- Review & Adapt --> E;
     D -- Rejected / Refine --> C;
     style F fill:#ccf,stroke:#333,stroke-width:2px
-```
+```text
 
 ### Key Strategy Interfaces
 ```mermaid
@@ -319,7 +319,7 @@ sequenceDiagram
     R&D->>Strategy Unit: R&D Pipeline / Capability Info
     Strategy Unit->>OtherUnits: Strategic Direction / Initiative Support
     OtherUnits->>Strategy Unit: Performance Data / Operational Input
-```
+```text
 
 ### Porter's Five Forces Analysis (Conceptual)
 ```mermaid
@@ -343,7 +343,7 @@ graph TD
     S --> C
     B --> C
     SUB --> C
-```
+```text
 
 ---
 Last Updated: [[current_date]]

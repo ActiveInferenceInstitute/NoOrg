@@ -57,7 +57,7 @@ graph TD
     F --> G[Recovery]
     G --> H[Lessons Learned & PIR]
     H --> I[Update Playbooks & Train]
-```
+```text
 
 ## 7. Procedure Review
 

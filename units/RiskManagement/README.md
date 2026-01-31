@@ -31,7 +31,7 @@ graph TD
     Processes --> RiskManagementUnit
     Reports --> RiskManagementUnit
     Meetings --> RiskManagementUnit
-```
+```text
 
 ## Key Documents
 

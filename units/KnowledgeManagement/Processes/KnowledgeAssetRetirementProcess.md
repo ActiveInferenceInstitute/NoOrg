@@ -40,7 +40,7 @@ flowchart TD
     K --> L[Update Metadata]
     L --> M[Record Retirement]
     M --> N[Conduct Post-Retirement Review]
-```
+```text
 
 ## Detailed Process Steps
 

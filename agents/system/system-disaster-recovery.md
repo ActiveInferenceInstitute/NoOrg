@@ -43,7 +43,7 @@ recovery_objectives:
       - learning_agent
       - task_executors
       - analytics_services
-```
+```text
 
 ## Disaster Scenarios
 
@@ -85,7 +85,7 @@ critical_scenarios:
       recovery:
         - secure_systems
         - restore_clean_state
-```
+```text
 
 ### Service-Level Scenarios
 ```yaml
@@ -125,7 +125,7 @@ service_scenarios:
         response:
           - scale_resources
           - optimize_routing
-```
+```text
 
 ## Recovery Procedures
 
@@ -156,7 +156,7 @@ system_recovery:
       - verify_integrity:
           command: ./verify-integrity.sh
           checks: [data, state, consistency]
-```
+```text
 
 ### Data Recovery
 ```yaml
@@ -188,7 +188,7 @@ data_recovery:
       - verify_integration:
           command: ./verify-integration.sh
           checks: [system_state, agent_state]
-```
+```text
 
 ## Recovery Infrastructure
 
@@ -219,7 +219,7 @@ dr_site:
         data: [agent_state, metrics]
       - type: periodic
         data: [historical_data, models]
-```
+```text
 
 ### Backup Systems
 ```yaml
@@ -242,7 +242,7 @@ backup_systems:
     retention:
       critical: 7d
       standard: 30d
-```
+```text
 
 ## Communication Plan
 
@@ -265,7 +265,7 @@ notification_procedures:
       - role: development_team
         channels: [email, slack]
         response_time: 2h
-```
+```text
 
 ### Communication Templates
 ```yaml
@@ -285,7 +285,7 @@ communication_templates:
       - eta_to_restoration
       - current_challenges
       - next_milestones
-```
+```text
 
 ## Testing & Validation
 
@@ -309,7 +309,7 @@ dr_testing:
       - component_failover
       - data_recovery
       - service_continuity
-```
+```text
 
 ### Recovery Validation
 ```yaml
@@ -329,7 +329,7 @@ recovery_validation:
       - agent_functionality
       - system_integration
       - performance_baseline
-```
+```text
 
 ## Maintenance & Updates
 
@@ -352,7 +352,7 @@ plan_maintenance:
       - review_changes
       - update_procedures
       - validate_updates
-```
+```text
 
 ### Documentation Updates
 ```yaml
@@ -366,7 +366,7 @@ documentation_updates:
     - review_accuracy
     - test_procedures
     - verify_completeness
-```
+```text
 
 ## Documentation
 

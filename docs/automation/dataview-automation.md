@@ -65,7 +65,7 @@ task_tracking:
             - resource_usage
             - progress_metrics
             - bottlenecks
-```
+```text
 
 ### Query Management
 ```python
@@ -96,7 +96,7 @@ class QueryManager:
     def analyze_results(self):
         """Analyze query results"""
         pass
-```
+```text
 
 ## 📈 Content Dashboards
 
@@ -130,7 +130,7 @@ class QueryManager:
     }
   }
 }
-```
+```text
 
 ### Dashboard Management
 ```python
@@ -161,7 +161,7 @@ class DashboardManager:
     def update_displays(self):
         """Update dashboard displays"""
         pass
-```
+```text
 
 ## 📑 Status Reporting
 
@@ -224,7 +224,7 @@ status_reporting:
             - team_productivity
             - system_reliability
             - user_satisfaction
-```
+```text
 
 ### Reporting Management
 ```python
@@ -255,7 +255,7 @@ class ReportingManager:
     def maintain_reports(self):
         """Maintain report system"""
         pass
-```
+```text
 
 ## 🔍 Metadata Analysis
 
@@ -312,7 +312,7 @@ metadata_analysis:
             - interaction_depth
             - contribution_frequency
             - collaboration_patterns
-```
+```text
 
 ### Analysis Management
 ```python
@@ -343,7 +343,7 @@ class MetadataAnalyzer:
     def optimize_structure(self):
         """Optimize metadata structure"""
         pass
-```
+```text
 
 ## 📚 References
 

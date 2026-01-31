@@ -50,7 +50,7 @@ dashboard_metrics:
       - user_satisfaction
       - process_improvement
       - innovation_metrics
-```
+```text
 
 ### Metric Management
 ```python
@@ -81,7 +81,7 @@ class MetricManager:
     def update_metrics(self):
         """Update metric values"""
         pass
-```
+```text
 
 ## 📈 Visualizations
 
@@ -120,7 +120,7 @@ class MetricManager:
     }
   }
 }
-```
+```text
 
 ### Visualization Management
 ```python
@@ -151,7 +151,7 @@ class VisualizationManager:
     def update_displays(self):
         """Update visual elements"""
         pass
-```
+```text
 
 ## 🔄 Real-time Updates
 
@@ -193,7 +193,7 @@ realtime_updates:
       - performance_metrics
       - error_tracking
       - health_checks
-```
+```text
 
 ### Update Management
 ```python
@@ -224,7 +224,7 @@ class UpdateManager:
     def monitor_performance(self):
         """Monitor update performance"""
         pass
-```
+```text
 
 ## 🔒 Access Controls
 
@@ -266,7 +266,7 @@ access_controls:
       - usage_tracking
       - security_events
       - compliance_checking
-```
+```text
 
 ### Access Management
 ```python
@@ -297,7 +297,7 @@ class AccessManager:
     def audit_activity(self):
         """Audit access activity"""
         pass
-```
+```text
 
 ## 📚 References
 

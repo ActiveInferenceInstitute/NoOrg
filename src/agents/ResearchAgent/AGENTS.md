@@ -19,7 +19,7 @@ The **ResearchAgent** specializes in gathering and analyzing information from va
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -32,7 +32,7 @@ async researchTopic(
   topic: string,
   scope: { aspects: string[]; depth: string }
 ): Promise<ResearchResult>
-```
+```text
 
 #### extractInformation()
 
@@ -43,7 +43,7 @@ async extractInformation(
   document: string,
   extractionQuery: string
 ): Promise<ExtractionResult>
-```
+```text
 
 #### summarizeDocument()
 
@@ -58,7 +58,7 @@ async summarizeDocument(
     bulletPoints?: boolean;
   }
 ): Promise<SummaryResult>
-```
+```text
 
 #### factCheck()
 
@@ -69,7 +69,7 @@ async factCheck(
   statement: string,
   context?: string
 ): Promise<FactCheckResult>
-```
+```text
 
 ## Configuration Options
 
@@ -83,7 +83,7 @@ interface ResearchAgentConfig extends AgentConfig {
   synthesisStyle?: 'analytical' | 'synthetic' | 'critical';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -125,7 +125,7 @@ const taskId = await coordinator.createTask({
 // Execute the research
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -155,7 +155,7 @@ const researchResults = await Promise.all(
     researchAgent.researchTopic(topic, scope)
   )
 );
-```
+```text
 
 ### Document Chain Analysis
 
@@ -171,7 +171,7 @@ const summaries = await Promise.all(
 
 // Synthesize insights across documents
 const synthesizedInsights = researchAgent.synthesizeInsights(summaries);
-```
+```text
 
 ## Version History
 

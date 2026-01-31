@@ -29,7 +29,7 @@ const i18n = I18n.getInstance({
 
 i18n.setLocale('es-ES');
 const text = i18n.translate('welcome.message');
-```
+```text
 
 ## Related Documentation
 

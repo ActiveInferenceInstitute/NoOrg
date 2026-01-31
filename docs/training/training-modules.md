@@ -50,7 +50,7 @@ basic_training:
       - change_management
       - feedback_handling
       - version_control
-```
+```text
 
 ### Basic Training Management
 ```python
@@ -81,7 +81,7 @@ class BasicTraining:
     def evaluate_progress(self):
         """Evaluate training progress"""
         pass
-```
+```text
 
 ## 🚀 Advanced Features
 
@@ -115,7 +115,7 @@ class BasicTraining:
     }
   }
 }
-```
+```text
 
 ### Advanced Training Management
 ```python
@@ -146,7 +146,7 @@ class AdvancedTraining:
     def assess_mastery(self):
         """Assess advanced mastery"""
         pass
-```
+```text
 
 ## 👨‍💼 Administration
 
@@ -188,7 +188,7 @@ admin_training:
       - resource_allocation
       - efficiency_optimization
       - cost_management
-```
+```text
 
 ### Administration Management
 ```python
@@ -219,7 +219,7 @@ class AdminTraining:
     def assess_capabilities(self):
         """Assess administrative capabilities"""
         pass
-```
+```text
 
 ## 🔧 Maintenance
 
@@ -261,7 +261,7 @@ maintenance_training:
       - automation_maintenance
       - integration_updates
       - efficiency_improvement
-```
+```text
 
 ### Maintenance Training Management
 ```python
@@ -292,7 +292,7 @@ class MaintenanceTraining:
     def verify_competence(self):
         """Verify maintenance competence"""
         pass
-```
+```text
 
 ## 📚 References
 

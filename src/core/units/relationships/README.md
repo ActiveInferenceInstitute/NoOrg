@@ -42,7 +42,7 @@ const relationship = await manager.createRelationship({
     level: PermissionLevel.READ
   }]
 });
-```
+```text
 
 ### Querying Relationships
 
@@ -52,7 +52,7 @@ const relationships = await manager.findRelationships({
   sourceUnitId: 'unit-001',
   type: RelationshipType.HIERARCHY
 });
-```
+```text
 
 ## Integration
 

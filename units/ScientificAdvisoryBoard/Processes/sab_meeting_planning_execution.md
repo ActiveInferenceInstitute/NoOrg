@@ -54,7 +54,7 @@ graph TD
 
     %% Link to other processes
     F --> Reporting[[sab_recommendation_reporting]];
-```
+```text
 
 ## Roles & Responsibilities
 *   **SAB Liaison / Management:** Owns the process, develops agenda drafts, coordinates materials, manages logistics, facilitates/co-facilitates meeting, oversees minutes.

@@ -37,7 +37,7 @@ graph TD
         SB --> SC[State Consistency]
         SC --> SV[State Verification]
     end
-```
+```text
 
 ## Failure Management
 
@@ -75,7 +75,7 @@ class FailureDetector:
         except Exception as e:
             await self._handle_detection_error(e, execution)
             raise
-```
+```text
 
 ### Recovery Manager
 ```python
@@ -120,7 +120,7 @@ class RecoveryManager:
         except Exception as e:
             await self._handle_recovery_error(e, failures)
             raise
-```
+```text
 
 ## State Recovery
 
@@ -165,7 +165,7 @@ class StateRecoveryManager:
         except Exception as e:
             await self._handle_state_recovery_error(e, execution)
             raise
-```
+```text
 
 ### Consistency Manager
 ```python
@@ -207,7 +207,7 @@ class ConsistencyManager:
         except Exception as e:
             await self._handle_consistency_error(e, states)
             raise
-```
+```text
 
 ## Recovery Strategies
 
@@ -252,7 +252,7 @@ class StrategySelector:
         except Exception as e:
             await self._handle_selection_error(e, failures)
             raise
-```
+```text
 
 ### Recovery Validation
 ```python
@@ -296,7 +296,7 @@ class RecoveryValidator:
         except Exception as e:
             await self._handle_validation_error(e, recovery)
             raise
-```
+```text
 
 ## Configuration
 
@@ -322,7 +322,7 @@ recovery_configuration:
         - resource_failure
         - network_failure
         - state_corruption
-```
+```text
 
 ### State Management
 ```yaml
@@ -342,7 +342,7 @@ state_management:
       - state_comparison
       - integrity_check
       - consistency_validation
-```
+```text
 
 ## Best Practices
 
@@ -366,7 +366,7 @@ recovery_best_practices:
     - implement_redundancy
     - enable_graceful_degradation
     - automate_recovery
-```
+```text
 
 ### Performance Best Practices
 ```yaml
@@ -388,7 +388,7 @@ performance_best_practices:
     - optimize_verification
     - maintain_consistency
     - verify_performance
-```
+```text
 
 ## Documentation
 

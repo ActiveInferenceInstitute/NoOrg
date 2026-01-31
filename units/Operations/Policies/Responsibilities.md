@@ -7,7 +7,7 @@ graph LR
     Manager --> Engineer["Process Engineer"]
     Manager --> Analyst["Resource Analyst"]
     Manager --> QA["Quality Assurance Lead"]
-```
+```text
 
 ## Roles & Responsibilities
 

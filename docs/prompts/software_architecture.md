@@ -41,7 +41,7 @@ mindmap
       Pattern combination
       Pattern adaptation
       Context consideration
-```
+```text
 
 ## Architectural Styles
 1. **Layered architecture**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## System Quality Attributes
 1. **Performance efficiency**
@@ -188,7 +188,7 @@ flowchart TD
     D --> G
     E --> G
     F --> G
-```
+```text
 
 ## Data Architecture Patterns
 1. **Data storage strategies**
@@ -254,7 +254,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Integration Patterns
 1. **API design**
@@ -320,7 +320,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Architectural Decision Making
 1. **Trade-off analysis**
@@ -386,7 +386,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Architecture Governance
 - Establish architecture principles and standards
@@ -429,7 +429,7 @@ mindmap
       Industry trend adoption
       Outcome evaluation
       Continuous improvement
-```
+```text
 
 ## Architecture Implementation Process
 ```mermaid
@@ -467,4 +467,4 @@ graph TB
     
     P -.-> K
     P -.-> L
-``` 
+```text 

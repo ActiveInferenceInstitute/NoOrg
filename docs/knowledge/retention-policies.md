@@ -44,7 +44,7 @@ retention_periods:
       period: "7 years minimum"
       review_frequency: "annual"
       storage: "secure_archive"
-```
+```text
 
 ### Retention Management
 ```python
@@ -75,7 +75,7 @@ class RetentionManager:
     def verify_compliance(self):
         """Verify retention compliance"""
         pass
-```
+```text
 
 ## 📦 Archive Process
 
@@ -109,7 +109,7 @@ class RetentionManager:
     }
   }
 }
-```
+```text
 
 ### Archive Implementation
 ```python
@@ -140,7 +140,7 @@ class ArchiveProcessor:
     def verify_archive(self):
         """Verify archive integrity"""
         pass
-```
+```text
 
 ## 🗑️ Deletion Procedures
 
@@ -175,7 +175,7 @@ deletion_procedures:
     retention:
       period: "7 years"
       storage: "audit_system"
-```
+```text
 
 ### Deletion Management
 ```python
@@ -206,7 +206,7 @@ class DeletionManager:
     def verify_deletion(self):
         """Verify deletion completion"""
         pass
-```
+```text
 
 ## 📊 Compliance Monitoring
 
@@ -236,7 +236,7 @@ compliance_monitoring:
       - compliance_status
       - exception_reports
       - audit_findings
-```
+```text
 
 ### Compliance Management
 ```python
@@ -267,7 +267,7 @@ class ComplianceMonitor:
     def generate_reports(self):
         """Generate compliance reports"""
         pass
-```
+```text
 
 ## 🔄 Review and Updates
 
@@ -301,7 +301,7 @@ class ComplianceMonitor:
     }
   }
 }
-```
+```text
 
 ### Update Implementation
 ```python
@@ -332,7 +332,7 @@ class PolicyUpdater:
     def track_changes(self):
         """Track policy changes"""
         pass
-```
+```text
 
 ## 📚 References
 

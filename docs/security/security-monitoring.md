@@ -19,7 +19,7 @@ graph TD
     A --> C[Threat Analysis]
     A --> D[Incident Response]
     A --> E[Performance Monitoring]
-```
+```text
 
 ### Monitoring Architecture
 1. **Monitoring Layers**

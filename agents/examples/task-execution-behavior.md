@@ -24,7 +24,7 @@ behavior_model:
   category: "task_management"
   complexity: "high"
   adaptability: "dynamic"
-```
+```text
 
 ## Implementation
 
@@ -41,7 +41,7 @@ graph TD
     G -.-> D
     H[Learning System] -.-> D
     H -.-> E
-```
+```text
 
 ### State Machine
 ```yaml
@@ -91,7 +91,7 @@ states:
     transitions:
       - to: finished
         condition: cleanup_complete
-```
+```text
 
 ## Interaction Pattern
 
@@ -108,7 +108,7 @@ inputs:
       priority: normal
     - condition: resource_state_changed
       priority: high
-```
+```text
 
 ### Output Generation
 ```yaml
@@ -123,7 +123,7 @@ outputs:
       destination: task_manager
     - type: performance_metrics
       destination: monitoring_system
-```
+```text
 
 ## Learning & Adaptation
 
@@ -140,7 +140,7 @@ learning:
     - minimize_execution_time
     - optimize_resource_usage
     - maximize_success_rate
-```
+```text
 
 ### Adaptation Rules
 - Condition: performance_below_threshold
@@ -165,7 +165,7 @@ communication:
   external:
     - target: monitoring_system
       protocol: [[protocols#metrics-reporting]]
-```
+```text
 
 ## Performance
 
@@ -182,7 +182,7 @@ metrics:
       threshold: 0.85
     - metric: throughput
       threshold: 100_tasks_per_minute
-```
+```text
 
 ### Optimization
 - Strategy: dynamic_resource_allocation
@@ -204,7 +204,7 @@ safety:
   postconditions:
     - resources_released
     - results_validated
-```
+```text
 
 ### Validation Methods
 - Test Scenarios: standard_task_suite

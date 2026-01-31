@@ -23,7 +23,7 @@ related_frameworks:
   - [[frameworks/risk_management]]
   - [[frameworks/business_development]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This framework outlines the strategic planning process that implements the [[strategies/corporate_strategy|Corporate Strategy]]. It provides structured approaches and methodologies for strategic planning across all organizational levels.

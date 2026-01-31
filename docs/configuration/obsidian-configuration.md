@@ -25,7 +25,7 @@ This document outlines the complete configuration setup for our Obsidian vault, 
   "strictLineBreaks": true,
   "showLineNumber": true
 }
-```
+```text
 
 ### Editor Settings
 ```json
@@ -43,7 +43,7 @@ This document outlines the complete configuration setup for our Obsidian vault, 
   "showIndentGuide": true,
   "tabSize": 2
 }
-```
+```text
 
 ### Files & Links
 ```json
@@ -60,7 +60,7 @@ This document outlines the complete configuration setup for our Obsidian vault, 
     "downscalePercent": 100
   }
 }
-```
+```text
 
 ## 🔌 Core Plugins
 
@@ -205,7 +205,7 @@ workspace:
       - id: backlinks
       - id: tags
       - id: search
-```
+```text
 
 ### Panel Configuration
 1. **File Explorer**
@@ -236,7 +236,7 @@ workspace:
   "nativeMenus": false,
   "showViewHeader": true
 }
-```
+```text
 
 ### Custom CSS
 ```css
@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
-```
+```text
 
 ## 🔐 Security Settings
 
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   "autoSync": true,
   "syncOnStart": true
 }
-```
+```text
 
 ### Backup Settings
 ```json
@@ -282,7 +282,7 @@ h1, h2, h3, h4, h5, h6 {
   "maxBackupCount": 10,
   "backupPath": "backup/"
 }
-```
+```text
 
 ## 📱 Mobile Configuration
 
@@ -299,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
   "mobileQuickOpen": true,
   "mobileSwipeNavigate": true
 }
-```
+```text
 
 ### Mobile Sync
 ```json
@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
     "onlyOnWifi": true
   }
 }
-```
+```text
 
 ## 🔄 Hotkeys
 
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
     ]
   }
 }
-```
+```text
 
 ### Custom Commands
 ```json
@@ -364,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   ]
 }
-```
+```text
 
 ## 📚 References
 

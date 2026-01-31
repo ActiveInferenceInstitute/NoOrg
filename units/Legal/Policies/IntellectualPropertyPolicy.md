@@ -28,7 +28,7 @@ Applies to all employees, contractors, and third parties involved in the creatio
 *   [Link to Employee Agreement (IP Assignment Clause)]
 *   [Link to Contractor Agreement (IP Clause)]
 *   [Link to NDA Template]
-*   [Link to IP Disclosure Form](../IntellectualProperty/DisclosureForm.md)
+*   [Link to IP Disclosure Form](../IntellectualProperty/AGENTS.md)
 *   [Link to Trademark Usage Guidelines](../IntellectualProperty/Trademarks/UsageGuidelines.md)
 
 ## Contact

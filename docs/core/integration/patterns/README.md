@@ -34,7 +34,7 @@ const response = await pattern.execute({
   data: { id: '123' }, 
   metadata: { timeout: 5000 } 
 });
-```
+```text
 
 ## Circuit Breaker Pattern
 
@@ -63,7 +63,7 @@ const getUser = async (id: string) => {
 // Or wrap a function for reuse
 const protectedFindUser = breaker.wrap(database.findUser);
 const user = await protectedFindUser('123');
-```
+```text
 
 ### Configuration Options
 
@@ -91,7 +91,7 @@ const bulkhead = new Bulkhead('apiRequests', {
 const result = await bulkhead.execute(async () => {
   return await api.fetchData();
 });
-```
+```text
 
 ### Configuration Options
 
@@ -121,7 +121,7 @@ try {
 } catch (error) {
   // Handle timeout error
 }
-```
+```text
 
 ### Configuration Options
 
@@ -148,7 +148,7 @@ const retry = new Retry('apiCall', {
 const result = await retry.execute(async () => {
   return await api.fetchData();
 });
-```
+```text
 
 ### Configuration Options
 
@@ -178,7 +178,7 @@ const rateLimiter = new RateLimiter('apiRequests', {
 const result = await rateLimiter.execute(async () => {
   return await api.makeRequest();
 });
-```
+```text
 
 ### Configuration Options
 

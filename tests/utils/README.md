@@ -32,7 +32,7 @@ mapper.save_json_structure("output.json")
 
 # Generate and save Markdown structure
 mapper.save_markdown_structure("output.md")
-```
+```text
 
 Command-line usage:
 
@@ -43,7 +43,7 @@ python -m tests.utils.file_structure_mapper \
     --markdown output.md \
     --exclude "*.pyc" "__pycache__" \
     --max-depth 3
-```
+```text
 
 ## Integration with Test Suites
 

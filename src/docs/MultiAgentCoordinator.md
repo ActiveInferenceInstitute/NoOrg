@@ -53,7 +53,7 @@ class MultiAgentCoordinator {
   async saveState(filePath: string): Promise<boolean>
   async loadState(filePath: string): Promise<boolean>
 }
-```
+```text
 
 ## Usage Examples
 
@@ -88,7 +88,7 @@ const coordinator = new MultiAgentCoordinator(
 
 // Initialize the coordinator
 await coordinator.initialize();
-```
+```text
 
 ### Agent Registration
 
@@ -102,7 +102,7 @@ const researchAgentId = await coordinator.registerAgent({
   status: 'available',
   preferredModel: 'o3-mini'
 });
-```
+```text
 
 ### Task Creation and Assignment
 
@@ -119,7 +119,7 @@ const researchTaskId = await coordinator.createTask({
 
 // Assign the task to an agent
 await coordinator.assignTask(researchTaskId, researchAgentId);
-```
+```text
 
 ### Task Completion
 
@@ -134,7 +134,7 @@ await coordinator.updateTaskStatus(researchTaskId, 'completed', {
     ]
   }
 });
-```
+```text
 
 ## Type Definitions
 
@@ -153,7 +153,7 @@ interface Agent {
   createdAt: number;
   lastActive: number;
 }
-```
+```text
 
 ### Capability
 
@@ -163,7 +163,7 @@ interface Capability {
   description: string;
   parameters?: Record<string, unknown>;
 }
-```
+```text
 
 ### Task
 
@@ -186,7 +186,7 @@ interface Task {
   priority?: 'low' | 'medium' | 'high' | 'critical';
   dependsOn?: string[];
 }
-```
+```text
 
 ## Implementation Notes
 
@@ -216,7 +216,7 @@ interface Task {
 
 ## Dependency Diagram
 
-```
+```text
 ┌─────────────────────┐
 │                     │
 │ MultiAgentCoordinator │
@@ -253,4 +253,4 @@ interface Task {
 │     Agent Types     │◄─────────────┘
 │                     │
 └─────────────────────┘
-``` 
+```text 

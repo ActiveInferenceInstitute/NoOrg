@@ -44,7 +44,7 @@ link_verification:
       - summary_report
       - action_items
       - trend_analysis
-```
+```text
 
 ### Link Management
 ```python
@@ -75,7 +75,7 @@ class LinkManager:
     def generate_report(self):
         """Generate verification report"""
         pass
-```
+```text
 
 ## 📚 Content Freshness
 
@@ -121,7 +121,7 @@ class LinkManager:
     }
   }
 }
-```
+```text
 
 ### Content Management
 ```python
@@ -152,7 +152,7 @@ class ContentManager:
     def manage_updates(self):
         """Manage content updates"""
         pass
-```
+```text
 
 ## ✅ Task Updates
 
@@ -188,7 +188,7 @@ task_management:
       - status_documentation
       - progress_notes
       - blocker_resolution
-```
+```text
 
 ### Task Automation
 ```python
@@ -219,7 +219,7 @@ class TaskManager:
     def generate_report(self):
         """Generate task report"""
         pass
-```
+```text
 
 ## 📊 Progress Tracking
 
@@ -259,7 +259,7 @@ progress_tracking:
       - performance_indicators
       - trend_visualization
       - status_overview
-```
+```text
 
 ### Analytics System
 ```python
@@ -290,7 +290,7 @@ class ProgressAnalytics:
     def generate_insights(self):
         """Generate progress insights"""
         pass
-```
+```text
 
 ## 📝 Review Documentation
 
@@ -339,7 +339,7 @@ class ProgressAnalytics:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

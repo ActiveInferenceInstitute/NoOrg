@@ -49,7 +49,7 @@ graph TD
     G --> G1[Prompt Engineering]
     G --> G2[Response Processing]
     G --> G3[Knowledge Integration]
-```
+```text
 
 ## 🏗️ System Architecture
 
@@ -125,7 +125,7 @@ flowchart TD
     Coordination_Engine <--> LLM_Integration
     LLM_Integration <--> Knowledge_Management
     Stigmergic_Environment <--> Knowledge_Management
-```
+```text
 
 ## 🔍 Detailed Component Specifications
 
@@ -148,7 +148,7 @@ interface AgentRegistry {
   updateAgentStatus(agentId: string, status: AgentStatus): Promise<void>;
   getAgentStatus(agentId: string): Promise<AgentStatus>;
 }
-```
+```text
 
 #### Shared State Manager
 ```typescript
@@ -168,7 +168,7 @@ interface SharedStateManager {
   loadPersistedState(path: string): Promise<any>;
   clearEphemeralState(): Promise<void>;
 }
-```
+```text
 
 #### Task Manager
 ```typescript
@@ -190,7 +190,7 @@ interface TaskManager {
   failTask(taskId: string, error: Error): Promise<void>;
   cancelTask(taskId: string): Promise<void>;
 }
-```
+```text
 
 #### Resource Manager
 ```typescript
@@ -209,7 +209,7 @@ interface ResourceManager {
   optimizeResourceAllocation(): Promise<OptimizationResult>;
   generateResourceForecast(timeframe: TimeFrame): Promise<ResourceForecast>;
 }
-```
+```text
 
 ### 2. Stigmergic Environment
 
@@ -231,7 +231,7 @@ interface EnvironmentState {
   updateObject(environmentId: string, objectId: string, updates: Partial<EnvironmentObject>): Promise<void>;
   removeObject(environmentId: string, objectId: string): Promise<void>;
 }
-```
+```text
 
 #### Modification Tracker
 ```typescript
@@ -246,7 +246,7 @@ interface ModificationTracker {
   getModificationPatterns(environmentId: string): Promise<ModificationPattern[]>;
   getAgentActivityProfile(agentId: string): Promise<ActivityProfile>;
 }
-```
+```text
 
 #### Signal Propagator
 ```typescript
@@ -265,7 +265,7 @@ interface SignalPropagator {
   processSignals(environmentId: string): Promise<ProcessingResult>;
   getSignalEffects(signalId: string): Promise<SignalEffect[]>;
 }
-```
+```text
 
 ### 3. Coordination Engine
 
@@ -287,7 +287,7 @@ interface StrategicCoordinator {
   enforcePolicy(policyId: string): Promise<EnforcementResult>;
   evaluatePolicy(policyId: string): Promise<PolicyEvaluation>;
 }
-```
+```text
 
 #### Tactical Coordinator
 ```typescript
@@ -307,7 +307,7 @@ interface TacticalCoordinator {
   cancelDirective(directiveId: string): Promise<void>;
   getDirectiveStatus(directiveId: string): Promise<DirectiveStatus>;
 }
-```
+```text
 
 #### Coalition Manager
 ```typescript
@@ -327,7 +327,7 @@ interface CoalitionManager {
   analyzeCoalitionEffectiveness(coalitionId: string): Promise<EffectivenessAnalysis>;
   predictOptimalCoalition(task: Task): Promise<CoalitionPrediction>;
 }
-```
+```text
 
 ### 4. LLM Integration Layer
 
@@ -348,7 +348,7 @@ interface OpenAIClient {
   getUsageStatistics(timeframe: TimeFrame): Promise<UsageStatistics>;
   estimateTokenUsage(prompt: string, model: string): Promise<TokenEstimate>;
 }
-```
+```text
 
 #### Prompt Manager
 ```typescript
@@ -368,7 +368,7 @@ interface PromptManager {
   updateContext(contextId: string, data: any): Promise<void>;
   mergeContexts(contextIds: string[]): Promise<string>;
 }
-```
+```text
 
 #### Response Processor
 ```typescript
@@ -387,7 +387,7 @@ interface ResponseProcessor {
   extractKnowledge(response: string): Promise<KnowledgeItems>;
   generateLinks(content: string, knowledgeBase: KnowledgeBase): Promise<Link[]>;
 }
-```
+```text
 
 ### 5. Knowledge Management
 
@@ -408,7 +408,7 @@ interface KnowledgeIntegrator {
   searchKnowledge(query: string): Promise<SearchResult[]>;
   getKnowledgeGraph(filter?: GraphFilter): Promise<KnowledgeGraph>;
 }
-```
+```text
 
 #### Documentation Generator
 ```typescript
@@ -427,7 +427,7 @@ interface DocumentationGenerator {
   organizeDocs(docs: string[], structure: DocStructure): Promise<OrganizationResult>;
   validateDocumentation(docs: string[]): Promise<ValidationResult>;
 }
-```
+```text
 
 #### Link Manager
 ```typescript
@@ -447,7 +447,7 @@ interface LinkManager {
   generateObsidianLink(source: string, target: string, alias?: string): Promise<string>;
   updateBacklinks(target: string): Promise<void>;
 }
-```
+```text
 
 ## 🌐 Integration with Organizational Units
 

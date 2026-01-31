@@ -25,7 +25,7 @@ related_documents:
   - [[monitoring/metrics_framework]]
   - [[monitoring/alerting_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the integration framework for monitoring systems within the agent framework, providing standardized approaches for connecting and integrating monitoring components with other system elements.
@@ -42,7 +42,7 @@ class MonitoringIntegrationManager:
         self.transformer = DataTransformer()
         self.validator = IntegrationValidator()
         self.router = IntegrationRouter()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -53,7 +53,7 @@ graph TD
     B --> E[Connector Registry]
     C --> F[Adapter Pipeline]
     D --> G[Transform Engine]
-```
+```text
 
 ### 2. Integration Connection
 #### 2.1 Connection System
@@ -70,7 +70,7 @@ class IntegrationConnector:
         connection = await self.pool.get_connection(connector)
         monitoring = await self.monitor.monitor_connection(connection)
         return await self.registry.register_connection(monitoring)
-```
+```text
 
 #### 2.2 Connection Types
 - Service Connection
@@ -93,7 +93,7 @@ class IntegrationAdapter:
         pipeline = await self.pipeline.process_adaptation(adapter)
         validation = await self.validator.validate_adaptation(pipeline)
         return await self.registry.register_adapter(validation)
-```
+```text
 
 #### 3.2 Adaptation Types
 - Protocol Adaptation
@@ -116,7 +116,7 @@ class DataTransformer:
         conversion = await self.converter.convert_data(mapping, target_format)
         validation = await self.validator.validate_transformation(conversion)
         return await self.engine.transform_data(validation)
-```
+```text
 
 #### 4.2 Transformation Types
 - Format Transformation
@@ -139,7 +139,7 @@ class IntegrationRouter:
         scheduling = await self.scheduler.schedule_message(endpoint)
         tracking = await self.tracker.track_message(scheduling)
         return await self.engine.route_message(tracking)
-```
+```text
 
 #### 5.2 Routing Types
 - Direct Routing
@@ -162,7 +162,7 @@ class IntegrationValidator:
         testing = await self.tester.test_integration(schema)
         reporting = await self.reporter.report_validation(testing)
         return await self.engine.validate_integration(reporting)
-```
+```text
 
 #### 6.2 Validation Types
 - Schema Validation
@@ -187,7 +187,7 @@ class IntegrationStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Protocol Standards
@@ -204,7 +204,7 @@ class IntegrationProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Connection Process
@@ -235,7 +235,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -267,7 +267,7 @@ class IntegrationSecurity:
     async def audit_integration(self, audit):
         # Integration auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Connection Security
@@ -317,7 +317,7 @@ class IntegrationPattern:
         self.connector = IntegrationConnector()
         self.adapter = IntegrationAdapter()
         self.transformer = DataTransformer()
-```
+```text
 
 ### B. Protocol Patterns
 ```python
@@ -327,7 +327,7 @@ class ProtocolPattern:
         self.handler = ProtocolHandler()
         self.converter = ProtocolConverter()
         self.validator = ProtocolValidator()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -337,4 +337,4 @@ class SecurityPattern:
         self.authenticator = SecurityAuthenticator()
         self.authorizer = SecurityAuthorizer()
         self.auditor = SecurityAuditor()
-``` 
+```text 

@@ -19,7 +19,7 @@ TABLE
 FROM "events/current"
 WHERE status = "active"
 SORT date desc
-```
+```text
 
 ### System Performance
 ```dataview
@@ -31,7 +31,7 @@ TABLE
 FROM "monitoring/systems"
 WHERE is_active = true
 SORT priority desc
-```
+```text
 
 ## 🎯 Key Performance Indicators
 
@@ -65,7 +65,7 @@ TABLE
 FROM "monitoring/alerts"
 WHERE status = "active"
 SORT severity desc
-```
+```text
 
 ### Recent Incidents
 ```dataview
@@ -77,7 +77,7 @@ TABLE
 FROM "monitoring/incidents"
 WHERE date >= date(today) - dur(1 day)
 SORT date desc
-```
+```text
 
 ## 💡 Quick Actions
 
@@ -116,7 +116,7 @@ data: attendance_data
 x: time
 y: count
 title: "Attendance Over Time"
-```
+```text
 
 ### System Performance
 ```chart
@@ -125,7 +125,7 @@ data: performance_data
 x: time
 y: response_time
 title: "System Response Time"
-```
+```text
 
 ### Engagement Metrics
 ```chart
@@ -134,7 +134,7 @@ data: engagement_data
 categories: ["Sessions", "Q&A", "Polls", "Chat"]
 values: participation_rates
 title: "Engagement by Channel"
-```
+```text
 
 ## 🎪 Event Status
 
@@ -148,7 +148,7 @@ TABLE
 FROM "events/sessions"
 WHERE status = "active"
 SORT start_time asc
-```
+```text
 
 ### Upcoming Sessions
 ```dataview
@@ -160,7 +160,7 @@ TABLE
 FROM "events/sessions"
 WHERE start_time > date(now) AND start_time < date(now) + dur(2 hours)
 SORT start_time asc
-```
+```text
 
 ## 🔐 Security Monitoring
 

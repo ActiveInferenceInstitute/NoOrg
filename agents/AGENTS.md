@@ -20,6 +20,7 @@ The legacy framework included various agent types for different purposes:
 ## Architecture (Legacy)
 
 ### Key Components
+
 - **Agent Base Classes**: Abstract base classes for different agent types
 - **Communication Protocols**: Message passing between agents
 - **Task Management**: Workflow and task coordination
@@ -27,6 +28,7 @@ The legacy framework included various agent types for different purposes:
 - **Event System**: Pub/sub messaging infrastructure
 
 ### Design Patterns
+
 - **Observer Pattern**: For event-driven communication
 - **Strategy Pattern**: For pluggable agent behaviors
 - **Factory Pattern**: For agent instantiation
@@ -37,6 +39,7 @@ The legacy framework included various agent types for different purposes:
 All functionality has been successfully migrated to the current framework:
 
 ### Improvements Made
+
 - **Type Safety**: Enhanced TypeScript interfaces and strict typing
 - **Performance**: Optimized for production scalability
 - **Testing**: Comprehensive unit and integration test coverage
@@ -45,6 +48,7 @@ All functionality has been successfully migrated to the current framework:
 - **Error Handling**: Robust error handling and recovery mechanisms
 
 ### Migration Benefits
+
 - **Better Maintainability**: Cleaner code structure and organization
 - **Enhanced Reliability**: Comprehensive testing and error handling
 - **Improved Performance**: Optimized for high-load scenarios
@@ -54,6 +58,7 @@ All functionality has been successfully migrated to the current framework:
 ## Current Framework Location
 
 The current, actively maintained agent framework is located in:
+
 - **Agent Implementations**: `src/agents/`
 - **Documentation**: `src/agents/*/AGENTS.md`
 - **Tests**: `tests/unit/agents/`
@@ -62,14 +67,15 @@ The current, actively maintained agent framework is located in:
 ## Legacy Documentation
 
 This legacy documentation is preserved for:
+
 - **Historical Reference**: Understanding framework evolution
 - **Learning**: Studying different implementation approaches
 - **Migration Research**: Understanding changes between versions
 
 ## Related Documentation
 
-- [Current Agent Framework](../../../src/agents/README.md)
-- [Agent Documentation](../../../docs/agents/README.md)
-- [Migration Guide](../../../docs/development/migration-guide.md)
-- [Current Test Coverage](../../../tests/unit/agents/README.md)
-- [Architecture Overview](../../../docs/architecture/system-architecture.md)
+- [Current Agent Framework](../README.md)
+- [Agent Documentation](../README.md)
+- [Migration Guide](../docs/development/migration-guide.md)
+- [Current Test Coverage](../README.md)
+- [Architecture Overview](../docs/system/system-architecture.md)

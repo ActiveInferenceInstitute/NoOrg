@@ -6,7 +6,7 @@ This directory contains the complete source code implementation of the NoOrg mul
 
 ## Directory Structure
 
-```
+```text
 src/
 ├── index.ts              # Main entry point
 ├── agents/               # Agent implementations
@@ -19,7 +19,7 @@ src/
 ├── diagrams/             # Diagram generation utilities
 ├── config/               # Configuration management
 └── AGENTS.md            # This file
-```
+```text
 
 ## Core Components
 
@@ -38,7 +38,7 @@ async function main() {
   await coordinator.initialize();
   await coordinator.start();
 }
-```
+```text
 
 ### Agent Framework (`agents/`)
 
@@ -60,7 +60,7 @@ interface Agent {
   lastActive: number;
   createdAt: number;
 }
-```
+```text
 
 ### Core Infrastructure (`core/`)
 
@@ -135,7 +135,7 @@ interface MultiAgentCoordinator {
   // Workflow Execution
   executeWorkflow(workflow: WorkflowDefinition): Promise<any>;
 }
-```
+```text
 
 ### Agent Registry API
 
@@ -147,7 +147,7 @@ interface AgentRegistry {
   findAgentsByType(type: string): Promise<Agent[]>;
   getAgent(agentId: string): Promise<Agent | null>;
 }
-```
+```text
 
 ### Shared State API
 
@@ -158,7 +158,7 @@ interface SharedStateManager {
   subscribe(path: string, callback: StateChangeCallback): () => void;
   clearState(): Promise<void>;
 }
-```
+```text
 
 ### Event System API
 
@@ -171,7 +171,7 @@ interface EventSystem {
   getEventHistory(type: string): EventDefinition[];
   findEvents(filter: EventFilter): EventDefinition[];
 }
-```
+```text
 
 ## Architecture Patterns
 
@@ -187,7 +187,7 @@ class SharedStateManager {
     return SharedStateManager.instance;
   }
 }
-```
+```text
 
 ### Observer Pattern
 Event system implements publish/subscribe:
@@ -195,7 +195,7 @@ Event system implements publish/subscribe:
 eventSystem.on('task.completed', (event) => {
   console.log('Task completed:', event.payload);
 });
-```
+```text
 
 ### Strategy Pattern
 Multiple coordination strategies:
@@ -203,7 +203,7 @@ Multiple coordination strategies:
 interface CoordinationStrategy {
   execute(context: StrategyContext): Promise<StrategyResult>;
 }
-```
+```text
 
 ### Factory Pattern
 Agent creation and management:
@@ -217,7 +217,7 @@ class AgentFactory {
     }
   }
 }
-```
+```text
 
 ## Data Flow
 
@@ -296,19 +296,19 @@ npm run build        # TypeScript compilation
 npm run type-check   # Type validation
 npm run lint         # Code quality checks
 npm test            # Test execution
-```
+```text
 
 ### Production Deployment
 ```bash
 npm run build
 NODE_ENV=production npm start
-```
+```text
 
 ### Docker Deployment
 ```bash
 docker build -t noorg/multiagent-framework .
 docker run -p 3000:3000 noorg/multiagent-framework
-```
+```text
 
 ## Monitoring and Observability
 

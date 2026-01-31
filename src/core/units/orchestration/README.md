@@ -51,7 +51,7 @@ const task = await orchestrator.submitTask({
 
 // Get task status
 const status = orchestrator.getTaskStatus('task-001');
-```
+```text
 
 ## Integration
 

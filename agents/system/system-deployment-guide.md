@@ -51,7 +51,7 @@ infrastructure:
       - name: "standard"
         type: "gp2"
         iops: 3000
-```
+```text
 
 ## Pre-deployment Setup
 
@@ -75,7 +75,7 @@ preparation:
     - cert_manager_deployment
     - secrets_management
     - logging_infrastructure
-```
+```text
 
 ### Core Services Installation
 ```yaml
@@ -118,7 +118,7 @@ core_services:
       version: 7.0.0
       cluster: true
       replicas: 3
-```
+```text
 
 ## Deployment Process
 
@@ -153,7 +153,7 @@ environment_config:
       pods: 30
       services: 15
       secrets: 30
-```
+```text
 
 ### 2. Agent Deployment Sequence
 ```yaml
@@ -237,7 +237,7 @@ deployment_sequence:
               target:
                 type: Utilization
                 averageUtilization: 70
-```
+```text
 
 ### 3. Service Configuration
 ```yaml
@@ -288,7 +288,7 @@ service_configuration:
     tracing:
       enabled: true
       sampling_rate: 0.1
-```
+```text
 
 ### 4. Security Setup
 ```yaml
@@ -330,7 +330,7 @@ security_setup:
             namespaceSelector:
               matchLabels:
                 name: agent-system
-```
+```text
 
 ## Operational Procedures
 
@@ -358,7 +358,7 @@ startup_procedures:
     - validate_agent_communication
     - check_system_metrics
     - verify_learning_pipeline
-```
+```text
 
 ### System Shutdown
 ```yaml
@@ -384,7 +384,7 @@ shutdown_procedures:
     - verify_resource_cleanup
     - check_data_persistence
     - validate_shutdown_completion
-```
+```text
 
 ## Monitoring & Maintenance
 
@@ -412,7 +412,7 @@ health_monitoring:
     - name: learning_degradation
       severity: warning
       notification: standard
-```
+```text
 
 ### Backup Procedures
 ```yaml
@@ -431,7 +431,7 @@ backup_procedures:
     frequency: daily
     retention: 90d
     type: snapshot
-```
+```text
 
 ### Scaling Procedures
 ```yaml
@@ -452,7 +452,7 @@ scaling_procedures:
       trigger: memory_usage > 80%
       increment: 8Gi
       cooldown: 1800s
-```
+```text
 
 ## Troubleshooting
 
@@ -479,7 +479,7 @@ troubleshooting_guide:
         - adjust_parameters
         - increase_resources
         - rebalance_load
-```
+```text
 
 ### Recovery Procedures
 ```yaml
@@ -495,7 +495,7 @@ recovery_procedures:
     - restore_from_backup
     - validate_data_consistency
     - resume_operations
-```
+```text
 
 ## Documentation
 

@@ -19,7 +19,7 @@ graph TD
     A --> C[Benefit Analysis]
     A --> D[Time Analysis]
     A --> E[Risk Analysis]
-```
+```text
 
 ### Analysis Framework
 1. **ROI Components**

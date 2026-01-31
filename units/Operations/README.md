@@ -31,7 +31,7 @@ graph TD
     Processes --> OperationsUnit
     Reports --> OperationsUnit
     Meetings --> OperationsUnit
-```
+```text
 
 ## Key Documents
 

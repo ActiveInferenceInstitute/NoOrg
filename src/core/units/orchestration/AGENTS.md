@@ -25,7 +25,7 @@ interface TaskDefinition {
   result?: any;
   error?: string;
 }
-```
+```text
 
 #### OrchestratorOptions
 
@@ -35,7 +35,7 @@ interface OrchestratorOptions {
   maxRetries?: number;
   circuitBreakerFailureThreshold?: number;
 }
-```
+```text
 
 ### AgentOrchestrator Class
 
@@ -45,7 +45,7 @@ interface OrchestratorOptions {
 
 ```typescript
 public static getInstance(options?: OrchestratorOptions): AgentOrchestrator
-```
+```text
 
 Gets singleton instance.
 
@@ -62,7 +62,7 @@ Gets singleton instance.
 public async submitTask(
   task: Omit<TaskDefinition, 'createTime' | 'status'>
 ): Promise<TaskDefinition>
-```
+```text
 
 Submits a task for execution.
 
@@ -75,7 +75,7 @@ Submits a task for execution.
 
 ```typescript
 public async cancelTask(id: string): Promise<boolean>
-```
+```text
 
 Cancels a task.
 
@@ -88,7 +88,7 @@ Cancels a task.
 
 ```typescript
 public getTaskStatus(id: string): TaskDefinition | null
-```
+```text
 
 Gets task status.
 
@@ -107,7 +107,7 @@ Gets task status.
 
 ```typescript
 public async executeTask(task: TaskDefinition): Promise<any>
-```
+```text
 
 Executes a task.
 

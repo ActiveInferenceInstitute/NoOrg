@@ -10,33 +10,33 @@ These resources provide standardized materials, forms, and reference documents t
 
 | Category | Description | Primary Users |
 |----------|-------------|---------------|
-| [Templates](Templates/) | Standardized formats for common support activities | Support Agents |
-| [Reference Materials](Reference/) | Lookup information and guides | All Support Staff |
-| [Tools](Tools/) | Scripts, utilities, and applications | Support Operations |
-| [Training](Training/) | Training materials and exercises | New Agents, Trainers |
-| [Forms](Forms/) | Standardized forms for various processes | All Support Staff |
+| [Templates](AGENTS.md) | Standardized formats for common support activities | Support Agents |
+| [Reference Materials](AGENTS.md) | Lookup information and guides | All Support Staff |
+| [Tools](AGENTS.md) | Scripts, utilities, and applications | Support Operations |
+| [Training](AGENTS.md) | Training materials and exercises | New Agents, Trainers |
+| [Forms](AGENTS.md) | Standardized forms for various processes | All Support Staff |
 
 ## Key Resources
 
 ### Templates
-- [Communication Templates](CommunicationTemplates.md) - Standardized templates for customer communications
-- [Ticket Templates](TicketTemplates.md) - Standard formats for different ticket types
-- [Knowledge Article Templates](KnowledgeArticleTemplates.md) - Templates for creating knowledge base content
+- [Communication Templates](AGENTS.md) - Standardized templates for customer communications
+- [Ticket Templates](AGENTS.md) - Standard formats for different ticket types
+- [Knowledge Article Templates](AGENTS.md) - Templates for creating knowledge base content
 
 ### Reference Materials
-- [Customer Support Glossary](CustomerSupportGlossary.md) - Standardized terminology for support communications
-- [Troubleshooting Decision Trees](TroubleshootingDecisionTrees.md) - Structured problem diagnosis guides
-- [Quick Reference Guides](QuickReferenceGuides.md) - Concise reference materials for common issues
+- [Customer Support Glossary](AGENTS.md) - Standardized terminology for support communications
+- [Troubleshooting Decision Trees](AGENTS.md) - Structured problem diagnosis guides
+- [Quick Reference Guides](AGENTS.md) - Concise reference materials for common issues
 
 ### Quality Assurance
 - [Quality Scorecard](QualityScorecard.md) - Evaluation criteria for support interactions
-- [Calibration Guide](CalibrationGuide.md) - Guide for calibrating quality evaluations
-- [Performance Standards](PerformanceStandards.md) - Defined standards for agent performance
+- [Calibration Guide](AGENTS.md) - Guide for calibrating quality evaluations
+- [Performance Standards](AGENTS.md) - Defined standards for agent performance
 
 ### Tools and Utilities
-- [Macros Library](MacrosLibrary.md) - Collection of approved response macros
-- [Diagnostic Tools](DiagnosticTools.md) - Tools for troubleshooting common issues
-- [Agent Productivity Tools](AgentProductivityTools.md) - Resources to enhance agent efficiency
+- [Macros Library](AGENTS.md) - Collection of approved response macros
+- [Diagnostic Tools](AGENTS.md) - Tools for troubleshooting common issues
+- [Agent Productivity Tools](AGENTS.md) - Resources to enhance agent efficiency
 
 ## Resource Development Process
 

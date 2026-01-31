@@ -39,7 +39,7 @@ graph TD
     style L fill:#ccffcc,stroke:#333,stroke-width:2px // Accepted outcome
     style M fill:#ffffcc,stroke:#333,stroke-width:2px // Hold outcome
 
-```
+```text
 
 **Diagram Key:**
 - Rectangles: Process Steps/Activities

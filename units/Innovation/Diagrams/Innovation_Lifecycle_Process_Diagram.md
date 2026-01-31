@@ -60,7 +60,7 @@ graph TD
 
     style R fill:#f9f,stroke:#333,stroke-width:2px
     style S fill:#f9f,stroke:#333,stroke-width:2px
-```
+```text
 
 **Diagram Key:**
 - Rectangles: Process Steps/Activities

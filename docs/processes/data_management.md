@@ -26,7 +26,7 @@ related_documents:
   - [[processes/service_management]]
   - [[security/data_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the operational processes and procedures for managing data integration within the agent system, providing comprehensive guidelines for data lifecycle management, transformation, and security.
@@ -42,7 +42,7 @@ graph TD
     C --> D[Storage]
     D --> E[Access]
     E --> F[Archival]
-```
+```text
 
 #### 1.2 Stage Processes
 ```python
@@ -63,7 +63,7 @@ class DataLifecycle:
             await self.store_data()
             await self.manage_access()
             await self.archive_data()
-```
+```text
 
 ### 2. Data Ingestion
 #### 2.1 Ingestion Process
@@ -80,7 +80,7 @@ class DataIngestion:
         validated = await self.validators.validate_data(data)
         transformed = await self.transformers.transform_data(validated)
         await self.loaders.load_data(transformed)
-```
+```text
 
 #### 2.2 Ingestion Methods
 - Batch Ingestion
@@ -103,7 +103,7 @@ class DataProcessing:
         execution = await self.executor.execute_pipeline(pipeline)
         monitoring = await self.monitor.track_execution(execution)
         await self.optimizer.optimize_processing(monitoring)
-```
+```text
 
 #### 3.2 Processing Types
 - Data Transformation
@@ -126,7 +126,7 @@ class StorageManagement:
         allocation = await self.allocator.allocate_storage(requirements)
         optimization = await self.optimizer.optimize_storage(allocation)
         await self.monitor.monitor_storage(optimization)
-```
+```text
 
 #### 4.2 Storage Types
 - Primary Storage
@@ -149,7 +149,7 @@ class DataAccess:
         authorization = await self.authorizer.authorize(authentication)
         access = await self.controller.grant_access(authorization)
         await self.auditor.audit_access(access)
-```
+```text
 
 #### 5.2 Access Patterns
 - Direct Access
@@ -172,7 +172,7 @@ class QualityManagement:
         monitoring = await self.monitor.monitor_quality(validation)
         analysis = await self.analyzer.analyze_quality(monitoring)
         await self.reporter.report_quality(analysis)
-```
+```text
 
 #### 6.2 Quality Metrics
 - Accuracy Metrics
@@ -197,7 +197,7 @@ class ProcessImplementation:
     async def setup_monitoring(self, monitoring):
         # Monitoring setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Process Structure
@@ -214,7 +214,7 @@ class PipelineManager:
         self.router = DataRouter()
         self.scheduler = TaskScheduler()
         self.monitor = PipelineMonitor()
-```
+```text
 
 #### 2.2 Pipeline Types
 - Linear Pipelines
@@ -245,7 +245,7 @@ class ProcessQuality:
     async def measure_performance(self, metrics):
         # Performance measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -277,7 +277,7 @@ class DataSecurity:
     async def audit_operation(self, operation):
         # Audit logging logic
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Data Encryption
@@ -327,7 +327,7 @@ class ProcessPattern:
         self.pipeline = PipelineEngine()
         self.executor = ProcessExecutor()
         self.monitor = ProcessMonitor()
-```
+```text
 
 ### B. Pipeline Patterns
 ```python
@@ -337,7 +337,7 @@ class PipelinePattern:
         self.engine = PipelineEngine()
         self.router = DataRouter()
         self.scheduler = TaskScheduler()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -347,4 +347,4 @@ class DataSecurityPattern:
         self.encryption = DataEncryption()
         self.access = AccessControl()
         self.audit = AuditLogger()
-``` 
+```text 

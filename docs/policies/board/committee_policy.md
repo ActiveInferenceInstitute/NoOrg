@@ -23,7 +23,7 @@ related_policies:
   - [[policies/board/meeting_policy]]
   - [[policies/board/decision_policy]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This policy establishes the structure, composition, and operational requirements for Board committees, implementing the committee governance aspects of the [[policies/board/composition_policy|Board Composition Policy]] and [[governance/governance_frameworks|Governance Framework]].

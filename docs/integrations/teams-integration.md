@@ -64,7 +64,7 @@ meeting_sync:
           sync_scope: "related_content"
           access_control: "role_based"
           version_control: "enabled"
-```
+```text
 
 ### Sync Management
 ```python
@@ -95,7 +95,7 @@ class MeetingSyncManager:
     def process_content(self):
         """Process meeting content"""
         pass
-```
+```text
 
 ## 📄 Document Sharing
 
@@ -146,7 +146,7 @@ class MeetingSyncManager:
     }
   }
 }
-```
+```text
 
 ### Sharing Management
 ```python
@@ -177,7 +177,7 @@ class DocumentSharingManager:
     def optimize_collaboration(self):
         """Optimize collaboration features"""
         pass
-```
+```text
 
 ## 🤝 Collaboration Features
 
@@ -215,7 +215,7 @@ collaboration_features:
           file_organization: "automated"
           tagging_system: "ai_assisted"
           search_optimization: "intelligent"
-```
+```text
 
 ### Collaboration Management
 ```python
@@ -246,7 +246,7 @@ class CollaborationManager:
     def enhance_interaction(self):
         """Enhance interaction features"""
         pass
-```
+```text
 
 ## 📊 Status Reporting
 
@@ -286,7 +286,7 @@ status_reporting:
           permissions: "role_based"
           security: "policy_compliant"
           tracking: "comprehensive"
-```
+```text
 
 ### Reporting Management
 ```python
@@ -317,7 +317,7 @@ class ReportingManager:
     def optimize_reports(self):
         """Optimize report generation"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

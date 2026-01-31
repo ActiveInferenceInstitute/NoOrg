@@ -21,7 +21,7 @@ interface LocaleConfig {
     precision: number;
   };
 }
-```
+```text
 
 ### I18nConfig
 
@@ -36,7 +36,7 @@ interface I18nConfig {
   enableInterpolation: boolean;
   enableFormatting: boolean;
 }
-```
+```text
 
 ## I18n Class
 
@@ -46,7 +46,7 @@ interface I18nConfig {
 
 ```typescript
 static getInstance(config?: I18nConfig): I18n
-```
+```text
 
 Gets singleton instance.
 
@@ -61,7 +61,7 @@ Gets singleton instance.
 
 ```typescript
 translate(key: string, params?: Record<string, any>): string
-```
+```text
 
 Translates a key.
 
@@ -75,7 +75,7 @@ Translates a key.
 
 ```typescript
 setLocale(locale: string): void
-```
+```text
 
 Sets current locale.
 

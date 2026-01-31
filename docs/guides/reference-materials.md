@@ -47,7 +47,7 @@ api_documentation:
           description: "Bad request"
         - code: 401
           description: "Unauthorized"
-```
+```text
 
 ### API Implementation
 ```python
@@ -78,7 +78,7 @@ class APIDocumentation:
     def validate_documentation(self):
         """Validate API documentation"""
         pass
-```
+```text
 
 ## ⚙️ Configuration Guides
 
@@ -144,7 +144,7 @@ class APIDocumentation:
     }
   }
 }
-```
+```text
 
 ### Configuration Management
 ```python
@@ -175,7 +175,7 @@ class ConfigurationGuide:
     def validate_guides(self):
         """Validate configuration guides"""
         pass
-```
+```text
 
 ## 🎯 Best Practices
 
@@ -211,7 +211,7 @@ best_practices:
       - role_based_access
       - permission_management
       - security_headers
-```
+```text
 
 ### Implementation Guide
 ```python
@@ -242,7 +242,7 @@ class BestPracticesGuide:
     def validate_guides(self):
         """Validate best practice guides"""
         pass
-```
+```text
 
 ## 📊 Performance Guidelines
 
@@ -282,7 +282,7 @@ performance_guidelines:
       - optimization_techniques
       - scaling_strategies
       - caching_implementation
-```
+```text
 
 ### Performance Management
 ```python
@@ -313,7 +313,7 @@ class PerformanceGuide:
     def validate_guides(self):
         """Validate performance guides"""
         pass
-```
+```text
 
 ## 🔄 Maintenance Guidelines
 
@@ -363,7 +363,7 @@ class PerformanceGuide:
     }
   }
 }
-```
+```text
 
 ### Maintenance Management
 ```python
@@ -394,7 +394,7 @@ class MaintenanceGuide:
     def validate_guides(self):
         """Validate maintenance guides"""
         pass
-```
+```text
 
 ## 📚 References
 

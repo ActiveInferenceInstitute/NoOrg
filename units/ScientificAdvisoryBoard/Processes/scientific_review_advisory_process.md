@@ -43,7 +43,7 @@ graph TD
     %% Inputs/Outputs
     Input(Pre-Read Materials) --> B;
     G --> Output[[sab_recommendation_reporting]];
-```
+```text
 
 ## Roles & Responsibilities
 *   **Presenter (Internal SME):** Delivers clear, concise presentation; answers clarifying questions.

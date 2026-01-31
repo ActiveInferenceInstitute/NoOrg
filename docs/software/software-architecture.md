@@ -19,7 +19,7 @@ graph TD
     A --> C[Component Architecture]
     A --> D[Integration Patterns]
     A --> E[Technical Stack]
-```
+```text
 
 ### Architecture Layers
 1. **System Layers**

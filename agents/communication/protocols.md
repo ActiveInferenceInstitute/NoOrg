@@ -24,7 +24,7 @@ sequenceDiagram
     B-->>A: Acknowledge
     B->>A: Response
     A-->>B: Confirm
-```
+```text
 
 ## Protocol Types
 
@@ -49,7 +49,7 @@ basic_protocols:
     patterns:
       - topic_based
       - content_based
-```
+```text
 
 ### Advanced Protocols
 ```yaml
@@ -68,7 +68,7 @@ advanced_protocols:
       - synchronization
       - mutual_exclusion
       - leader_election
-```
+```text
 
 ## Implementation
 
@@ -89,7 +89,7 @@ message_format:
     - priority
     - ttl
     - security
-```
+```text
 
 ### Protocol Patterns
 - Request-Response
@@ -108,7 +108,7 @@ graph TD
     
     E[Security] -.-> A
     F[Monitoring] -.-> B
-```
+```text
 
 ### Cross-System Links
 - [[message-formats|Message Formats]]
@@ -129,7 +129,7 @@ conversation:
     - conversation_id
     - state_history
     - timeout_handling
-```
+```text
 
 ### Quality of Service
 - Reliability
@@ -148,7 +148,7 @@ security_measures:
     - transport_layer
     - message_level
     - end_to_end
-```
+```text
 
 ## Performance
 
@@ -163,7 +163,7 @@ monitoring_metrics:
     - message_loss
     - delivery_order
     - error_rate
-```
+```text
 
 ### Optimization
 - Load Balancing
@@ -188,7 +188,7 @@ error_handling:
     - error_details
     - context
     - resolution
-```
+```text
 
 ### Failure Modes
 - Message Loss

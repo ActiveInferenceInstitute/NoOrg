@@ -36,11 +36,20 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
    * @returns Research results
    */
   async researchTopic(topic: string, scope: { aspects: string[]; depth: string }): Promise<any> {
+    if (!topic || topic.trim().length === 0) {
+      throw new Error('Research topic is required');
+    }
+    if (!scope || !scope.aspects || scope.aspects.length === 0) {
+      throw new Error('Research scope with at least one aspect is required');
+    }
+
     this.updateStatus('busy');
-    
+    const startTime = Date.now();
+
     try {
       const prompt = `Research the following topic comprehensively: ${topic}
       Focus on these aspects: ${scope.aspects.join(', ')}
+      Depth: ${scope.depth}
       Provide detailed information, including:
       1. Current state and developments
       2. Key challenges and opportunities
@@ -55,13 +64,13 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
       });
 
       this.updateStatus('idle');
-      
+
       return {
         topic,
         scope,
         findings: response,
         timestamp: new Date().toISOString(),
-        processingTime: Date.now()
+        processingTime: Date.now() - startTime
       };
     } catch (error: any) {
       this.handleError(error);
@@ -81,8 +90,15 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
     confidence: number;
     processingTime: number;
   }> {
+    if (!document || document.trim().length === 0) {
+      throw new Error('Document is required for information extraction');
+    }
+    if (!extractionQuery || extractionQuery.trim().length === 0) {
+      throw new Error('Extraction query is required');
+    }
+
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     
     try {
@@ -140,8 +156,12 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
     wordCount: number;
     processingTime: number;
   }> {
+    if (!document || document.trim().length === 0) {
+      throw new Error('Document is required for summarization');
+    }
+
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     
     try {
@@ -218,8 +238,12 @@ export class ResearchAgent extends BaseAgent implements ResearchAgentInterface {
     corrections?: string;
     processingTime: number;
   }> {
+    if (!statement || statement.trim().length === 0) {
+      throw new Error('Statement is required for fact checking');
+    }
+
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     
     try {

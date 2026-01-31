@@ -19,7 +19,7 @@ graph TD
     A --> C[Technical Training]
     A --> D[Compliance Training]
     A --> E[Role-Based Training]
-```
+```text
 
 ### Training Architecture
 1. **Training Layers**

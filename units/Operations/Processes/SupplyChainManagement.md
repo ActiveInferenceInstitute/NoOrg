@@ -48,7 +48,7 @@ flowchart TD
     C --> L(Track Inventory Usage)
     K --> L
     L --> M(End/Continuous Monitoring)
-```
+```text
 
 1. Step 1: Requisition & Sourcing
    - Action: Validate need, check existing inventory, select approved supplier, create Purchase Order (PO).

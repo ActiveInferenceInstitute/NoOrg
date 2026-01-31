@@ -116,7 +116,7 @@ graph TD
     IntMembers -- Participate --> EAB
     ExtMembers -- Participate --> EAB
     Secretariat -- Supports --> EAB
-```
+```text
 
 ---
 Approved By: [[Approving Authority]]

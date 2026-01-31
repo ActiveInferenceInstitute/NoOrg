@@ -41,7 +41,7 @@ mindmap
       Impact assessment
       Version control
       Approval workflows
-```
+```text
 
 ## Requirements Elicitation Techniques
 1. **Interviews and workshops**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Requirements Analysis and Specification
 1. **Requirements classification**
@@ -173,7 +173,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Requirements Management
 1. **Prioritization**
@@ -239,7 +239,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Requirements Tools and Techniques
 1. **User stories and acceptance criteria**
@@ -305,7 +305,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Special Requirement Considerations
 1. **Non-functional requirements**
@@ -371,7 +371,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Requirements Challenges and Solutions
 - **Volatile requirements**: Implement change management and prioritization
@@ -414,7 +414,7 @@ mindmap
       Definition of done
       Testability verification
       Example scenarios
-```
+```text
 
 ## Requirements Engineering Process Model
 ```mermaid
@@ -453,4 +453,4 @@ graph TB
     
     R -.-> H
     R -.-> J
-``` 
+```text 

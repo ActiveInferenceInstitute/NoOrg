@@ -82,7 +82,7 @@ gantt
     section Dataset B EDA
     Preprocessing   :b1, 2024-05-01, 45d
     EDA             :b2, after b1, 30d
-```
+```text
 
 ### 3.3 Challenges Encountered
 

@@ -51,7 +51,7 @@ update_notifications:
             - response_times
             - success_rates
             - error_rates
-```
+```text
 
 ### Notification Management
 ```python
@@ -82,7 +82,7 @@ class NotificationManager:
     def handle_updates(self):
         """Handle update notifications"""
         pass
-```
+```text
 
 ## 📋 Task Assignments
 
@@ -140,7 +140,7 @@ class NotificationManager:
     }
   }
 }
-```
+```text
 
 ### Assignment Management
 ```python
@@ -171,7 +171,7 @@ class AssignmentManager:
     def track_progress(self):
         """Track assignment progress"""
         pass
-```
+```text
 
 ## 👥 Review Requests
 
@@ -215,7 +215,7 @@ review_requests:
           type: "code_review"
           scope: ["style", "quality", "performance"]
           output: "improvement_recommendations"
-```
+```text
 
 ### Review Management
 ```python
@@ -246,7 +246,7 @@ class ReviewManager:
     def process_feedback(self):
         """Process review feedback"""
         pass
-```
+```text
 
 ## 📊 Status Updates
 
@@ -285,7 +285,7 @@ status_updates:
           checks: "connectivity_tests"
           latency: "response_times"
           reliability: "error_rates"
-```
+```text
 
 ### Status Management
 ```python
@@ -316,7 +316,7 @@ class StatusManager:
     def handle_alerts(self):
         """Handle status alerts"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

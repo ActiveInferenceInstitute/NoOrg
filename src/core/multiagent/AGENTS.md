@@ -22,7 +22,7 @@ constructor(
     coordinationStrategy?: 'centralized' | 'decentralized' | 'hybrid';
   }
 )
-```
+```text
 
 **Parameters:**
 - `name` (string, optional): Coordinator name (default: 'Default Coordinator')
@@ -34,7 +34,7 @@ constructor(
 
 ```typescript
 public static getInstance(): MultiAgentCoordinator
-```
+```text
 
 Gets singleton instance.
 
@@ -46,7 +46,7 @@ Gets singleton instance.
 
 ```typescript
 public async initialize(): Promise<boolean>
-```
+```text
 
 Initializes the coordinator.
 
@@ -62,7 +62,7 @@ Initializes the coordinator.
 
 ```typescript
 public async start(): Promise<boolean>
-```
+```text
 
 Starts the coordinator.
 
@@ -77,7 +77,7 @@ Starts the coordinator.
 
 ```typescript
 public async stop(): Promise<boolean>
-```
+```text
 
 Stops the coordinator.
 
@@ -94,7 +94,7 @@ Stops the coordinator.
 public async registerAgent(
   agentData: Omit<Agent, 'id'>
 ): Promise<string | null>
-```
+```text
 
 Registers a new agent.
 
@@ -107,7 +107,7 @@ Registers a new agent.
 
 ```typescript
 public async unregisterAgent(agentId: string): Promise<boolean>
-```
+```text
 
 Unregisters an agent.
 
@@ -122,7 +122,7 @@ Unregisters an agent.
 public async submitTask(
   taskData: Partial<Task>
 ): Promise<string>
-```
+```text
 
 Submits a task for execution.
 
@@ -135,7 +135,7 @@ Submits a task for execution.
 
 ```typescript
 public async getTask(taskId: string): Promise<Task | null>
-```
+```text
 
 Gets task by ID.
 
@@ -151,7 +151,7 @@ public async completeTask(
   taskId: string,
   agentId: string
 ): Promise<void>
-```
+```text
 
 Completes a task.
 
@@ -169,7 +169,7 @@ public async failTask(
   agentId: string,
   error: string
 ): Promise<void>
-```
+```text
 
 Marks task as failed.
 
@@ -192,7 +192,7 @@ public async executeWorkflow(
     }>;
   }
 ): Promise<any>
-```
+```text
 
 Executes a workflow.
 
@@ -205,7 +205,7 @@ Executes a workflow.
 
 ```typescript
 public async findAgentsByCapability(capability: string): Promise<AgentType[]>
-```
+```text
 
 Finds agents by capability (wrapper for AgentRegistry method).
 
@@ -222,7 +222,7 @@ Finds agents by capability (wrapper for AgentRegistry method).
 
 ```typescript
 public async updateAgentStatus(agentId: string, status: string): Promise<boolean>
-```
+```text
 
 Updates agent status (wrapper for AgentRegistry method).
 
@@ -239,7 +239,7 @@ Updates agent status (wrapper for AgentRegistry method).
 
 ```typescript
 public async getReadyTasks(): Promise<Task[]>
-```
+```text
 
 Gets ready tasks (wrapper for TaskManager method).
 
@@ -252,7 +252,7 @@ Gets ready tasks (wrapper for TaskManager method).
 
 ```typescript
 public async areDependenciesSatisfied(taskId: string): Promise<boolean>
-```
+```text
 
 Checks if task dependencies are satisfied (wrapper for TaskManager method).
 
@@ -268,7 +268,7 @@ Checks if task dependencies are satisfied (wrapper for TaskManager method).
 
 ```typescript
 public async getAgent(agentId: string): Promise<Agent | null>
-```
+```text
 
 Gets agent by ID.
 
@@ -281,7 +281,7 @@ Gets agent by ID.
 
 ```typescript
 public async listAgents(filter?: AgentFilter): Promise<AgentType[]>
-```
+```text
 
 Lists agents with optional filtering.
 
@@ -294,7 +294,7 @@ Lists agents with optional filtering.
 
 ```typescript
 public async assignTask(taskId: string, agentId: string): Promise<void>
-```
+```text
 
 Assigns a task to an agent.
 
@@ -310,7 +310,7 @@ Assigns a task to an agent.
 public async createTask(
   taskData: Omit<Task, 'id' | 'status' | 'createdAt' | 'updatedAt'>
 ): Promise<string | null>
-```
+```text
 
 Creates a new task.
 
@@ -323,7 +323,7 @@ Creates a new task.
 
 ```typescript
 public getTaskManager(): TaskManager
-```
+```text
 
 Gets the underlying task manager.
 
@@ -333,7 +333,7 @@ Gets the underlying task manager.
 
 ```typescript
 public getAgentRegistry(): AgentRegistry
-```
+```text
 
 Gets the underlying agent registry.
 
@@ -343,7 +343,7 @@ Gets the underlying agent registry.
 
 ```typescript
 public getSharedStateManager(): SharedStateManager
-```
+```text
 
 Gets the underlying shared state manager.
 
@@ -357,7 +357,7 @@ Gets the underlying shared state manager.
 
 ```typescript
 public static getInstance(): AgentRegistry
-```
+```text
 
 Gets singleton instance.
 
@@ -369,7 +369,7 @@ Gets singleton instance.
 
 ```typescript
 public async registerAgent(agent: Agent): Promise<boolean>
-```
+```text
 
 Registers an agent.
 
@@ -382,7 +382,7 @@ Registers an agent.
 
 ```typescript
 public async unregisterAgent(agentId: string): Promise<boolean>
-```
+```text
 
 Unregisters an agent.
 
@@ -398,7 +398,7 @@ public async updateAgent(
   agentId: string,
   updates: Partial<Agent>
 ): Promise<boolean>
-```
+```text
 
 Updates an agent.
 
@@ -412,7 +412,7 @@ Updates an agent.
 
 ```typescript
 public async getAgent(agentId: string): Promise<Agent | null>
-```
+```text
 
 Gets agent by ID.
 
@@ -425,7 +425,7 @@ Gets agent by ID.
 
 ```typescript
 public async listAgents(filter?: AgentFilter): Promise<AgentType[]>
-```
+```text
 
 Lists agents with optional filtering.
 
@@ -438,7 +438,7 @@ Lists agents with optional filtering.
 
 ```typescript
 public async findAgentsByCapability(capability: string): Promise<AgentType[]>
-```
+```text
 
 Finds agents by capability.
 
@@ -451,7 +451,7 @@ Finds agents by capability.
 
 ```typescript
 public async findAgentsByType(type: string): Promise<AgentType[]>
-```
+```text
 
 Finds agents by type.
 
@@ -464,7 +464,7 @@ Finds agents by type.
 
 ```typescript
 public async getAgentCapabilities(agentId: string): Promise<string[]>
-```
+```text
 
 Gets capabilities for an agent.
 
@@ -481,7 +481,7 @@ Gets capabilities for an agent.
 
 ```typescript
 public static getInstance(): TaskManager
-```
+```text
 
 Gets singleton instance.
 
@@ -493,7 +493,7 @@ Gets singleton instance.
 
 ```typescript
 public async createTask(taskData: Partial<Task>): Promise<string>
-```
+```text
 
 Creates a new task.
 
@@ -506,7 +506,7 @@ Creates a new task.
 
 ```typescript
 public async assignTask(taskId: string, agentId: string): Promise<void>
-```
+```text
 
 Assigns task to agent.
 
@@ -520,7 +520,7 @@ Assigns task to agent.
 
 ```typescript
 public async startTask(taskId: string): Promise<void>
-```
+```text
 
 Starts task execution.
 
@@ -533,7 +533,7 @@ Starts task execution.
 
 ```typescript
 public async completeTask(taskId: string, result: TaskResult): Promise<void>
-```
+```text
 
 Completes a task.
 
@@ -547,7 +547,7 @@ Completes a task.
 
 ```typescript
 public async failTask(taskId: string, error: Error): Promise<void>
-```
+```text
 
 Marks task as failed.
 
@@ -561,7 +561,7 @@ Marks task as failed.
 
 ```typescript
 public async cancelTask(taskId: string): Promise<void>
-```
+```text
 
 Cancels a task.
 
@@ -574,7 +574,7 @@ Cancels a task.
 
 ```typescript
 public async getTask(taskId: string): Promise<Task>
-```
+```text
 
 Gets task by ID.
 
@@ -587,7 +587,7 @@ Gets task by ID.
 
 ```typescript
 public async listTasks(filter?: TaskFilter): Promise<Task[]>
-```
+```text
 
 Lists tasks with optional filtering.
 
@@ -600,7 +600,7 @@ Lists tasks with optional filtering.
 
 ```typescript
 public async areDependenciesSatisfied(taskId: string): Promise<boolean>
-```
+```text
 
 Checks if task dependencies are satisfied.
 
@@ -613,7 +613,7 @@ Checks if task dependencies are satisfied.
 
 ```typescript
 public async unassignTask(taskId: string): Promise<void>
-```
+```text
 
 Unassigns a task from its current agent.
 
@@ -631,7 +631,7 @@ Unassigns a task from its current agent.
 
 ```typescript
 public async reassignTask(taskId: string, newAgentId: string): Promise<void>
-```
+```text
 
 Reassigns a task to a different agent.
 
@@ -653,7 +653,7 @@ public async updateTask(
   taskId: string,
   updates: Partial<Omit<Task, 'id' | 'createdAt'>>
 ): Promise<void>
-```
+```text
 
 Updates task properties.
 
@@ -672,7 +672,7 @@ Updates task properties.
 
 ```typescript
 public async getReadyTasks(): Promise<Task[]>
-```
+```text
 
 Gets tasks that are ready to be executed (dependencies satisfied).
 
@@ -686,7 +686,7 @@ Gets tasks that are ready to be executed (dependencies satisfied).
 
 ```typescript
 public async countTasksByStatus(): Promise<Record<TaskStatus, number>>
-```
+```text
 
 Counts tasks by status.
 
@@ -699,7 +699,7 @@ Counts tasks by status.
 
 ```typescript
 public async getTaskHistory(taskId: string): Promise<TaskHistory[]>
-```
+```text
 
 Gets task history including all state changes.
 
@@ -716,7 +716,7 @@ Gets task history including all state changes.
 
 ```typescript
 public async estimateTaskDuration(task: Task): Promise<number>
-```
+```text
 
 Estimates task duration based on historical data.
 
@@ -734,7 +734,7 @@ Estimates task duration based on historical data.
 
 ```typescript
 public async getTaskStatistics(): Promise<TaskStatistics>
-```
+```text
 
 Gets task statistics.
 
@@ -749,7 +749,7 @@ Gets task statistics.
 
 ```typescript
 public async cleanupOldTasks(olderThan: number): Promise<number>
-```
+```text
 
 Cleans up old completed tasks.
 
@@ -774,7 +774,7 @@ public static getInstance(
   autoSave?: boolean,
   saveInterval?: number
 ): SharedStateManager
-```
+```text
 
 Gets singleton instance.
 
@@ -795,7 +795,7 @@ public async setState(
   value: unknown,
   options?: StateUpdateOptions
 ): Promise<void>
-```
+```text
 
 Sets state value.
 
@@ -810,7 +810,7 @@ Sets state value.
 
 ```typescript
 public async getState(path: string): Promise<unknown>
-```
+```text
 
 Gets state value.
 
@@ -823,7 +823,7 @@ Gets state value.
 
 ```typescript
 public async clearState(): Promise<void>
-```
+```text
 
 Clears entire state.
 
@@ -833,7 +833,7 @@ Clears entire state.
 
 ```typescript
 public async loadState(): Promise<void>
-```
+```text
 
 Loads state from storage.
 
@@ -843,7 +843,7 @@ Loads state from storage.
 
 ```typescript
 public async saveState(): Promise<void>
-```
+```text
 
 Saves state to storage.
 
@@ -856,7 +856,7 @@ public subscribe(
   path: string,
   callback: (path: string, value: unknown) => void
 ): string
-```
+```text
 
 Subscribes to state changes.
 
@@ -870,7 +870,7 @@ Subscribes to state changes.
 
 ```typescript
 public unsubscribe(subscriptionId: string): void
-```
+```text
 
 Unsubscribes from state changes.
 
@@ -883,7 +883,7 @@ Unsubscribes from state changes.
 
 ```typescript
 public getFullState(): Record<string, unknown>
-```
+```text
 
 Gets entire state object.
 
@@ -896,7 +896,7 @@ public async registerAgent(
   name: string,
   agentInfo: Record<string, unknown>
 ): Promise<boolean>
-```
+```text
 
 Registers agent in shared state.
 
@@ -910,7 +910,7 @@ Registers agent in shared state.
 
 ```typescript
 public async updateAgentStatus(name: string, status: string): Promise<void>
-```
+```text
 
 Updates agent status.
 
@@ -928,7 +928,7 @@ public configurePersistence(
   autoSave: boolean = false,
   saveInterval: number = 60000
 ): void
-```
+```text
 
 Configures persistence settings.
 
@@ -943,7 +943,7 @@ Configures persistence settings.
 
 ```typescript
 public watchState(path: string, callback: StateChangeCallback): void
-```
+```text
 
 Watches state changes at a specific path (alias for subscribe).
 
@@ -961,7 +961,7 @@ Watches state changes at a specific path (alias for subscribe).
 
 ```typescript
 public unwatchState(path: string, callback: StateChangeCallback): void
-```
+```text
 
 Unwatches state changes (alias for unsubscribe).
 
@@ -982,7 +982,7 @@ public syncState(
   externalState: Record<string, any>,
   strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)
 ): void
-```
+```text
 
 Syncs state from external source with conflict resolution.
 
@@ -1005,7 +1005,7 @@ public resolveConflicts(
   externalValue: any,
   strategy: ConflictResolutionStrategy | ((local: any, external: any) => any)
 ): any
-```
+```text
 
 Resolves conflicts between local and external values.
 
@@ -1024,7 +1024,7 @@ Resolves conflicts between local and external values.
 
 ```typescript
 public persistState(path: string): void
-```
+```text
 
 Marks a path as persisted.
 
@@ -1041,7 +1041,7 @@ Marks a path as persisted.
 
 ```typescript
 public loadPersistedState(state: Record<string, any>): void
-```
+```text
 
 Loads persisted state.
 
@@ -1058,7 +1058,7 @@ Loads persisted state.
 
 ```typescript
 public clearEphemeralState(): void
-```
+```text
 
 Clears ephemeral (non-persisted) state.
 
@@ -1079,7 +1079,7 @@ public async createCompletion(
   prompt: string,
   options?: Record<string, unknown>
 ): Promise<string>
-```
+```text
 
 Creates text completion.
 
@@ -1100,7 +1100,7 @@ public async sendPrompt(
     maxTokens?: number;
   }
 ): Promise<any>
-```
+```text
 
 Sends prompt to OpenAI API.
 
@@ -1118,7 +1118,7 @@ Sends prompt to OpenAI API.
 
 ```typescript
 public static getInstance(promptsDir?: string): PromptManager
-```
+```text
 
 Gets singleton instance.
 
@@ -1136,7 +1136,7 @@ public async getPrompt(
   name: string,
   variables?: Record<string, unknown>
 ): Promise<string>
-```
+```text
 
 Gets prompt with variables populated.
 
@@ -1150,7 +1150,7 @@ Gets prompt with variables populated.
 
 ```typescript
 public async addPrompt(name: string, template: string): Promise<void>
-```
+```text
 
 Adds new prompt template.
 
@@ -1164,7 +1164,7 @@ Adds new prompt template.
 
 ```typescript
 public async updatePrompt(name: string, template: string): Promise<void>
-```
+```text
 
 Updates existing prompt template.
 
@@ -1178,7 +1178,7 @@ Updates existing prompt template.
 
 ```typescript
 public async deletePrompt(name: string): Promise<void>
-```
+```text
 
 Deletes prompt template.
 
@@ -1191,7 +1191,7 @@ Deletes prompt template.
 
 ```typescript
 public createDefaultTemplates(): void
-```
+```text
 
 Creates default prompt templates.
 
@@ -1205,7 +1205,7 @@ Creates default prompt templates.
 
 ```typescript
 public async initialize(): Promise<boolean>
-```
+```text
 
 Initializes the agent.
 
@@ -1218,7 +1218,7 @@ public async executeTask(
   taskDetails: any,
   context?: any
 ): Promise<any>
-```
+```text
 
 Executes a task.
 
@@ -1232,7 +1232,7 @@ Executes a task.
 
 ```typescript
 public async shutdown(): Promise<boolean>
-```
+```text
 
 Shuts down the agent.
 
@@ -1242,7 +1242,7 @@ Shuts down the agent.
 
 ```typescript
 public getAgentInfo(): Agent
-```
+```text
 
 Gets agent information.
 
@@ -1252,7 +1252,7 @@ Gets agent information.
 
 ```typescript
 public updateStatus(status: Agent['status']): void
-```
+```text
 
 Updates agent status.
 
@@ -1269,7 +1269,7 @@ Updates agent status.
 
 ```typescript
 public static getInstance(agentRegistry?: AgentRegistry): AgentHealthMonitor
-```
+```text
 
 Gets singleton instance.
 
@@ -1284,7 +1284,7 @@ Gets singleton instance.
 
 ```typescript
 public setThresholds(thresholds: Partial<HealthThresholds>): void
-```
+```text
 
 Sets health thresholds.
 
@@ -1300,7 +1300,7 @@ public async registerHealthCheck(
   agentId: string,
   check: Omit<HealthCheck, 'id'>
 ): Promise<string>
-```
+```text
 
 Registers a health check for an agent.
 
@@ -1314,7 +1314,7 @@ Registers a health check for an agent.
 
 ```typescript
 public async unregisterHealthCheck(agentId: string, checkId: string): Promise<void>
-```
+```text
 
 Unregisters a health check.
 
@@ -1328,7 +1328,7 @@ Unregisters a health check.
 
 ```typescript
 public async performHealthCheck(agentId: string, checkId: string): Promise<HealthCheckResult>
-```
+```text
 
 Performs a health check.
 
@@ -1342,7 +1342,7 @@ Performs a health check.
 
 ```typescript
 public async getHealthStatus(agentId: string): Promise<HealthStatus | null>
-```
+```text
 
 Gets health status for an agent.
 
@@ -1355,7 +1355,7 @@ Gets health status for an agent.
 
 ```typescript
 public async monitorAgent(agentId: string): Promise<HealthStatus>
-```
+```text
 
 Monitors agent and returns current status.
 
@@ -1373,7 +1373,7 @@ Monitors agent and returns current status.
 
 ```typescript
 public async generateHealthReport(agentId: string): Promise<HealthReport>
-```
+```text
 
 Generates comprehensive health report.
 
@@ -1386,7 +1386,7 @@ Generates comprehensive health report.
 
 ```typescript
 public async startMonitoring(agentId: string): Promise<void>
-```
+```text
 
 Starts continuous monitoring for an agent.
 
@@ -1403,7 +1403,7 @@ Starts continuous monitoring for an agent.
 
 ```typescript
 public async stopMonitoring(agentId: string): Promise<void>
-```
+```text
 
 Stops continuous monitoring for an agent.
 
@@ -1416,7 +1416,7 @@ Stops continuous monitoring for an agent.
 
 ```typescript
 public async resolveIssue(agentId: string, issueId: string): Promise<void>
-```
+```text
 
 Resolves a health issue.
 

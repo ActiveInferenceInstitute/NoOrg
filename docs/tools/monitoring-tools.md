@@ -20,7 +20,7 @@ graph TD
     C --> D[Visualization]
     D --> E[Alerting]
     E --> F[Response]
-```
+```text
 
 ### System Architecture
 1. **Collection Layer**

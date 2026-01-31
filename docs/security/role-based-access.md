@@ -43,7 +43,7 @@ user_roles:
           strategy: "intelligent"
           refinement: "continuous"
           validation: "automated"
-```
+```text
 
 ### Role Management
 ```python
@@ -74,7 +74,7 @@ class RoleManager:
     def enhance_security(self):
         """Enhance role security"""
         pass
-```
+```text
 
 ## 🔐 Permission Sets
 
@@ -109,7 +109,7 @@ permission_sets:
           strategy: "intelligent"
           adaptation: "dynamic"
           validation: "automated"
-```
+```text
 
 ### Permission Management
 ```python
@@ -140,7 +140,7 @@ class PermissionManager:
     def enhance_security(self):
         """Enhance permission security"""
         pass
-```
+```text
 
 ## 📊 Access Levels
 
@@ -171,7 +171,7 @@ access_levels:
           strategy: "intelligent"
           refinement: "continuous"
           validation: "automated"
-```
+```text
 
 ### Level Management
 ```python
@@ -202,7 +202,7 @@ class LevelManager:
     def enhance_security(self):
         """Enhance level security"""
         pass
-```
+```text
 
 ## 📝 Audit Trails
 
@@ -233,7 +233,7 @@ audit_trails:
           type: "intelligent"
           focus: "security_relevant"
           delivery: "automated"
-```
+```text
 
 ### Audit Management
 ```python
@@ -264,7 +264,7 @@ class AuditManager:
     def enhance_security(self):
         """Enhance audit security"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

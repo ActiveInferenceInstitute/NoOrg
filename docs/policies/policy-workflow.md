@@ -54,7 +54,7 @@ review_stages:
       - compliance_assessment
       - risk_analysis
       - mitigation_plans
-```
+```text
 
 ### Review Process
 ```python
@@ -85,7 +85,7 @@ class PolicyReview:
     def track_review_status(self):
         """Track review status"""
         pass
-```
+```text
 
 ## ✅ Approval Process
 
@@ -125,7 +125,7 @@ class PolicyReview:
     }
   }
 }
-```
+```text
 
 ### Approval Management
 ```python
@@ -156,7 +156,7 @@ class ApprovalManager:
     def track_approvals(self):
         """Track approval status"""
         pass
-```
+```text
 
 ## 📢 Distribution Method
 
@@ -187,7 +187,7 @@ distribution_channels:
         - progress_tracking
         - assessment
         - certification
-```
+```text
 
 ### Distribution Process
 ```python
@@ -218,7 +218,7 @@ class PolicyDistributor:
     def track_distribution(self):
         """Track distribution status"""
         pass
-```
+```text
 
 ## 📊 Workflow Metrics
 
@@ -242,7 +242,7 @@ workflow_metrics:
     - acknowledgment_rate
     - training_completion
     measurement: "percentage"
-```
+```text
 
 ### Analytics Framework
 ```python
@@ -273,7 +273,7 @@ class WorkflowAnalytics:
     def generate_insights(self):
         """Generate workflow insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -308,7 +308,7 @@ class WorkflowAnalytics:
     }
   }
 }
-```
+```text
 
 ### Process Automation
 ```python
@@ -339,7 +339,7 @@ class WorkflowAutomation:
     def monitor_automation(self):
         """Monitor automation effectiveness"""
         pass
-```
+```text
 
 ## 📚 References
 

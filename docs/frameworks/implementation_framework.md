@@ -23,7 +23,7 @@ related_frameworks:
   - [[processes/implementation_processes]]
   - [[standards/implementation_standards]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This framework establishes standardized approaches and methodologies for implementing initiatives, projects, and changes across the organization.

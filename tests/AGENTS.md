@@ -5,7 +5,7 @@ The Test Suite provides comprehensive testing infrastructure for the NoOrg multi
 ## Architecture Overview
 
 ### Test Categories Hierarchy
-```
+```text
 Test Suite
 ├── Unit Tests (/unit/)
 │   ├── Core Component Tests (/core/)
@@ -27,7 +27,7 @@ Test Suite
     ├── Test Data (/data/)
     ├── Configuration (/config/)
     └── Reporting (/reports/)
-```
+```text
 
 ## Core Test Infrastructure
 
@@ -62,7 +62,7 @@ export function expectStateContains(key: string, value: any): Promise<void>
 // Performance testing utilities
 export function measureExecutionTime<T>(operation: () => Promise<T>): Promise<{ result: T, duration: number }>
 export function createLoadTest(operation: () => Promise<any>, concurrency: number, duration: number): Promise<LoadTestResults>
-```
+```text
 
 ### Test Configuration (`config/jest.setup.ts`)
 ```typescript
@@ -79,7 +79,7 @@ export const TEST_ENV = {
     MAX_CONCURRENT_TESTS: 4,
     LOG_LEVEL: 'error'
 };
-```
+```text
 
 ## Unit Test Components
 
@@ -127,7 +127,7 @@ describe('EventSystem', () => {
         });
     });
 });
-```
+```text
 
 #### MessageSystem Tests (`test_message_system.ts`)
 ```typescript
@@ -152,7 +152,7 @@ describe('MessageSystem', () => {
         });
     });
 });
-```
+```text
 
 #### MonitoringSystem Tests (`test_monitoring_system.ts`)
 ```typescript
@@ -181,7 +181,7 @@ describe('MonitoringSystem', () => {
         });
     });
 });
-```
+```text
 
 ### Agent Tests (`unit/agents/`)
 
@@ -213,7 +213,7 @@ export abstract class AgentTestBase {
         await expect(this.agent.executeTask(task)).rejects.toThrow();
     }
 }
-```
+```text
 
 #### Specialized Agent Tests
 ```typescript
@@ -257,7 +257,7 @@ describe('AnalysisAgent', () => {
         });
     });
 });
-```
+```text
 
 ### Multi-Agent Tests (`unit/multiagent/`)
 
@@ -305,7 +305,7 @@ describe('MultiAgentCoordinator', () => {
         });
     });
 });
-```
+```text
 
 ## Integration Test Framework
 
@@ -344,7 +344,7 @@ export abstract class IntegrationTestBase {
         expect(results.errors).toHaveLength(0);
     }
 }
-```
+```text
 
 ### Comprehensive System Integration Tests
 ```typescript
@@ -401,7 +401,7 @@ describe('Comprehensive System Integration', () => {
         });
     });
 });
-```
+```text
 
 ## System Test Framework
 
@@ -456,7 +456,7 @@ describe('End-to-End Multi-Agent System', () => {
         });
     });
 });
-```
+```text
 
 ## Performance Test Framework
 
@@ -516,7 +516,7 @@ describe('Performance Tests', () => {
         });
     });
 });
-```
+```text
 
 ## Test Data Management
 
@@ -561,7 +561,7 @@ export function generateTestAgents(count: number): TestAgent[] {
         execute: jest.fn().mockResolvedValue({ success: true, data: {} })
     }));
 }
-```
+```text
 
 ## Test Configuration & Reporting
 
@@ -586,7 +586,7 @@ module.exports = {
     testTimeout: 30000,
     maxWorkers: 4
 };
-```
+```text
 
 ### Test Reporting (`reports/`)
 ```typescript
@@ -607,7 +607,7 @@ export interface TestReport {
 export function generateTestReport(results: TestResults): TestReport
 export function saveTestReport(report: TestReport, path: string): Promise<void>
 export function compareTestReports(current: TestReport, baseline: TestReport): ComparisonResult
-```
+```text
 
 ## Performance Characteristics
 
@@ -644,7 +644,7 @@ export interface TestFailure {
 export function analyzeTestFailure(failure: TestFailure): FailureAnalysis
 export function generateFailureReport(failures: TestFailure[]): FailureReport
 export function retryFailedTests(failures: TestFailure[]): Promise<RetryResults>
-```
+```text
 
 ### Debug Utilities
 ```typescript
@@ -667,7 +667,7 @@ export const testLogger = {
 export function enableDebugMode(): void
 export function captureTestLogs(): Promise<string[]>
 export function mockConsoleOutput(): ConsoleMock
-```
+```text
 
 ## Continuous Integration
 
@@ -709,7 +709,7 @@ jobs:
 
       - name: Upload coverage
         uses: codecov/codecov-action@v3
-```
+```text
 
 ### CI Test Results
 ```typescript
@@ -727,7 +727,7 @@ export interface CITestResults {
     duration: number
     status: 'success' | 'failure' | 'partial'
 }
-```
+```text
 
 ## Dependencies
 
@@ -772,7 +772,7 @@ describe('Security Tests', () => {
         });
     });
 });
-```
+```text
 
 ## Best Practices
 

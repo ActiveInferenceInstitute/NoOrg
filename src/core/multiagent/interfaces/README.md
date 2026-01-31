@@ -99,7 +99,7 @@ import { AgentRegistry as AgentRegistryImpl } from '../AgentRegistry';
 
 const registry: AgentRegistry = new AgentRegistryImpl();
 await registry.registerAgent(agent);
-```
+```text
 
 ## Related Documentation
 

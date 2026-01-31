@@ -42,7 +42,7 @@ graph TD
         F --> F2;
         F --> F3;
     end
-```
+```text
 
 ### 3.1. Risk Analysis
 - **Activity:** Analyze each identified risk to understand its nature, sources, causes, likelihood, and potential consequences.

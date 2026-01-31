@@ -1,13 +1,42 @@
 # Human Resources Meeting Notes
 
-This directory provides templates and archives for meeting notes related to the Human Resources (HR) unit and its various functions or committees.
+## Overview
 
-Maintaining clear records of HR meetings is essential for tracking decisions, action items, policy discussions, and project progress.
+This directory contains meeting documentation for the Human Resources unit, including agendas, minutes, action items, and decision logs.
 
-## Contents:
+## Meeting Types
 
-*   [**HR Team Meeting Template**](./HRTeamMeetingTemplate.md): A standardized template for regular HR team meetings.
-*   [**HR Committee Meeting Template**](./HRCommitteeMeetingTemplate.md): (If applicable, e.g., Compensation Committee support, Safety Committee)
-*   **Archive:** Subdirectories organized by date (e.g., `YYYY-MM`) or meeting type can be used to store historical meeting notes.
-    *   Example: `Archive/HRTeam/YYYY-MM/`
-    *   Example: `Archive/CompensationCommittee/YYYY-MM/` 
+| Meeting | Frequency | Purpose |
+|---------|-----------|---------|
+| Team Stand-up | Daily/Weekly | Operational updates and blockers |
+| Leadership Sync | Weekly | Strategic alignment and planning |
+| Stakeholder Review | Monthly | Progress updates and feedback |
+| Quarterly Business Review | Quarterly | Performance assessment |
+
+## Meeting Notes Template
+
+Each meeting note should include:
+
+1. **Header**: Date, time, attendees, facilitator
+2. **Agenda**: Topics to be discussed
+3. **Discussion**: Key points and decisions
+4. **Action Items**: Tasks, owners, due dates
+5. **Next Steps**: Follow-up items
+
+## File Naming Convention
+
+```
+YYYY-MM-DD_Meeting-Type_Topic.md
+```
+
+Example: `2026-01-15_Weekly_Sprint-Review.md`
+
+## Recent Meetings
+
+*Meeting notes are organized chronologically. Most recent meetings appear first.*
+
+## Related Documentation
+
+- [Processes](../Processes/)
+- [Reports](../Reports/)
+- [Meeting Minutes Template](./Meeting_Minutes_Template.md)

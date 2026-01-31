@@ -19,7 +19,7 @@ graph TD
     Policies[Finance Policies] --> Processes
     
     class Policies externalEntity;
-```
+```text
 
 ## Process Categories
 

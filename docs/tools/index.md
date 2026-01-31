@@ -31,7 +31,7 @@ graph TB
 
     Development --> Operations
     Operations --> Integration
-```
+```text
 
 ## Tool Categories
 
@@ -55,7 +55,7 @@ graph LR
     
     IDE --> VCS
     VCS --> Build
-```
+```text
 
 ### Automation Tools
 ```mermaid
@@ -77,7 +77,7 @@ graph TB
     
     Config --> Process
     Process --> Output
-```
+```text
 
 ### Integration Architecture
 ```mermaid
@@ -99,13 +99,13 @@ graph LR
     
     APIs --> Queue
     Queue --> Services
-```
+```text
 
 ## Quick Navigation
 
 ### Development Tools
 - [IDE Setup](development/ide-setup.md)
-- [Version Control](development/version-control.md)
+- [Version Control](../development/version-control.md)
 - [Build System](development/build-system.md)
 - [Testing Tools](development/testing-tools.md)
 - [Debugging Tools](development/debugging.md)
@@ -114,7 +114,7 @@ graph LR
 - [CI/CD Pipeline](automation/cicd.md)
 - [Infrastructure as Code](automation/iac.md)
 - [Configuration Management](automation/config.md)
-- [Task Automation](automation/tasks.md)
+- [Task Automation](../agents/modules/extensions/tasks.md)
 - [Monitoring Automation](automation/monitoring.md)
 
 ### Integration Tools
@@ -146,7 +146,7 @@ graph TB
     
     Source --> Integration
     Integration --> Target
-```
+```text
 
 ## Workflow Automation
 
@@ -163,7 +163,7 @@ sequenceDiagram
     S->>A: Return Results
     A->>T: Update Status
     T->>U: Notify Completion
-```
+```text
 
 ## Tool Management
 
@@ -174,7 +174,7 @@ graph LR
     D1 --> F1[Feature Branches]
     F1 --> D1
     D1 --> M1
-```
+```text
 
 ### Deployment Pipeline
 ```mermaid
@@ -183,13 +183,13 @@ graph LR
     B1 --> T1[Test]
     T1 --> D1[Deploy]
     D1 --> M1[Monitor]
-```
+```text
 
 ## Related Documentation
-- [Development Standards](../standards/development.md)
-- [Security Guidelines](../guidelines/security.md)
-- [Operations Manual](../operations/manual.md)
-- [Integration Patterns](../patterns/integration.md)
+- [Development Standards](../standards/AGENTS.md)
+- [Security Guidelines](../guidelines/AGENTS.md)
+- [Operations Manual](../operations/AGENTS.md)
+- [Integration Patterns](../agents/architectures/integration.md)
 
 ---
 

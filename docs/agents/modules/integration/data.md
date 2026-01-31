@@ -26,7 +26,7 @@ related_documents:
   - [[agents/modules/integration/services]]
   - [[agents/modules/extensions/tasks]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the data integration module for agents, providing comprehensive data access, transformation, validation, and security capabilities for handling data across system boundaries.
@@ -43,7 +43,7 @@ class DataManager:
         self.validate = DataValidation()
         self.secure = DataSecurity()
         self.monitor = DataMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Data Sources]
     C --> F[Transform Pipeline]
     D --> G[Schema Registry]
-```
+```text
 
 ### 2. Data Structure
 #### 2.1 Base Data Model
@@ -79,7 +79,7 @@ class DataModel:
     async def secure(self):
         # Security logic
         pass
-```
+```text
 
 #### 2.2 Data Types
 - Structured Data
@@ -103,7 +103,7 @@ class DataOperations:
             result = await self.transform_data(data, operation)
             await self.validate_result(result)
             return result
-```
+```text
 
 #### 3.2 Operation Types
 - Read Operations
@@ -127,7 +127,7 @@ class DataTransform:
             result = await self.execute_pipeline(data)
             await self.validate_result(result)
             return result
-```
+```text
 
 #### 4.2 Transform Types
 - Format Transformation
@@ -152,7 +152,7 @@ class DataImplementation:
     async def setup_validation(self, rules):
         # Validation setup logic
         pass
-```
+```text
 
 #### 1.2 Development Standards
 - Model Structure
@@ -168,7 +168,7 @@ class TransformPipeline:
         self.stages = PipelineStages()
         self.rules = TransformRules()
         self.validators = StageValidators()
-```
+```text
 
 #### 2.2 Pipeline Patterns
 - Sequential Transform
@@ -199,7 +199,7 @@ class DataQuality:
     async def generate_report(self, metrics):
         # Report generation logic
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -231,7 +231,7 @@ class DataSecurity:
     async def audit_operation(self, operation):
         # Audit logging logic
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Data Encryption
@@ -281,7 +281,7 @@ class DataPattern:
         self.model = DataModel()
         self.validator = DataValidator()
         self.transformer = DataTransformer()
-```
+```text
 
 ### B. Transform Patterns
 ```python
@@ -291,7 +291,7 @@ class TransformPattern:
         self.pipeline = TransformPipeline()
         self.rules = TransformRules()
         self.validator = ResultValidator()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -301,4 +301,4 @@ class DataSecurityPattern:
         self.encryption = DataEncryption()
         self.access = AccessControl()
         self.audit = SecurityAudit()
-``` 
+```text 

@@ -5,7 +5,7 @@ The Core Systems directory provides the fundamental infrastructure components fo
 ## Core Architecture Overview
 
 ### System Components Hierarchy
-```
+```text
 Core Systems
 ├── Events & Messaging
 │   ├── EventSystem
@@ -43,7 +43,7 @@ Core Systems
     ├── WorkflowEngine
     ├── WorkflowBuilder
     └── UnitAgentFactory
-```
+```text
 
 ## Event & Messaging Systems
 
@@ -85,7 +85,7 @@ export interface EventPersistenceOptions {
     persist?: boolean
     ttl?: number
 }
-```
+```text
 
 ### MessageSystem (`messaging/MessageSystem.ts`)
 ```typescript
@@ -112,7 +112,7 @@ export interface Message {
     replyTo?: string
     headers?: Record<string, any>
 }
-```
+```text
 
 ## Monitoring & Health Systems
 
@@ -136,7 +136,7 @@ export interface MetricsSnapshot {
     gauges: Record<string, number>
     timestamp: number
 }
-```
+```text
 
 ### HealthCheckManager (`monitoring/HealthCheckManager.ts`)
 ```typescript
@@ -173,7 +173,7 @@ export interface HealthCheckResult {
     timestamp: number
     duration?: number
 }
-```
+```text
 
 ## Storage System
 
@@ -220,7 +220,7 @@ export interface StorageBackend {
     query?<T>(query: QueryOptions): Promise<T[]>
     getStats(): Promise<StorageStats>
 }
-```
+```text
 
 ## Multi-Agent Coordination System
 
@@ -241,7 +241,7 @@ export class MultiAgentCoordinator {
     async cancelTask(taskId: string): Promise<boolean>
     async getCoordinatorStatus(): Promise<CoordinatorStatus>
 }
-```
+```text
 
 ### AgentRegistry (`multiagent/AgentRegistry.ts`)
 ```typescript
@@ -261,7 +261,7 @@ export class AgentRegistry implements IAgentRegistry {
     async updateAgentCapabilities(agentId: string, capabilities: string[]): Promise<boolean>
     async getAgentCountsByStatus(): Promise<Record<AgentStatus['state'], number>>
 }
-```
+```text
 
 ### SharedStateManager (`multiagent/SharedStateManager.ts`)
 ```typescript
@@ -288,7 +288,7 @@ export class SharedStateManager implements ISharedStateManager {
     loadPersistedState(state: Record<string, any>): void
     clearEphemeralState(): void
 }
-```
+```text
 
 ### TaskManager (`multiagent/TaskManager.ts`)
 ```typescript
@@ -315,7 +315,7 @@ export class TaskManager implements ITaskManager {
     async getTaskStatistics(): Promise<TaskStatistics>
     async cleanupOldTasks(olderThan: number): Promise<number>
 }
-```
+```text
 
 ### PromptManager (`multiagent/PromptManager.ts`)
 ```typescript
@@ -329,7 +329,7 @@ export class PromptManager implements IPromptManager {
     async validatePrompt(template: string): Promise<ValidationResult>
     async analyzePrompt(template: string): Promise<PromptAnalysis>
 }
-```
+```text
 
 ## Integration Patterns
 
@@ -357,7 +357,7 @@ export interface CircuitBreakerState {
     lastFailureTime?: number
     nextAttemptTime?: number
 }
-```
+```text
 
 ### Retry (`integration/patterns/Retry.ts`)
 ```typescript
@@ -376,7 +376,7 @@ export interface RetryConfig {
     backoffFactor: number
     retryCondition?: (error: Error) => boolean
 }
-```
+```text
 
 ### Timeout (`integration/patterns/Timeout.ts`)
 ```typescript
@@ -392,7 +392,7 @@ export interface TimeoutConfig {
     duration: number
     name?: string
 }
-```
+```text
 
 ### Bulkhead (`integration/patterns/Bulkhead.ts`)
 ```typescript
@@ -410,7 +410,7 @@ export interface BulkheadConfig {
     maxQueueSize: number
     queueTimeout: number
 }
-```
+```text
 
 ### RateLimiter (`integration/patterns/RateLimiter.ts`)
 ```typescript
@@ -428,7 +428,7 @@ export interface RateLimiterConfig {
     burstSize?: number
     name?: string
 }
-```
+```text
 
 ### CacheAside (`integration/patterns/CacheAside.ts`)
 ```typescript
@@ -447,7 +447,7 @@ export interface CacheConfig {
     maxSize?: number
     name?: string
 }
-```
+```text
 
 ### Saga Pattern (`integration/patterns/Saga.ts`)
 ```typescript
@@ -470,7 +470,7 @@ export interface SagaConfig {
     timeout?: number
     autoCompensate?: boolean
 }
-```
+```text
 
 ### RequestResponsePattern (`integration/patterns/RequestResponsePattern.ts`)
 ```typescript
@@ -498,7 +498,7 @@ export interface Response<T = any> {
     error?: string
     timestamp: number
 }
-```
+```text
 
 ## Units & Organization Systems
 
@@ -515,7 +515,7 @@ export class DefaultOrganizationalStructureManager implements OrganizationalStru
     async moveUnit(unitId: string, newParentId: string | null): Promise<void>
     async getUnitHierarchy(unitId: string): Promise<OrganizationalUnit[]>
 }
-```
+```text
 
 ### UnitStateManager (`units/state/UnitStateManager.ts`)
 ```typescript
@@ -530,7 +530,7 @@ export class UnitStateManager {
     async subscribeToState(unitId: string, key: string, callback: StateUpdateCallback, options?: StateSubscriptionOptions): Promise<string>
     async unsubscribeFromState(subscriptionId: string): Promise<void>
 }
-```
+```text
 
 ### RelationshipManager (`units/relationships/RelationshipManager.ts`)
 ```typescript
@@ -545,7 +545,7 @@ export class RelationshipManager {
     async queryRelationships(query: RelationshipQueryOptions): Promise<UnitRelationship[]>
     async validateRelationship(fromUnitId: string, toUnitId: string, type: string): Promise<boolean>
 }
-```
+```text
 
 ### WorkflowEngine (`units/workflow/WorkflowEngine.ts`)
 ```typescript
@@ -560,7 +560,7 @@ export class WorkflowEngine {
     async pauseWorkflow(workflowId: string): Promise<void>
     async resumeWorkflow(workflowId: string): Promise<void>
 }
-```
+```text
 
 ### TaskOrchestrator (`units/orchestration/TaskOrchestrator.ts`)
 ```typescript
@@ -586,7 +586,7 @@ export interface UnitTask {
     dependencies?: string[]
     unitId?: string
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -640,7 +640,7 @@ STORAGE_MAX_SIZE=1GB
 # Monitoring
 ENABLE_METRICS=true
 METRICS_RETENTION=7d
-```
+```text
 
 ### Programmatic Configuration
 ```typescript
@@ -658,7 +658,7 @@ const coreConfig = {
     retention: '7d'
   }
 };
-```
+```text
 
 ## Security Considerations
 

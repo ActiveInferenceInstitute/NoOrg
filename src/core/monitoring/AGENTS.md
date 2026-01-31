@@ -17,7 +17,7 @@ interface Metric {
   timestamp: number;
   labels?: Record<string, string>;
 }
-```
+```text
 
 **Properties:**
 - `name` (string): Metric name
@@ -40,7 +40,7 @@ interface Alert {
   timestamp: number;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 **Properties:**
 - `id` (string): Unique alert identifier
@@ -68,7 +68,7 @@ interface HealthCheck {
   tags?: string[];
   dependencies?: string[];
 }
-```
+```text
 
 **Properties:**
 - `id` (string): Unique health check identifier
@@ -93,7 +93,7 @@ interface HealthStatus {
   timestamp: number;
   duration?: number;
 }
-```
+```text
 
 **Properties:**
 - `status` ('healthy' | 'degraded' | 'unhealthy' | 'unknown'): Health status
@@ -113,7 +113,7 @@ interface HealthCheckResult {
   error?: Error;
   timestamp: number;
 }
-```
+```text
 
 **Properties:**
 - `checkId` (string): Health check ID
@@ -132,7 +132,7 @@ interface SystemHealth {
   lastUpdated: number;
   uptime: number;
 }
-```
+```text
 
 **Properties:**
 - `overall` ('healthy' | 'degraded' | 'unhealthy'): Overall system health
@@ -150,7 +150,7 @@ Main monitoring system for metrics and alerts.
 
 ```typescript
 private constructor()
-```
+```text
 
 **Note:** Constructor is private. Use `getInstance()` to obtain an instance.
 
@@ -165,7 +165,7 @@ private constructor()
 
 ```typescript
 public static getInstance(): MonitoringSystem
-```
+```text
 
 Gets the singleton instance of MonitoringSystem.
 
@@ -174,7 +174,7 @@ Gets the singleton instance of MonitoringSystem.
 **Example:**
 ```typescript
 const monitoring = MonitoringSystem.getInstance();
-```
+```text
 
 #### Instance Methods
 
@@ -186,7 +186,7 @@ public recordMetric(
   value: number,
   labels?: Record<string, string>
 ): void
-```
+```text
 
 Records a metric value.
 
@@ -208,7 +208,7 @@ monitoring.recordMetric('api.request.count', 1, {
 monitoring.recordMetric('system.cpu.usage', 75.5, {
   host: 'server-1'
 });
-```
+```text
 
 **Behavior:**
 - Stores metric in memory
@@ -222,7 +222,7 @@ public getMetrics(
   name: string,
   timeRange?: { start: number; end: number }
 ): Metric[]
-```
+```text
 
 Gets metrics for a specific name, optionally filtered by time range.
 
@@ -244,7 +244,7 @@ const recentMetrics = monitoring.getMetrics('api.request.count', {
   start: Date.now() - 3600000,
   end: Date.now()
 });
-```
+```text
 
 ##### createAlert()
 
@@ -255,7 +255,7 @@ public createAlert(
   message: string,
   severity: Alert['severity'] = 'warning'
 ): string
-```
+```text
 
 Creates a new alert definition.
 
@@ -275,7 +275,7 @@ const alertId = monitoring.createAlert(
   'CPU usage exceeds 90%',
   'critical'
 );
-```
+```text
 
 **Behavior:**
 - Creates alert with unique ID
@@ -286,7 +286,7 @@ const alertId = monitoring.createAlert(
 
 ```typescript
 public onAlert(handler: (alert: Alert) => void): () => void
-```
+```text
 
 Registers a handler for alert notifications.
 
@@ -306,13 +306,13 @@ const unsubscribe = monitoring.onAlert((alert) => {
 
 // Later...
 unsubscribe();
-```
+```text
 
 ##### getActiveAlerts()
 
 ```typescript
 public getActiveAlerts(): Alert[]
-```
+```text
 
 Gets all currently active alerts.
 
@@ -322,13 +322,13 @@ Gets all currently active alerts.
 ```typescript
 const activeAlerts = monitoring.getActiveAlerts();
 console.log(`Found ${activeAlerts.length} active alerts`);
-```
+```text
 
 ##### loadPersistedMetrics()
 
 ```typescript
 public async loadPersistedMetrics(): Promise<void>
-```
+```text
 
 Loads persisted metrics from storage.
 
@@ -337,7 +337,7 @@ Loads persisted metrics from storage.
 **Example:**
 ```typescript
 await monitoring.loadPersistedMetrics();
-```
+```text
 
 ### HealthCheckManager
 
@@ -347,7 +347,7 @@ Manages health checks for system components.
 
 ```typescript
 private constructor()
-```
+```text
 
 **Note:** Constructor is private. Use `getInstance()` to obtain an instance.
 
@@ -357,7 +357,7 @@ private constructor()
 
 ```typescript
 static getInstance(): HealthCheckManager
-```
+```text
 
 Gets the singleton instance of HealthCheckManager.
 
@@ -366,7 +366,7 @@ Gets the singleton instance of HealthCheckManager.
 **Example:**
 ```typescript
 const healthManager = HealthCheckManager.getInstance();
-```
+```text
 
 #### Instance Methods
 
@@ -374,7 +374,7 @@ const healthManager = HealthCheckManager.getInstance();
 
 ```typescript
 registerHealthCheck(check: HealthCheck): void
-```
+```text
 
 Registers a health check.
 
@@ -403,7 +403,7 @@ healthManager.registerHealthCheck({
   timeout: 5000,
   enabled: true
 });
-```
+```text
 
 **Behavior:**
 - Sets default interval (30000ms) and timeout (5000ms) if not provided
@@ -414,7 +414,7 @@ healthManager.registerHealthCheck({
 
 ```typescript
 unregisterHealthCheck(checkId: string): void
-```
+```text
 
 Unregisters a health check.
 
@@ -426,7 +426,7 @@ Unregisters a health check.
 **Example:**
 ```typescript
 healthManager.unregisterHealthCheck('database');
-```
+```text
 
 **Behavior:**
 - Stops health check timer
@@ -437,7 +437,7 @@ healthManager.unregisterHealthCheck('database');
 
 ```typescript
 async executeHealthCheck(checkId: string): Promise<HealthStatus>
-```
+```text
 
 Executes a specific health check immediately.
 
@@ -452,7 +452,7 @@ Executes a specific health check immediately.
 ```typescript
 const status = await healthManager.executeHealthCheck('database');
 console.log(`Database status: ${status.status}`);
-```
+```text
 
 **Behavior:**
 - Executes check with timeout
@@ -464,7 +464,7 @@ console.log(`Database status: ${status.status}`);
 
 ```typescript
 async getSystemHealth(): Promise<SystemHealth>
-```
+```text
 
 Gets overall system health by executing all enabled health checks.
 
@@ -475,7 +475,7 @@ Gets overall system health by executing all enabled health checks.
 const systemHealth = await healthManager.getSystemHealth();
 console.log(`Overall: ${systemHealth.overall}`);
 console.log(`Uptime: ${systemHealth.uptime}ms`);
-```
+```text
 
 **Behavior:**
 - Executes all enabled health checks in parallel
@@ -487,7 +487,7 @@ console.log(`Uptime: ${systemHealth.uptime}ms`);
 
 ```typescript
 start(): void
-```
+```text
 
 Starts the health check manager.
 
@@ -496,7 +496,7 @@ Starts the health check manager.
 **Example:**
 ```typescript
 healthManager.start();
-```
+```text
 
 **Behavior:**
 - Starts all registered health checks
@@ -507,7 +507,7 @@ healthManager.start();
 
 ```typescript
 stop(): void
-```
+```text
 
 Stops the health check manager.
 
@@ -516,7 +516,7 @@ Stops the health check manager.
 **Example:**
 ```typescript
 healthManager.stop();
-```
+```text
 
 **Behavior:**
 - Stops all health check timers
@@ -527,7 +527,7 @@ healthManager.stop();
 
 ```typescript
 getCheckResults(checkId: string, limit: number = 100): HealthCheckResult[]
-```
+```text
 
 Gets health check result history.
 
@@ -541,13 +541,13 @@ Gets health check result history.
 ```typescript
 const results = healthManager.getCheckResults('database', 50);
 console.log(`Last 50 results: ${results.length}`);
-```
+```text
 
 ##### getRegisteredChecks()
 
 ```typescript
 getRegisteredChecks(): HealthCheck[]
-```
+```text
 
 Gets all registered health checks.
 
@@ -557,13 +557,13 @@ Gets all registered health checks.
 ```typescript
 const checks = healthManager.getRegisteredChecks();
 console.log(`Registered ${checks.length} health checks`);
-```
+```text
 
 ##### setCheckEnabled()
 
 ```typescript
 setCheckEnabled(checkId: string, enabled: boolean): void
-```
+```text
 
 Enables or disables a health check.
 
@@ -579,13 +579,13 @@ Enables or disables a health check.
 ```typescript
 healthManager.setCheckEnabled('database', false); // Disable
 healthManager.setCheckEnabled('database', true);  // Enable
-```
+```text
 
 ##### updateHealthCheck()
 
 ```typescript
 updateHealthCheck(checkId: string, updates: Partial<HealthCheck>): void
-```
+```text
 
 Updates health check configuration.
 
@@ -603,7 +603,7 @@ healthManager.updateHealthCheck('database', {
   interval: 60000, // Change interval to 60 seconds
   timeout: 10000   // Change timeout to 10 seconds
 });
-```
+```text
 
 ## Usage Examples
 
@@ -623,7 +623,7 @@ const metrics = monitoring.getMetrics('api.requests', {
   start: Date.now() - 3600000,
   end: Date.now()
 });
-```
+```text
 
 ### Alerts
 
@@ -645,7 +645,7 @@ monitoring.onAlert((alert) => {
 
 // Get active alerts
 const active = monitoring.getActiveAlerts();
-```
+```text
 
 ### Health Checks
 
@@ -674,7 +674,7 @@ healthManager.start();
 // Get system health
 const health = await healthManager.getSystemHealth();
 console.log(`System: ${health.overall}`);
-```
+```text
 
 ## Event Integration
 

@@ -27,4 +27,4 @@ To regenerate these files, run:
 
 ```bash
 python tests/run_structure_analysis.py
-```
+```text

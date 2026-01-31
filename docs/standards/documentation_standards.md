@@ -23,7 +23,7 @@ related_documents:
   - [[templates/documentation_templates]]
   - [[guidelines/documentation_guidelines]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document establishes comprehensive standards for documentation creation, maintenance, and management across the organization.

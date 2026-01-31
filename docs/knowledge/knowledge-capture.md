@@ -56,7 +56,7 @@ capture_methods:
       - knowledge_management_system
       - collaboration_platform
       - document_management
-```
+```text
 
 ### Capture Process
 ```python
@@ -87,7 +87,7 @@ class KnowledgeCapture:
     def validate_capture(self):
         """Validate captured knowledge"""
         pass
-```
+```text
 
 ## 📚 Documentation Standards
 
@@ -121,7 +121,7 @@ class KnowledgeCapture:
     }
   }
 }
-```
+```text
 
 ### Documentation Process
 ```python
@@ -152,7 +152,7 @@ class DocumentationStandards:
     def validate_compliance(self):
         """Validate standards compliance"""
         pass
-```
+```text
 
 ## ✅ Quality Checks
 
@@ -188,7 +188,7 @@ quality_checks:
       - user_feedback
       - readability_testing
       - navigation_testing
-```
+```text
 
 ### Quality Management
 ```python
@@ -219,7 +219,7 @@ class QualityControl:
     def generate_quality_report(self):
         """Generate quality report"""
         pass
-```
+```text
 
 ## 📊 Metrics and Reporting
 
@@ -243,7 +243,7 @@ capture_metrics:
     - user_adoption
     - time_savings
     measurement: "impact_assessment"
-```
+```text
 
 ### Analytics Framework
 ```python
@@ -274,7 +274,7 @@ class CaptureAnalytics:
     def generate_insights(self):
         """Generate analytical insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -308,7 +308,7 @@ class CaptureAnalytics:
     }
   }
 }
-```
+```text
 
 ### Process Automation
 ```python
@@ -339,7 +339,7 @@ class ImprovementAutomation:
     def monitor_effectiveness(self):
         """Monitor improvement effectiveness"""
         pass
-```
+```text
 
 ## 📚 References
 

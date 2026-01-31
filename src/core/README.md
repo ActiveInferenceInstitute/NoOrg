@@ -62,7 +62,7 @@ graph TB
     style MON fill:#fff8e1,stroke:#f57f17,stroke-width:2px
     style STOR fill:#fce4ec,stroke:#880e4f,stroke-width:2px
     style UNITS fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-```
+```text
 
 ### Core Components
 
@@ -92,7 +92,7 @@ eventSystem.publish('task.started', {
   taskId: '123',
   timestamp: Date.now()
 });
-```
+```text
 
 ### Message System (`messaging/`)
 Structured message passing for sophisticated communication patterns.
@@ -119,7 +119,7 @@ await messageSystem.sendMessage({
   subject: 'Process Task',
   body: { taskId: 'task-456' }
 });
-```
+```text
 
 ### Monitoring System (`monitoring/`)
 Comprehensive observability and alerting system.
@@ -144,7 +144,7 @@ monitoring.recordMetric('agent.response.time', 150);
 monitoring.registerHealthCheck('database', async () => {
   return await checkDatabaseHealth();
 });
-```
+```text
 
 ### Storage System (`storage/`)
 Flexible data persistence with multiple backend support.
@@ -165,7 +165,7 @@ const storage = StorageSystem.getInstance();
 // Store and retrieve data
 await storage.set('user.profile', userData);
 const profile = await storage.get('user.profile');
-```
+```text
 
 ### Multi-Agent Coordination (`multiagent/`)
 Central coordination system for managing multiple agents.
@@ -188,7 +188,7 @@ await coordinator.registerAgent(analysisAgent);
 
 // Submit and manage tasks
 const taskId = await coordinator.submitTask(taskDetails);
-```
+```text
 
 ### Units System (`units/`)
 Organizational structure and unit management.
@@ -208,7 +208,7 @@ const unitManager = OrganizationalStructureManager.getInstance();
 
 // Create and manage organizational units
 const unit = await unitManager.createUnit('Research', 'Research Department');
-```
+```text
 
 ## Integration Patterns (`integration/patterns/`)
 
@@ -239,9 +239,9 @@ Resilience-focused patterns for reliable system integration:
 - **Service Discovery**: Dynamic component discovery
 
 ### Data Flow
-```
+```text
 Agents ↔ MultiAgentCoordinator ↔ Event/Message Systems ↔ Storage/Monitoring
-```
+```text
 
 ## Configuration
 
@@ -266,7 +266,7 @@ METRICS_PORT=9090
 # Storage
 STORAGE_BACKEND=memory
 STORAGE_MAX_SIZE=1GB
-```
+```text
 
 ### Programmatic Configuration
 ```typescript
@@ -277,7 +277,7 @@ const config = {
   monitoring: { metrics: true },
   storage: { backend: 'memory' }
 };
-```
+```text
 
 ## Integration
 
@@ -341,7 +341,7 @@ npm run test:core
 # Test specific systems
 npm test tests/unit/core/test_event_system.ts
 npm test tests/unit/core/test_storage_system.ts
-```
+```text
 
 ## Development
 
@@ -361,10 +361,10 @@ npm test tests/unit/core/test_storage_system.ts
 
 ## Related Documentation
 
-- [System Architecture](../../../docs/architecture/system-architecture.md)
-- [Integration Patterns](../../../src/core/integration/README.md)
-- [Event System](../../../src/core/events/README.md)
-- [Message System](../../../src/core/messaging/README.md)
-- [Monitoring System](../../../src/core/monitoring/README.md)
-- [Storage System](../../../src/core/storage/README.md)
-- [Multi-Agent Coordination](../../../src/core/multiagent/README.md)
+- [System Architecture](../../docs/system/system-architecture.md)
+- [Integration Patterns](../../README.md)
+- [Event System](../../README.md)
+- [Message System](../../README.md)
+- [Monitoring System](../../README.md)
+- [Storage System](../../README.md)
+- [Multi-Agent Coordination](../../README.md)

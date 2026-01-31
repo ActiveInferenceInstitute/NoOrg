@@ -19,7 +19,7 @@ graph TD
     A --> C[Assessment]
     A --> D[Response]
     A --> E[Recovery]
-```
+```text
 
 ### Response Architecture
 1. **Response Layers**

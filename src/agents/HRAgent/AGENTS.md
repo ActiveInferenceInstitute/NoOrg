@@ -19,7 +19,7 @@ The **HRAgent** specializes in human resources tasks including job description c
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -43,7 +43,7 @@ async createJobDescription(
     checkCache?: boolean;
   }
 ): Promise<JobDescriptionResult>
-```
+```text
 
 #### generateInterviewQuestions()
 
@@ -61,7 +61,7 @@ async generateInterviewQuestions(
     checkCache?: boolean;
   }
 ): Promise<InterviewQuestionsResult>
-```
+```text
 
 #### createOnboardingPlan()
 
@@ -79,7 +79,7 @@ async createOnboardingPlan(
     isRemote?: boolean;
   }
 ): Promise<OnboardingPlanResult>
-```
+```text
 
 ## Configuration Options
 
@@ -94,7 +94,7 @@ interface HRAgentConfig extends AgentConfig {
   policyTemplates?: Record<string, string>;
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -137,7 +137,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -170,7 +170,7 @@ const agent = new HRAgent({
     customTemplates: customTemplates
   }
 });
-```
+```text
 
 ### Multi-department Workflows
 
@@ -187,7 +187,7 @@ const onboardingPlans = await Promise.all(
     })
   )
 );
-```
+```text
 
 ## Version History
 

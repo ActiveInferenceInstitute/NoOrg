@@ -37,7 +37,7 @@ graph TD
         SR --> SV[State Verification]
         SV --> SC[State Consistency]
     end
-```
+```text
 
 ## Failure Scenarios
 
@@ -86,7 +86,7 @@ task_failures:
       - migrate_task:
           command: migrate_task
           args: [task_id, new_resources]
-```
+```text
 
 ### System Failures
 ```yaml
@@ -130,7 +130,7 @@ system_failures:
       - reprocess_messages:
           command: replay_messages
           args: [queue_ids, timeframe]
-```
+```text
 
 ## Recovery Implementation
 
@@ -188,7 +188,7 @@ class RecoveryEngine:
         except Exception as e:
             await self._handle_step_failure(task_id, e)
             return False
-```
+```text
 
 ### State Recovery
 ```python
@@ -237,7 +237,7 @@ class StateRecovery:
         except Exception as e:
             await self._handle_restore_failure(task_id, e)
             raise
-```
+```text
 
 ### Resource Recovery
 ```python
@@ -273,7 +273,7 @@ class ResourceRecovery:
         except Exception as e:
             await self._handle_resource_recovery_failure(task_id, e)
             return False
-```
+```text
 
 ## Recovery Procedures
 
@@ -302,7 +302,7 @@ automatic_recovery:
         - allocate_new_resources
         - update_task_state
         - resume_execution
-```
+```text
 
 ### Manual Recovery
 ```yaml
@@ -339,7 +339,7 @@ manual_recovery:
         - verify_state:
             command: verify_state
             args: [task_id]
-```
+```text
 
 ## Monitoring & Verification
 
@@ -371,7 +371,7 @@ class RecoveryMonitor:
             
         except Exception as e:
             await self._handle_monitoring_failure(task_id, e)
-```
+```text
 
 ### Recovery Verification
 ```python
@@ -403,7 +403,7 @@ class RecoveryVerification:
         except Exception as e:
             await self._handle_verification_failure(task_id, e)
             return False
-```
+```text
 
 ## Best Practices
 
@@ -427,7 +427,7 @@ recovery_best_practices:
     - check_consistency
     - validate_resources
     - test_functionality
-```
+```text
 
 ### Performance Considerations
 ```yaml
@@ -443,7 +443,7 @@ performance_considerations:
     - optimize_state_transfer
     - balance_load
     - control_impact
-```
+```text
 
 ## Documentation
 

@@ -20,7 +20,7 @@ graph TD
     A --> D[Integration Hub]
     A --> E[Orchestration]
     A --> F[Monitoring]
-```
+```text
 
 ### Framework Layers
 1. **Automation Layers**

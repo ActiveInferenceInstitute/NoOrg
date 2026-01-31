@@ -41,7 +41,7 @@ mindmap
       Pattern recognition
       Relationship identification
       Holistic perspective
-```
+```text
 
 ## Strategic Assessment Frameworks
 1. **PESTEL analysis**
@@ -109,7 +109,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Strategic Forecasting Methods
 1. **Trend analysis and extrapolation**
@@ -175,7 +175,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Alternative Analysis Techniques
 1. **Red team analysis**
@@ -241,7 +241,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Strategic Decision Support
 1. **Option development and assessment**
@@ -307,7 +307,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Strategic Intelligence Production
 1. **Long-term assessments**
@@ -373,7 +373,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Strategic Intelligence Organization
 - Structure intelligence teams for cross-domain integration
@@ -416,7 +416,7 @@ mindmap
       Appropriate distance
       Trust development
       Feedback mechanisms
-```
+```text
 
 ## Strategic Intelligence Process Model
 ```mermaid
@@ -457,4 +457,4 @@ graph TB
     T -.-> D
     T -.-> F
     T -.-> N
-``` 
+```text 

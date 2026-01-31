@@ -61,13 +61,13 @@ This document defines the comprehensive version control strategy and practices f
 ## 📝 Commit Standards
 
 ### Commit Message Format
-```
+```text
 type(scope): subject
 
 body
 
 footer
-```
+```text
 
 ### Types
 - `feat`: New feature

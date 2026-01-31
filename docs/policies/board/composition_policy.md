@@ -23,7 +23,7 @@ related_policies:
   - [[policies/board/meeting_policy]]
   - [[policies/board/decision_policy]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This policy defines the requirements and guidelines for the composition, structure, and qualifications of the Board of Directors. It implements the board governance components of the [[governance/governance_frameworks|Governance Framework]] and [[policies/governance_policies|Governance Policies]].

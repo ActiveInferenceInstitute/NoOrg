@@ -15,7 +15,7 @@ graph TD
     CSM --> KBS[Knowledge Base Specialist]
     CSD -.-> CSWG[CS Working Groups]
     CSD -.-> VOCT[Voice of Customer Team]
-```
+```text
 
 The Customer Support Unit consists of:
 - **Customer Support Director**: Provides strategic leadership and oversight
@@ -59,7 +59,7 @@ graph LR
     end
     Support Tiers -.-> Support Channels
     Support Channels -.-> Support Tiers
-```
+```text
 
 ## Core Responsibilities
 

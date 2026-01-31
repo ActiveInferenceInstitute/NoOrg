@@ -19,7 +19,7 @@ The **WritingAgent** specializes in content creation, editing, and refinement. I
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -33,7 +33,7 @@ async writeContent(
   outline: string[],
   style?: string
 ): Promise<WritingResult>
-```
+```text
 
 #### editContent()
 
@@ -44,7 +44,7 @@ async editContent(
   content: string,
   changes: string[]
 ): Promise<string>
-```
+```text
 
 #### generateContent()
 
@@ -55,7 +55,7 @@ async generateContent(
   topic: string,
   requirements: string[]
 ): Promise<ContentResult>
-```
+```text
 
 ## Configuration Options
 
@@ -70,7 +70,7 @@ interface WritingAgentConfig extends AgentConfig {
   keywordStrategy?: 'natural' | 'strategic' | 'optimized';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -113,7 +113,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -143,7 +143,7 @@ const contentVariants = await Promise.all(
     ])
   )
 );
-```
+```text
 
 ### Content Series
 
@@ -161,7 +161,7 @@ const series = await Promise.all(
     writingAgent.writeContent(topic, outline, 'academic-professional')
   )
 );
-```
+```text
 
 ## Version History
 

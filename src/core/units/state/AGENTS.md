@@ -17,7 +17,7 @@ interface StateUpdateOptions {
   broadcastUpdate?: boolean;
   conflictResolutionStrategy?: ConflictResolutionStrategy;
 }
-```
+```text
 
 ### ConflictResolutionStrategy
 
@@ -28,7 +28,7 @@ enum ConflictResolutionStrategy {
   MERGE = 'merge',
   CUSTOM = 'custom'
 }
-```
+```text
 
 ### StateSubscriptionOptions
 
@@ -39,7 +39,7 @@ interface StateSubscriptionOptions {
   metadata?: Record<string, any>;
   debounceMs?: number;
 }
-```
+```text
 
 ## UnitStateManager Class
 
@@ -49,7 +49,7 @@ interface StateSubscriptionOptions {
 
 ```typescript
 public static getInstance(): UnitStateManager
-```
+```text
 
 Gets singleton instance.
 
@@ -65,7 +65,7 @@ public async setState(
   value: any,
   options?: StateUpdateOptions
 ): Promise<void>
-```
+```text
 
 Sets state value.
 
@@ -80,7 +80,7 @@ Sets state value.
 
 ```typescript
 public async getState<T>(path: string): Promise<T | null>
-```
+```text
 
 Gets state value.
 
@@ -93,7 +93,7 @@ Gets state value.
 
 ```typescript
 public async deleteState(path: string): Promise<boolean>
-```
+```text
 
 Deletes state value.
 
@@ -110,7 +110,7 @@ public subscribe(
   handler: (path: string, value: any) => void,
   options?: StateSubscriptionOptions
 ): () => void
-```
+```text
 
 Subscribes to state changes.
 

@@ -20,7 +20,7 @@ graph TD
     C --> D[Execution]
     D --> E[Monitoring]
     E --> F[Closure]
-```
+```text
 
 ### Phase Components
 1. **Lifecycle Stages**

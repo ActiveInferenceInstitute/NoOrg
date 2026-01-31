@@ -26,7 +26,7 @@ related_documents:
   - [[processes/service_management]]
   - [[processes/data_management]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the performance monitoring framework for the agent system, providing comprehensive monitoring, analysis, optimization, and reporting capabilities for system performance across all components.
@@ -43,7 +43,7 @@ class PerformanceManager:
         self.optimizer = PerformanceOptimizer()
         self.reporter = PerformanceReporter()
         self.alerter = AlertManager()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Data Pipeline]
     C --> F[Analysis Engine]
     D --> G[Optimization Engine]
-```
+```text
 
 ### 2. Metric Collection
 #### 2.1 Collection System
@@ -71,7 +71,7 @@ class MetricCollector:
         processed = await self.processors.process_data(raw_data)
         pipeline = await self.pipeline.process_data(processed)
         await self.storage.store_metrics(pipeline)
-```
+```text
 
 #### 2.2 Metric Types
 - Response Time Metrics
@@ -94,7 +94,7 @@ class PerformanceAnalyzer:
         correlation = await self.correlator.correlate_metrics(profile)
         prediction = await self.predictor.predict_performance(correlation)
         return await self.engine.analyze_results(prediction)
-```
+```text
 
 #### 3.2 Analysis Types
 - Trend Analysis
@@ -117,7 +117,7 @@ class PerformanceOptimizer:
         execution = await self.executor.execute_plan(plan)
         validation = await self.validator.validate_optimization(execution)
         return await self.engine.apply_optimization(validation)
-```
+```text
 
 #### 4.2 Optimization Types
 - Resource Optimization
@@ -140,7 +140,7 @@ class PerformanceReporter:
         report = await self.generator.generate_report(analysis)
         formatted = await self.formatter.format_report(report)
         await self.distributor.distribute_report(formatted)
-```
+```text
 
 #### 5.2 Report Types
 - Performance Reports
@@ -163,7 +163,7 @@ class AlertManager:
         classification = await self.classifier.classify_alerts(detection)
         priority = await self.prioritizer.prioritize_alerts(classification)
         await self.notifier.notify_alerts(priority)
-```
+```text
 
 #### 6.2 Alert Types
 - Performance Alerts
@@ -188,7 +188,7 @@ class MonitoringImplementation:
     async def setup_analysis(self, analysis):
         # Analysis setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Monitoring Architecture
@@ -205,7 +205,7 @@ class MetricManager:
         self.validator = MetricValidator()
         self.processor = MetricProcessor()
         self.storage = MetricStorage()
-```
+```text
 
 #### 2.2 Metric Types
 - System Metrics
@@ -236,7 +236,7 @@ class MonitoringQuality:
     async def measure_effectiveness(self, results):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class MonitoringCompliance:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Data Retention
@@ -318,7 +318,7 @@ class MonitoringPattern:
         self.collector = MetricCollector()
         self.analyzer = PerformanceAnalyzer()
         self.optimizer = PerformanceOptimizer()
-```
+```text
 
 ### B. Analysis Patterns
 ```python
@@ -328,7 +328,7 @@ class AnalysisPattern:
         self.engine = AnalysisEngine()
         self.profiler = SystemProfiler()
         self.predictor = PerformancePredictor()
-```
+```text
 
 ### C. Optimization Patterns
 ```python
@@ -338,4 +338,4 @@ class OptimizationPattern:
         self.planner = OptimizationPlanner()
         self.executor = OptimizationExecutor()
         self.validator = OptimizationValidator()
-``` 
+```text 

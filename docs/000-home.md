@@ -74,7 +74,7 @@ TABLE file.mtime as "Last Modified"
 FROM -"templates"
 SORT file.mtime DESC
 LIMIT 5
-```
+```text
 
 ## 🎯 Getting Started
 1. Review the [[style-guide|Documentation Standards]]

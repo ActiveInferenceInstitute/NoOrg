@@ -32,7 +32,7 @@ graph LR
     SCM --> SD
 
     style PM fill:#f9f,stroke:#333,stroke-width:2px
-```
+```text
 
 ## Maintenance
 

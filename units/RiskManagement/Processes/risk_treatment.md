@@ -45,7 +45,7 @@ graph TD
         H5(Performance Measures)
         H --> H1; H --> H2; H --> H3; H --> H4; H --> H5;
     end
-```
+```text
 
 ### 3.1. Identify Treatment Options
 - **Activity:** For each risk requiring treatment, identify potential options. Common categories include:

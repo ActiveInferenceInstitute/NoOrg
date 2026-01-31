@@ -53,7 +53,7 @@ tutorial_guides:
           - memory_management
           - resource_optimization
           - workflow_enhancement
-```
+```text
 
 ### Guide Management
 ```python
@@ -84,7 +84,7 @@ class GuideManager:
     def track_learning(self):
         """Track learning progress"""
         pass
-```
+```text
 
 ## 📚 Examples
 
@@ -118,7 +118,7 @@ class GuideManager:
     }
   }
 }
-```
+```text
 
 ### Example Management
 ```python
@@ -149,7 +149,7 @@ class ExampleManager:
     def customize_examples(self):
         """Customize examples for context"""
         pass
-```
+```text
 
 ## ✍️ Practice Exercises
 
@@ -194,7 +194,7 @@ practice_exercises:
           - role_focused
           - industry_aligned
           - expertise_development
-```
+```text
 
 ### Exercise Management
 ```python
@@ -225,7 +225,7 @@ class ExerciseManager:
     def track_development(self):
         """Track skill development"""
         pass
-```
+```text
 
 ## 📊 Assessment Tools
 
@@ -270,7 +270,7 @@ assessment_tools:
           - peer_evaluation
           - self_assessment
           - feedback_collection
-```
+```text
 
 ### Assessment Management
 ```python
@@ -301,7 +301,7 @@ class AssessmentManager:
     def provide_feedback(self):
         """Provide assessment feedback"""
         pass
-```
+```text
 
 ## 📚 References
 

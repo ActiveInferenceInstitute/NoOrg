@@ -26,7 +26,7 @@ interface CognitiveAgent extends Agent {
   intentions: Map<string, number>; // Commitment levels
   emotions: Map<string, number>; // Emotional states
 }
-```
+```text
 
 ### Decision Frameworks (`decision-frameworks.md`)
 Decision-making architectures for complex reasoning.
@@ -69,7 +69,7 @@ class ReactiveAgent extends AbstractAgent {
     return this.reactToStimuli(stimuli, taskDetails);
   }
 }
-```
+```text
 
 ### Deliberative Architecture
 ```typescript
@@ -81,7 +81,7 @@ class DeliberativeAgent extends AbstractAgent {
     return this.executePlan(reasoning.result);
   }
 }
-```
+```text
 
 ### Hybrid Architecture
 ```typescript
@@ -94,7 +94,7 @@ class HybridAgent extends AbstractAgent {
     return this.combineResponses(reactiveResponse, deliberativePlan);
   }
 }
-```
+```text
 
 ## Cognitive Models
 
@@ -124,7 +124,7 @@ interface Intention {
   commitment: number;
   status: 'active' | 'suspended' | 'abandoned';
 }
-```
+```text
 
 ### Active Inference
 ```typescript
@@ -142,7 +142,7 @@ interface GenerativeModel {
   transitionProbabilities: number[][][];
   observationProbabilities: number[][];
 }
-```
+```text
 
 ## Implementation Examples
 
@@ -167,7 +167,7 @@ class CognitiveAgent extends AbstractAgent {
     return this.executePlan(plan);
   }
 }
-```
+```text
 
 ### Fractal Agent Implementation
 ```typescript
@@ -188,7 +188,7 @@ class FractalAgent extends AbstractAgent {
     return this.synthesizeResults(results);
   }
 }
-```
+```text
 
 ## Best Practices
 
@@ -230,7 +230,7 @@ await coordinator.registerAgent(cognitiveAgent);
 
 // Execute complex reasoning tasks
 const result = await cognitiveAgent.reasonAbout(problem);
-```
+```text
 
 ### With Other Agents
 ```typescript
@@ -242,7 +242,7 @@ const hybridResult = await hybridAgent.combineArchitectures(
   reactiveAgent.quickResponse(),
   deliberativeAgent.detailedPlan()
 );
-```
+```text
 
 ## Testing Architectures
 
@@ -260,7 +260,7 @@ describe('Cognitive Architecture', () => {
     });
   });
 });
-```
+```text
 
 ### Performance Testing
 ```typescript
@@ -275,11 +275,11 @@ describe('Architecture Performance', () => {
     expect(duration).to.be.below(5000); // 5 second limit
   });
 });
-```
+```text
 
 ## Related Documentation
 
-- [Agent Framework](../../../src/agents/README.md)
-- [Multi-Agent Coordination](../../../src/core/multiagent/README.md)
-- [Core Systems](../../../src/core/README.md)
-- [Architecture Documentation](../../../docs/architecture/system-architecture.md)
+- [Agent Framework](../../README.md)
+- [Multi-Agent Coordination](../../README.md)
+- [Core Systems](../../README.md)
+- [Architecture Documentation](../../docs/system/system-architecture.md)

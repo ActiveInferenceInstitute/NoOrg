@@ -19,7 +19,7 @@ graph TD
     A --> C[Data Protection]
     A --> D[System Security]
     A --> E[Compliance]
-```
+```text
 
 ### Policy Architecture
 1. **Policy Layers**

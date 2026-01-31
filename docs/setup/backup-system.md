@@ -78,7 +78,7 @@ tar -czf .backup/archives/vault-$(date +%Y%m%d).tar.gz /vault/
 
 # Cloud sync
 aws s3 sync .backup/archives/ s3://vault-backup/
-```
+```text
 
 ### Manual Backups
 1. Export vault

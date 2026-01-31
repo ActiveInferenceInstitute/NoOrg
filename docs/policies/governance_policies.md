@@ -23,7 +23,7 @@ related_frameworks:
   - [[frameworks/risk_management]]
   - [[frameworks/compliance_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the comprehensive set of governance policies that implement the [[governance/governance_frameworks|Governance Framework]]. It provides specific policy directives, requirements, and guidelines for organizational governance.

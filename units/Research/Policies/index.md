@@ -1,18 +1,25 @@
-# Research Policies Index
+# Research Policies
 
-This section contains policies specific to the [[../index|Research Unit]] operations and conduct.
+This directory contains policies governing research activities, publications, data management, and ethics.
 
-## Key Policies
+## Core Policies
 
-*   [[PublicationPolicy|Publication Policy]] (TBD)
-*   [[DataManagementPolicy|Data Management Policy]] (TBD) - *Cross-reference [[../Methodologies#Standards and Best Practices|Methodologies]]*
-*   [[IntellectualPropertyPolicy|Intellectual Property (IP) Policy]] (TBD) - *Consult [[../../Legal/|Legal Unit]]*
-*   [[ResearchEthicsPolicy|Research Ethics Policy]] (TBD) - *Aligns with [[../../EthicsAdvisoryBoard/|Ethics Advisory Board]] guidelines.*
-*   [Other Policy]
+| Policy | Description |
+|--------|-------------|
+| [Publication Policy](./PublicationPolicy.md) | Guidelines for academic and industry publications |
+| [Data Management Policy](./DataManagementPolicy.md) | Research data handling, storage, and sharing |
+| [Intellectual Property Policy](./IntellectualPropertyPolicy.md) | IP ownership and commercialization |
+| [Research Ethics Policy](./ResearchEthicsPolicy.md) | Ethical conduct in research |
 
-## Related Documents
+## Governance
 
-*   [[../Processes/|Research Processes]]
-*   [[../Methodologies|Research Methodologies]]
-*   [[../../Legal/Policies/|Organizational Legal Policies]]
-*   [[../../Compliance/Policies/|Organizational Compliance Policies]] 
+All research policies align with:
+
+- Organizational [Code of Conduct](../../Governance/Policies/Code_of_Conduct.md)
+- [Ethics Advisory Board](../../EthicsAdvisoryBoard/) guidelines
+- [Legal](../../Legal/) compliance requirements
+
+## Related Documentation
+
+- [Research Methodologies](../Methodologies.md)
+- [Research Processes](../Processes/)

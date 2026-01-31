@@ -41,7 +41,7 @@ mindmap
       Behavior delegation
       Static/dynamic composition
       Implementation flexibility
-```
+```text
 
 ## Design Pattern Frameworks
 1. **Creational patterns**
@@ -105,7 +105,7 @@ graph TD
     C -.-> F
     D -.-> F
     E -.-> F
-```
+```text
 
 ## Code Design Principles
 1. **SOLID principles**
@@ -165,7 +165,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## API Design Guidelines
 1. **Consistency**
@@ -223,7 +223,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## System Architecture Principles
 1. **Modular architecture**
@@ -281,7 +281,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## When Facing Design Challenges
 - Consider multiple alternative approaches before committing
@@ -327,7 +327,7 @@ graph TD
     G --> G1[Decision rationale]
     G --> G2[Alternative documentation]
     G --> G3[Constraint recording]
-```
+```text
 
 ## Design Evolution Guidelines
 - Incorporate feedback loops to validate design decisions
@@ -375,7 +375,7 @@ flowchart TD
     D --> G
     E --> G
     F --> G
-```
+```text
 
 ## Software Design Process Model
 ```mermaid
@@ -409,4 +409,4 @@ graph TB
     N -.-> C
     N -.-> D
     N -.-> I
-``` 
+```text 

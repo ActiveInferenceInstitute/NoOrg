@@ -20,7 +20,7 @@ graph TB
     P2[Milestones: 70%]
     P3[Deliverables: 60%]
     end
-```
+```text
 
 ## 🎯 Project Charter
 ### Vision and Goals
@@ -39,7 +39,7 @@ mindmap
             Time
             Budget
             Scope
-```
+```text
 
 ## 📅 Project Timeline
 ```mermaid
@@ -58,7 +58,7 @@ gantt
     section Closure
     Testing         :c1, after b2, 15d
     Deployment      :c2, after c1, 10d
-```
+```text
 
 ## 👥 Stakeholder Map
 ```mermaid
@@ -73,7 +73,7 @@ quadrantChart
     Stakeholder1: [0.8, 0.9]
     Stakeholder2: [0.3, 0.4]
     Stakeholder3: [0.6, 0.7]
-```
+```text
 
 ## 🔄 Project Workflow
 ```mermaid
@@ -95,7 +95,7 @@ graph LR
     end
     
     I1 & I2 --> P1 --> P2 --> P3 --> O1 & O2
-```
+```text
 
 ## 📈 Progress Tracking
 ```mermaid
@@ -106,7 +106,7 @@ xychart-beta
     y-axis "Actual %" 0 --> 100
     line [20, 40, 60, 80, 100]
     line [15, 35, 55, 75, 90]
-```
+```text
 
 ## 🎯 Risk Assessment
 ```mermaid
@@ -121,7 +121,7 @@ quadrantChart
     Risk1: [0.8, 0.3]
     Risk2: [0.4, 0.7]
     Risk3: [0.6, 0.5]
-```
+```text
 
 ## 💰 Budget Allocation
 ```mermaid
@@ -135,7 +135,7 @@ sankey-beta
     Operations [30] -> Support [10]
     Management [30] -> PM [15]
     Management [30] -> Admin [15]
-```
+```text
 
 ## 🔄 Change Management
 ```mermaid
@@ -149,7 +149,7 @@ gitGraph
     branch change2
     commit id: "Change Request 2"
     commit id: "Review"
-```
+```text
 
 ## 📊 Quality Metrics
 ```mermaid
@@ -165,7 +165,7 @@ radar
     data
         Current: 85, 80, 75, 85, 70, 80
         Target: 90, 85, 85, 90, 80, 85
-```
+```text
 
 ## 🔗 Dependencies Map
 ```mermaid
@@ -187,7 +187,7 @@ graph TB
     
     External --> Internal
     Internal --> Systems
-```
+```text
 
 ## 📈 Resource Utilization
 ```mermaid
@@ -197,7 +197,7 @@ xychart-beta
     y-axis "Utilization %" 0 --> 100
     line [75, 80, 85, 90]
     line [70, 75, 80, 85]
-```
+```text
 
 ## Project Sections
 

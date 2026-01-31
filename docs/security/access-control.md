@@ -19,7 +19,7 @@ graph TD
     A --> C[Authorization]
     A --> D[Access Management]
     A --> E[Audit and Compliance]
-```
+```text
 
 ### Control Architecture
 1. **Control Layers**

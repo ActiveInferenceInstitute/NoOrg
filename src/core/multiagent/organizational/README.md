@@ -76,7 +76,7 @@ const agentManager = new AgentManager();
 
 agentManager.registerAgent(agent);
 const agent = agentManager.getAgentById('agent-001');
-```
+```text
 
 ### Workflow Coordination
 
@@ -94,7 +94,7 @@ const result = await coordinator.runCollaborativePlanning({
   workflowDefinition: [...],
   initialPlanTitle: 'Product Development Plan'
 });
-```
+```text
 
 ## Related Documentation
 

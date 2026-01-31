@@ -50,7 +50,7 @@ update_frequency:
       - actual_reviews
       - review_compliance
       - review_effectiveness
-```
+```text
 
 ### Frequency Management
 ```python
@@ -81,7 +81,7 @@ class FrequencyManager:
     def analyze_patterns(self):
         """Analyze update patterns"""
         pass
-```
+```text
 
 ## 📝 Change Types
 
@@ -115,7 +115,7 @@ class FrequencyManager:
     }
   }
 }
-```
+```text
 
 ### Change Management
 ```python
@@ -146,7 +146,7 @@ class ChangeManager:
     def analyze_changes(self):
         """Analyze change patterns"""
         pass
-```
+```text
 
 ## 👥 Author Activity
 
@@ -188,7 +188,7 @@ author_activity:
       - completion_rate
       - backlog_status
       - capacity_utilization
-```
+```text
 
 ### Activity Management
 ```python
@@ -219,7 +219,7 @@ class ActivityManager:
     def assess_performance(self):
         """Assess author performance"""
         pass
-```
+```text
 
 ## 📈 Quality Trends
 
@@ -261,7 +261,7 @@ quality_trends:
       - update_efficiency
       - resource_utilization
       - technical_debt
-```
+```text
 
 ### Quality Management
 ```python
@@ -292,7 +292,7 @@ class QualityManager:
     def improve_quality(self):
         """Improve content quality"""
         pass
-```
+```text
 
 ## 📚 References
 

@@ -19,7 +19,7 @@ graph TD
     J --> K[Account Management];
     I --> B; 
     E --> A;
-```
+```text
 
 ### Stage Descriptions
 

@@ -41,7 +41,7 @@ mindmap
       Failure acceptance
       Postmortem process
       Continuous improvement
-```
+```text
 
 ## CI/CD Pipeline Components
 1. **Source control management**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Deployment Strategies
 1. **Blue-green deployment**
@@ -173,7 +173,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Infrastructure Management
 1. **Infrastructure as code (IaC)**
@@ -239,7 +239,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Monitoring and Observability
 1. **Metrics collection**
@@ -305,7 +305,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Security Integration
 1. **Pipeline security**
@@ -371,7 +371,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Collaboration and Culture
 - Foster shared responsibility between development and operations
@@ -414,7 +414,7 @@ mindmap
       Engineering satisfaction
       Burnout prevention
       Career development
-```
+```text
 
 ## DevOps Implementation Framework
 - Start small with high-value, low-risk improvements
@@ -463,7 +463,7 @@ flowchart TD
     E --> H
     F --> H
     G --> H
-```
+```text
 
 ## DevOps and CI/CD Process Model
 ```mermaid
@@ -512,4 +512,4 @@ graph TB
     U -.-> A
     U -.-> L
     U -.-> Q
-``` 
+```text 

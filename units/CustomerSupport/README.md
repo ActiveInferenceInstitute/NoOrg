@@ -31,7 +31,7 @@ graph TD
     Processes --> CustomerSupportUnit
     Reports --> CustomerSupportUnit
     Meetings --> CustomerSupportUnit
-```
+```text
 
 ## Key Documents
 

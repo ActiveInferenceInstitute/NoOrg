@@ -19,7 +19,7 @@ graph TD
     A --> C[User Value]
     A --> D[Process Value]
     A --> E[Strategic Value]
-```
+```text
 
 ### Analysis Framework
 1. **Value Categories**

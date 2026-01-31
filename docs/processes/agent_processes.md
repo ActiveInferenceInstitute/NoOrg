@@ -27,7 +27,7 @@ related_processes:
   - [[processes/quality_processes]]
   - [[processes/implementation_processes]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document details the operational processes and procedures that implement the [[frameworks/agent_framework|Agent Framework]], ensuring consistent development, deployment, and management of agent-based systems.
@@ -43,7 +43,7 @@ graph TD
     C --> D[Monitoring]
     D --> E[Optimization]
     E --> A
-```
+```text
 
 #### 1.2 Key Components
 - Development Teams

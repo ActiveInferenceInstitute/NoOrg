@@ -94,7 +94,7 @@ sequenceDiagram
         Secretariat-->>Relevant Units: Communicate Final Recommendation
         Secretariat->>Secretariat: Archive Records
     end
-```
+```text
 
 ---
 Version: 1.0

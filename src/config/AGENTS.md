@@ -66,7 +66,7 @@ interface Config {
     enableProfiling: boolean;
   };
 }
-```
+```text
 
 ## Classes
 
@@ -76,7 +76,7 @@ interface Config {
 class ConfigValidationError extends Error {
   constructor(public errors: string[])
 }
-```
+```text
 
 Error class for configuration validation failures.
 
@@ -86,7 +86,7 @@ Error class for configuration validation failures.
 
 ```typescript
 export function loadConfig(): Config
-```
+```text
 
 Loads and validates configuration from environment variables.
 
@@ -98,7 +98,7 @@ Loads and validates configuration from environment variables.
 
 ```typescript
 export function validateConfig(config: Partial<Config>): string[]
-```
+```text
 
 Validates configuration object.
 

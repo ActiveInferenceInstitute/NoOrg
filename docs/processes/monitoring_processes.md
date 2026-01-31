@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/resource_monitoring]]
   - [[processes/service_management]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the operational processes and procedures for monitoring systems within the agent framework, providing comprehensive guidelines for monitoring implementation, operation, and maintenance.
@@ -43,7 +43,7 @@ graph TD
     D --> E[Response]
     E --> F[Optimization]
     F --> A
-```
+```text
 
 #### 1.2 Process Components
 ```python
@@ -63,7 +63,7 @@ class MonitoringProcess:
         alerts = await self.alerter.handle_alerts(analysis)
         response = await self.responder.handle_response(alerts)
         await self.optimizer.optimize_process(response)
-```
+```text
 
 ### 2. Collection Process
 #### 2.1 Collection System
@@ -80,7 +80,7 @@ class CollectionProcess:
         execution = await self.executor.execute_collection(schedule)
         validation = await self.validator.validate_data(execution)
         return await self.storage.store_data(validation)
-```
+```text
 
 #### 2.2 Collection Types
 - Metric Collection
@@ -103,7 +103,7 @@ class ProcessingSystem:
         transformation = await self.transformer.transform_data(pipeline)
         enrichment = await self.enricher.enrich_data(transformation)
         return await self.validator.validate_processing(enrichment)
-```
+```text
 
 #### 3.2 Processing Types
 - Data Transformation
@@ -126,7 +126,7 @@ class AnalysisProcess:
         detection = await self.detector.detect_anomalies(correlation)
         prediction = await self.predictor.predict_trends(detection)
         return await self.engine.analyze_results(prediction)
-```
+```text
 
 #### 4.2 Analysis Types
 - Pattern Analysis
@@ -149,7 +149,7 @@ class AlertProcess:
         classification = await self.classifier.classify_alerts(detection)
         prioritization = await self.prioritizer.prioritize_alerts(classification)
         return await self.notifier.notify_alerts(prioritization)
-```
+```text
 
 #### 5.2 Alert Types
 - System Alerts
@@ -172,7 +172,7 @@ class ResponseProcess:
         handling = await self.handler.handle_response(coordination)
         validation = await self.validator.validate_response(handling)
         return await self.reporter.report_response(validation)
-```
+```text
 
 #### 6.2 Response Types
 - Automated Response
@@ -197,7 +197,7 @@ class ProcessImplementation:
     async def setup_workflow(self, workflow):
         # Workflow setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Process Architecture
@@ -214,7 +214,7 @@ class WorkflowManager:
         self.scheduler = TaskScheduler()
         self.coordinator = ProcessCoordinator()
         self.monitor = WorkflowMonitor()
-```
+```text
 
 #### 2.2 Workflow Types
 - Collection Workflows
@@ -245,7 +245,7 @@ class QualityMonitoring:
     async def measure_effectiveness(self, metrics):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -277,7 +277,7 @@ class ProcessCompliance:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Process Standards
@@ -327,7 +327,7 @@ class ProcessPattern:
         self.workflow = WorkflowEngine()
         self.executor = ProcessExecutor()
         self.monitor = ProcessMonitor()
-```
+```text
 
 ### B. Workflow Patterns
 ```python
@@ -337,7 +337,7 @@ class WorkflowPattern:
         self.engine = WorkflowEngine()
         self.scheduler = TaskScheduler()
         self.coordinator = ProcessCoordinator()
-```
+```text
 
 ### C. Integration Patterns
 ```python
@@ -347,4 +347,4 @@ class IntegrationPattern:
         self.connector = SystemConnector()
         self.transformer = DataTransformer()
         self.validator = IntegrationValidator()
-``` 
+```text 

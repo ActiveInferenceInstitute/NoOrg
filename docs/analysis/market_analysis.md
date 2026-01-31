@@ -23,7 +23,7 @@ related_frameworks:
   - [[strategies/corporate_strategy]]
   - [[frameworks/market_intelligence]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document outlines the framework and methodology for conducting comprehensive market analysis as part of the [[frameworks/strategic_planning|Strategic Planning Framework]]. It provides structured approaches for understanding market dynamics, opportunities, and risks.

@@ -47,7 +47,7 @@ flowchart LR
     G --> H[Document Lessons Learned]
     E --> H
     H --> A
-```  
+```text  
 
 ## 6. Training & Awareness
 

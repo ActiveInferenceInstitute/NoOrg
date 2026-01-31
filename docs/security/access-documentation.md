@@ -39,7 +39,7 @@ access_procedures:
           strategy: "intelligent"
           adaptation: "dynamic"
           validation: "automated"
-```
+```text
 
 ### Procedure Management
 ```python
@@ -70,7 +70,7 @@ class ProcedureManager:
     def enhance_documentation(self):
         """Enhance procedure documentation"""
         pass
-```
+```text
 
 ## 📊 Permission Matrix
 
@@ -101,7 +101,7 @@ permission_matrix:
           strategy: "intelligent"
           refinement: "continuous"
           validation: "automated"
-```
+```text
 
 ### Matrix Management
 ```python
@@ -132,7 +132,7 @@ class MatrixManager:
     def enhance_documentation(self):
         """Enhance matrix documentation"""
         pass
-```
+```text
 
 ## 🔄 Change Process
 
@@ -163,7 +163,7 @@ change_process:
           strategy: "intelligent"
           adaptation: "dynamic"
           validation: "automated"
-```
+```text
 
 ### Process Management
 ```python
@@ -194,7 +194,7 @@ class ChangeManager:
     def enhance_documentation(self):
         """Enhance process documentation"""
         pass
-```
+```text
 
 ## 📋 Audit Requirements
 
@@ -225,7 +225,7 @@ audit_requirements:
           strategy: "intelligent"
           adaptation: "dynamic"
           validation: "automated"
-```
+```text
 
 ### Requirements Management
 ```python
@@ -256,7 +256,7 @@ class RequirementsManager:
     def enhance_documentation(self):
         """Enhance requirements documentation"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

@@ -62,7 +62,7 @@ describe('AgentName', () => {
     });
   });
 });
-```
+```text
 
 ## Running Agent Tests
 
@@ -76,7 +76,7 @@ npm run test:agents
 
 # Test with coverage
 npm run test:coverage
-```
+```text
 
 ### Test Configuration
 - **Timeout**: 30 seconds per test
@@ -110,7 +110,7 @@ it('should initialize and shutdown correctly', async () => {
   const shutdownResult = await agent.shutdown();
   expect(shutdownResult).to.be.true;
 });
-```
+```text
 
 ### Task Execution Testing
 ```typescript
@@ -119,7 +119,7 @@ it('should execute tasks correctly', async () => {
   const result = await agent.executeTask(taskDetails);
   expect(result).to.be.an('object');
 });
-```
+```text
 
 ### Error Handling Testing
 ```typescript
@@ -131,7 +131,7 @@ it('should handle errors gracefully', async () => {
     expect(error.message).to.be.a('string');
   }
 });
-```
+```text
 
 ## Performance Testing
 
@@ -144,7 +144,7 @@ it('should complete within performance requirements', async () => {
 
   expect(duration).to.be.below(5000); // 5 second limit
 });
-```
+```text
 
 ### Memory Usage Testing
 ```typescript
@@ -161,7 +161,7 @@ it('should not leak memory', async () => {
 
   expect(memoryIncrease).to.be.below(50 * 1024 * 1024); // < 50MB
 });
-```
+```text
 
 ## Integration Testing
 
@@ -174,7 +174,7 @@ it('should communicate with other agents', async () => {
   expect(response).to.have.property('status');
   expect(response.status).to.equal('success');
 });
-```
+```text
 
 ### Workflow Integration
 ```typescript
@@ -185,7 +185,7 @@ it('should integrate with workflow engine', async () => {
   expect(result).to.be.an('object');
   expect(result.success).to.be.true;
 });
-```
+```text
 
 ## Debugging Tests
 
@@ -199,7 +199,7 @@ npm test -- --verbose tests/unit/agents/test_analysis_agent.ts
 
 # Run with inspector for debugging
 node --inspect-brk node_modules/.bin/jest tests/unit/agents/test_analysis_agent.ts
-```
+```text
 
 ### Test Logging
 ```typescript
@@ -207,7 +207,7 @@ node --inspect-brk node_modules/.bin/jest tests/unit/agents/test_analysis_agent.
 const logger = createTestLogger();
 logger.info('Starting agent test');
 logger.debug('Test data:', testData);
-```
+```text
 
 ## Coverage Goals
 
@@ -224,7 +224,7 @@ npm run test:coverage
 
 # View detailed coverage
 open coverage/lcov-report/index.html
-```
+```text
 
 ## Troubleshooting
 

@@ -55,7 +55,7 @@ graph TD
     H --> I(Onboarding \n - Materials \n - Session);
     I --> J(Introduction at Meeting);
     J --> K[End: Member Onboarded];
-```
+```text
 
 ## Roles & Responsibilities
 *   **SAB Liaison / Management (e.g., Office of CTO/CSO):** Manages the overall process, identifies needs, coordinates vetting, outreach, onboarding.

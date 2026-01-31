@@ -26,7 +26,7 @@ related_documents:
   - [[security/data_security]]
   - [[processes/service_management]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the incident response procedures for the agent system, providing comprehensive guidelines for detecting, analyzing, containing, and resolving security incidents across all security domains.
@@ -43,7 +43,7 @@ class IncidentResponseManager:
         self.responder = IncidentResponder()
         self.coordinator = ResponseCoordinator()
         self.reporter = IncidentReporter()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Alert System]
     C --> F[Analysis Engine]
     D --> G[Response Actions]
-```
+```text
 
 ### 2. Incident Detection
 #### 2.1 Detection System
@@ -71,7 +71,7 @@ class IncidentDetector:
         classification = await self.classifier.classify_incident(analysis)
         priority = await self.prioritizer.prioritize_incident(classification)
         return await self.monitor.create_incident(priority)
-```
+```text
 
 #### 2.2 Incident Types
 - Security Breaches
@@ -94,7 +94,7 @@ class IncidentAnalyzer:
         assessment = await self.assessor.assess_impact(investigation)
         profile = await self.profiler.profile_threat(assessment)
         return await self.engine.analyze_findings(profile)
-```
+```text
 
 #### 3.2 Analysis Methods
 - Forensic Analysis
@@ -117,7 +117,7 @@ class IncidentResponder:
         execution = await self.executor.execute_response(plan)
         validation = await self.validator.validate_response(execution)
         return await self.monitor.monitor_response(validation)
-```
+```text
 
 #### 4.2 Response Types
 - Immediate Response
@@ -140,7 +140,7 @@ class ResponseCoordinator:
         communication = await self.communicator.establish_channels(command)
         schedule = await self.scheduler.schedule_actions(communication)
         return await self.tracker.track_progress(schedule)
-```
+```text
 
 #### 5.2 Coordination Areas
 - Team Coordination
@@ -163,7 +163,7 @@ class IncidentRecovery:
         execution = await self.executor.execute_recovery(plan)
         validation = await self.validator.validate_recovery(execution)
         return await self.monitor.monitor_recovery(validation)
-```
+```text
 
 #### 6.2 Recovery Types
 - System Recovery
@@ -188,7 +188,7 @@ class ResponseImplementation:
     async def setup_coordination(self, coordination):
         # Coordination setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Response Architecture
@@ -205,7 +205,7 @@ class ProcedureManager:
         self.validator = ProcedureValidator()
         self.executor = ProcedureExecutor()
         self.monitor = ProcedureMonitor()
-```
+```text
 
 #### 2.2 Procedure Types
 - Detection Procedures
@@ -236,7 +236,7 @@ class ResponseQuality:
     async def measure_effectiveness(self, metrics):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class ResponseCompliance:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Regulatory Requirements
@@ -318,7 +318,7 @@ class ResponsePattern:
         self.detector = IncidentDetector()
         self.analyzer = IncidentAnalyzer()
         self.responder = IncidentResponder()
-```
+```text
 
 ### B. Procedure Patterns
 ```python
@@ -328,7 +328,7 @@ class ProcedurePattern:
         self.executor = ProcedureExecutor()
         self.validator = ProcedureValidator()
         self.monitor = ProcedureMonitor()
-```
+```text
 
 ### C. Recovery Patterns
 ```python
@@ -338,4 +338,4 @@ class RecoveryPattern:
         self.planner = RecoveryPlanner()
         self.executor = RecoveryExecutor()
         self.validator = RecoveryValidator()
-``` 
+```text 

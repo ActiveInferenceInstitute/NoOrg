@@ -20,7 +20,7 @@ tags:
   - documentation
   - unit-specific-tag
 ---
-```
+```text
 
 ## Document Structure
 

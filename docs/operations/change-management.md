@@ -19,7 +19,7 @@ graph TD
     A --> C[Change Control]
     A --> D[Change Implementation]
     A --> E[Change Review]
-```
+```text
 
 ### Change Architecture
 1. **Change Types**

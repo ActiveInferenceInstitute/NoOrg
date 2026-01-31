@@ -42,7 +42,7 @@ graph TD
     I[Medium Priority] --> J[Deployment Infrastructure]
     I --> K[Monitoring & Observability]
     I --> L[Configuration Management]
-```
+```text
 
 ---
 
@@ -87,7 +87,7 @@ export interface TaskManager {
   getTaskStatistics(): Promise<TaskStatistics>;
   cleanupOldTasks(olderThan: number): Promise<number>;
 }
-```
+```text
 
 **Fix Agent Registry:**
 ```typescript
@@ -98,7 +98,7 @@ export interface AgentRegistry {
   findAgentsByType(type: string): Promise<Agent[]>;
   getAgentCapabilities(agentId: string): Promise<string[]>;
 }
-```
+```text
 
 ### 1.2 Agent Documentation Gap
 
@@ -109,7 +109,7 @@ export interface AgentRegistry {
 - Incomplete interface documentation
 
 **Required Documentation Structure:**
-```
+```text
 src/agents/
 ├── AnalysisAgent/
 │   ├── AGENTS.md              # Agent-specific documentation
@@ -121,7 +121,7 @@ src/agents/
 ├── [All 13 agents]/
 │   └── AGENTS.md
 └── README.md                  # Agent overview
-```
+```text
 
 **AGENTS.md Template:**
 ```markdown
@@ -144,7 +144,7 @@ interface [AgentName]Config {
 ## Usage Examples
 \`\`\`typescript
 // Basic usage
-const agent = new [AgentName](config);
+const agent = new [AgentName](../../.git/config);
 const result = await agent.executeTask(task);
 \`\`\`
 
@@ -160,7 +160,7 @@ Expected performance metrics.
 
 ## Integration Examples
 How to integrate with other agents.
-```
+```text
 
 ---
 
@@ -175,7 +175,7 @@ How to integrate with other agents.
 - **Duplicate content** across files
 
 **Required Structure:**
-```
+```text
 docs/
 ├── README.md                    # Master documentation hub
 ├── 000-home.md                  # Quick start & navigation
@@ -196,7 +196,7 @@ docs/
     ├── monitoring.md           # Monitoring & observability
     ├── maintenance.md          # System maintenance
     └── scaling.md              # Scaling strategies
-```
+```text
 
 ### 2.2 Missing Documentation
 
@@ -378,7 +378,7 @@ docs/
 # Fix PromptResponse interface
 # Fix import/export issues
 # Complete missing method implementations
-```
+```text
 
 **Priority 1.2: Complete Agent Documentation**
 ```bash
@@ -386,7 +386,7 @@ docs/
 # Add usage examples per agent
 # Document agent-specific configurations
 # Add integration examples
-```
+```text
 
 **Priority 1.3: Complete Integration Patterns**
 ```bash
@@ -394,7 +394,7 @@ docs/
 # Implement Throttling Pattern
 # Implement Compensating Transaction
 # Add pattern usage examples
-```
+```text
 
 ### Phase 2: Testing & Quality (Week 2)
 
@@ -404,7 +404,7 @@ docs/
 # Implement security tests
 # Add chaos engineering tests
 # Create test data factories
-```
+```text
 
 **Priority 2.2: Documentation Enhancement**
 ```bash
@@ -412,7 +412,7 @@ docs/
 # Create API reference documentation
 # Add deployment guides
 # Create troubleshooting documentation
-```
+```text
 
 ### Phase 3: Production Readiness (Week 3)
 
@@ -422,7 +422,7 @@ docs/
 # Add Helm charts
 # Implement monitoring dashboards
 # Create backup and recovery procedures
-```
+```text
 
 **Priority 3.2: Example Expansion**
 ```bash
@@ -430,7 +430,7 @@ docs/
 # Create database integration examples
 # Add error handling demonstrations
 # Create scaling scenario examples
-```
+```text
 
 ---
 

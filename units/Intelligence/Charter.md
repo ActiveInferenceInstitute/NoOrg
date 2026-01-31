@@ -48,7 +48,7 @@ graph TD
     B -- Collaborates with --> F[Other Units];
     C -- Collaborates with --> F;
     D -- Collaborates with --> F;
-```
+```text
 *Note: Specific team structure may evolve based on organizational needs.*
 
 ## 6. Key Stakeholders

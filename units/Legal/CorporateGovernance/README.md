@@ -9,8 +9,8 @@ This directory contains documents related to the company's corporate structure, 
 - `Policies/`: Specific governance policies (e.g., Code of Conduct, Insider Trading).
 
 ## Key Processes
-- [Link to Board Meeting Preparation Process](./../Processes/Board_Meeting_Prep_Process.md)
-- [Link to Entity Formation/Dissolution Process](./../Processes/Entity_Management_Process.md)
+- [Link to Board Meeting Preparation Process](../Processes/AGENTS.md)
+- [Link to Entity Formation/Dissolution Process](../Processes/AGENTS.md)
 
 ## Related Units & Linking
 - **Board of Directors / Committees:** Direct support and documentation found here.
@@ -21,7 +21,7 @@ This directory contains documents related to the company's corporate structure, 
 ## Important Documents
 - [Articles of Incorporation](./Entity_Management/Articles_of_Incorporation.md)
 - [Bylaws](./Entity_Management/Bylaws.md)
-- [Code of Conduct](./Policies/Code_of_Conduct.md) (May also link to central policy repository)
+- [Code of Conduct](../../Governance/Policies/Code_of_Conduct.md) (May also link to central policy repository)
 - [Board Committee Charters](./Board_Materials/Committee_Charters/) <!-- Example subdir -->
 
 ## Key Contacts

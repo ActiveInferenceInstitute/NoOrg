@@ -53,7 +53,7 @@ tool_demonstrations:
           - workflow_optimization
           - integration_enhancement
           - efficiency_maximization
-```
+```text
 
 ### Tool Screencast Management
 ```python
@@ -84,7 +84,7 @@ class ToolScreencastManager:
     def manage_library(self):
         """Manage screencast library"""
         pass
-```
+```text
 
 ## 🔄 Process Demos
 
@@ -118,7 +118,7 @@ class ToolScreencastManager:
     }
   }
 }
-```
+```text
 
 ### Process Screencast Management
 ```python
@@ -149,7 +149,7 @@ class ProcessScreencastManager:
     def organize_content(self):
         """Organize demo content"""
         pass
-```
+```text
 
 ## ⭐ Best Practices
 
@@ -194,7 +194,7 @@ practice_demonstrations:
           - review_processes
           - integration_practices
           - deployment_procedures
-```
+```text
 
 ### Practice Screencast Management
 ```python
@@ -225,7 +225,7 @@ class PracticeScreencastManager:
     def maintain_library(self):
         """Maintain demonstration library"""
         pass
-```
+```text
 
 ## 🔧 Troubleshooting
 
@@ -270,7 +270,7 @@ troubleshooting_demonstrations:
           - resource_optimization
           - workflow_enhancement
           - system_integration
-```
+```text
 
 ### Troubleshooting Screencast Management
 ```python
@@ -301,7 +301,7 @@ class TroubleshootingScreencastManager:
     def maintain_content(self):
         """Maintain guide content"""
         pass
-```
+```text
 
 ## 📚 References
 

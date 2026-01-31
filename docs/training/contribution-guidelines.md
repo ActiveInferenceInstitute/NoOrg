@@ -50,7 +50,7 @@ style_guidelines:
       - list_structure
       - table_formatting
       - code_presentation
-```
+```text
 
 ### Style Management
 ```python
@@ -81,7 +81,7 @@ class StyleGuide:
     def ensure_consistency(self):
         """Ensure style consistency"""
         pass
-```
+```text
 
 ## 📝 Process Steps
 
@@ -123,7 +123,7 @@ contribution_workflow:
       - final_updates
       - merge_preparation
       - documentation_finalization
-```
+```text
 
 ### Process Management
 ```python
@@ -154,7 +154,7 @@ class ContributionProcess:
     def track_progress(self):
         """Track contribution progress"""
         pass
-```
+```text
 
 ## ✅ Quality Standards
 
@@ -188,7 +188,7 @@ class ContributionProcess:
     }
   }
 }
-```
+```text
 
 ### Quality Management
 ```python
@@ -219,7 +219,7 @@ class QualityStandards:
     def maintain_standards(self):
         """Maintain quality standards"""
         pass
-```
+```text
 
 ## 👥 Review Process
 
@@ -261,7 +261,7 @@ review_process:
       - notification_distribution
       - documentation_finalization
       - process_completion
-```
+```text
 
 ### Review Management
 ```python
@@ -292,7 +292,7 @@ class ReviewProcess:
     def track_completion(self):
         """Track review completion"""
         pass
-```
+```text
 
 ## 📚 References
 

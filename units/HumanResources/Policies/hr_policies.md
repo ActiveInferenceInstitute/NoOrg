@@ -113,7 +113,7 @@ graph LR
     Gov3 -- Approves --> PolicyCategories;
     Gov4 -- Audits/Advises --> PolicyCategories;
 
-```
+```text
 
 ---
 Version: 1.0

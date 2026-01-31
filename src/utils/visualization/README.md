@@ -28,7 +28,7 @@ import { generateWorkflowMermaid } from './workflowVisualizer';
 
 const mermaid = generateWorkflowMermaid(workflow);
 console.log(mermaid);
-```
+```text
 
 ## Related Documentation
 

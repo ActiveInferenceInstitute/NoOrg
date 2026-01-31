@@ -19,7 +19,7 @@ graph TD
     A --> C[Quality Requirements]
     A --> D[Documentation Standards]
     A --> E[Deployment Standards]
-```
+```text
 
 ### Standards Architecture
 1. **Standard Layers**

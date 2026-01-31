@@ -41,7 +41,7 @@ mindmap
       Strategic alignment
       Self-organization
       Purposeful coordination
-```
+```text
 
 ## Collaboration Frameworks
 1. **Agile methodologies**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Version Control and Code Management
 1. **Branching strategies**
@@ -173,7 +173,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Communication Practices
 1. **Documentation**
@@ -239,7 +239,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Collaborative Development Practices
 1. **Pair programming**
@@ -305,7 +305,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Team Dynamics and Culture
 1. **Building psychological safety**
@@ -371,7 +371,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Collaboration Tools
 1. **Version control systems**
@@ -437,7 +437,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Scaling Collaboration
 - Implement team structures that balance autonomy with coordination
@@ -480,7 +480,7 @@ mindmap
       Shared repositories
       Learning events
       Expert availability
-```
+```text
 
 ## Collaborative Development Process Model
 ```mermaid
@@ -519,4 +519,4 @@ graph TB
     
     Q -.-> F
     Q -.-> J
-``` 
+```text 

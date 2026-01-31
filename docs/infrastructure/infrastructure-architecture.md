@@ -19,7 +19,7 @@ graph TD
     A --> C[Network Infrastructure]
     A --> D[Storage Systems]
     A --> E[Security Components]
-```
+```text
 
 ### Architecture Layers
 1. **Infrastructure Layers**

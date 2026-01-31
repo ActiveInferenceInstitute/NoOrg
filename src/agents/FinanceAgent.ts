@@ -1,6 +1,7 @@
 import { Agent } from './types';
 import { OpenAIClient } from '../core/multiagent/OpenAIClient';
 import { SharedStateManager } from '../core/multiagent/SharedStateManager';
+import { Logger } from '../core/multiagent/Logger';
 import { v4 as uuidv4 } from 'uuid';
 import * as dotenv from 'dotenv';
 
@@ -15,6 +16,7 @@ export class FinanceAgent {
   private agent: Agent;
   private openAIClient: OpenAIClient;
   private sharedState: SharedStateManager;
+  private logger: Logger;
   private isInitialized: boolean = false;
   private financeCache: Map<string, {
     query: string;
@@ -66,6 +68,7 @@ export class FinanceAgent {
     
     this.openAIClient = options?.openAIClient || new OpenAIClient();
     this.sharedState = options?.sharedState || SharedStateManager.getInstance();
+    this.logger = new Logger(`FinanceAgent-${name}`, 'info');
   }
   
   /**
@@ -95,7 +98,7 @@ export class FinanceAgent {
       this.isInitialized = true;
       return true;
     } catch (error: any) {
-      console.error(`Failed to initialize ${this.agent.name}: ${error.message}`);
+      this.logger.error(`Failed to initialize ${this.agent.name}: ${error.message}`);
       this.agent.status = 'error';
       this.sharedState.setState(`agents.${this.agent.id}.status`, 'error');
       return false;
@@ -149,13 +152,18 @@ export class FinanceAgent {
     processingTime: number;
     cached?: boolean;
   }> {
+    // Validate input
+    if (financialData == null) {
+      throw new Error('financialData is required and cannot be null or undefined');
+    }
+
     // Update agent status
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     const analysisType = options?.analysisType || 'detailed';
     const focusAreas = options?.focusAreas || ['profitability', 'liquidity', 'efficiency'];
-    
+
     // Generate cache key - using a hash of the financial data to avoid too long keys
     const dataHash = JSON.stringify(financialData).split('').reduce((acc, char) => {
       return (acc << 5) - acc + char.charCodeAt(0) >>> 0;
@@ -265,8 +273,14 @@ export class FinanceAgent {
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.choices[0].message.content);
-      
+      let result: any;
+      try {
+        result = JSON.parse(extractionResponse.choices[0].message.content);
+      } catch (parseError: any) {
+        this.logger.error(`Failed to parse financial analysis response as JSON: ${parseError.message}`);
+        throw new Error('Failed to parse financial analysis response as JSON');
+      }
+
       // Cache the result
       this.financeCache.set(cacheKey, {
         query: 'financial-analysis',
@@ -286,7 +300,7 @@ export class FinanceAgent {
         processingTime: Date.now() - startTime
       };
     } catch (error: any) {
-      console.error(`Error analyzing financial data: ${error.message}`);
+      this.logger.error(`Error analyzing financial data: ${error.message}`);
       this.updateStatus('error');
       throw error;
     }
@@ -339,13 +353,18 @@ export class FinanceAgent {
     processingTime: number;
     cached?: boolean;
   }> {
+    // Validate input
+    if (budgetParameters.totalAmount == null || typeof budgetParameters.totalAmount !== 'number' || budgetParameters.totalAmount <= 0) {
+      throw new Error('budgetParameters.totalAmount must be a positive number');
+    }
+
     // Update agent status
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     const level = options?.level || 'detailed';
     const currency = budgetParameters.currency || 'USD';
-    
+
     // Generate cache key
     const cacheKey = `budget-${budgetParameters.totalAmount}-${currency}-${budgetParameters.period}-${level}`;
     
@@ -456,8 +475,14 @@ export class FinanceAgent {
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.choices[0].message.content);
-      
+      let result: any;
+      try {
+        result = JSON.parse(extractionResponse.choices[0].message.content);
+      } catch (parseError: any) {
+        this.logger.error(`Failed to parse budget creation response as JSON: ${parseError.message}`);
+        throw new Error('Failed to parse budget creation response as JSON');
+      }
+
       // Cache the result
       this.financeCache.set(cacheKey, {
         query: 'budget-creation',
@@ -477,7 +502,7 @@ export class FinanceAgent {
         processingTime: Date.now() - startTime
       };
     } catch (error: any) {
-      console.error(`Error creating budget: ${error.message}`);
+      this.logger.error(`Error creating budget: ${error.message}`);
       this.updateStatus('error');
       throw error;
     }
@@ -523,13 +548,18 @@ export class FinanceAgent {
     processingTime: number;
     cached?: boolean;
   }> {
+    // Validate input
+    if (historicalData == null) {
+      throw new Error('historicalData is required and cannot be null or undefined');
+    }
+
     // Update agent status
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     const forecastPeriod = options?.forecastPeriod || 4;
     const periodType = options?.periodType || 'quarters';
-    
+
     // Generate cache key - using a hash of the historical data to avoid too long keys
     const dataHash = JSON.stringify(historicalData).split('').reduce((acc, char) => {
       return (acc << 5) - acc + char.charCodeAt(0) >>> 0;
@@ -662,8 +692,14 @@ export class FinanceAgent {
       });
       
       // Parse the structured result
-      const result = JSON.parse(extractionResponse.choices[0].message.content);
-      
+      let result: any;
+      try {
+        result = JSON.parse(extractionResponse.choices[0].message.content);
+      } catch (parseError: any) {
+        this.logger.error(`Failed to parse financial forecast response as JSON: ${parseError.message}`);
+        throw new Error('Failed to parse financial forecast response as JSON');
+      }
+
       // Cache the result
       this.financeCache.set(cacheKey, {
         query: 'financial-forecast',
@@ -683,7 +719,7 @@ export class FinanceAgent {
         processingTime: Date.now() - startTime
       };
     } catch (error: any) {
-      console.error(`Error creating financial forecast: ${error.message}`);
+      this.logger.error(`Error creating financial forecast: ${error.message}`);
       this.updateStatus('error');
       throw error;
     }
@@ -713,7 +749,7 @@ export class FinanceAgent {
       this.financeCache.clear();
       return true;
     } catch (error) {
-      console.error(`Error shutting down ${this.agent.name}:`, error);
+      this.logger.error(`Error shutting down ${this.agent.name}`, { error });
       return false;
     }
   }

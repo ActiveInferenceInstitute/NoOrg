@@ -47,7 +47,7 @@ role_management:
       - change_tracking
       - history_maintenance
       - audit_logging
-```
+```text
 
 ### Role Management
 ```python
@@ -78,7 +78,7 @@ class RoleManager:
     def track_changes(self):
         """Track role changes"""
         pass
-```
+```text
 
 ## 📞 Contact Details
 
@@ -118,7 +118,7 @@ class RoleManager:
     }
   }
 }
-```
+```text
 
 ### Contact Management
 ```python
@@ -149,7 +149,7 @@ class ContactManager:
     def verify_information(self):
         """Verify contact details"""
         pass
-```
+```text
 
 ## 📊 Responsibility Matrix
 
@@ -195,7 +195,7 @@ responsibility_matrix:
         responsibilities:
           - advanced_support
           - escalation_handling
-```
+```text
 
 ### Matrix Management
 ```python
@@ -226,7 +226,7 @@ class MatrixManager:
     def verify_coverage(self):
         """Verify responsibility coverage"""
         pass
-```
+```text
 
 ## ⬆️ Escalation Paths
 
@@ -260,7 +260,7 @@ escalation_paths:
             - critical_system_issues
             - security_incidents
             - major_outages
-```
+```text
 
 ### Escalation Management
 ```python
@@ -291,7 +291,7 @@ class EscalationManager:
     def track_performance(self):
         """Track escalation performance"""
         pass
-```
+```text
 
 ## 📊 Directory Analytics
 
@@ -325,7 +325,7 @@ class EscalationManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

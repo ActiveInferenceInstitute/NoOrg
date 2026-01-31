@@ -44,7 +44,7 @@ flowchart TD
     G --> H{Target Met?}
     H -- Yes --> I(End/Continuous Monitoring)
     H -- No --> B
-```
+```text
 
 1. Step 1: Data Review & Analysis
    - Action: Collect and review utilization data across all resource types.

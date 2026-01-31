@@ -19,7 +19,7 @@ graph TD
     A --> C[Branch Management]
     A --> D[Code Review]
     A --> E[Integration]
-```
+```text
 
 ### Management Layers
 1. **Version Control Structure**

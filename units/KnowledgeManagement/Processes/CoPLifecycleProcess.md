@@ -37,7 +37,7 @@ flowchart TD
     G -->|Dissolve| I[Dissolution]
     H --> E
     I --> J[Knowledge Preservation]
-```
+```text
 
 ## Detailed Process Steps
 

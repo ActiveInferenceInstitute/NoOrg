@@ -28,7 +28,7 @@ graph TD
     
     E --> L[Style Guides]
     E --> M[Best Practices]
-```
+```text
 
 ## Formatting Standards
 
@@ -47,7 +47,7 @@ def example_function():
     Function docstring following standards
     """
     return True
-```
+```text
 
 ### YAML Frontmatter
 ```yaml
@@ -57,7 +57,7 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 tags: [tag1, tag2]
 ---
-```
+```text
 
 ## Diagrams
 
@@ -83,7 +83,7 @@ sequenceDiagram
     A->>D: Query
     D-->>A: Response
     A-->>U: Return Data
-```
+```text
 
 ## Writing Style
 
@@ -110,11 +110,11 @@ sequenceDiagram
 ## Version Control
 
 ### Git Commit Messages
-```
+```text
 type(scope): brief description
 
 Detailed description of changes
-```
+```text
 
 Types:
 - `docs`: Documentation changes
@@ -150,7 +150,7 @@ graph LR
     B --> C[Spell Check]
     C --> D[Style Linter]
     D --> E[Build Docs]
-```
+```text
 
 ## Best Practices
 

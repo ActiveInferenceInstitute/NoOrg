@@ -28,7 +28,7 @@ flowchart TD
     Effective -->|Yes| Continue
     Effective -->|No| Flag[Flag for Improvement]
     Flag --> Review
-```
+```text
 
 ## Knowledge Types
 

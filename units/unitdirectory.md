@@ -45,7 +45,7 @@ graph TD
     Leadership_Layer --> Business_Units
     Leadership_Layer --> Support_Units
     ADV -.-> Leadership_Layer
-```
+```text
 
 ### Detailed Organizational Relationships
 ```mermaid
@@ -137,7 +137,7 @@ graph TD
     TRAIN --> EDU
     EDU --> KM
     KM --> OD
-```
+```text
 
 ### 📈 Decision Flow Architecture
 ```mermaid
@@ -177,7 +177,7 @@ flowchart TD
     RISK -.-> OPS
     COMP -.-> FUNC
     EXEC -.-> BU
-```
+```text
 
 ### 🔄 Information Flow Architecture 
 ```mermaid
@@ -226,7 +226,7 @@ graph LR
     IMPROVE --> DIR
     ISSUE --> POL
     INNOVATION --> GOAL
-```
+```text
 
 ## Unit Structure
 Each unit follows a standardized structure:
@@ -298,7 +298,7 @@ mindmap
             Interfaces
             Integration Points
             Service Agreements
-```
+```text
 
 ## Organizational Structure
 
@@ -471,7 +471,7 @@ graph TD
     IC <-.-> TAB
     EC <-.-> EAB
     RC <-.-> RAB
-```
+```text
 
 #### Secondary Interfaces
 1. Cross-functional Coordination
@@ -579,7 +579,7 @@ graph TD
     PMS --> PC --> PH
     
     DMS --> WMS --> CLS --> ANS
-```
+```text
 
 ### Committee Documentation
 #### Core Documentation
@@ -632,7 +632,7 @@ mindmap
             Knowledge Base
             Resource Library
             Training Materials
-```
+```text
 
 ### Business Units
 1. Revenue Generation
@@ -756,7 +756,7 @@ graph TD
     RM -.-> ALL
     TD -.-> ALL
     INTEL -.-> SALES & PM
-```
+```text
 
 ### Business Unit Relationships
 #### Primary Interfaces
@@ -832,7 +832,7 @@ stateDiagram-v2
     }
     
     Review --> [*]
-```
+```text
 
 ### [[units/RiskManagement/risk_management_unit|Risk Management]]
 - Risk strategy
@@ -887,7 +887,7 @@ graph TD
     AS4 --> CO1 --> CO2 --> CO3 --> CO4
     CO4 --> MO1 --> MO2 --> MO3 --> MO4
     MO4 --> ID1
-```
+```text
 
 ## 🔗 Unit Interaction Models
 
@@ -923,7 +923,7 @@ graph TD
     POL --> COLLAB --> CON
     RES --> COM --> NET
     OVR --> SUP --> ESC
-```
+```text
 
 ### 📊 Unit Relationship Strength Matrix
 
@@ -971,7 +971,7 @@ flowchart LR
     Strategic_Flow --> Operational_Flow
     Operational_Flow --> Feedback_Flow
     Feedback_Flow --> Strategic_Flow
-```
+```text
 
 ## Cross-Unit Integration
 ### Control Framework
@@ -1034,7 +1034,7 @@ graph TD
     SF --> SL --> SP --> SO
     EF --> EC --> EP --> EO
     IM --> IP --> IR --> IO
-```
+```text
 
 ## 📊 Unit Performance Framework
 
@@ -1073,7 +1073,7 @@ graph TD
         SCOST[Cost Effectiveness]:::support
         SQUAL[Service Quality]:::support
     end
-```
+```text
 
 ### 📈 Unit Performance Metrics Matrix
 
@@ -1131,7 +1131,7 @@ stateDiagram-v2
     }
     
     Transformation --> [*]
-```
+```text
 
 ### 📋 Unit Governance Maturity Model
 
@@ -1204,7 +1204,7 @@ graph TD
     Monitoring --> Analysis
     Analysis --> Response
     Response --> Command_Control
-```
+```text
 
 #### Security Operations Workflow
 ```mermaid
@@ -1230,7 +1230,7 @@ stateDiagram-v2
     Recovery --> Normal: Restored
     
     Normal --> [*]
-```
+```text
 
 ### Integrated Defense Strategy
 
@@ -1277,7 +1277,7 @@ graph TD
     Perimeter_Layer --> Internal_Layer
     Internal_Layer --> Endpoint_Layer
     Endpoint_Layer --> Data_Layer
-```
+```text
 
 #### Security Risk Response Matrix
 
@@ -1319,7 +1319,7 @@ mindmap
             Risk Management
             Crisis Management
             Security Operations
-```
+```text
 
 ### Security Key Performance Indicators
 
@@ -1353,7 +1353,7 @@ graph TD
 
     Security_Metrics --> Key_Indicators
     Key_Indicators --> Security_Status
-```
+```text
 
 ### Security Strategic Initiatives
 1. [[integrated_security_platform]] - Unified security management across all domains

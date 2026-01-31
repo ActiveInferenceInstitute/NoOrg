@@ -31,7 +31,7 @@ npm run build
 
 # Run the framework
 npm start
-```
+```text
 
 ### Basic Usage
 
@@ -81,7 +81,7 @@ async function runWorkflow() {
 }
 
 runWorkflow();
-```
+```text
 
 ## 🏗️ Architecture Overview
 
@@ -136,7 +136,7 @@ graph TB
     style MON fill:#fff8e1,stroke:#f57f17,stroke-width:2px
     style STOR fill:#fce4ec,stroke:#880e4f,stroke-width:2px
     style INT fill:#fce4ec,stroke:#880e4f,stroke-width:2px
-```
+```text
 
 #### Multi-Agent Coordination Flow
 
@@ -161,7 +161,7 @@ sequenceDiagram
 
     Note over AG: Agents process tasks<br/>concurrently with<br/>specialized capabilities
     Note over EV: Event-driven<br/>communication<br/>enables loose coupling
-```
+```text
 
 #### Resilience Patterns Integration
 
@@ -187,7 +187,7 @@ flowchart TD
     style N fill:#ffebee,stroke:#c62828
     style D fill:#fff3e0,stroke:#f57c00
     style F fill:#fff3e0,stroke:#f57c00
-```
+```text
 
 The framework consists of several key components:
 
@@ -219,20 +219,20 @@ For detailed documentation, see [Integration Patterns](docs/core/integration/pat
 
 The `AgentDiscoveryService` allows agents to register themselves and discover other agents based on capabilities and status. Features include:
 
-- [Agent registration and deregistration](docs/agents/modules/core/discovery.md#registration)
-- [Capability-based discovery](docs/agents/modules/core/discovery.md#capability-matching)
-- [Heartbeat mechanisms](docs/agents/modules/core/discovery.md#heartbeat)
-- [Status tracking](docs/agents/modules/core/discovery.md#status-management)
+- [Agent registration and deregistration](docs/agents/modules/core/AGENTS.md)
+- [Capability-based discovery](docs/agents/modules/core/AGENTS.md)
+- [Heartbeat mechanisms](docs/agents/modules/core/AGENTS.md)
+- [Status tracking](docs/agents/modules/core/AGENTS.md)
 
 ### Orchestration
 
 The `AgentOrchestrator` coordinates task assignment and execution across agents:
 
-- [Priority-based task queue](docs/agents/modules/core/orchestration.md#task-prioritization)
-- [Capability matching for task assignment](docs/agents/modules/core/orchestration.md#capability-matching)
-- [Circuit breaking for unreliable agents](docs/agents/modules/core/orchestration.md#circuit-breaking)
-- [Task lifecycle management](docs/agents/modules/core/orchestration.md#lifecycle)
-- [Failure handling and recovery](docs/agents/modules/core/orchestration.md#failure-recovery)
+- [Priority-based task queue](docs/agents/modules/core/AGENTS.md)
+- [Capability matching for task assignment](docs/agents/modules/core/AGENTS.md)
+- [Circuit breaking for unreliable agents](docs/agents/modules/core/AGENTS.md)
+- [Task lifecycle management](docs/agents/modules/core/AGENTS.md)
+- [Failure handling and recovery](docs/agents/modules/core/AGENTS.md)
 
 ### Units and Organization
 
@@ -268,7 +268,7 @@ The framework provides comprehensive monitoring features:
 - [Metric recording and retrieval](docs/core/README.md#monitoring-system)
 - [Alert definition and management](docs/core/core-documentation.md#monitoring-system)
 - [Real-time monitoring](docs/monitoring/README.md)
-- [System health dashboards](docs/operations/monitoring.md)
+- [System health dashboards](docs/operations/AGENTS.md)
 
 ## ✨ Key Features
 
@@ -340,11 +340,11 @@ npm run lint
 
 # Generate documentation
 npm run docs:build
-```
+```text
 
 ### Project Structure
 
-```
+```text
 src/
 ├── agents/          # Agent implementations
 │   ├── AbstractAgent.ts
@@ -365,7 +365,7 @@ src/
 tests/              # Comprehensive test suite
 docs/               # Generated documentation
 scripts/            # Build and utility scripts
-```
+```text
 
 
 
@@ -417,7 +417,7 @@ async function runBasicWorkflow() {
 
   console.log('Workflow completed:', result);
 }
-```
+```text
 
 ### Advanced Features
 
@@ -433,7 +433,7 @@ const pomdpAgent = new ActiveInferencePOMDPAgent({
 
 // Complex reasoning and decision making
 const result = await pomdpAgent.process([0, 1, 2], context);
-```
+```text
 
 ### Custom Agent Development
 
@@ -446,7 +446,7 @@ class CustomAgent extends AbstractAgent {
     return await this.processCustomTask(taskDetails);
   }
 }
-```
+```text
 
 ## 🔧 Configuration
 
@@ -480,7 +480,7 @@ DASHBOARD_PORT=3000
 ENABLE_AUTHENTICATION=false
 JWT_SECRET=your-jwt-secret-here
 API_KEY=your-api-key-here
-```
+```text
 
 ### Programmatic Configuration
 
@@ -493,7 +493,7 @@ const coordinator = new MultiAgentCoordinator({
   taskTimeout: 30000,
   enableMonitoring: true
 });
-```
+```text
 
 ## 🧪 Testing
 
@@ -515,7 +515,7 @@ npm run test:coverage
 # Run specific agent tests
 npm run test:agents
 npm run test:core
-```
+```text
 
 ## 📈 Performance
 
@@ -564,7 +564,7 @@ docker-compose up -d
 
 # Deploy to Kubernetes
 kubectl apply -f k8s/
-```
+```text
 
 ### Production Checklist
 
@@ -620,7 +620,7 @@ npm run docs:serve
 
 # Deploy documentation
 npm run docs:deploy
-```
+```text
 
 ## Roadmap
 

@@ -60,7 +60,7 @@ graph TD
     subgraph Output
         J --> Eval[[training_evaluation_reporting]];
     end
-```
+```text
 
 ## Roles & Responsibilities
 *   **Training Coordinator/Specialist:** Manages logistics, scheduling, communication, participant tracking, LMS administration for delivery.

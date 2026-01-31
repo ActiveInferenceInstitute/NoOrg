@@ -42,7 +42,7 @@ policy_review:
         - regulatory_alignment
         - risk_coverage
         - control_effectiveness
-```
+```text
 
 ### Review Management
 ```python
@@ -73,7 +73,7 @@ class PolicyReviewer:
     def generate_recommendations(self):
         """Generate policy recommendations"""
         pass
-```
+```text
 
 ## ✅ Compliance Check
 
@@ -107,7 +107,7 @@ class PolicyReviewer:
     }
   }
 }
-```
+```text
 
 ### Compliance Management
 ```python
@@ -138,7 +138,7 @@ class ComplianceManager:
     def generate_report(self):
         """Generate compliance report"""
         pass
-```
+```text
 
 ## 📄 Update Documentation
 
@@ -174,7 +174,7 @@ update_documentation:
       - reviewer_approval
       - stakeholder_sign-off
       - publication_authorization
-```
+```text
 
 ### Documentation Management
 ```python
@@ -205,7 +205,7 @@ class DocumentationManager:
     def control_quality(self):
         """Control documentation quality"""
         pass
-```
+```text
 
 ## 👥 Stakeholder Communication
 
@@ -239,7 +239,7 @@ class DocumentationManager:
     }
   }
 }
-```
+```text
 
 ### Communication Management
 ```python
@@ -270,7 +270,7 @@ class CommunicationManager:
     def track_effectiveness(self):
         """Track communication effectiveness"""
         pass
-```
+```text
 
 ## 📊 Update Analytics
 
@@ -310,7 +310,7 @@ update_analytics:
       - key_indicators
       - trend_visualization
       - performance_tracking
-```
+```text
 
 ## 📚 References
 

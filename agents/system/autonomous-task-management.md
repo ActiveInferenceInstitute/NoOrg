@@ -37,7 +37,7 @@ graph TD
         PE --> KU[Knowledge Update]
         KU --> BS[Behavior Synthesis]
     end
-```
+```text
 
 ## Autonomous Decision Making
 
@@ -86,7 +86,7 @@ class DecisionEngine:
             'opportunities': await self._identify_opportunities(context),
             'risks': await self._assess_risks(context)
         }
-```
+```text
 
 ### Priority Management
 ```python
@@ -123,7 +123,7 @@ class PriorityManager:
         except Exception as e:
             await self._handle_priority_error(e, tasks)
             raise
-```
+```text
 
 ## Task Management
 
@@ -167,7 +167,7 @@ class TaskPlanner:
         except Exception as e:
             await self._handle_planning_error(e, task)
             raise
-```
+```text
 
 ### Execution Management
 ```python
@@ -209,7 +209,7 @@ class ExecutionManager:
         except Exception as e:
             await self._handle_execution_error(e, plan)
             raise
-```
+```text
 
 ## Learning & Adaptation
 
@@ -245,7 +245,7 @@ class ExperienceCollector:
         except Exception as e:
             await self._handle_collection_error(e, execution)
             raise
-```
+```text
 
 ### Knowledge Integration
 ```python
@@ -282,7 +282,7 @@ class KnowledgeIntegrator:
         except Exception as e:
             await self._handle_integration_error(e, experience)
             raise
-```
+```text
 
 ## Autonomous Reporting
 
@@ -320,7 +320,7 @@ class StatusReporter:
         except Exception as e:
             await self._handle_reporting_error(e, execution_context)
             raise
-```
+```text
 
 ### Performance Reporting
 ```yaml
@@ -355,7 +355,7 @@ performance_reporting:
       analysis:
         method: behavioral
         assessment_window: 24h
-```
+```text
 
 ## Integration & Coordination
 
@@ -400,7 +400,7 @@ class AutonomousCoordinator:
         except Exception as e:
             await self._handle_coordination_error(e, agents)
             raise
-```
+```text
 
 ### System Integration
 ```yaml
@@ -435,7 +435,7 @@ system_integration:
       analysis:
         method: continuous
         adaptation: autonomous
-```
+```text
 
 ## Best Practices
 
@@ -459,7 +459,7 @@ autonomous_best_practices:
     - optimize_resource_usage
     - adapt_to_changes
     - ensure_fairness
-```
+```text
 
 ### Performance Optimization
 ```yaml
@@ -476,7 +476,7 @@ performance_optimization:
       - adaptive_scheduling
       - predictive_optimization
       - autonomous_recovery
-```
+```text
 
 ## Documentation
 

@@ -31,7 +31,7 @@ graph TB
 
     Policy --> Standards
     Standards --> Compliance
-```
+```text
 
 ## Standards Categories
 
@@ -55,7 +55,7 @@ graph LR
     
     Code --> Architecture
     Architecture --> Quality
-```
+```text
 
 ### Security Standards
 ```mermaid
@@ -77,7 +77,7 @@ graph TB
     
     Access --> Data
     Data --> Network
-```
+```text
 
 ### Compliance Framework
 ```mermaid
@@ -99,7 +99,7 @@ graph LR
     
     Requirements --> Controls
     Controls --> Audit
-```
+```text
 
 ## Quick Navigation
 
@@ -148,7 +148,7 @@ graph TB
     
     Policy --> Control
     Control --> Audit
-```
+```text
 
 ## Compliance Management
 
@@ -165,7 +165,7 @@ sequenceDiagram
     S->>P: Provide Feedback
     P->>C: Update Policies
     C->>A: Adjust Controls
-```
+```text
 
 ## Risk Management
 
@@ -176,7 +176,7 @@ graph LR
     R2 --> R3[Evaluate Controls]
     R3 --> R4[Monitor Risks]
     R4 --> R1
-```
+```text
 
 ### Control Implementation
 ```mermaid
@@ -186,13 +186,13 @@ graph TB
     C3 --> C4[Monitor]
     C4 --> C5[Review]
     C5 --> C1
-```
+```text
 
 ## Related Documentation
-- [Security Architecture](../architecture/security.md)
-- [Quality Assurance](../quality/assurance.md)
+- [Security Architecture](../architecture/AGENTS.md)
+- [Quality Assurance](../quality/AGENTS.md)
 - [Risk Assessment](../risk/assessment.md)
-- [Audit Guidelines](../guidelines/audit.md)
+- [Audit Guidelines](../guidelines/AGENTS.md)
 
 ---
 

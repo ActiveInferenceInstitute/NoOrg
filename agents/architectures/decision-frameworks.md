@@ -26,7 +26,7 @@ graph TD
     B -.-> G[Memory]
     D -.-> G
     G -.-> C
-```
+```text
 
 ## Planning Systems
 
@@ -45,7 +45,7 @@ planning_hierarchy:
     timeframe: "immediate"
     scope: "actions"
     update_frequency: "continuous"
-```
+```text
 
 ### Decision Strategies
 
@@ -66,7 +66,7 @@ decision_rules:
     actions:
         - primary_action
         - fallback_action
-```
+```text
 
 ## Implementation
 
@@ -93,7 +93,7 @@ metrics:
     - goal_achievement
     - adaptation_speed
     - resource_utilization
-```
+```text
 
 ### Validation Methods
 - Simulation Testing

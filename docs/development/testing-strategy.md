@@ -19,7 +19,7 @@ graph TD
     A --> C[Test Implementation]
     A --> D[Test Execution]
     A --> E[Test Analysis]
-```
+```text
 
 ### Testing Architecture
 1. **Testing Layers**

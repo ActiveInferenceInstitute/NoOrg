@@ -21,7 +21,7 @@ interface AgentInfo {
   endpoint?: string;
   address?: string;
 }
-```
+```text
 
 #### DiscoveryOptions
 
@@ -31,7 +31,7 @@ interface DiscoveryOptions {
   expirationTime?: number;
   broadcastInterval?: number;
 }
-```
+```text
 
 ### AgentDiscoveryService Class
 
@@ -41,7 +41,7 @@ interface DiscoveryOptions {
 
 ```typescript
 public static getInstance(options?: DiscoveryOptions): AgentDiscoveryService
-```
+```text
 
 Gets singleton instance.
 
@@ -58,7 +58,7 @@ Gets singleton instance.
 public async registerAgent(
   agent: Omit<AgentInfo, 'lastSeen'>
 ): Promise<AgentInfo>
-```
+```text
 
 Registers an agent with the discovery service.
 
@@ -74,7 +74,7 @@ public async updateAgent(
   id: string,
   updates: Partial<Omit<AgentInfo, 'id' | 'lastSeen'>>
 ): Promise<AgentInfo | null>
-```
+```text
 
 Updates agent information.
 
@@ -88,7 +88,7 @@ Updates agent information.
 
 ```typescript
 public async heartbeat(id: string): Promise<boolean>
-```
+```text
 
 Sends heartbeat for an agent.
 
@@ -101,7 +101,7 @@ Sends heartbeat for an agent.
 
 ```typescript
 public async deregisterAgent(id: string): Promise<boolean>
-```
+```text
 
 Deregisters an agent.
 
@@ -114,7 +114,7 @@ Deregisters an agent.
 
 ```typescript
 public findAgentsByCapability(capability: string): AgentInfo[]
-```
+```text
 
 Finds agents by capability.
 
@@ -127,7 +127,7 @@ Finds agents by capability.
 
 ```typescript
 public getAgent(id: string): AgentInfo | null
-```
+```text
 
 Gets agent by ID.
 
@@ -140,7 +140,7 @@ Gets agent by ID.
 
 ```typescript
 public getAllAgents(): AgentInfo[]
-```
+```text
 
 Gets all registered agents.
 
@@ -156,7 +156,7 @@ Gets all registered agents.
 
 ```typescript
 public async discoverUnits(): Promise<OrganizationalUnit[]>
-```
+```text
 
 Discovers all organizational units.
 
@@ -166,7 +166,7 @@ Discovers all organizational units.
 
 ```typescript
 public async discoverUnit(unitId: string): Promise<OrganizationalUnit | null>
-```
+```text
 
 Discovers a specific unit.
 
@@ -185,7 +185,7 @@ Discovers a specific unit.
 
 ```typescript
 public parseUnit(unitData: any): OrganizationalUnit
-```
+```text
 
 Parses unit data into OrganizationalUnit.
 

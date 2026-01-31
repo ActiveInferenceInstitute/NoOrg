@@ -54,7 +54,7 @@ review_schedule:
         - executive_team
         - department_heads
         - process_owners
-```
+```text
 
 ### Review Types
 ```python
@@ -109,7 +109,7 @@ class ReviewManager:
     def track_review_completion(self):
         """Track review completion"""
         pass
-```
+```text
 
 ## 📝 Update Procedures
 
@@ -156,7 +156,7 @@ class ReviewManager:
     }
   }
 }
-```
+```text
 
 ### Change Management
 ```python
@@ -187,7 +187,7 @@ class ProcessUpdater:
     def track_implementation(self):
         """Track update implementation"""
         pass
-```
+```text
 
 ## 🔁 Feedback Loops
 
@@ -231,7 +231,7 @@ feedback_system:
     normal:
       response_time: "1 week"
       escalation: "none"
-```
+```text
 
 ### Feedback Processing
 ```python
@@ -262,7 +262,7 @@ class FeedbackProcessor:
     def generate_insights(self):
         """Generate feedback insights"""
         pass
-```
+```text
 
 ## 📊 Review Metrics
 
@@ -286,7 +286,7 @@ review_metrics:
     - problem_prevention
     - innovation_generation
     measurement: "comparative"
-```
+```text
 
 ### Analysis Framework
 ```python
@@ -317,7 +317,7 @@ class ReviewAnalyzer:
     def generate_reports(self):
         """Generate analysis reports"""
         pass
-```
+```text
 
 ## 📈 Continuous Improvement
 
@@ -352,7 +352,7 @@ class ReviewAnalyzer:
     }
   }
 }
-```
+```text
 
 ### Improvement Tracking
 ```python
@@ -383,7 +383,7 @@ class ImprovementTracker:
     def assess_effectiveness(self):
         """Assess improvement effectiveness"""
         pass
-```
+```text
 
 ## 📚 References
 

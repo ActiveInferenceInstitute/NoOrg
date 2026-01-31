@@ -18,7 +18,7 @@ Each unit has specialized agents with specific roles, and the workflow includes 
 
 ### Organization Units Demo
 
-The standalone [organization-units-demo.js](../../organization-units-demo.js) in the root directory provides a simplified demonstration of organizational units, their relationships, and workflow, without requiring compilation or runtime dependencies. It shows:
+The standalone [organization-units-demo.js](../../tests/organization-units-demo.js) in the root directory provides a simplified demonstration of organizational units, their relationships, and workflow, without requiring compilation or runtime dependencies. It shows:
 
 1. Five organizational units with different capabilities
 2. Ten specialized agents (two per unit)

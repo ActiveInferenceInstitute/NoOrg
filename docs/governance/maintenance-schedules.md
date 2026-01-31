@@ -38,7 +38,7 @@ daily_maintenance:
       - update_status
       - track_requests
     priority: high
-```
+```text
 
 ### Automation Tasks
 ```python
@@ -72,7 +72,7 @@ class DailyAutomation:
     def generate_daily_report(self):
         """Generate daily maintenance report"""
         pass
-```
+```text
 
 ## 📊 Weekly Reviews
 
@@ -110,7 +110,7 @@ class DailyAutomation:
     }
   }
 }
-```
+```text
 
 ### Review Process
 ```python
@@ -141,7 +141,7 @@ class WeeklyReviewer:
     def generate_report(self):
         """Generate weekly report"""
         pass
-```
+```text
 
 ## 📈 Monthly Audits
 
@@ -180,7 +180,7 @@ monthly_audits:
       - process_analysis
       - improvement_recommendations
       - satisfaction_metrics
-```
+```text
 
 ### Audit Procedures
 ```python
@@ -214,7 +214,7 @@ class MonthlyAuditor:
     def generate_findings(self):
         """Generate audit findings"""
         pass
-```
+```text
 
 ## 🔄 Schedule Management
 
@@ -241,7 +241,7 @@ class MonthlyAuditor:
     }
   }
 }
-```
+```text
 
 ### Schedule Automation
 ```python
@@ -272,7 +272,7 @@ class ScheduleManager:
     def track_completion(self):
         """Track task completion"""
         pass
-```
+```text
 
 ## 📊 Performance Monitoring
 
@@ -299,7 +299,7 @@ performance_metrics:
       - documentation_quality
       - user_satisfaction
       - issue_resolution
-```
+```text
 
 ### Analysis Tools
 ```python
@@ -330,7 +330,7 @@ class PerformanceAnalyzer:
     def generate_insights(self):
         """Generate performance insights"""
         pass
-```
+```text
 
 ## 📚 References
 

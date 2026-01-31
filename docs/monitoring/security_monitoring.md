@@ -26,7 +26,7 @@ related_documents:
   - [[processes/service_management]]
   - [[processes/data_management]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the security monitoring framework for the agent system, providing comprehensive monitoring, detection, alerting, and response capabilities across all security domains.
@@ -43,7 +43,7 @@ class SecurityMonitoringManager:
         self.detector = ThreatDetector()
         self.alerter = AlertManager()
         self.responder = IncidentResponder()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Data Pipeline]
     C --> F[Analysis Engine]
     D --> G[Detection Rules]
-```
+```text
 
 ### 2. Metric Collection
 #### 2.1 Collection System
@@ -71,7 +71,7 @@ class MetricCollector:
         processed = await self.processors.process_data(raw_data)
         pipeline = await self.pipeline.process_data(processed)
         await self.storage.store_metrics(pipeline)
-```
+```text
 
 #### 2.2 Metric Types
 - Security Metrics
@@ -95,7 +95,7 @@ class SecurityAnalyzer:
         analysis = await self.engine.analyze_data(correlation)
         results = await self.rules.evaluate_rules(analysis)
         return results
-```
+```text
 
 #### 3.2 Analysis Types
 - Pattern Analysis
@@ -119,7 +119,7 @@ class ThreatDetector:
         detection = await self.engine.detect_threats(assessment)
         evaluation = await self.rules.evaluate_threats(detection)
         return evaluation
-```
+```text
 
 #### 4.2 Detection Methods
 - Signature Detection
@@ -142,7 +142,7 @@ class AlertManager:
         classified = await self.classifier.classify_alerts(alerts)
         prioritized = await self.prioritizer.prioritize_alerts(classified)
         await self.notifier.notify_alerts(prioritized)
-```
+```text
 
 #### 5.2 Alert Types
 - Security Alerts
@@ -165,7 +165,7 @@ class IncidentResponder:
         handling = await self.handler.handle_incident(coordination)
         resolution = await self.resolver.resolve_incident(handling)
         await self.reporter.report_incident(resolution)
-```
+```text
 
 #### 6.2 Response Types
 - Automated Response
@@ -190,7 +190,7 @@ class MonitoringImplementation:
     async def setup_analysis(self, analysis):
         # Analysis setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Monitoring Architecture
@@ -207,7 +207,7 @@ class RuleManager:
         self.validator = RuleValidator()
         self.optimizer = RuleOptimizer()
         self.deployer = RuleDeployer()
-```
+```text
 
 #### 2.2 Rule Types
 - Detection Rules
@@ -238,7 +238,7 @@ class MonitoringQuality:
     async def measure_effectiveness(self, metrics):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -270,7 +270,7 @@ class MonitoringCompliance:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Security Standards
@@ -320,7 +320,7 @@ class MonitoringPattern:
         self.collector = MetricCollector()
         self.analyzer = DataAnalyzer()
         self.detector = ThreatDetector()
-```
+```text
 
 ### B. Rule Patterns
 ```python
@@ -330,7 +330,7 @@ class RulePattern:
         self.engine = RuleEngine()
         self.validator = RuleValidator()
         self.optimizer = RuleOptimizer()
-```
+```text
 
 ### C. Response Patterns
 ```python
@@ -340,4 +340,4 @@ class ResponsePattern:
         self.handler = IncidentHandler()
         self.resolver = IncidentResolver()
         self.reporter = IncidentReporter()
-``` 
+```text 

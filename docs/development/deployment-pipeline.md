@@ -19,7 +19,7 @@ graph TD
     A --> C[Deployment Strategy]
     A --> D[Rollback Procedures]
     A --> E[Monitoring Integration]
-```
+```text
 
 ### Pipeline Layers
 1. **Deployment Layers**

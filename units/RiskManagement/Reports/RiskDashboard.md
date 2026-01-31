@@ -17,7 +17,7 @@ graph LR
     style HIGH fill:#ff9900,color:black
     style MEDIUM fill:#ffcc00,color:black
     style LOW fill:#00cc00,color:black
-```
+```text
 
 | Risk Category | Trend | Status | Key Concerns |
 |---------------|-------|--------|--------------|
@@ -36,7 +36,7 @@ pie title Risk Change Since Last Period
     "Stable" : 16
     "Decreased" : 5
     "New" : 1
-```
+```text
 
 ## Top 5 Risks
 
@@ -70,7 +70,7 @@ graph TD
             CompC[Documentation: 87%]
         end
     end
-```
+```text
 
 | KRI | Current | Threshold | Status | Trend | Owner |
 |-----|---------|-----------|--------|-------|-------|
@@ -96,7 +96,7 @@ graph LR
         Overdue[Overdue: 3]
     end
     style Overdue fill:#ff0000,color:white
-```
+```text
 
 | Priority | Total | Completed | In Progress | Not Started | Overdue |
 |----------|-------|-----------|-------------|-------------|---------|

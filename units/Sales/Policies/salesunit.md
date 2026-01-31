@@ -63,7 +63,7 @@ graph TD
     
     SCM --> SPM[Sales Performance Management]
     SCM --> SQM[Sales Quota Management]
-```
+```text
 
 ### Key Roles & Responsibilities
 | Role | Primary Responsibilities | Key Skills | Reports To |
@@ -101,7 +101,7 @@ flowchart LR
     P3 --> D4{Ready?}:::decision
     D4 -->|Yes| P2
     D4 -->|No| O2[Marketing Queue]:::output
-```
+```text
 
 ### Key Processes
 1. **Lead-to-Opportunity**
@@ -159,7 +159,7 @@ graph TD
     SALES <-->|Deals, Relationships| CUST
     SALES <-->|Channel Sales, Programs| PART
     SALES <-->|Distribution Agreements| DIST
-```
+```text
 
 ### Interface Matrix
 | Entity | Interface Type | Key Touchpoints | Data Flow | Service Level |
@@ -204,7 +204,7 @@ graph LR
         C2[Customer Lifetime Value]:::customer
         C3[Win Rate]:::customer
     end
-```
+```text
 
 ### Metrics & Targets
 | Metric | Category | Current | Target | Frequency | Data Source |
@@ -269,7 +269,7 @@ graph TD
     
     CPQ <--> ERP
     ANL <--> CUST & PROD & SALES
-```
+```text
 
 ### Key Resources
 | Resource | Purpose | Owner | Access Level | Documentation |
@@ -306,7 +306,7 @@ mindmap
             Product Training
             Selling Methodology
             Negotiation Skills
-```
+```text
 
 ### Key Documents
 | Document | Purpose | Owner | Update Frequency | Status |
@@ -362,7 +362,7 @@ graph TD
     LR1 --> C13[Territory Management]
     LR2 --> C14[Legal Review]
     LR3 --> C15[System Redundancy]
-```
+```text
 
 ### Risk & Control Matrix
 | Risk | Category | Impact | Likelihood | Controls | Control Owner | Monitoring |
@@ -392,7 +392,7 @@ gantt
     Partner Channel Development  :c1, 2024-02-15, 180d
     Customer Success Partnership :c2, after a2, 90d
     Digital Sales Transformation :c3, 2024-05-01, 150d
-```
+```text
 
 ### Key Initiatives
 | Initiative | Objective | Timeline | Status | Key Milestones | Dependencies |
@@ -424,7 +424,7 @@ graph TD
     R1 --> R2[Document Best Practices]:::review
     R2 --> R3[Standardize Improvements]:::review
     R3 --> A1
-```
+```text
 
 ### Improvement Initiatives
 | Initiative | Category | Status | Impact | Owner | Timeline |

@@ -41,7 +41,7 @@ graph TD
     G --> H(Evaluate Effectiveness);
     H --> I(Report Results & Iterate);
     I --> J[End: Continuous Improvement];
-```
+```text
 
 ## Interfaces
 ### Internal Primary
@@ -186,7 +186,7 @@ graph LR
     PM -->|Collaborates With| Units
     PM -->|Coordinates With| IT
     PM -->|Manages| Vendors
-```
+```text
 
 ## Performance Metrics
 - Training completion rates

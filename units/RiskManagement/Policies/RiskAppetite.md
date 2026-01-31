@@ -90,7 +90,7 @@ flowchart TD
     G --> I[Executive Approval]
     H --> D
     I --> J[Monitor Closely]
-```
+```text
 
 ## Exceptions and Escalations
 

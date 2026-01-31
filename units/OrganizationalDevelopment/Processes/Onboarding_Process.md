@@ -29,7 +29,7 @@ graph TD
         C; D; E; F; G; H;
     end
     I & J & K & L --> M[Ready for Day 1];
-```
+```text
 
 1.  **HR:** Initiates pre-boarding upon offer acceptance.
     -   Completes background checks/verifications ([[Policy:Background_Check]]).
@@ -55,7 +55,7 @@ graph TD
     O --> T[HR: Benefits Enrollment & Policy Review];
     T --> U[New Hire: Complete Mandatory Training (e.g., Compliance)];
     P & Q & R & S & U --> V{First Week Integration};
-```
+```text
 
 1.  **HR/Manager:** Formal welcome, provide company swag (if applicable).
 2.  **IT:** Assists with final setup, confirms system access, provides support.
@@ -87,7 +87,7 @@ graph TD
         direction LR
         X; Y; Z; A1; B1;
     end
-```
+```text
 
 1.  **Manager:**
     -   Conducts regular (e.g., weekly) check-in meetings.

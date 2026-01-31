@@ -27,7 +27,7 @@ docker-compose ps
 
 # View logs
 docker-compose logs -f coordinator
-```
+```text
 
 ### Using Docker (Single Container)
 
@@ -41,7 +41,7 @@ docker run -d \
   -e OPENAI_API_KEY=your-key \
   -e NODE_ENV=production \
   noorg/multiagent-framework
-```
+```text
 
 ### Manual Installation
 
@@ -58,7 +58,7 @@ cp .env.example .env
 
 # Start application
 npm start
-```
+```text
 
 ## Environment Configuration
 
@@ -114,7 +114,7 @@ ENABLE_CACHING=true
 ENABLE_AUTO_BACKUP=true
 BACKUP_INTERVAL_HOURS=24
 BACKUP_RETENTION_DAYS=30
-```
+```text
 
 ### Staging Environment
 
@@ -124,7 +124,7 @@ DEBUG=true
 LOG_LEVEL=debug
 OPENAI_API_KEY=sk-proj-your-staging-key
 MAX_CONCURRENT_TASKS=5
-```
+```text
 
 ### Development Environment
 
@@ -135,7 +135,7 @@ LOG_LEVEL=debug
 OPENAI_API_KEY=sk-proj-your-dev-key
 HOT_RELOAD_ENABLED=true
 ENABLE_DEBUG_ENDPOINTS=true
-```
+```text
 
 ## Deployment Strategies
 
@@ -157,7 +157,7 @@ npm install -g pm2
 pm2 start dist/index.js --name "noorg-coordinator"
 pm2 save
 pm2 startup
-```
+```text
 
 ### Multi-Instance Deployment
 
@@ -193,7 +193,7 @@ services:
   redis:
     image: redis:7-alpine
     command: redis-server --appendonly yes
-```
+```text
 
 ### Kubernetes Deployment
 
@@ -236,7 +236,7 @@ spec:
             port: 3000
           initialDelaySeconds: 5
           periodSeconds: 5
-```
+```text
 
 ## Monitoring and Observability
 
@@ -253,7 +253,7 @@ curl http://localhost:9090/metrics
 
 # Check agent health
 curl http://localhost:3000/api/health/agents
-```
+```text
 
 ### Logging
 
@@ -274,7 +274,7 @@ logging:
   driver: "syslog"
   options:
     syslog-address: "tcp://log-collector:514"
-```
+```text
 
 ### Metrics and Monitoring
 
@@ -298,7 +298,7 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=your-grafana-password
     volumes:
       - grafana-data:/var/lib/grafana
-```
+```text
 
 ## Security Configuration
 
@@ -310,7 +310,7 @@ openssl rand -base64 32
 
 # Configure API keys
 openssl rand -hex 32
-```
+```text
 
 ### TLS/SSL Configuration
 
@@ -321,7 +321,7 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 # Configure HTTPS
 # Set SSL_CERT_PATH and SSL_KEY_PATH in .env
 # Set ENABLE_HTTPS=true
-```
+```text
 
 ### Security Best Practices
 
@@ -343,7 +343,7 @@ ENABLE_AUTO_BACKUP=true
 BACKUP_INTERVAL_HOURS=24
 BACKUP_RETENTION_DAYS=30
 BACKUP_STORAGE_PATH=./backups
-```
+```text
 
 ### Manual Backup
 
@@ -356,7 +356,7 @@ npm run backup:list
 
 # Restore from backup
 cp backups/state-backup.json data/coordinator-state.json
-```
+```text
 
 ### Database Backup
 
@@ -367,7 +367,7 @@ pg_dump -h localhost -U noorg noorg > backup.sql
 # Redis backup
 redis-cli SAVE
 cp /data/dump.rdb backup.rdb
-```
+```text
 
 ## Scaling and Performance
 
@@ -396,7 +396,7 @@ spec:
       target:
         type: Utilization
         averageUtilization: 70
-```
+```text
 
 ### Performance Tuning
 
@@ -409,7 +409,7 @@ NODE_OPTIONS="--max-old-space-size=8192"
 
 # Enable clustering
 npm run start:cluster
-```
+```text
 
 ## Troubleshooting
 
@@ -427,7 +427,7 @@ npm run analyze:deps
 # Optimize memory
 # Adjust MAX_MEMORY_MB in .env
 # Enable memory monitoring
-```
+```text
 
 #### High CPU Usage
 
@@ -441,7 +441,7 @@ npm run performance:profile
 # Optimize CPU usage
 # Reduce MAX_CONCURRENT_TASKS
 # Enable task prioritization
-```
+```text
 
 #### Network Issues
 
@@ -456,7 +456,7 @@ curl -v https://api.openai.com/v1/models
 # Check firewall settings
 # Verify API keys
 # Check rate limits
-```
+```text
 
 #### Database Connection Issues
 
@@ -471,7 +471,7 @@ curl http://localhost:3000/api/health/database
 # Verify connection string
 # Check database credentials
 # Monitor connection pool usage
-```
+```text
 
 ### Debug Mode
 
@@ -484,7 +484,7 @@ LOG_LEVEL=debug npm start
 
 # Use debug endpoints
 curl http://localhost:3000/api/debug/status
-```
+```text
 
 ## Maintenance Procedures
 
@@ -502,7 +502,7 @@ npm run maintenance:optimize
 # Monthly review
 npm run security
 npm run performance
-```
+```text
 
 ### Log Rotation
 
@@ -517,7 +517,7 @@ npm run performance
     notifempty
     create 644 noorg noorg
 }
-```
+```text
 
 ### Dependency Updates
 
@@ -533,7 +533,7 @@ npm run upgrade
 
 # Security updates
 npm audit fix
-```
+```text
 
 ## Emergency Procedures
 
@@ -548,7 +548,7 @@ docker-compose ps
 
 # View service logs
 docker-compose logs -f coordinator
-```
+```text
 
 ### Data Recovery
 
@@ -559,7 +559,7 @@ docker-compose restart coordinator
 
 # Emergency shutdown
 docker-compose down
-```
+```text
 
 ### Incident Response
 
@@ -573,7 +573,7 @@ docker-compose down
 
 ### Getting Help
 
-- **Documentation**: [Complete Documentation](docs/)
+- **Documentation**: [Complete Documentation](AGENTS.md)
 - **Issues**: [GitHub Issues](https://github.com/ActiveInferenceInstitute/NoOrg/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/ActiveInferenceInstitute/NoOrg/discussions)
 - **Email**: support@noorg.local (for production issues)

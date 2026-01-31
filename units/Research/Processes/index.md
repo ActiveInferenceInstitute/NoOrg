@@ -1,21 +1,30 @@
-# Research Processes Index
+# Research Processes
 
-This section documents the standard operating procedures (SOPs) followed within the [[../index|Research Unit]].
+This directory contains processes governing research project execution, data management, and collaboration.
 
-## Key Processes
+## Research Lifecycle Processes
 
-*   [[ProjectInitiationProcess|Project Initiation Process]] (TBD)
-*   [[LiteratureReviewProcess|Literature Review Process]] (TBD)
-*   [[ExperimentDesignProcess|Experiment Design Process]] (TBD)
-*   [[DataCollectionProcess|Data Collection Process]] (TBD)
-*   [[DataAnalysisProcess|Data Analysis Process]] (TBD)
-*   [[DataManagementProcess|Data Management Process]] (TBD) - *See also [[../Policies/DataManagementPolicy|Data Management Policy]]*
-*   [[PeerReviewProcess|Peer Review Process]] (TBD) - *See [[../Methodologies#Standards and Best Practices|Methodologies]]*
-*   [[ReportingProcess|Reporting & Publication Process]] (TBD) - *See [[../Policies/PublicationPolicy|Publication Policy]]*
-*   [[CollaborationProcess|Cross-Unit Collaboration Process]] (TBD) - *See [[../Collaboration|Collaboration Model]]*
+| Process | Description |
+|---------|-------------|
+| [Project Initiation](./ProjectInitiationProcess.md) | Starting new research projects |
+| [Literature Review](./LiteratureReviewProcess.md) | Systematic literature assessment |
+| [Experiment Design](./ExperimentDesignProcess.md) | Designing research experiments |
+| [Data Collection](./DataCollectionProcess.md) | Gathering research data |
+| [Data Analysis](./DataAnalysisProcess.md) | Analyzing research results |
+| [Data Management](./DataManagementProcess.md) | Managing research data lifecycle |
+| [Peer Review](./PeerReviewProcess.md) | Internal peer review procedures |
+| [Publication Process](./ReportingProcess.md) | Preparing and publishing findings |
+| [Collaboration](./CollaborationProcess.md) | Cross-unit and external collaboration |
 
-## Related Documents
+## Process Standards
 
-*   [[../Policies/|Research Policies]]
-*   [[../Methodologies|Research Methodologies]]
-*   [[../Tools|Research Tools]] 
+All research processes adhere to:
+
+- [Research Methodologies](../Methodologies.md)
+- [Research Ethics Policy](../Policies/ResearchEthicsPolicy.md)
+- Scientific rigor and reproducibility standards
+
+## Related Documentation
+
+- [Research Policies](../Policies/)
+- [Research Tools](../Tools.md)

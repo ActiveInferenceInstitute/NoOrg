@@ -52,7 +52,7 @@ Each meeting note follows this standard template:
 ## Next Meeting
 - Date: [Next meeting date]
 - Focus topics: [Topics]
-```
+```text
 
 ## Related Resources
 

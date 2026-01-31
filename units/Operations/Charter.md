@@ -11,7 +11,7 @@ graph LR
     Manager --> Engineer
     Manager --> Analyst
     Manager --> QA
-```
+```text
 
 ## 📋 Charter Overview
 ### Purpose
@@ -88,7 +88,7 @@ flowchart TD
     ExecuteProcess --> MonitorPerformance[Monitor Performance]
     MonitorPerformance --> ReviewAndImprove[Review & Improve]
     ReviewAndImprove --> End[End]
-```
+```text
 
 ## 📊 Operations
 ### Regular Activities

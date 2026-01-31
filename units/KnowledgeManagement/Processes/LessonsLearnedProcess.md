@@ -40,7 +40,7 @@ flowchart TD
     J --> K[Track Implementation]
     K --> L[Measure Impact]
     L --> M[Periodic Review]
-```
+```text
 
 ## Detailed Process Steps
 

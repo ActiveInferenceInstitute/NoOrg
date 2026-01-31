@@ -21,7 +21,7 @@ graph TD
     B --> E[High Availability]
     C --> E
     D --> E
-```
+```text
 
 ### Resilience Layers
 1. **Infrastructure Layer**

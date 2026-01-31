@@ -14,7 +14,7 @@ graph TD
         Medium[Medium: 12 → 9]
         Low[Low: 8 → 10]
     end
-```
+```text
 
 | Metric | Current | Previous | Trend | Target |
 |--------|---------|----------|-------|--------|
@@ -71,7 +71,7 @@ pie title Risk Treatment Status
     "In Progress" : 15
     "Not Started" : 3
     "Accepted" : 5
-```
+```text
 
 | Priority | Total Actions | On Track | Delayed | Completed |
 |----------|---------------|----------|---------|-----------|

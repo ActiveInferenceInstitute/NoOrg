@@ -27,7 +27,7 @@ related_frameworks:
   - [[frameworks/governing_framework]]
   - [[frameworks/related_framework]]
 ---
-```
+```text
 
 ## Executive Summary
 [Brief overview of analysis purpose, key findings, and recommendations]

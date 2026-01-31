@@ -44,7 +44,7 @@ archive_criteria:
       - policy_requirements
       - governance_standards
       - business_rules
-```
+```text
 
 ### Assessment Management
 ```python
@@ -75,7 +75,7 @@ class ArchiveAssessor:
     def generate_recommendations(self):
         """Generate archival recommendations"""
         pass
-```
+```text
 
 ## 📦 Storage Location
 
@@ -114,7 +114,7 @@ class ArchiveAssessor:
     }
   }
 }
-```
+```text
 
 ### Storage Management
 ```python
@@ -145,7 +145,7 @@ class StorageManager:
     def monitor_health(self):
         """Monitor storage health"""
         pass
-```
+```text
 
 ## 📅 Retention Policy
 
@@ -183,7 +183,7 @@ retention_policy:
       - review_records
       - decision_tracking
       - policy_modifications
-```
+```text
 
 ### Policy Management
 ```python
@@ -214,7 +214,7 @@ class RetentionManager:
     def verify_compliance(self):
         """Verify policy compliance"""
         pass
-```
+```text
 
 ## 🔄 Retrieval Process
 
@@ -250,7 +250,7 @@ retrieval_process:
       - access_logging
       - usage_patterns
       - performance_metrics
-```
+```text
 
 ### Retrieval Management
 ```python
@@ -281,7 +281,7 @@ class RetrievalManager:
     def track_requests(self):
         """Track retrieval requests"""
         pass
-```
+```text
 
 ## 📊 Analytics and Reporting
 
@@ -315,7 +315,7 @@ class RetrievalManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

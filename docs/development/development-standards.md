@@ -19,7 +19,7 @@ graph TD
     A --> C[Architecture Standards]
     A --> D[Quality Standards]
     A --> E[Process Standards]
-```
+```text
 
 ### Standards Architecture
 1. **Standard Layers**

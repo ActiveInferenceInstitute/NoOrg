@@ -41,7 +41,7 @@ mindmap
       Graceful termination
       Secure default states
       Exception handling
-```
+```text
 
 ## Common Vulnerabilities and Mitigations
 1. **Injection attacks**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Secure Coding by Language
 1. **Web applications (JavaScript, TypeScript)**
@@ -173,7 +173,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Secure Development Lifecycle
 1. **Security requirements**
@@ -239,7 +239,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Threat Modeling
 1. **Decompose the application**
@@ -305,7 +305,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Secure Coding Standards
 1. **Application security verification**
@@ -371,7 +371,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Security Testing Techniques
 - Implement static application security testing (SAST)
@@ -414,7 +414,7 @@ mindmap
       Attack detection
       Context awareness
       Exploitation prevention
-```
+```text
 
 ## Secure Coding Process Model
 ```mermaid
@@ -452,4 +452,4 @@ graph TB
     
     R -.-> E
     R -.-> J
-``` 
+```text 

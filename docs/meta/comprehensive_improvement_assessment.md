@@ -41,7 +41,7 @@ graph TD
     I[Medium Priority] --> J[Documentation Consolidation]
     I --> K[Example Expansion]
     I --> L[UI/Dashboard Development]
-```
+```text
 
 ---
 
@@ -94,7 +94,7 @@ export class TaskManagerImpl implements TaskManager {
     // Real implementation instead of fallback
   }
 }
-```
+```text
 
 **Priority 2: Implement Agent Health System**
 ```typescript
@@ -107,7 +107,7 @@ export class AgentHealthMonitor {
   async performHealthCheck(agentId: string): Promise<HealthReport> { }
   async registerHealthCheck(agentId: string, check: HealthCheck): Promise<void> { }
 }
-```
+```text
 
 **Priority 3: Unified State Management**
 ```typescript
@@ -115,7 +115,7 @@ export class AgentHealthMonitor {
 // Consolidate SharedStateManager and SharedStateManager.new
 // Add distributed synchronization
 // Implement CRDT-based conflict resolution
-```
+```text
 
 ### 1.2 Integration Patterns
 
@@ -153,7 +153,7 @@ export class SagaPattern {
   async execute(steps: SagaStep[]): Promise<SagaResult> { }
   async compensate(completedSteps: SagaStep[]): Promise<void> { }
 }
-```
+```text
 
 **Add Pattern Examples:**
 ```typescript
@@ -161,7 +161,7 @@ export class SagaPattern {
 // Real-world example with external API calls
 // File: examples/integration-patterns/saga-distributed-transaction.ts
 // Multi-service transaction example
-```
+```text
 
 ---
 
@@ -230,7 +230,7 @@ def test_complete_agent_lifecycle_with_real_data():
     task = await coordinator.getTask(task_id)
     assert task.status == "completed"
     assert task.results is not None
-```
+```text
 
 **Priority 2: Add Comprehensive Test Suites**
 ```python
@@ -251,7 +251,7 @@ def test_agent_registration_requires_authentication():
 def test_system_recovers_from_random_agent_failures():
     """Verify system resilience when agents fail randomly"""
     pass
-```
+```text
 
 **Priority 3: Test Configuration**
 ```yaml
@@ -277,7 +277,7 @@ addopts =
     --cov-report=html
     --cov-report=term-missing
     --cov-fail-under=80
-```
+```text
 
 ### 2.2 Test Data Management
 
@@ -316,7 +316,7 @@ class WorkflowDataGenerator:
     """Generate realistic workflow test data"""
     def generate_complex_workflow(self, depth: int, branching: int): ...
     def generate_task_dependencies(self, count: int): ...
-```
+```text
 
 ---
 
@@ -359,23 +359,23 @@ class WorkflowDataGenerator:
 ## Quick Start
 - [Installation](setup/installation.md)
 - [Quick Start Guide](guides/quickstart.md)
-- [Architecture Overview](architecture/overview.md)
+- [Architecture Overview](../../examples/lexdao/overview.md)
 
 ## Core Documentation
-- [Multi-Agent System](agents/multiagent-system.md)
-- [API Reference](api/reference.md) ← NEW
-- [Integration Patterns](core/integration/patterns/README.md)
+- [Multi-Agent System](../agents/multiagent-system.md)
+- [API Reference](../api/reference.md) ← NEW
+- [Integration Patterns](../../README.md)
 
 ## Development
-- [Development Guide](development/index.md)
-- [Testing Strategy](testing/index.md)
-- [Contribution Guidelines](development/contribution-guidelines.md)
+- [Development Guide](../index.md)
+- [Testing Strategy](../index.md)
+- [Contribution Guidelines](../development/contribution-guidelines.md)
 
 ## Operations
 - [Deployment Guide](operations/deployment.md) ← NEW
-- [Monitoring & Observability](monitoring/index.md)
-- [Troubleshooting](troubleshooting/index.md) ← NEW
-```
+- [Monitoring & Observability](../index.md)
+- [Troubleshooting](../index.md) ← NEW
+```text
 
 **Priority 2: Create Comprehensive API Documentation**
 ```markdown
@@ -445,7 +445,7 @@ const agentId = await coordinator.registerAgent({
 - Throws `Error` if registration fails
 
 [Continue for ALL methods...]
-```
+```text
 
 **Priority 3: Create Deployment Guide**
 ```markdown
@@ -522,7 +522,7 @@ spec:
 \`\`\`
 
 [Continue with actual deployment scenarios...]
-```
+```text
 
 ### 3.2 Documentation Quality
 
@@ -546,7 +546,7 @@ def check_completeness(docs_dir: str) -> List[IncompleteDoc]:
 def check_consistency(docs_dir: str) -> List[Inconsistency]:
     """Find inconsistent terminology and structure"""
     pass
-```
+```text
 
 ---
 
@@ -632,7 +632,7 @@ async function runCustomerServiceAutomation() {
   await new Promise(resolve => setTimeout(resolve, 60000));
   clearInterval(reporter);
 }
-```
+```text
 
 **Priority 2: Refactor Large Examples**
 ```typescript
@@ -653,7 +653,7 @@ export { Visualizations } from './visualizations';
 
 // File: examples/hybrid-agent-workflow/visualizations.ts
 // Visualization utilities (< 500 lines)
-```
+```text
 
 ---
 
@@ -712,7 +712,7 @@ export class MetricsCollector {
     // Export metrics in standard formats
   }
 }
-```
+```text
 
 **Priority 2: Build Real-Time Dashboard**
 ```typescript
@@ -753,7 +753,7 @@ export class DashboardServer {
     this.app.listen(port);
   }
 }
-```
+```text
 
 ```html
 <!-- File: src/utils/dashboard/dashboard.html -->
@@ -807,7 +807,7 @@ export class DashboardServer {
   </script>
 </body>
 </html>
-```
+```text
 
 ---
 
@@ -857,7 +857,7 @@ REDIS_URL=redis://localhost:6379
 # Security
 JWT_SECRET=your-jwt-secret-here
 API_KEY=your-api-key-here
-```
+```text
 
 **Priority 2: Configuration Validation**
 ```typescript
@@ -903,7 +903,7 @@ export function loadConfig(): Config {
   
   return validateConfig(config);
 }
-```
+```text
 
 ---
 
@@ -984,7 +984,7 @@ jobs:
       run: |
         echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
         docker push noorg:${{ github.sha }}
-```
+```text
 
 **Priority 2: Docker Configuration**
 ```dockerfile
@@ -1011,7 +1011,7 @@ USER noorg
 
 EXPOSE 3000 9090
 CMD ["node", "dist/index.js"]
-```
+```text
 
 ```yaml
 # File: docker-compose.yml
@@ -1058,7 +1058,7 @@ services:
 volumes:
   postgres-data:
   redis-data:
-```
+```text
 
 ---
 
@@ -1117,7 +1117,7 @@ export class AuthenticationManager {
     return apiKey;
   }
 }
-```
+```text
 
 **Priority 2: Add Authorization Layer**
 ```typescript
@@ -1140,7 +1140,7 @@ export class AuthorizationManager {
     // Assign role with specific permissions
   }
 }
-```
+```text
 
 ---
 
@@ -1213,7 +1213,7 @@ export class UnitScanner {
     return graph;
   }
 }
-```
+```text
 
 **Priority 2: Unit Documentation Generator**
 ```typescript
@@ -1234,7 +1234,7 @@ ${unit.responsibilities.map(r => `- ${r}`).join('\n')}
 ${unit.roles.map(r => `### ${r.title}\n${r.description}`).join('\n\n')}
 
 ## Processes
-${unit.processes.map(p => `- [${p.name}](${p.link})`).join('\n')}
+${unit.processes.map(p => `- [${p.name}](AGENTS.md)`).join('\n')}
 
 ## KPIs
 ${unit.kpis.map(k => `- ${k.name}: ${k.target}`).join('\n')}
@@ -1247,7 +1247,7 @@ ${unit.dependencies.map(d => `- [[${d}]]`).join('\n')}
 `;
   }
 }
-```
+```text
 
 ---
 

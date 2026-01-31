@@ -66,7 +66,7 @@ graph TD
     I -- Approved --> J[Finalize & Approve Test Plan];
     J --> K[Communicate & Store Plan];
     K --> L[End: Test Plan Ready];
-```
+```text
 
 ## 5. Roles and Responsibilities
 

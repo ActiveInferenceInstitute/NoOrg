@@ -44,7 +44,7 @@ link_validation:
       - status_summaries
       - issue_reports
       - trend_analysis
-```
+```text
 
 ### Validation Management
 ```python
@@ -75,7 +75,7 @@ class LinkValidator:
     def generate_report(self):
         """Generate validation report"""
         pass
-```
+```text
 
 ## ✅ Content Verification
 
@@ -109,7 +109,7 @@ class LinkValidator:
     }
   }
 }
-```
+```text
 
 ### Verification Management
 ```python
@@ -140,7 +140,7 @@ class ContentVerifier:
     def track_verification(self):
         """Track verification process"""
         pass
-```
+```text
 
 ## 🔄 Alternative Sources
 
@@ -176,7 +176,7 @@ alternative_sources:
       - source_mapping
       - change_tracking
       - status_reporting
-```
+```text
 
 ### Source Management
 ```python
@@ -207,7 +207,7 @@ class SourceManager:
     def validate_sources(self):
         """Validate source quality"""
         pass
-```
+```text
 
 ## 🗑️ Dead Link Removal
 
@@ -243,7 +243,7 @@ dead_link_management:
       - status_reports
       - trend_analysis
       - improvement_recommendations
-```
+```text
 
 ### Removal Management
 ```python
@@ -274,7 +274,7 @@ class DeadLinkManager:
     def track_changes(self):
         """Track removal changes"""
         pass
-```
+```text
 
 ## 📊 Analytics and Reporting
 
@@ -308,7 +308,7 @@ class DeadLinkManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

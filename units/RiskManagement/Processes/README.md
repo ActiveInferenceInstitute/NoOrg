@@ -10,11 +10,11 @@ These processes establish standardized, repeatable approaches for identifying, a
 
 | Process | Description |
 |---------|-------------|
-| [Risk Identification](RiskIdentification.md) | Methodologies and procedures for identifying risks across the organization |
+| [Risk Identification](../../CustomerSupport/Processes/RiskIdentification.md) | Methodologies and procedures for identifying risks across the organization |
 | [Risk Assessment](RiskAssessment.md) | Framework for evaluating and prioritizing risks based on impact and likelihood |
-| [Risk Mitigation](RiskMitigation.md) | Approaches for developing and implementing risk treatment strategies |
-| [Risk Monitoring](RiskMonitoring.md) | Procedures for ongoing monitoring of risks and control effectiveness |
-| [Business Continuity](BusinessContinuity.md) | Processes for ensuring operational resilience and business continuity |
+| [Risk Mitigation](AGENTS.md) | Approaches for developing and implementing risk treatment strategies |
+| [Risk Monitoring](AGENTS.md) | Procedures for ongoing monitoring of risks and control effectiveness |
+| [Business Continuity](AGENTS.md) | Processes for ensuring operational resilience and business continuity |
 
 ## Process Flow
 
@@ -28,7 +28,7 @@ flowchart LR
     Mitigate --> Monitor[Monitor & Report]
     Monitor --> Review[Review & Update]
     Review --> Identify
-```
+```text
 
 ## Integration Points
 

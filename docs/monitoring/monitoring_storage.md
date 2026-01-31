@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_patterns]]
   - [[monitoring/monitoring_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the storage framework for monitoring systems within the agent framework, providing comprehensive storage processes, standards, and best practices for managing monitoring data persistence.
@@ -43,7 +43,7 @@ class MonitoringStorageManager:
         self.indexer = DataIndexer()
         self.archiver = DataArchiver()
         self.optimizer = StorageOptimizer()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Storage Backend]
     C --> F[Query Engine]
     D --> G[Index Store]
-```
+```text
 
 ### 2. Data Writing
 #### 2.1 Writing System
@@ -71,7 +71,7 @@ class DataWriter:
         batching = await self.batcher.batch_write(validation)
         monitoring = await self.monitor.monitor_write(batching)
         return await self.engine.execute_write(monitoring)
-```
+```text
 
 #### 2.2 Write Types
 - Single Write
@@ -94,7 +94,7 @@ class DataReader:
         optimization = await self.optimizer.optimize_query(caching)
         monitoring = await self.monitor.monitor_read(optimization)
         return await self.engine.execute_read(monitoring)
-```
+```text
 
 #### 3.2 Read Types
 - Single Read
@@ -117,7 +117,7 @@ class DataIndexer:
         optimization = await self.optimizer.optimize_index(building)
         monitoring = await self.monitor.monitor_index(optimization)
         return await self.engine.update_index(monitoring)
-```
+```text
 
 #### 4.2 Index Types
 - Primary Index
@@ -140,7 +140,7 @@ class DataArchiver:
         compression = await self.compressor.compress_data(policy)
         monitoring = await self.monitor.monitor_archival(compression)
         return await self.engine.execute_archival(monitoring)
-```
+```text
 
 #### 5.2 Archival Types
 - Time-based Archival
@@ -163,7 +163,7 @@ class StorageOptimizer:
         planning = await self.planner.plan_optimization(analysis)
         monitoring = await self.monitor.monitor_optimization(planning)
         return await self.engine.execute_optimization(monitoring)
-```
+```text
 
 #### 6.2 Optimization Types
 - Space Optimization
@@ -188,7 +188,7 @@ class StorageStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Data Standards
@@ -205,7 +205,7 @@ class StorageProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Write Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class StorageSecurity:
     async def audit_storage(self, audit):
         # Storage auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Data Security
@@ -318,7 +318,7 @@ class StoragePattern:
         self.writer = DataWriter()
         self.reader = DataReader()
         self.indexer = DataIndexer()
-```
+```text
 
 ### B. Optimization Patterns
 ```python
@@ -328,7 +328,7 @@ class OptimizationPattern:
         self.analyzer = StorageAnalyzer()
         self.planner = OptimizationPlanner()
         self.executor = OptimizationExecutor()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -338,4 +338,4 @@ class SecurityPattern:
         self.validator = SecurityValidator()
         self.control = AccessControl()
         self.audit = AuditLogger()
-``` 
+```text 

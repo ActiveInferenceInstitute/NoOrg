@@ -27,7 +27,7 @@ related_policies:
   - [[policies/governing_policy]]
   - [[policies/related_policy]]
 ---
-```
+```text
 
 ## Purpose & Scope
 [Clear statement of process purpose, objectives, and scope of application]
@@ -42,7 +42,7 @@ graph TD
     B --> C[Step 2]
     C --> D[Step 3]
     D --> E[End]
-```
+```text
 
 #### 1.2 Key Information
 - Process Owner: [Owner]

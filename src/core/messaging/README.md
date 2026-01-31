@@ -46,7 +46,7 @@ messageSystem.onMessage('task.request', async (message) => {
   // Process the message
   return { status: 'acknowledged' };
 });
-```
+```text
 
 ## Message Structure
 
@@ -68,7 +68,7 @@ interface Message {
     tags?: string[];
   };
 }
-```
+```text
 
 ### Message Types
 - **Task Messages**: `task.request`, `task.response`, `task.error`
@@ -88,7 +88,7 @@ const response = await messageSystem.sendRequest('agent-002', {
 
 // Handle response
 console.log('Analysis result:', response.body);
-```
+```text
 
 ### Publish-Subscribe Pattern
 ```typescript
@@ -101,7 +101,7 @@ messageSystem.subscribe('data.updates', (message) => {
 messageSystem.publish('data.updates', {
   body: { newData: processedData }
 });
-```
+```text
 
 ### Broadcast Pattern
 ```typescript
@@ -111,7 +111,7 @@ await messageSystem.broadcast({
   subject: 'System Maintenance',
   body: { message: 'Scheduled maintenance in 1 hour' }
 });
-```
+```text
 
 ## Configuration
 
@@ -124,7 +124,7 @@ interface MessageSystemConfig {
   defaultMessageTimeout?: number;
   maxRetries?: number;
 }
-```
+```text
 
 ## Message Processing
 
@@ -146,7 +146,7 @@ messageSystem.registerHandler('task.request', async (message) => {
     throw new MessageProcessingError('Failed to process task', error);
   }
 });
-```
+```text
 
 ### Message Transformation
 ```typescript
@@ -158,7 +158,7 @@ messageSystem.registerTransformer('legacy.format', (message) => {
     body: transformLegacyData(message.body)
   };
 });
-```
+```text
 
 ## Error Handling
 
@@ -221,7 +221,7 @@ await queue.enqueue(message);
 await queue.process(async (message) => {
   await processHighPriorityTask(message);
 });
-```
+```text
 
 ### Message Filtering
 ```typescript
@@ -230,7 +230,7 @@ messageSystem.registerFilter('sensitive-data', (message) => {
   // Filter out sensitive information
   return sanitizeMessage(message);
 });
-```
+```text
 
 ### Message Batching
 ```typescript
@@ -239,10 +239,10 @@ messageSystem.enableBatching('data.updates', {
   batchSize: 10,
   timeout: 5000
 });
-```
+```text
 
 ## Related Documentation
 
-- [Message System API Reference](../../docs/core/index.md)
+- [Message System API Reference](../../../docs/index.md)
 - [Event System Integration](../events/README.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)

@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_integration]]
   - [[monitoring/monitoring_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the reporting framework for monitoring systems within the agent framework, providing comprehensive reporting processes, standards, and best practices for generating insights and visualizations from monitoring data.
@@ -43,7 +43,7 @@ class MonitoringReportingManager:
         self.formatter = ReportFormatter()
         self.distributor = ReportDistributor()
         self.archiver = ReportArchiver()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Report Templates]
     C --> F[Visualization Engine]
     D --> G[Distribution Channels]
-```
+```text
 
 ### 2. Report Generation
 #### 2.1 Generation System
@@ -71,7 +71,7 @@ class ReportGenerator:
         composition = await self.composer.compose_report(data, template)
         validation = await self.validator.validate_report(composition)
         return await self.engine.generate_report(validation)
-```
+```text
 
 #### 2.2 Report Types
 - Performance Reports
@@ -94,7 +94,7 @@ class DataVisualizer:
         styling = await self.styler.apply_styles(rendering)
         optimization = await self.optimizer.optimize_visualization(styling)
         return await self.engine.generate_visualization(optimization)
-```
+```text
 
 #### 3.2 Visualization Types
 - Metric Visualizations
@@ -117,7 +117,7 @@ class ReportFormatter:
         styling = await self.styler.apply_styles(report, template)
         validation = await self.validator.validate_format(styling)
         return await self.engine.apply_formatting(validation)
-```
+```text
 
 #### 4.2 Format Types
 - HTML Format
@@ -140,7 +140,7 @@ class ReportDistributor:
         routing = await self.router.route_report(report, channels)
         tracking = await self.tracker.track_distribution(routing)
         return await self.engine.distribute_report(tracking)
-```
+```text
 
 #### 5.2 Distribution Types
 - Email Distribution
@@ -163,7 +163,7 @@ class ReportArchiver:
         indexing = await self.indexer.index_report(storage)
         retrieval = await self.retriever.setup_retrieval(indexing)
         return await self.engine.archive_report(retrieval)
-```
+```text
 
 #### 6.2 Archival Types
 - Short-term Archival
@@ -188,7 +188,7 @@ class ReportingStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Content Standards
@@ -205,7 +205,7 @@ class ReportingProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Generation Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class ReportingSecurity:
     async def audit_reporting(self, audit):
         # Reporting auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Content Security
@@ -318,7 +318,7 @@ class ReportingPattern:
         self.generator = ReportGenerator()
         self.visualizer = DataVisualizer()
         self.distributor = ReportDistributor()
-```
+```text
 
 ### B. Visualization Patterns
 ```python
@@ -328,7 +328,7 @@ class VisualizationPattern:
         self.renderer = DataRenderer()
         self.styler = VisualizationStyler()
         self.optimizer = VisualizationOptimizer()
-```
+```text
 
 ### C. Distribution Patterns
 ```python
@@ -338,4 +338,4 @@ class DistributionPattern:
         self.router = ReportRouter()
         self.tracker = DistributionTracker()
         self.archiver = ReportArchiver()
-``` 
+```text 

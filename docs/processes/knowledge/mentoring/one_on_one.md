@@ -23,7 +23,7 @@ related_processes:
   - [[processes/knowledge/training]]
   - [[processes/knowledge/development]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document provides detailed implementation guidelines for the one-on-one mentoring program as part of the [[processes/knowledge/mentoring|Knowledge Mentoring Program]]. It outlines specific processes, tools, and best practices for effective individual mentoring relationships.

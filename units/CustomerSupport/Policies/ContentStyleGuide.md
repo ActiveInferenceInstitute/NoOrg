@@ -169,8 +169,8 @@ This style guide establishes consistent writing standards that enhance readabili
 - **Related Content**: Include "Related Articles" sections
 
 #### Examples
-- **Good**: "Review the [password requirements](link) before continuing."
-- **Poor**: "Click [here](link) for password requirements."
+- **Good**: "Review the [password requirements](AGENTS.md) before continuing."
+- **Poor**: "Click [here](AGENTS.md) for password requirements."
 
 ### 3. Date and Time Formats
 

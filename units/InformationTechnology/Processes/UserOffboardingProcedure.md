@@ -54,4 +54,4 @@ graph TD
     E --> F[Archive & Secure Data]
     F --> G[Notify HR/Manager of Completion]
     G --> H[Close Offboarding Ticket]
-``` 
+```text 

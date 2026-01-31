@@ -17,7 +17,7 @@ enum TaskStatus {
   SKIPPED = 'skipped',
   CANCELLED = 'cancelled'
 }
-```
+```text
 
 ### WorkflowStatus
 
@@ -30,7 +30,7 @@ enum WorkflowStatus {
   PAUSED = 'paused',
   CANCELLED = 'cancelled'
 }
-```
+```text
 
 ### ConditionType
 
@@ -43,7 +43,7 @@ enum ConditionType {
   STATE_CONDITION = 'state_condition',
   ALWAYS = 'always'
 }
-```
+```text
 
 ### WorkflowTask
 
@@ -69,7 +69,7 @@ interface WorkflowTask {
   dependencyResults?: Record<string, WorkflowTask>;
   output?: Record<string, any>;
 }
-```
+```text
 
 ### TaskCondition
 
@@ -82,7 +82,7 @@ interface TaskCondition {
   statePath?: string;
   options?: Record<string, any>;
 }
-```
+```text
 
 ### Workflow
 
@@ -100,7 +100,7 @@ interface Workflow {
   owner?: string;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 ## WorkflowEngine Class
 
@@ -110,7 +110,7 @@ interface Workflow {
 
 ```typescript
 public async createWorkflow(workflowData: Partial<Workflow>): Promise<Workflow>
-```
+```text
 
 Creates a new workflow.
 
@@ -123,7 +123,7 @@ Creates a new workflow.
 
 ```typescript
 public async executeWorkflow(workflowId: string): Promise<Workflow>
-```
+```text
 
 Executes a workflow.
 
@@ -136,7 +136,7 @@ Executes a workflow.
 
 ```typescript
 public async getWorkflow(workflowId: string): Promise<Workflow | null>
-```
+```text
 
 Gets workflow by ID.
 
@@ -153,7 +153,7 @@ Gets workflow by ID.
 
 ```typescript
 public withName(name: string): WorkflowBuilder
-```
+```text
 
 Sets workflow name.
 
@@ -166,7 +166,7 @@ Sets workflow name.
 
 ```typescript
 public withDescription(description: string): WorkflowBuilder
-```
+```text
 
 Sets workflow description.
 
@@ -179,7 +179,7 @@ Sets workflow description.
 
 ```typescript
 public withPlanningPhase(config: PlanningPhaseConfig): WorkflowBuilder
-```
+```text
 
 Adds planning phase.
 
@@ -192,7 +192,7 @@ Adds planning phase.
 
 ```typescript
 public withExecutionPhase(config: ExecutionPhaseConfig): WorkflowBuilder
-```
+```text
 
 Adds execution phase.
 
@@ -205,7 +205,7 @@ Adds execution phase.
 
 ```typescript
 public build(): UnitWorkflow
-```
+```text
 
 Builds the workflow.
 

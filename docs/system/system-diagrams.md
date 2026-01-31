@@ -43,7 +43,7 @@ graph TB
     Services --> DB
     Services --> Cache
     Workers --> Storage
-```
+```text
 
 ### Component Architecture
 ```mermaid
@@ -74,7 +74,7 @@ graph LR
     Integration --> DB
     Integration --> Queue
     Business --> Cache
-```
+```text
 
 ## 🌐 Network Diagrams
 
@@ -104,7 +104,7 @@ graph TB
     API --> App
     App --> Cache
     App --> DB
-```
+```text
 
 ### Network Security
 ```mermaid
@@ -131,7 +131,7 @@ graph TB
     WAF --> FW2
     FW2 --> App
     App --> DB
-```
+```text
 
 ## 🔄 Data Flow Diagrams
 
@@ -149,7 +149,7 @@ sequenceDiagram
     DB-->>Auth: User Details
     Auth-->>API: Authentication Token
     API-->>U: Login Response
-```
+```text
 
 ### Data Processing Flow
 ```mermaid
@@ -178,7 +178,7 @@ graph LR
     Enrich --> Aggregate
     Aggregate --> Processed
     Processed --> Archive
-```
+```text
 
 ## 🔒 Security Architecture
 
@@ -212,7 +212,7 @@ graph TB
     Auth --> Encrypt
     Encrypt --> Mask
     Mask --> Audit
-```
+```text
 
 ## 📊 Monitoring Architecture
 
@@ -245,7 +245,7 @@ graph TB
     TraceDB --> Analysis
     Analysis --> Alerting
     Correlation --> Alerting
-```
+```text
 
 ## 📚 References
 

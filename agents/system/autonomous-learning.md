@@ -37,7 +37,7 @@ graph TD
         BE --> PE[Performance Enhancement]
         PE --> SA[Strategy Adaptation]
     end
-```
+```text
 
 ## Learning Implementation
 
@@ -85,7 +85,7 @@ class ExperienceCollector:
             experience = await collector.collect(context)
             raw_experience.update(experience)
         return raw_experience
-```
+```text
 
 ### Knowledge Extraction
 ```python
@@ -126,7 +126,7 @@ class KnowledgeExtractor:
             extracted = await extractor.extract_patterns(analysis)
             patterns.extend(extracted)
         return patterns
-```
+```text
 
 ### Model Update
 ```python
@@ -169,7 +169,7 @@ class ModelUpdater:
         except Exception as e:
             await self._handle_update_error(e, knowledge)
             raise
-```
+```text
 
 ## Optimization Implementation
 
@@ -223,7 +223,7 @@ class PerformanceOptimizer:
             )
             optimizations.append(optimization)
         return optimizations
-```
+```text
 
 ### Strategy Adaptation
 ```python
@@ -267,7 +267,7 @@ class StrategyAdapter:
         except Exception as e:
             await self._handle_adaptation_error(e, context)
             raise
-```
+```text
 
 ## Learning Configuration
 
@@ -299,7 +299,7 @@ model_configuration:
         method: rmsprop
         parameters:
           alpha: 0.99
-```
+```text
 
 ### Experience Configuration
 ```yaml
@@ -325,7 +325,7 @@ experience_configuration:
     policy: time_based
     duration: 30d
     compression: snappy
-```
+```text
 
 ## Optimization Configuration
 
@@ -354,7 +354,7 @@ performance_metrics:
       efficiency:
         type: resource_usage
         threshold: 0.7
-```
+```text
 
 ### Optimization Parameters
 ```yaml
@@ -377,7 +377,7 @@ optimization_parameters:
       parameters:
         learning_rate: 0.01
         momentum: 0.9
-```
+```text
 
 ## Best Practices
 
@@ -401,7 +401,7 @@ learning_best_practices:
     - implement_gradual_adaptation
     - monitor_optimization_impact
     - maintain_system_stability
-```
+```text
 
 ### Implementation Guidelines
 ```yaml
@@ -423,7 +423,7 @@ implementation_guidelines:
     - implement_caching
     - use_efficient_algorithms
     - monitor_resource_usage
-```
+```text
 
 ## Documentation
 

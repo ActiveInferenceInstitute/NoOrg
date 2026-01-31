@@ -19,7 +19,7 @@ The **LegalAgent** specializes in legal document generation, contract review, le
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -47,7 +47,7 @@ async generateLegalDocument(
     checkCache?: boolean;
   }
 ): Promise<LegalDocumentResult>
-```
+```text
 
 #### reviewLegalDocument()
 
@@ -65,7 +65,7 @@ async reviewLegalDocument(
     checkCache?: boolean;
   }
 ): Promise<DocumentReviewResult>
-```
+```text
 
 #### conductLegalResearch()
 
@@ -84,7 +84,7 @@ async conductLegalResearch(
     checkCache?: boolean;
   }
 ): Promise<LegalResearchResult>
-```
+```text
 
 ## Configuration Options
 
@@ -100,7 +100,7 @@ interface LegalAgentConfig extends AgentConfig {
   riskTolerance?: 'conservative' | 'moderate' | 'aggressive';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -143,7 +143,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -176,7 +176,7 @@ const agent = new LegalAgent({
     legalTemplates: customTemplates
   }
 });
-```
+```text
 
 ### Multi-jurisdiction Analysis
 
@@ -192,7 +192,7 @@ const analyses = await Promise.all(
     })
   )
 );
-```
+```text
 
 ## Version History
 

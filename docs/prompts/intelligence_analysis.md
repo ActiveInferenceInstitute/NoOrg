@@ -41,7 +41,7 @@ mindmap
       Source citation
       Reasoning explanation
       Limitation disclosure
-```
+```text
 
 ## Intelligence Cycle
 1. **Planning and direction**
@@ -137,7 +137,7 @@ graph TD
     E --> H
     F --> H
     G --> H
-```
+```text
 
 ## Structured Analytical Techniques
 1. **Hypothesis generation and testing**
@@ -203,7 +203,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Analysis of Competing Hypotheses (ACH)
 1. **Generate hypotheses**
@@ -269,7 +269,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Cognitive Biases in Intelligence
 1. **Information processing biases**
@@ -335,7 +335,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Intelligence Source Evaluation
 1. **Source reliability assessment**
@@ -401,7 +401,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Writing Intelligence Products
 - Produce clear, concise, and logical assessments
@@ -444,7 +444,7 @@ mindmap
       Decision-making linkage
       Future impact assessment
       Response options
-```
+```text
 
 ## Intelligence Analysis Process Model
 ```mermaid
@@ -482,4 +482,4 @@ graph TB
     
     S -.-> G
     S -.-> J
-``` 
+```text 

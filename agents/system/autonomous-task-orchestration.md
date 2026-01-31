@@ -37,7 +37,7 @@ graph TD
         SS --> SC[State Consistency]
         SC --> SR[State Recovery]
     end
-```
+```text
 
 ## Workflow Management
 
@@ -84,7 +84,7 @@ class WorkflowEngine:
         except Exception as e:
             await self._handle_workflow_error(e, workflow)
             raise
-```
+```text
 
 ### Task Coordinator
 ```python
@@ -136,7 +136,7 @@ class TaskCoordinator:
         except Exception as e:
             await self._handle_coordination_error(e, tasks)
             raise
-```
+```text
 
 ## State Management
 
@@ -182,7 +182,7 @@ class StateTracker:
         except Exception as e:
             await self._handle_state_error(e, workflow)
             raise
-```
+```text
 
 ### State Synchronization
 ```python
@@ -220,7 +220,7 @@ class StateSynchronizer:
         except Exception as e:
             await self._handle_sync_error(e, states)
             raise
-```
+```text
 
 ## Task Dependencies
 
@@ -255,7 +255,7 @@ class DependencyManager:
         except Exception as e:
             await self._handle_dependency_error(e, tasks)
             raise
-```
+```text
 
 ### Task Resolution
 ```python
@@ -289,7 +289,7 @@ class TaskResolver:
         except Exception as e:
             await self._handle_resolution_error(e, tasks)
             raise
-```
+```text
 
 ## Configuration
 
@@ -311,7 +311,7 @@ orchestration_configuration:
       status_interval: 1s
       health_check_interval: 5s
       metrics_interval: 10s
-```
+```text
 
 ### State Management Configuration
 ```yaml
@@ -330,7 +330,7 @@ state_management:
     level: strong
     check_interval: 1s
     repair_strategy: automatic
-```
+```text
 
 ## Best Practices
 
@@ -354,7 +354,7 @@ orchestration_best_practices:
     - handle_conflicts
     - ensure_durability
     - enable_recovery
-```
+```text
 
 ### Performance Best Practices
 ```yaml
@@ -376,7 +376,7 @@ performance_best_practices:
     - implement_sharding
     - enable_horizontal_scaling
     - manage_state_growth
-```
+```text
 
 ## Documentation
 

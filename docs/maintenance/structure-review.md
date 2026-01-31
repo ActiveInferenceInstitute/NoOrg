@@ -44,7 +44,7 @@ organization_assessment:
       - metadata_consistency
       - relationship_mapping
       - hierarchy_maintenance
-```
+```text
 
 ### Structure Management
 ```python
@@ -75,7 +75,7 @@ class StructureManager:
     def optimize_organization(self):
         """Optimize organizational structure"""
         pass
-```
+```text
 
 ## 🧭 Navigation Improvement
 
@@ -109,7 +109,7 @@ class StructureManager:
     }
   }
 }
-```
+```text
 
 ### Navigation Management
 ```python
@@ -140,7 +140,7 @@ class NavigationManager:
     def monitor_effectiveness(self):
         """Monitor navigation effectiveness"""
         pass
-```
+```text
 
 ## 🏷️ Tag Optimization
 
@@ -176,7 +176,7 @@ tag_optimization:
       - tag_updates
       - relationship_maintenance
       - consistency_checks
-```
+```text
 
 ### Tag Management
 ```python
@@ -207,7 +207,7 @@ class TagManager:
     def maintain_taxonomy(self):
         """Maintain tag taxonomy"""
         pass
-```
+```text
 
 ## 📝 Template Updates
 
@@ -243,7 +243,7 @@ template_updates:
       - usage_guidelines
       - best_practices
       - example_implementations
-```
+```text
 
 ### Template Management
 ```python
@@ -274,7 +274,7 @@ class TemplateManager:
     def manage_templates(self):
         """Manage template lifecycle"""
         pass
-```
+```text
 
 ## 📊 Review Analytics
 
@@ -313,7 +313,7 @@ class TemplateManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

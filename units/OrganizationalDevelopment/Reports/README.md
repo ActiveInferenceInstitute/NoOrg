@@ -8,7 +8,7 @@ Reports in this section provide insights into key OD metrics, program effectiven
 ## Structure
 Reports can be organized by topic area or reporting period.
 
-```
+```text
 Reports/
 ├── EngagementSurveys/
 │   ├── YYYY_Qn_Engagement_Report.md
@@ -33,7 +33,7 @@ Reports/
 │   └── ...
 └── AdHocAnalysis/
     └── ...
-```
+```text
 
 ## Common Report Types
 -   Employee Engagement Survey Results & Analysis

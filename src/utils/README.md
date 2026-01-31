@@ -16,7 +16,7 @@ logger.info('This is an info message');
 logger.debug('This is a debug message', { contextData: 'some data' });
 logger.warn('This is a warning', { userId: 123 });
 logger.error('An error occurred', new Error('Something went wrong'));
-```
+```text
 
 ### OpenAI Client (OpenAIClient.js)
 
@@ -39,7 +39,7 @@ async function generateResponse() {
   
   console.log(response);
 }
-```
+```text
 
 ## Development Guidelines
 

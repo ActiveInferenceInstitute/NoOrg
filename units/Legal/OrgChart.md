@@ -52,7 +52,7 @@ graph TD
     end
 
     style HeadLegal fill:#ccf,stroke:#333,stroke-width:2px
-```
+```text
 
 **Description:**
 

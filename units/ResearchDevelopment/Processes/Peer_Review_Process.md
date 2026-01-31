@@ -69,7 +69,7 @@ graph TD
         S3[Availability]
         S1 & S2 & S3 --> D
     end
-```
+```text
 
 ## 6. Roles and Responsibilities
 

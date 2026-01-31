@@ -21,7 +21,7 @@ graph TB
     M2[P2: 4h]
     M3[P3: 8h]
     end
-```
+```text
 
 ## 🔄 Incident Lifecycle
 ```mermaid
@@ -35,7 +35,7 @@ stateDiagram-v2
     Eradication --> Recovery
     Recovery --> Review
     Review --> [*]
-```
+```text
 
 ## ⏱️ Response Timeline
 ```mermaid
@@ -53,7 +53,7 @@ timeline
     section Resolution
         Root Cause Found : 11:30 AM
         Fix Implemented : 12:00 PM
-```
+```text
 
 ## 📈 Impact Assessment
 ```mermaid
@@ -69,7 +69,7 @@ quadrantChart
     Incident2: [0.3, 0.7]
     Incident3: [0.6, 0.4]
     Incident4: [0.2, 0.3]
-```
+```text
 
 ## 🔍 Root Cause Analysis
 ```mermaid
@@ -91,7 +91,7 @@ mindmap
             External Factors
             Dependencies
             Resources
-```
+```text
 
 ## 📊 Performance Impact
 ```mermaid
@@ -102,7 +102,7 @@ xychart-beta
     y-axis "Error Rate (%)" 0 --> 100
     line [200, 250, 800, 600, 300]
     line [1, 2, 15, 10, 3]
-```
+```text
 
 ## 🔄 Communication Flow
 ```mermaid
@@ -121,7 +121,7 @@ graph TB
     
     I1 --> I2 & I3
     I2 --> E1 & E2 & E3
-```
+```text
 
 ## 📈 Resource Allocation
 ```mermaid
@@ -136,7 +136,7 @@ sankey-beta
     Investigation -> Mitigation: 15
     Mitigation -> Recovery: 12
     Recovery -> Documentation: 8
-```
+```text
 
 ## 🎯 Escalation Matrix
 ```mermaid
@@ -160,7 +160,7 @@ graph TB
     L1 --> L2
     L2 --> L3
     L3 --> E1
-```
+```text
 
 ## 📋 Incident Documentation
 
@@ -241,7 +241,7 @@ xychart-beta
     x-axis [M-5, M-4, M-3, M-2, M-1, M]
     y-axis "Incident Count" 0 --> 50
     line [30, 25, 35, 28, 22, 20]
-```
+```text
 
 ---
 *Template Version: 1.0*

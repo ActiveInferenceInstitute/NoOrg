@@ -19,7 +19,7 @@ graph TD
     Policies[Advisory Board Policies] --> Processes
     
     class Policies externalEntity;
-```
+```text
 
 ## Process Categories
 

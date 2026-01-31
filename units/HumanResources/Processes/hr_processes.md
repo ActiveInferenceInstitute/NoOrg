@@ -122,7 +122,7 @@ sequenceDiagram
          HR/Recruiter->>Candidate: Notify: Not Selected
          HR/Recruiter->>ATS: Update Candidate Status
     end
-```
+```text
 
 ---
 Version: 1.0

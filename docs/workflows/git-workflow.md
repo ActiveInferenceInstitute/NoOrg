@@ -31,7 +31,7 @@ main_branches:
       - require_approvals: 1
       - require_status_checks
     description: "Integration branch for features"
-```
+```text
 
 ### Feature Branches
 ```python
@@ -58,7 +58,7 @@ class BranchingRules:
     def create_branch(self, type, description):
         """Create new branch with proper naming"""
         pass
-```
+```text
 
 ## 💬 Commit Conventions
 
@@ -89,7 +89,7 @@ commit_format:
     patterns:
       - "Closes #<issue>"
       - "Breaking Change:"
-```
+```text
 
 ### Examples
 ```markdown
@@ -115,7 +115,7 @@ docs(readme): update installation instructions
 
 # Style commit
 style(lint): apply prettier formatting
-```
+```text
 
 ## 🔄 Pull Request Process
 
@@ -199,7 +199,7 @@ review_requirements:
     - api_docs
     - changelog
     - deployment_notes
-```
+```text
 
 ### Review Checklist
 ```python
@@ -235,7 +235,7 @@ class ReviewChecklist:
     def generate_feedback(self):
         """Generate review feedback"""
         pass
-```
+```text
 
 ## 🔄 Workflow Automation
 
@@ -272,7 +272,7 @@ class ReviewChecklist:
     }
   }
 }
-```
+```text
 
 ### Git Hooks
 ```yaml
@@ -293,7 +293,7 @@ git_hooks:
   post_merge:
     - dependency_update
     - cache_clear
-```
+```text
 
 ## 🔒 Security Measures
 
@@ -318,7 +318,7 @@ access_control:
         - review_code
         - approve_pulls
         - request_changes
-```
+```text
 
 ### Protected Actions
 ```python
@@ -337,7 +337,7 @@ class SecurityControls:
     def log_security_event(self, event):
         """Log security-related event"""
         pass
-```
+```text
 
 ## 📊 Metrics and Monitoring
 
@@ -359,7 +359,7 @@ git_metrics:
     - review_time
     - comments_per_review
     - approval_rate
-```
+```text
 
 ### Monitoring System
 ```python
@@ -378,7 +378,7 @@ class GitMonitor:
     def generate_report(self):
         """Generate monitoring report"""
         pass
-```
+```text
 
 ## 📚 References
 

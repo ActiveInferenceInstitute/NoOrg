@@ -1,12 +1,44 @@
 # Strategy Processes
 
-This directory documents the key processes employed by the [[Strategy]] unit for planning, analysis, and execution monitoring.
+## Overview
 
-Key processes include:
-- [[Strategic_Planning_Cycle.md]]
-- [[Market_Intelligence_Process.md]]
-- [[Competitor_Analysis_Process.md]]
-- [[Scenario_Planning_Process.md]]
-- [[Strategic_Initiative_Management_Process.md]]
+This directory contains the documented processes and workflows for Strategy operations.
 
-See [[Process_Template.md]] for the standard structure. 
+## Process Categories
+
+### Core Processes
+Essential workflows that define how the unit operates.
+
+### Supporting Processes
+Additional processes that enable core operations.
+
+### Integration Processes
+Workflows involving cross-functional collaboration.
+
+## Process Documentation Standard
+
+Each process document includes:
+
+1. **Purpose**: Why the process exists
+2. **Scope**: What is covered
+3. **Roles**: Who is involved (RACI)
+4. **Steps**: Detailed workflow
+5. **Inputs/Outputs**: Required materials and deliverables
+6. **Metrics**: How success is measured
+7. **Related Documents**: Links to policies and references
+
+## Process Improvement
+
+| Phase | Activity | Outcome |
+|-------|----------|---------|
+| Identify | Recognize improvement opportunity | Improvement proposal |
+| Analyze | Assess current state and gaps | Root cause analysis |
+| Design | Develop improved process | Process documentation |
+| Implement | Deploy changes | Updated workflow |
+| Monitor | Track effectiveness | Performance metrics |
+
+## Related Documentation
+
+- [Policies](../Policies/)
+- [Reports](../Reports/)
+- [Governance Processes](../../Governance/Processes/)

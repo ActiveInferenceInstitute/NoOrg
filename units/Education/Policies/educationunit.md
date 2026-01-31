@@ -42,7 +42,7 @@ sequenceDiagram
     Edu->>Requester: Observe Performance (Level 3 Support)
     Edu->>Edu: Analyze Evaluation Data (Levels 1-4)
     Edu-->>Requester: Report on Effectiveness & Impact
-```
+```text
 
 1.  [[learning_needs_analysis]] - Identifying skill gaps and training requirements.
 2.  [[instructional_design_development]] - Creating effective learning experiences based on adult learning principles.
@@ -81,7 +81,7 @@ graph TD
     EDU -- Content Review Requests, Design Input --> SMEs;
 
     style EDU fill:#f9f,stroke:#333,stroke-width:2px
-```
+```text
 
 ### Internal Primary
 -   [[HumanResources]] - Collaboration on onboarding, performance management, career development, compliance training. *Input: Needs, Data; Output: Programs, Reports.*

@@ -52,7 +52,7 @@ context_aware:
           strategy: "performance_based"
           metrics: "user_centric"
           feedback: "integrated"
-```
+```text
 
 ### Context Management
 ```python
@@ -83,7 +83,7 @@ class ContextManager:
     def enhance_intelligence(self):
         """Enhance link intelligence"""
         pass
-```
+```text
 
 ## 🗺️ Breadcrumb Trails
 
@@ -119,7 +119,7 @@ class ContextManager:
     }
   }
 }
-```
+```text
 
 ### Trail Management
 ```python
@@ -150,7 +150,7 @@ class TrailManager:
     def optimize_presentation(self):
         """Optimize trail presentation"""
         pass
-```
+```text
 
 ## 📚 Related Content
 
@@ -193,7 +193,7 @@ related_content:
           method: "continuous_learning"
           adaptation: "real_time"
           optimization: "performance_based"
-```
+```text
 
 ### Content Management
 ```python
@@ -224,7 +224,7 @@ class ContentManager:
     def enhance_suggestions(self):
         """Enhance content suggestions"""
         pass
-```
+```text
 
 ## 📜 Navigation History
 
@@ -263,7 +263,7 @@ navigation_history:
           access: "efficient"
           filtering: "smart_filters"
           search: "enhanced_search"
-```
+```text
 
 ### History Management
 ```python
@@ -294,7 +294,7 @@ class HistoryManager:
     def enhance_analysis(self):
         """Enhance history analysis"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

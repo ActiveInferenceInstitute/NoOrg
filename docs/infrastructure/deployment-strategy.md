@@ -19,7 +19,7 @@ graph TD
     A --> C[Deployment Process]
     A --> D[Release Management]
     A --> E[Environment Management]
-```
+```text
 
 ### Strategy Architecture
 1. **Deployment Layers**

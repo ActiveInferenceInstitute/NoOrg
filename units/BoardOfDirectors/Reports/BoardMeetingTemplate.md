@@ -77,7 +77,7 @@ This template provides a standardized format for preparing materials for Board o
 - Next Meeting Confirmation
 - Meeting Evaluation
 - Adjournment
-```
+```text
 
 ### Meeting Objectives
 Clearly state 3-5 key objectives for this meeting, such as:
@@ -98,7 +98,7 @@ Include draft minutes from the previous meeting for board approval.
 [Full minutes content]
 
 **Resolution for Approval**: The Board approves the minutes of the [date] meeting as presented.
-```
+```text
 
 ## 3. Committee Reports
 
@@ -136,7 +136,7 @@ Brief 1-paragraph summary of key committee activities and recommendations
 ## Supporting Materials
 - [Attachment 1]
 - [Attachment 2]
-```
+```text
 
 ## 4. CEO Report
 
@@ -171,7 +171,7 @@ One-paragraph overview of organizational performance and key developments
 ## Supporting Materials
 - [Attachment 1]
 - [Attachment 2]
-```
+```text
 
 ## 5. Financial Performance
 
@@ -207,7 +207,7 @@ One-paragraph summary of financial position and performance
 ## Supporting Materials
 - [Detailed financial statements]
 - [Management discussion and analysis]
-```
+```text
 
 ## 6. Strategic Discussion Topics
 
@@ -256,7 +256,7 @@ One-paragraph summary of financial position and performance
 - [Relevant analyses]
 - [External research]
 - [Other supporting documents]
-```
+```text
 
 ## 7. Decision Items
 
@@ -290,7 +290,7 @@ One-paragraph summary of financial position and performance
 ## Supporting Materials
 - [Detailed analysis]
 - [Other supporting documents]
-```
+```text
 
 ## 8. Risk and Compliance Updates
 
@@ -331,7 +331,7 @@ One-paragraph summary of financial position and performance
 ## Supporting Materials
 - [Detailed risk report]
 - [Compliance dashboard]
-```
+```text
 
 ## 9. Governance Matters
 
@@ -361,7 +361,7 @@ One-paragraph summary of financial position and performance
 ## Supporting Materials
 - [Governance benchmarking]
 - [Director education calendar]
-```
+```text
 
 ## 10. Reference Materials
 

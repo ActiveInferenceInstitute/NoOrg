@@ -14,7 +14,7 @@ constructor(
   context: Record<string, any>,
   outputDir: string
 )
-```
+```text
 
 **Parameters:**
 - `apiKey` (string): OpenAI API key
@@ -35,7 +35,7 @@ async generateLocations(
     radius?: number;
   }
 ): Promise<Array<Location>>
-```
+```text
 
 Generates location data.
 
@@ -53,7 +53,7 @@ Generates location data.
 
 ```typescript
 public static getInstance(apiKey: string): ProjectConfigGenerator
-```
+```text
 
 Gets singleton instance.
 
@@ -77,7 +77,7 @@ public async generateConfig(
     llmConfig?: object;
   }
 ): Promise<Record<string, any>>
-```
+```text
 
 Generates project configuration.
 
@@ -96,7 +96,7 @@ Generates project configuration.
 
 ```typescript
 static getInstance(config?: I18nConfig): I18n
-```
+```text
 
 Gets singleton instance.
 
@@ -111,7 +111,7 @@ Gets singleton instance.
 
 ```typescript
 translate(key: string, params?: Record<string, any>): string
-```
+```text
 
 Translates a key.
 
@@ -125,7 +125,7 @@ Translates a key.
 
 ```typescript
 setLocale(locale: string): void
-```
+```text
 
 Sets current locale.
 
@@ -142,7 +142,7 @@ Sets current locale.
 
 ```typescript
 export function generateWorkflowDOT(workflow: Workflow): string
-```
+```text
 
 Generates DOT graph format.
 
@@ -155,7 +155,7 @@ Generates DOT graph format.
 
 ```typescript
 export function generateWorkflowMermaid(workflow: Workflow): string
-```
+```text
 
 Generates Mermaid diagram.
 

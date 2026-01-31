@@ -17,7 +17,7 @@ interface StorageItem<T> {
   timestamp: number;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 **Properties:**
 - `key` (string): Storage key
@@ -40,7 +40,7 @@ interface QueryOptions {
   sortBy?: 'key' | 'timestamp';
   sortDirection?: 'asc' | 'desc';
 }
-```
+```text
 
 **Properties:**
 - `prefix` (string, optional): Filter keys by prefix
@@ -68,7 +68,7 @@ interface StorageBackend {
   commitTransaction(): Promise<void>;
   rollbackTransaction(): Promise<void>;
 }
-```
+```text
 
 ### StorageOptions
 
@@ -82,7 +82,7 @@ interface StorageOptions {
   cacheTTL?: number;
   customBackend?: StorageBackend;
 }
-```
+```text
 
 **Properties:**
 - `backend` ('memory' | 'file' | 'custom', optional): Backend type (default: 'memory')
@@ -101,7 +101,7 @@ In-memory storage backend implementation.
 
 ```typescript
 constructor()
-```
+```text
 
 Creates a new memory storage backend.
 
@@ -122,7 +122,7 @@ File-based storage backend implementation.
 
 ```typescript
 constructor(storageDir: string)
-```
+```text
 
 **Parameters:**
 - `storageDir` (string): Directory for storing files
@@ -150,7 +150,7 @@ Main storage system class with multiple backend support.
 
 ```typescript
 private constructor(options: StorageOptions = {})
-```
+```text
 
 **Parameters:**
 - `options` (StorageOptions, optional): Configuration options
@@ -163,7 +163,7 @@ private constructor(options: StorageOptions = {})
 
 ```typescript
 public static getInstance(options?: StorageOptions): StorageSystem
-```
+```text
 
 Gets the singleton instance of StorageSystem.
 
@@ -179,7 +179,7 @@ const storage = StorageSystem.getInstance({
   storageDir: './data',
   cacheTTL: 7200000
 });
-```
+```text
 
 #### Instance Methods
 
@@ -191,7 +191,7 @@ public async set<T>(
   value: T,
   metadata?: Record<string, any>
 ): Promise<void>
-```
+```text
 
 Stores a value with optional metadata.
 
@@ -211,7 +211,7 @@ await storage.set('user:123', {
   version: '1.0',
   source: 'api'
 });
-```
+```text
 
 **Events:** Emits 'storage:set' event with key and metadata.
 
@@ -219,7 +219,7 @@ await storage.set('user:123', {
 
 ```typescript
 public async get<T>(key: string): Promise<T | null>
-```
+```text
 
 Retrieves a value by key.
 
@@ -234,7 +234,7 @@ const user = await storage.get<User>('user:123');
 if (user) {
   console.log(user.name);
 }
-```
+```text
 
 **Behavior:**
 - Returns null if key doesn't exist
@@ -245,7 +245,7 @@ if (user) {
 
 ```typescript
 public async delete(key: string): Promise<void>
-```
+```text
 
 Deletes a value by key.
 
@@ -257,7 +257,7 @@ Deletes a value by key.
 **Example:**
 ```typescript
 await storage.delete('user:123');
-```
+```text
 
 **Events:** Emits 'storage:delete' event with key.
 
@@ -265,7 +265,7 @@ await storage.delete('user:123');
 
 ```typescript
 public async clear(): Promise<void>
-```
+```text
 
 Clears all stored values.
 
@@ -274,7 +274,7 @@ Clears all stored values.
 **Example:**
 ```typescript
 await storage.clear();
-```
+```text
 
 **Events:** Emits 'storage:clear' event.
 
@@ -282,7 +282,7 @@ await storage.clear();
 
 ```typescript
 public async keys(options?: QueryOptions): Promise<string[]>
-```
+```text
 
 Gets all storage keys, optionally filtered.
 
@@ -298,13 +298,13 @@ const allKeys = await storage.keys();
 
 // Get keys with prefix
 const userKeys = await storage.keys({ prefix: 'user:' });
-```
+```text
 
 ##### query()
 
 ```typescript
 public async query<T>(options: QueryOptions): Promise<T[]>
-```
+```text
 
 Queries storage with filtering, sorting, and pagination.
 
@@ -328,7 +328,7 @@ const recentUsers = await storage.query<User>({
 const apiUsers = await storage.query<User>({
   metadata: { source: 'api' }
 });
-```
+```text
 
 **Behavior:**
 - Filters expired items automatically
@@ -339,7 +339,7 @@ const apiUsers = await storage.query<User>({
 
 ```typescript
 public async beginTransaction(): Promise<void>
-```
+```text
 
 Begins a transaction.
 
@@ -357,7 +357,7 @@ try {
 } catch (error) {
   await storage.rollbackTransaction();
 }
-```
+```text
 
 **Events:** Emits 'storage:transaction:begin' event.
 
@@ -365,7 +365,7 @@ try {
 
 ```typescript
 public async commitTransaction(): Promise<void>
-```
+```text
 
 Commits the current transaction.
 
@@ -382,7 +382,7 @@ See `beginTransaction()` example.
 
 ```typescript
 public async rollbackTransaction(): Promise<void>
-```
+```text
 
 Rolls back the current transaction.
 
@@ -414,7 +414,7 @@ console.log(user1); // { name: 'Alice', age: 30 }
 
 // Delete value
 await storage.delete('user:1');
-```
+```text
 
 ### File Backend
 
@@ -427,7 +427,7 @@ const storage = StorageSystem.getInstance({
 
 // Values are persisted to disk
 await storage.set('config', { theme: 'dark' });
-```
+```text
 
 ### Transactions
 
@@ -442,7 +442,7 @@ try {
   await storage.rollbackTransaction();
   throw error;
 }
-```
+```text
 
 ### Querying
 
@@ -462,7 +462,7 @@ const recentItems = await storage.query({
 const apiData = await storage.query({
   metadata: { source: 'api', version: '1.0' }
 });
-```
+```text
 
 ### Custom Backend
 
@@ -475,7 +475,7 @@ const storage = StorageSystem.getInstance({
   backend: 'custom',
   customBackend: new CustomBackend()
 });
-```
+```text
 
 ## Cache Expiration
 

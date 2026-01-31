@@ -50,7 +50,7 @@ content_quality:
       - explanation_depth
       - context_provision
       - background_information
-```
+```text
 
 ### 2. Technical Quality
 ```yaml
@@ -78,7 +78,7 @@ technical_quality:
       - tool_integration
       - system_requirements
       - platform_support
-```
+```text
 
 ### 3. Maintenance Quality
 ```yaml
@@ -106,7 +106,7 @@ maintenance_quality:
       - structure_flexibility
       - growth_accommodation
       - integration_capability
-```
+```text
 
 ## 📈 Quality Assessment Process
 
@@ -166,7 +166,7 @@ class QualityScore:
             )
             total_score += category_score
         return total_score
-```
+```text
 
 ## 🎯 Quality Targets
 

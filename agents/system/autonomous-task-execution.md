@@ -37,7 +37,7 @@ graph TD
         RA --> RG[Report Generation]
         RG --> RD[Report Distribution]
     end
-```
+```text
 
 ## Core Implementation
 
@@ -93,7 +93,7 @@ class TaskEngine:
         except Exception as e:
             await self._handle_step_error(e, context)
             raise
-```
+```text
 
 ### State Management
 ```python
@@ -133,7 +133,7 @@ class StateManager:
         except Exception as e:
             await self._handle_state_error(e, context)
             raise
-```
+```text
 
 ### Resource Control
 ```python
@@ -170,7 +170,7 @@ class ResourceController:
         except Exception as e:
             await self._handle_resource_error(e, context)
             raise
-```
+```text
 
 ## Autonomous Control
 
@@ -208,7 +208,7 @@ class DecisionController:
         except Exception as e:
             await self._handle_decision_error(e, context)
             raise
-```
+```text
 
 ### Progress Management
 ```python
@@ -249,7 +249,7 @@ class ProgressManager:
         except Exception as e:
             await self._handle_progress_error(e, context)
             raise
-```
+```text
 
 ## Reporting Implementation
 
@@ -294,7 +294,7 @@ class MetricsCollector:
         except Exception as e:
             await self._handle_metrics_error(e, context)
             raise
-```
+```text
 
 ### Report Generation
 ```python
@@ -339,7 +339,7 @@ class ReportGenerator:
         except Exception as e:
             await self._handle_report_error(e, context)
             raise
-```
+```text
 
 ### Report Distribution
 ```python
@@ -378,7 +378,7 @@ class ReportDistributor:
         except Exception as e:
             await self._handle_distribution_error(e, report)
             raise
-```
+```text
 
 ## Integration Points
 
@@ -410,7 +410,7 @@ integration_points:
           - submit_metrics
           - generate_report
           - distribute_report
-```
+```text
 
 ### Event Integration
 ```yaml
@@ -440,7 +440,7 @@ event_integration:
           - report.generation
           - report.distribution
           - report.archival
-```
+```text
 
 ## Best Practices
 
@@ -464,7 +464,7 @@ implementation_practices:
     - implement_caching_strategies
     - use_efficient_algorithms
     - monitor_performance_metrics
-```
+```text
 
 ### Testing Practices
 ```yaml
@@ -484,7 +484,7 @@ testing_practices:
       - test_decision_making
       - test_adaptation
       - test_recovery
-```
+```text
 
 ## Documentation
 

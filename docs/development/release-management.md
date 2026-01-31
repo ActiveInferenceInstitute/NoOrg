@@ -19,7 +19,7 @@ graph TD
     A --> C[Release Process]
     A --> D[Version Control]
     A --> E[Release Validation]
-```
+```text
 
 ### Release Architecture
 1. **Release Components**

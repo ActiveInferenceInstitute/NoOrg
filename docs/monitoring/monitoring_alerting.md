@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_patterns]]
   - [[monitoring/monitoring_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the alerting framework for monitoring systems within the agent framework, providing comprehensive alerting processes, standards, and best practices for managing monitoring alerts and notifications.
@@ -43,7 +43,7 @@ class MonitoringAlertingManager:
         self.router = AlertRouter()
         self.notifier = AlertNotifier()
         self.tracker = AlertTracker()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Detection Engine]
     C --> F[Processing Pipeline]
     D --> G[Routing Engine]
-```
+```text
 
 ### 2. Alert Detection
 #### 2.1 Detection System
@@ -71,7 +71,7 @@ class AlertDetector:
         evaluation = await self.evaluator.evaluate_conditions(data, rules)
         monitoring = await self.monitor.monitor_detection(evaluation)
         return await self.engine.detect_alerts(monitoring)
-```
+```text
 
 #### 2.2 Alert Types
 - Threshold Alerts
@@ -94,7 +94,7 @@ class AlertProcessor:
         classification = await self.classifier.classify_alert(enrichment)
         prioritization = await self.prioritizer.prioritize_alert(classification)
         return await self.engine.process_alert(prioritization)
-```
+```text
 
 #### 3.2 Processing Types
 - Enrichment Processing
@@ -117,7 +117,7 @@ class AlertRouter:
         scheduling = await self.scheduler.schedule_delivery(targets)
         monitoring = await self.monitor.monitor_routing(scheduling)
         return await self.engine.route_alert(monitoring)
-```
+```text
 
 #### 4.2 Routing Types
 - Team Routing
@@ -140,7 +140,7 @@ class AlertNotifier:
         sending = await self.sender.send_notification(formatting)
         tracking = await self.tracker.track_delivery(sending)
         return await self.engine.process_notification(tracking)
-```
+```text
 
 #### 5.2 Notification Types
 - Email Notifications
@@ -163,7 +163,7 @@ class AlertTracker:
         analysis = await self.analyzer.analyze_alert(storage)
         reporting = await self.reporter.report_alert(analysis)
         return await self.engine.track_alert(reporting)
-```
+```text
 
 #### 6.2 Tracking Types
 - Status Tracking
@@ -188,7 +188,7 @@ class AlertingStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Detection Standards
@@ -205,7 +205,7 @@ class AlertingProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Detection Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class AlertingSecurity:
     async def audit_alerting(self, audit):
         # Alerting auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Data Security
@@ -318,7 +318,7 @@ class AlertingPattern:
         self.detector = AlertDetector()
         self.processor = AlertProcessor()
         self.notifier = AlertNotifier()
-```
+```text
 
 ### B. Processing Patterns
 ```python
@@ -328,7 +328,7 @@ class ProcessingPattern:
         self.enricher = AlertEnricher()
         self.classifier = AlertClassifier()
         self.prioritizer = AlertPrioritizer()
-```
+```text
 
 ### C. Notification Patterns
 ```python
@@ -338,4 +338,4 @@ class NotificationPattern:
         self.formatter = AlertFormatter()
         self.sender = NotificationSender()
         self.tracker = DeliveryTracker()
-``` 
+```text 

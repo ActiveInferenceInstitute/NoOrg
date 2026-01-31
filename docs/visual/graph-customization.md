@@ -56,7 +56,7 @@ node_grouping:
           learning: "real_time"
           optimization: "context_aware"
           refinement: "feedback_driven"
-```
+```text
 
 ### Grouping Management
 ```python
@@ -87,7 +87,7 @@ class NodeGroupManager:
     def enhance_organization(self):
         """Enhance group organization"""
         pass
-```
+```text
 
 ## 🎨 Color Coding
 
@@ -125,7 +125,7 @@ class NodeGroupManager:
     }
   }
 }
-```
+```text
 
 ### Color Management
 ```python
@@ -156,7 +156,7 @@ class ColorCodingManager:
     def enhance_semantics(self):
         """Enhance semantic coloring"""
         pass
-```
+```text
 
 ## 🔍 Filtering Options
 
@@ -202,7 +202,7 @@ filtering_options:
           generation: "intelligent"
           adaptation: "user_specific"
           learning: "progressive"
-```
+```text
 
 ### Filter Management
 ```python
@@ -233,7 +233,7 @@ class FilterManager:
     def enhance_filtering(self):
         """Enhance filter functionality"""
         pass
-```
+```text
 
 ## 📐 Layout Presets
 
@@ -279,7 +279,7 @@ layout_presets:
           generation: "context_aware"
           refinement: "continuous"
           learning: "user_based"
-```
+```text
 
 ### Layout Management
 ```python
@@ -310,7 +310,7 @@ class LayoutManager:
     def enhance_organization(self):
         """Enhance layout organization"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

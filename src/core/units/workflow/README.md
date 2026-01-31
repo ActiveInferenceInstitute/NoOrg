@@ -45,7 +45,7 @@ const workflow = new WorkflowBuilder('Project Workflow', 'Multi-unit collaborati
     executorUnits: ['Development', 'Quality']
   })
   .build();
-```
+```text
 
 ### Executing Workflows
 
@@ -77,7 +77,7 @@ const workflow = await engine.createWorkflow({
 
 // Execute workflow
 await engine.executeWorkflow(workflow.id);
-```
+```text
 
 ## Integration
 

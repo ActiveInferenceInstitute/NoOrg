@@ -24,7 +24,7 @@ behavior_model:
   category: "distributed_learning"
   complexity: "high"
   adaptability: "dynamic"
-```
+```text
 
 ## Implementation
 
@@ -43,7 +43,7 @@ graph TD
     H -.-> D
     I[Adaptation System] -.-> D
     I -.-> F
-```
+```text
 
 ### State Machine
 ```yaml
@@ -106,7 +106,7 @@ states:
         condition: recovery_successful
       - to: failed
         condition: recovery_failed
-```
+```text
 
 ## Interaction Pattern
 
@@ -123,7 +123,7 @@ inputs:
       priority: high
     - type: convergence_status
       priority: medium
-```
+```text
 
 ### Output Generation
 ```yaml
@@ -138,7 +138,7 @@ outputs:
       destination: monitoring_system
     - type: adaptation_status
       destination: coordination_system
-```
+```text
 
 ## Learning & Adaptation
 
@@ -159,7 +159,7 @@ learning:
     - maximize_expected_return
     - minimize_policy_divergence
     - optimize_sample_efficiency
-```
+```text
 
 ### Adaptation Rules
 ```yaml
@@ -178,7 +178,7 @@ adaptation:
     - maintain_stability
     - preserve_knowledge
     - respect_resource_limits
-```
+```text
 
 ## Integration
 
@@ -198,7 +198,7 @@ communication:
   external:
     - target: learning_agents
       protocol: [[protocols#model-sync]]
-```
+```text
 
 ## Performance
 
@@ -215,7 +215,7 @@ metrics:
       threshold: 50ms
     - metric: stability_score
       threshold: 0.95
-```
+```text
 
 ### Optimization
 ```yaml
@@ -227,7 +227,7 @@ optimization:
     - name: model_compression
       trigger: high_memory_usage
       action: prune_parameters
-```
+```text
 
 ## Safety & Validation
 
@@ -246,7 +246,7 @@ safety:
     - improved_performance
     - maintained_stability
     - resource_efficiency
-```
+```text
 
 ### Validation Methods
 ```yaml
@@ -259,7 +259,7 @@ validation:
     - gradient_clipping
     - state_restoration
     - safe_exploration
-```
+```text
 
 ## Maintenance
 

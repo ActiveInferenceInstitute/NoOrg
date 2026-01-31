@@ -56,7 +56,7 @@ review_criteria:
       - tags
       - links
       - references
-```
+```text
 
 ### Review Process
 ```python
@@ -87,7 +87,7 @@ class DocumentReview:
     def generate_report(self):
         """Generate review report"""
         pass
-```
+```text
 
 ## 🔄 Process Review
 
@@ -141,7 +141,7 @@ class DocumentReview:
     }
   }
 }
-```
+```text
 
 ### Review Analysis
 ```python
@@ -172,7 +172,7 @@ class ProcessReview:
     def generate_recommendations(self):
         """Generate improvement recommendations"""
         pass
-```
+```text
 
 ## 🖥️ System Review
 
@@ -228,7 +228,7 @@ review_areas:
       - monitoring_tools
       - alerting_systems
       - performance_tracking
-```
+```text
 
 ### Review Execution
 ```python
@@ -259,7 +259,7 @@ class SystemReview:
     def generate_report(self):
         """Generate review report"""
         pass
-```
+```text
 
 ## 📊 Review Analytics
 
@@ -299,7 +299,7 @@ review_analytics:
       - business_impact
       - technical_impact
       - user_impact
-```
+```text
 
 ## 📝 Review Documentation
 
@@ -347,7 +347,7 @@ review_analytics:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/metrics_framework]]
   - [[monitoring/automation_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the optimization framework for monitoring systems within the agent framework, providing comprehensive approaches for optimizing monitoring performance, resource usage, and efficiency. It integrates with the [[monitoring/monitoring_framework|Monitoring Framework]] and extends the capabilities defined in the [[monitoring/performance_framework|Performance Framework]].
@@ -43,7 +43,7 @@ class OptimizationManager:
         self.executor = OptimizationExecutor()
         self.validator = OptimizationValidator()
         self.monitor = OptimizationMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Analysis Engine]
     C --> F[Planning Engine]
     D --> G[Execution Engine]
-```
+```text
 
 ### 2. Performance Analysis
 #### 2.1 Analysis System
@@ -71,7 +71,7 @@ class OptimizationAnalyzer:
         prediction = await self.predictor.predict_performance(profile)
         evaluation = await self.evaluator.evaluate_impact(prediction)
         return await self.engine.analyze_results(evaluation)
-```
+```text
 
 #### 2.2 Analysis Types
 - [[monitoring/optimization/analysis/performance|Performance Analysis]]
@@ -101,7 +101,7 @@ class OptimizationPlanner:
         schedule = await self.scheduler.schedule_actions(strategy)
         validation = await self.validator.validate_plan(schedule)
         return await self.engine.finalize_plan(validation)
-```
+```text
 
 #### 3.2 Optimization Strategies
 - [[monitoring/optimization/strategies/resource|Resource Optimization]]
@@ -124,7 +124,7 @@ class OptimizationExecutor:
         monitoring = await self.monitor.monitor_execution(control)
         rollback = await self.rollback.prepare_rollback(monitoring)
         return await self.engine.execute_plan(rollback)
-```
+```text
 
 #### 4.2 Execution Types
 - [[monitoring/optimization/execution/immediate|Immediate Execution]]
@@ -147,7 +147,7 @@ class OptimizationValidator:
         verification = await self.verifier.verify_results(testing)
         report = await self.reporter.report_validation(verification)
         return await self.engine.validate_optimization(report)
-```
+```text
 
 #### 5.2 Validation Types
 - [[monitoring/optimization/validation/performance|Performance Validation]]
@@ -172,7 +172,7 @@ class OptimizationStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - [[monitoring/standards/optimization/performance|Performance Standards]]
@@ -189,7 +189,7 @@ class OptimizationProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - [[monitoring/processes/optimization/analysis|Analysis Process]]
@@ -220,7 +220,7 @@ class QualityMonitoring:
     async def measure_metrics(self, measurements):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -252,7 +252,7 @@ class OptimizationSecurity:
     async def audit_optimization(self, audit):
         # Optimization auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - [[security/optimization/analysis|Analysis Security]]
@@ -302,7 +302,7 @@ class OptimizationPattern:
         self.analyzer = OptimizationAnalyzer()
         self.planner = OptimizationPlanner()
         self.executor = OptimizationExecutor()
-```
+```text
 
 ### B. Analysis Patterns
 ```python
@@ -312,7 +312,7 @@ class AnalysisPattern:
         self.profiler = SystemProfiler()
         self.predictor = PerformancePredictor()
         self.evaluator = ImpactEvaluator()
-```
+```text
 
 ### C. Execution Patterns
 ```python
@@ -322,4 +322,4 @@ class ExecutionPattern:
         self.controller = ActionController()
         self.monitor = ExecutionMonitor()
         self.rollback = RollbackManager()
-``` 
+```text 

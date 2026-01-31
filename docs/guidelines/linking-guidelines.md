@@ -35,7 +35,7 @@ internal_links:
     examples:
       - "See [[metadata-standards#validation]]"
       - "Refer to [[tag-hierarchy#core-tags]]"
-```
+```text
 
 ### Linking Rules
 ```python
@@ -66,7 +66,7 @@ class LinkingRules:
     def suggest_links(self, content):
         """Suggest relevant links"""
         pass
-```
+```text
 
 ## 🌐 External Linking
 
@@ -99,7 +99,7 @@ class LinkingRules:
     }
   }
 }
-```
+```text
 
 ### Link Management
 ```python
@@ -130,7 +130,7 @@ class ExternalLinkManager:
     def archive_link(self, url):
         """Archive external link"""
         pass
-```
+```text
 
 ## 🔄 Maintenance Procedures
 
@@ -156,7 +156,7 @@ verification_process:
     - broken_link_report
     - redirect_summary
     - performance_metrics
-```
+```text
 
 ### Link Updates
 ```python
@@ -187,7 +187,7 @@ class LinkMaintenance:
     def generate_report(self):
         """Generate maintenance report"""
         pass
-```
+```text
 
 ## 📊 Link Analytics
 
@@ -214,7 +214,7 @@ class LinkMaintenance:
     }
   }
 }
-```
+```text
 
 ### Performance Monitoring
 ```python
@@ -233,7 +233,7 @@ class LinkPerformance:
     def analyze_metrics(self):
         """Analyze link metrics"""
         pass
-```
+```text
 
 ## 🔍 Search and Discovery
 
@@ -260,7 +260,7 @@ discovery_features:
       - bidirectional_links
       - content_clusters
       - knowledge_graphs
-```
+```text
 
 ### Search Integration
 ```python
@@ -291,7 +291,7 @@ class LinkSearch:
     def suggest_links(self, context):
         """Suggest relevant links"""
         pass
-```
+```text
 
 ## 🔒 Security Considerations
 
@@ -312,7 +312,7 @@ security_measures:
     - security_alerts
     - access_logs
     - abuse_detection
-```
+```text
 
 ### Access Control
 ```python
@@ -338,7 +338,7 @@ class LinkSecurity:
     def log_access(self, user, link):
         """Log link access"""
         pass
-```
+```text
 
 ## 📚 References
 

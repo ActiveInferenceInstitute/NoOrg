@@ -17,7 +17,7 @@ The **AnalysisAgent** specializes in analyzing data and generating insights thro
 
 ```typescript
 constructor(name: string, config: AgentConfig)
-```
+```text
 
 **Parameters:**
 - `name` (string): Human-readable name for the agent
@@ -31,7 +31,7 @@ const analysisAgent = new AnalysisAgent('Data Analyst', {
   preferredModel: 'o3-mini',
   metadata: {}
 });
-```
+```text
 
 ### Core Methods
 
@@ -47,7 +47,7 @@ async analyzeData(data: any): Promise<{
   confidence: number;
   processingTime: number;
 }>
-```
+```text
 
 **Parameters:**
 - `data` (any): Data to analyze (can be any JSON-serializable object)
@@ -73,7 +73,7 @@ console.log('Trends:', result.trends);
 console.log('Recommendations:', result.recommendations);
 console.log('Confidence:', result.confidence);
 console.log('Processing Time:', result.processingTime + 'ms');
-```
+```text
 
 #### generateReport()
 
@@ -81,7 +81,7 @@ Generates a formatted report from data in the specified format.
 
 ```typescript
 async generateReport(data: any, format: 'text' | 'json' | 'markdown'): Promise<string>
-```
+```text
 
 **Parameters:**
 - `data` (any): Data to generate report from
@@ -96,7 +96,7 @@ const report = await analysisAgent.generateReport(analysisData, 'markdown');
 
 console.log('Generated Report:');
 console.log(report);
-```
+```text
 
 ## Configuration Options
 
@@ -109,7 +109,7 @@ interface AgentConfig {
   preferredModel?: string;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 ## Error Handling
 
@@ -123,7 +123,7 @@ try {
   console.error('Analysis failed:', error.message);
   // Agent status automatically updated to 'error' by BaseAgent
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -162,7 +162,7 @@ const taskId = await coordinator.createTask({
 // Execute the analysis
 await coordinator.assignTask(taskId, agentId);
 // Task will be processed automatically
-```
+```text
 
 ### Basic Usage
 
@@ -178,7 +178,7 @@ const analysis = await analysisAgent.analyzeData(salesData);
 // Generate a markdown report
 const report = await analysisAgent.generateReport(analysis, 'markdown');
 console.log(report);
-```
+```text
 
 ## Best Practices
 
@@ -192,7 +192,7 @@ const salesData = {
 };
 
 const analysis = await analysisAgent.analyzeData(salesData);
-```
+```text
 
 ### Report Formats
 ```typescript
@@ -200,7 +200,7 @@ const analysis = await analysisAgent.analyzeData(salesData);
 const textReport = await analysisAgent.generateReport(data, 'text');
 const markdownReport = await analysisAgent.generateReport(data, 'markdown');
 const jsonData = await analysisAgent.generateReport(data, 'json');
-```
+```text
 
 ### Error Handling
 ```typescript
@@ -211,7 +211,7 @@ try {
   console.error('Analysis failed, trying simpler data:', error.message);
   // Fallback to smaller dataset or different approach
 }
-```
+```text
 
 ## Troubleshooting
 
@@ -226,7 +226,7 @@ console.log('API Key configured:', !!process.env.OPENAI_API_KEY);
 
 // Use different model if rate limited
 const result = await analysisAgent.analyzeData(data); // Will use fallback model
-```
+```text
 
 #### Large Data Processing
 **Cause:** Data too large for single API call
@@ -239,7 +239,7 @@ for (const chunk of chunks) {
   const result = await analysisAgent.analyzeData(chunk);
   results.push(result);
 }
-```
+```text
 
 #### Processing Timeouts
 **Cause:** Complex data or slow API responses
@@ -248,7 +248,7 @@ for (const chunk of chunks) {
 // Simplify data structure
 const simplified = extractKeyFields(complexData);
 const result = await analysisAgent.analyzeData(simplified);
-```
+```text
 
 ## Performance Optimization
 

@@ -22,7 +22,7 @@ flowchart TD
     E --> F[Progress Monitoring]
     F --> G[Annual Strategic Review]
     G --> A
-```
+```text
 
 ## 📅 Strategic Planning Cycle
 ### Phase 1: Strategic Context Assessment

@@ -21,8 +21,14 @@ export class WritingAgent extends BaseAgent implements WritingAgentInterface {
       keywords: string[];
     };
   }> {
+    if (!topic || topic.trim().length === 0) {
+      throw new Error('WritingAgent.writeContent: topic must not be empty');
+    }
+    if (!outline || outline.length === 0) {
+      throw new Error('WritingAgent.writeContent: outline must have at least one item');
+    }
+
     this.updateStatus('busy');
-    const startTime = Date.now();
 
     try {
       const prompt = `Write content for: ${topic}
@@ -65,8 +71,14 @@ export class WritingAgent extends BaseAgent implements WritingAgentInterface {
   }
 
   async editContent(content: string, changes: string[]): Promise<string> {
+    if (!content || content.trim().length === 0) {
+      throw new Error('WritingAgent.editContent: content must not be empty');
+    }
+    if (!changes || changes.length === 0) {
+      throw new Error('WritingAgent.editContent: changes must have at least one item');
+    }
+
     this.updateStatus('busy');
-    const startTime = Date.now();
 
     try {
       const prompt = `Edit the following content based on changes:
@@ -101,8 +113,14 @@ export class WritingAgent extends BaseAgent implements WritingAgentInterface {
       keywords: string[];
     };
   }> {
+    if (!topic || topic.trim().length === 0) {
+      throw new Error('WritingAgent.generateContent: topic must not be empty');
+    }
+    if (!requirements || requirements.length === 0) {
+      throw new Error('WritingAgent.generateContent: requirements must have at least one item');
+    }
+
     this.updateStatus('busy');
-    const startTime = Date.now();
 
     try {
       const prompt = `Generate content for: ${topic}

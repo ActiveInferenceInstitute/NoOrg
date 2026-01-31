@@ -42,7 +42,7 @@ system_architecture:
       - load_balancers
       - api_gateways
       - cdn_services
-```
+```text
 
 ### Architecture Design
 ```python
@@ -73,7 +73,7 @@ class SystemArchitecture:
     def validate_design(self):
         """Validate architecture design"""
         pass
-```
+```text
 
 ## 🧩 Component Details
 
@@ -134,7 +134,7 @@ class SystemArchitecture:
     }
   }
 }
-```
+```text
 
 ### Component Management
 ```python
@@ -165,7 +165,7 @@ class ComponentManager:
     def monitor_health(self):
         """Monitor component health"""
         pass
-```
+```text
 
 ## 🔌 Integration Points
 
@@ -201,7 +201,7 @@ integration_points:
       - etl_pipelines
       - data_transformations
       - validation_rules
-```
+```text
 
 ### Integration Management
 ```python
@@ -232,7 +232,7 @@ class IntegrationManager:
     def monitor_connections(self):
         """Monitor integration connections"""
         pass
-```
+```text
 
 ## 📊 Performance Architecture
 
@@ -268,7 +268,7 @@ performance_architecture:
       - query_optimization
       - resource_management
       - connection_pooling
-```
+```text
 
 ### Performance Management
 ```python
@@ -299,7 +299,7 @@ class PerformanceManager:
     def optimize_system(self):
         """Optimize system performance"""
         pass
-```
+```text
 
 ## 🔒 Security Architecture
 
@@ -351,7 +351,7 @@ class PerformanceManager:
     }
   }
 }
-```
+```text
 
 ### Security Management
 ```python
@@ -382,7 +382,7 @@ class SecurityManager:
     def audit_security(self):
         """Audit security measures"""
         pass
-```
+```text
 
 ## 📚 References
 

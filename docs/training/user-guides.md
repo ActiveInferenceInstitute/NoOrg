@@ -50,7 +50,7 @@ setup_process:
       - content_hierarchy
       - metadata_usage
       - version_control
-```
+```text
 
 ### Setup Guide
 ```python
@@ -81,7 +81,7 @@ class SetupGuide:
     def track_onboarding(self):
         """Track onboarding progress"""
         pass
-```
+```text
 
 ## 🧭 Navigation Guide
 
@@ -115,7 +115,7 @@ class SetupGuide:
     }
   }
 }
-```
+```text
 
 ### Navigation Management
 ```python
@@ -146,7 +146,7 @@ class NavigationGuide:
     def optimize_experience(self):
         """Optimize navigation experience"""
         pass
-```
+```text
 
 ## 🔍 Search Tips
 
@@ -188,7 +188,7 @@ search_optimization:
       - relevance_assessment
       - comparison_analysis
       - selection_criteria
-```
+```text
 
 ### Search Management
 ```python
@@ -219,7 +219,7 @@ class SearchGuide:
     def optimize_results(self):
         """Optimize search results"""
         pass
-```
+```text
 
 ## ⚡ Advanced Features
 
@@ -261,7 +261,7 @@ advanced_features:
       - optimization_tools
       - diagnostic_features
       - reporting_systems
-```
+```text
 
 ### Feature Management
 ```python
@@ -292,7 +292,7 @@ class FeatureGuide:
     def enhance_proficiency(self):
         """Enhance feature proficiency"""
         pass
-```
+```text
 
 ## 📚 References
 

@@ -25,7 +25,7 @@ related_frameworks:
   - [[frameworks/governing_framework]]
   - [[frameworks/related_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 [Clear statement of policy purpose and scope, including what the policy covers and who it applies to]

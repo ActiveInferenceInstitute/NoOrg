@@ -50,7 +50,7 @@ active_users:
       - adoption_patterns
       - retention_curves
       - reactivation_rates
-```
+```text
 
 ### Activity Management
 ```python
@@ -81,7 +81,7 @@ class ActivityTracker:
     def analyze_engagement(self):
         """Analyze engagement patterns"""
         pass
-```
+```text
 
 ## 🔄 Contribution Levels
 
@@ -115,7 +115,7 @@ class ActivityTracker:
     }
   }
 }
-```
+```text
 
 ### Contribution Management
 ```python
@@ -146,7 +146,7 @@ class ContributionManager:
     def assess_impact(self):
         """Assess contribution impact"""
         pass
-```
+```text
 
 ## 📢 Feedback Rates
 
@@ -188,7 +188,7 @@ feedback_tracking:
       - resolution_time
       - satisfaction_score
       - effectiveness_rate
-```
+```text
 
 ### Feedback Management
 ```python
@@ -219,7 +219,7 @@ class FeedbackManager:
     def track_improvements(self):
         """Track feedback-driven improvements"""
         pass
-```
+```text
 
 ## 😊 Satisfaction Scores
 
@@ -261,7 +261,7 @@ satisfaction_measurement:
       - priority_actions
       - resource_allocation
       - timeline_planning
-```
+```text
 
 ### Satisfaction Management
 ```python
@@ -292,7 +292,7 @@ class SatisfactionManager:
     def drive_improvements(self):
         """Drive satisfaction improvements"""
         pass
-```
+```text
 
 ## 📚 References
 

@@ -50,7 +50,7 @@ data_collection:
         - assessment_date
         - review_cycle
         - quality_standards
-```
+```text
 
 ### Collection Management
 ```python
@@ -81,7 +81,7 @@ class CollectionTemplate:
     def validate_collection(self):
         """Validate collected data"""
         pass
-```
+```text
 
 ## 📈 Analysis Format
 
@@ -122,7 +122,7 @@ class CollectionTemplate:
     }
   }
 }
-```
+```text
 
 ### Analysis Management
 ```python
@@ -153,7 +153,7 @@ class AnalysisTemplate:
     def generate_outputs(self):
         """Generate analysis outputs"""
         pass
-```
+```text
 
 ## 📑 Report Layout
 
@@ -198,7 +198,7 @@ report_layouts:
           - performance_optimization
           - resource_planning
           - technical_recommendations
-```
+```text
 
 ### Layout Management
 ```python
@@ -229,7 +229,7 @@ class LayoutTemplate:
     def customize_template(self):
         """Customize layout template"""
         pass
-```
+```text
 
 ## 📤 Distribution Method
 
@@ -261,7 +261,7 @@ distribution_methods:
         - template: "publication_process"
           channels: "distribution_channels"
           verification: "delivery_confirmation"
-```
+```text
 
 ### Distribution Management
 ```python
@@ -292,7 +292,7 @@ class DistributionTemplate:
     def monitor_delivery(self):
         """Monitor distribution status"""
         pass
-```
+```text
 
 ## 📚 References
 

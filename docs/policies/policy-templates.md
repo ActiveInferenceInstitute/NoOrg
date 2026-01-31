@@ -65,7 +65,7 @@ standard_policy:
       - step: "Procedure Step 2"
         details: "Step 2 details"
         responsible: "Role responsible"
-```
+```text
 
 ### Implementation Guide
 ```python
@@ -96,7 +96,7 @@ class StandardPolicyTemplate:
     def validate_content(self):
         """Validate template content"""
         pass
-```
+```text
 
 ## 🚀 Quick Policy Template
 
@@ -139,7 +139,7 @@ class StandardPolicyTemplate:
     }
   }
 }
-```
+```text
 
 ### Quick Implementation
 ```python
@@ -170,7 +170,7 @@ class QuickPolicyTemplate:
     def validate_policy(self):
         """Validate quick policy"""
         pass
-```
+```text
 
 ## 📋 Review Template
 
@@ -210,7 +210,7 @@ review_template:
           priority: "High/Medium/Low"
           description: "Improvement description"
           timeline: "Implementation timeline"
-```
+```text
 
 ### Review Process
 ```python
@@ -241,7 +241,7 @@ class PolicyReviewTemplate:
     def generate_report(self):
         """Generate review report"""
         pass
-```
+```text
 
 ## 📊 Template Management
 
@@ -275,7 +275,7 @@ class PolicyReviewTemplate:
     }
   }
 }
-```
+```text
 
 ### Template Automation
 ```python
@@ -306,7 +306,7 @@ class TemplateManager:
     def automate_processes(self):
         """Automate template processes"""
         pass
-```
+```text
 
 ## 📈 Usage Guidelines
 
@@ -343,7 +343,7 @@ usage_guidelines:
         - "Assessment criteria"
         - "Improvement planning"
         - "Action tracking"
-```
+```text
 
 ### Best Practices
 ```python
@@ -374,7 +374,7 @@ class TemplateGuidelines:
     def verify_compliance(self):
         """Verify guideline compliance"""
         pass
-```
+```text
 
 ## 📚 References
 

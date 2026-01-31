@@ -19,7 +19,7 @@ graph TD
     A --> C[Indirect Costs]
     A --> D[Operational Costs]
     A --> E[Future Costs]
-```
+```text
 
 ### Cost Categories
 1. **Cost Types**

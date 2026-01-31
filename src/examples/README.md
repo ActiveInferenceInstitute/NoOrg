@@ -21,9 +21,9 @@ Examples can be run directly or imported as modules:
 ```typescript
 import { runExample } from './example-file';
 await runExample();
-```
+```text
 
 ## Related Documentation
 
-- [Examples Documentation](../../../examples/README.md)
+- [Examples Documentation](../../README.md)
 - [Source Code Documentation](../README.md)

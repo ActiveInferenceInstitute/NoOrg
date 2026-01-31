@@ -20,7 +20,7 @@ graph TD
     C --> D[Link Suggestions]
     D --> E[Quality Check]
     E --> F[Review Process]
-```
+```text
 
 #### Implementation
 ```yaml
@@ -34,7 +34,7 @@ actions:
   - generate_metadata
   - suggest_links
   - run_quality_check
-```
+```text
 
 ### Content Updates
 1. **Regular Updates**
@@ -64,7 +64,7 @@ graph TD
     B --> C[Review]
     C --> D[Merge]
     D --> E[Cleanup]
-```
+```text
 
 ### Commit Processing
 1. **Pre-commit**
@@ -128,7 +128,7 @@ graph TD
     B --> C[Generate Reports]
     C --> D[Alert if Needed]
     D --> E[Store History]
-```
+```text
 
 ### Quality Assurance
 1. **Content Validation**
@@ -158,7 +158,7 @@ workflow:
     - log_access
     - monitor_activity
     - enforce_limits
-```
+```text
 
 ### Safety Checks
 1. **Input Validation**
@@ -195,7 +195,7 @@ graph TD
     B --> C[Transformation]
     C --> D[Loading]
     D --> E[Verification]
-```
+```text
 
 ## 🔄 Maintenance Workflows
 

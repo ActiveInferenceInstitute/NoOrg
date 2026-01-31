@@ -19,7 +19,7 @@ graph TD
     MeetingNotes --> Reports[Advisory Reports]
     
     class Actions,Decisions,Reports externalEntity;
-```
+```text
 
 ## Meeting Categories
 

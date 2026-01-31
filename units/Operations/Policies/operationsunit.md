@@ -69,7 +69,7 @@ C4Context
     Rel_Ext(Ops, Regulators, "Provides compliance data, hosts audits")
 
     UpdateElementStyle(Ops, $bgColor="#1168bd", $fontColor="white", $borderColor="grey", $borderWidth="2px")
-```
+```text
 
 ### Internal Primary
 - [[Production]] / [[Development]]: Close collaboration on production schedules, handoffs, efficiency.
@@ -161,7 +161,7 @@ mindmap
       Reporting
       Analysis
       Forecasting
-```
+```text
 
 ## Performance Metrics
 *Key metrics are defined and tracked within specific [[../Processes]] and reported via [[../Reports]].*

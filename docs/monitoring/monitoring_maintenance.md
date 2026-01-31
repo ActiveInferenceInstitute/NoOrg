@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_configuration]]
   - [[monitoring/monitoring_testing]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the maintenance framework for monitoring systems within the agent framework, providing comprehensive maintenance processes, standards, and best practices for monitoring components.
@@ -43,7 +43,7 @@ class MonitoringMaintenanceManager:
         self.validator = MaintenanceValidator()
         self.monitor = MaintenanceMonitor()
         self.reporter = MaintenanceReporter()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Schedule Engine]
     C --> F[Execution Engine]
     D --> G[Validation Engine]
-```
+```text
 
 ### 2. Maintenance Scheduler
 #### 2.1 Scheduling System
@@ -71,7 +71,7 @@ class MaintenanceScheduler:
         optimization = await self.optimizer.optimize_schedule(planning)
         scheduling = await self.engine.create_schedule(optimization)
         return await self.monitor.monitor_schedule(scheduling)
-```
+```text
 
 #### 2.2 Schedule Types
 - Routine Maintenance
@@ -94,7 +94,7 @@ class MaintenanceExecutor:
         coordination = await self.coordinator.coordinate_maintenance(control)
         execution = await self.engine.execute_maintenance(coordination)
         return await self.monitor.monitor_execution(execution)
-```
+```text
 
 #### 3.2 Execution Types
 - System Maintenance
@@ -117,7 +117,7 @@ class MaintenanceValidator:
         verification = await self.verifier.verify_results(checking)
         validation = await self.engine.validate_results(verification)
         return await self.reporter.report_validation(validation)
-```
+```text
 
 #### 4.2 Validation Types
 - Process Validation
@@ -140,7 +140,7 @@ class MaintenanceMonitor:
         analysis = await self.analyzer.analyze_maintenance(collection)
         alerts = await self.alerter.process_alerts(analysis)
         return await self.reporter.report_monitoring(analysis)
-```
+```text
 
 #### 5.2 Monitoring Types
 - Process Monitoring
@@ -163,7 +163,7 @@ class MaintenanceReporter:
         formatting = await self.formatter.format_report(generation)
         distribution = await self.distributor.distribute_report(formatting)
         return await self.archiver.archive_report(distribution)
-```
+```text
 
 #### 6.2 Report Types
 - Status Reports
@@ -188,7 +188,7 @@ class MaintenanceStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Process Standards
@@ -205,7 +205,7 @@ class MaintenanceProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Planning Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class MaintenanceSecurity:
     async def audit_maintenance(self, audit):
         # Maintenance auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Process Security
@@ -318,7 +318,7 @@ class MaintenancePattern:
         self.scheduler = MaintenanceScheduler()
         self.executor = MaintenanceExecutor()
         self.validator = MaintenanceValidator()
-```
+```text
 
 ### B. Process Patterns
 ```python
@@ -328,7 +328,7 @@ class ProcessPattern:
         self.planner = ProcessPlanner()
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
-```
+```text
 
 ### C. Quality Patterns
 ```python
@@ -338,4 +338,4 @@ class QualityPattern:
         self.monitor = QualityMonitor()
         self.analyzer = QualityAnalyzer()
         self.reporter = QualityReporter()
-``` 
+```text 

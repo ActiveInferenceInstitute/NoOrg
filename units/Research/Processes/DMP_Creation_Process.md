@@ -40,7 +40,7 @@ graph TD
     subgraph DMP Lifecycle
         L; M; N;
     end
-```
+```text
 
 ## 4. Steps Description
 

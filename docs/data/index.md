@@ -161,7 +161,7 @@ graph TB
     Governance --> Integration
     Governance --> Storage
     Governance --> Consumption
-```
+```text
 
 ## Data Integration
 
@@ -275,7 +275,7 @@ graph TB
     Ingestion --> Orchestration
     Orchestration --> Processing
     Processing --> Delivery
-```
+```text
 
 ## Data Modeling
 
@@ -389,7 +389,7 @@ graph TB
     Conceptual --> Logical
     Logical --> Physical
     Physical --> Evolution
-```
+```text
 
 ## Data Governance Framework
 
@@ -527,7 +527,7 @@ graph TB
     Strategy --> Programs
     Programs --> Tools
     Tools --> Metrics
-```
+```text
 
 ## Related Documentation
 - [Data Integration Guide](integration/guide.md)

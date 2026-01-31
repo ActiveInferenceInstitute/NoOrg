@@ -28,7 +28,7 @@ interface Agent {
   getAgentInfo(): Agent;
   updateStatus(status: Agent['status']): void;
 }
-```
+```text
 
 ### Agent Capabilities
 ```typescript
@@ -48,7 +48,7 @@ type Capability =
   | 'performance-evaluation'
   | 'risk-assessment'
   | string; // Allow custom capabilities
-```
+```text
 
 ### Agent Types
 ```typescript
@@ -73,7 +73,7 @@ type AgentType =
   | 'risk-management'
   | 'innovation'
   | string; // Allow custom agent types
-```
+```text
 
 ## Specialized Type Definitions
 
@@ -99,7 +99,7 @@ interface CodeReviewResult {
   strengths: string[];
   recommendations: string[];
 }
-```
+```text
 
 ### Coordination Metrics (`coordination-metrics.ts`)
 ```typescript
@@ -113,7 +113,7 @@ interface CoordinationMetrics {
   throughput: number;
   errorRate: number;
 }
-```
+```text
 
 ### Deployment Types (`deployment.ts`)
 ```typescript
@@ -124,7 +124,7 @@ interface DeploymentConfig {
   maxInstances?: number;
   healthCheckInterval?: number;
 }
-```
+```text
 
 ### Quality Assurance Types (`quality.ts`)
 ```typescript
@@ -135,7 +135,7 @@ interface QualityMetrics {
   securityScore: number;
   maintainabilityIndex: number;
 }
-```
+```text
 
 ## Usage in Agent Implementations
 
@@ -156,7 +156,7 @@ class CustomAgent implements Agent {
     return this.processTask(taskDetails);
   }
 }
-```
+```text
 
 ### Interface Extensions
 ```typescript
@@ -172,7 +172,7 @@ class SpecializedAgent implements ExtendedAgent {
     // Custom implementation
   }
 }
-```
+```text
 
 ## Type Validation
 
@@ -191,7 +191,7 @@ const isValid = validateAgentConfig(config);
 if (!isValid) {
   throw new Error('Invalid agent configuration');
 }
-```
+```text
 
 ### Type Guards
 ```typescript
@@ -203,7 +203,7 @@ if (isAnalysisAgent(agent)) {
   // TypeScript knows this is an AnalysisAgent
   const result = await agent.analyzeData(data);
 }
-```
+```text
 
 ## Best Practices
 
@@ -230,7 +230,7 @@ interface DataAnalysisTask {
 interface Task {
   [key: string]: any; // Too generic
 }
-```
+```text
 
 ## Integration with Framework
 
@@ -244,7 +244,7 @@ const registry = AgentRegistry.getInstance();
 // Register typed agents
 const agent: Agent = createTypedAgent();
 await registry.registerAgent(agent);
-```
+```text
 
 ### Task Manager Integration
 ```typescript
@@ -260,7 +260,7 @@ const task: Task = {
   title: 'Data Analysis Task',
   // ... other properties
 };
-```
+```text
 
 ## Advanced Type Features
 
@@ -272,7 +272,7 @@ interface AgentFactory<T extends Agent> {
 }
 
 const factory: AgentFactory<AnalysisAgent> = new AnalysisAgentFactory();
-```
+```text
 
 ### Conditional Types
 ```typescript
@@ -281,7 +281,7 @@ type AgentCapabilities<T extends AgentType> = T extends 'analysis'
   : T extends 'writing'
   ? ['text-generation', 'creativity', 'editing']
   : Capability[];
-```
+```text
 
 ### Mapped Types
 ```typescript
@@ -292,7 +292,7 @@ type AgentStatusMap = {
     status: 'active' | 'inactive';
   };
 };
-```
+```text
 
 ## Error Types
 
@@ -320,7 +320,7 @@ class TaskError extends Error {
     this.name = 'TaskError';
   }
 }
-```
+```text
 
 ## Testing Types
 
@@ -339,11 +339,11 @@ interface TestResult {
   errors: string[];
   warnings: string[];
 }
-```
+```text
 
 ## Related Documentation
 
-- [Agent Framework](../../../src/agents/README.md)
-- [TypeScript Configuration](../../../tsconfig.json)
-- [Core Systems](../../../src/core/README.md)
-- [Testing Guide](../../../tests/README.md)
+- [Agent Framework](../../README.md)
+- [TypeScript Configuration](../../tsconfig.json)
+- [Core Systems](../../README.md)
+- [Testing Guide](../../README.md)

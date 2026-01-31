@@ -39,7 +39,7 @@ graph TD
         ENC[Encryption] --> KM[Key Management]
         KM --> DLP[Data Loss Prevention]
     end
-```
+```text
 
 ## Security Components
 
@@ -73,7 +73,7 @@ infrastructure_security:
       ips:
         type: behavioral
         mode: prevent
-```
+```text
 
 ### Identity Management
 ```yaml
@@ -124,7 +124,7 @@ identity_management:
           restrictions:
             - namespace_bound
             - rate_limited
-```
+```text
 
 ## Communication Security
 
@@ -155,7 +155,7 @@ service_mesh:
         requests_per_second: 10000
       per_agent:
         requests_per_second: 100
-```
+```text
 
 ### Message Security
 ```yaml
@@ -179,7 +179,7 @@ message_security:
     checksums:
       algorithm: SHA3_256
       validation: required
-```
+```text
 
 ## Data Security
 
@@ -211,7 +211,7 @@ data_protection:
     in_memory:
       method: secure_enclave
       zero_knowledge: true
-```
+```text
 
 ### Access Control
 ```yaml
@@ -246,7 +246,7 @@ access_control:
           monitor:
             roles: [system_admin, operator]
             conditions: [authentication_verified]
-```
+```text
 
 ## Monitoring & Detection
 
@@ -280,7 +280,7 @@ security_monitoring:
         condition: deviation > 3sigma
         window: 15m
         severity: medium
-```
+```text
 
 ### Incident Response
 ```yaml
@@ -313,7 +313,7 @@ incident_response:
         - update_security
         - enhance_monitoring
         - conduct_audit
-```
+```text
 
 ## Compliance & Auditing
 
@@ -338,7 +338,7 @@ compliance:
       auditing:
         frequency: semi_annual
         evidence: required
-```
+```text
 
 ### Security Auditing
 ```yaml
@@ -359,7 +359,7 @@ auditing:
         - permission_changes
       frequency: monthly
       reporting: required
-```
+```text
 
 ## Security Operations
 
@@ -389,7 +389,7 @@ security_procedures:
       - validate_systems
       - restore_services
       - update_security
-```
+```text
 
 ### Security Maintenance
 ```yaml
@@ -410,7 +410,7 @@ security_maintenance:
       update:
         process: change_management
         validation: required
-```
+```text
 
 ## Documentation
 

@@ -35,7 +35,7 @@ graph TD
     A[Component A] --> B[Component B]
     B --> C[Component C]
     B --> D[Component D]
-```
+```text
 
 ### Components
 #### Component A

@@ -27,7 +27,7 @@ related_processes:
   - [[processes/implementation_processes]]
   - [[processes/control_processes]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document details the operational processes and procedures that implement the [[frameworks/quality_management|Quality Management Framework]], ensuring consistent quality standards across all operations.
@@ -42,7 +42,7 @@ graph TD
     B --> C[Quality Assurance]
     C --> D[Quality Improvement]
     D --> A
-```
+```text
 
 #### 1.2 Key Components
 - Process Owners

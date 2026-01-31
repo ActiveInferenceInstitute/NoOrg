@@ -95,7 +95,7 @@ graph TD
     style ERROR fill:#ffebee,stroke:#c62828,stroke-width:1px
     style COMM fill:#e3f2fd,stroke:#1976d2,stroke-width:1px
     style MONITOR fill:#fff8e1,stroke:#f57f17,stroke-width:1px
-```
+```text
 
 ### Base Agent (`AbstractAgent.ts`)
 All agents extend the AbstractAgent class which provides:
@@ -125,7 +125,7 @@ interface Agent {
   getAgentInfo(): Agent;
   updateStatus(status: Agent['status']): void;
 }
-```
+```text
 
 ## Agent Capabilities
 
@@ -162,7 +162,7 @@ const result = await coordinator.executeWorkflow({
     { agent: 'writing', action: 'write', data: analysisResult }
   ]
 });
-```
+```text
 
 ### With Core Systems
 - **Event System**: Agents publish and subscribe to events
@@ -184,7 +184,7 @@ interface AgentConfig {
   openAIClient: OpenAIClient;
   sharedState: SharedStateManager;
 }
-```
+```text
 
 ### Runtime Configuration
 ```typescript
@@ -196,7 +196,7 @@ const agent = new AnalysisAgent('Data Analyst', {
     visualizationFramework: 'plotly'
   }
 });
-```
+```text
 
 ## Testing
 
@@ -217,7 +217,7 @@ npm test tests/unit/agents/test_analysis_agent.ts
 
 # Test with coverage
 npm run test:coverage
-```
+```text
 
 ## Development
 
@@ -235,7 +235,7 @@ export class CustomAgent extends AbstractAgent {
     return await this.processCustomTask(taskDetails);
   }
 }
-```
+```text
 
 ### Agent Best Practices
 1. **Single Responsibility**: Each agent should have a focused purpose
@@ -276,8 +276,8 @@ export class CustomAgent extends AbstractAgent {
 
 ## Related Documentation
 
-- [Multi-Agent Coordination](../../../src/core/multiagent/README.md)
-- [Agent Testing](../../../tests/unit/agents/README.md)
-- [Agent Examples](../../../examples/README.md)
-- [Agent Architecture](../../../docs/agents/README.md)
-- [API Reference](../../../docs/api/index.md)
+- [Multi-Agent Coordination](../../README.md)
+- [Agent Testing](../../README.md)
+- [Agent Examples](../../README.md)
+- [Agent Architecture](../../README.md)
+- [API Reference](../../docs/index.md)

@@ -39,7 +39,7 @@ graph TD
         G
         H
     end
-```
+```text
 
 ## 🤖 Agent Integration Points
 
@@ -97,7 +97,7 @@ graph TD
     }
   ]
 }
-```
+```text
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## 🏗️ Build Process
@@ -155,7 +155,7 @@ flowchart TD
     
     O[Security Scanning] -.->|Validate| M
     P[License Compliance] -.->|Check| M
-```
+```text
 
 ### Dependency Control
 1. **Dependency Strategy**
@@ -232,7 +232,7 @@ graph LR
     
     L[CI/CD Pipeline] -.->|Trigger| G
     M[Release Process] -.->|Manage| I
-```
+```text
 
 ### Version Strategy
 1. **Versioning Standards**
@@ -403,7 +403,7 @@ pipeline:
         - npm publish
       only:
         - main
-```
+```text
 
 ### Dependency Management Configuration Example
 
@@ -438,7 +438,7 @@ pipeline:
     }
   }
 }
-```
+```text
 
 ---
 **Metadata**

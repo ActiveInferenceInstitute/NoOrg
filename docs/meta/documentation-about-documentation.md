@@ -42,7 +42,7 @@ This meta-documentation explains the principles, practices, and organization of 
 ## 🏗 Documentation Architecture
 
 ### Information Architecture
-```
+```text
 Knowledge Base
 ├── Strategic Layer
 │   ├── Vision & Goals
@@ -60,7 +60,7 @@ Knowledge Base
     ├── How-to Guides
     ├── Procedures
     └── Checklists
-```
+```text
 
 ### Document Types and Their Purpose
 | Type | Purpose | Primary Audience | Update Frequency |

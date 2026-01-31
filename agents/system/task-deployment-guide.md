@@ -37,7 +37,7 @@ graph TD
         MI --> DI[Database Integration]
         DI --> AI[Analytics Integration]
     end
-```
+```text
 
 ## Infrastructure Requirements
 
@@ -70,7 +70,7 @@ compute_requirements:
     storage:
       request: "70%"
       limit: "80%"
-```
+```text
 
 ### Network Configuration
 ```yaml
@@ -102,7 +102,7 @@ network_configuration:
       - port: "all"
         destination: "0.0.0.0/0"
         protocol: "all"
-```
+```text
 
 ## Deployment Process
 
@@ -128,7 +128,7 @@ infrastructure_deployment:
         command: kubectl apply -f calico.yaml
     - setup_storage:
         command: kubectl apply -f storage-class.yaml
-```
+```text
 
 ### Agent Deployment
 ```yaml
@@ -176,7 +176,7 @@ agent_deployment:
           targetPort: 8080
       selector:
         app: task-executor
-```
+```text
 
 ### Service Deployment
 ```yaml
@@ -209,7 +209,7 @@ service_deployment:
           retention: 15d
         alertmanager:
           enabled: true
-```
+```text
 
 ## Configuration Management
 
@@ -239,7 +239,7 @@ environment_config:
     resource_limits:
       cpu: "8"
       memory: "16Gi"
-```
+```text
 
 ### Secret Management
 ```yaml
@@ -263,7 +263,7 @@ secret_management:
         path: secret/messaging
         type: rabbitmq
         rotation: 30d
-```
+```text
 
 ## Monitoring Setup
 
@@ -290,7 +290,7 @@ monitoring_setup:
         file: dashboards/task-overview.json
       - name: Resource Usage
         file: dashboards/resource-usage.json
-```
+```text
 
 ### Logging Setup
 ```yaml
@@ -311,7 +311,7 @@ logging_setup:
         - type: elasticsearch
           host: elasticsearch-master
           port: 9200
-```
+```text
 
 ## Scaling Configuration
 
@@ -339,7 +339,7 @@ horizontal_scaling:
           target:
             type: Utilization
             averageUtilization: 75
-```
+```text
 
 ### Vertical Scaling
 ```yaml
@@ -359,7 +359,7 @@ vertical_scaling:
       memory:
         increment: "1Gi"
         max: "16Gi"
-```
+```text
 
 ## Deployment Procedures
 
@@ -382,7 +382,7 @@ deployment_steps:
     - check_service_health
     - validate_metrics
     - test_functionality
-```
+```text
 
 ### Rollback Procedures
 ```yaml
@@ -408,7 +408,7 @@ rollback_procedures:
       - manual_verification
       - controlled_rollback
       - system_validation
-```
+```text
 
 ## Best Practices
 
@@ -432,7 +432,7 @@ deployment_best_practices:
     - check_performance
     - verify_security
     - test_recovery
-```
+```text
 
 ### Security Considerations
 ```yaml
@@ -448,7 +448,7 @@ security_considerations:
     - encrypt_traffic
     - segment_networks
     - monitor_traffic
-```
+```text
 
 ## Documentation
 

@@ -46,7 +46,7 @@ servers:
           storage: "1TB SSD"
         location: "Secondary Datacenter"
         status: "Active"
-```
+```text
 
 ### Network Infrastructure
 ```json
@@ -90,7 +90,7 @@ servers:
     ]
   }
 }
-```
+```text
 
 ### Storage Infrastructure
 ```yaml
@@ -124,7 +124,7 @@ storage_systems:
         replication: "Asynchronous"
         retention: "90 days"
       location: "Secondary Datacenter"
-```
+```text
 
 ## 📱 Software Inventory
 
@@ -164,7 +164,7 @@ class SoftwareInventory:
     def update_inventory(self):
         """Update software inventory"""
         pass
-```
+```text
 
 ### Development Tools
 ```yaml
@@ -192,7 +192,7 @@ development_tools:
       version: "5.10.0"
       licenses: "Open Source"
       usage: "Unit Testing"
-```
+```text
 
 ### Security Tools
 ```json
@@ -227,7 +227,7 @@ development_tools:
     ]
   }
 }
-```
+```text
 
 ## 📄 License Management
 
@@ -255,7 +255,7 @@ license_management:
         quantity: 20
         expiration: "2024-12-31"
         renewal: "Annual"
-```
+```text
 
 ### License Tracking
 ```python
@@ -286,7 +286,7 @@ class LicenseManager:
     def check_compliance(self):
         """Check license compliance"""
         pass
-```
+```text
 
 ## 📊 Asset Management
 
@@ -320,7 +320,7 @@ asset_management:
       - end_of_life
       - data_wiping
       - disposal_procedures
-```
+```text
 
 ### Inventory Analytics
 ```python
@@ -351,7 +351,7 @@ class InventoryAnalytics:
     def generate_reports(self):
         """Generate inventory reports"""
         pass
-```
+```text
 
 ## 📚 References
 

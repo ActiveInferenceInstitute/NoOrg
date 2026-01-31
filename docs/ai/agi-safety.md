@@ -54,7 +54,7 @@ graph TD
     B --> E[Prevent Harm]
     C --> F[Enhance Knowledge]
     D --> G[Maintain Stability]
-```
+```text
 
 ### Behavioral Constraints
 1. Explicit permissions

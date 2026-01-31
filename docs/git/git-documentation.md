@@ -47,7 +47,7 @@ setup_procedures:
           workflow_integration: "agent_setup"
           permission_scoping: "security_config"
           interaction_rules: "protocol_setup"
-```
+```text
 
 ### Setup Management
 ```python
@@ -78,7 +78,7 @@ class SetupManager:
     def verify_installation(self):
         """Verify setup completion"""
         pass
-```
+```text
 
 ## 🔄 Workflow Guides
 
@@ -135,7 +135,7 @@ class SetupManager:
     }
   }
 }
-```
+```text
 
 ### Workflow Management
 ```python
@@ -166,7 +166,7 @@ class WorkflowManager:
     def optimize_processes(self):
         """Optimize workflow processes"""
         pass
-```
+```text
 
 ## ⚠️ Troubleshooting
 
@@ -214,7 +214,7 @@ troubleshooting_guides:
           symptoms: "poor_completion"
           diagnosis: "prompt_analysis"
           resolution: "prompt_refinement"
-```
+```text
 
 ### Issue Management
 ```python
@@ -245,7 +245,7 @@ class TroubleShootingManager:
     def document_solutions(self):
         """Document resolved issues"""
         pass
-```
+```text
 
 ## 📚 Reference Materials
 
@@ -278,7 +278,7 @@ git_commands:
       - git_log: "View history"
       - git_blame: "Show changes"
       - git_bisect: "Find issues"
-```
+```text
 
 ### Integration Reference
 ```yaml
@@ -304,7 +304,7 @@ tool_integration:
           actions: "[[git-automation#post-commit-actions]]"
           notifications: "status_update"
           logging: "audit_trail"
-```
+```text
 
 ## 🔗 Related Documentation
 
@@ -357,9 +357,9 @@ fractal_structure:
           workspaces: "workspaces/*"
       - linking_structure:
           internal: "[[internal_links]]"
-          external: "[external](links)"
+          external: "[external](AGENTS.md)"
           backlinks: "backlink_references"
-```
+```text
 
 ### Fractal Operations Manager
 ```python
@@ -410,7 +410,7 @@ class FractalGitManager:
         await self._manage_backlinks()
         await self._sync_submodules()
         await self._update_documentation()
-```
+```text
 
 ## 🔄 Obsidian Integration
 
@@ -460,7 +460,7 @@ class FractalGitManager:
     }
   }
 }
-```
+```text
 
 ### Obsidian Integration Manager
 ```python
@@ -511,7 +511,7 @@ class ObsidianIntegrationManager:
         await self._manage_link_structure()
         await self._update_graph()
         await self._sync_with_git()
-```
+```text
 
 ## 📦 Repository Operations
 
@@ -550,7 +550,7 @@ repository_operations:
           strategy: "recursive_strategy"
           resolution: "manual_resolution"
           backup: "backup_creation"
-```
+```text
 
 ### Repository Operations Manager
 ```python
@@ -601,7 +601,7 @@ class RepositoryOperationsManager:
         await self._manage_patterns()
         await self._coordinate_sync()
         await self._resolve_conflicts()
-```
+```text
 
 ---
 

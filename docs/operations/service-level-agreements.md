@@ -19,7 +19,7 @@ graph TD
     A --> C[Performance Targets]
     A --> D[Monitoring Framework]
     A --> E[Compliance Management]
-```
+```text
 
 ### SLA Architecture
 1. **Agreement Layers**

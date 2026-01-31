@@ -44,7 +44,7 @@ graph TD
     subgraph Submission & Post-Submission
         I; J; K; L; M; O; P; N;
     end
-```
+```text
 
 ## 4. Steps Description
 

@@ -25,7 +25,7 @@ The central orchestrator that manages agent coordination, task distribution, and
 
 ```typescript
 constructor(name: string, options?: CoordinatorOptions)
-```
+```text
 
 **Parameters:**
 - `name` (string): Coordinator name/identifier
@@ -39,7 +39,7 @@ Initialize the coordinator and all subsystems.
 
 ```typescript
 async initialize(): Promise<boolean>
-```
+```text
 
 **Returns:** `Promise<boolean>` - Success status
 
@@ -47,7 +47,7 @@ async initialize(): Promise<boolean>
 ```typescript
 const coordinator = new MultiAgentCoordinator('Production Coordinator');
 await coordinator.initialize();
-```
+```text
 
 ##### start()
 
@@ -55,12 +55,12 @@ Start the coordinator and begin processing tasks.
 
 ```typescript
 async start(): Promise<void>
-```
+```text
 
 **Example:**
 ```typescript
 await coordinator.start();
-```
+```text
 
 ##### stop()
 
@@ -68,12 +68,12 @@ Stop the coordinator and cleanup resources.
 
 ```typescript
 async stop(): Promise<void>
-```
+```text
 
 **Example:**
 ```typescript
 await coordinator.stop();
-```
+```text
 
 ##### registerAgent()
 
@@ -81,7 +81,7 @@ Register a new agent with the coordinator.
 
 ```typescript
 async registerAgent(agent: Agent): Promise<string>
-```
+```text
 
 **Parameters:**
 - `agent` (Agent): Agent to register
@@ -91,7 +91,7 @@ async registerAgent(agent: Agent): Promise<string>
 **Example:**
 ```typescript
 const agentId = await coordinator.registerAgent(myAgent);
-```
+```text
 
 ##### createTask()
 
@@ -99,7 +99,7 @@ Create a new task for execution.
 
 ```typescript
 async createTask(task: Omit<Task, 'id' | 'createdAt' | 'updatedAt' | 'status'>): Promise<string>
-```
+```text
 
 **Parameters:**
 - `task` (Omit<Task, 'id' | 'createdAt' | 'updatedAt' | 'status'>): Task configuration
@@ -114,7 +114,7 @@ const taskId = await coordinator.createTask({
   priority: 'high',
   type: 'data-analysis'
 });
-```
+```text
 
 ##### getTask()
 
@@ -122,7 +122,7 @@ Retrieve task information by ID.
 
 ```typescript
 async getTask(taskId: string): Promise<Task | null>
-```
+```text
 
 **Parameters:**
 - `taskId` (string): Task identifier
@@ -135,7 +135,7 @@ const task = await coordinator.getTask(taskId);
 if (task) {
   console.log('Task status:', task.status);
 }
-```
+```text
 
 ### AgentRegistry
 
@@ -149,7 +149,7 @@ Find agents with specific capabilities.
 
 ```typescript
 async findAgentsByCapability(capability: string): Promise<Agent[]>
-```
+```text
 
 **Parameters:**
 - `capability` (string): Capability to search for
@@ -159,7 +159,7 @@ async findAgentsByCapability(capability: string): Promise<Agent[]>
 **Example:**
 ```typescript
 const analysisAgents = await registry.findAgentsByCapability('data-analysis');
-```
+```text
 
 ##### findAgentsByType()
 
@@ -167,7 +167,7 @@ Find agents of a specific type.
 
 ```typescript
 async findAgentsByType(type: string): Promise<Agent[]>
-```
+```text
 
 **Parameters:**
 - `type` (string): Agent type to search for
@@ -177,7 +177,7 @@ async findAgentsByType(type: string): Promise<Agent[]>
 **Example:**
 ```typescript
 const writingAgents = await registry.findAgentsByType('creative-writer');
-```
+```text
 
 ##### getAgentCapabilities()
 
@@ -185,7 +185,7 @@ Get capabilities for a specific agent.
 
 ```typescript
 async getAgentCapabilities(agentId: string): Promise<string[]>
-```
+```text
 
 **Parameters:**
 - `agentId` (string): Agent identifier
@@ -195,7 +195,7 @@ async getAgentCapabilities(agentId: string): Promise<string[]>
 **Example:**
 ```typescript
 const capabilities = await registry.getAgentCapabilities(agentId);
-```
+```text
 
 ### TaskManager
 
@@ -212,7 +212,7 @@ async updateTask(
   taskId: string,
   updates: Partial<Omit<Task, 'id' | 'createdAt'>>
 ): Promise<void>
-```
+```text
 
 **Parameters:**
 - `taskId` (string): Task identifier
@@ -224,7 +224,7 @@ await taskManager.updateTask(taskId, {
   status: 'in-progress',
   assignedTo: agentId
 });
-```
+```text
 
 ##### unassignTask()
 
@@ -232,7 +232,7 @@ Unassign a task from its current agent.
 
 ```typescript
 async unassignTask(taskId: string): Promise<void>
-```
+```text
 
 **Parameters:**
 - `taskId` (string): Task identifier
@@ -240,7 +240,7 @@ async unassignTask(taskId: string): Promise<void>
 **Example:**
 ```typescript
 await taskManager.unassignTask(taskId);
-```
+```text
 
 ##### reassignTask()
 
@@ -248,7 +248,7 @@ Reassign a task to a different agent.
 
 ```typescript
 async reassignTask(taskId: string, newAgentId: string): Promise<void>
-```
+```text
 
 **Parameters:**
 - `taskId` (string): Task identifier
@@ -257,7 +257,7 @@ async reassignTask(taskId: string, newAgentId: string): Promise<void>
 **Example:**
 ```typescript
 await taskManager.reassignTask(taskId, newAgentId);
-```
+```text
 
 ##### getTaskHistory()
 
@@ -265,7 +265,7 @@ Retrieve the complete history of a task.
 
 ```typescript
 async getTaskHistory(taskId: string): Promise<TaskHistory[]>
-```
+```text
 
 **Parameters:**
 - `taskId` (string): Task identifier
@@ -276,7 +276,7 @@ async getTaskHistory(taskId: string): Promise<TaskHistory[]>
 ```typescript
 const history = await taskManager.getTaskHistory(taskId);
 console.log('Task lifecycle:', history);
-```
+```text
 
 ##### estimateTaskDuration()
 
@@ -284,7 +284,7 @@ Estimate how long a task will take to complete.
 
 ```typescript
 async estimateTaskDuration(task: Task): Promise<number>
-```
+```text
 
 **Parameters:**
 - `task` (Task): Task to estimate
@@ -295,7 +295,7 @@ async estimateTaskDuration(task: Task): Promise<number>
 ```typescript
 const duration = await taskManager.estimateTaskDuration(task);
 console.log('Estimated time:', duration / 1000, 'seconds');
-```
+```text
 
 ##### getTaskStatistics()
 
@@ -303,7 +303,7 @@ Get overall task statistics and metrics.
 
 ```typescript
 async getTaskStatistics(): Promise<TaskStatistics>
-```
+```text
 
 **Returns:** `Promise<TaskStatistics>` - Task statistics
 
@@ -312,7 +312,7 @@ async getTaskStatistics(): Promise<TaskStatistics>
 const stats = await taskManager.getTaskStatistics();
 console.log('Success rate:', stats.successRate);
 console.log('Average processing time:', stats.avgProcessingTime);
-```
+```text
 
 ##### cleanupOldTasks()
 
@@ -320,7 +320,7 @@ Remove old completed or failed tasks.
 
 ```typescript
 async cleanupOldTasks(olderThan: number): Promise<number>
-```
+```text
 
 **Parameters:**
 - `olderThan` (number): Remove tasks older than this timestamp
@@ -331,7 +331,7 @@ async cleanupOldTasks(olderThan: number): Promise<number>
 ```typescript
 const removed = await taskManager.cleanupOldTasks(Date.now() - 86400000); // 24 hours
 console.log('Cleaned up', removed, 'old tasks');
-```
+```text
 
 ### SharedStateManager
 
@@ -345,7 +345,7 @@ Set a state value at a specific path.
 
 ```typescript
 async setState(path: string, value: any): Promise<void>
-```
+```text
 
 **Parameters:**
 - `path` (string): State path (e.g., 'workflow.status')
@@ -354,7 +354,7 @@ async setState(path: string, value: any): Promise<void>
 **Example:**
 ```typescript
 await sharedState.setState('workflow.status', 'processing');
-```
+```text
 
 ##### getState()
 
@@ -362,7 +362,7 @@ Retrieve a state value from a specific path.
 
 ```typescript
 getState(path: string): any
-```
+```text
 
 **Parameters:**
 - `path` (string): State path
@@ -372,7 +372,7 @@ getState(path: string): any
 **Example:**
 ```typescript
 const status = sharedState.getState('workflow.status');
-```
+```text
 
 ##### updateState()
 
@@ -380,7 +380,7 @@ Update state using a function that receives current value.
 
 ```typescript
 async updateState(path: string, updater: (current: any) => any): Promise<void>
-```
+```text
 
 **Parameters:**
 - `path` (string): State path
@@ -389,7 +389,7 @@ async updateState(path: string, updater: (current: any) => any): Promise<void>
 **Example:**
 ```typescript
 await sharedState.updateState('counters.processed', (current) => (current || 0) + 1);
-```
+```text
 
 ##### subscribe()
 
@@ -397,7 +397,7 @@ Subscribe to state changes at a specific path.
 
 ```typescript
 subscribe(path: string, callback: (value: any, oldValue: any) => void): string
-```
+```text
 
 **Parameters:**
 - `path` (string): State path to watch
@@ -410,7 +410,7 @@ subscribe(path: string, callback: (value: any, oldValue: any) => void): string
 const subscriptionId = sharedState.subscribe('workflow.status', (newValue, oldValue) => {
   console.log('Workflow status changed:', oldValue, '->', newValue);
 });
-```
+```text
 
 ##### unsubscribe()
 
@@ -418,7 +418,7 @@ Unsubscribe from state changes.
 
 ```typescript
 unsubscribe(subscriptionId: string): void
-```
+```text
 
 **Parameters:**
 - `subscriptionId` (string): Subscription ID from subscribe()
@@ -426,7 +426,7 @@ unsubscribe(subscriptionId: string): void
 **Example:**
 ```typescript
 sharedState.unsubscribe(subscriptionId);
-```
+```text
 
 ## Agent System
 
@@ -438,7 +438,7 @@ Base class for all agents in the system.
 
 ```typescript
 constructor(options: AbstractAgentOptions)
-```
+```text
 
 **Parameters:**
 - `options` (AbstractAgentOptions): Agent configuration
@@ -451,7 +451,7 @@ Initialize the agent and register with shared state.
 
 ```typescript
 async initialize(): Promise<boolean>
-```
+```text
 
 **Returns:** `Promise<boolean>` - Success status
 
@@ -461,7 +461,7 @@ Execute a task (must be implemented by subclasses).
 
 ```typescript
 abstract async executeTask(taskDetails: any, context?: any): Promise<any>
-```
+```text
 
 **Parameters:**
 - `taskDetails` (any): Task-specific details
@@ -475,7 +475,7 @@ Update agent status and notify shared state.
 
 ```typescript
 updateStatus(newStatus: Agent['status']): void
-```
+```text
 
 **Parameters:**
 - `newStatus` (Agent['status']): New agent status
@@ -486,7 +486,7 @@ Shutdown the agent and cleanup resources.
 
 ```typescript
 async shutdown(): Promise<boolean>
-```
+```text
 
 **Returns:** `Promise<boolean>` - Success status
 
@@ -690,7 +690,7 @@ interface Task {
   priority?: 'low' | 'medium' | 'high' | 'critical';
   dependsOn?: string[];
 }
-```
+```text
 
 ### Task States
 
@@ -713,13 +713,13 @@ interface Task {
 
 State is organized hierarchically with dot-notation paths:
 
-```
+```text
 workflow.status
 workflow.stage
 agents.{agentId}.status
 tasks.{taskId}.results
 counters.processed
-```
+```text
 
 ### State Types
 
@@ -747,7 +747,7 @@ try {
 } catch (error) {
   console.error('Operation failed:', error);
 }
-```
+```text
 
 ### Retry Pattern
 
@@ -764,7 +764,7 @@ const retry = new Retry({
 const result = await retry.execute(async () => {
   return await unreliableOperation();
 });
-```
+```text
 
 ### Rate Limiter Pattern
 
@@ -779,7 +779,7 @@ const rateLimiter = new RateLimiter({
 
 await rateLimiter.waitForSlot(); // Wait for available slot
 await executeOperation();
-```
+```text
 
 ### Bulkhead Pattern
 
@@ -795,7 +795,7 @@ const bulkhead = new Bulkhead({
 const result = await bulkhead.execute(async () => {
   return await isolatedOperation();
 });
-```
+```text
 
 ## Event System
 
@@ -810,7 +810,7 @@ interface Event {
   data: any;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 ### Event Publishing
 
@@ -821,7 +821,7 @@ await eventSystem.publish('task.completed', {
   agentId: agentId,
   result: taskResult
 });
-```
+```text
 
 ### Event Subscription
 
@@ -833,7 +833,7 @@ const subscriptionId = eventSystem.subscribe('task.*', (event) => {
 
 // Unsubscribe
 eventSystem.unsubscribe(subscriptionId);
-```
+```text
 
 ## Configuration
 
@@ -862,7 +862,7 @@ ENABLE_METRICS=true
 METRICS_PORT=9090
 LOG_LEVEL=info
 LOG_FILE=./logs/noorg.log
-```
+```text
 
 ### Coordinator Options
 
@@ -878,7 +878,7 @@ interface CoordinatorOptions {
   retryAttempts?: number;
   coordinationStrategy?: 'round-robin' | 'capability-based' | 'priority-based' | 'hybrid';
 }
-```
+```text
 
 ## Error Handling
 
@@ -896,7 +896,7 @@ class CoordinationError extends Error {
   code: string;
   details?: any;
 }
-```
+```text
 
 ### Common Error Codes
 
@@ -927,7 +927,7 @@ try {
     console.error('Unexpected error:', error);
   }
 }
-```
+```text
 
 ## Best Practices
 
@@ -946,7 +946,7 @@ const agent = {
 };
 
 await coordinator.registerAgent(agent);
-```
+```text
 
 ### 2. Task Creation
 
@@ -963,7 +963,7 @@ const task = await coordinator.createTask({
     analysisType: 'comprehensive'
   }
 });
-```
+```text
 
 ### 3. State Management
 
@@ -975,7 +975,7 @@ await sharedState.setState('workflow.stage', 'data-collection');
 const subscriptionId = sharedState.subscribe('workflow.stage', (newStage) => {
   console.log('Workflow stage changed to:', newStage);
 });
-```
+```text
 
 ### 4. Error Recovery
 
@@ -986,7 +986,7 @@ const retry = new Retry({ maxAttempts: 3 });
 const result = await retry.execute(async () => {
   return await riskyOperation();
 });
-```
+```text
 
 ## Performance Optimization
 
@@ -1003,7 +1003,7 @@ const taskBatch = dataItems.map(item =>
 );
 
 await Promise.all(taskBatch);
-```
+```text
 
 ### 2. Resource Management
 
@@ -1015,7 +1015,7 @@ const activeTasks = agentTasks.filter(t => t.status === 'in-progress');
 if (activeTasks.length >= maxConcurrent) {
   // Wait or queue task
 }
-```
+```text
 
 ### 3. Caching
 
@@ -1026,7 +1026,7 @@ if (!cachedResult) {
   const result = await expensiveOperation();
   await cache.set(cacheKey, result, ttl);
 }
-```
+```text
 
 ## Security Considerations
 
@@ -1038,7 +1038,7 @@ const validatedTask = validateTaskInput(taskConfig);
 if (!validatedTask.valid) {
   throw new ValidationError(validatedTask.errors);
 }
-```
+```text
 
 ### 2. Access Control
 
@@ -1048,7 +1048,7 @@ const hasPermission = await checkAgentPermission(agentId, 'execute-task', taskTy
 if (!hasPermission) {
   throw new PermissionError('Agent lacks required permissions');
 }
-```
+```text
 
 ### 3. Data Sanitization
 
@@ -1056,7 +1056,7 @@ if (!hasPermission) {
 // Sanitize all data before storage or processing
 const sanitizedData = sanitizeInput(userData);
 await processSanitizedData(sanitizedData);
-```
+```text
 
 ## Monitoring and Observability
 
@@ -1068,7 +1068,7 @@ const metrics = await coordinator.getMetrics();
 console.log('Tasks processed:', metrics.tasksProcessed);
 console.log('Average processing time:', metrics.avgProcessingTime);
 console.log('Success rate:', metrics.successRate);
-```
+```text
 
 ### Health Monitoring
 
@@ -1078,7 +1078,7 @@ const health = await coordinator.getHealthStatus();
 console.log('System health:', health.status);
 console.log('Active agents:', health.activeAgents);
 console.log('Pending tasks:', health.pendingTasks);
-```
+```text
 
 ### Logging
 
@@ -1091,7 +1091,7 @@ const logger = new Logger({
 });
 
 logger.info('Task completed', { taskId, agentId, duration });
-```
+```text
 
 ## Troubleshooting
 
@@ -1108,7 +1108,7 @@ if (agent.status === 'busy') {
   // Wait or reassign task
   await taskManager.reassignTask(taskId, alternativeAgentId);
 }
-```
+```text
 
 #### 2. Task Execution Failures
 
@@ -1130,7 +1130,7 @@ if (task.dependsOn?.length > 0) {
     console.log('Waiting for dependencies:', incompleteDeps.map(d => d.id));
   }
 }
-```
+```text
 
 #### 3. State Synchronization Issues
 
@@ -1146,7 +1146,7 @@ if (state1 !== state2) {
   // Force state refresh
   await sharedState.refresh();
 }
-```
+```text
 
 ## Version History
 

@@ -12,7 +12,7 @@ This document defines the hierarchical structure and organization of our Operati
 
 ## 🏗 Directory Structure
 
-```
+```text
 operations/
 ├── .obsidian/               # Obsidian configuration
 ├── docs/                    # Main documentation
@@ -39,7 +39,7 @@ operations/
 │   ├── style-guide/     # Writing standards
 │   └── maintenance/     # Maintenance procedures
 └── archive/             # Archived content
-```
+```text
 
 ## 📚 Content Hierarchy
 
@@ -137,7 +137,7 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 tags: [category1, category2]
 ---
-```
+```text
 
 ### Optional Metadata
 ```yaml
@@ -145,7 +145,7 @@ status: draft|review|approved|archived
 owner: document owner
 reviewers: [reviewer1, reviewer2]
 review_frequency: monthly|quarterly|annually
-```
+```text
 
 ## 🔗 Linking Conventions
 
@@ -155,8 +155,8 @@ review_frequency: monthly|quarterly|annually
 - Use `[[filename#section]]` for section links
 
 ### External Links
-- Use `[text](URL)` for external links
-- Include link title: `[text](URL "title")`
+- Use `[text](AGENTS.md)` for external links
+- Include link title: `[text](AGENTS.md)`
 - Document external dependencies
 
 ## 📊 Organization Principles

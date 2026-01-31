@@ -31,7 +31,7 @@ graph TD
     Processes --> FinanceUnit
     Reports --> FinanceUnit
     Meetings --> FinanceUnit
-```
+```text
 
 ## Key Documents
 

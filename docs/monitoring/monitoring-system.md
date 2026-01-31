@@ -20,7 +20,7 @@ graph TD
     A --> D[Performance Monitoring]
     A --> E[Security Monitoring]
     A --> F[Analytics Platform]
-```
+```text
 
 ### System Layers
 ```yaml
@@ -45,7 +45,7 @@ monitoring_layers:
     - threat_detection
     - compliance_checks
     - audit_trails
-```
+```text
 
 ## 🔄 Infrastructure Monitoring
 

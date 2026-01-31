@@ -43,7 +43,7 @@ graph TD
     end
     
     AgentPool -.-> Organizational Units
-```
+```text
 
 ### Key Components
 
@@ -114,7 +114,7 @@ export type Capability =
   | 'classification'
   | 'translation'
   | string; // Allow custom capabilities 
-```
+```text
 
 ### Task Execution Model
 
@@ -143,7 +143,7 @@ interface Task {
   metadata?: Record<string, any>;
   result?: TaskResult;
 }
-```
+```text
 
 ### Coordination Strategies
 

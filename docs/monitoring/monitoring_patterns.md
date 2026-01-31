@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/performance_monitoring]]
   - [[monitoring/resource_monitoring]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the reusable monitoring patterns for the agent system, providing comprehensive pattern templates, implementations, and usage guidelines for consistent monitoring across all components.
@@ -43,7 +43,7 @@ class MonitoringPattern:
         self.processor = DataProcessor()
         self.reporter = ReportGenerator()
         self.alerter = AlertManager()
-```
+```text
 
 #### 1.2 Pattern Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Metric Store]
     C --> F[Analysis Engine]
     D --> G[Processing Pipeline]
-```
+```text
 
 ### 2. Collection Patterns
 #### 2.1 Collector Pattern
@@ -71,7 +71,7 @@ class CollectionPattern:
         collector = await self.collectors.get_collector(registration)
         collection = await self.pipeline.process_collection(collector)
         return await self.validator.validate_data(collection)
-```
+```text
 
 #### 2.2 Collection Types
 - Push Collection
@@ -94,7 +94,7 @@ class AnalysisPattern:
         processing = await self.processor.process_data(data, rules)
         analysis = await self.engine.analyze_data(processing)
         return await self.validator.validate_results(analysis)
-```
+```text
 
 #### 3.2 Analysis Types
 - Statistical Analysis
@@ -117,7 +117,7 @@ class ProcessingPattern:
         enrichment = await self.enricher.enrich_data(transformation)
         processing = await self.pipeline.process_data(enrichment)
         return await self.validator.validate_processing(processing)
-```
+```text
 
 #### 4.2 Processing Types
 - Stream Processing
@@ -140,7 +140,7 @@ class ReportingPattern:
         formatting = await self.formatter.format_report(generation)
         distribution = await self.distributor.distribute_report(formatting)
         return await self.archiver.archive_report(distribution)
-```
+```text
 
 #### 5.2 Report Types
 - Metric Reports
@@ -163,7 +163,7 @@ class AlertPattern:
         classification = await self.classifier.classify_alert(detection)
         routing = await self.router.route_alert(classification)
         return await self.notifier.notify_alert(routing)
-```
+```text
 
 #### 6.2 Alert Types
 - Threshold Alerts
@@ -188,7 +188,7 @@ class PatternImplementation:
     async def validate_pattern(self, validation):
         # Pattern validation
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Pattern Architecture
@@ -205,7 +205,7 @@ class PatternManager:
         self.factory = PatternFactory()
         self.validator = PatternValidator()
         self.monitor = PatternMonitor()
-```
+```text
 
 #### 2.2 Management Types
 - Pattern Registration
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_performance(self, metrics):
         # Performance measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class PatternSecurity:
     async def audit_pattern(self, audit):
         # Audit logging logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Implementation Security
@@ -318,7 +318,7 @@ class ImplementationPattern:
         self.factory = PatternFactory()
         self.validator = PatternValidator()
         self.monitor = PatternMonitor()
-```
+```text
 
 ### B. Integration Patterns
 ```python
@@ -328,7 +328,7 @@ class IntegrationPattern:
         self.connector = PatternConnector()
         self.router = PatternRouter()
         self.transformer = PatternTransformer()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -338,4 +338,4 @@ class SecurityPattern:
         self.validator = SecurityValidator()
         self.control = AccessControl()
         self.audit = AuditLogger()
-``` 
+```text 

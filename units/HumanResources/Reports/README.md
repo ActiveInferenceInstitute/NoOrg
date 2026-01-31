@@ -5,11 +5,11 @@ This directory contains templates, examples, and guidelines for standard reports
 ## Report Types & Templates:
 
 *   [**HR Metrics Dashboard Template**](./HRMetricsDashboardTemplate.md): A template for regularly reporting key HR KPIs (e.g., headcount, turnover, time-to-fill, engagement scores).
-*   [**Headcount Report Template**](./HeadcountReportTemplate.md): Detailed reporting on employee numbers, demographics, and changes.
-*   [**Turnover Analysis Report Template**](./TurnoverAnalysisReportTemplate.md): Analyzing voluntary and involuntary turnover rates and reasons.
-*   [**Recruitment Activity Report Template**](./RecruitmentActivityReportTemplate.md): Tracking key recruitment metrics like pipeline status, source effectiveness, and time-to-hire.
-*   [**Compensation Analysis Report Template**](./CompensationAnalysisReportTemplate.md): Reporting on salary benchmarks, pay equity, and compensation trends.
-*   [**Training & Development Report Template**](./TrainingDevelopmentReportTemplate.md): Tracking participation, costs, and effectiveness of L&D programs.
-*   [**Compliance Audit Report Template**](./ComplianceAuditReportTemplate.md): Summarizing findings from internal or external HR compliance audits.
+*   [**Headcount Report Template**](AGENTS.md): Detailed reporting on employee numbers, demographics, and changes.
+*   [**Turnover Analysis Report Template**](AGENTS.md): Analyzing voluntary and involuntary turnover rates and reasons.
+*   [**Recruitment Activity Report Template**](AGENTS.md): Tracking key recruitment metrics like pipeline status, source effectiveness, and time-to-hire.
+*   [**Compensation Analysis Report Template**](AGENTS.md): Reporting on salary benchmarks, pay equity, and compensation trends.
+*   [**Training & Development Report Template**](AGENTS.md): Tracking participation, costs, and effectiveness of L&D programs.
+*   [**Compliance Audit Report Template**](AGENTS.md): Summarizing findings from internal or external HR compliance audits.
 
 *(Add links to other relevant report templates or examples as they are developed)* 

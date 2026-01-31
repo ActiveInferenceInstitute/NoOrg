@@ -13,7 +13,7 @@ graph LR
     Manager --> Specialist
     Manager --> Officer
     Manager --> BCPLead
-```
+```text
 
 ## 📋 Charter Overview
 ### Purpose
@@ -95,7 +95,7 @@ flowchart TD
     MonitorEffectiveness --> Report[Report & Review]
     Report --> Adjust[Adjust As Needed]
     Adjust --> End[End]
-```
+```text
 
 ## 📊 Operations
 ### Regular Activities

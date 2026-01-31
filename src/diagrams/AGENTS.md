@@ -10,7 +10,7 @@ Complete technical documentation for diagram generation functions.
 
 ```javascript
 function generateOrgStructureDiagram(units, relationships): string
-```
+```text
 
 Generates Mermaid syntax for organizational structure.
 
@@ -24,7 +24,7 @@ Generates Mermaid syntax for organizational structure.
 
 ```javascript
 function generateWorkflowDiagram(workflowSteps, options = {}): string
-```
+```text
 
 Generates Mermaid syntax for workflow.
 

@@ -50,7 +50,7 @@ graph TD
 
     style Start fill:#fff,stroke:#333,stroke-width:2px
     style Endd fill:#fff,stroke:#333,stroke-width:2px
-```
+```text
 
 ## 5. Process Steps
 

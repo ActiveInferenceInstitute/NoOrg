@@ -40,7 +40,7 @@ mindmap
       Conceptual models
       Domain alignment
       Implementation flexibility
-```
+```text
 
 ## Architecture Design Process
 1. **Requirements analysis**
@@ -106,7 +106,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Architectural Styles
 1. **Layered architecture**
@@ -172,7 +172,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Quality Attribute Strategies
 1. **Performance optimization**
@@ -238,7 +238,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Integration Patterns
 1. **API-driven integration**
@@ -296,7 +296,7 @@ mindmap
       Fault tolerance
       Contract testing
       External monitoring
-```
+```text
 
 ## Architecture Documentation
 1. **Views and perspectives**
@@ -362,7 +362,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## System Evaluation Techniques
 1. **Architecture reviews**
@@ -428,7 +428,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Decision-Making Framework for Architecture
 - **When to choose microservices**: Independent scaling needs, team autonomy focus, diverse technology requirements, complex domain with clear boundaries
@@ -479,7 +479,7 @@ flowchart TD
     E1 --> E1c[Speed provides advantage]
     E1 --> E1d[Resource-intensive operations]
     E1 --> E1e[Real-time requirements]
-```
+```text
 
 ## Architecture Decision Record Template
 ```markdown
@@ -511,7 +511,7 @@ flowchart TD
 
 ## Notes
 [Additional information, links, or references]
-```
+```text
 
 ## Component Specification Template
 ```markdown
@@ -551,4 +551,4 @@ flowchart TD
 - **Build Process**: [How the component is built]
 - **Evolution Roadmap**: [Planned future development]
 - **Known Limitations**: [Current constraints or technical debt]
-``` 
+```text 

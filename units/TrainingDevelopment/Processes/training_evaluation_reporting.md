@@ -69,7 +69,7 @@ graph TD
         J --> Needs[[training_needs_analysis]];
         J --> DesignFeedback[[instructional_design_development]];
     end
-```
+```text
 
 ## Roles & Responsibilities
 *   **Training Analyst/Specialist:** Designs evaluation plan, develops instruments, collects/analyzes data, writes reports.

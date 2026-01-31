@@ -41,7 +41,7 @@ mindmap
       Boundary creativity
       Resource scarcity innovation
       Focused problem-solving
-```
+```text
 
 ## Creative Process Framework
 1. **Problem/opportunity framing**
@@ -122,7 +122,7 @@ flowchart TD
     D --> E
     E --> F
     F --> G
-```
+```text
 
 ## Creativity Techniques
 1. **Associative methods**
@@ -183,7 +183,7 @@ graph TD
     E --> E3[Concept combining]
     E --> E4[Prototyping]
     E --> E5[Plus-Minus-Interesting]
-```
+```text
 
 ## Creative Environment Cultivation
 1. **Psychological safety**
@@ -244,7 +244,7 @@ graph LR
     E --> E3[Individual-group balance]
     E --> E4[Idea building processes]
     E --> E5[Productive conflict]
-```
+```text
 
 ## Innovation Types
 1. **Incremental innovation**
@@ -295,7 +295,7 @@ quadrantChart
     "Technological Breakthrough": [0.2, 0.9]
     "Category Creation": [0.9, 0.85]
     "Platform Innovation": [0.85, 0.7]
-```
+```text
 
 ## Creative Blocks and Solutions
 1. **Cognitive blocks**
@@ -376,7 +376,7 @@ flowchart TD
     E4 --> ES4[Inspiration curation]
     E --> E5[Rigid structures]
     E5 --> ES5[Process flexibility]
-```
+```text
 
 ## Creative Thinking Process Model
 ```mermaid
@@ -409,4 +409,4 @@ graph TB
     O -.-> D
     O -.-> H
     O -.-> I
-``` 
+```text 

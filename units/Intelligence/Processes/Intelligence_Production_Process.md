@@ -22,7 +22,7 @@ graph TD
     F -- Approved --> G[6. Final Formatting & Classification Marking];
     G --> H(7. Dissemination Planning);
     H --> I((Output: Disseminated Intelligence Product));
-```
+```text
 
 ## 4. Step Descriptions
 

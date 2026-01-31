@@ -107,7 +107,7 @@ interface Agent {
   getAgentInfo(): AgentInfo;
   updateStatus(status: AgentStatus): void;
 }
-```
+```text
 
 ### Agent Implementation Pattern
 ```typescript
@@ -138,7 +138,7 @@ export class CustomAgent extends AbstractAgent {
     return { success: true, result: 'processed' };
   }
 }
-```
+```text
 
 ## Testing Strategy
 
@@ -221,8 +221,8 @@ export class CustomAgent extends AbstractAgent {
 
 ## Related Documentation
 
-- [Agent Framework](../../../src/agents/README.md)
-- [Core Systems](../../../src/core/README.md)
-- [Testing Guide](../../../tests/README.md)
-- [Operations Guide](../../../docs/operations/index.md)
-- [Security Guide](../../../docs/security/index.md)
+- [Agent Framework](../../README.md)
+- [Core Systems](../../README.md)
+- [Testing Guide](../../README.md)
+- [Operations Guide](../index.md)
+- [Security Guide](../index.md)

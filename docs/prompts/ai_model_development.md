@@ -35,7 +35,7 @@ mindmap
       Performance drift detection
       Feedback incorporation
       Periodic reassessment
-```
+```text
 
 ## AI Development Lifecycle
 1. **Problem definition**
@@ -121,7 +121,7 @@ graph TD
     P -.-> C
     P -.-> F
     P -.-> J
-```
+```text
 
 ## Model Evaluation Framework
 1. **Performance metrics**
@@ -187,7 +187,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Responsible AI Implementation
 1. **Ethical considerations**
@@ -253,7 +253,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Model Optimization Strategies
 1. **Architecture optimization**
@@ -311,7 +311,7 @@ mindmap
       Processing models
       Data flow optimization
       Latency requirements
-```
+```text
 
 ## Decision-Making Framework for AI Development
 - **When to use simple models**: Limited data, explainability requirements, computational constraints, baseline establishment
@@ -356,7 +356,7 @@ graph TD
     E1 --> E1b[Protected group impacts]
     E1 --> E1c[Irreversible decisions]
     E1 --> E1d[High autonomy level]
-```
+```text
 
 ## AI Model Documentation Template
 ```markdown
@@ -410,4 +410,4 @@ graph TD
 - **Update Schedule**: [Expected update frequency]
 - **Retraining Triggers**: [Events that would prompt retraining]
 - **Retirement Criteria**: [Conditions for model retirement]
-``` 
+```text 

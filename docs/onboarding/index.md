@@ -89,7 +89,7 @@ graph TB
     end
     
     Environment --> Access
-```
+```text
 
 ## Development Workflow
 
@@ -215,7 +215,7 @@ graph TB
     Preparation --> Access
     Access --> Training
     Training --> FirstTask
-```
+```text
 
 ## Technology Stack
 
@@ -365,7 +365,7 @@ graph TB
     Frontend --> Backend
     Backend --> Data
     Backend --> DevOps
-```
+```text
 
 ## Team Structure
 
@@ -466,7 +466,7 @@ graph TB
     
     Management --> Teams
     Teams --> Process
-```
+```text
 
 ## Key Resources
 
@@ -524,7 +524,7 @@ graph TB
     Root --> Development
     Root --> Process
     Root --> Support
-```
+```text
 
 ## Related Documentation
 - [Development Guide](../development/index.md)

@@ -44,7 +44,7 @@ initial_setup:
       - orientation_materials
       - reference_guides
       - contact_information
-```
+```text
 
 ### System Access
 ```python
@@ -75,7 +75,7 @@ class UserOnboarding:
     def verify_setup(self):
         """Verify onboarding setup"""
         pass
-```
+```text
 
 ## 📚 Quick Start Guides
 
@@ -125,7 +125,7 @@ class UserOnboarding:
     }
   }
 }
-```
+```text
 
 ### Guide Implementation
 ```python
@@ -156,7 +156,7 @@ class QuickStartGuides:
     def update_guides(self):
         """Update guide content"""
         pass
-```
+```text
 
 ## 🎯 Common Tasks
 
@@ -192,7 +192,7 @@ common_tasks:
       - progress_monitoring
       - milestone_tracking
       - deadline_management
-```
+```text
 
 ### Task Management
 ```python
@@ -223,7 +223,7 @@ class TaskManager:
     def track_execution(self):
         """Track task execution"""
         pass
-```
+```text
 
 ## 📊 Progress Tracking
 
@@ -259,7 +259,7 @@ progress_tracking:
       - daily_updates
       - weekly_summaries
       - monthly_reviews
-```
+```text
 
 ### Analytics System
 ```python
@@ -290,7 +290,7 @@ class OnboardingAnalytics:
     def generate_insights(self):
         """Generate analytical insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -324,7 +324,7 @@ class OnboardingAnalytics:
     }
   }
 }
-```
+```text
 
 ### Process Enhancement
 ```python
@@ -355,7 +355,7 @@ class ImprovementManager:
     def track_progress(self):
         """Track improvement progress"""
         pass
-```
+```text
 
 ## 📚 References
 

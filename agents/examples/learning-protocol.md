@@ -22,7 +22,7 @@ protocol:
   version: 1.0.0
   category: distributed_learning
   style: publish_subscribe_with_federation
-```
+```text
 
 ### Participants
 - Learning Agent (LA)
@@ -61,7 +61,7 @@ sequenceDiagram
         LA->>LW: AdaptationDirective
         LW-->>LA: AdaptationComplete
     end
-```
+```text
 
 ## States & Transitions
 
@@ -122,7 +122,7 @@ states:
         trigger: error_resolved
       - to: failed
         trigger: recovery_failed
-```
+```text
 
 ## Message Definitions
 
@@ -196,7 +196,7 @@ messages:
           "gradient_norm": 0.1
         }
       }
-```
+```text
 
 ### Event Messages
 ```yaml
@@ -232,7 +232,7 @@ events:
           "loss": 0.1
         }
       }
-```
+```text
 
 ## Implementation
 
@@ -247,7 +247,7 @@ components:
     - gradient_computer
     - model_optimizer
     - metrics_collector
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -262,7 +262,7 @@ integration:
   model_storage:
     type: distributed_fs
     retention: "30d"
-```
+```text
 
 ## Behavior
 
@@ -288,7 +288,7 @@ error_handling:
     - error: distribution_failure
       action: retry_distribution
       retry: true
-```
+```text
 
 ## Quality of Service
 
@@ -301,7 +301,7 @@ performance:
   throughput:
     experience_batches: 1000_per_second
     model_updates: 10_per_second
-```
+```text
 
 ### Reliability Measures
 ```yaml
@@ -313,7 +313,7 @@ reliability:
   consistency:
     model_versioning: true
     update_ordering: strict
-```
+```text
 
 ## Security
 
@@ -329,7 +329,7 @@ security:
       - experience_collector
       - learning_worker
       - model_consumer
-```
+```text
 
 ### Data Protection
 ```yaml
@@ -340,7 +340,7 @@ data_protection:
   integrity:
     checksum: sha256
     signature: ed25519
-```
+```text
 
 ## Monitoring
 
@@ -357,7 +357,7 @@ monitoring:
     - name: convergence_rate
       type: counter
       labels: [model_type]
-```
+```text
 
 ### Logging Requirements
 ```yaml
@@ -372,7 +372,7 @@ logging:
     - worker_id
     - model_version
     - operation
-```
+```text
 
 ## Maintenance
 

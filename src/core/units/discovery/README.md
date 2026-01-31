@@ -61,7 +61,7 @@ await discovery.registerAgent({
 
 // Discover agents by capability
 const analysts = await discovery.findAgentsByCapability('data-analysis');
-```
+```text
 
 ### Unit Discovery
 
@@ -72,7 +72,7 @@ const unitDiscovery = new UnitDiscovery();
 
 // Discover units
 const units = await unitDiscovery.discoverUnits();
-```
+```text
 
 ## Integration
 

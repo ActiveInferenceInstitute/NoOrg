@@ -76,7 +76,7 @@ gantt
     Board Comp Approval :active, 2025-02-10, 10d
     Next Cycle Goal Set :active, 2025-02-01, 20d
 
-```
+```text
 
 ## 7. Inputs
 

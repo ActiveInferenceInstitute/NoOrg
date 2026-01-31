@@ -55,7 +55,7 @@ sequenceDiagram
     Note over OD_HR: Post-Cycle Analysis
     OD_HR->>OD_HR: Analyze Trends, Ratings Distribution
     OD_HR->>Leaders: Report on Cycle Outcomes & Process Effectiveness
-```
+```text
 
 **Detailed Steps:**
 

@@ -19,7 +19,7 @@ The **CustomerSupportAgent** specializes in handling customer inquiries, trouble
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 **Parameters:**
 - `config` (AgentConfig): Configuration object containing agent settings
@@ -41,7 +41,7 @@ const supportAgent = new CustomerSupportAgent({
     responseTemplates: templates
   }
 });
-```
+```text
 
 ### Core Methods
 
@@ -68,7 +68,7 @@ async respondToInquiry(
     checkCache?: boolean;
   }
 ): Promise<SupportResponse>
-```
+```text
 
 **Parameters:**
 - `inquiry` (string): Customer's question or issue
@@ -96,7 +96,7 @@ const response = await supportAgent.respondToInquiry(
 console.log('Response:', response.response);
 console.log('Classification:', response.classification);
 console.log('Suggested Actions:', response.suggestedActions);
-```
+```text
 
 #### createTroubleshootingGuide()
 
@@ -116,7 +116,7 @@ async createTroubleshootingGuide(
     checkCache?: boolean;
   }
 ): Promise<TroubleshootingGuide>
-```
+```text
 
 **Parameters:**
 - `issue` (string): Issue to create troubleshooting guide for
@@ -140,7 +140,7 @@ const guide = await supportAgent.createTroubleshootingGuide(
 console.log('Title:', guide.title);
 console.log('Steps:', guide.steps.length);
 console.log('Prerequisites:', guide.prerequisites);
-```
+```text
 
 #### analyzeSentiment()
 
@@ -156,7 +156,7 @@ async analyzeSentiment(
     checkCache?: boolean;
   }
 ): Promise<SentimentAnalysis>
-```
+```text
 
 **Parameters:**
 - `feedback` (string): Customer feedback text
@@ -178,7 +178,7 @@ const sentiment = await supportAgent.analyzeSentiment(
 console.log('Sentiment:', sentiment.overallSentiment);
 console.log('Score:', sentiment.sentimentScore);
 console.log('Topics:', sentiment.topics);
-```
+```text
 
 ## Configuration Options
 
@@ -193,7 +193,7 @@ interface CustomerSupportAgentConfig extends AgentConfig {
   responseTemplates?: Record<string, string>;
   cacheTTL?: number;
 }
-```
+```text
 
 ### Runtime Options
 
@@ -207,7 +207,7 @@ interface InquiryResponseOptions {
   responseFormat?: 'email' | 'chat' | 'ticket' | 'social';
   checkCache?: boolean;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -251,7 +251,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ### With Other Agents
 
@@ -267,7 +267,7 @@ const guide = await supportAgent.createTroubleshootingGuide(
 
 // Analysis Agent reviews sentiment
 const sentiment = await analysisAgent.analyzeSentiment(customerFeedback);
-```
+```text
 
 ## Best Practices
 
@@ -283,7 +283,7 @@ const response = await supportAgent.respondToInquiry(inquiry, {
   },
   productContext: productDetails
 });
-```
+```text
 
 ### 2. Response Quality
 ```typescript
@@ -298,7 +298,7 @@ const chatResponse = await supportAgent.respondToInquiry(inquiry, {
   responseFormat: 'chat',
   tone: 'friendly'
 });
-```
+```text
 
 ### 3. Troubleshooting Guides
 ```typescript
@@ -312,7 +312,7 @@ const advancedGuide = await supportAgent.createTroubleshootingGuide(issue, {
   userLevel: 'advanced',
   format: 'decision-tree'
 });
-```
+```text
 
 ### 4. Sentiment Monitoring
 ```typescript
@@ -326,7 +326,7 @@ if (sentiment.sentimentScore < -0.5) {
   // Escalate negative feedback
   await escalateNegativeFeedback(sentiment);
 }
-```
+```text
 
 ## Error Handling
 
@@ -343,7 +343,7 @@ try {
     console.error('Unexpected error:', error);
   }
 }
-```
+```text
 
 **Common Error Types:**
 - `InquiryValidationError` - Invalid inquiry format
@@ -370,7 +370,7 @@ const agent = new CustomerSupportAgent({
     responseTemplates: customTemplates
   }
 });
-```
+```text
 
 ### Multi-language Support
 
@@ -390,7 +390,7 @@ if (detectedLanguage !== 'en') {
 
   console.log('Translated Response:', translatedResponse);
 }
-```
+```text
 
 ### Real-time Support Integration
 
@@ -404,7 +404,7 @@ const response = await supportAgent.respondToInquiry(chatMessage.content, {
 });
 
 await chatSystem.sendMessage(response.response);
-```
+```text
 
 ## Troubleshooting
 
@@ -423,7 +423,7 @@ const response = await supportAgent.respondToInquiry(inquiry, {
   },
   productContext: detailedProductInfo
 });
-```
+```text
 
 #### 2. "Troubleshooting guide too complex"
 **Cause:** User level not properly specified
@@ -435,7 +435,7 @@ const guide = await supportAgent.createTroubleshootingGuide(issue, {
   includeImages: true,
   format: 'step-by-step'
 });
-```
+```text
 
 #### 3. "Sentiment analysis inaccurate"
 **Cause:** Complex or ambiguous feedback
@@ -446,7 +446,7 @@ const sentiment = await supportAgent.analyzeSentiment(feedback, {
   customerContext: customerInfo,
   includeTopics: true
 });
-```
+```text
 
 ### Performance Optimization
 
@@ -468,7 +468,7 @@ try {
   console.error('Detailed error:', error.details);
   console.error('Stack trace:', error.stack);
 }
-```
+```text
 
 ## Version History
 

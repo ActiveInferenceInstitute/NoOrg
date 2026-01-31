@@ -40,7 +40,7 @@ mindmap
       Role distribution
       Recognition systems
       Quality standards
-```
+```text
 
 ## Documentation Planning Framework
 1. **Audience analysis**
@@ -106,7 +106,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Technical Documentation Types
 1. **System documentation**
@@ -172,7 +172,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Knowledge Base Structuring Principles
 1. **Information architecture**
@@ -238,7 +238,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Documentation Best Practices
 1. **Content creation**
@@ -296,7 +296,7 @@ mindmap
       Change updates
       Question-driven refinement
       Technique incorporation
-```
+```text
 
 ## Knowledge Capture Workflows
 1. **Documentation-driven development**
@@ -362,7 +362,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Knowledge Management Systems
 1. **Documentation platforms**
@@ -428,7 +428,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Decision-Making Framework for Documentation
 - **When to create new documentation**: New features, frequent user questions, complex processes, onboarding challenges, compliance requirements
@@ -479,7 +479,7 @@ flowchart TD
     F1 --> F1c[Data system-derived]
     F1 --> F1d[Material reference-based]
     F1 --> F1e[Volume high]
-```
+```text
 
 ## Documentation Quality Assessment Framework
 ```markdown
@@ -519,4 +519,4 @@ flowchart TD
 - **Usage patterns**: [Most/least accessed content]
 - **Support correlation**: [Relationship with support requests]
 - **Benchmark comparison**: [Comparison to industry standards]
-``` 
+```text 

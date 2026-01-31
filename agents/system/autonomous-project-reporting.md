@@ -37,7 +37,7 @@ graph TD
         RT --> RC[Report Customization]
         RC --> RD[Report Distribution]
     end
-```
+```text
 
 ## Data Management
 
@@ -80,7 +80,7 @@ class DataCollectionSystem:
             data = await collector.collect(project)
             raw_data.update(data)
         return raw_data
-```
+```text
 
 ### Analytics Engine
 ```python
@@ -121,7 +121,7 @@ class AnalyticsEngine:
         except Exception as e:
             await self._handle_analytics_error(e, project_data)
             raise
-```
+```text
 
 ## Reporting System
 
@@ -159,7 +159,7 @@ class ReportGenerator:
         except Exception as e:
             await self._handle_report_error(e, project)
             raise
-```
+```text
 
 ### Insight Generator
 ```python
@@ -201,7 +201,7 @@ class ProjectInsightGenerator:
         except Exception as e:
             await self._handle_insight_error(e, project)
             raise
-```
+```text
 
 ## Report Types
 
@@ -236,7 +236,7 @@ progress_reports:
           - milestone_status
           - trend_analysis
           - strategic_insights
-```
+```text
 
 ### Performance Reports
 ```yaml
@@ -269,7 +269,7 @@ performance_reports:
         analysis:
           - impact_assessment
           - value_creation
-```
+```text
 
 ## Analytics Configuration
 
@@ -304,7 +304,7 @@ analysis_configuration:
           - task_characteristics
           - performance_indicators
           - risk_factors
-```
+```text
 
 ### Insight Generation
 ```yaml
@@ -328,7 +328,7 @@ insight_configuration:
         - trend_patterns
         - seasonal_patterns
         - anomaly_patterns
-```
+```text
 
 ## Best Practices
 
@@ -352,7 +352,7 @@ reporting_best_practices:
     - ensure_timely_delivery
     - enable_feedback_collection
     - maintain_security
-```
+```text
 
 ### Analytics Best Practices
 ```yaml
@@ -374,7 +374,7 @@ analytics_best_practices:
     - visualize_effectively
     - focus_on_relevance
     - enable_drill-down
-```
+```text
 
 ## Documentation
 

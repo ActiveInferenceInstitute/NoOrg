@@ -26,7 +26,7 @@ graph TD
     E --> G[Processing Service]
     F --> H[(Database)]
     G --> I[Cache Layer]
-```
+```text
 
 ### Extension Points
 - Plugin architecture for custom integrations
@@ -67,7 +67,7 @@ interface Operation extends BaseEntity {
   status: OperationStatus;
   metadata: Record<string, unknown>;
 }
-```
+```text
 
 ### Migration Strategy
 1. Version-controlled schema changes

@@ -44,7 +44,7 @@ graph TD
         E --> E3
         E --> E4
     end
-```
+```text
 
 ### 3.1. Define Scope and Context
 - **Activity:** Clearly define the scope of the risk identification exercise (e.g., specific project, process, unit, or enterprise-wide).

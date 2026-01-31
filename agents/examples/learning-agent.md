@@ -32,7 +32,7 @@ capabilities:
     - learning_coordination
     - model_distribution
     - feedback_processing
-```
+```text
 
 ## Architecture
 
@@ -48,7 +48,7 @@ cognitive_architecture:
     - distributed_learning
     - transfer_knowledge
     - meta_learning
-```
+```text
 
 ### Behavioral Framework
 ```mermaid
@@ -65,7 +65,7 @@ graph TD
     H -.-> F
     I[System Feedback] -.-> E
     I -.-> F
-```
+```text
 
 ## Implementation
 
@@ -91,7 +91,7 @@ integration:
     - type: learning_metrics
       format: json
       protocol: [[protocols#learning-monitoring]]
-```
+```text
 
 ## Learning Specification
 
@@ -119,7 +119,7 @@ learning_methods:
     - type: reptile
       scope: meta_optimization
       update_frequency: meta_batch
-```
+```text
 
 ### Adaptation Strategies
 ```yaml
@@ -138,7 +138,7 @@ adaptation:
     - stability_preservation
     - performance_bounds
     - resource_limits
-```
+```text
 
 ## Communication
 
@@ -155,7 +155,7 @@ message_formats:
   outgoing:
     - [[message-formats#model-update]]
     - [[message-formats#learning-status]]
-```
+```text
 
 ## Performance
 
@@ -177,7 +177,7 @@ performance_metrics:
       threshold: 0.8
     - metric: memory_usage
       threshold: 0.7
-```
+```text
 
 ### Monitoring
 - [[monitoring-system#learning|Learning Monitoring]]
@@ -191,7 +191,7 @@ security:
   authentication: model_signature
   authorization: capability_based
   encryption: homomorphic
-```
+```text
 
 ### Safety Protocols
 - [[safety-protocols#learning-bounds|Learning Bounds]]
@@ -213,7 +213,7 @@ knowledge_management:
     - knowledge_distillation
     - experience_fusion
     - model_ensemble
-```
+```text
 
 ### Learning Optimization
 ```yaml
@@ -230,7 +230,7 @@ optimization:
     - stability_bounds
     - resource_limits
     - safety_requirements
-```
+```text
 
 ### Distributed Learning
 ```yaml
@@ -243,7 +243,7 @@ distributed_learning:
     - model_compression
     - gradient_sparsification
     - quantization
-```
+```text
 
 ## Maintenance
 

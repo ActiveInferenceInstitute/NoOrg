@@ -34,7 +34,7 @@ graph TB
 
     Infrastructure --> Operations
     Operations --> Development
-```
+```text
 
 ## Core Components
 
@@ -58,7 +58,7 @@ graph LR
     
     Physical --> Virtual
     Virtual --> Cloud
-```
+```text
 
 ### Operations
 ```mermaid
@@ -72,7 +72,7 @@ sequenceDiagram
     L->>A: Log Analysis
     A->>R: Alerts
     R->>M: Resolution
-```
+```text
 
 ### Development
 ```mermaid
@@ -83,12 +83,12 @@ graph LR
         D3 --> D4[Deployment]
         D4 --> D5[Maintenance]
     end
-```
+```text
 
 ## Quick Navigation
 
 ### Infrastructure Documentation
-- [Infrastructure Overview](infrastructure/overview.md)
+- [Infrastructure Overview](../../examples/lexdao/overview.md)
 - [Network Architecture](infrastructure/network.md)
 - [Storage Systems](infrastructure/storage.md)
 - [Security Architecture](infrastructure/security.md)
@@ -129,7 +129,7 @@ graph TB
     
     External --> Integration
     Integration --> Internal
-```
+```text
 
 ## Maintenance and Updates
 
@@ -147,13 +147,13 @@ graph LR
     H2 --> H5[Metrics Collection]
     H3 --> H6[Security Scans]
     H4 --> H7[Uptime Monitoring]
-```
+```text
 
 ## Related Documentation
-- [Security Policies](../policies/security.md)
-- [Compliance Guidelines](../guidelines/compliance.md)
-- [Disaster Recovery](../operations/disaster-recovery.md)
-- [Architecture Decisions](../architecture/decisions.md)
+- [Security Policies](../policies/AGENTS.md)
+- [Compliance Guidelines](../guidelines/AGENTS.md)
+- [Disaster Recovery](../infrastructure/disaster-recovery.md)
+- [Architecture Decisions](../architecture/AGENTS.md)
 
 ---
 

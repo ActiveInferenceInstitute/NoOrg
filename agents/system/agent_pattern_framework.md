@@ -141,7 +141,7 @@ class ResourceManager {
     this.updateTracking(resources);
   }
 }
-```
+```text
 
 ## 📊 Operation Patterns
 
@@ -197,7 +197,7 @@ class TaskExecutor {
     return this.executeRecovery(recovery, execution);
   }
 }
-```
+```text
 
 ## 🔄 Learning Patterns
 
@@ -253,7 +253,7 @@ class AdaptationManager {
     return this.applyImprovements(improvements);
   }
 }
-```
+```text
 
 ## 🔒 Security Patterns
 
@@ -309,7 +309,7 @@ class DataProtector {
     return this.reportStatus(status);
   }
 }
-```
+```text
 
 ## 📈 Performance Patterns
 
@@ -365,7 +365,7 @@ class OperationOptimizer {
     return this.reportValidation(validation);
   }
 }
-```
+```text
 
 ## 🔗 Framework Integration
 

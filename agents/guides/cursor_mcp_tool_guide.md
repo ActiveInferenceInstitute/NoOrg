@@ -48,7 +48,7 @@ This guide provides comprehensive instructions for effectively utilizing Model C
     }
   }
 }
-```
+```text
 
 ### Tool Registration
 ```json
@@ -68,7 +68,7 @@ This guide provides comprehensive instructions for effectively utilizing Model C
     }
   ]
 }
-```
+```text
 
 ## 🔧 Tool Usage
 
@@ -85,7 +85,7 @@ await mcp.executeTool("file_operations", "write", {
   path: "path/to/file",
   content: "file content"
 });
-```
+```text
 
 2. Code Analysis
 ```typescript
@@ -97,7 +97,7 @@ await mcp.executeTool("code_analysis", "analyze", {
     security: true
   }
 });
-```
+```text
 
 ### Advanced Operations
 1. Tool Chaining
@@ -116,7 +116,7 @@ async function analyzeAndFormat(code) {
   
   return analysis;
 }
-```
+```text
 
 2. Error Handling
 ```typescript
@@ -131,7 +131,7 @@ try {
     // Handle other errors
   }
 }
-```
+```text
 
 ## 📊 Context Management
 
@@ -148,7 +148,7 @@ await context.update({
   file: "current_file",
   position: cursor.position
 });
-```
+```text
 
 ### Resource Management
 ```typescript
@@ -160,7 +160,7 @@ const resources = await mcp.allocateResources({
 
 // Release resources
 await resources.release();
-```
+```text
 
 ## 🔒 Security Best Practices
 
@@ -173,7 +173,7 @@ await mcp.configure({
     token: process.env.MCP_TOKEN
   }
 });
-```
+```text
 
 ### Permission Management
 ```typescript
@@ -187,7 +187,7 @@ const permissions = await mcp.requestPermissions([
 if (await permissions.has("file_write")) {
   // Perform write operation
 }
-```
+```text
 
 ## 📈 Performance Optimization
 
@@ -206,7 +206,7 @@ const result = await cache.getOrCompute(
     code: "code to analyze"
   })
 );
-```
+```text
 
 ### Batching
 ```typescript
@@ -223,7 +223,7 @@ batch.add("file_operations", "read", {
 
 // Execute batch
 const results = await batch.execute();
-```
+```text
 
 ## 🔄 Integration Patterns
 
@@ -237,7 +237,7 @@ mcp.on("tool.executed", (event) => {
 mcp.on("error", (error) => {
   console.error(`Error: ${error.message}`);
 });
-```
+```text
 
 ### Workflow Integration
 ```typescript
@@ -260,7 +260,7 @@ const workflow = await mcp.createWorkflow({
 await workflow.execute({
   code: "code to review"
 });
-```
+```text
 
 ## 📊 Monitoring and Analytics
 
@@ -277,7 +277,7 @@ const metrics = await mcp.getMetrics({
   tool: "code_analysis",
   period: "1h"
 });
-```
+```text
 
 ### Usage Analytics
 ```typescript
@@ -296,7 +296,7 @@ const report = await mcp.getUsageReport({
   period: "1d",
   groupBy: "tool"
 });
-```
+```text
 
 ## 🔍 Troubleshooting
 
@@ -314,7 +314,7 @@ const logs = await mcp.getLogs({
   level: "error",
   period: "1h"
 });
-```
+```text
 
 ### Diagnostics
 ```typescript
@@ -326,7 +326,7 @@ const status = await mcp.getStatus();
 const connection = await mcp.testConnection({
   timeout: "5s"
 });
-```
+```text
 
 ## 🔗 Related Resources
 

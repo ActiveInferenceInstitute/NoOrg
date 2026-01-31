@@ -38,7 +38,7 @@ Scripts can be run directly:
 
 ```bash
 node scripts/performance-optimizer.js
-```
+```text
 
 ## Related Documentation
 

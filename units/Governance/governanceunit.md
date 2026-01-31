@@ -291,7 +291,7 @@ graph TD
     G -- Liaison --> E;
     G -- Liaison --> F;
     style G fill:#f9f,stroke:#333,stroke-width:2px;
-```
+```text
 
 ### Policy Lifecycle Process
 ```mermaid
@@ -309,7 +309,7 @@ graph LR
     I -- No Changes --> H;
     E -- Rejected --> B;
     D -- Revisions Needed --> B;
-```
+```text
 
 ### Key Interfaces & Information Flow
 ```mermaid
@@ -336,7 +336,7 @@ sequenceDiagram
     Gov Unit->>Compliance: Policies, Frameworks, Guidance
     Gov Unit->>Units: Policies, Training, Guidance
     Units->>Gov Unit: Compliance Data, Queries, Feedback
-```
+```text
 
 ---
 Last Updated: [[current_date]]

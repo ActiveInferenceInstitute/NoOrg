@@ -38,7 +38,7 @@ graph TD
     K -.->|If needed| E
     K -.->|If needed| F
     K -.->|If needed| G
-```
+```text
 
 ## 🤖 Agent Integration Points
 
@@ -96,7 +96,7 @@ graph TD
     }
   ]
 }
-```
+```text
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## 🚀 Deployment Process
@@ -164,7 +164,7 @@ flowchart TD
         J
         K
     end
-```
+```text
 
 ### Platform-Specific Deployment
 1. **Container Deployment**
@@ -244,7 +244,7 @@ graph TB
     E --> O[Runtime toggles]
     E --> P[Selective activation]
     E --> Q[Progressive delivery]
-```
+```text
 
 ### Progressive Deployment
 1. **Canary Deployment**
@@ -430,7 +430,7 @@ deployment:
       - error-rate > 1%
       - response-time > 500ms
       - availability < 99.9%
-```
+```text
 
 ### Feature Flag Configuration Example
 
@@ -461,7 +461,7 @@ deployment:
     }
   ]
 }
-```
+```text
 
 ---
 **Metadata**

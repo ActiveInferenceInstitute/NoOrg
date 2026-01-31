@@ -69,4 +69,4 @@ graph TD
     F -- No --> H[Monitor for Recurrence]
     G --> I[Verify Resolution]
     I --> J[Document & Close Ticket]
-``` 
+```text 

@@ -46,7 +46,7 @@ incident_management:
       - process_improvement
       - preventive_measures
     sla: "24 hours"
-```
+```text
 
 ### Incident Handling
 ```python
@@ -82,7 +82,7 @@ class IncidentHandler:
     def escalate_incident(self):
         """Escalate incident when needed"""
         pass
-```
+```text
 
 ## 🔄 Change Management
 
@@ -131,7 +131,7 @@ class IncidentHandler:
     }
   }
 }
-```
+```text
 
 ### Change Workflow
 ```python
@@ -162,7 +162,7 @@ class ChangeManager:
     def track_implementation(self):
         """Track change implementation"""
         pass
-```
+```text
 
 ## 🚀 Release Management
 
@@ -201,7 +201,7 @@ release_management:
       - deployment_report
       - test_results
       - status_updates
-```
+```text
 
 ### Release Coordination
 ```python
@@ -235,7 +235,7 @@ class ReleaseCoordinator:
     def monitor_deployment(self):
         """Monitor release deployment"""
         pass
-```
+```text
 
 ## 📊 Process Metrics
 
@@ -259,7 +259,7 @@ process_metrics:
     - release_cycle_time
     - defect_rate
     - customer_impact
-```
+```text
 
 ### Metrics Analysis
 ```python
@@ -290,7 +290,7 @@ class ProcessAnalyzer:
     def generate_insights(self):
         """Generate process insights"""
         pass
-```
+```text
 
 ## 🔄 Process Integration
 
@@ -317,7 +317,7 @@ class ProcessAnalyzer:
     }
   }
 }
-```
+```text
 
 ### Automation Support
 ```python
@@ -348,7 +348,7 @@ class ProcessAutomation:
     def monitor_automation(self):
         """Monitor automation performance"""
         pass
-```
+```text
 
 ## 📚 References
 

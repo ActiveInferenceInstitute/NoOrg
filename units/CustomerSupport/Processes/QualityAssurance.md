@@ -15,7 +15,7 @@ flowchart TD
     Coach --> Monitor[Monitor Progress]
     Monitor --> Calibrate[Calibrate Standards]
     Calibrate --> Define
-```
+```text
 
 ## Quality Standards
 

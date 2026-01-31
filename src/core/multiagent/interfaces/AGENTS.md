@@ -12,7 +12,7 @@ Complete technical documentation for all interface definitions in the multi-agen
 
 ```typescript
 registerAgent(agent: Agent): Promise<boolean>
-```
+```text
 
 Registers a new agent.
 
@@ -25,7 +25,7 @@ Registers a new agent.
 
 ```typescript
 unregisterAgent(agentId: string): Promise<boolean>
-```
+```text
 
 Unregisters an agent.
 
@@ -38,7 +38,7 @@ Unregisters an agent.
 
 ```typescript
 updateAgent(agentId: string, updates: Partial<Agent>): Promise<boolean>
-```
+```text
 
 Updates an agent.
 
@@ -52,7 +52,7 @@ Updates an agent.
 
 ```typescript
 getAgent(agentId: string): Promise<Agent | null>
-```
+```text
 
 Gets agent by ID.
 
@@ -65,7 +65,7 @@ Gets agent by ID.
 
 ```typescript
 listAgents(filter?: AgentFilter): Promise<AgentType[]>
-```
+```text
 
 Lists agents with optional filtering.
 
@@ -78,7 +78,7 @@ Lists agents with optional filtering.
 
 ```typescript
 findAgentsByCapability(capability: string): Promise<AgentType[]>
-```
+```text
 
 Finds agents by capability.
 
@@ -91,7 +91,7 @@ Finds agents by capability.
 
 ```typescript
 findAgentsByType(type: string): Promise<AgentType[]>
-```
+```text
 
 Finds agents by type.
 
@@ -104,7 +104,7 @@ Finds agents by type.
 
 ```typescript
 getAgentCapabilities(agentId: string): Promise<string[]>
-```
+```text
 
 Gets capabilities for an agent.
 
@@ -121,7 +121,7 @@ Gets capabilities for an agent.
 
 ```typescript
 createTask(taskData: Partial<Task>): Promise<string>
-```
+```text
 
 Creates a new task.
 
@@ -134,7 +134,7 @@ Creates a new task.
 
 ```typescript
 assignTask(taskId: string, agentId: string): Promise<void>
-```
+```text
 
 Assigns task to agent.
 
@@ -148,7 +148,7 @@ Assigns task to agent.
 
 ```typescript
 startTask(taskId: string): Promise<void>
-```
+```text
 
 Starts task execution.
 
@@ -161,7 +161,7 @@ Starts task execution.
 
 ```typescript
 completeTask(taskId: string, result: TaskResult): Promise<void>
-```
+```text
 
 Completes a task.
 
@@ -175,7 +175,7 @@ Completes a task.
 
 ```typescript
 failTask(taskId: string, error: Error): Promise<void>
-```
+```text
 
 Marks task as failed.
 
@@ -189,7 +189,7 @@ Marks task as failed.
 
 ```typescript
 cancelTask(taskId: string): Promise<void>
-```
+```text
 
 Cancels a task.
 
@@ -202,7 +202,7 @@ Cancels a task.
 
 ```typescript
 getTask(taskId: string): Promise<Task>
-```
+```text
 
 Gets task by ID.
 
@@ -215,7 +215,7 @@ Gets task by ID.
 
 ```typescript
 listTasks(filter?: TaskFilter): Promise<Task[]>
-```
+```text
 
 Lists tasks with optional filtering.
 
@@ -228,7 +228,7 @@ Lists tasks with optional filtering.
 
 ```typescript
 areDependenciesSatisfied(taskId: string): Promise<boolean>
-```
+```text
 
 Checks if task dependencies are satisfied.
 
@@ -241,7 +241,7 @@ Checks if task dependencies are satisfied.
 
 ```typescript
 unassignTask(taskId: string): Promise<void>
-```
+```text
 
 Unassigns a task from its current agent.
 
@@ -254,7 +254,7 @@ Unassigns a task from its current agent.
 
 ```typescript
 reassignTask(taskId: string, newAgentId: string): Promise<void>
-```
+```text
 
 Reassigns a task to a different agent.
 
@@ -268,7 +268,7 @@ Reassigns a task to a different agent.
 
 ```typescript
 updateTask(taskId: string, updates: Partial<Omit<Task, 'id' | 'createdAt'>>): Promise<void>
-```
+```text
 
 Updates task properties.
 
@@ -282,7 +282,7 @@ Updates task properties.
 
 ```typescript
 getReadyTasks(): Promise<Task[]>
-```
+```text
 
 Gets tasks that are ready to be executed (dependencies satisfied).
 
@@ -292,7 +292,7 @@ Gets tasks that are ready to be executed (dependencies satisfied).
 
 ```typescript
 countTasksByStatus(): Promise<Record<string, number>>
-```
+```text
 
 Counts tasks by status.
 
@@ -302,7 +302,7 @@ Counts tasks by status.
 
 ```typescript
 getTaskHistory(taskId: string): Promise<any[]>
-```
+```text
 
 Gets task history including all state changes.
 
@@ -315,7 +315,7 @@ Gets task history including all state changes.
 
 ```typescript
 estimateTaskDuration(task: Task): Promise<number>
-```
+```text
 
 Estimates task duration based on historical data.
 
@@ -328,7 +328,7 @@ Estimates task duration based on historical data.
 
 ```typescript
 getTaskStatistics(): Promise<any>
-```
+```text
 
 Gets task statistics.
 
@@ -338,7 +338,7 @@ Gets task statistics.
 
 ```typescript
 cleanupOldTasks(olderThan: number): Promise<number>
-```
+```text
 
 Cleans up old completed tasks.
 
@@ -359,7 +359,7 @@ setState(
   value: unknown,
   options?: StateUpdateOptions
 ): Promise<void>
-```
+```text
 
 Sets state value.
 
@@ -374,7 +374,7 @@ Sets state value.
 
 ```typescript
 getState(path: string): Promise<unknown>
-```
+```text
 
 Gets state value.
 
@@ -387,7 +387,7 @@ Gets state value.
 
 ```typescript
 clearState(): Promise<void>
-```
+```text
 
 Clears entire state.
 
@@ -397,7 +397,7 @@ Clears entire state.
 
 ```typescript
 loadState(): Promise<void>
-```
+```text
 
 Loads state from storage.
 
@@ -407,7 +407,7 @@ Loads state from storage.
 
 ```typescript
 saveState(): Promise<void>
-```
+```text
 
 Saves state to storage.
 
@@ -420,7 +420,7 @@ subscribe(
   path: string,
   callback: (path: string, value: unknown) => void
 ): string
-```
+```text
 
 Subscribes to state changes.
 
@@ -434,7 +434,7 @@ Subscribes to state changes.
 
 ```typescript
 unsubscribe(subscriptionId: string): void
-```
+```text
 
 Unsubscribes from state changes.
 
@@ -447,7 +447,7 @@ Unsubscribes from state changes.
 
 ```typescript
 getFullState(): Record<string, unknown>
-```
+```text
 
 Gets entire state object.
 
@@ -460,7 +460,7 @@ registerAgent(
   name: string,
   agentInfo: Record<string, unknown>
 ): Promise<boolean>
-```
+```text
 
 Registers agent in shared state.
 
@@ -474,7 +474,7 @@ Registers agent in shared state.
 
 ```typescript
 updateAgentStatus(name: string, status: string): Promise<void>
-```
+```text
 
 Updates agent status.
 
@@ -491,7 +491,7 @@ watchState(
   path: string,
   callback: (path: string, value: unknown, metadata?: any) => void
 ): void
-```
+```text
 
 Watches state changes at a specific path (alias for subscribe).
 
@@ -508,7 +508,7 @@ unwatchState(
   path: string,
   callback: (path: string, value: unknown, metadata?: any) => void
 ): void
-```
+```text
 
 Unwatches state changes (alias for unsubscribe).
 
@@ -525,7 +525,7 @@ syncState(
   externalState: Record<string, any>,
   strategy: string | ((local: any, external: any) => any)
 ): void
-```
+```text
 
 Syncs state from external source with conflict resolution.
 
@@ -543,7 +543,7 @@ resolveConflicts(
   externalValue: any,
   strategy: string | ((local: any, external: any) => any)
 ): any
-```
+```text
 
 Resolves conflicts between local and external values.
 
@@ -558,7 +558,7 @@ Resolves conflicts between local and external values.
 
 ```typescript
 persistState(path: string): void
-```
+```text
 
 Marks a path as persisted.
 
@@ -571,7 +571,7 @@ Marks a path as persisted.
 
 ```typescript
 loadPersistedState(state: Record<string, any>): void
-```
+```text
 
 Loads persisted state.
 
@@ -584,7 +584,7 @@ Loads persisted state.
 
 ```typescript
 clearEphemeralState(): void
-```
+```text
 
 Clears ephemeral (non-persisted) state.
 
@@ -601,7 +601,7 @@ createCompletion(
   prompt: string,
   options?: Record<string, unknown>
 ): Promise<string>
-```
+```text
 
 Creates text completion.
 
@@ -622,7 +622,7 @@ getPrompt(
   name: string,
   variables?: Record<string, unknown>
 ): Promise<string>
-```
+```text
 
 Gets prompt with variables populated.
 
@@ -636,7 +636,7 @@ Gets prompt with variables populated.
 
 ```typescript
 addPrompt(name: string, template: string): Promise<void>
-```
+```text
 
 Adds new prompt template.
 
@@ -650,7 +650,7 @@ Adds new prompt template.
 
 ```typescript
 updatePrompt(name: string, template: string): Promise<void>
-```
+```text
 
 Updates existing prompt template.
 
@@ -664,7 +664,7 @@ Updates existing prompt template.
 
 ```typescript
 deletePrompt(name: string): Promise<void>
-```
+```text
 
 Deletes prompt template.
 
@@ -677,7 +677,7 @@ Deletes prompt template.
 
 ```typescript
 createDefaultTemplates(): void
-```
+```text
 
 Creates default prompt templates.
 

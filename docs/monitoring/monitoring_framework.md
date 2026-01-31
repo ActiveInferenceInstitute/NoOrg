@@ -25,7 +25,7 @@ related_documents:
   - [[monitoring/metrics_framework]]
   - [[monitoring/alerting_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the comprehensive monitoring framework for the agent system, providing standardized approaches for collecting, analyzing, and acting on operational data across all system components.
@@ -42,7 +42,7 @@ class MonitoringManager:
         self.alerter = AlertManager()
         self.reporter = ReportGenerator()
         self.visualizer = DataVisualizer()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -53,7 +53,7 @@ graph TD
     B --> E[Time Series DB]
     C --> F[Analysis Engine]
     D --> G[Alert Engine]
-```
+```text
 
 ### 2. Metrics System
 #### 2.1 Metrics Manager
@@ -70,7 +70,7 @@ class MetricsManager:
         processed = await self.processors.process(raw_metrics)
         aggregated = await self.aggregator.aggregate(processed)
         await self.storage.store(aggregated)
-```
+```text
 
 #### 2.2 Metric Types
 - Performance Metrics
@@ -94,7 +94,7 @@ class AnalysisManager:
         predictions = await self.predictor.predict(analysis)
         actions = await self.rules.evaluate(predictions)
         return actions
-```
+```text
 
 #### 3.2 Analysis Types
 - Trend Analysis
@@ -117,7 +117,7 @@ class AlertManager:
         route = await self.router.route(alert)
         notification = await self.notifier.notify(route)
         await self.escalator.escalate_if_needed(notification)
-```
+```text
 
 #### 4.2 Alert Types
 - Performance Alerts
@@ -142,7 +142,7 @@ class MonitoringImplementation:
     async def setup_analysis(self, analysis):
         # Analysis setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Collection Standards
@@ -159,7 +159,7 @@ class MonitoringPipeline:
         self.processing = DataProcessing()
         self.storage = DataStorage()
         self.retrieval = DataRetrieval()
-```
+```text
 
 #### 2.2 Data Operations
 - Data Collection
@@ -190,7 +190,7 @@ class MonitoringQuality:
     async def verify_alerts(self, alerts):
         # Alert verification
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -222,7 +222,7 @@ class MonitoringSecurity:
     async def secure_analysis(self, analysis):
         # Analysis security
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Access Control
@@ -272,7 +272,7 @@ class MonitoringPattern:
         self.collector = MetricsCollector()
         self.analyzer = DataAnalyzer()
         self.alerter = AlertManager()
-```
+```text
 
 ### B. Analysis Patterns
 ```python
@@ -282,7 +282,7 @@ class AnalysisPattern:
         self.processor = DataProcessor()
         self.analyzer = DataAnalyzer()
         self.predictor = Predictor()
-```
+```text
 
 ### C. Alert Patterns
 ```python
@@ -292,4 +292,4 @@ class AlertPattern:
         self.detector = AlertDetector()
         self.router = AlertRouter()
         self.notifier = Notifier()
-``` 
+```text 

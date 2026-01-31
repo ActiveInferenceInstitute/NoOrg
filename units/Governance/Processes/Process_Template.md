@@ -38,7 +38,7 @@ graph TD
     C -- No --> E[Step 2b];
     D --> F[End];
     E --> F;
-```
+```text
 
 ## 10. Roles & Responsibilities
 (Use a RACI matrix or similar to clarify who does what.)

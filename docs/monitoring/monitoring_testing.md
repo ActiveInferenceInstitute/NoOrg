@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_configuration]]
   - [[monitoring/monitoring_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the testing framework for monitoring systems within the agent framework, providing comprehensive testing processes, standards, and best practices for monitoring components.
@@ -43,7 +43,7 @@ class MonitoringTestingManager:
         self.analyzer = TestAnalyzer()
         self.reporter = TestReporter()
         self.monitor = TestMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Test Suite]
     C --> F[Validation Engine]
     D --> G[Analysis Engine]
-```
+```text
 
 ### 2. Test Executor
 #### 2.1 Execution System
@@ -71,7 +71,7 @@ class TestExecutor:
         execution = await self.runner.run_tests(scheduling)
         control = await self.controller.control_execution(execution)
         return await self.monitor.monitor_execution(control)
-```
+```text
 
 #### 2.2 Test Types
 - Unit Tests
@@ -94,7 +94,7 @@ class TestValidator:
         verification = await self.verifier.verify_coverage(checking)
         validation = await self.engine.validate_results(verification)
         return await self.reporter.report_validation(validation)
-```
+```text
 
 #### 3.2 Validation Types
 - Result Validation
@@ -117,7 +117,7 @@ class TestAnalyzer:
         metrics = await self.metrics.analyze_metrics(profiling)
         analysis = await self.engine.analyze_results(metrics)
         return await self.reporter.report_analysis(analysis)
-```
+```text
 
 #### 4.2 Analysis Types
 - Performance Analysis
@@ -140,7 +140,7 @@ class TestReporter:
         formatting = await self.formatter.format_report(generation)
         distribution = await self.distributor.distribute_report(formatting)
         return await self.archiver.archive_report(distribution)
-```
+```text
 
 #### 5.2 Report Types
 - Test Reports
@@ -163,7 +163,7 @@ class TestMonitor:
         analysis = await self.analyzer.analyze_testing(collection)
         alerts = await self.alerter.process_alerts(analysis)
         return await self.reporter.report_monitoring(analysis)
-```
+```text
 
 #### 6.2 Monitoring Types
 - Execution Monitoring
@@ -188,7 +188,7 @@ class TestingStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Test Standards
@@ -205,7 +205,7 @@ class TestingProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Planning Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class TestingSecurity:
     async def audit_testing(self, audit):
         # Testing auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Process Security
@@ -318,7 +318,7 @@ class TestingPattern:
         self.executor = TestExecutor()
         self.validator = TestValidator()
         self.analyzer = TestAnalyzer()
-```
+```text
 
 ### B. Process Patterns
 ```python
@@ -328,7 +328,7 @@ class ProcessPattern:
         self.planner = ProcessPlanner()
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
-```
+```text
 
 ### C. Quality Patterns
 ```python
@@ -338,4 +338,4 @@ class QualityPattern:
         self.monitor = QualityMonitor()
         self.analyzer = QualityAnalyzer()
         self.reporter = QualityReporter()
-``` 
+```text 

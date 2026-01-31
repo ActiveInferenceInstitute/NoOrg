@@ -26,6 +26,10 @@ Performance optimization script.
 
 Security scanning script.
 
+### ensure_full_coverage.py
+
+Comprehensive utility script that scans the entire repository to ensure **both** `AGENTS.md` and `README.md` exist in every directory. It generates default content for any missing files, ensuring complete dual-layer documentation coverage at all depths.
+
 ## Related Documentation
 
 - [Scripts README](./README.md)

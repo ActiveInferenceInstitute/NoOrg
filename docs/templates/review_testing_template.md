@@ -20,7 +20,7 @@ graph TB
     I2[Major<br>2]
     I3[Minor<br>5]
     end
-```
+```text
 
 ## 🔍 Test Coverage Map
 ```mermaid
@@ -42,7 +42,7 @@ mindmap
             Load Tests
             Stress Tests
             Benchmarks
-```
+```text
 
 ## 📈 Test Execution Progress
 ```mermaid
@@ -53,7 +53,7 @@ xychart-beta
     y-axis "Pass Rate %" 0 --> 100
     line [40, 85, 120, 160, 190]
     line [92, 88, 90, 93, 95]
-```
+```text
 
 ## 🎯 Test Case Priority
 ```mermaid
@@ -68,7 +68,7 @@ quadrantChart
     Test1: [0.8, 0.3]
     Test2: [0.4, 0.7]
     Test3: [0.6, 0.5]
-```
+```text
 
 ## 🔄 Test Workflow
 ```mermaid
@@ -82,7 +82,7 @@ stateDiagram-v2
     Testing --> Blocked: Issues Found
     Blocked --> Development: Fixed
     Passed --> [*]
-```
+```text
 
 ## 📋 Test Suite Structure
 ```mermaid
@@ -107,7 +107,7 @@ graph TB
     
     Functional --> Non_Functional
     Non_Functional --> Automation
-```
+```text
 
 ## ⚡ Performance Metrics
 ```mermaid
@@ -118,7 +118,7 @@ xychart-beta
     y-axis "Throughput (rps)" 0 --> 100
     line [200, 180, 220, 190, 185]
     line [80, 85, 75, 82, 88]
-```
+```text
 
 ## 🔍 Code Review Flow
 ```mermaid
@@ -142,7 +142,7 @@ graph LR
     
     Submission --> Review
     Review --> Verification
-```
+```text
 
 ## Review & Testing Documentation
 
@@ -183,7 +183,7 @@ mindmap
         Minor
             Bug 1
             Bug 2
-```
+```text
 
 ### 📈 Quality Metrics
 ```mermaid
@@ -199,7 +199,7 @@ radar
     data
         Current: 92, 88, 85, 90, 87, 89
         Target: 95, 90, 90, 95, 90, 92
-```
+```text
 
 ## Test Automation
 
@@ -226,7 +226,7 @@ graph TB
     
     Framework --> Tools
     Tools --> Infrastructure
-```
+```text
 
 ### 📊 Automation Coverage
 ```mermaid
@@ -234,7 +234,7 @@ pie title "Automation Coverage"
     "Automated" : 70
     "Manual" : 20
     "Not Feasible" : 10
-```
+```text
 
 ### 🔄 CI/CD Pipeline
 ```mermaid
@@ -256,7 +256,7 @@ graph LR
     
     Build --> Test
     Test --> Deploy
-```
+```text
 
 ## Review & Testing Metrics
 
@@ -269,7 +269,7 @@ xychart-beta
     y-axis "Quality Score" 0 --> 100
     line [8, 6, 4, 3]
     line [82, 85, 88, 92]
-```
+```text
 
 ### 🎯 Test Effectiveness
 ```mermaid
@@ -285,7 +285,7 @@ radar
     data
         Current: 85, 88, 75, 82, 80, 78
         Target: 90, 90, 85, 85, 85, 85
-```
+```text
 
 ---
 **Metadata**

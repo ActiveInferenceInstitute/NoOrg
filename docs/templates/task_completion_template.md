@@ -21,7 +21,7 @@ graph TB
     T2[At Risk<br>15%]
     T3[Delayed<br>5%]
     end
-```
+```text
 
 ## 📈 Completion Progress
 ```mermaid
@@ -32,7 +32,7 @@ xychart-beta
     y-axis "Completion Rate %" 0 --> 100
     line [10, 22, 35, 45]
     line [50, 65, 80, 90]
-```
+```text
 
 ## 🎯 Task Dependencies
 ```mermaid
@@ -55,7 +55,7 @@ graph LR
     C2 --> P1 & P2 & P3
     B1 -.-> C3
     B2 -.-> P3
-```
+```text
 
 ## 📋 Task Breakdown Structure
 ```mermaid
@@ -77,7 +77,7 @@ mindmap
             Staging
             Production
             Verification
-```
+```text
 
 ## ⏱️ Task Timeline
 ```mermaid
@@ -96,7 +96,7 @@ gantt
     section Support Tasks
     Task 5    :t5, 2024-01-03, 8d
     Task 6    :t6, after t5, 5d
-```
+```text
 
 ## 🔄 Task Flow
 ```mermaid
@@ -109,7 +109,7 @@ stateDiagram-v2
     InProgress --> Blocked: Blocker Found
     Blocked --> InProgress: Blocker Resolved
     Done --> [*]
-```
+```text
 
 ## 📊 Resource Allocation
 ```mermaid
@@ -118,7 +118,7 @@ pie title "Task Distribution by Resource"
     "Team Member 2" : 25
     "Team Member 3" : 20
     "Team Member 4" : 20
-```
+```text
 
 ## 🎯 Task Priority Matrix
 ```mermaid
@@ -133,7 +133,7 @@ quadrantChart
     Task1: [0.8, 0.9]
     Task2: [0.3, 0.4]
     Task3: [0.6, 0.7]
-```
+```text
 
 ## 📈 Velocity Tracking
 ```mermaid
@@ -144,7 +144,7 @@ xychart-beta
     y-axis "Completion %" 0 --> 100
     line [20, 25, 30, 35]
     line [85, 90, 88, 92]
-```
+```text
 
 ## 🔍 Quality Gates
 ```mermaid
@@ -166,7 +166,7 @@ graph LR
     
     Requirements --> Development
     Development --> Testing
-```
+```text
 
 ## Task Documentation
 
@@ -225,7 +225,7 @@ timeline
     section Review
         QA : Not Started
         UAT : Not Started
-```
+```text
 
 ### 🚧 Blockers & Issues
 ```mermaid
@@ -240,7 +240,7 @@ mindmap
         Pending
             Risk 1
             Risk 2
-```
+```text
 
 ### 📊 Metrics Dashboard
 ```mermaid
@@ -262,7 +262,7 @@ graph TB
     R2[Pending: 2]
     R3[Failed: 1]
     end
-```
+```text
 
 ---
 **Metadata**

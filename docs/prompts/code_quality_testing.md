@@ -41,7 +41,7 @@ mindmap
       Critical path focus
       Feature coverage
       Boundary testing
-```
+```text
 
 ## Clean Code Guidelines
 1. **Naming practices**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Testing Frameworks
 1. **Unit testing**
@@ -173,7 +173,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Test Design Strategies
 1. **Test-Driven Development (TDD)**
@@ -239,7 +239,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Code Review Practices
 1. **Review preparation**
@@ -290,7 +290,7 @@ flowchart LR
     B --> E[Effective Code Review]
     C --> E
     D --> E
-```
+```text
 
 ## Static Analysis and Tooling
 - Integrate linters to enforce style and catch common mistakes
@@ -339,7 +339,7 @@ graph TD
     E --> H
     F --> H
     G --> H
-```
+```text
 
 ## Handling Tech Debt and Code Smells
 - Systematically identify and document technical debt
@@ -388,7 +388,7 @@ flowchart TD
     E --> H
     F --> H
     G --> H
-```
+```text
 
 ## Code Quality and Testing Process Model
 ```mermaid
@@ -419,4 +419,4 @@ graph TB
     
     N -.-> F
     N -.-> K
-``` 
+```text 

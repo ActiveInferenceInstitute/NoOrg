@@ -40,7 +40,7 @@ eventSystem.publish('task.started', {
 
 // Unsubscribe
 eventSystem.unsubscribe(subscriptionId);
-```
+```text
 
 ## Event Types
 
@@ -57,7 +57,7 @@ interface Event {
     correlationId?: string;
   };
 }
-```
+```text
 
 ### Event Categories
 - **Task Events**: `task.created`, `task.assigned`, `task.started`, `task.completed`, `task.failed`
@@ -76,7 +76,7 @@ interface EventSystemConfig {
   retryAttempts?: number;
   retryDelay?: number;
 }
-```
+```text
 
 ## Best Practices
 
@@ -125,7 +125,7 @@ The Event System integrates with:
 
 ## Related Documentation
 
-- [Event System API Reference](../../docs/core/index.md)
+- [Event System API Reference](../../../docs/index.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)
 - [Monitoring Integration](../../../docs/monitoring/monitoring-system.md)
 

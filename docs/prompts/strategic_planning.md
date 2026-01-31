@@ -41,7 +41,7 @@ mindmap
       Hypothesis testing
       Feedback integration
       Knowledge building
-```
+```text
 
 ## Strategic Assessment
 1. **Situation analysis**
@@ -92,7 +92,7 @@ graph TD
     B --> E[Strategic Insight Development]
     C --> E
     D --> E
-```
+```text
 
 ## Strategic Direction Setting
 1. **Vision and mission crafting**
@@ -144,7 +144,7 @@ flowchart TD
     C --> E
     D --> E
     E --> F[Execution Planning]
-```
+```text
 
 ## Execution Planning
 1. **Initiative portfolio design**
@@ -210,7 +210,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Performance Management
 1. **Metrics and monitoring framework**
@@ -261,7 +261,7 @@ flowchart LR
     B --> E[Strategic Execution Excellence]
     C --> E
     D --> E
-```
+```text
 
 ## Special Strategic Contexts
 1. **High-uncertainty environments**
@@ -312,7 +312,7 @@ graph TD
     B --> E[Context-Adapted Strategy]
     C --> E
     D --> E
-```
+```text
 
 ## Strategic Thinking Practices
 - Regularly step back from operations to evaluate bigger picture
@@ -350,7 +350,7 @@ mindmap
       Structured ideation sessions
       Mental model expansion
       Integrative synthesis
-```
+```text
 
 ## Strategic Planning Process Model
 ```mermaid
@@ -381,4 +381,4 @@ graph TB
     M -.-> F
     N -.-> D
     N -.-> G
-``` 
+```text 

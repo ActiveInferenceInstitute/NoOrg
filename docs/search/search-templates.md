@@ -53,7 +53,7 @@ common_searches:
           type: "intelligent"
           timing: "context_aware"
           relevance: "user_specific"
-```
+```text
 
 ### Template Management
 ```python
@@ -84,7 +84,7 @@ class CommonSearchManager:
     def enhance_suggestions(self):
         """Enhance template suggestions"""
         pass
-```
+```text
 
 ## 🎯 Saved Filters
 
@@ -120,7 +120,7 @@ class CommonSearchManager:
     }
   }
 }
-```
+```text
 
 ### Filter Management
 ```python
@@ -151,7 +151,7 @@ class FilterManager:
     def enhance_optimization(self):
         """Enhance filter optimization"""
         pass
-```
+```text
 
 ## 👁️ Custom Views
 
@@ -193,7 +193,7 @@ custom_views:
           method: "real_time"
           conflict_resolution: "intelligent"
           distribution: "optimized"
-```
+```text
 
 ### View Management
 ```python
@@ -224,7 +224,7 @@ class ViewManager:
     def enhance_customization(self):
         """Enhance view customization"""
         pass
-```
+```text
 
 ## 📤 Export Options
 
@@ -269,7 +269,7 @@ export_options:
           validation: "automated"
           verification: "comprehensive"
           optimization: "continuous"
-```
+```text
 
 ### Export Management
 ```python
@@ -300,7 +300,7 @@ class ExportManager:
     def enhance_automation(self):
         """Enhance export automation"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

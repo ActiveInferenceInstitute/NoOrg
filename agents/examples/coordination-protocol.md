@@ -22,7 +22,7 @@ protocol:
   version: 1.0.0
   category: system_management
   style: request_response_with_events
-```
+```text
 
 ### Participants
 - Coordinator Agent (CA)
@@ -62,7 +62,7 @@ sequenceDiagram
     
     MA->>CA: TaskCompletion
     CA->>PM: PerformanceReport
-```
+```text
 
 ## States & Transitions
 
@@ -100,7 +100,7 @@ states:
         trigger: recovery_complete
       - to: coordinating
         trigger: retry_coordination
-```
+```text
 
 ## Message Definitions
 
@@ -157,7 +157,7 @@ messages:
           "resources": ["cpu_core_1", "memory_block_2"]
         }
       }
-```
+```text
 
 ### Event Messages
 ```yaml
@@ -192,7 +192,7 @@ events:
           "resource_utilization": 0.8
         }
       }
-```
+```text
 
 ## Implementation
 
@@ -207,7 +207,7 @@ components:
     - directive_processor
     - status_reporter
     - progress_monitor
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -225,7 +225,7 @@ integration:
       - coordinator
       - resource_manager
       - performance_monitor
-```
+```text
 
 ## Behavior
 
@@ -251,7 +251,7 @@ error_handling:
     - error: directive_failed
       action: rollback_changes
       retry: true
-```
+```text
 
 ## Quality of Service
 
@@ -264,7 +264,7 @@ performance:
   throughput:
     messages_per_second: 1000
     coordination_operations: 100
-```
+```text
 
 ### Reliability Measures
 ```yaml
@@ -276,7 +276,7 @@ reliability:
   state_consistency:
     sync_interval: "100ms"
     consistency_check: "eventual"
-```
+```text
 
 ## Security
 
@@ -292,7 +292,7 @@ security:
       - coordinator
       - managed_agent
       - resource_manager
-```
+```text
 
 ### Message Security
 ```yaml
@@ -303,7 +303,7 @@ message_security:
   integrity:
     method: hmac_sha256
     signature_required: true
-```
+```text
 
 ## Monitoring
 
@@ -320,7 +320,7 @@ monitoring:
     - name: directive_completion_time
       type: histogram
       labels: [directive_type]
-```
+```text
 
 ### Logging Requirements
 ```yaml
@@ -335,7 +335,7 @@ logging:
     - source
     - destination
     - message_type
-```
+```text
 
 ## Maintenance
 

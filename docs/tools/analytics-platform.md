@@ -20,7 +20,7 @@ graph TD
     C --> D[Analysis Engine]
     D --> E[Visualization]
     E --> F[Reporting]
-```
+```text
 
 ### Data Flow
 1. **Collection Pipeline**

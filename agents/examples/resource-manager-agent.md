@@ -32,7 +32,7 @@ capabilities:
     - resource_negotiation
     - status_reporting
     - coordination_interface
-```
+```text
 
 ## Architecture
 
@@ -48,7 +48,7 @@ cognitive_architecture:
     - predictive_allocation
     - dynamic_rebalancing
     - contention_management
-```
+```text
 
 ### Behavioral Framework
 ```mermaid
@@ -63,7 +63,7 @@ graph TD
     G -.-> C
     H[Performance Monitor] -.-> C
     H -.-> E
-```
+```text
 
 ## Implementation
 
@@ -89,7 +89,7 @@ integration:
     - type: resource_status
       format: json
       protocol: [[protocols#status-reporting]]
-```
+```text
 
 ## Resource Management
 
@@ -117,7 +117,7 @@ resources:
     - type: bandwidth
       units: bits_per_second
       allocation: rate
-```
+```text
 
 ### Allocation Strategies
 ```yaml
@@ -132,7 +132,7 @@ allocation:
     - name: cost_optimized
       policy: efficiency_maximization
       constraints: budget_limits
-```
+```text
 
 ## Communication
 
@@ -149,7 +149,7 @@ message_formats:
   outgoing:
     - [[message-formats#allocation-response]]
     - [[message-formats#resource-status]]
-```
+```text
 
 ## Performance
 
@@ -171,7 +171,7 @@ performance_metrics:
       threshold: 0.9
     - metric: balance_index
       threshold: 0.95
-```
+```text
 
 ### Monitoring
 - [[monitoring-system#resource-management|Resource Monitoring]]
@@ -185,7 +185,7 @@ security:
   authentication: certificate_based
   authorization: capability_based
   encryption: aes_256_gcm
-```
+```text
 
 ### Safety Protocols
 - [[safety-protocols#resource-protection|Resource Protection]]
@@ -204,7 +204,7 @@ prediction:
     - short_term: "5m"
     - medium_term: "1h"
     - long_term: "24h"
-```
+```text
 
 ### Dynamic Optimization
 ```yaml
@@ -217,7 +217,7 @@ optimization:
     - resource_limits
     - priority_requirements
     - fairness_criteria
-```
+```text
 
 ### Fault Tolerance
 ```yaml
@@ -230,7 +230,7 @@ fault_tolerance:
     - reallocation
     - failover
     - graceful_degradation
-```
+```text
 
 ## Maintenance
 

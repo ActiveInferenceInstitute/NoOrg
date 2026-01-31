@@ -44,7 +44,7 @@ template_updates:
       - stakeholder_review
       - technical_approval
       - final_authorization
-```
+```text
 
 ### Update Management
 ```python
@@ -75,7 +75,7 @@ class TemplateUpdater:
     def track_changes(self):
         """Track update changes"""
         pass
-```
+```text
 
 ## 🔄 Version Control
 
@@ -109,7 +109,7 @@ class TemplateUpdater:
     }
   }
 }
-```
+```text
 
 ### Version Management
 ```python
@@ -140,7 +140,7 @@ class VersionManager:
     def handle_changes(self):
         """Handle version changes"""
         pass
-```
+```text
 
 ## 📦 Distribution
 
@@ -176,7 +176,7 @@ template_distribution:
       - accessibility_check
       - functionality_test
       - user_notification
-```
+```text
 
 ### Distribution Management
 ```python
@@ -207,7 +207,7 @@ class DistributionManager:
     def track_deployment(self):
         """Track distribution deployment"""
         pass
-```
+```text
 
 ## 📊 Usage Tracking
 
@@ -243,7 +243,7 @@ usage_tracking:
       - effectiveness_metrics
       - satisfaction_scores
       - optimization_opportunities
-```
+```text
 
 ### Analytics Management
 ```python
@@ -274,7 +274,7 @@ class UsageAnalytics:
     def generate_insights(self):
         """Generate usage insights"""
         pass
-```
+```text
 
 ## 📚 References
 

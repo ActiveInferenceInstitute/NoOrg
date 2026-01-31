@@ -31,7 +31,7 @@ message:
     priority: 1
     ttl: 3600
     security_level: "standard"
-```
+```text
 
 ## Message Types
 
@@ -54,7 +54,7 @@ standard_messages:
     optional:
       - error_details
       - metadata
-```
+```text
 
 ### Control Messages
 ```yaml
@@ -71,7 +71,7 @@ control_messages:
     - command
     - parameters
     - authorization
-```
+```text
 
 ## Encoding Standards
 
@@ -90,7 +90,7 @@ encoding_formats:
     schema: "custom"
     validation: true
     compression: true
-```
+```text
 
 ### Schema Definition
 ```json
@@ -107,7 +107,7 @@ encoding_formats:
     }
   }
 }
-```
+```text
 
 ## Implementation
 
@@ -122,7 +122,7 @@ message_serialization:
         - compression
         - encryption
         - validation
-```
+```text
 
 ### Message Processing
 ```mermaid
@@ -132,7 +132,7 @@ graph TD
     C --> D[Processing]
     D --> E[Serialization]
     E --> F[Transmission]
-```
+```text
 
 ## Integration
 
@@ -144,7 +144,7 @@ graph LR
     C --> D[Transport]
     D --> E[Decoder]
     E --> F[Handler]
-```
+```text
 
 ### Cross-System Links
 - [[protocols|Communication Protocols]]
@@ -164,7 +164,7 @@ transformations:
     - enrichment
     - filtering
     - aggregation
-```
+```text
 
 ### Validation Rules
 ```yaml
@@ -177,7 +177,7 @@ validation:
     - rule_checking
     - dependency_validation
     - consistency_checks
-```
+```text
 
 ## Performance
 
@@ -192,7 +192,7 @@ optimization:
     - caching
     - batch_processing
     - parallel_validation
-```
+```text
 
 ### Monitoring
 - Message Size
@@ -213,7 +213,7 @@ security:
     - digital_signatures
     - checksums
     - timestamps
-```
+```text
 
 ### Access Control
 - Message Level

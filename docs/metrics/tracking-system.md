@@ -50,7 +50,7 @@ data_collection:
       - weekly_summaries
       - monthly_reports
       - quarterly_reviews
-```
+```text
 
 ### Collection Management
 ```python
@@ -81,7 +81,7 @@ class DataCollector:
     def validate_collection(self):
         """Validate collected data"""
         pass
-```
+```text
 
 ## 🔧 Analysis Tools
 
@@ -115,7 +115,7 @@ class DataCollector:
     }
   }
 }
-```
+```text
 
 ### Analysis Management
 ```python
@@ -146,7 +146,7 @@ class AnalysisManager:
     def generate_visualizations(self):
         """Generate metric visualizations"""
         pass
-```
+```text
 
 ## 🤖 Reporting Automation
 
@@ -181,7 +181,7 @@ reporting_automation:
       - security_controls
       - version_control
       - audit_logging
-```
+```text
 
 ### Automation Management
 ```python
@@ -212,7 +212,7 @@ class ReportingAutomation:
     def manage_distribution(self):
         """Manage report distribution"""
         pass
-```
+```text
 
 ## 📈 Trend Analysis
 
@@ -242,7 +242,7 @@ trend_analysis:
       - resource_optimization
       - performance_enhancement
       - cost_reduction
-```
+```text
 
 ### Trend Management
 ```python
@@ -273,7 +273,7 @@ class TrendAnalyzer:
     def generate_forecasts(self):
         """Generate trend forecasts"""
         pass
-```
+```text
 
 ## 📚 References
 

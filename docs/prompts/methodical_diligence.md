@@ -35,7 +35,7 @@ mindmap
       Information management
       Systematic documentation
       Progress monitoring
-```
+```text
 
 ## Task Preparation Framework
 1. **Task clarification**
@@ -87,7 +87,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Execution Guidelines
 1. **Focused implementation**
@@ -143,7 +143,7 @@ flowchart TD
     F --> G{Complete?}
     G -->|No| A
     G -->|Yes| H[Completion Protocol]
-```
+```text
 
 ## Completion Protocol
 1. **Comprehensive review**
@@ -196,7 +196,7 @@ graph TD
     F -->|Yes| D
     D --> E
     E --> H[Task Complete]
-```
+```text
 
 ## Diligence Enhancers
 - Implement checklists for critical or repetitive processes
@@ -238,7 +238,7 @@ flowchart LR
     G --> G1[Regular assessment]
     G --> G2[Course corrections]
     G --> G3[Strategic reflection]
-```
+```text
 
 ## When Quality Standards Are At Risk
 - Transparently communicate challenges early
@@ -279,7 +279,7 @@ graph TD
     G -->|Yes| H[Adjusted Implementation]
     G -->|No| I[Revised Proposal]
     I --> C
-```
+```text
 
 ## Methodical Task Process Model
 ```mermaid
@@ -305,4 +305,4 @@ graph TB
     N --> O[Method Refinement]
     O -.-> A
     end
-``` 
+```text 

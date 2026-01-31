@@ -5,7 +5,7 @@ The Integration Patterns module provides resilience-focused design patterns for 
 ## Architecture Overview
 
 ### Pattern Categories
-```
+```text
 Integration Patterns
 ├── Resilience Patterns
 │   ├── CircuitBreaker - Failure prevention
@@ -19,7 +19,7 @@ Integration Patterns
 │   └── CacheAside - Demand-driven caching
 └── Transaction Patterns
     └── Saga - Distributed transaction management
-```
+```text
 
 ## Resilience Patterns
 
@@ -59,7 +59,7 @@ export interface CircuitBreakerMetrics {
     stateChanges: number
     lastStateChange: number
 }
-```
+```text
 
 **State Transitions:**
 - `closed` → `open`: When failure threshold exceeded
@@ -96,7 +96,7 @@ export interface RetryMetrics {
     averageDelay: number
     lastAttemptTime: number
 }
-```
+```text
 
 **Backoff Strategies:**
 - `linear`: Fixed delay between attempts
@@ -129,7 +129,7 @@ export interface TimeoutMetrics {
     averageDuration: number
     lastOperationTime: number
 }
-```
+```text
 
 **Error Types:**
 - `TimeoutError`: Operation exceeded configured duration
@@ -165,7 +165,7 @@ export interface BulkheadMetrics {
     failedRequests: number
     averageQueueTime: number
 }
-```
+```text
 
 **Execution Flow:**
 1. Check available slots
@@ -202,7 +202,7 @@ export interface RateLimiterMetrics {
     currentRate: number
     burstUsed: number
 }
-```
+```text
 
 **Algorithms:**
 - **Token Bucket**: Accumulates tokens at fixed rate, consumes on request
@@ -246,7 +246,7 @@ export interface RequestHandler<TReq = any, TRes = any> {
     timeout?: number
     validate?: (request: Request<TReq>) => boolean
 }
-```
+```text
 
 **Features:**
 - Type-safe request/response handling
@@ -293,7 +293,7 @@ export interface CacheStats {
     evictions: number
     size: number
 }
-```
+```text
 
 **Cache Strategy:**
 1. Check cache for key
@@ -356,7 +356,7 @@ export interface SagaState {
     completedSteps: string[]
     context: any
 }
-```
+```text
 
 **Execution Flow:**
 1. Execute steps sequentially
@@ -392,7 +392,7 @@ IntegrationPatterns.configure({
         recoveryTimeout: 60000
     }
 });
-```
+```text
 
 ### Environment Variables
 ```bash
@@ -411,7 +411,7 @@ RATE_LIMITER_BURST_SIZE=200
 # Cache settings
 CACHE_DEFAULT_TTL=3600
 CACHE_MAX_SIZE=10000
-```
+```text
 
 ## Monitoring & Observability
 
@@ -430,7 +430,7 @@ const rlMetrics = rateLimiter.getMetrics();
 // Cache statistics
 const cacheStats = cacheAside.getStats();
 // { totalRequests: 200, cacheHits: 180, cacheMisses: 20, hitRate: 0.9 }
-```
+```text
 
 ### Health Checks
 ```typescript
@@ -444,7 +444,7 @@ interface PatternHealth {
 
 const health = await IntegrationPatterns.getHealth();
 // Comprehensive health status for all patterns
-```
+```text
 
 ### Event Integration
 ```typescript
@@ -456,7 +456,7 @@ eventSystem.subscribe('pattern.circuit-breaker.state-changed', (event) => {
 eventSystem.subscribe('pattern.retry.attempt', (event) => {
     console.log('Retry attempt:', event.data);
 });
-```
+```text
 
 ## Error Handling
 
@@ -481,7 +481,7 @@ class BulkheadRejectedError extends Error {
 class RateLimitExceededError extends Error {
     constructor(message: string, public resetTime: number)
 }
-```
+```text
 
 ### Error Handling Patterns
 ```typescript
@@ -500,7 +500,7 @@ try {
     }
     throw error;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -546,7 +546,7 @@ circuitBreaker.onStateChange((state) => {
         timestamp: Date.now()
     });
 });
-```
+```text
 
 ## Testing
 
@@ -567,7 +567,7 @@ describe('CircuitBreaker', () => {
         expect(breaker.getState().state).toBe('open');
     });
 });
-```
+```text
 
 ### Integration Testing
 ```typescript
@@ -588,7 +588,7 @@ describe('IntegrationPatterns', () => {
         expect(retry.getMetrics().retriesPerformed).toBeGreaterThan(0);
     });
 });
-```
+```text
 
 ## Dependencies
 

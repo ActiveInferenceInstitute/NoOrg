@@ -71,7 +71,7 @@ graph TD
         Mon4[Internal Impact]
         Mon1 & Mon2 & Mon3 & Mon4 --> M
     end
-```
+```text
 
 ## 5. Roles and Responsibilities
 

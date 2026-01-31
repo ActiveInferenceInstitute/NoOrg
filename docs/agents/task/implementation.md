@@ -25,7 +25,7 @@ related_documents:
   - [[processes/agent_processes]]
   - [[agents/task/structure]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document provides detailed implementation guidelines for task-based agents, ensuring consistent development and deployment according to the [[frameworks/agent_framework|Agent Framework]] and [[processes/agent_processes|Agent Processes]].
@@ -41,7 +41,7 @@ class TaskAgent:
         self.state = AgentState()
         self.config = AgentConfig()
         self.behaviors = BehaviorSet()
-```
+```text
 
 #### 1.2 Required Interfaces
 - Task Management
@@ -59,7 +59,7 @@ class Task:
         self.priority = None
         self.parameters = {}
         self.state = TaskState()
-```
+```text
 
 #### 2.2 Task Operations
 - Task Creation
@@ -82,7 +82,7 @@ class AgentBehaviors:
     def error_handling(self, error):
         # Error handling logic
         pass
-```
+```text
 
 #### 3.2 Behavior Controls
 - Priority Management
@@ -99,7 +99,7 @@ class Message:
         self.type = None
         self.content = None
         self.metadata = {}
-```
+```text
 
 #### 4.2 Protocol Implementation
 - Message Processing
@@ -265,7 +265,7 @@ class ExampleTask:
         except Exception as e:
             self.state = TaskState.ERROR
             raise TaskExecutionError(str(e))
-```
+```text
 
 ### B. Test Templates
 ```python
@@ -275,7 +275,7 @@ def test_task_execution():
     assert task.state == TaskState.INITIALIZED
     task.execute()
     assert task.state == TaskState.COMPLETED
-```
+```text
 
 ### C. Configuration Templates
 ```yaml
@@ -291,4 +291,4 @@ agent:
     max_tasks: 10
     timeout: 300
     retry_limit: 3
-``` 
+```text 

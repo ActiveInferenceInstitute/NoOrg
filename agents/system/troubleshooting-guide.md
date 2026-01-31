@@ -37,7 +37,7 @@ graph TD
         SV --> DB[Database]
         SV --> SR[Service Registry]
     end
-```
+```text
 
 ## System Problems
 
@@ -84,7 +84,7 @@ deployment_problems:
       - Regular service testing
       - Automated health checks
       - Network policy validation
-```
+```text
 
 ### Performance Issues
 ```yaml
@@ -130,7 +130,7 @@ performance_problems:
       - Resource monitoring
       - Automatic scaling
       - Regular cleanup
-```
+```text
 
 ### Scaling Issues
 ```yaml
@@ -176,7 +176,7 @@ scaling_problems:
       - Load testing
       - Traffic monitoring
       - Regular balancing checks
-```
+```text
 
 ## Agent Problems
 
@@ -224,7 +224,7 @@ communication_problems:
       - Protocol validation
       - Version compatibility checks
       - Message format verification
-```
+```text
 
 ### Resource Issues
 ```yaml
@@ -270,7 +270,7 @@ resource_problems:
       - Resource tracking
       - Leak detection
       - Regular monitoring
-```
+```text
 
 ### State Issues
 ```yaml
@@ -316,7 +316,7 @@ state_problems:
       - Data validation
       - Regular backups
       - Integrity checks
-```
+```text
 
 ## Service Problems
 
@@ -364,7 +364,7 @@ queue_problems:
       - Queue monitoring
       - Consumer scaling
       - Flow control setup
-```
+```text
 
 ### Database Issues
 ```yaml
@@ -410,7 +410,7 @@ database_problems:
       - Consistency checks
       - Regular validation
       - Monitoring replication
-```
+```text
 
 ### Service Registry Issues
 ```yaml
@@ -456,7 +456,7 @@ registry_problems:
       - Regular cleanup
       - Consistency checks
       - Update validation
-```
+```text
 
 ## Documentation
 

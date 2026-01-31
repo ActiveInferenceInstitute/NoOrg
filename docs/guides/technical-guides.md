@@ -48,7 +48,7 @@ system_components:
       - third_party_services
       - cloud_services
       - partner_systems
-```
+```text
 
 ### System Management
 ```python
@@ -79,7 +79,7 @@ class SystemGuide:
     def update_documentation(self):
         """Update system documentation"""
         pass
-```
+```text
 
 ## 🛠️ Tool Guides
 
@@ -129,7 +129,7 @@ class SystemGuide:
     }
   }
 }
-```
+```text
 
 ### Tool Management
 ```python
@@ -160,7 +160,7 @@ class ToolGuide:
     def maintain_guides(self):
         """Maintain tool documentation"""
         pass
-```
+```text
 
 ## 🔄 Integration Guides
 
@@ -196,7 +196,7 @@ integration_guides:
       - environment_setup
       - configuration_management
       - monitoring_setup
-```
+```text
 
 ### Integration Management
 ```python
@@ -227,7 +227,7 @@ class IntegrationGuide:
     def update_guides(self):
         """Update integration guides"""
         pass
-```
+```text
 
 ## 📊 Performance Optimization
 
@@ -263,7 +263,7 @@ optimization_guides:
       - connection_pooling
       - batch_processing
       - async_operations
-```
+```text
 
 ### Performance Management
 ```python
@@ -294,7 +294,7 @@ class PerformanceGuide:
     def update_guides(self):
         """Update performance guides"""
         pass
-```
+```text
 
 ## 🔄 Maintenance and Updates
 
@@ -337,7 +337,7 @@ class PerformanceGuide:
     }
   }
 }
-```
+```text
 
 ### Update Management
 ```python
@@ -368,7 +368,7 @@ class MaintenanceGuide:
     def update_guides(self):
         """Update maintenance guides"""
         pass
-```
+```text
 
 ## 📚 References
 

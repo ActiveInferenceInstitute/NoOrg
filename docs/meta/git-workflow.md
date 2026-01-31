@@ -53,13 +53,13 @@ This document outlines the standard Git workflow for the Operations Knowledge Ba
 ## 💬 Commit Conventions
 
 ### Commit Message Format
-```
+```text
 <type>(<scope>): <subject>
 
 <body>
 
 <footer>
-```
+```text
 
 ### Types
 - **feat**: New feature
@@ -78,7 +78,7 @@ This document outlines the standard Git workflow for the Operations Knowledge Ba
 - **deps**: Dependencies
 
 ### Examples
-```
+```text
 feat(docs): add new documentation template
 
 - Add standard template structure
@@ -86,7 +86,7 @@ feat(docs): add new documentation template
 - Add example usage
 
 Closes #123
-```
+```text
 
 ## 🔄 Workflow Procedures
 

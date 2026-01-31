@@ -44,7 +44,7 @@ common_issues:
       - access_errors
       - backup_failures
       - replication_issues
-```
+```text
 
 ### Issue Resolution
 ```python
@@ -75,7 +75,7 @@ class IssueResolver:
     def document_resolution(self):
         """Document resolution steps"""
         pass
-```
+```text
 
 ## 🔧 Resolution Steps
 
@@ -129,7 +129,7 @@ class IssueResolver:
     }
   }
 }
-```
+```text
 
 ### Resolution Management
 ```python
@@ -160,7 +160,7 @@ class ResolutionManager:
     def track_progress(self):
         """Track resolution progress"""
         pass
-```
+```text
 
 ## ⬆️ Escalation Procedures
 
@@ -198,7 +198,7 @@ escalation_procedures:
       - technical_expertise
       - resource_requirements
       - vendor_involvement
-```
+```text
 
 ### Escalation Management
 ```python
@@ -229,7 +229,7 @@ class EscalationManager:
     def track_escalation(self):
         """Track escalation status"""
         pass
-```
+```text
 
 ## 📊 Performance Monitoring
 
@@ -265,7 +265,7 @@ monitoring_metrics:
       - process_optimization
       - knowledge_enhancement
       - tool_upgrades
-```
+```text
 
 ### Analytics System
 ```python
@@ -296,7 +296,7 @@ class PerformanceAnalyzer:
     def generate_insights(self):
         """Generate performance insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -344,7 +344,7 @@ class PerformanceAnalyzer:
     }
   }
 }
-```
+```text
 
 ### Process Enhancement
 ```python
@@ -375,7 +375,7 @@ class ImprovementManager:
     def track_progress(self):
         """Track improvement progress"""
         pass
-```
+```text
 
 ## 📚 References
 

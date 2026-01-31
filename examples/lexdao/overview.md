@@ -13,7 +13,7 @@ This comprehensive LexDAO example demonstrates a full-featured multi-agent gover
 
 ## 📁 Project Structure
 
-```
+```text
 examples/lexdao/
 ├── 📄 Core Files
 │   ├── lexdao_workflow.ts          # Main workflow implementation (2,419 lines)
@@ -50,7 +50,7 @@ examples/lexdao/
 │
 └── 📚 Documentation
     └── README.md                  # Comprehensive usage guide
-```
+```text
 
 ## 🎨 Features Overview
 
@@ -103,7 +103,7 @@ npm install
 pip install matplotlib pandas numpy networkx seaborn
 cp .env.example .env
 # Edit .env with your OpenAI API key
-```
+```text
 
 ### Run Complete Demo
 ```bash
@@ -113,7 +113,7 @@ npm run full-demo
 # Or run individual components
 npm run demo        # Workflow execution
 npm run visualize   # Generate visualizations
-```
+```text
 
 ### Docker Deployment
 ```bash
@@ -125,12 +125,12 @@ docker-compose up lexdao-production
 
 # Full demo with all services
 docker-compose up
-```
+```text
 
 ## 📊 Sample Outputs
 
 ### Workflow Execution Results
-```
+```text
 ✅ LexDAO Governance Workflow completed successfully
 📊 Generated outputs:
    • Constitution Analysis: 95/100 governance score
@@ -139,10 +139,10 @@ docker-compose up
    • Interactive SVG visualizations and animations
    • Comprehensive analytics with strategic recommendations
    • Data validation with 98% quality score
-```
+```text
 
 ### Analytics Insights
-```
+```text
 📈 Governance Health:
    • Proposal success rate: 78.5%
    • Member participation: 82.3%
@@ -152,7 +152,7 @@ docker-compose up
    1. Improve Proposal Quality (HIGH PRIORITY)
    2. Enhance Member Engagement (HIGH PRIORITY)
    3. Diversify Treasury Holdings (MEDIUM PRIORITY)
-```
+```text
 
 ## 🔧 Key Components Deep Dive
 
@@ -175,7 +175,7 @@ class LLMAgent implements Agent {
     return response.choices[0].message.content;
   }
 }
-```
+```text
 
 ### Workflow Orchestration
 ```typescript
@@ -196,7 +196,7 @@ const WORKFLOW_STAGES: WorkflowStage[] = [
   }
   // ... 13 additional stages
 ];
-```
+```text
 
 ### Visualization Engine
 ```python
@@ -208,7 +208,7 @@ def visualize_membership_network(data, output_dir):
     # Add member and proposal nodes
     # Generate SVG with hover interactions
     # Export animated versions
-```
+```text
 
 ## 🎯 Use Cases & Applications
 

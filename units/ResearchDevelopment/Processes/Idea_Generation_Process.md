@@ -80,7 +80,7 @@ graph TD
         P5[Risk Level]
         P1 & P2 & P3 & P4 & P5 --> D
     end
-```
+```text
 
 ## 5. Roles and Responsibilities
 

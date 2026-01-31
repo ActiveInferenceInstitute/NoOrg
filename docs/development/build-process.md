@@ -19,7 +19,7 @@ graph TD
     A --> C[Dependency Management]
     A --> D[Artifact Management]
     A --> E[Quality Gates]
-```
+```text
 
 ### Process Layers
 1. **Build Layers**

@@ -43,7 +43,7 @@ service_dependencies:
       version_constraints:
         database: ">=5.0.0"
         queue: ">=2.0.0"
-```
+```text
 
 ### Component Dependencies
 ```python
@@ -74,7 +74,7 @@ class DependencyManager:
     def validate_versions(self):
         """Validate version compatibility"""
         pass
-```
+```text
 
 ## 🌐 External Dependencies
 
@@ -141,7 +141,7 @@ class DependencyManager:
     }
   }
 }
-```
+```text
 
 ### External APIs
 ```yaml
@@ -181,7 +181,7 @@ external_apis:
       - api_tokens
       - domain_configuration
       - ssl_setup
-```
+```text
 
 ## 📦 Version Requirements
 
@@ -212,7 +212,7 @@ version_requirements:
         - gradle: ">=8.0.0"
       compatibility:
         os: ["linux", "windows", "macos"]
-```
+```text
 
 ### Framework Versions
 ```python
@@ -245,7 +245,7 @@ class VersionManager:
     def check_compatibility(self):
         """Check version compatibility"""
         pass
-```
+```text
 
 ## 🔄 Dependency Management
 
@@ -281,7 +281,7 @@ dependency_management:
       - documentation_updates
       - diagram_updates
       - reference_updates
-```
+```text
 
 ### Update Automation
 ```python
@@ -312,7 +312,7 @@ class UpdateManager:
     def automate_deployment(self):
         """Automate update deployment"""
         pass
-```
+```text
 
 ## 📊 Dependency Analytics
 
@@ -346,7 +346,7 @@ class UpdateManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

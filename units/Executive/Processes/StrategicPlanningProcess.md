@@ -74,7 +74,7 @@ graph TD
     M -- Yes --> H;
     M -- No --> N[End Cycle / Continue Monitoring];
     N --> A
-```
+```text
 
 ## 6. Inputs
 

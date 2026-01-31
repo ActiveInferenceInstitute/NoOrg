@@ -19,7 +19,7 @@ graph TD
     A --> C[Preventive Maintenance]
     A --> D[Corrective Maintenance]
     A --> E[Emergency Maintenance]
-```
+```text
 
 ### Maintenance Architecture
 1. **Maintenance Types**

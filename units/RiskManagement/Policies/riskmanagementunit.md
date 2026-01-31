@@ -15,7 +15,7 @@ graph TD
     RM --> BCPL[Business Continuity Lead]
     RMD -.-> RWG[Risk Working Groups]
     RMD -.-> RC[Risk Committee]
-```
+```text
 
 The Risk Management Unit consists of:
 - **Risk Management Director**: Provides strategic leadership and oversight
@@ -60,7 +60,7 @@ graph LR
     end
     Framework -.-> Enablers
     Enablers -.-> Framework
-```
+```text
 
 ## Core Responsibilities
 

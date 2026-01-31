@@ -10,7 +10,7 @@ This policy applies to all eligible employees. Eligibility criteria and specific
 
 ## 3. General Leave Procedures
 
-*   **Requesting Leave:** Employees must request leave in advance whenever possible, following the procedures outlined in the [Leave Request & Approval Process](../Processes/LeaveRequestApprovalProcess.md) and using the designated system [Specify System Name, e.g., HRIS, Timekeeping System].
+*   **Requesting Leave:** Employees must request leave in advance whenever possible, following the procedures outlined in the [Leave Request & Approval Process](../Processes/AGENTS.md) and using the designated system [Specify System Name, e.g., HRIS, Timekeeping System].
 *   **Approval:** Leave requests are subject to manager approval based on business needs, policy requirements, and applicable laws. Certain leave types (e.g., FMLA) require specific documentation and HR approval.
 *   **Notification:** Employees must notify their manager promptly if unable to report to work due to unexpected illness or emergency.
 *   **Abuse of Leave:** Misuse or misrepresentation of leave may result in disciplinary action.

@@ -145,7 +145,7 @@ FROM "status-reports"
 WHERE project = "Project Name"
 SORT file.mtime DESC
 LIMIT 5
-```
+```text
 
 ### Metrics Dashboard
 - Metric 1: Current Value/Target

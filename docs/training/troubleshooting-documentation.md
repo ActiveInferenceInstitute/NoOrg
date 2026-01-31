@@ -50,7 +50,7 @@ common_issues:
       - backup_failures
       - recovery_issues
       - replication_problems
-```
+```text
 
 ### Issue Management
 ```python
@@ -81,7 +81,7 @@ class IssueManager:
     def track_resolution(self):
         """Track issue resolution"""
         pass
-```
+```text
 
 ## 🔧 Resolution Steps
 
@@ -115,7 +115,7 @@ class IssueManager:
     }
   }
 }
-```
+```text
 
 ### Resolution Management
 ```python
@@ -146,7 +146,7 @@ class ResolutionManager:
     def verify_solution(self):
         """Verify solution effectiveness"""
         pass
-```
+```text
 
 ## 👥 Support Contacts
 
@@ -194,7 +194,7 @@ support_contacts:
         - incident_response
         - on-call_support
         - crisis_management
-```
+```text
 
 ### Contact Management
 ```python
@@ -225,7 +225,7 @@ class ContactManager:
     def coordinate_support(self):
         """Coordinate support efforts"""
         pass
-```
+```text
 
 ## ⬆️ Escalation Paths
 
@@ -268,7 +268,7 @@ escalation_paths:
         - crisis_management
         - emergency_response
         - recovery_coordination
-```
+```text
 
 ### Escalation Management
 ```python
@@ -299,7 +299,7 @@ class EscalationManager:
     def track_resolution(self):
         """Track escalation resolution"""
         pass
-```
+```text
 
 ## 📚 References
 

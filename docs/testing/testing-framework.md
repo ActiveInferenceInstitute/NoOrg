@@ -20,7 +20,7 @@ graph TD
     A --> D[Test Infrastructure]
     A --> E[Quality Gates]
     A --> F[Reporting]
-```
+```text
 
 ### Framework Layers
 ```yaml
@@ -40,7 +40,7 @@ testing_layers:
     - tools
     - data_management
     - reporting
-```
+```text
 
 ## 🔄 Test Architecture
 

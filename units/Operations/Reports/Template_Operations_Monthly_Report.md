@@ -23,7 +23,7 @@ graph TB
     DefectRate --> S1
     ResourceUtil --> S2
     ServiceRate --> S3
-```
+```text
 
 ## 🎯 Purpose and Scope
 ### Purpose
@@ -41,7 +41,7 @@ xychart-beta
     y-axis "Days" 0 --> 50
     line [Previous Value, Current Value]
     line [Target Value, Target Value] label "Target"
-```
+```text
 - **Analysis**: [Detailed analysis of cycle time trends, causes for deviation from target.]
 - **Actions**: [Corrective actions planned or underway.]
 
@@ -53,7 +53,7 @@ xychart-beta
     y-axis "%" 0 --> 5
     line [Previous Value, Current Value]
     line [Target Value, Target Value] label "Target (<1%)"
-```
+```text
 - **Analysis**: [Analysis of defect rates, key drivers, impact.]
 - **Actions**: [QA initiatives, root cause analysis outcomes.]
 
@@ -65,7 +65,7 @@ xychart-beta
     y-axis "%" 0 --> 100
     line [Previous Value, Current Value]
     line [Target Value, Target Value] label "Target (85%)"
-```
+```text
 - **Analysis**: [Utilization trends, breakdown by resource type (if applicable), capacity assessment.]
 - **Actions**: [Reallocation plans, hiring status, efficiency improvements.]
 
@@ -77,7 +77,7 @@ xychart-beta
     y-axis "%" 0 --> 100
     line [Previous Value, Current Value]
     line [Target Value, Target Value] label "Target (95%)"
-```
+```text
 - **Analysis**: [Analysis of service delivery performance, reasons for missed targets.]
 - **Actions**: [Service improvement plans, customer feedback summary.]
 
@@ -115,7 +115,7 @@ quadrantChart
     Risk1 (e.g., Supply Chain Delay): [0.7, 0.8]
     Risk2 (e.g., System Downtime): [0.5, 0.5]
     Risk3 (e.g., Staff Shortage): [0.3, 0.6]
-```
+```text
 - **Key Risks**: [Description of top 3 risks and mitigation plans.]
 
 ## 💰 Financial Overview
@@ -130,7 +130,7 @@ sankey-beta
     OpEx [Actual OpEx] -> Overheads [Amount]
     CapEx [Actual CapEx] -> Equipment [Amount]
     CapEx [Actual CapEx] -> Projects [Amount]
-```
+```text
 - **Variance Analysis**: [Explanation of significant budget variances.]
 - **Forecast**: [Updated forecast for the next quarter.]
 

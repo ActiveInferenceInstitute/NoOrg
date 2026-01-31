@@ -37,7 +37,7 @@ requirements:
     - message broker
     - monitoring system
     - resource manager
-```
+```text
 
 ## Architecture
 
@@ -62,7 +62,7 @@ classDiagram
     }
     TaskExecutor --> ResourceManager
     TaskExecutor --> TaskValidator
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -81,7 +81,7 @@ integration:
     - destination: monitoring_system
       type: metrics
       format: prometheus
-```
+```text
 
 ## Implementation Steps
 
@@ -100,7 +100,7 @@ setup:
           value: "amqp://localhost:5672"
         - key: max_concurrent_tasks
           value: 100
-```
+```text
 
 ### 2. Core Implementation
 ```python
@@ -143,7 +143,7 @@ class TaskExecutor:
         except Exception as e:
             await self.handle_failure(task, e)
             raise
-```
+```text
 
 ### 3. Integration Implementation
 ```yaml
@@ -156,7 +156,7 @@ integration_steps:
         code: "publisher.py"
     validation:
       - check: "Message flow verification"
-```
+```text
 
 ## Testing & Validation
 
@@ -178,7 +178,7 @@ def test_task_execution():
     # Assertions
     assert result.status == "completed"
     assert result.execution_time < 1.0
-```
+```text
 
 ### Integration Tests
 ```yaml
@@ -194,7 +194,7 @@ integration_tests:
       validation:
         - check_task_status
         - verify_resource_release
-```
+```text
 
 ## Performance Optimization
 
@@ -212,7 +212,7 @@ optimization:
       metrics:
         - name: resource_usage
           threshold: 0.85
-```
+```text
 
 ### Monitoring Setup
 ```yaml
@@ -228,7 +228,7 @@ monitoring:
       alert:
         threshold: > 90%
         action: scale_resources
-```
+```text
 
 ## Security Considerations
 
@@ -244,7 +244,7 @@ security:
       - task_submitter
       - task_executor
       - admin
-```
+```text
 
 ### Data Protection
 - Encryption: AES-256 for sensitive data
@@ -265,7 +265,7 @@ deployment:
           command: "kubectl apply -f executor.yaml"
       validation:
         - check: health_check
-```
+```text
 
 ### Configuration Management
 ```yaml
@@ -276,7 +276,7 @@ configuration:
       variables:
         - name: BROKER_URL
           value: "{{broker_url}}"
-```
+```text
 
 ## Troubleshooting
 
@@ -292,7 +292,7 @@ issues:
     resolution:
       - restart task execution
       - scale resources if needed
-```
+```text
 
 ### Logging & Debugging
 ```yaml
@@ -305,7 +305,7 @@ logging:
   configuration:
     - file: logging.yaml
       settings: default_logging_config
-```
+```text
 
 ## Maintenance
 
@@ -319,7 +319,7 @@ maintenance:
     - frequency: weekly
       action: optimize_resource_pools
       validation: check_performance_metrics
-```
+```text
 
 ### Updates & Upgrades
 - Version Control: Git with semantic versioning

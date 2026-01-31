@@ -18,7 +18,7 @@ interface Message {
   timestamp: number;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 **Properties:**
 - `id` (string): Unique identifier for the message (UUID)
@@ -35,7 +35,7 @@ Function type for handling messages.
 interface MessageHandler {
   (message: Message): Promise<void> | void;
 }
-```
+```text
 
 **Parameters:**
 - `message` (Message): The message to handle
@@ -52,7 +52,7 @@ Main messaging system class that handles message publishing, subscription, and h
 
 ```typescript
 private constructor()
-```
+```text
 
 **Note:** Constructor is private. Use `getInstance()` to obtain an instance.
 
@@ -62,7 +62,7 @@ private constructor()
 
 ```typescript
 public static getInstance(): MessageSystem
-```
+```text
 
 Gets the singleton instance of MessageSystem.
 
@@ -71,7 +71,7 @@ Gets the singleton instance of MessageSystem.
 **Example:**
 ```typescript
 const messageSystem = MessageSystem.getInstance();
-```
+```text
 
 #### Instance Methods
 
@@ -83,7 +83,7 @@ public async publish(
   payload: any,
   metadata?: Record<string, any>
 ): Promise<void>
-```
+```text
 
 Publishes a message to a topic and processes all subscribed handlers.
 
@@ -103,7 +103,7 @@ await messageSystem.publish('task.completed', {
   priority: 'high',
   correlationId: 'workflow-456'
 });
-```
+```text
 
 **Behavior:**
 - Creates a message with UUID, topic, payload, timestamp, and metadata
@@ -115,7 +115,7 @@ await messageSystem.publish('task.completed', {
 
 ```typescript
 public subscribe(topic: string, handler: MessageHandler): () => void
-```
+```text
 
 Subscribes a handler to a topic.
 
@@ -134,7 +134,7 @@ const unsubscribe = messageSystem.subscribe('task.completed', async (message) =>
 
 // Later...
 unsubscribe();
-```
+```text
 
 **Behavior:**
 - Adds handler to the topic's handler set
@@ -145,7 +145,7 @@ unsubscribe();
 
 ```typescript
 public getMessageHistory(topic: string): Message[]
-```
+```text
 
 Gets the message history for a specific topic.
 
@@ -158,7 +158,7 @@ Gets the message history for a specific topic.
 ```typescript
 const messages = messageSystem.getMessageHistory('task.completed');
 console.log(`Found ${messages.length} completed tasks`);
-```
+```text
 
 **Note:** Returns empty array if topic has no message history.
 
@@ -168,7 +168,7 @@ console.log(`Found ${messages.length} completed tasks`);
 
 ```typescript
 private async handleMessage(message: Message): Promise<void>
-```
+```text
 
 Internal method that processes a message through all handlers for its topic.
 
@@ -204,7 +204,7 @@ await messageSystem.publish('task.completed', {
 
 // Unsubscribe when done
 unsubscribe();
-```
+```text
 
 ### Async Message Handlers
 
@@ -213,7 +213,7 @@ messageSystem.subscribe('data.process', async (message) => {
   const result = await processData(message.payload);
   console.log('Processed:', result);
 });
-```
+```text
 
 ### Message History
 
@@ -226,7 +226,7 @@ await messageSystem.publish('user.action', { action: 'logout' });
 // Retrieve history
 const history = messageSystem.getMessageHistory('user.action');
 console.log(`User performed ${history.length} actions`);
-```
+```text
 
 ### Multiple Handlers for Same Topic
 
@@ -242,7 +242,7 @@ messageSystem.subscribe('system.event', (message) => {
 
 // Both handlers will be called when message is published
 await messageSystem.publish('system.event', { event: 'startup' });
-```
+```text
 
 ### Message with Metadata
 
@@ -255,7 +255,7 @@ await messageSystem.publish('task.assigned', {
   correlationId: 'workflow-456',
   source: 'coordinator'
 });
-```
+```text
 
 ## Integration with Event System
 
@@ -275,7 +275,7 @@ eventSystem.on('message', (event) => {
   const message = event.payload;
   console.log('Message via EventSystem:', message.topic);
 });
-```
+```text
 
 ## Error Handling
 
@@ -293,7 +293,7 @@ messageSystem.subscribe('task.process', async (message) => {
     // Error doesn't stop other handlers
   }
 });
-```
+```text
 
 ## Performance Characteristics
 

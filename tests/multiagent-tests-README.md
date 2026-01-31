@@ -19,7 +19,7 @@ The `simple-openai-test.js` script provides a basic test of OpenAI API integrati
 
 ```bash
 node tests/simple-openai-test.js
-```
+```text
 
 ### Multiagent Collaboration Test
 
@@ -36,7 +36,7 @@ node tests/multiagent-collaboration-test.js
 
 # Run with a custom topic
 node tests/multiagent-collaboration-test.js "Your topic here"
-```
+```text
 
 The script generates:
 
@@ -50,7 +50,7 @@ The `run-multiagent-test.js` script allows you to run specific TypeScript test f
 
 ```bash
 node tests/run-multiagent-test.js tests/integration/multiagent/test_agent_coordination.ts
-```
+```text
 
 ### Run All Multiagent Tests
 
@@ -58,16 +58,16 @@ The `run-multiagent-tests.js` script runs all multiagent tests with real LLM int
 
 ```bash
 node tests/run-multiagent-tests.js
-```
+```text
 
 ## Environment Setup
 
 Create a `.env` file in the project root with your OpenAI API key:
 
-```
+```text
 OPENAI_API_KEY=your-api-key-here
 OPENAI_MODEL=gpt-3.5-turbo  # Optional, defaults to gpt-3.5-turbo
-```
+```text
 
 ## Test Helper Utilities
 

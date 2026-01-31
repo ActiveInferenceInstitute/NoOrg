@@ -37,7 +37,7 @@ graph TD
         SVP --> DP[Database Performance]
         SVP --> IP[Integration Performance]
     end
-```
+```text
 
 ## System Optimization
 
@@ -77,7 +77,7 @@ compute_optimization:
     numa_configuration:
       policy: interleave
       balancing: true
-```
+```text
 
 ### Network Optimization
 ```yaml
@@ -107,7 +107,7 @@ network_optimization:
       timeout: 3
       attempts: 2
       rotate: true
-```
+```text
 
 ### Storage Optimization
 ```yaml
@@ -141,7 +141,7 @@ storage_optimization:
       write_back_cache: enabled
       read_ahead_cache: enabled
       direct_io_threshold: 64k
-```
+```text
 
 ## Agent Optimization
 
@@ -174,7 +174,7 @@ task_executor_optimization:
       max_queue_size: 10000
       overflow_policy: drop_oldest
       backpressure_threshold: 0.8
-```
+```text
 
 ### Coordinator Optimization
 ```yaml
@@ -204,7 +204,7 @@ coordinator_optimization:
       interval: "1m"
       target_utilization: 0.8
       balance_factor: 0.9
-```
+```text
 
 ### Learning Optimization
 ```yaml
@@ -235,7 +235,7 @@ learning_optimization:
       batch_inference: true
       cache_predictions: true
       dynamic_batching: enabled
-```
+```text
 
 ## Service Optimization
 
@@ -266,7 +266,7 @@ queue_optimization:
       enabled: true
       size: 100
       timeout: "50ms"
-```
+```text
 
 ### Database Optimization
 ```yaml
@@ -297,7 +297,7 @@ database_optimization:
       isolation_level: read_committed
       deadlock_timeout: "1s"
       statement_timeout: "30s"
-```
+```text
 
 ### Service Registry Optimization
 ```yaml
@@ -326,7 +326,7 @@ registry_optimization:
       probe_interval: "1s"
       probe_timeout: "500ms"
       retransmit_multiplier: 3
-```
+```text
 
 ## Performance Monitoring
 
@@ -354,7 +354,7 @@ performance_metrics:
       - processing_time
       - queue_depth
       - error_rate
-```
+```text
 
 ### Performance Alerts
 ```yaml
@@ -381,7 +381,7 @@ performance_alerts:
     notification:
       channels: [email, slack]
       throttle_period: "15m"
-```
+```text
 
 ## Documentation
 

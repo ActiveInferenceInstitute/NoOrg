@@ -48,7 +48,7 @@ content_review:
       - structure_optimization
       - relationship_management
       - accessibility_improvement
-```
+```text
 
 ### Review Management
 ```python
@@ -79,7 +79,7 @@ class ContentAuditor:
     def generate_report(self):
         """Generate audit report"""
         pass
-```
+```text
 
 ## 🏗 Architecture Assessment
 
@@ -113,7 +113,7 @@ class ContentAuditor:
     }
   }
 }
-```
+```text
 
 ### Architecture Management
 ```python
@@ -144,7 +144,7 @@ class ArchitectureAuditor:
     def provide_recommendations(self):
         """Provide architectural recommendations"""
         pass
-```
+```text
 
 ## 🔄 Process Evaluation
 
@@ -180,7 +180,7 @@ process_evaluation:
       - change_management
       - training_requirements
       - monitoring_procedures
-```
+```text
 
 ### Process Management
 ```python
@@ -211,7 +211,7 @@ class ProcessAuditor:
     def recommend_improvements(self):
         """Recommend process improvements"""
         pass
-```
+```text
 
 ## 🎯 Strategic Alignment
 
@@ -245,7 +245,7 @@ class ProcessAuditor:
     }
   }
 }
-```
+```text
 
 ### Alignment Management
 ```python
@@ -276,7 +276,7 @@ class AlignmentAuditor:
     def optimize_alignment(self):
         """Optimize strategic alignment"""
         pass
-```
+```text
 
 ## 📊 Audit Analytics
 
@@ -316,7 +316,7 @@ audit_analytics:
       - priority_actions
       - resource_allocation
       - timeline_planning
-```
+```text
 
 ## 📚 References
 

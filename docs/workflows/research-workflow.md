@@ -13,7 +13,7 @@ This document outlines the standard workflow for conducting and documenting rese
 ## 🏗️ Project Structure
 
 ### Directory Organization
-```
+```text
 research-project/
 ├── docs/
 │   ├── planning/
@@ -40,7 +40,7 @@ research-project/
     ├── raw/
     ├── processed/
     └── external/
-```
+```text
 
 ### Project Templates
 
@@ -69,7 +69,7 @@ project:
       - name: "milestone"
         date: "YYYY-MM-DD"
         deliverables: []
-```
+```text
 
 #### Documentation Structure
 ```markdown
@@ -89,7 +89,7 @@ project:
 
 ## References
 [Citations and sources]
-```
+```text
 
 ## 📝 Documentation Standards
 

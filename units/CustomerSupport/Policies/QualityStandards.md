@@ -145,7 +145,7 @@ flowchart TD
     Identify --> Plan[Plan Improvements]
     Plan --> Implement[Implement Changes]
     Implement --> Measure
-```
+```text
 
 ### 1. Quality Review Cycle
 - Daily monitoring and feedback

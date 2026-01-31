@@ -30,7 +30,7 @@ documentation:
     - tutorials
     - examples
     - resources
-```
+```text
 
 ### Navigation Guidelines
 1. **Quick Access**

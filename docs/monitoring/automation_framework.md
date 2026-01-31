@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/metrics_framework]]
   - [[monitoring/alerting_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the automation framework for monitoring systems within the agent framework, providing comprehensive approaches for automating monitoring tasks, workflows, and responses. It integrates with the [[monitoring/monitoring_framework|Monitoring Framework]] and extends the capabilities defined in the [[monitoring/performance_framework|Performance Framework]].
@@ -43,7 +43,7 @@ class AutomationManager:
         self.executor = TaskExecutor()
         self.monitor = AutomationMonitor()
         self.controller = AutomationController()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Workflow Engine]
     C --> F[Schedule Engine]
     D --> G[Execution Engine]
-```
+```text
 
 ### 2. Workflow Orchestration
 #### 2.1 Orchestration System
@@ -71,7 +71,7 @@ class WorkflowOrchestrator:
         validation = await self.validator.validate_workflow(design)
         execution = await self.executor.execute_workflow(validation)
         return await self.engine.manage_workflow(execution)
-```
+```text
 
 #### 2.2 Workflow Types
 - [[monitoring/workflows/collection|Collection Workflows]]
@@ -101,7 +101,7 @@ class TaskScheduler:
         optimization = await self.optimizer.optimize_schedule(plan)
         monitoring = await self.monitor.monitor_schedule(optimization)
         return await self.engine.execute_schedule(monitoring)
-```
+```text
 
 #### 3.2 Schedule Types
 - [[monitoring/schedules/periodic|Periodic Schedules]]
@@ -124,7 +124,7 @@ class TaskExecutor:
         coordination = await self.coordinator.coordinate_execution(dispatch)
         monitoring = await self.monitor.monitor_execution(coordination)
         return await self.engine.manage_execution(monitoring)
-```
+```text
 
 #### 4.2 Execution Types
 - [[monitoring/execution/parallel|Parallel Execution]]
@@ -147,7 +147,7 @@ class AutomationController:
         enforcement = await self.enforcer.enforce_policy(policy)
         monitoring = await self.monitor.monitor_control(enforcement)
         return await self.engine.manage_control(monitoring)
-```
+```text
 
 #### 5.2 Control Types
 - [[monitoring/control/workflow|Workflow Control]]
@@ -172,7 +172,7 @@ class AutomationStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - [[monitoring/standards/workflow|Workflow Standards]]
@@ -189,7 +189,7 @@ class AutomationProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - [[monitoring/processes/workflow|Workflow Process]]
@@ -220,7 +220,7 @@ class QualityMonitoring:
     async def measure_metrics(self, measurements):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -252,7 +252,7 @@ class AutomationSecurity:
     async def audit_automation(self, audit):
         # Automation auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - [[security/automation/workflow|Workflow Security]]
@@ -302,7 +302,7 @@ class WorkflowPattern:
         self.designer = WorkflowDesigner()
         self.validator = WorkflowValidator()
         self.executor = WorkflowExecutor()
-```
+```text
 
 ### B. Schedule Patterns
 ```python
@@ -312,7 +312,7 @@ class SchedulePattern:
         self.planner = SchedulePlanner()
         self.optimizer = ScheduleOptimizer()
         self.monitor = ScheduleMonitor()
-```
+```text
 
 ### C. Execution Patterns
 ```python
@@ -322,4 +322,4 @@ class ExecutionPattern:
         self.dispatcher = TaskDispatcher()
         self.coordinator = TaskCoordinator()
         self.monitor = ExecutionMonitor()
-``` 
+```text 

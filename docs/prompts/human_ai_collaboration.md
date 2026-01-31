@@ -40,7 +40,7 @@ mindmap
       Feedback integration
       Interaction refinement
       Relationship development
-```
+```text
 
 ## Interaction Design Framework
 1. **Collaboration models**
@@ -106,7 +106,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Trust Development Framework
 1. **Capability transparency**
@@ -172,7 +172,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## User Experience Guidelines
 1. **Mental model alignment**
@@ -238,7 +238,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Collaboration Pattern Library
 1. **Mixed-initiative interaction**
@@ -296,7 +296,7 @@ mindmap
       Personalized pathways
       Practice facilitation
       Reduced scaffolding
-```
+```text
 
 ## Ethical Collaboration Guidelines
 1. **Human autonomy preservation**
@@ -362,7 +362,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Decision-Making Framework for Interaction Design
 - **When to automate**: Tasks with clear criteria, low stakes, repetitive nature, data-intensive processing, time-sensitive reactions
@@ -413,7 +413,7 @@ flowchart TD
     F1 --> F1c[Confidence below threshold]
     F1 --> F1d[Objectives conflict]
     F1 --> F1e[Stakes exceptionally high]
-```
+```text
 
 ## Interaction Evaluation Framework
 ```markdown
@@ -453,4 +453,4 @@ flowchart TD
 - **Unexpected usage patterns**: [Emergent behaviors]
 - **Technical limitations**: [System constraints identified]
 - **Integration issues**: [Workflow/process challenges]
-``` 
+```text 

@@ -57,7 +57,7 @@ regulatory_compliance:
         - security_scan
         - compliance_audit
         - penetration_testing
-```
+```text
 
 ### Compliance Monitoring
 ```python
@@ -88,7 +88,7 @@ class ComplianceMonitor:
     def generate_reports(self):
         """Generate compliance reports"""
         pass
-```
+```text
 
 ## 🏢 Industry Standards
 
@@ -129,7 +129,7 @@ class ComplianceMonitor:
     }
   }
 }
-```
+```text
 
 ### Standards Verification
 ```python
@@ -160,7 +160,7 @@ class StandardsVerification:
     def track_conformance(self):
         """Track standards conformance"""
         pass
-```
+```text
 
 ## 📋 Internal Policies
 
@@ -196,7 +196,7 @@ internal_policies:
       - governance_review
       - control_assessment
       - audit_validation
-```
+```text
 
 ### Policy Enforcement
 ```python
@@ -227,7 +227,7 @@ class PolicyEnforcement:
     def track_compliance(self):
         """Track policy compliance"""
         pass
-```
+```text
 
 ## 📊 Compliance Metrics
 
@@ -251,7 +251,7 @@ compliance_metrics:
     - exception_count
     - enforcement_effectiveness
     measurement: "percentage"
-```
+```text
 
 ### Analytics System
 ```python
@@ -282,7 +282,7 @@ class ComplianceAnalytics:
     def generate_insights(self):
         """Generate compliance insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Monitoring
 
@@ -313,7 +313,7 @@ class ComplianceAnalytics:
     }
   }
 }
-```
+```text
 
 ### Response Framework
 ```python
@@ -344,7 +344,7 @@ class ComplianceResponse:
     def track_resolution(self):
         """Track violation resolution"""
         pass
-```
+```text
 
 ## 📚 References
 

@@ -27,7 +27,7 @@ flowchart TD
     Close --> Knowledge[Update Knowledge Base if Needed]
     Knowledge --> CSAT[Send CSAT Survey]
     CSAT --> Archive[Archive Ticket]
-```
+```text
 
 ## Detailed Process Steps
 

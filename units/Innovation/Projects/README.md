@@ -6,9 +6,9 @@ This directory tracks individual innovation projects and initiatives managed by 
 
 Each project should reside in its own folder named using the convention:
 
-```
+```text
 YYYYMMDD_ProjectName
-```
+```text
 
 Within each project folder, maintain the following subdirectories:
 

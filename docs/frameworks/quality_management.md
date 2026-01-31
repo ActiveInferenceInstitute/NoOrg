@@ -23,7 +23,7 @@ related_frameworks:
   - [[processes/quality_processes]]
   - [[standards/quality_standards]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This framework establishes the comprehensive quality management system that ensures excellence across all organizational operations, processes, and deliverables.

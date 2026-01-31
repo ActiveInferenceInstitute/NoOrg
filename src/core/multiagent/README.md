@@ -60,7 +60,7 @@ graph TB
     style SSM fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
     style PM fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
     style OAI fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-```
+```text
 
 ## Task Lifecycle Flow
 
@@ -94,7 +94,7 @@ sequenceDiagram
     TM-->>Coordinator: success
     
     Coordinator-->>User: task completed
-```
+```text
 
 ## Core Components
 
@@ -147,7 +147,7 @@ const readyTasks = await coordinator.getReadyTasks();
 
 // Check dependencies
 const depsSatisfied = await coordinator.areDependenciesSatisfied(taskId!);
-```
+```text
 
 ### AgentRegistry
 
@@ -174,7 +174,7 @@ const analysisAgents = await registry.findAgentsByCapability('data-analysis');
 
 // Get agent information
 const agentInfo = await registry.getAgent('agent-id');
-```
+```text
 
 ### TaskManager
 
@@ -219,7 +219,7 @@ console.log(`Total tasks: ${stats.total}, Completed: ${stats.byStatus.completed}
 // Get task history
 const history = await taskManager.getTaskHistory(taskId);
 console.log(`Task has ${history.length} history events`);
-```
+```text
 
 ### SharedStateManager
 
@@ -266,7 +266,7 @@ stateManager.persistState('user.preferences');
 
 // Clear ephemeral state (keeps persisted)
 stateManager.clearEphemeralState();
-```
+```text
 
 ### OpenAIClient
 
@@ -296,7 +296,7 @@ const response = await client.sendPrompt('Analyze this data', {
 });
 
 console.log(response.choices[0].message.content);
-```
+```text
 
 ### PromptManager
 
@@ -323,7 +323,7 @@ const prompt = await promptManager.generatePrompt('analysis-prompt', {
   data: analysisData,
   requirements: ['accuracy', 'completeness']
 });
-```
+```text
 
 ## Agent Interfaces
 
@@ -347,7 +347,7 @@ class CustomAgent extends BaseAgent {
     return await this.processData(taskDetails);
   }
 }
-```
+```text
 
 ### Agent Health Monitor
 
@@ -388,7 +388,7 @@ console.log(`Agent healthy: ${status.healthy}`);
 const report = await healthMonitor.generateHealthReport('agent-1');
 console.log(`Uptime: ${report.metrics.uptime}%`);
 console.log(`Success rate: ${report.metrics.successRate}%`);
-```
+```text
 
 ## Configuration
 
@@ -401,7 +401,7 @@ interface CoordinatorConfig {
   enableMonitoring?: boolean;
   statePersistence?: boolean;
 }
-```
+```text
 
 ### Agent Configuration
 ```typescript
@@ -413,7 +413,7 @@ interface AgentConfig {
   preferredModel?: string;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 ## Workflow Management
 
@@ -457,7 +457,7 @@ console.log(`Child task ready: ${readyAfter}`); // true
 // Get all ready tasks
 const readyTasks = await taskManager.getReadyTasks();
 console.log(`Ready tasks: ${readyTasks.length}`);
-```
+```text
 
 ## Error Handling
 
@@ -475,7 +475,7 @@ try {
     // Handle coordination errors
   }
 }
-```
+```text
 
 ## Monitoring and Observability
 
@@ -507,7 +507,7 @@ console.log(`Pending: ${counts.pending}, In Progress: ${counts['in-progress']}`)
 const healthMonitor = new AgentHealthMonitor();
 const health = await healthMonitor.checkHealth(agentId);
 console.log(`Agent health: ${health.isHealthy ? 'healthy' : 'unhealthy'}`);
-```
+```text
 
 ## Integration
 
@@ -544,5 +544,5 @@ The Multi-Agent Coordination System integrates with:
 
 - [Multi-Agent System Overview](../../../docs/agents/multiagent-system.md)
 - [Agent Coordination Toolkit](../../../docs/agents/multiagent-coordination-system.md)
-- [Workflow Engine](../../../docs/agents/multiagent-workflow-system.md)
+- [Workflow Engine](../../../docs/agents/AGENTS.md)
 - [System Architecture](../../../docs/architecture/system-architecture.md)

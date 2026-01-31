@@ -239,7 +239,7 @@ class BaseLearningEngine implements LearningEngine {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ### Active Inference Implementation
 ```typescript
@@ -391,7 +391,7 @@ class BaseActiveInferenceEngine implements ActiveInferenceEngine {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ## 🔗 Related Resources
 

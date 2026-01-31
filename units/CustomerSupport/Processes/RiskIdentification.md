@@ -37,7 +37,7 @@ flowchart TD
     O --> P[Joint Risk Assessment]
     P --> Q[Mitigation Planning]
     Q --> R[Implementation & Monitoring]
-```
+```text
 
 ## Detailed Process Steps
 

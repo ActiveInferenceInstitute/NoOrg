@@ -191,7 +191,7 @@ graph TB
     TestTypes --> Processes
     Processes --> Automation
     Automation --> Management
-```
+```text
 
 ## Unit Testing
 
@@ -280,7 +280,7 @@ graph TB
     
     Components --> Practices
     Practices --> Frameworks
-```
+```text
 
 ## Integration Testing
 
@@ -379,7 +379,7 @@ graph TB
     
     Strategies --> Types
     Types --> Tools
-```
+```text
 
 ## Performance Testing
 
@@ -505,7 +505,7 @@ graph TB
     Types --> Planning
     Planning --> Execution
     Execution --> Analysis
-```
+```text
 
 ## Security Testing
 
@@ -631,7 +631,7 @@ graph TB
     Types --> Process
     Process --> Automation
     Automation --> Management
-```
+```text
 
 ## Related Documentation
 - [Unit Testing Guide](unit/guide.md)

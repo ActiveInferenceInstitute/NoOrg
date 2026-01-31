@@ -20,7 +20,7 @@ graph TD
     C --> D[Implementation]
     D --> E[Validation]
     E --> F[Future State]
-```
+```text
 
 ### Modernization Components
 1. **Technology Stack**

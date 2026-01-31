@@ -44,7 +44,7 @@ duplicate_detection:
       - analysis_records
       - decision_tracking
       - impact_assessment
-```
+```text
 
 ### Detection Management
 ```python
@@ -75,7 +75,7 @@ class DuplicateDetector:
     def analyze_findings(self):
         """Analyze detection results"""
         pass
-```
+```text
 
 ## 🔄 Content Merging
 
@@ -109,7 +109,7 @@ class DuplicateDetector:
     }
   }
 }
-```
+```text
 
 ### Merge Management
 ```python
@@ -140,7 +140,7 @@ class ContentMerger:
     def verify_merge(self):
         """Verify merge results"""
         pass
-```
+```text
 
 ## 🔗 Reference Updates
 
@@ -176,7 +176,7 @@ reference_updates:
       - status_updates
       - issue_documentation
       - completion_reports
-```
+```text
 
 ### Reference Management
 ```python
@@ -207,7 +207,7 @@ class ReferenceManager:
     def verify_updates(self):
         """Verify reference updates"""
         pass
-```
+```text
 
 ## ✅ Cleanup Verification
 
@@ -243,7 +243,7 @@ cleanup_verification:
       - status_reports
       - completion_certificates
       - improvement_recommendations
-```
+```text
 
 ### Verification Management
 ```python
@@ -274,7 +274,7 @@ class CleanupVerifier:
     def generate_report(self):
         """Generate verification report"""
         pass
-```
+```text
 
 ## 📊 Analytics and Reporting
 
@@ -308,7 +308,7 @@ class CleanupVerifier:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

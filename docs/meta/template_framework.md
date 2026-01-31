@@ -44,7 +44,7 @@ tags: [framework, domain, category, type]
 **Related Documents**
 - [[related_doc_1]]
 - [[related_doc_2]]
-```
+```text
 
 ### Policy Documents
 ```markdown
@@ -78,7 +78,7 @@ tags: [policy, domain, category, status]
 **Related Documents**
 - [[related_policy_1]]
 - [[related_policy_2]]
-```
+```text
 
 ### Procedure Documents
 ```markdown
@@ -117,7 +117,7 @@ tags: [procedure, domain, category, type]
 **Related Documents**
 - [[related_procedure_1]]
 - [[related_procedure_2]]
-```
+```text
 
 ## 💻 Code Templates
 
@@ -181,7 +181,7 @@ class ModuleName:
 if __name__ == "__main__":
     # Module execution code
     pass
-```
+```text
 
 ### Test Template
 ```python
@@ -214,7 +214,7 @@ class TestModuleName(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-```
+```text
 
 ## 📊 Process Templates
 
@@ -247,7 +247,7 @@ if __name__ == "__main__":
 
 ## Comments
 [Additional comments]
-```
+```text
 
 ### Change Request Template
 ```markdown
@@ -275,7 +275,7 @@ if __name__ == "__main__":
 ## Approval
 - [ ] Approved
 - [ ] Rejected
-```
+```text
 
 ## 🔄 Template Management
 

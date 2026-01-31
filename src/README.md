@@ -66,7 +66,7 @@ graph TB
     style CO fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
     style CONF fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
     style UTIL fill:#fff8e1,stroke:#f57f17,stroke-width:1px
-```
+```text
 
 ### Directory Descriptions
 
@@ -99,7 +99,7 @@ export class CustomAgent extends AbstractAgent {
         // Implementation of the task execution logic
     }
 }
-```
+```text
 
 ### Core Systems
 

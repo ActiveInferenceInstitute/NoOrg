@@ -5,7 +5,7 @@ The Organizational Units Framework provides a comprehensive system for creating,
 ## Architecture Overview
 
 ### Core Components Hierarchy
-```
+```text
 Organizational Units Framework
 ├── Structure Management
 │   ├── OrganizationalStructureManager - Unit CRUD and hierarchy
@@ -26,7 +26,7 @@ Organizational Units Framework
 └── State & Storage
     ├── UnitStateManager - Unit state management
     └── UnitInterface - Core interfaces
-```
+```text
 
 ## Structure Management
 
@@ -46,7 +46,7 @@ export class DefaultOrganizationalStructureManager implements OrganizationalStru
     async addUnitCapability(unitId: string, capability: Capability): Promise<void>
     async removeUnitCapability(unitId: string, capabilityName: string): Promise<void>
 }
-```
+```text
 
 ### OrganizationalCompositionManager (`OrganizationalCompositionManager.ts`)
 ```typescript
@@ -63,7 +63,7 @@ export class DefaultOrganizationalCompositionManager implements OrganizationalCo
     async getCompositionUnits(compositionId: string): Promise<OrganizationalUnit[]>
     async validateComposition(compositionId: string): Promise<boolean>
 }
-```
+```text
 
 ## Deployment & Execution
 
@@ -105,7 +105,7 @@ export interface DeploymentStatus {
     endTime?: number
     error?: string
 }
-```
+```text
 
 ### UnitStateManager (`state/UnitStateManager.ts`)
 ```typescript
@@ -123,7 +123,7 @@ export class UnitStateManager {
     async clearUnitState(unitId: string): Promise<void>
     async getStateMetadata(unitId: string, key: string): Promise<StateMetadata | null>
 }
-```
+```text
 
 ## Orchestration & Workflow
 
@@ -160,7 +160,7 @@ export interface OrchestratorConfig {
     retryAttempts?: number
     queueSize?: number
 }
-```
+```text
 
 ### AgentOrchestrator (`orchestration/AgentOrchestrator.ts`)
 ```typescript
@@ -192,7 +192,7 @@ export interface OrchestratorOptions {
     taskTimeout?: number
     retryFailedTasks?: boolean
 }
-```
+```text
 
 ### WorkflowEngine (`workflow/WorkflowEngine.ts`)
 ```typescript
@@ -229,7 +229,7 @@ export interface Workflow {
     timeout?: number
     onError?: 'stop' | 'continue' | 'rollback'
 }
-```
+```text
 
 ### WorkflowBuilder (`workflow/WorkflowBuilder.ts`)
 ```typescript
@@ -258,7 +258,7 @@ export interface ExecutionPhaseConfig {
     resources?: string[]
     checkpoints?: string[]
 }
-```
+```text
 
 ## Discovery & Relationships
 
@@ -294,7 +294,7 @@ export interface DiscoveryOptions {
     limit?: number
     sortBy?: 'name' | 'lastSeen' | 'status'
 }
-```
+```text
 
 ### UnitDiscovery (`discovery/UnitDiscovery.ts`)
 ```typescript
@@ -316,7 +316,7 @@ export interface UnitDiscoveryCriteria {
     depth?: number
     includeInactive?: boolean
 }
-```
+```text
 
 ### RelationshipManager (`relationships/RelationshipManager.ts`)
 ```typescript
@@ -349,7 +349,7 @@ export interface RelationshipConfig {
     bidirectional?: boolean
     permissions?: ResourcePermission[]
 }
-```
+```text
 
 ## Agent Creation & Management
 
@@ -376,7 +376,7 @@ export interface LLMAgentConfig {
     systemPrompt?: string
     capabilities?: string[]
 }
-```
+```text
 
 ### UnitAgentFactory (`agents/UnitAgentFactory.ts`)
 ```typescript
@@ -398,7 +398,7 @@ export interface UnitAgentConfig {
     customPrompt?: string
     maxConcurrency?: number
 }
-```
+```text
 
 ## Core Interfaces
 
@@ -454,7 +454,7 @@ export interface UnitWorkflowPhase {
     dependencies: string[]
     status: 'pending' | 'in_progress' | 'completed' | 'failed'
 }
-```
+```text
 
 ### OrganizationalStructureManager Interface
 ```typescript
@@ -467,7 +467,7 @@ export interface OrganizationalStructureManager {
     moveUnit(unitId: string, newParentId: string | null): Promise<void>
     getUnitHierarchy(unitId: string): Promise<OrganizationalUnit[]>
 }
-```
+```text
 
 ### OrganizationalCompositionManager Interface
 ```typescript
@@ -481,7 +481,7 @@ export interface OrganizationalCompositionManager {
     listCompositions(): Promise<OrganizationalComposition[]>
     getCompositionUnits(compositionId: string): Promise<OrganizationalUnit[]>
 }
-```
+```text
 
 ## Configuration & Types
 
@@ -509,7 +509,7 @@ export interface Capability {
     description?: string
     metadata?: Record<string, any>
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -551,7 +551,7 @@ class DeploymentError extends Error {
 class WorkflowExecutionError extends Error {
     constructor(workflowId: string, stepId: string, error: Error)
 }
-```
+```text
 
 ### Recovery Mechanisms
 - **Automatic Retries**: Failed operations retry with backoff
@@ -590,7 +590,7 @@ class MockOrganizationalStructureManager implements OrganizationalStructureManag
 class MockAgentRegistry implements IAgentRegistry {
     // Mock agent management for testing
 }
-```
+```text
 
 ## Configuration Options
 
@@ -608,7 +608,7 @@ DEPLOYMENT_DEFAULT_STRATEGY=parallel
 # Workflow settings
 WORKFLOW_MAX_STEPS=100
 WORKFLOW_DEFAULT_TIMEOUT=3600000
-```
+```text
 
 ### Programmatic Configuration
 ```typescript
@@ -624,7 +624,7 @@ const unitsConfig = {
         defaultTimeout: 3600000
     }
 };
-```
+```text
 
 ## Integration Points
 
@@ -652,7 +652,7 @@ interface UnitsMetrics {
     averageDeploymentTime: number
     workflowCompletionRate: number
 }
-```
+```text
 
 ### Health Checks
 ```typescript
@@ -665,7 +665,7 @@ interface UnitsHealth {
         deploymentManager: HealthStatus
     }
 }
-```
+```text
 
 ## Dependencies
 

@@ -19,7 +19,7 @@ graph TD
     WorkingGroups --> OrganizationalUnits[Organizational Units]
     
     class OrganizationalUnits externalEntity;
-```
+```text
 
 ## Working Group Structure
 

@@ -23,7 +23,7 @@ Our compensation philosophy is based on:
 Our total compensation program may include the following components:
 *   **Base Salary:** Fixed compensation paid on a regular schedule, determined by job role, level, market data, experience, skills, and internal equity.
 *   **Variable Pay/Incentives (if applicable):** Performance-based pay, such as bonuses, commissions, or other incentive plans tied to specific, measurable goals.
-*   **Benefits:** Health and welfare plans, retirement savings plans, paid time off, and other non-cash rewards (refer to [Benefits Overview](./BenefitsOverview.md)).
+*   **Benefits:** Health and welfare plans, retirement savings plans, paid time off, and other non-cash rewards (refer to [Benefits Overview](AGENTS.md)).
 *   **Equity/Long-Term Incentives (if applicable):** Stock options, restricted stock units, or other long-term programs, typically for specific employee groups.
 
 ## 5. Compensation Administration
@@ -31,7 +31,7 @@ Our total compensation program may include the following components:
 *   **Job Evaluation & Leveling:** Positions are evaluated and grouped into job levels or grades based on factors like scope, responsibility, complexity, and required skills.
 *   **Salary Structures:** Formal salary ranges (minimum, midpoint, maximum) are established for job levels based on market data and internal analysis. These ranges are reviewed periodically.
 *   **Market Analysis:** HR regularly reviews external market data (using reputable salary surveys) to ensure our compensation structures remain competitive.
-*   **Salary Reviews:** Employee base salaries are typically reviewed annually as part of the [Compensation Review Process](../Processes/CompensationReviewProcess.md), considering factors like performance, position in range, market adjustments, and budget availability.
+*   **Salary Reviews:** Employee base salaries are typically reviewed annually as part of the [Compensation Review Process](../Processes/AGENTS.md), considering factors like performance, position in range, market adjustments, and budget availability.
 *   **Promotional Increases:** Salary increases associated with promotions reflect the increased responsibilities and market value of the new role.
 *   **New Hire Offers:** Starting salaries are determined based on the candidate's qualifications, experience, internal equity, the position's salary range, and market conditions.
 

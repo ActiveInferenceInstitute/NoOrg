@@ -41,7 +41,7 @@ graph TD
     C --> D[Search Execution]
     D --> E[Result Ranking]
     E --> F[Result Presentation]
-```
+```text
 
 ### Processing Pipeline
 1. **Query Processing**
@@ -75,7 +75,7 @@ def semantic_search(query):
     
     # Rank and return results
     return rank_results(results)
-```
+```text
 
 ### Ranking Algorithm
 1. **Relevance Factors**

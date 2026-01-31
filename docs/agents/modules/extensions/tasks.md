@@ -26,7 +26,7 @@ related_documents:
   - [[agents/modules/core/behavior]]
   - [[agents/modules/core/communication]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the task module system for agents, providing comprehensive task management, execution, and optimization capabilities that build upon the core agent modules.
@@ -43,7 +43,7 @@ class TaskManager:
         self.executor = TaskExecutor()
         self.monitor = TaskMonitor()
         self.optimizer = TaskOptimizer()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Task Templates]
     C --> F[Execution Queue]
     D --> G[Resource Pool]
-```
+```text
 
 ### 2. Task Structure
 #### 2.1 Base Task
@@ -79,7 +79,7 @@ class Task:
     async def rollback(self):
         # Rollback logic
         pass
-```
+```text
 
 #### 2.2 Task Types
 - Processing Tasks
@@ -96,7 +96,7 @@ class TaskLifecycle:
         self.transitions = StateTransitions()
         self.handlers = EventHandlers()
         self.monitors = StageMonitors()
-```
+```text
 
 #### 3.2 Lifecycle Stages
 1. Task Creation
@@ -121,7 +121,7 @@ class TaskExecutor:
             await self.prepare_execution(task)
             result = await self.run_task(task)
             await self.handle_completion(task, result)
-```
+```text
 
 #### 4.2 Execution Patterns
 - Sequential Execution
@@ -146,7 +146,7 @@ class TaskImplementation:
     async def setup_resources(self, requirements):
         # Resource setup
         pass
-```
+```text
 
 #### 1.2 Development Standards
 - Task Structure
@@ -162,7 +162,7 @@ class ResourceController:
         self.allocator = ResourceAllocator()
         self.monitor = ResourceMonitor()
         self.optimizer = ResourceOptimizer()
-```
+```text
 
 #### 2.2 Resource Operations
 - Allocation
@@ -206,7 +206,7 @@ class TaskOptimizer:
     async def optimize_scheduling(self, queue):
         # Schedule optimization
         pass
-```
+```text
 
 ## Security Requirements
 
@@ -225,7 +225,7 @@ class TaskSecurity:
     async def audit_task(self, task, result):
         # Audit logging
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Task Validation
@@ -275,7 +275,7 @@ class TaskPattern:
         self.executor = TaskExecutor()
         self.validator = TaskValidator()
         self.monitor = TaskMonitor()
-```
+```text
 
 ### B. Resource Patterns
 ```python
@@ -285,7 +285,7 @@ class ResourcePattern:
         self.allocator = ResourceAllocator()
         self.monitor = ResourceMonitor()
         self.optimizer = ResourceOptimizer()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -295,4 +295,4 @@ class TaskSecurityPattern:
         self.validator = SecurityValidator()
         self.control = AccessControl()
         self.audit = AuditLogger()
-``` 
+```text 

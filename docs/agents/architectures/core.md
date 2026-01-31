@@ -25,7 +25,7 @@ related_documents:
   - [[agents/architectures/modules]]
   - [[agents/architectures/interfaces]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the core architecture for all agent types within the [[frameworks/agent_framework|Agent Framework]], establishing the foundational components and patterns for agent implementation.
@@ -43,7 +43,7 @@ class BaseAgent:
         self.behaviors = BehaviorRegistry()
         self.communication = CommunicationHandler()
         self.monitor = MonitoringSystem()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -56,7 +56,7 @@ graph TD
     C --> G[Behavior Registry]
     D --> H[Message Bus]
     E --> I[Metrics System]
-```
+```text
 
 ### 2. Core Systems
 #### 2.1 State Management
@@ -95,7 +95,7 @@ class SpecializedAgent(BaseAgent):
         super().__init__()
         self.specialized_components = {}
         self.extension_points = ExtensionRegistry()
-```
+```text
 
 #### 3.2 Extension Interfaces
 - [[agents/architectures/interfaces/extension|Extension Points]]
@@ -139,7 +139,7 @@ agents/
       ├── task_agent.py
       ├── system_agent.py
       └── communication_agent.py
-```
+```text
 
 #### 1.2 Implementation Requirements
 - [[standards/development_standards|Development Standards]]
@@ -231,7 +231,7 @@ class AgentPattern:
         self.components = ComponentRegistry()
         self.interfaces = InterfaceRegistry()
         self.behaviors = BehaviorRegistry()
-```
+```text
 
 ### B. Integration Patterns
 ```python
@@ -241,7 +241,7 @@ class IntegrationPattern:
         self.services = ServiceRegistry()
         self.protocols = ProtocolRegistry()
         self.adapters = AdapterRegistry()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -251,4 +251,4 @@ class SecurityPattern:
         self.controls = SecurityControls()
         self.protocols = SecurityProtocols()
         self.auditing = AuditSystem()
-``` 
+```text 

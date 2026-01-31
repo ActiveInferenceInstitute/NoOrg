@@ -19,7 +19,7 @@ graph TD
     A --> C[Report Generation]
     A --> D[Distribution]
     A --> E[Analysis Tools]
-```
+```text
 
 ### System Architecture
 1. **Report Types**

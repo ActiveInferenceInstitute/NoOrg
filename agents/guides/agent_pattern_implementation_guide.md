@@ -77,7 +77,7 @@ class CustomConnection extends MCPConnection {
     return session;
   }
 }
-```
+```text
 
 #### Tool Chain Management
 ```typescript
@@ -118,7 +118,7 @@ class CodeAnalysisChain extends ToolChain {
     return chain;
   }
 }
-```
+```text
 
 ### Task Pattern Examples
 
@@ -160,7 +160,7 @@ class CodeReviewDecomposer extends TaskDecomposer {
       .map(([type, plan]) => new Subtask(type, plan));
   }
 }
-```
+```text
 
 #### Task Execution
 ```typescript
@@ -201,7 +201,7 @@ class CodeReviewExecutor extends TaskExecutor {
       .begin();
   }
 }
-```
+```text
 
 ### Learning Pattern Examples
 
@@ -247,7 +247,7 @@ class CodeReviewCollector extends ExperienceCollector {
     };
   }
 }
-```
+```text
 
 #### Adaptation Management
 ```typescript
@@ -290,7 +290,7 @@ class ReviewAdaptation extends AdaptationManager {
       .select();
   }
 }
-```
+```text
 
 ### Security Pattern Examples
 
@@ -336,7 +336,7 @@ class ReviewAccessControl extends AccessController {
       .getResult();
   }
 }
-```
+```text
 
 #### Data Protection
 ```typescript
@@ -378,7 +378,7 @@ class ReviewDataProtection extends DataProtector {
       .verify();
   }
 }
-```
+```text
 
 ## 📊 Performance Optimization
 
@@ -424,7 +424,7 @@ class ReviewResourceOptimizer extends ResourceOptimizer {
       .build();
   }
 }
-```
+```text
 
 ### Operation Optimization
 ```typescript
@@ -468,7 +468,7 @@ class ReviewOperationOptimizer extends OperationOptimizer {
       .prioritize();
   }
 }
-```
+```text
 
 ## 🔗 Related Resources
 

@@ -16,7 +16,7 @@ graph TD
         Medium[Medium: 7 → 9]
         Low[Low: 12 → 15]
     end
-```
+```text
 
 | Metric | Current | Previous | Trend | Target |
 |--------|---------|----------|-------|--------|
@@ -36,7 +36,7 @@ pie title Customer-Reported Risks by Category
     "Account Management" : 14
     "Compliance/Legal" : 7
     "Other" : 5
-```
+```text
 
 ## High and Medium Risk Summary
 
@@ -122,7 +122,7 @@ graph LR
         InProgress[In Progress: 8]
         Resolved[Resolved: 12]
     end
-```
+```text
 
 | Severity | Avg. Time to Mitigation | Target | Status |
 |----------|-------------------------|--------|--------|

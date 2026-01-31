@@ -27,8 +27,8 @@ Applies to all employees and relevant systems whenever a litigation hold (also k
 ## Related Documents
 
 *   [Link to Records Retention Policy](./RecordsRetentionPolicy.md)
-*   [Link to Litigation Hold Notice Template](../Litigation/HoldNoticeTemplate.md)
-*   [Link to Custodian Acknowledgement Form](../Litigation/HoldAcknowledgementForm.md)
+*   [Link to Litigation Hold Notice Template](../Litigation/AGENTS.md)
+*   [Link to Custodian Acknowledgement Form](../Litigation/AGENTS.md)
 
 ## Contact
 

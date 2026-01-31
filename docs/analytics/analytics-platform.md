@@ -20,7 +20,7 @@ graph TD
     A --> D[Reporting System]
     A --> E[Visualization]
     A --> F[Insights Engine]
-```
+```text
 
 ### Platform Layers
 ```yaml
@@ -45,7 +45,7 @@ analytics_platform:
     - pattern_detection
     - anomaly_detection
     - recommendations
-```
+```text
 
 ## 🔄 Metrics Collection
 

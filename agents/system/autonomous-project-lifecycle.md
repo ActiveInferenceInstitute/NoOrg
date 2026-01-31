@@ -39,7 +39,7 @@ graph TD
         PA --> IR[Insight Generation]
         IR --> RD[Report Distribution]
     end
-```
+```text
 
 ## Project Management
 
@@ -103,7 +103,7 @@ class ProjectLifecycleManager:
         
         # Apply adjustments
         await self._apply_adjustments(execution, adjustments)
-```
+```text
 
 ### Task Workflow Manager
 ```python
@@ -158,7 +158,7 @@ class TaskWorkflowManager:
         except Exception as e:
             await self._handle_workflow_error(e, task)
             raise
-```
+```text
 
 ## Progress Tracking
 
@@ -204,7 +204,7 @@ class ProgressTracker:
         except Exception as e:
             await self._handle_tracking_error(e, context)
             raise
-```
+```text
 
 ### Performance Analyzer
 ```python
@@ -248,7 +248,7 @@ class PerformanceAnalyzer:
         except Exception as e:
             await self._handle_analysis_error(e, context)
             raise
-```
+```text
 
 ## Reporting System
 
@@ -288,7 +288,7 @@ class ReportGenerator:
         except Exception as e:
             await self._handle_report_error(e, context)
             raise
-```
+```text
 
 ### Insight Generator
 ```python
@@ -333,7 +333,7 @@ class InsightGenerator:
         except Exception as e:
             await self._handle_insight_error(e, context)
             raise
-```
+```text
 
 ## Configuration
 
@@ -374,7 +374,7 @@ project_configuration:
             - performance_degradation
             - resource_constraints
             - timeline_delays
-```
+```text
 
 ### Task Configuration
 ```yaml
@@ -410,7 +410,7 @@ task_configuration:
           - completion_report
           - performance_report
           - resource_report
-```
+```text
 
 ## Best Practices
 
@@ -434,7 +434,7 @@ project_best_practices:
     - document_comprehensively
     - analyze_performance
     - capture_learnings
-```
+```text
 
 ### Task Management
 ```yaml
@@ -456,7 +456,7 @@ task_best_practices:
     - provide_clear_metrics
     - highlight_key_insights
     - enable_actionable_feedback
-```
+```text
 
 ## Documentation
 

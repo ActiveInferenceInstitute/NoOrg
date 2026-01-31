@@ -19,7 +19,7 @@ tags:
   - documentation
   - training
 ---
-```
+```text
 
 ## Purpose & Scope
 This document outlines the organization's knowledge management framework, including knowledge creation, sharing, storage, and utilization processes. It serves as the foundation for organizational learning and knowledge preservation.

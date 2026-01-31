@@ -41,7 +41,7 @@ system_requirements:
       - victoria-metrics: ">=1.75"
     message_broker: "RabbitMQ >=3.8"
     service_registry: "Consul >=1.9"
-```
+```text
 
 ## Architecture
 
@@ -83,7 +83,7 @@ classDiagram
     MonitoringAgent --> AnalysisEngine
     MonitoringAgent --> AlertManager
     MonitoringAgent --> DataStore
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -101,7 +101,7 @@ integration:
     - message_broker
     - alert_notifier
     - dashboard_service
-```
+```text
 
 ## Implementation Steps
 
@@ -141,7 +141,7 @@ class MonitoringAgent:
         await self._setup_collectors()
         await self._start_metric_consumers()
         self.logger.info("Monitoring Agent started successfully")
-```
+```text
 
 ### 2. Metric Collection Implementation
 ```python
@@ -201,7 +201,7 @@ class MetricCollector:
             metric.set(data_point.value)
         elif isinstance(metric, Histogram):
             metric.observe(data_point.value)
-```
+```text
 
 ### 3. Analysis Engine Implementation
 ```python
@@ -239,7 +239,7 @@ class AnalysisEngine:
                     "severity": await self._calculate_severity(point)
                 })
         return anomalies
-```
+```text
 
 ### 4. Alert Manager Implementation
 ```python
@@ -277,7 +277,7 @@ class AlertManager:
             "threshold": rule.threshold,
             "severity": rule.severity
         }
-```
+```text
 
 ### 5. Data Store Implementation
 ```python
@@ -310,7 +310,7 @@ class DataStore:
         except Exception as e:
             await self._handle_query_error(e, query)
             return []
-```
+```text
 
 ## Testing & Validation
 
@@ -350,7 +350,7 @@ class TestMonitoringAgent:
         
         stored_metric = monitoring_agent.collector.metrics["test_metric"]
         assert stored_metric is not None
-```
+```text
 
 ### Integration Tests
 ```python
@@ -373,7 +373,7 @@ class TestMonitoringIntegration:
         
         assert len(analysis_results) > 0
         assert len(alerts) > 0
-```
+```text
 
 ## Performance Optimization
 
@@ -389,7 +389,7 @@ optimization:
   storage:
     write_buffer: 10000
     compression: true
-```
+```text
 
 ### Metric Buffer Management
 ```python
@@ -413,7 +413,7 @@ class MetricBuffer:
             if self.buffer:
                 await self.data_store.store_metrics(self.buffer)
                 self.buffer.clear()
-```
+```text
 
 ## Security Implementation
 
@@ -437,7 +437,7 @@ class SecurityManager:
         """Encrypt sensitive metric data"""
         # Implement metric encryption
         pass
-```
+```text
 
 ### Authorization
 ```python
@@ -450,7 +450,7 @@ class AuthorizationManager:
         """Check source permissions"""
         # Implement permission checking
         pass
-```
+```text
 
 ## Deployment
 
@@ -468,7 +468,7 @@ deployment:
     volumes:
       - ./config:/app/config
       - ./data:/app/data
-```
+```text
 
 ### Health Checks
 ```python
@@ -483,7 +483,7 @@ class HealthCheck:
             "data_store": await self._check_storage()
         }
         return checks
-```
+```text
 
 ## Troubleshooting
 
@@ -499,7 +499,7 @@ troubleshooting:
     - symptom: "Write failures"
       check: "Verify storage connectivity and capacity"
       solution: "Increase storage capacity or enable compression"
-```
+```text
 
 ### Logging Strategy
 ```python
@@ -515,7 +515,7 @@ class LogManager:
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
         # Setup handlers and formatters
-```
+```text
 
 ## Maintenance
 

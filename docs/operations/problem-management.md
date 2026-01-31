@@ -19,7 +19,7 @@ graph TD
     A --> C[Root Cause Analysis]
     A --> D[Solution Development]
     A --> E[Implementation]
-```
+```text
 
 ### Management Architecture
 1. **Problem Layers**

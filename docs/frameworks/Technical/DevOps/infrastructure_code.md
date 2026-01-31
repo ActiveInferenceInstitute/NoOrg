@@ -41,7 +41,7 @@ graph TD
     subgraph "Application Layer"
         J
     end
-```
+```text
 
 ## 🤖 Agent Integration Points
 
@@ -99,7 +99,7 @@ graph TD
     }
   ]
 }
-```
+```text
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## 🏗️ Resource Definitions
@@ -151,7 +151,7 @@ flowchart LR
     
     G -->|Delete| K[Decommission]
     K -->|Cleanup| L[Resource Removal]
-```
+```text
 
 ### Provisioning Strategy
 1. **Provisioning Process**
@@ -240,7 +240,7 @@ graph TD
     V[Environment Definitions] -->|Use| A
     V -->|Reference| W[Variable Definitions]
     V -->|Reference| X[Output Definitions]
-```
+```text
 
 ### Modular Architecture
 1. **Module Design**
@@ -430,7 +430,7 @@ module "compute" {
   environment = "production"
   depends_on  = [module.vpc, module.security_groups]
 }
-```
+```text
 
 ### Infrastructure Pipeline Configuration Example
 
@@ -479,7 +479,7 @@ infrastructure_pipeline:
       channels: [slack-devops, slack-operations]
     - event: apply-failed
       channels: [slack-devops, email-devops, pager-duty]
-```
+```text
 
 ---
 **Metadata**

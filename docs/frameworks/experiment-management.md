@@ -68,7 +68,7 @@ experiment:
     inputs: []
     outputs: []
     artifacts: []
-```
+```text
 
 ### Protocol Management
 1. **Protocol Definition**

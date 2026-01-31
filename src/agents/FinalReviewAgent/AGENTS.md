@@ -18,7 +18,7 @@ The **FinalReviewAgent** specializes in final content review, quality assurance,
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -31,7 +31,7 @@ async performFinalReview(
   content: string,
   previousReviews: any[]
 ): Promise<FinalReviewResult>
-```
+```text
 
 #### validateContent()
 
@@ -42,7 +42,7 @@ async validateContent(
   content: string,
   rules: string[]
 ): Promise<ValidationResult>
-```
+```text
 
 #### reviewContent()
 
@@ -53,7 +53,7 @@ async reviewContent(
   content: string,
   criteria: string[]
 ): Promise<ReviewResult>
-```
+```text
 
 #### performFinalCheck()
 
@@ -63,7 +63,7 @@ Perform final quality check before approval.
 async performFinalCheck(
   content: string
 ): Promise<FinalCheckResult>
-```
+```text
 
 #### generateFinalReport()
 
@@ -73,7 +73,7 @@ Generate comprehensive final report.
 async generateFinalReport(
   content: string
 ): Promise<string>
-```
+```text
 
 ## Configuration Options
 
@@ -88,7 +88,7 @@ interface FinalReviewAgentConfig extends AgentConfig {
   approvalCriteria?: string[];
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -131,7 +131,7 @@ const taskId = await coordinator.createTask({
 // Execute the review
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -161,7 +161,7 @@ const customWorkflow = {
 
 // Execute custom workflow
 const result = await reviewAgent.performFinalReview(content, customWorkflow);
-```
+```text
 
 ### Quality Metrics
 
@@ -177,7 +177,7 @@ const qualityMetrics = await reviewAgent.reviewContent(content, [
 console.log('Quality Score:', qualityMetrics.score);
 console.log('Feedback Points:', qualityMetrics.feedback);
 console.log('Improvement Areas:', qualityMetrics.improvements);
-```
+```text
 
 ## Version History
 

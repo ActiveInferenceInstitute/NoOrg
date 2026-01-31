@@ -60,4 +60,4 @@ graph LR
     F --> G[Register Asset in Inventory]
     G --> H[Configure & Deploy]
     H --> I[Close Hardware Request Ticket]
-``` 
+```text 

@@ -20,7 +20,7 @@ graph TD
     A --> D[Scalability Testing]
     A --> E[Reliability Testing]
     A --> F[Optimization]
-```
+```text
 
 ### Testing Framework
 ```yaml
@@ -45,7 +45,7 @@ performance_testing:
     - stability
     - failover
     - recovery
-```
+```text
 
 ## 🔄 Load Testing
 

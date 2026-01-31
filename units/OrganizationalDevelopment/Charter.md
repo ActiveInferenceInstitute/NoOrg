@@ -85,7 +85,7 @@ graph TD
         DEI --> TAw[Training & Awareness]
         DEI --> Metrics[Metrics & Reporting]
     end
-```
+```text
 
 ## 8. Key Performance Indicators (KPIs)
 Performance of the OD Unit will be measured by metrics including, but not limited to:

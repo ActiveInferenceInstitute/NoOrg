@@ -23,7 +23,7 @@ related_frameworks:
   - [[frameworks/quality_management]]
   - [[frameworks/implementation_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This framework establishes comprehensive standards and methodologies for identifying, assessing, managing, and monitoring risks across all organizational operations.

@@ -35,7 +35,7 @@ graph TD
     F --> G
     J --> K
     N -.-> A
-```
+```text
 
 ## 🤖 Agent Integration Points
 
@@ -78,7 +78,7 @@ The following integration points are designed for autonomous agents and automati
     }
   ]
 }
-```
+```text
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## 🔄 CI/CD Pipeline
@@ -237,7 +237,7 @@ graph LR
     H --> J[Incident Response]
     J --> K[Remediation]
     K -.-> A
-```
+```text
 
 ### Performance Monitoring
 1. **System Monitoring**
@@ -310,7 +310,7 @@ graph TD
     
     G --> H[Results & Notification]
     H -.-> A
-```
+```text
 
 ### Process Automation
 1. **Workflow Automation**

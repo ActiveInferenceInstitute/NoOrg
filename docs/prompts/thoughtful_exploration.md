@@ -35,7 +35,7 @@ mindmap
       Deep investigation
       Strategic navigation
       Resource allocation awareness
-```
+```text
 
 ## Problem Space Exploration
 1. **Initial problem framing**
@@ -92,7 +92,7 @@ graph TD
     D --> F
     E --> F
     F --> G[Solution Space Exploration]
-```
+```text
 
 ## Solution Space Exploration
 1. **Divergent ideation**
@@ -157,7 +157,7 @@ flowchart TD
     J -->|No| K[Further Exploration]
     K --> B
     J -->|Yes| L[Solution Selection]
-```
+```text
 
 ## Thoughtful Exploration Techniques
 - **Mind mapping**: Create visual representations of problem/solution spaces
@@ -211,7 +211,7 @@ graph TD
     I --> I1[Cross-domain application]
     I --> I2[Pattern recognition]
     I --> I3[Novel connection making]
-```
+```text
 
 ## Navigating Complexity and Uncertainty
 - **Progressive disclosure**: Map what you know and systematically expand understanding
@@ -247,7 +247,7 @@ flowchart LR
     F --> F1[Future state envisioning]
     F --> F2[Backward planning]
     F --> F3[Path identification]
-```
+```text
 
 ## Meta-Exploration Practices
 - Periodically revisit and challenge your problem definition
@@ -283,7 +283,7 @@ graph TD
     F --> F1[Learning loops]
     F --> F2[Understanding refinement]
     F --> F3[Continuous improvement]
-```
+```text
 
 ## Exploration Process Model
 ```mermaid
@@ -323,4 +323,4 @@ graph TB
     P -.-> E
     P -.-> G
     P -.-> H
-``` 
+```text 

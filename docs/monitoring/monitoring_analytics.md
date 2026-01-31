@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_integration]]
   - [[monitoring/monitoring_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the analytics framework for monitoring systems within the agent framework, providing comprehensive analytics processes, standards, and best practices for deriving insights from monitoring data.
@@ -43,7 +43,7 @@ class MonitoringAnalyticsManager:
         self.analyzer = DataAnalyzer()
         self.predictor = DataPredictor()
         self.reporter = AnalyticsReporter()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Data Lake]
     C --> F[Processing Pipeline]
     D --> G[Analysis Engine]
-```
+```text
 
 ### 2. Data Collection
 #### 2.1 Collection System
@@ -71,7 +71,7 @@ class DataCollector:
         ingestion = await self.ingestion.ingest_data(registration)
         validation = await self.validator.validate_data(ingestion)
         return await self.storage.store_data(validation)
-```
+```text
 
 #### 2.2 Data Types
 - Metric Data
@@ -94,7 +94,7 @@ class DataProcessor:
         enrichment = await self.enricher.enrich_data(transformation)
         aggregation = await self.aggregator.aggregate_data(enrichment)
         return await self.pipeline.process_data(aggregation)
-```
+```text
 
 #### 3.2 Processing Types
 - Stream Processing
@@ -117,7 +117,7 @@ class DataAnalyzer:
         analysis = await self.engine.analyze_data(data, model)
         evaluation = await self.evaluator.evaluate_results(analysis)
         return await self.optimizer.optimize_model(evaluation)
-```
+```text
 
 #### 4.2 Analysis Types
 - Statistical Analysis
@@ -140,7 +140,7 @@ class DataPredictor:
         training = await self.trainer.train_model(model, data)
         validation = await self.validator.validate_model(training)
         return await self.engine.generate_predictions(validation)
-```
+```text
 
 #### 5.2 Prediction Types
 - Trend Prediction
@@ -163,7 +163,7 @@ class AnalyticsReporter:
         formatting = await self.formatter.format_report(visualization)
         distribution = await self.distributor.distribute_report(formatting)
         return await self.generator.generate_report(distribution)
-```
+```text
 
 #### 6.2 Report Types
 - Analytics Reports
@@ -188,7 +188,7 @@ class AnalyticsStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Data Standards
@@ -205,7 +205,7 @@ class AnalyticsProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Collection Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class AnalyticsSecurity:
     async def audit_analytics(self, audit):
         # Analytics auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Data Security
@@ -318,7 +318,7 @@ class AnalyticsPattern:
         self.collector = DataCollector()
         self.analyzer = DataAnalyzer()
         self.predictor = DataPredictor()
-```
+```text
 
 ### B. Model Patterns
 ```python
@@ -328,7 +328,7 @@ class ModelPattern:
         self.trainer = ModelTrainer()
         self.validator = ModelValidator()
         self.optimizer = ModelOptimizer()
-```
+```text
 
 ### C. Reporting Patterns
 ```python
@@ -338,4 +338,4 @@ class ReportingPattern:
         self.generator = ReportGenerator()
         self.visualizer = DataVisualizer()
         self.distributor = ReportDistributor()
-``` 
+```text 

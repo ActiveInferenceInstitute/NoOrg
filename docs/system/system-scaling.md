@@ -21,7 +21,7 @@ graph TD
     C --> E[Vertical Scaling]
     D --> F[Performance Monitoring]
     E --> F
-```
+```text
 
 ### Scaling Components
 1. **Resource Scaling**

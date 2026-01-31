@@ -1,6 +1,7 @@
 import { Agent } from './types';
 import { OpenAIClient } from '../core/multiagent/OpenAIClient';
 import { SharedStateManager } from '../core/multiagent/SharedStateManager';
+import { Logger } from '../core/multiagent/Logger';
 import { v4 as uuidv4 } from 'uuid';
 import * as dotenv from 'dotenv';
 
@@ -15,6 +16,7 @@ export class DevelopmentAgent {
   private agent: Agent;
   private openAIClient: OpenAIClient;
   private sharedState: SharedStateManager;
+  private logger: Logger;
   private isInitialized: boolean = false;
   private codeCache: Map<string, {
     query: string;
@@ -66,6 +68,7 @@ export class DevelopmentAgent {
     
     this.openAIClient = options?.openAIClient || new OpenAIClient();
     this.sharedState = options?.sharedState || SharedStateManager.getInstance();
+    this.logger = new Logger(`DevelopmentAgent-${name}`, 'info');
   }
   
   /**
@@ -117,7 +120,7 @@ export class DevelopmentAgent {
       this.isInitialized = true;
       return true;
     } catch (error: any) {
-      console.error(`Failed to initialize ${this.agent.name}: ${error.message}`);
+      this.logger.error(`Failed to initialize ${this.agent.name}: ${error.message}`);
       this.agent.status = 'error';
       this.sharedState.setState(`agents.${this.agent.id}.status`, 'error');
       return false;
@@ -164,14 +167,19 @@ export class DevelopmentAgent {
     processingTime: number;
     cached?: boolean;
   }> {
+    // Validate input
+    if (!requirements || requirements.trim().length === 0) {
+      throw new Error('Requirements must not be empty');
+    }
+
     // Update agent status
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     const language = options?.language || 'TypeScript';
     const framework = options?.framework || '';
     const codeStyle = options?.codeStyle || 'object-oriented';
-    
+
     // Generate cache key
     const cacheKey = `${requirements}-${language}-${framework}-${codeStyle}-${options?.includeComments}-${options?.includeTests}`;
     
@@ -281,7 +289,7 @@ export class DevelopmentAgent {
         processingTime: Date.now() - startTime
       };
     } catch (error: any) {
-      console.error(`Error generating code: ${error.message}`);
+      this.logger.error(`Error generating code: ${error.message}`);
       this.updateStatus('error');
       throw error;
     }
@@ -326,9 +334,14 @@ export class DevelopmentAgent {
     recommendations: string[];
     processingTime: number;
   }> {
+    // Validate input
+    if (!code || code.trim().length === 0) {
+      throw new Error('Code must not be empty');
+    }
+
     // Update agent status
     this.updateStatus('busy');
-    
+
     const startTime = Date.now();
     const language = options?.language || this.detectLanguage(code);
     const focusAreas = options?.focusAreas || ['security', 'performance', 'style', 'maintainability'];
@@ -371,17 +384,29 @@ export class DevelopmentAgent {
       });
       
       // Parse the JSON response
-      const reviewResult = JSON.parse(response.choices[0].message.content);
-      
+      let reviewResult;
+      try {
+        reviewResult = JSON.parse(response.choices[0].message.content);
+      } catch (parseError: any) {
+        this.logger.error(`Failed to parse review response as JSON: ${parseError.message}`);
+        reviewResult = {
+          issues: [],
+          summary: response.choices[0].message.content,
+          score: 0,
+          strengths: [],
+          recommendations: ['Review response could not be parsed as structured JSON. Raw response returned in summary.']
+        };
+      }
+
       // Update agent status
       this.updateStatus('available');
-      
+
       return {
         ...reviewResult,
         processingTime: Date.now() - startTime
       };
     } catch (error: any) {
-      console.error(`Error reviewing code: ${error.message}`);
+      this.logger.error(`Error reviewing code: ${error.message}`);
       this.updateStatus('error');
       throw error;
     }
@@ -522,17 +547,33 @@ export class DevelopmentAgent {
       });
       
       // Parse the JSON response
-      const architectureResult = JSON.parse(response.choices[0].message.content);
-      
+      let architectureResult;
+      try {
+        architectureResult = JSON.parse(response.choices[0].message.content);
+      } catch (parseError: any) {
+        this.logger.error(`Failed to parse architecture response as JSON: ${parseError.message}`);
+        architectureResult = {
+          architecture: {
+            overview: response.choices[0].message.content,
+            components: [],
+            interactions: []
+          },
+          technologies: [],
+          diagrams: {
+            componentDiagram: 'Unable to generate diagram - response was not valid JSON.'
+          }
+        };
+      }
+
       // Update agent status
       this.updateStatus('available');
-      
+
       return {
         ...architectureResult,
         processingTime: Date.now() - startTime
       };
     } catch (error: any) {
-      console.error(`Error designing architecture: ${error.message}`);
+      this.logger.error(`Error designing architecture: ${error.message}`);
       this.updateStatus('error');
       throw error;
     }
@@ -588,7 +629,7 @@ export class DevelopmentAgent {
       this.codeCache.clear();
       return true;
     } catch (error) {
-      console.error(`Error shutting down ${this.agent.name}:`, error);
+      this.logger.error(`Error shutting down ${this.agent.name}`, { error });
       return false;
     }
   }

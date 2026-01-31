@@ -13,17 +13,17 @@ The frameworks serve as the foundational architecture for security implementatio
 ## Core Security Documents
 
 ### Security Unit
-- [Security Unit Documentation](security_unit.md) - Overview of the integrated Security Unit
-- [Security Strategy](security_strategy.md) - Integrated security strategy and approach
-- [Incident Response](incident_response.md) - Integrated incident response procedures
-- [Security Domain Integration](security_domain_integration.md) - Guide for cross-domain security operations
+- [Security Unit Documentation](AGENTS.md) - Overview of the integrated Security Unit
+- [Security Strategy](AGENTS.md) - Integrated security strategy and approach
+- [Incident Response](../../../docs/security/incident_response.md) - Integrated incident response procedures
+- [Security Domain Integration](AGENTS.md) - Guide for cross-domain security operations
 
 ### Security Frameworks
-- [Security Framework](/frameworks/Security/security_framework.md) - Master security framework for all domains
-- [Physical Security Framework](/frameworks/Security/physical_security_framework.md) - Framework for physical security
-- [Digital Security Framework](/frameworks/Security/digital_security_framework.md) - Framework for digital security
-- [Cognitive Security Framework](/frameworks/Security/cognitive_security_framework.md) - Framework for cognitive security
-- [Security Framework Integration](/frameworks/Security/security_framework_integration.md) - Framework integration methodology
+- [Security Framework](../../../docs/frameworks/Security/security_framework.md) - Master security framework for all domains
+- [Physical Security Framework](../../../docs/frameworks/Security/physical_security_framework.md) - Framework for physical security
+- [Digital Security Framework](../../../docs/frameworks/Security/digital_security_framework.md) - Framework for digital security
+- [Cognitive Security Framework](../../../docs/frameworks/Security/cognitive_security_framework.md) - Framework for cognitive security
+- [Security Framework Integration](../../../docs/frameworks/Security/security_framework_integration.md) - Framework integration methodology
 
 ## Domain-Specific Units
 
@@ -31,15 +31,15 @@ The frameworks serve as the foundational architecture for security implementatio
 - [Physical Security Unit](Physical_Security/physical_security_unit.md) - Physical Security unit documentation
 - [Standard Operating Procedures](Physical_Security/standard_operating_procedures.md) - Physical security procedures
 - [Physical Access Control](Physical_Security/physical_access_control.md) - Access management procedures
-- [Security Monitoring](Physical_Security/security_monitoring.md) - Surveillance and monitoring procedures
+- [Security Monitoring](../../../docs/monitoring/security_monitoring.md) - Surveillance and monitoring procedures
 - [Emergency Response](Physical_Security/emergency_response.md) - Physical security incident response
 
 ### Digital Security
 - [Digital Security Unit](Digital_Security/digital_security_unit.md) - Digital Security unit documentation
 - [Cybersecurity Framework](Digital_Security/cybersecurity_framework.md) - Digital security framework
-- [Network Security](Digital_Security/network_security.md) - Network protection procedures
+- [Network Security](../../../docs/frameworks/Technical/Security/network_security.md) - Network protection procedures
 - [Data Protection](Digital_Security/data_protection.md) - Data security procedures
-- [Identity Management](Digital_Security/identity_management.md) - Access control procedures
+- [Identity Management](../../../docs/frameworks/Technical/Security/identity_management.md) - Access control procedures
 
 ### Cognitive Security
 - [Cognitive Security Unit](Cognitive_Security/cognitive_security_unit.md) - Cognitive Security unit documentation
@@ -52,13 +52,13 @@ The frameworks serve as the foundational architecture for security implementatio
 
 ### Integrated Operations
 - [Cross-Domain Operations](operations/cross_domain_operations.md) - Procedures for integrated security
-- [Security Monitoring](operations/security_monitoring.md) - Comprehensive monitoring procedures
+- [Security Monitoring](../../../docs/monitoring/security_monitoring.md) - Comprehensive monitoring procedures
 - [Threat Intelligence](operations/threat_intelligence.md) - Threat information management
 - [Vulnerability Management](operations/vulnerability_management.md) - Weakness identification and remediation
 
 ### Risk Management
 - [Security Risk Assessment](risk/security_risk_assessment.md) - Risk evaluation procedures
-- [Risk Treatment](risk/risk_treatment.md) - Risk mitigation procedures
+- [Risk Treatment](../../RiskManagement/Processes/risk_treatment.md) - Risk mitigation procedures
 - [Continuous Risk Monitoring](risk/continuous_risk_monitoring.md) - Ongoing risk evaluation
 - [Risk Reporting](risk/risk_reporting.md) - Risk communication procedures
 
@@ -79,7 +79,7 @@ The frameworks serve as the foundational architecture for security implementatio
 ### Digital Security Technical Documents
 - [Network Security Architecture](technical/digital/network_architecture.md) - Secure network design
 - [System Security](technical/digital/system_security.md) - Endpoint protection
-- [Application Security](technical/digital/application_security.md) - Software security
+- [Application Security](../../../docs/frameworks/Technical/Security/application_security.md) - Software security
 - [Cloud Security](technical/digital/cloud_security.md) - Cloud protection
 
 ### Cognitive Security Technical Documents
@@ -103,7 +103,7 @@ The frameworks serve as the foundational architecture for security implementatio
 - [Security Glossary](resources/references/security_glossary.md) - Security terminology
 
 ### Templates and Forms
-- [Risk Assessment Template](resources/templates/risk_assessment.md) - Risk evaluation format
+- [Risk Assessment Template](../../RiskManagement/Processes/risk_assessment.md) - Risk evaluation format
 - [Incident Report Form](resources/templates/incident_report.md) - Security incident documentation
 - [Security Review Checklist](resources/templates/security_review.md) - Security evaluation format
 - [Change Management Form](resources/templates/change_management.md) - Security change documentation

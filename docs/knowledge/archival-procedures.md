@@ -40,7 +40,7 @@ archive_criteria:
       current: "active_reference"
       declining: "occasional_reference"
       historical: "rare_reference"
-```
+```text
 
 ### Criteria Management
 ```python
@@ -71,7 +71,7 @@ class CriteriaManager:
     def generate_decision(self):
         """Generate archival decision"""
         pass
-```
+```text
 
 ## 📦 Storage Method
 
@@ -108,7 +108,7 @@ class CriteriaManager:
     }
   }
 }
-```
+```text
 
 ### Storage Implementation
 ```python
@@ -139,7 +139,7 @@ class StorageManager:
     def verify_integrity(self):
         """Verify storage integrity"""
         pass
-```
+```text
 
 ## 🔄 Retrieval Process
 
@@ -175,7 +175,7 @@ retrieval_process:
       - access_records
       - usage_patterns
       - performance_metrics
-```
+```text
 
 ### Retrieval Implementation
 ```python
@@ -206,7 +206,7 @@ class RetrievalManager:
     def track_request(self):
         """Track retrieval request"""
         pass
-```
+```text
 
 ## 📊 Performance Monitoring
 
@@ -242,7 +242,7 @@ performance_metrics:
       - retrieval_cost
       - staff_resources
       - system_overhead
-```
+```text
 
 ### Analytics System
 ```python
@@ -273,7 +273,7 @@ class PerformanceAnalyzer:
     def generate_reports(self):
         """Generate performance reports"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -307,7 +307,7 @@ class PerformanceAnalyzer:
     }
   }
 }
-```
+```text
 
 ### Process Enhancement
 ```python
@@ -338,7 +338,7 @@ class ImprovementManager:
     def track_progress(self):
         """Track improvement progress"""
         pass
-```
+```text
 
 ## 📚 References
 

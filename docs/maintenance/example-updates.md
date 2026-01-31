@@ -44,7 +44,7 @@ example_updates:
       - change_tracking
       - version_control
       - update_history
-```
+```text
 
 ### Update Management
 ```python
@@ -75,7 +75,7 @@ class ExampleUpdater:
     def track_updates(self):
         """Track documentation updates"""
         pass
-```
+```text
 
 ## ➕ New Case Additions
 
@@ -109,7 +109,7 @@ class ExampleUpdater:
     }
   }
 }
-```
+```text
 
 ### Addition Management
 ```python
@@ -140,7 +140,7 @@ class CaseManager:
     def validate_additions(self):
         """Validate new additions"""
         pass
-```
+```text
 
 ## 🗑️ Obsolete Example Removal
 
@@ -176,7 +176,7 @@ example_removal:
       - removal_logging
       - change_tracking
       - archive_management
-```
+```text
 
 ### Removal Management
 ```python
@@ -207,7 +207,7 @@ class ObsoleteManager:
     def verify_removal(self):
         """Verify removal process"""
         pass
-```
+```text
 
 ## ✅ Accuracy Verification
 
@@ -243,7 +243,7 @@ accuracy_verification:
       - issue_tracking
       - resolution_monitoring
       - enhancement_planning
-```
+```text
 
 ### Verification Management
 ```python
@@ -274,7 +274,7 @@ class AccuracyVerifier:
     def track_improvements(self):
         """Track accuracy improvements"""
         pass
-```
+```text
 
 ## 📚 References
 

@@ -44,7 +44,7 @@ timestamp_management:
       - status_reports
       - audit_logs
       - trend_analysis
-```
+```text
 
 ### Timestamp Management
 ```python
@@ -75,7 +75,7 @@ class TimestampManager:
     def verify_accuracy(self):
         """Verify timestamp accuracy"""
         pass
-```
+```text
 
 ## 🏷️ Tag Consistency
 
@@ -109,7 +109,7 @@ class TimestampManager:
     }
   }
 }
-```
+```text
 
 ### Tag Management
 ```python
@@ -140,7 +140,7 @@ class TagManager:
     def validate_tags(self):
         """Validate tag usage"""
         pass
-```
+```text
 
 ## 📝 Property Validation
 
@@ -178,7 +178,7 @@ property_validation:
       - error_correction
       - value_standardization
       - documentation_update
-```
+```text
 
 ### Property Management
 ```python
@@ -209,7 +209,7 @@ class PropertyManager:
     def correct_issues(self):
         """Correct property issues"""
         pass
-```
+```text
 
 ## 📋 Schema Compliance
 
@@ -245,7 +245,7 @@ schema_compliance:
       - change_tracking
       - version_control
       - update_history
-```
+```text
 
 ### Schema Management
 ```python
@@ -276,7 +276,7 @@ class SchemaManager:
     def update_schema(self):
         """Update schema definitions"""
         pass
-```
+```text
 
 ## 📊 Analytics and Reporting
 
@@ -310,7 +310,7 @@ class SchemaManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

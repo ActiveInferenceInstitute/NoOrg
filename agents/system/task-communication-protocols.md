@@ -38,7 +38,7 @@ graph TD
         ES --> EH[Event Handling]
         EH --> EA[Event Acknowledgment]
     end
-```
+```text
 
 ## Message Protocols
 
@@ -99,7 +99,7 @@ task_messages:
         },
         "timestamp": "2024-03-21T14:30:00Z"
       }
-```
+```text
 
 ### Control Messages
 ```yaml
@@ -140,7 +140,7 @@ control_messages:
       denied:
         type: "resource.denied"
         parameters: [task_id, reason]
-```
+```text
 
 ## Communication Patterns
 
@@ -177,7 +177,7 @@ class TaskRequestHandler:
             raise UnsupportedRequestError(request['type'])
         
         return await handler(request)
-```
+```text
 
 ### Publish-Subscribe Pattern
 ```python
@@ -208,7 +208,7 @@ class TaskEventPublisher:
     def _get_topic(self, event_type: str) -> str:
         """Get appropriate topic for event type"""
         return self.topics.get(event_type, 'task.events.default')
-```
+```text
 
 ### State Synchronization
 ```python
@@ -242,7 +242,7 @@ class TaskStateSync:
         }
         
         await self.sync_manager.broadcast(notification)
-```
+```text
 
 ## Protocol Implementation
 
@@ -284,7 +284,7 @@ class MessageSerializer:
             
         except Exception as e:
             raise DeserializationError(f"Failed to deserialize {message_type}: {e}")
-```
+```text
 
 ### Protocol Security
 ```python
@@ -328,7 +328,7 @@ class ProtocolSecurity:
             
         except Exception as e:
             raise SecurityError(f"Failed to verify message: {e}")
-```
+```text
 
 ## Error Handling
 
@@ -354,7 +354,7 @@ protocol_errors:
       code: "COM002"
       severity: "critical"
       recovery: "failover_to_backup"
-```
+```text
 
 ### Error Recovery
 ```python
@@ -381,7 +381,7 @@ class ProtocolErrorHandler:
             
         except Exception as e:
             await self._handle_unrecoverable_error(e, context)
-```
+```text
 
 ## Best Practices
 
@@ -405,7 +405,7 @@ protocol_best_practices:
     - encrypt_sensitive_data
     - implement_access_control
     - audit_protocol_usage
-```
+```text
 
 ### Performance Optimization
 ```yaml
@@ -421,7 +421,7 @@ performance_optimization:
     - use_appropriate_qos
     - implement_flow_control
     - optimize_payload_size
-```
+```text
 
 ## Documentation
 

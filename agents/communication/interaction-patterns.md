@@ -24,7 +24,7 @@ sequenceDiagram
     S-->>C: Acknowledge
     S->>C: Response
     C-->>S: Confirm
-```
+```text
 
 ### Publish-Subscribe
 ```mermaid
@@ -33,7 +33,7 @@ graph TD
     B --> C[Subscriber 1]
     B --> D[Subscriber 2]
     B --> E[Subscriber 3]
-```
+```text
 
 ## Advanced Patterns
 
@@ -52,7 +52,7 @@ contract_net:
     - waiting_for_bids
     - evaluating_bids
     - awarding_contract
-```
+```text
 
 ### Negotiation Pattern
 ```yaml
@@ -69,7 +69,7 @@ negotiation:
     - agreement
     - rejection
     - counter_proposal
-```
+```text
 
 ## Implementation
 
@@ -90,7 +90,7 @@ components:
     - condition_based
     - time_based
     - event_based
-```
+```text
 
 ### Interaction Flow
 ```mermaid
@@ -101,7 +101,7 @@ stateDiagram-v2
     Waiting --> Processing
     Waiting --> Completed
     Completed --> [*]
-```
+```text
 
 ## Integration
 
@@ -114,7 +114,7 @@ graph LR
     
     E[Context] -.-> B
     F[Rules] -.-> C
-```
+```text
 
 ### Cross-System Links
 - [[protocols|Communication Protocols]]
@@ -138,7 +138,7 @@ conversation:
     - flow_control
     - error_handling
     - timeout_management
-```
+```text
 
 ### Pattern Composition
 ```yaml
@@ -152,7 +152,7 @@ composition:
     - synchronization
     - data_flow
     - error_propagation
-```
+```text
 
 ## Performance
 
@@ -167,7 +167,7 @@ optimization:
     - memory_management
     - processing_distribution
     - bandwidth_optimization
-```
+```text
 
 ### Monitoring
 - Interaction Success Rate
@@ -188,7 +188,7 @@ error_handling:
     - retry_strategies
     - alternative_paths
     - fallback_patterns
-```
+```text
 
 ### Quality Assurance
 - Pattern Validation
@@ -209,7 +209,7 @@ security:
     - pattern_access
     - action_permissions
     - data_visibility
-```
+```text
 
 ### Trust Management
 - Reputation Systems

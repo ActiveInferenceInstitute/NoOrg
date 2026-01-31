@@ -19,7 +19,7 @@ tags:
   - organization
   - structure
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the comprehensive architecture and organization of our documentation system, establishing standards for document organization, relationships, and management.

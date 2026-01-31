@@ -20,7 +20,7 @@ graph TD
     A --> D[Security Auditing]
     A --> E[Compliance Testing]
     A --> F[Risk Assessment]
-```
+```text
 
 ### Testing Framework
 ```yaml
@@ -45,7 +45,7 @@ security_testing:
     - risk_analysis
     - impact_assessment
     - mitigation_planning
-```
+```text
 
 ## 🔄 Vulnerability Scanning
 

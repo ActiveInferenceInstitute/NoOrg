@@ -63,6 +63,14 @@ export abstract class AbstractAgent implements Agent {
         this.openAIClient = options.openAIClient;
         this.sharedState = options.sharedState;
 
+        // Validate required services
+        if (!this.openAIClient) {
+            throw new Error(`AbstractAgent '${this.name}': openAIClient is required`);
+        }
+        if (!this.sharedState) {
+            throw new Error(`AbstractAgent '${this.name}': sharedState is required`);
+        }
+
         // Initialize logger
         this.logger = new Logger(`AbstractAgent-${this.name}`, 'info');
     }

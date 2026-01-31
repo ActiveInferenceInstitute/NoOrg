@@ -18,7 +18,7 @@ graph TB
     S1 --- M1
     S2 --- M2
     S3 --- M3
-```
+```text
 
 ## Purpose and Scope
 ### Purpose
@@ -40,7 +40,7 @@ mindmap
         Locations
             Site 1
             Site 2
-```
+```text
 
 ## Prerequisites Dashboard
 ```mermaid
@@ -62,7 +62,7 @@ graph LR
     
     A1 & A2 --> T1 & T2
     T1 & T2 --> E1 & E2
-```
+```text
 
 ### Prerequisites Checklist
 - Required authorizations: [[auth/auth_list|Authorization List]]
@@ -86,7 +86,7 @@ mindmap
         Protection
             Measures
             Controls
-```
+```text
 
 ## Procedure Execution Flow
 ```mermaid
@@ -98,7 +98,7 @@ stateDiagram-v2
     Verification --> Completion: Pass
     Verification --> Execution: Fail
     Completion --> [*]
-```
+```text
 
 ### Step Timeline
 ```mermaid
@@ -113,7 +113,7 @@ timeline
     section Completion
         Step 5 : Documentation
         Step 6 : Sign-off
-```
+```text
 
 ### Decision Points
 ```mermaid
@@ -125,7 +125,7 @@ graph TD
     D --> E
     E -->|Pass| F[Continue]
     E -->|Fail| G[Remediate]
-```
+```text
 
 ## Quality Control Framework
 ```mermaid
@@ -147,7 +147,7 @@ flowchart TB
     
     Inspection --> Verification
     Verification --> Documentation
-```
+```text
 
 ## Error Handling
 ```mermaid
@@ -161,7 +161,7 @@ graph TD
     Solution --> Verify
     Verify -->|Success| Document[Document]
     Verify -->|Fail| Assess
-```
+```text
 
 ## Performance Tracking
 ```mermaid
@@ -171,7 +171,7 @@ xychart-beta
     y-axis "Success Rate (%)" 0 --> 100
     line [85, 88, 92, 95]
     line [80, 82, 85, 88]
-```
+```text
 
 ## Resource Allocation
 ```mermaid
@@ -180,7 +180,7 @@ pie title "Resource Requirements"
     "Equipment" : 30
     "Materials" : 20
     "Time" : 10
-```
+```text
 
 ## Communication Matrix
 ```mermaid
@@ -203,7 +203,7 @@ graph LR
     
     Routine --> Stakeholders
     Emergency --> Stakeholders
-```
+```text
 
 ## Compliance Framework
 ```mermaid
@@ -218,7 +218,7 @@ mindmap
         Audit
             Checkpoints
             Evidence
-```
+```text
 
 ## Version Control
 ```mermaid
@@ -230,7 +230,7 @@ gitGraph
     checkout main
     merge update
     commit id: "v1.1"
-```
+```text
 
 ## Training Requirements
 ```mermaid
@@ -242,7 +242,7 @@ journey
     section Advanced
       Troubleshooting: 3: Optional
       Quality Control: 4: Mandatory
-```
+```text
 
 ## Continuous Improvement
 ```mermaid
@@ -257,7 +257,7 @@ radar
     data
         Current: 80, 85, 90, 88, 82
         Target: 90, 90, 95, 92, 88
-```
+```text
 
 ## Process Maturity Assessment
 ```mermaid
@@ -274,7 +274,7 @@ radar
     data
         Current: 70, 85, 60, 75, 65, 80, 70
         Target: 90, 95, 80, 85, 80, 90, 85
-```
+```text
 
 ## Risk Heat Map
 ```mermaid
@@ -290,7 +290,7 @@ quadrantChart
     Risk2: [0.4, 0.3]
     Risk3: [0.6, 0.7]
     Risk4: [0.2, 0.9]
-```
+```text
 
 ## Process Integration Map
 ```mermaid
@@ -313,7 +313,7 @@ graph TB
     
     U1 & U2 --> Current_SOP
     Current_SOP --> D1 & D2
-```
+```text
 
 ## Control Framework
 ```mermaid
@@ -331,7 +331,7 @@ mindmap
             Error Handling
             Remediation
             Updates
-```
+```text
 
 ## Exception Handling Flow
 ```mermaid
@@ -349,7 +349,7 @@ stateDiagram-v2
     Solution --> Verification
     Verification --> Normal: Resolved
     Verification --> Assessment: Failed
-```
+```text
 
 ## Quality Gates
 ```mermaid
@@ -372,7 +372,7 @@ graph LR
     G2 -->|Pass| G3
     G3 -->|Pass| G4
     G4 -->|Pass| G5
-```
+```text
 
 ## Responsibility Matrix
 ```mermaid
@@ -395,7 +395,7 @@ graph TB
     E1 --> E2
     E2 --> O1 & O2
     S1 & S2 --> E1
-```
+```text
 
 ## Data Flow
 ```mermaid
@@ -420,7 +420,7 @@ flowchart LR
     
     Inputs --> Processing
     Processing --> Outputs
-```
+```text
 
 ## Critical Path Analysis
 ```mermaid
@@ -434,7 +434,7 @@ timeline
         Step 4 : Critical
     section Completion
         Step 5 : Critical
-```
+```text
 
 ## Resource Dependencies
 ```mermaid
@@ -445,7 +445,7 @@ sankey-beta
     Equipment [30] -> Backup [10]
     Systems [30] -> Core [20]
     Systems [30] -> Auxiliary [10]
-```
+```text
 
 ## Compliance Checkpoints
 ```mermaid
@@ -460,7 +460,7 @@ journey
     section Approval
       Supervisor: 5: Done
       Quality: 4: Pending
-```
+```text
 
 ## Performance Metrics Dashboard
 ```mermaid
@@ -471,7 +471,7 @@ xychart-beta
     y-axis "Error Rate (%)" 0 --> 20
     line [95, 94, 96, 95, 97, 98]
     line [5, 4, 3, 4, 2, 2]
-```
+```text
 
 ## Training Competency Matrix
 ```mermaid
@@ -489,7 +489,7 @@ mindmap
             Technical Skills
             Compliance
             Leadership
-```
+```text
 
 ## Change Management
 ```mermaid
@@ -502,7 +502,7 @@ gitGraph
     merge review id: "Update Approved"
     commit id: "Implementation"
     commit id: "Training Updated"
-```
+```text
 
 ## Emergency Response Flow
 ```mermaid
@@ -516,7 +516,7 @@ graph TD
     Containment --> Recovery[Recovery]
     Recovery --> Review[Post-Incident Review]
     Document --> Review
-```
+```text
 
 ## Audit Trail
 ```mermaid
@@ -531,7 +531,7 @@ timeline
     section Quality
         Standards Met : Verified
         Issues Addressed : Verified
-```
+```text
 
 ## New Sections
 
@@ -578,7 +578,7 @@ stateDiagram-v2
     OutputGeneration --> [*]
     ErrorHandling --> InputValidation: Retry
     ErrorHandling --> [*]: Abort
-```
+```text
 
 ## Equipment Dependencies
 ```mermaid
@@ -601,7 +601,7 @@ graph TB
     P1 & P2 --> S1 & S2
     B1 --> P1
     B2 --> P2
-```
+```text
 
 ## Safety Protocol Flow
 ```mermaid
@@ -616,7 +616,7 @@ graph TD
     Equipment -->|Ready| Proceed[Start Operation]
     Equipment -->|Issue| Maintenance[Call Maintenance]
     Maintenance --> Equipment
-```
+```text
 
 ## Deviation Management
 ```mermaid
@@ -641,7 +641,7 @@ graph TB
     
     Detection --> Analysis
     Analysis --> Response
-```
+```text
 
 ## Material Flow
 ```mermaid
@@ -654,7 +654,7 @@ sankey-beta
     QualityCheck [30] -> Rejected [5]
     Assembly [50] -> FinalProduct [45]
     Assembly [50] -> Scrap [5]
-```
+```text
 
 ## Maintenance Schedule
 ```mermaid
@@ -673,7 +673,7 @@ gantt
     section Monthly
     Major Service :m1, 2024-01-01, 30d
     Validation    :m2, after m1, 7d
-```
+```text
 
 ## Quality Control Points
 ```mermaid
@@ -695,7 +695,7 @@ graph LR
     end
     
     I1 & I2 --> P1 --> P2 --> P3 --> O1 --> O2
-```
+```text
 
 ## Environmental Monitoring
 ```mermaid
@@ -706,7 +706,7 @@ xychart-beta
     y-axis "Humidity (%)" 30 --> 70
     line [20, 22, 25, 23, 21]
     line [45, 50, 55, 52, 48]
-```
+```text
 
 ## Regulatory Compliance Matrix
 ```mermaid
@@ -724,7 +724,7 @@ mindmap
             Safety
             Environmental
             Labor
-```
+```text
 
 ## Training Progression
 ```mermaid
@@ -739,7 +739,7 @@ timeline
     section Advanced
         Specialist Training : Month 3
         Certification : Month 4
-```
+```text
 
 ## New Industry-Specific Sections
 
@@ -816,7 +816,7 @@ graph TB
     T2[Updates<br>Pending]
     T3[Certification<br>Active]
     end
-```
+```text
 
 ## 🔄 Process Integration
 ```mermaid
@@ -841,7 +841,7 @@ graph LR
     
     Upstream --> Process
     Process --> Downstream
-```
+```text
 
 ## 🎯 Control Framework
 ```mermaid
@@ -859,7 +859,7 @@ mindmap
             Issue Resolution
             Process Update
             Documentation
-```
+```text
 
 ## ⚡ Exception Handling
 ```mermaid
@@ -875,7 +875,7 @@ stateDiagram-v2
     Resolution --> Documentation
     Escalation --> Documentation
     Documentation --> Normal
-```
+```text
 
 ## 📈 Performance Metrics
 ```mermaid
@@ -886,7 +886,7 @@ xychart-beta
     y-axis "Quality Score" 0 --> 100
     line [45, 42, 40, 38]
     line [85, 88, 90, 92]
-```
+```text
 
 ## 🔍 Quality Gates
 ```mermaid
@@ -918,7 +918,7 @@ graph LR
     Prerequisites --> Setup
     Setup --> Execution
     Execution --> Quality
-```
+```text
 
 ## 📊 Resource Dependencies
 ```mermaid
@@ -932,7 +932,7 @@ sankey-beta
     Equipment [35] -> Backup [15]
     Systems [25] -> Main [15]
     Systems [25] -> Support [10]
-```
+```text
 
 ## 🔐 Responsibility Matrix
 ```mermaid
@@ -960,7 +960,7 @@ graph TB
     SP2[Training]
     SP3[Documentation]
     end
-```
+```text
 
 ## 📈 Critical Path Analysis
 ```mermaid
@@ -976,7 +976,7 @@ timeline
     section Completion
         Quality Check : Critical
         Documentation : Critical
-```
+```text
 
 ## ⚡ Emergency Response
 ```mermaid
@@ -992,7 +992,7 @@ graph TD
     Response --> Containment[Containment]
     Containment --> Resolution[Resolution]
     Resolution --> Review[Post-Incident Review]
-```
+```text
 
 ## 🔍 Training Competency
 ```mermaid
@@ -1010,7 +1010,7 @@ mindmap
             Technical
             Compliance
             Emergency
-```
+```text
 
 ## 📊 Audit Framework
 ```mermaid
@@ -1025,4 +1025,4 @@ timeline
     section Review
         Results : Analyzed
         Compliance : Confirmed
-``` 
+```text 

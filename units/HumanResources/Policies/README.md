@@ -8,15 +8,15 @@ These policies are designed to ensure fairness, consistency, compliance with law
 
 *   [**Employee Handbook**](./EmployeeHandbook.md): (May serve as a central repository or link to key policies)
 *   [**Code of Conduct Policy**](./CodeOfConductPolicy.md): (May link to a company-wide policy)
-*   [**Equal Employment Opportunity (EEO) & Anti-Harassment Policy**](./EEO_AntiHarassmentPolicy.md)
+*   [**Equal Employment Opportunity (EEO) & Anti-Harassment Policy**](AGENTS.md)
 *   [**Compensation Policy**](./CompensationPolicy.md)
-*   [**Benefits Overview**](./BenefitsOverview.md) (Summarizes available benefits, may link to provider details)
+*   [**Benefits Overview**](AGENTS.md) (Summarizes available benefits, may link to provider details)
 *   [**Leave Policy**](./LeavePolicy.md) (Covering various leave types: PTO, Sick, FMLA, Parental, etc.)
-*   [**Recruitment & Hiring Policy**](./RecruitmentHiringPolicy.md)
-*   [**Performance Management Policy**](./PerformanceManagementPolicy.md)
-*   [**Disciplinary Action Policy**](./DisciplinaryActionPolicy.md)
-*   [**Remote Work Policy**](./RemoteWorkPolicy.md) (If applicable)
-*   [**Data Privacy Policy (Employee)**](./DataPrivacyPolicy_Employee.md)
+*   [**Recruitment & Hiring Policy**](AGENTS.md)
+*   [**Performance Management Policy**](AGENTS.md)
+*   [**Disciplinary Action Policy**](AGENTS.md)
+*   [**Remote Work Policy**](AGENTS.md) (If applicable)
+*   [**Data Privacy Policy (Employee)**](AGENTS.md)
 
 *(Add links to other relevant policies as they are developed or refined)*
 

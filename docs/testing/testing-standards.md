@@ -20,7 +20,7 @@ graph TD
     A --> D[Performance]
     A --> E[Security]
     A --> F[Documentation]
-```
+```text
 
 ### Gate Requirements
 ```yaml
@@ -45,7 +45,7 @@ quality_gates:
     - security_review
     - compliance_check
     - risk_assessment
-```
+```text
 
 ## 🔄 Acceptance Criteria
 

@@ -29,7 +29,7 @@ interface HealthStatus {
   metrics: OperationalMetrics;
   lastChecked: Date;
 }
-```
+```text
 
 ### 1.2 Operational States
 ```typescript
@@ -49,7 +49,7 @@ interface StateTransition {
   trigger: string;
   validation: () => boolean;
 }
-```
+```text
 
 ## 2. Resource Management
 
@@ -75,7 +75,7 @@ interface ResourceMonitor {
   getHistoricalUsage(timeframe: TimeFrame): ResourceUsageHistory;
   setAlerts(thresholds: ResourceThresholds): void;
 }
-```
+```text
 
 ### 2.2 Scaling Configuration
 ```yaml
@@ -94,7 +94,7 @@ scaling:
   cooldown:
     scaleUp: 3m
     scaleDown: 5m
-```
+```text
 
 ## 3. Task Execution Framework
 
@@ -113,7 +113,7 @@ interface PipelineStage {
   fallback?: (error: Error) => Promise<void>;
   metrics: MetricsCollector;
 }
-```
+```text
 
 ### 3.2 Error Handling
 ```typescript
@@ -132,7 +132,7 @@ interface RetryPolicy {
   };
   conditions: RetryCondition[];
 }
-```
+```text
 
 ## 4. Monitoring and Observability
 
@@ -155,7 +155,7 @@ interface OperationalMetrics {
     costEfficiency: number;
   };
 }
-```
+```text
 
 ### 4.2 Logging Framework
 ```typescript
@@ -174,7 +174,7 @@ interface LoggingConfig {
   retention: RetentionPolicy;
   exporters: LogExporter[];
 }
-```
+```text
 
 ## 5. Integration Points
 
@@ -192,7 +192,7 @@ interface ResilienceConfig {
   bulkhead: BulkheadConfig;
   rateLimit: RateLimitConfig;
 }
-```
+```text
 
 ### 5.2 Event Bus Integration
 ```typescript
@@ -207,7 +207,7 @@ interface EventPublisher {
   publish(event: OperationalEvent): Promise<void>;
   publishBatch(events: OperationalEvent[]): Promise<void>;
 }
-```
+```text
 
 ## 6. Security Operations
 
@@ -225,7 +225,7 @@ interface AuthConfig {
   policies: AuthPolicy[];
   session: SessionConfig;
 }
-```
+```text
 
 ### 6.2 Audit Trail
 ```typescript
@@ -243,7 +243,7 @@ interface AuditPolicy {
   retention: RetentionPolicy;
   encryption: EncryptionConfig;
 }
-```
+```text
 
 ## 7. Deployment Configuration
 
@@ -260,7 +260,7 @@ environment:
     logging: enabled
     tracing: enabled
     metrics: enabled
-```
+```text
 
 ### 7.2 Deployment Strategy
 ```yaml
@@ -276,7 +276,7 @@ deployment:
     timeout: 5s
     successThreshold: 1
     failureThreshold: 3
-```
+```text
 
 ## 8. Operational Procedures
 
@@ -320,7 +320,7 @@ const slos: SLO[] = [
     compliance: 95,
   }
 ];
-```
+```text
 
 ### 9.2 Performance Budgets
 ```typescript
@@ -345,7 +345,7 @@ const budgets: PerformanceBudget[] = [
     action: 'scale',
   }
 ];
-```
+```text
 
 ---
 

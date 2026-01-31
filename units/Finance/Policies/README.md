@@ -19,7 +19,7 @@ graph TD
     Charter[Finance Charter] --> Policies
     
     class Charter externalEntity;
-```
+```text
 
 ## Policy Categories
 

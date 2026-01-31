@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/performance_framework]]
   - [[monitoring/optimization_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the data management framework for monitoring systems within the agent framework, providing comprehensive approaches for collecting, processing, storing, and analyzing monitoring data. It integrates with the [[monitoring/monitoring_framework|Monitoring Framework]] and extends the capabilities defined in the [[monitoring/metrics_framework|Metrics Framework]].
@@ -43,7 +43,7 @@ class DataManager:
         self.storage = DataStorage()
         self.analyzer = DataAnalyzer()
         self.archiver = DataArchiver()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Collection Pipeline]
     C --> F[Processing Engine]
     D --> G[Storage Engine]
-```
+```text
 
 ### 2. Data Collection
 #### 2.1 Collection System
@@ -71,7 +71,7 @@ class DataCollector:
         transformation = await self.transformer.transform_data(validation)
         buffering = await self.buffer.buffer_data(transformation)
         return await self.pipeline.process_data(buffering)
-```
+```text
 
 #### 2.2 Data Types
 - [[monitoring/data/types/metrics|Metric Data]]
@@ -101,7 +101,7 @@ class DataProcessor:
         aggregation = await self.aggregator.aggregate_data(enrichment)
         filtering = await self.filter.filter_data(aggregation)
         return await self.engine.process_data(filtering)
-```
+```text
 
 #### 3.2 Processing Types
 - [[monitoring/data/processing/enrichment|Data Enrichment]]
@@ -124,7 +124,7 @@ class DataStorage:
         compression = await self.compressor.compress_data(indexing)
         caching = await self.cache.cache_data(compression)
         return await self.engine.store_data(caching)
-```
+```text
 
 #### 4.2 Storage Types
 - [[monitoring/data/storage/timeseries|Time Series Storage]]
@@ -147,7 +147,7 @@ class DataAnalyzer:
         statistics = await self.statistics.calculate_statistics(query)
         visualization = await self.visualizer.visualize_data(statistics)
         return await self.engine.analyze_data(visualization)
-```
+```text
 
 #### 5.2 Analysis Types
 - [[monitoring/data/analysis/statistical|Statistical Analysis]]
@@ -172,7 +172,7 @@ class DataStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - [[monitoring/standards/data/collection|Collection Standards]]
@@ -189,7 +189,7 @@ class DataProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - [[monitoring/processes/data/collection|Collection Process]]
@@ -220,7 +220,7 @@ class QualityMonitoring:
     async def measure_metrics(self, measurements):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -252,7 +252,7 @@ class DataSecurity:
     async def audit_data(self, audit):
         # Data auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - [[security/data/collection|Collection Security]]
@@ -302,7 +302,7 @@ class DataPattern:
         self.collector = DataCollector()
         self.processor = DataProcessor()
         self.analyzer = DataAnalyzer()
-```
+```text
 
 ### B. Storage Patterns
 ```python
@@ -312,7 +312,7 @@ class StoragePattern:
         self.engine = StorageEngine()
         self.indexer = DataIndexer()
         self.cache = DataCache()
-```
+```text
 
 ### C. Analysis Patterns
 ```python
@@ -322,4 +322,4 @@ class AnalysisPattern:
         self.query = QueryEngine()
         self.statistics = StatisticsEngine()
         self.visualizer = DataVisualizer()
-``` 
+```text 

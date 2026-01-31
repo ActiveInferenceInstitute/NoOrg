@@ -8,8 +8,8 @@ This directory contains documents related to contract management, including temp
 - `Negotiation_Playbooks/`: Guidelines and strategies for negotiating common contract types.
 
 ## Key Processes
-- [Link to Contract Review Process](./../Processes/Contract_Review_Process.md)
-- [Link to Contract Signing Authority Policy](./../Policies/Signing_Authority_Policy.md)
+- [Link to Contract Review Process](../Processes/AGENTS.md)
+- [Link to Contract Signing Authority Policy](../Policies/AGENTS.md)
 
 ## Related Units & Linking
 - **Sales / Business Development:** Contracts here should link to or reference corresponding deals or opportunities managed by Sales/BD.

@@ -47,7 +47,7 @@ mindmap
       Edge case identification
       Failure mode analysis
       Recovery planning
-```
+```text
 
 ## Metacognitive Frameworks
 1. **Confidence calibration**
@@ -113,7 +113,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Self-Monitoring During Coding
 1. **Understanding verification**
@@ -179,7 +179,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Uncertainty Expression Standards
 1. **Standardized confidence levels**
@@ -245,7 +245,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Escalation Frameworks
 1. **Escalation triggers**
@@ -311,7 +311,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Self-Improvement Strategies
 1. **Error review and correction**
@@ -377,7 +377,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Metacognitive Biases and Pitfalls
 - **Illusory understanding**: Overestimating comprehension of complex systems
@@ -426,7 +426,7 @@ mindmap
       Priority inversion
       Irrelevant precision
       Analysis paralysis
-```
+```text
 
 ## Self-Assessment Process Model
 ```mermaid
@@ -470,4 +470,4 @@ graph TB
     V -.-> E
     V -.-> K
     V -.-> M
-``` 
+```text 

@@ -30,7 +30,7 @@ graph TD
     Manager --> Admin
     Director --> IT
     Director --> Finance
-```
+```text
 
 | Role                       | Key Skills                                                    |
 |----------------------------|---------------------------------------------------------------|

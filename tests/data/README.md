@@ -31,13 +31,13 @@ To regenerate all analysis data:
 
 ```bash
 python tests/run_structure_analysis.py
-```
+```text
 
 For more options:
 
 ```bash
 python tests/run_structure_analysis.py --help
-```
+```text
 
 ## Integration with LLM Tools
 

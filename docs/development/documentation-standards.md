@@ -32,7 +32,7 @@ type: [document-type]
 status: [draft/review/active/archived]
 tags: [relevant-tags]
 ---
-```
+```text
 
 ### 2. Standard Sections
 1. Title (H1)

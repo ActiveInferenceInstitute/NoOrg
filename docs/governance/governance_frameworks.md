@@ -19,7 +19,7 @@ tags:
   - risk
   - oversight
 ---
-```
+```text
 
 ## Purpose & Scope
 This document outlines the comprehensive governance frameworks that guide organizational operations, decision-making, and oversight mechanisms. It serves as the foundational reference for governance structures, processes, and controls across all units.

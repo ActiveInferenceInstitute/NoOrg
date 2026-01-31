@@ -39,7 +39,7 @@ sharing_channels:
         - search_capability
         - feedback_system
       access: "organization_wide"
-```
+```text
 
 ### Sharing Process
 ```python
@@ -70,7 +70,7 @@ class KnowledgeSharing:
     def track_distribution(self):
         """Track sharing effectiveness"""
         pass
-```
+```text
 
 ## 🔒 Access Controls
 
@@ -112,7 +112,7 @@ class KnowledgeSharing:
     }
   }
 }
-```
+```text
 
 ### Access Management
 ```python
@@ -143,7 +143,7 @@ class AccessController:
     def audit_access(self):
         """Audit access patterns"""
         pass
-```
+```text
 
 ## 📋 Usage Guidelines
 
@@ -175,7 +175,7 @@ usage_guidelines:
       - track_changes
       - maintain_history
       - document_updates
-```
+```text
 
 ### Compliance Framework
 ```python
@@ -206,7 +206,7 @@ class UsageCompliance:
     def enforce_guidelines(self):
         """Enforce usage guidelines"""
         pass
-```
+```text
 
 ## 📊 Metrics and Analytics
 
@@ -230,7 +230,7 @@ sharing_metrics:
     - security_compliance
     - access_control
     measurement: "compliance_rate"
-```
+```text
 
 ### Analytics System
 ```python
@@ -261,7 +261,7 @@ class SharingAnalytics:
     def generate_insights(self):
         """Generate sharing insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -295,7 +295,7 @@ class SharingAnalytics:
     }
   }
 }
-```
+```text
 
 ### Process Enhancement
 ```python
@@ -326,7 +326,7 @@ class ProcessImprovement:
     def track_improvements(self):
         """Track improvement progress"""
         pass
-```
+```text
 
 ## 📚 References
 

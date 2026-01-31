@@ -86,7 +86,7 @@ This document outlines our comprehensive automated backup system, ensuring data 
     }
   }
 }
-```
+```text
 
 ### Sync Procedures
 ```yaml
@@ -110,7 +110,7 @@ sync_procedures:
     - transfer_speed
     - error_rates
     - completion_time
-```
+```text
 
 ## 🔍 Verification Process
 
@@ -259,7 +259,7 @@ sync_procedures:
     }
   }
 }
-```
+```text
 
 ### Access Control
 ```yaml
@@ -279,7 +279,7 @@ access_control:
       permissions:
         - view_reports
         - view_logs
-```
+```text
 
 ## 📈 Performance Optimization
 

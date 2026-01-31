@@ -36,7 +36,7 @@ erDiagram
     
     System ||--o{ SystemMetric : monitors
     System ||--o{ Alert : generates
-```
+```text
 
 ## Core Entities
 
@@ -100,7 +100,7 @@ task:
           type: array
           items:
             type: string
-```
+```text
 
 ### Resource Model
 ```yaml
@@ -167,7 +167,7 @@ resource:
           type: array
           items:
             type: string
-```
+```text
 
 ### Agent Model
 ```yaml
@@ -224,7 +224,7 @@ agent:
           type: object
         constraints:
           type: object
-```
+```text
 
 ### Model Entity
 ```yaml
@@ -271,7 +271,7 @@ model:
           type: object
         validation_data:
           type: object
-```
+```text
 
 ## Relationship Models
 
@@ -324,7 +324,7 @@ task_execution:
           type: array
           items:
             type: object
-```
+```text
 
 ### Resource Allocation
 ```yaml
@@ -375,7 +375,7 @@ resource_allocation:
           type: number
         efficiency:
           type: number
-```
+```text
 
 ## Metric Models
 
@@ -422,7 +422,7 @@ system_metric:
           type: string
         description:
           type: string
-```
+```text
 
 ### Learning Metrics
 ```yaml
@@ -468,7 +468,7 @@ learning_metric:
           type: string
         parameters:
           type: object
-```
+```text
 
 ## Event Models
 
@@ -517,7 +517,7 @@ system_event:
           type: array
           items:
             type: string
-```
+```text
 
 ### Alerts
 ```yaml
@@ -569,7 +569,7 @@ alert:
           type: string
         notes:
           type: string
-```
+```text
 
 ## Storage Configuration
 
@@ -602,7 +602,7 @@ indexes:
     - name: type_timestamp
       fields: [type, timestamp]
       type: compound
-```
+```text
 
 ### Sharding Strategy
 ```yaml
@@ -626,7 +626,7 @@ sharding:
     ranges:
       - min: 2024-01-01
         max: 2024-07-01
-```
+```text
 
 ## Documentation
 

@@ -19,7 +19,7 @@ graph TD
     A --> C[Security Controls]
     A --> D[Security Operations]
     A --> E[Compliance Framework]
-```
+```text
 
 ### Architecture Layers
 1. **Security Layers**

@@ -41,7 +41,7 @@ mindmap
       Regular commitment
       Feature-refactoring balance
       Long-term perspective
-```
+```text
 
 ## Code Smell Recognition
 1. **Structural smells**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Refactoring Techniques
 1. **Composing methods**
@@ -173,7 +173,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Refactoring Process
 1. **Preparation**
@@ -239,7 +239,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Large-Scale Refactoring Strategies
 1. **Strangler pattern**
@@ -305,7 +305,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Technical Debt Management
 1. **Debt identification**
@@ -371,7 +371,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Legacy Code Approaches
 - Establish characterization tests before modifying
@@ -414,7 +414,7 @@ mindmap
       Risk management
       Value prioritization
       Effort optimization
-```
+```text
 
 ## Refactoring and Maintenance Process Model
 ```mermaid
@@ -452,4 +452,4 @@ graph TB
     
     S -.-> D
     S -.-> P
-``` 
+```text 

@@ -18,7 +18,7 @@ The **ReviewAgent** specializes in content review, feedback generation, and qual
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -31,7 +31,7 @@ async reviewContent(
   content: string,
   criteria: string[]
 ): Promise<ReviewResult>
-```
+```text
 
 #### validateContent()
 
@@ -42,7 +42,7 @@ async validateContent(
   content: string,
   rules: string[]
 ): Promise<ValidationResult>
-```
+```text
 
 ## Configuration Options
 
@@ -57,7 +57,7 @@ interface ReviewAgentConfig extends AgentConfig {
   feedbackFormat?: 'structured' | 'narrative' | 'bullet-points';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -100,7 +100,7 @@ const taskId = await coordinator.createTask({
 // Execute the review
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -133,7 +133,7 @@ const reviews = await Promise.all(
 
 // Aggregate review results
 const aggregatedReview = reviewAgent.aggregateReviews(reviews);
-```
+```text
 
 ### Validation Rules
 
@@ -148,7 +148,7 @@ const validationRules = [
 
 // Validate content against rules
 const validation = await reviewAgent.validateContent(content, validationRules);
-```
+```text
 
 ## Version History
 

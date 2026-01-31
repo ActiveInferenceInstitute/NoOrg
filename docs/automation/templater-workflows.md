@@ -53,7 +53,7 @@ content_generation:
           - field_population
           - reference_insertion
           - formatting_application
-```
+```text
 
 ### Generation Management
 ```python
@@ -84,7 +84,7 @@ class ContentGenerator:
     def validate_output(self):
         """Validate generated content"""
         pass
-```
+```text
 
 ## 📝 Metadata Automation
 
@@ -122,7 +122,7 @@ class ContentGenerator:
     }
   }
 }
-```
+```text
 
 ### Metadata Management
 ```python
@@ -153,7 +153,7 @@ class MetadataManager:
     def maintain_consistency(self):
         """Maintain metadata consistency"""
         pass
-```
+```text
 
 ## 📂 File Naming Conventions
 
@@ -202,7 +202,7 @@ naming_conventions:
           - naming_uniformity
           - convention_adherence
           - standard_compliance
-```
+```text
 
 ### Naming Management
 ```python
@@ -233,7 +233,7 @@ class NamingManager:
     def ensure_consistency(self):
         """Ensure naming consistency"""
         pass
-```
+```text
 
 ## 🔗 Link Management
 
@@ -278,7 +278,7 @@ link_management:
           - preloading_rules
           - resource_management
           - efficiency_enhancement
-```
+```text
 
 ### Link Management
 ```python
@@ -309,7 +309,7 @@ class LinkManager:
     def optimize_structure(self):
         """Optimize link structure"""
         pass
-```
+```text
 
 ## 📚 References
 

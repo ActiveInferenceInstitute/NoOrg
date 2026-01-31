@@ -19,7 +19,7 @@ graph TD
     A --> C[Quality Control]
     A --> D[Quality Assurance]
     A --> E[Quality Improvement]
-```
+```text
 
 ### Process Architecture
 1. **QA Layers**

@@ -20,7 +20,7 @@ graph TD
     C --> D[Quality Gates]
     D --> E[Staging]
     E --> F[Production]
-```
+```text
 
 ### Pipeline Stages
 1. **Source Control**

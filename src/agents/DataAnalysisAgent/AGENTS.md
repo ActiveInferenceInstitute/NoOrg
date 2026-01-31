@@ -19,7 +19,7 @@ The **DataAnalysisAgent** specializes in processing and analyzing numerical and 
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 **Parameters:**
 - `config` (AgentConfig): Configuration object containing agent settings
@@ -40,7 +40,7 @@ const dataAgent = new DataAnalysisAgent({
     supportedTests: ['t-test', 'anova', 'correlation', 'regression']
   }
 });
-```
+```text
 
 ### Core Methods
 
@@ -63,7 +63,7 @@ async analyzeData(
     checkCache?: boolean;
   }
 ): Promise<AnalysisResult>
-```
+```text
 
 **Parameters:**
 - `data` (any): Dataset to analyze
@@ -84,7 +84,7 @@ const analysis = await dataAgent.analyzeData(salesData, {
 console.log('Summary:', analysis.summary);
 console.log('Key Insights:', analysis.keyInsights);
 console.log('Statistical Tests:', analysis.statisticalTests);
-```
+```text
 
 #### createVisualization()
 
@@ -104,7 +104,7 @@ async createVisualization(
     checkCache?: boolean;
   }
 ): Promise<VisualizationResult>
-```
+```text
 
 **Parameters:**
 - `data` (any): Data for visualization
@@ -121,7 +121,7 @@ const viz = await dataAgent.createVisualization(salesData, {
   includeCode: true,
   framework: 'plotly'
 });
-```
+```text
 
 #### generateReport()
 
@@ -141,7 +141,7 @@ async generateReport(
     checkCache?: boolean;
   }
 ): Promise<ReportResult>
-```
+```text
 
 **Parameters:**
 - `data` (any): Analysis data for reporting
@@ -157,7 +157,7 @@ const report = await dataAgent.generateReport(analysisResults, {
   includeExecutiveSummary: true,
   includeVisualizations: true
 });
-```
+```text
 
 ## Configuration Options
 
@@ -172,7 +172,7 @@ interface DataAnalysisAgentConfig extends AgentConfig {
   reportTemplate?: 'executive' | 'technical' | 'comprehensive';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -214,7 +214,7 @@ const taskId = await coordinator.createTask({
 // Execute the analysis
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -245,7 +245,7 @@ const result = await dataAgent.analyzeData(data, {
   includeStatisticalTests: true,
   customTests: customTests
 });
-```
+```text
 
 ### Batch Processing
 
@@ -259,7 +259,7 @@ const batchResults = await Promise.all(
 
 // Aggregate results
 const aggregatedInsights = dataAgent.aggregateResults(batchResults);
-```
+```text
 
 ## Version History
 

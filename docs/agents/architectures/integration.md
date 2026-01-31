@@ -25,7 +25,7 @@ related_documents:
   - [[agents/architectures/modules]]
   - [[agents/architectures/interfaces]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the integration architecture that enables seamless interaction between agent components, modules, and external systems while maintaining security, reliability, and performance.
@@ -41,7 +41,7 @@ class IntegrationBase:
         self.type = IntegrationType()
         self.config = IntegrationConfig()
         self.state = IntegrationState()
-```
+```text
 
 #### 1.2 Integration Topology
 ```mermaid
@@ -55,7 +55,7 @@ graph TD
     C --> H[API Integration]
     C --> I[Protocol Integration]
     D --> J[Service Mesh]
-```
+```text
 
 ### 2. Integration Types
 #### 2.1 Internal Integration
@@ -79,7 +79,7 @@ class IntegrationPattern:
         self.config = PatternConfig()
         self.handlers = HandlerRegistry()
         self.middleware = MiddlewareChain()
-```
+```text
 
 #### 3.2 Pattern Types
 - Request-Response
@@ -110,7 +110,7 @@ class IntegrationTemplate:
     async def handle_error(self, error):
         # Error handling logic
         pass
-```
+```text
 
 #### 1.2 Development Standards
 - Integration Design
@@ -127,7 +127,7 @@ class IntegrationConfig:
         self.settings = ConfigRegistry()
         self.policies = PolicyRegistry()
         self.security = SecurityConfig()
-```
+```text
 
 #### 2.2 Configuration Requirements
 - Connection Settings
@@ -214,7 +214,7 @@ class IntegrationExample:
         self.config = ConfigManager()
         self.handlers = HandlerRegistry()
         self.middleware = MiddlewareChain()
-```
+```text
 
 ### B. Configuration Patterns
 ```python
@@ -224,7 +224,7 @@ class ConfigurationPattern:
         self.settings = SettingsManager()
         self.policies = PolicyManager()
         self.security = SecurityManager()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -234,4 +234,4 @@ class SecurityPattern:
         self.access = AccessControl()
         self.crypto = CryptoSystem()
         self.audit = AuditLogger()
-``` 
+```text 

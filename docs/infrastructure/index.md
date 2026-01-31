@@ -71,7 +71,7 @@ graph TB
     end
 
     DataCenter --> Cloud
-```
+```text
 
 ## Container Orchestration
 
@@ -111,7 +111,7 @@ graph TB
     end
     
     Control --> Worker
-```
+```text
 
 ## Network Architecture
 
@@ -151,7 +151,7 @@ graph TB
     end
     
     DMZ --> Internal
-```
+```text
 
 ## Storage Architecture
 
@@ -187,7 +187,7 @@ graph TB
             OC2 --> OC3[Replication]
         end
     end
-```
+```text
 
 ## Monitoring & Logging
 
@@ -243,7 +243,7 @@ graph TB
     
     Collection --> Processing
     Processing --> Storage
-```
+```text
 
 ## Disaster Recovery
 
@@ -283,7 +283,7 @@ graph TB
     
     Primary --> Secondary
     Secondary --> Recovery
-```
+```text
 
 ## Related Documentation
 - [Network Configuration](network/configuration.md)

@@ -37,7 +37,7 @@ graph TD
         AE --> AN[Alert Notification]
         AN --> AR[Alert Response]
     end
-```
+```text
 
 ## Metric Collection
 
@@ -79,7 +79,7 @@ class MetricCollector:
         except Exception as e:
             await self._handle_collection_error(e, task_execution)
             raise
-```
+```text
 
 ### Metric Analysis
 ```python
@@ -122,7 +122,7 @@ class MetricAnalyzer:
         except Exception as e:
             await self._handle_analysis_error(e, metrics)
             raise
-```
+```text
 
 ## Feedback System
 
@@ -161,7 +161,7 @@ class FeedbackCollector:
         except Exception as e:
             await self._handle_feedback_error(e, task_execution)
             raise
-```
+```text
 
 ### Pattern Recognition
 ```python
@@ -195,7 +195,7 @@ class PatternRecognizer:
         except Exception as e:
             await self._handle_recognition_error(e, feedback)
             raise
-```
+```text
 
 ## Alert System
 
@@ -237,7 +237,7 @@ class AlertManager:
         except Exception as e:
             await self._handle_alert_error(e, metrics)
             raise
-```
+```text
 
 ### Alert Response
 ```python
@@ -274,7 +274,7 @@ class AlertResponder:
         except Exception as e:
             await self._handle_response_error(e, alert)
             raise
-```
+```text
 
 ## Monitoring Configuration
 
@@ -304,7 +304,7 @@ metric_configuration:
         - business_metrics
         - domain_specific
         - quality_indicators
-```
+```text
 
 ### Alert Configuration
 ```yaml
@@ -329,7 +329,7 @@ alert_configuration:
         cpu_usage: 80%
         memory_usage: 75%
         disk_usage: 80%
-```
+```text
 
 ## Best Practices
 
@@ -353,7 +353,7 @@ monitoring_best_practices:
     - analyze_patterns
     - enable_continuous_improvement
     - maintain_feedback_loop
-```
+```text
 
 ### Performance Best Practices
 ```yaml
@@ -375,7 +375,7 @@ performance_best_practices:
     - efficient_analysis
     - actionable_insights
     - continuous_adaptation
-```
+```text
 
 ## Documentation
 

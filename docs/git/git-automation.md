@@ -47,7 +47,7 @@ pre_commit_hooks:
           agent: "dependency_analyzer"
           scope: "direct_transitive_deps"
           actions: "vulnerability_alerting"
-```
+```text
 
 ### Hook Management
 ```python
@@ -78,7 +78,7 @@ class PreCommitManager:
     def handle_violations(self):
         """Handle hook violations"""
         pass
-```
+```text
 
 ## 📤 Post-commit Actions
 
@@ -123,7 +123,7 @@ class PreCommitManager:
     }
   }
 }
-```
+```text
 
 ### Action Management
 ```python
@@ -154,7 +154,7 @@ class PostCommitManager:
     def monitor_execution(self):
         """Monitor action execution"""
         pass
-```
+```text
 
 ## 🌳 Branch Automation
 
@@ -193,7 +193,7 @@ branch_automation:
           agent: "cleanup_manager"
           triggers: "merge_completion"
           actions: "branch_removal"
-```
+```text
 
 ### Branch Automation Management
 ```python
@@ -224,7 +224,7 @@ class BranchAutomationManager:
     def monitor_operations(self):
         """Monitor automation operations"""
         pass
-```
+```text
 
 ## 🔄 Merge Automation
 
@@ -263,7 +263,7 @@ merge_automation:
           agent: "notification_manager"
           channels: "communication_paths"
           templates: "notification_formats"
-```
+```text
 
 ### Merge Automation Management
 ```python
@@ -294,7 +294,7 @@ class MergeAutomationManager:
     def monitor_automation(self):
         """Monitor merge automation"""
         pass
-```
+```text
 
 ## 🌳 Fractal Automation
 
@@ -333,7 +333,7 @@ fractal_automation:
           agent: "graph_manager"
           visualization: "graph_types"
           updates: "graph_schedule"
-```
+```text
 
 ### Fractal Automation Manager
 ```python
@@ -384,7 +384,7 @@ class FractalAutomationManager:
         await self._automate_subtrees()
         await self._automate_sync()
         await self._update_links()
-```
+```text
 
 ## 📚 Obsidian Automation
 
@@ -434,7 +434,7 @@ class FractalAutomationManager:
     }
   }
 }
-```
+```text
 
 ### Obsidian Automation Manager
 ```python
@@ -485,7 +485,7 @@ class ObsidianAutomationManager:
         await self._resolve_conflicts()
         await self._create_backups()
         await self._manage_versions()
-```
+```text
 
 ## 🔄 Integration Automation
 
@@ -524,7 +524,7 @@ integration_automation:
           agent: "health_checker"
           checks: "health_tests"
           reporting: "health_reports"
-```
+```text
 
 ### Integration Automation Manager
 ```python
@@ -575,7 +575,7 @@ class IntegrationAutomationManager:
         await self._check_integration_health()
         await self._manage_integration_alerts()
         await self._optimize_performance()
-```
+```text
 
 ## 📚 References
 

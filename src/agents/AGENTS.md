@@ -24,7 +24,7 @@ export interface Agent {
     getAgentInfo(): Agent;
     updateStatus(status: Agent['status']): void;
 }
-```
+```text
 
 ### AgentType Enum
 ```typescript
@@ -46,7 +46,7 @@ export enum AgentType {
     WRITING = 'writing',
     ACTIVE_INFERENCE_POMDP = 'active_inference_pomdp'
 }
-```
+```text
 
 ### AbstractAgentOptions Interface
 ```typescript
@@ -62,14 +62,14 @@ export interface AbstractAgentOptions {
     openAIClient: OpenAIClient;
     sharedState: SharedStateManager;
 }
-```
+```text
 
 ## AbstractAgent Base Class
 
 ### Constructor
 ```typescript
 constructor(options: AbstractAgentOptions)
-```
+```text
 
 **Parameters:**
 - `options` (AbstractAgentOptions): Configuration options for the agent
@@ -85,7 +85,7 @@ constructor(options: AbstractAgentOptions)
 #### initialize()
 ```typescript
 async initialize(): Promise<boolean>
-```
+```text
 
 **Returns:** `Promise<boolean>` - Success status
 
@@ -100,7 +100,7 @@ async initialize(): Promise<boolean>
 #### onInitialize() [Protected]
 ```typescript
 protected async onInitialize(): Promise<void>
-```
+```text
 
 **Returns:** `Promise<void>`
 
@@ -109,7 +109,7 @@ protected async onInitialize(): Promise<void>
 #### updateStatus()
 ```typescript
 updateStatus(newStatus: Agent['status']): void
-```
+```text
 
 **Parameters:**
 - `newStatus` (Agent['status']): New status value
@@ -122,14 +122,14 @@ updateStatus(newStatus: Agent['status']): void
 #### getAgentInfo()
 ```typescript
 getAgentInfo(): Agent
-```
+```text
 
 **Returns:** `Agent` - Complete agent information object
 
 #### updateSharedState() [Protected]
 ```typescript
 protected updateSharedState(updates: Partial<Agent>): void
-```
+```text
 
 **Parameters:**
 - `updates` (Partial<Agent>): Properties to update in shared state
@@ -141,7 +141,7 @@ protected updateSharedState(updates: Partial<Agent>): void
 #### executeTask() [Abstract]
 ```typescript
 abstract executeTask(taskDetails: any, context?: any): Promise<any>
-```
+```text
 
 **Parameters:**
 - `taskDetails` (any): Task-specific data and instructions
@@ -154,7 +154,7 @@ abstract executeTask(taskDetails: any, context?: any): Promise<any>
 #### shutdown()
 ```typescript
 async shutdown(): Promise<boolean>
-```
+```text
 
 **Returns:** `Promise<boolean>` - Success status
 
@@ -168,7 +168,7 @@ async shutdown(): Promise<boolean>
 #### onShutdown() [Protected]
 ```typescript
 protected async onShutdown(): Promise<void>
-```
+```text
 
 **Returns:** `Promise<void>`
 
@@ -203,7 +203,7 @@ protected async onShutdown(): Promise<void>
 ### Base Agent Architecture
 All agents follow this inheritance hierarchy:
 
-```
+```text
 AbstractAgent (Base Class)
 ├── Core Properties: id, name, type, capabilities, status
 ├── Lifecycle Methods: initialize(), shutdown()
@@ -216,7 +216,7 @@ Concrete Agent Classes (16 total)
 ├── Specialized executeTask() implementations
 ├── Custom initialization/shutdown logic
 └── Agent-specific configuration and behavior
-```
+```text
 
 ## Agent Capabilities
 
@@ -268,7 +268,7 @@ interface AnalysisResult {
     confidence: number;
     processingTime: number;
 }
-```
+```text
 
 ### CreativeWritingAgent
 ```typescript
@@ -298,7 +298,7 @@ interface WritingResult {
     style: WritingStyle;
     revisions: number;
 }
-```
+```text
 
 ### DataAnalysisAgent
 ```typescript
@@ -329,7 +329,7 @@ interface DataResult {
     insights: string[];
     confidence: number;
 }
-```
+```text
 
 ### DevelopmentAgent
 ```typescript
@@ -360,7 +360,7 @@ interface DevelopmentResult {
     suggestions: string[];
     quality: CodeQualityMetrics;
 }
-```
+```text
 
 ### ResearchAgent
 ```typescript
@@ -391,7 +391,7 @@ interface ResearchResult {
     sources: Source[];
     confidence: number;
 }
-```
+```text
 
 ### PlanningAgent
 ```typescript
@@ -421,7 +421,7 @@ interface PlanningResult {
     recommendations: string[];
     feasibility: number;
 }
-```
+```text
 
 ### FinanceAgent
 ```typescript
@@ -449,7 +449,7 @@ interface FinanceResult {
     risks: string[];
     confidence: number;
 }
-```
+```text
 
 ## Integration
 
@@ -489,7 +489,7 @@ const result = await coordinator.executeWorkflow({
         }
     ]
 });
-```
+```text
 
 ### With Core Systems
 - **Event System**: Agents publish and subscribe to events
@@ -511,7 +511,7 @@ interface AgentConfig {
   openAIClient: OpenAIClient;
   sharedState: SharedStateManager;
 }
-```
+```text
 
 ### Runtime Configuration
 ```typescript
@@ -523,7 +523,7 @@ const agent = new AnalysisAgent('Data Analyst', {
     visualizationFramework: 'plotly'
   }
 });
-```
+```text
 
 ## Testing
 
@@ -544,7 +544,7 @@ npm test tests/unit/agents/test_analysis_agent.ts
 
 # Test with coverage
 npm run test:coverage
-```
+```text
 
 ## Development
 
@@ -562,7 +562,7 @@ export class CustomAgent extends AbstractAgent {
     return await this.processCustomTask(taskDetails);
   }
 }
-```
+```text
 
 ### Agent Best Practices
 1. **Single Responsibility**: Each agent should have a focused purpose
@@ -603,8 +603,8 @@ export class CustomAgent extends AbstractAgent {
 
 ## Related Documentation
 
-- [Multi-Agent Coordination](../../../src/core/multiagent/README.md)
-- [Agent Testing](../../../tests/unit/agents/README.md)
-- [Agent Examples](../../../examples/README.md)
-- [Agent Architecture](../../../docs/agents/README.md)
-- [API Reference](../../../docs/api/index.md)
+- [Multi-Agent Coordination](../../README.md)
+- [Agent Testing](../../README.md)
+- [Agent Examples](../../README.md)
+- [Agent Architecture](../../README.md)
+- [API Reference](../../docs/index.md)

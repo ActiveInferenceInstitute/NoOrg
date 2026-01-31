@@ -79,7 +79,7 @@
 // Example: Include Mermaid diagrams if helpful for visualizing results
 graph LR
     A --> B;
-```
+```text
 
 ### 3.2 Finding 2
 

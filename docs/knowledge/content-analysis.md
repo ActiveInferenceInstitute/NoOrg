@@ -41,7 +41,7 @@ graph TD
     C --> D[Semantic Analysis]
     D --> E[Quality Assessment]
     E --> F[Results Generation]
-```
+```text
 
 ### Processing Pipeline
 1. **Text Processing**

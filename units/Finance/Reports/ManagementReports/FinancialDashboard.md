@@ -18,7 +18,7 @@ This dashboard provides a consolidated view of the organization's financial perf
 
 ### Financial Performance Metrics
 
-```
+```text
 | Metric                   | Current Period | YTD      | Annual Target | Variance % | Trend |
 |--------------------------|----------------|----------|---------------|------------|-------|
 | Revenue                  | $X,XXX,XXX     | $XX,XXX,XXX | $XX,XXX,XXX   | X%         | ↑/↓   |
@@ -27,11 +27,11 @@ This dashboard provides a consolidated view of the organization's financial perf
 | Operating Profit         | $X,XXX,XXX     | $XX,XXX,XXX | $XX,XXX,XXX   | X%         | ↑/↓   |
 | Net Profit               | $X,XXX,XXX     | $XX,XXX,XXX | $XX,XXX,XXX   | X%         | ↑/↓   |
 | Profit Margin            | XX%           | XX%      | XX%           | X%         | ↑/↓   |
-```
+```text
 
 ### Financial Position Metrics
 
-```
+```text
 | Metric                   | Current Period | Prior Period | Change % | Target | Status |
 |--------------------------|----------------|--------------|----------|--------|--------|
 | Cash Balance             | $X,XXX,XXX     | $X,XXX,XXX   | X%       | $X,XXX,XXX | ✓/⚠️/❌  |
@@ -40,11 +40,11 @@ This dashboard provides a consolidated view of the organization's financial perf
 | Debt-to-Equity Ratio     | X.X           | X.X          | X%       | X.X    | ✓/⚠️/❌  |
 | Accounts Receivable Days | XX            | XX           | X%       | XX     | ✓/⚠️/❌  |
 | Accounts Payable Days    | XX            | XX           | X%       | XX     | ✓/⚠️/❌  |
-```
+```text
 
 ### Operational Efficiency Metrics
 
-```
+```text
 | Metric                      | Current Period | Prior Period | Change % | Target | Status |
 |-----------------------------|----------------|--------------|----------|--------|--------|
 | Revenue per Employee        | $XXX,XXX       | $XXX,XXX     | X%       | $XXX,XXX | ✓/⚠️/❌  |
@@ -53,7 +53,7 @@ This dashboard provides a consolidated view of the organization's financial perf
 | Return on Assets (ROA)      | XX%           | XX%          | X%       | XX%    | ✓/⚠️/❌  |
 | Return on Equity (ROE)      | XX%           | XX%          | X%       | XX%    | ✓/⚠️/❌  |
 | Inventory Turnover (if applicable) | X.X    | X.X          | X%       | X.X    | ✓/⚠️/❌  |
-```
+```text
 
 ## Performance Analysis
 
@@ -91,14 +91,14 @@ Key observations:
 
 ### Cash Flow Summary
 
-```
+```text
 | Cash Flow Category          | Current Period | YTD      | Annual Budget | Variance % |
 |-----------------------------|----------------|----------|---------------|------------|
 | Operating Activities        | $X,XXX,XXX     | $XX,XXX,XXX | $XX,XXX,XXX   | X%         |
 | Investing Activities        | $X,XXX,XXX     | $XX,XXX,XXX | $XX,XXX,XXX   | X%         |
 | Financing Activities        | $X,XXX,XXX     | $XX,XXX,XXX | $XX,XXX,XXX   | X%         |
 | Net Change in Cash          | $X,XXX,XXX     | $XX,XXX,XXX | $XX,XXX,XXX   | X%         |
-```
+```text
 
 Key observations:
 - [Analysis of cash flow trends]
@@ -120,7 +120,7 @@ Key observations:
 
 ### Budget vs. Actual Summary
 
-```
+```text
 | Category                 | Budget YTD | Actual YTD | Variance $ | Variance % | Status |
 |--------------------------|------------|------------|------------|------------|--------|
 | Revenue                  | $XX,XXX,XXX | $XX,XXX,XXX | $X,XXX,XXX  | X%         | ✓/⚠️/❌  |
@@ -130,7 +130,7 @@ Key observations:
 | Operating Profit         | $XX,XXX,XXX | $XX,XXX,XXX | $X,XXX,XXX  | X%         | ✓/⚠️/❌  |
 | Other Income/Expenses    | $XX,XXX,XXX | $XX,XXX,XXX | $X,XXX,XXX  | X%         | ✓/⚠️/❌  |
 | Net Profit               | $XX,XXX,XXX | $XX,XXX,XXX | $X,XXX,XXX  | X%         | ✓/⚠️/❌  |
-```
+```text
 
 Key observations:
 - [Analysis of significant budget variances]
@@ -142,7 +142,7 @@ Key observations:
 
 In coordination with the [[../../../RiskManagement/README|Risk Management Unit]], the following financial risk indicators are being monitored:
 
-```
+```text
 | Risk Indicator               | Current Level | Threshold | Status | Trend |
 |------------------------------|---------------|-----------|--------|-------|
 | Days Cash on Hand            | XX days       | XX days   | ✓/⚠️/❌  | ↑/↓   |
@@ -151,7 +151,7 @@ In coordination with the [[../../../RiskManagement/README|Risk Management Unit]]
 | Foreign Exchange Exposure    | $X,XXX,XXX    | $X,XXX,XXX | ✓/⚠️/❌  | ↑/↓   |
 | Covenant Compliance Margin   | XX%          | XX%       | ✓/⚠️/❌  | ↑/↓   |
 | Late Payment Percentage      | XX%          | XX%       | ✓/⚠️/❌  | ↑/↓   |
-```
+```text
 
 Key observations:
 - [Analysis of risk trends]

@@ -58,7 +58,7 @@ graph TD
     D -- Yes --> F[Provision Access]
     F --> G[Notify User/Requester]
     G --> H[Log & Close Ticket]
-```
+```text
 
 ## 7. Procedure Review
 

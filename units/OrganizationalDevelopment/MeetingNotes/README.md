@@ -6,7 +6,7 @@ This directory stores meeting notes related to the activities and governance of 
 Meeting notes should be organized chronologically and by meeting type or topic.
 A suggested structure is:
 
-```
+```text
 MeetingNotes/
 ├── YYYY/
 │   ├── TeamMeetings/
@@ -23,7 +23,7 @@ MeetingNotes/
 │   └── ...
 └── YYYY-1/
     └── ...
-```
+```text
 
 ## Naming Convention
 Use a consistent naming convention, such as `YYYY-MM-DD_MeetingTopic_or_Group.md`.

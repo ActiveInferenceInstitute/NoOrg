@@ -53,7 +53,7 @@ practice_tasks:
           - system_refactoring
           - optimization_projects
           - scalability_planning
-```
+```text
 
 ### Task Management
 ```python
@@ -84,7 +84,7 @@ class TaskManager:
     def track_progress(self):
         """Track task progress"""
         pass
-```
+```text
 
 ## 🎬 Scenarios
 
@@ -118,7 +118,7 @@ class TaskManager:
     }
   }
 }
-```
+```text
 
 ### Scenario Management
 ```python
@@ -149,7 +149,7 @@ class ScenarioManager:
     def adapt_scenarios(self):
         """Adapt scenarios to context"""
         pass
-```
+```text
 
 ## 📊 Assessments
 
@@ -194,7 +194,7 @@ skill_assessments:
           - knowledge_growth
           - proficiency_level
           - mastery_achievement
-```
+```text
 
 ### Assessment Management
 ```python
@@ -225,7 +225,7 @@ class AssessmentManager:
     def analyze_results(self):
         """Analyze assessment results"""
         pass
-```
+```text
 
 ## 📝 Feedback Forms
 
@@ -270,7 +270,7 @@ feedback_system:
           - resource_allocation
           - timeline_development
           - success_metrics
-```
+```text
 
 ### Feedback Management
 ```python
@@ -301,7 +301,7 @@ class FeedbackManager:
     def implement_improvements(self):
         """Implement feedback-based improvements"""
         pass
-```
+```text
 
 ## 📚 References
 

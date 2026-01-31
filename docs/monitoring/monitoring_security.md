@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/alerting_framework]]
   - [[security/security_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the security framework for monitoring systems within the agent framework, providing comprehensive security controls, standards, and best practices for protecting monitoring components and data.
@@ -43,7 +43,7 @@ class MonitoringSecurityManager:
         self.encryptor = DataEncryptor()
         self.auditor = SecurityAuditor()
         self.validator = SecurityValidator()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Auth Provider]
     C --> F[Access Control]
     D --> G[Crypto Engine]
-```
+```text
 
 ### 2. Authentication System
 #### 2.1 Authentication Manager
@@ -71,7 +71,7 @@ class SecurityAuthenticator:
         session = await self.session.create_session(verification)
         monitoring = await self.monitor.monitor_auth(session)
         return await self.provider.authenticate_user(monitoring)
-```
+```text
 
 #### 2.2 Authentication Types
 - Token Authentication
@@ -94,7 +94,7 @@ class SecurityAuthorizer:
         enforcement = await self.enforcer.enforce_policy(policy)
         monitoring = await self.monitor.monitor_authz(enforcement)
         return await self.provider.authorize_request(monitoring)
-```
+```text
 
 #### 3.2 Authorization Types
 - Role-based Authorization
@@ -117,7 +117,7 @@ class DataEncryptor:
         cipher = await self.cipher.get_cipher(key)
         monitoring = await self.monitor.monitor_encryption(cipher)
         return await self.engine.encrypt_data(data, monitoring)
-```
+```text
 
 #### 4.2 Encryption Types
 - Data Encryption
@@ -140,7 +140,7 @@ class SecurityAuditor:
         analysis = await self.analyzer.analyze_audit(logging)
         reporting = await self.reporter.report_audit(analysis)
         return await self.archiver.archive_audit(reporting)
-```
+```text
 
 #### 5.2 Audit Types
 - Access Audit
@@ -163,7 +163,7 @@ class SecurityValidator:
         testing = await self.tester.test_security(checks)
         reporting = await self.reporter.report_validation(testing)
         return await self.engine.validate_security(reporting)
-```
+```text
 
 #### 6.2 Validation Types
 - Control Validation
@@ -188,7 +188,7 @@ class SecurityStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Authentication Standards
@@ -205,7 +205,7 @@ class SecurityProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Authentication Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class SecurityCompliance:
     async def report_compliance(self, report):
         # Compliance reporting
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Data Protection
@@ -318,7 +318,7 @@ class SecurityPattern:
         self.authenticator = SecurityAuthenticator()
         self.authorizer = SecurityAuthorizer()
         self.encryptor = DataEncryptor()
-```
+```text
 
 ### B. Compliance Patterns
 ```python
@@ -328,7 +328,7 @@ class CompliancePattern:
         self.validator = ComplianceValidator()
         self.enforcer = ComplianceEnforcer()
         self.reporter = ComplianceReporter()
-```
+```text
 
 ### C. Audit Patterns
 ```python
@@ -338,4 +338,4 @@ class AuditPattern:
         self.logger = AuditLogger()
         self.analyzer = AuditAnalyzer()
         self.reporter = AuditReporter()
-``` 
+```text 

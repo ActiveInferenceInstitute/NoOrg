@@ -406,6 +406,16 @@ export class TaskManager implements ITaskManager {
       });
     }
     
+    if (task.status === 'cancelled' && task.cancelledAt) {
+      history.push({
+        timestamp: task.cancelledAt,
+        event: 'cancelled',
+        status: 'cancelled',
+        agentId: task.assignedTo,
+        metadata: { reason: task.cancelReason }
+      });
+    }
+
     // Add reassignment history if exists
     if (task.metadata?.reassignmentHistory) {
       const reassignments = task.metadata.reassignmentHistory as any[];
@@ -483,7 +493,8 @@ export class TaskManager implements ITaskManager {
         assigned: 0,
         'in-progress': 0,
         completed: 0,
-        failed: 0
+        failed: 0,
+        cancelled: 0
       },
       byPriority: {
         critical: 0,
@@ -621,18 +632,18 @@ export class TaskManager implements ITaskManager {
   }
 }
 
-// Type definitions for new methods
-interface TaskHistory {
+// Exported type definitions
+export interface TaskHistory {
   timestamp: number;
-  event: 'created' | 'assigned' | 'started' | 'completed' | 'failed' | 'reassigned';
+  event: 'created' | 'assigned' | 'started' | 'completed' | 'failed' | 'reassigned' | 'cancelled';
   status: Task['status'];
   agentId?: string;
   metadata: Record<string, any>;
 }
 
-interface TaskStatistics {
+export interface TaskStatistics {
   total: number;
-  byStatus: Record<Task['status'], number>;
+  byStatus: Record<string, number>;
   byPriority: {
     critical: number;
     high: number;
@@ -641,4 +652,7 @@ interface TaskStatistics {
   };
   avgProcessingTime: number;
   successRate: number;
-} 
+}
+
+// Type alias for task status values
+type TaskStatus = Task['status']; 

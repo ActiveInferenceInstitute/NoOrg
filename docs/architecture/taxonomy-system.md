@@ -50,7 +50,7 @@ primary_categories:
       - enforcement_level
       - review_cycle
       - compliance_requirements
-```
+```text
 
 ### Category Relationships
 ```python
@@ -76,7 +76,7 @@ class CategoryRelationships:
     def update_relationships(self):
         """Update category relationships"""
         pass
-```
+```text
 
 ## 🏷️ Classification Rules
 
@@ -130,7 +130,7 @@ class CategoryRelationships:
        def validate_classification(self):
            """Validate content classification"""
            pass
-```
+```text
 
 ## 🔍 Document Classification
 
@@ -166,7 +166,7 @@ metadata_schema:
       type: array
       min_items: 2
       max_items: 10
-```
+```text
 
 ### Classification Examples
 ```markdown
@@ -191,7 +191,7 @@ criticality: high
 frequency: as-needed
 owner: security-team
 ---
-```
+```text
 
 ## 🔄 Maintenance Procedures
 
@@ -239,7 +239,7 @@ owner: security-team
        - notify_stakeholders
        - update_references
        - verify_links
-```
+```text
 
 ## 📊 Metrics and Analysis
 
@@ -273,7 +273,7 @@ owner: security-team
     }
   }
 }
-```
+```text
 
 ### Performance Analysis
 ```python
@@ -292,7 +292,7 @@ class TaxonomyAnalyzer:
     def generate_insights(self):
         """Generate analysis insights"""
         pass
-```
+```text
 
 ## 🔍 Search and Navigation
 
@@ -316,7 +316,7 @@ search_integration:
       - category_match: 2.0
       - tag_match: 1.5
       - content_match: 1.0
-```
+```text
 
 ### Navigation Structure
 ```python
@@ -343,7 +343,7 @@ class NavigationSystem:
     def update_navigation(self):
         """Update navigation system"""
         pass
-```
+```text
 
 ## 📚 References
 

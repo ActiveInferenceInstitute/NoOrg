@@ -19,7 +19,7 @@ graph TD
     A --> C[Maintenance Procedures]
     A --> D[Incident Management]
     A --> E[Change Management]
-```
+```text
 
 ### Operations Architecture
 1. **Operation Layers**

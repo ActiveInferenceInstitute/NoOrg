@@ -19,7 +19,7 @@ graph TD
     A --> C[Recovery Implementation]
     A --> D[Business Continuity]
     A --> E[Risk Management]
-```
+```text
 
 ### Recovery Architecture
 1. **Recovery Layers**

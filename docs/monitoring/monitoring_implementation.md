@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_security]]
   - [[monitoring/resource_monitoring]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the implementation framework for monitoring systems within the agent framework, providing comprehensive implementation guidelines, standards, and best practices for monitoring components.
@@ -43,7 +43,7 @@ class MonitoringImplementationManager:
         self.deployer = SystemDeployer()
         self.validator = ImplementationValidator()
         self.monitor = ImplementationMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Component Registry]
     C --> F[Build Pipeline]
     D --> G[Deployment Pipeline]
-```
+```text
 
 ### 2. Component Factory
 #### 2.1 Factory System
@@ -71,7 +71,7 @@ class ComponentFactory:
         creation = await self.creator.create_component(registration)
         validation = await self.validator.validate_component(creation)
         return await self.monitor.monitor_component(validation)
-```
+```text
 
 #### 2.2 Component Types
 - Collector Components
@@ -94,7 +94,7 @@ class SystemBuilder:
         testing = await self.tester.test_system(assembly)
         validation = await self.validator.validate_build(testing)
         return await self.pipeline.process_build(validation)
-```
+```text
 
 #### 3.2 Build Types
 - Development Build
@@ -117,7 +117,7 @@ class SystemDeployer:
         deployment = await self.deployer.deploy_components(provisioning)
         validation = await self.validator.validate_deployment(deployment)
         return await self.pipeline.process_deployment(validation)
-```
+```text
 
 #### 4.2 Deployment Types
 - Development Deployment
@@ -140,7 +140,7 @@ class ImplementationValidator:
         analysis = await self.analyzer.analyze_quality(testing)
         validation = await self.engine.validate_results(analysis)
         return await self.reporter.report_validation(validation)
-```
+```text
 
 #### 5.2 Validation Types
 - Component Validation
@@ -163,7 +163,7 @@ class ImplementationMonitor:
         analysis = await self.analyzer.analyze_implementation(collection)
         alerts = await self.alerter.process_alerts(analysis)
         return await self.reporter.generate_report(analysis)
-```
+```text
 
 #### 6.2 Monitoring Types
 - Component Monitoring
@@ -188,7 +188,7 @@ class CodingStandards:
     async def verify_compliance(self, validation):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Code Standards
@@ -205,7 +205,7 @@ class DevelopmentProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Planning Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class ImplementationTesting:
     async def report_coverage(self, coverage):
         # Coverage reporting logic
         pass
-```
+```text
 
 #### 1.2 Testing Areas
 - Unit Testing
@@ -318,7 +318,7 @@ class ImplementationPattern:
         self.factory = ComponentFactory()
         self.builder = SystemBuilder()
         self.deployer = SystemDeployer()
-```
+```text
 
 ### B. Development Patterns
 ```python
@@ -328,7 +328,7 @@ class DevelopmentPattern:
         self.planner = ProcessPlanner()
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
-```
+```text
 
 ### C. Testing Patterns
 ```python
@@ -338,4 +338,4 @@ class TestingPattern:
         self.executor = TestExecutor()
         self.validator = TestValidator()
         self.reporter = TestReporter()
-``` 
+```text 

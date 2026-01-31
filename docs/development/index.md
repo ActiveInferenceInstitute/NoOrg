@@ -84,7 +84,7 @@ graph TB
 
     Frontend --> Backend
     Backend --> Infrastructure
-```
+```text
 
 ## Development Workflow
 
@@ -113,7 +113,7 @@ gitGraph
     checkout main
     merge release/1.0
     commit id: "hotfix-1"
-```
+```text
 
 ### CI/CD Pipeline
 ```mermaid
@@ -164,7 +164,7 @@ graph TB
     
     Development --> CI
     CI --> CD
-```
+```text
 
 ## Code Architecture
 
@@ -195,7 +195,7 @@ graph TB
     Enterprise --> Application
     Application --> Interface
     Interface --> Framework
-```
+```text
 
 ### Domain-Driven Design
 ```mermaid
@@ -224,7 +224,7 @@ graph TB
     end
     
     Strategic --> Tactical
-```
+```text
 
 ## Testing Strategy
 
@@ -259,7 +259,7 @@ graph TB
     
     E2E --> Integration
     Integration --> Unit
-```
+```text
 
 ## Performance Optimization
 
@@ -290,7 +290,7 @@ graph LR
     end
     
     Frontend --> Backend
-```
+```text
 
 ## Security Implementation
 
@@ -327,7 +327,7 @@ graph TB
     
     Application --> Network
     Network --> Infrastructure
-```
+```text
 
 ## Related Documentation
 - [Architecture Guidelines](architecture/guidelines.md)

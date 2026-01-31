@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_integration]]
   - [[monitoring/monitoring_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the configuration framework for monitoring systems within the agent framework, providing comprehensive configuration management, standards, and best practices for monitoring components.
@@ -43,7 +43,7 @@ class MonitoringConfigurationManager:
         self.validator = ConfigurationValidator()
         self.monitor = ConfigurationMonitor()
         self.deployer = ConfigurationDeployer()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Storage Backend]
     C --> F[Provider Backend]
     D --> G[Validation Engine]
-```
+```text
 
 ### 2. Configuration Store
 #### 2.1 Storage System
@@ -71,7 +71,7 @@ class ConfigurationStore:
         caching = await self.cache.cache_configuration(storage)
         indexing = await self.indexer.index_configuration(caching)
         return await self.archiver.archive_configuration(indexing)
-```
+```text
 
 #### 2.2 Storage Types
 - File Storage
@@ -94,7 +94,7 @@ class ConfigurationProvider:
         loading = await self.loader.load_configuration(resolution)
         transformation = await self.transformer.transform_configuration(loading)
         return await self.backend.provide_configuration(transformation)
-```
+```text
 
 #### 3.2 Provider Types
 - File Provider
@@ -117,7 +117,7 @@ class ConfigurationValidator:
         rules = await self.rules.validate_rules(schema)
         validation = await self.engine.validate_configuration(rules)
         return await self.reporter.report_validation(validation)
-```
+```text
 
 #### 4.2 Validation Types
 - Schema Validation
@@ -140,7 +140,7 @@ class ConfigurationMonitor:
         analysis = await self.analyzer.analyze_configuration(collection)
         alerts = await self.alerter.process_alerts(analysis)
         return await self.reporter.generate_report(analysis)
-```
+```text
 
 #### 5.2 Monitoring Types
 - Change Monitoring
@@ -163,7 +163,7 @@ class ConfigurationDeployer:
         application = await self.applier.apply_configuration(distribution)
         verification = await self.verifier.verify_deployment(application)
         return await self.pipeline.process_deployment(verification)
-```
+```text
 
 #### 6.2 Deployment Types
 - Rolling Deployment
@@ -188,7 +188,7 @@ class ConfigurationStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Format Standards
@@ -205,7 +205,7 @@ class ChangeManager:
         self.controller = ChangeController()
         self.validator = ChangeValidator()
         self.monitor = ChangeMonitor()
-```
+```text
 
 #### 2.2 Change Types
 - Planned Changes
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class ConfigurationSecurity:
     async def audit_access(self, audit):
         # Access auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Access Security
@@ -318,7 +318,7 @@ class ConfigurationPattern:
         self.store = ConfigurationStore()
         self.provider = ConfigurationProvider()
         self.validator = ConfigurationValidator()
-```
+```text
 
 ### B. Change Patterns
 ```python
@@ -328,7 +328,7 @@ class ChangePattern:
         self.tracker = ChangeTracker()
         self.controller = ChangeController()
         self.validator = ChangeValidator()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -338,4 +338,4 @@ class SecurityPattern:
         self.validator = SecurityValidator()
         self.control = AccessControl()
         self.audit = AuditLogger()
-``` 
+```text 

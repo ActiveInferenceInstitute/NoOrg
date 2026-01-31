@@ -24,7 +24,7 @@ src/
     tasks/         // Task management
     security/      // Security implementations
     optimization/  // Performance optimizations
-```
+```text
 
 ## Implementation Examples
 
@@ -56,7 +56,7 @@ class BaseSwarmController implements SwarmController {
 
   // ... implementation details
 }
-```
+```text
 
 ### Hierarchy Management
 ```typescript
@@ -72,7 +72,7 @@ class SwarmHierarchyManager implements HierarchyManager {
 
   // ... implementation details
 }
-```
+```text
 
 ### Task Management
 ```typescript
@@ -88,7 +88,7 @@ class SwarmTaskManager implements TaskManager {
 
   // ... implementation details
 }
-```
+```text
 
 ### Collaboration Patterns
 ```typescript
@@ -104,7 +104,7 @@ class ConsensusPattern implements CollaborationPattern {
 
   // ... implementation details
 }
-```
+```text
 
 ### Security Implementation
 ```typescript
@@ -120,7 +120,7 @@ class SwarmSecurityManager implements SwarmSecurity {
 
   // ... implementation details
 }
-```
+```text
 
 ### Performance Optimization
 ```typescript
@@ -136,7 +136,7 @@ class SwarmPerformanceOptimizer implements SwarmOptimizer {
 
   // ... implementation details
 }
-```
+```text
 
 ## Best Practices
 1. Always implement proper error handling and recovery mechanisms

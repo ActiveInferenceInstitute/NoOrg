@@ -41,7 +41,7 @@ mindmap
       Feedback incorporation
       Method refinement
       Knowledge building
-```
+```text
 
 ## Analytical Process Framework
 1. **Problem and decision framing**
@@ -137,7 +137,7 @@ flowchart TD
     E --> F
     F --> G
     G --> H
-```
+```text
 
 ## Analytical Methods and Tools
 1. **Statistical analysis**
@@ -198,7 +198,7 @@ graph TD
     E --> E3[Grounded theory]
     E --> E4[Mixed-method integration]
     E --> E5[Case studies]
-```
+```text
 
 ## Data-Driven Decision Making Challenges
 1. **Data quality issues**
@@ -279,7 +279,7 @@ flowchart TD
     E4 --> ES4[Feasibility assessment]
     E --> E5[Feedback systems]
     E5 --> ES5[Learning mechanism creation]
-```
+```text
 
 ## Ethical Data Use Framework
 1. **Responsible data collection**
@@ -340,7 +340,7 @@ graph LR
     E --> E3[Decision accountability]
     E --> E4[Redress processes]
     E --> E5[Usage communication]
-```
+```text
 
 ## Decision-Making Integration
 1. **Organizational data strategy**
@@ -391,7 +391,7 @@ flowchart LR
     B --> E[Data-Driven Organization]
     C --> E
     D --> E
-```
+```text
 
 ## Data-Driven Decision Making Process Model
 ```mermaid
@@ -435,4 +435,4 @@ graph TB
     P -.-> H
     P -.-> I
     P -.-> K
-``` 
+```text 

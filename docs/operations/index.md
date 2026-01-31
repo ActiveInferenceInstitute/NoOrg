@@ -116,7 +116,7 @@ graph TB
     
     Monitoring --> Deployment
     Deployment --> Maintenance
-```
+```text
 
 ## Monitoring System
 
@@ -197,7 +197,7 @@ graph TB
     
     Collection --> Processing
     Processing --> Storage
-```
+```text
 
 ## Deployment System
 
@@ -284,7 +284,7 @@ graph TB
     
     Build --> Deploy
     Deploy --> Verify
-```
+```text
 
 ## Maintenance System
 
@@ -371,7 +371,7 @@ graph TB
     
     Updates --> Backup
     Backup --> Performance
-```
+```text
 
 ## Related Documentation
 - [Monitoring Guide](monitoring/guide.md)

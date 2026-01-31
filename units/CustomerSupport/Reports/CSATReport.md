@@ -31,7 +31,7 @@ graph TD
     Sentiment --> Positive[Positive: 72%]
     Sentiment --> Neutral[Neutral: 19%]
     Sentiment --> Negative[Negative: 9%]
-```
+```text
 
 ## CSAT Metrics by Channel
 
@@ -182,7 +182,7 @@ graph LR
         W10 --> W11[W11: 90%]
         W11 --> W12[W12: 91%]
     end
-```
+```text
 
 ### Year-to-Date Performance
 - Current YTD CSAT: 89.7% (Target: 88%)

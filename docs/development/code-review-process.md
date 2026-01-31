@@ -19,7 +19,7 @@ graph TD
     A --> C[Review Execution]
     A --> D[Review Feedback]
     A --> E[Review Tracking]
-```
+```text
 
 ### Process Architecture
 1. **Review Layers**

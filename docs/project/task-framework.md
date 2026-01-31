@@ -19,7 +19,7 @@ graph TD
     A --> C[Workflow Management]
     A --> D[Automation System]
     A --> E[Performance Tracking]
-```
+```text
 
 ### Framework Layers
 1. **Management Layers**

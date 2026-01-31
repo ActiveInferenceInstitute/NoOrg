@@ -37,7 +37,7 @@ graph TD
         VZ --> AL[Alert Generation]
         AL --> RC[Recommendations]
     end
-```
+```text
 
 ## Performance Metrics
 
@@ -93,7 +93,7 @@ core_metrics:
       thresholds:
         warning: rate_5m > 100MB/s
         critical: rate_5m > 200MB/s
-```
+```text
 
 ### Advanced Metrics
 ```yaml
@@ -128,7 +128,7 @@ advanced_metrics:
       thresholds:
         warning: > 0.02
         critical: > 0.05
-```
+```text
 
 ## Analysis Implementation
 
@@ -167,7 +167,7 @@ class MetricsCollector:
         for processor in self.processors:
             processed.update(await processor.process(metrics))
         return processed
-```
+```text
 
 ### Performance Analysis
 ```python
@@ -209,7 +209,7 @@ class PerformanceAnalyzer:
         for model in self.ml_models['anomaly_detection']:
             anomalies.update(await model.detect(metrics))
         return anomalies
-```
+```text
 
 ### Performance Optimization
 ```python
@@ -247,7 +247,7 @@ class PerformanceOptimizer:
         except Exception as e:
             await self._handle_optimization_error(e, task_id)
             raise
-```
+```text
 
 ## Analysis Tools
 
@@ -278,7 +278,7 @@ class StatisticalAnalyzer:
             'seasonality': self._detect_seasonality(data),
             'change_points': self._detect_change_points(data)
         }
-```
+```text
 
 ### Machine Learning Analysis
 ```python
@@ -303,7 +303,7 @@ class MLAnalyzer:
         except Exception as e:
             await self._handle_prediction_error(e)
             raise
-```
+```text
 
 ## Visualization & Reporting
 
@@ -333,7 +333,7 @@ dashboards:
       - name: Quality Metrics
         type: bar_gauge
         metrics: [accuracy, error_rate]
-```
+```text
 
 ### Performance Reports
 ```yaml
@@ -359,7 +359,7 @@ performance_reports:
         metrics: [improvement_metrics, optimization_impact]
       - name: Future Planning
         content: [capacity_planning, scaling_recommendations]
-```
+```text
 
 ## Best Practices
 
@@ -383,7 +383,7 @@ analysis_best_practices:
     - validate_optimization_impact
     - monitor_side_effects
     - maintain_performance_baselines
-```
+```text
 
 ### Performance Tuning
 ```yaml
@@ -399,7 +399,7 @@ performance_tuning:
     - system_dependencies
     - scalability_requirements
     - cost_effectiveness
-```
+```text
 
 ## Documentation
 

@@ -55,7 +55,7 @@ A security incident is any adverse event or suspected event that threatens the c
 
 ## 6. Process Flow
 
-Refer to the [Incident Response Procedure document](link-to-process-doc-if-exists) for the detailed workflow.
+Refer to the [Incident Response Procedure document](AGENTS.md) for the detailed workflow.
 
 ## 7. Training and Awareness
 

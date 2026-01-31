@@ -19,7 +19,7 @@ graph TD
     A --> C[Build Tools]
     A --> D[Testing Tools]
     A --> E[Code Analysis]
-```
+```text
 
 ### Tool Categories
 1. **Development Categories**

@@ -38,7 +38,7 @@ graph TD
         MC --> DA[Data Aggregation]
         DA --> RG[Report Generation]
     end
-```
+```text
 
 ## Task Implementation
 
@@ -90,7 +90,7 @@ class Task:
             self.requirements.validate() and
             all(dep.is_satisfied() for dep in self.dependencies)
         )
-```
+```text
 
 ### Execution Engine
 ```python
@@ -166,7 +166,7 @@ class TaskExecutionEngine:
         except Exception as e:
             await monitor.stop()
             raise
-```
+```text
 
 ### Progress Tracking
 ```python
@@ -211,7 +211,7 @@ class TaskMonitor:
             'throughput': self._calculate_statistics('throughput'),
             'latency': self._calculate_statistics('latency')
         }
-```
+```text
 
 ## Reporting Implementation
 
@@ -244,7 +244,7 @@ class MetricsCollector:
             'application': await self._get_application_metrics(task_id),
             'custom': await self._get_custom_metrics(task_id)
         }
-```
+```text
 
 ### Report Generation
 ```python
@@ -283,7 +283,7 @@ class ReportGenerator:
         for target in targets:
             distributor = self.distributors.get_distributor(target)
             await distributor.distribute(report)
-```
+```text
 
 ## Integration Implementation
 
@@ -321,7 +321,7 @@ class MessageQueueIntegration:
             message=status,
             routing_key=f"task.status.{task_id}"
         )
-```
+```text
 
 ### Metrics Integration
 ```python
@@ -355,7 +355,7 @@ class MetricsIntegration:
             labels={'task_id': task_id},
             metrics=metrics
         )
-```
+```text
 
 ## Error Handling
 
@@ -401,7 +401,7 @@ class ErrorManager:
         """Attempt to recover from error"""
         strategy = self.recovery_strategies.get_strategy(error)
         return await strategy.execute(context)
-```
+```text
 
 ## Best Practices Implementation
 
@@ -435,7 +435,7 @@ class ErrorManager:
 #     validation.py
 #     error_handling.py
 #     logging.py
-```
+```text
 
 ### Configuration Management
 ```yaml
@@ -476,7 +476,7 @@ task_execution:
       retry_attempts: 3
       retry_delay: 5
       timeout: 30
-```
+```text
 
 ## Documentation
 

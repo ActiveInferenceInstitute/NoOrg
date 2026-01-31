@@ -4,7 +4,7 @@ Generated: 2026-01-02T15:05:04.256764
 Root: /Users/4d/Documents/GitHub/NoOrg
 
 ## Directory Tree
-```
+```text
 /Users/4d/Documents/GitHub/NoOrg
 └── NoOrg/
     ├── .benchmarks/
@@ -3299,4 +3299,4 @@ Root: /Users/4d/Documents/GitHub/NoOrg
     ├── package-lock.json (468714 bytes)
     ├── package.json (6030 bytes)
     └── tsconfig.json (2715 bytes)
-```
+```text

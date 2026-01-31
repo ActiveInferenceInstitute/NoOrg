@@ -32,7 +32,7 @@ capabilities:
     - task_negotiation
     - progress_reporting
     - resource_coordination
-```
+```text
 
 ## Architecture
 
@@ -48,7 +48,7 @@ cognitive_architecture:
     - dynamic_task_reprioritization
     - resource_aware_planning
     - adaptive_execution_strategies
-```
+```text
 
 ### Behavioral Framework
 ```mermaid
@@ -62,7 +62,7 @@ graph TD
     G[Error Handler] -.-> D
     G -.-> E
     H[Resource Manager] -.-> C
-```
+```text
 
 ## Implementation
 
@@ -88,7 +88,7 @@ integration:
     - type: execution_results
       format: json
       protocol: [[protocols#result-delivery]]
-```
+```text
 
 ## Behavior Specification
 
@@ -107,7 +107,7 @@ actions:
       condition: execution_failed
     - name: task_rescheduling
       condition: resource_unavailable
-```
+```text
 
 ### Learning Configuration
 ```yaml
@@ -120,7 +120,7 @@ learning:
   objectives:
     - execution_efficiency_improvement
     - resource_utilization_optimization
-```
+```text
 
 ## Communication
 
@@ -137,7 +137,7 @@ message_formats:
   outgoing:
     - [[message-formats#task-status]]
     - [[message-formats#execution-result]]
-```
+```text
 
 ## Performance
 
@@ -159,7 +159,7 @@ performance_metrics:
       threshold: 100_tasks_per_minute
     - metric: latency
       threshold: 500ms
-```
+```text
 
 ### Monitoring
 - [[monitoring-system#task-execution|Task Execution Monitoring]]
@@ -173,7 +173,7 @@ security:
   authentication: jwt_token
   authorization: role_based_access
   encryption: aes_256_gcm
-```
+```text
 
 ### Safety Protocols
 - [[safety-protocols#task-validation|Task Validation Protocol]]

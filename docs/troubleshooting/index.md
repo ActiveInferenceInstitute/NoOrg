@@ -128,7 +128,7 @@ graph TB
     
     Monitoring --> Analysis
     Analysis --> Resolution
-```
+```text
 
 ## Common Issues & Solutions
 
@@ -239,7 +239,7 @@ graph TB
     
     Performance --> Infrastructure
     Infrastructure --> Security
-```
+```text
 
 ## Incident Response Process
 
@@ -326,13 +326,13 @@ graph TB
     
     Detection --> Response
     Response --> Resolution
-```
+```text
 
 ## Related Documentation
-- [Monitoring Guide](../operations/monitoring.md)
-- [Incident Response Plan](../security/incident-response.md)
-- [Performance Tuning](../operations/performance.md)
-- [Security Guidelines](../security/guidelines.md)
+- [Monitoring Guide](../operations/AGENTS.md)
+- [Incident Response Plan](../operations/incident-response.md)
+- [Performance Tuning](../operations/AGENTS.md)
+- [Security Guidelines](../security/AGENTS.md)
 - [System Architecture](../master-index.md)
 
 ---

@@ -23,7 +23,7 @@ related_frameworks:
   - [[frameworks/learning_management]]
   - [[frameworks/collaboration]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document details the processes and procedures for implementing the knowledge sharing components of the [[knowledge/knowledge_base|Knowledge Management Framework]]. It provides specific guidelines for facilitating knowledge transfer and collaboration across the organization.

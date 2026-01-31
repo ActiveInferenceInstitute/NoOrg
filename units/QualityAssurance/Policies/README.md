@@ -1,13 +1,42 @@
 # Quality Assurance Policies
 
-This directory contains policies that govern the activities and standards of the Quality Assurance (QA) Unit.
+## Overview
 
-## Policies:
+This directory contains the official policies governing Quality Assurance operations, standards, and compliance requirements.
 
-*   **Quality_Standards_Policy.md:** Defines the baseline quality standards expected for all products, services, and processes.
-*   **Test_Strategy_Policy.md:** Outlines the high-level approach to testing, including scope, methodologies, and environments.
-*   **Defect_Management_Policy.md:** Specifies the process for identifying, logging, prioritizing, tracking, and resolving defects.
-*   **Release_Criteria_Policy.md:** Defines the minimum quality criteria that must be met before a product or service can be released.
-*   **Audit_Policy.md:** Describes the framework and procedures for conducting internal quality audits.
+## Policy Categories
 
-These policies are essential for maintaining consistency, ensuring thoroughness, and managing risk in our quality assurance efforts. All members of the QA team and relevant stakeholders are expected to be familiar with and adhere to these policies. 
+### Core Policies
+Foundational policies that govern unit operations and standards.
+
+### Operational Policies
+Day-to-day operational guidelines and procedures.
+
+### Compliance Policies
+Regulatory and compliance-related requirements.
+
+## Policy Lifecycle
+
+| Stage | Description | Owner |
+|-------|-------------|-------|
+| Draft | Initial policy creation | Policy Author |
+| Review | Stakeholder feedback | Review Committee |
+| Approval | Formal authorization | Unit Leadership |
+| Published | Active and enforced | Policy Owner |
+| Review | Periodic assessment | Policy Owner |
+| Retired | No longer active | Unit Leadership |
+
+## Policy Standards
+
+All policies must include:
+- **Version**: Current version number
+- **Effective Date**: When policy becomes active
+- **Owner**: Responsible individual or role
+- **Review Date**: Next scheduled review
+- **Scope**: Who the policy applies to
+
+## Related Documentation
+
+- [Processes](../Processes/)
+- [Governance Policies](../../Governance/Policies/)
+- [Policy on Policies](../../Governance/Policies/Policy_on_Policies.md)

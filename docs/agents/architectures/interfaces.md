@@ -25,7 +25,7 @@ related_documents:
   - [[agents/architectures/modules]]
   - [[agents/architectures/integration]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the interface architecture that enables standardized communication and interaction between agent components, modules, and external systems.
@@ -41,7 +41,7 @@ class BaseInterface:
         self.version = Version()
         self.contracts = ContractRegistry()
         self.validators = ValidatorRegistry()
-```
+```text
 
 #### 1.2 Interface Hierarchy
 ```mermaid
@@ -55,7 +55,7 @@ graph TD
     C --> H[Task Interface]
     C --> I[System Interface]
     D --> J[Service Interface]
-```
+```text
 
 ### 2. Interface Types
 #### 2.1 Internal Interfaces
@@ -79,7 +79,7 @@ class InterfaceContract:
         self.events = EventRegistry()
         self.validators = ValidatorRegistry()
         self.constraints = ConstraintSet()
-```
+```text
 
 #### 3.2 Contract Types
 - Synchronous Contracts
@@ -106,7 +106,7 @@ class InterfaceTemplate:
     async def execute(self, method, params):
         # Execution logic
         pass
-```
+```text
 
 #### 1.2 Development Standards
 - Interface Naming
@@ -123,7 +123,7 @@ class InterfaceIntegration:
         self.registry = InterfaceRegistry()
         self.router = MethodRouter()
         self.validator = ContractValidator()
-```
+```text
 
 #### 2.2 Integration Requirements
 - Registration Process
@@ -210,7 +210,7 @@ class InterfacePattern:
         self.contracts = ContractRegistry()
         self.validators = ValidatorRegistry()
         self.router = MethodRouter()
-```
+```text
 
 ### B. Contract Patterns
 ```python
@@ -220,7 +220,7 @@ class ContractPattern:
         self.methods = MethodRegistry()
         self.events = EventRegistry()
         self.constraints = ConstraintSet()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -230,4 +230,4 @@ class InterfaceSecurityPattern:
         self.access = AccessControl()
         self.validator = InputValidator()
         self.audit = AuditLogger()
-``` 
+```text 

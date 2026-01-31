@@ -52,7 +52,7 @@ documentation_coverage:
       - missing_content
       - outdated_sections
       - incomplete_areas
-```
+```text
 
 ### Coverage Management
 ```python
@@ -83,7 +83,7 @@ class CoverageManager:
     def generate_report(self):
         """Generate coverage report"""
         pass
-```
+```text
 
 ## 🎯 Quality Assessment
 
@@ -122,7 +122,7 @@ class CoverageManager:
     }
   }
 }
-```
+```text
 
 ### Quality Management
 ```python
@@ -153,7 +153,7 @@ class QualityManager:
     def improve_quality(self):
         """Implement quality improvements"""
         pass
-```
+```text
 
 ## 🔍 Gap Analysis
 
@@ -189,7 +189,7 @@ gap_analysis:
       - process_impact
       - operational_efficiency
       - improvement_potential
-```
+```text
 
 ### Gap Management
 ```python
@@ -220,7 +220,7 @@ class GapAnalyzer:
     def plan_improvements(self):
         """Plan gap improvements"""
         pass
-```
+```text
 
 ## 📈 Improvement Planning
 
@@ -256,7 +256,7 @@ improvement_planning:
       - progress_tracking
       - effectiveness_measurement
       - adjustment_management
-```
+```text
 
 ### Implementation Management
 ```python
@@ -287,7 +287,7 @@ class ImprovementManager:
     def track_progress(self):
         """Track improvement progress"""
         pass
-```
+```text
 
 ## 📊 Review Analytics
 
@@ -328,7 +328,7 @@ class ImprovementManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

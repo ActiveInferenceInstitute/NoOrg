@@ -13,7 +13,7 @@ graph LR
     Manager --> LeadAccount
     Manager --> LeadQA
     Manager --> KBSpecialist
-```
+```text
 
 ## 📋 Charter Overview
 ### Purpose
@@ -105,7 +105,7 @@ flowchart TD
     Reopen --> Diagnose
     Close --> Knowledge[Update Knowledge Base]
     Knowledge --> End[End]
-```
+```text
 
 ## 📊 Operations
 ### Regular Activities

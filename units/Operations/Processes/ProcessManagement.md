@@ -43,7 +43,7 @@ flowchart TD
     G --> H{Analyze & Improve?}
     H -- Yes --> B
     H -- No --> I(End)
-```
+```text
 
 1. Step 1: Define Process
    - Action: Map current state, identify improvements, define future state.

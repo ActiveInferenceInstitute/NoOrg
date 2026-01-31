@@ -24,7 +24,7 @@ protocol:
   version: 1.0.0
   category: task_management
   style: request_response_with_monitoring
-```
+```text
 
 ## Protocol Specification
 
@@ -50,7 +50,7 @@ sequenceDiagram
     R-->>E: ResourcesReleased
     E->>S: TaskCompleted
     S-->>E: Acknowledge
-```
+```text
 
 ### States & Transitions
 ```mermaid
@@ -67,7 +67,7 @@ stateDiagram-v2
     Failed --> [*]
     Completed --> [*]
     Rejected --> [*]
-```
+```text
 
 ## Message Definitions
 
@@ -111,7 +111,7 @@ messages:
       - field: details
         type: object
         required: false
-```
+```text
 
 ### Message Examples
 ```json
@@ -133,7 +133,7 @@ messages:
     "deadline": "2024-03-21T10:30:00Z"
   }
 }
-```
+```text
 
 ## Implementation
 
@@ -150,7 +150,7 @@ components:
       rules: task_validation_schema
     - name: resource_validator
       rules: resource_requirements_schema
-```
+```text
 
 ### Integration Points
 - [[message-formats#task-message|Task Message Format]]
@@ -178,7 +178,7 @@ success_flow:
     - actor: executor
       action: complete_task
       message: task_completed
-```
+```text
 
 ### Error Handling
 ```yaml
@@ -193,7 +193,7 @@ error_handling:
   retries:
     max_attempts: 3
     backoff: exponential
-```
+```text
 
 ## Quality of Service
 
@@ -206,7 +206,7 @@ performance:
   throughput:
     min: 100_tasks_per_minute
     target: 500_tasks_per_minute
-```
+```text
 
 ### Reliability Measures
 - Delivery Guarantee: at-least-once
@@ -224,7 +224,7 @@ security:
   encryption:
     level: message_level
     algorithms: [aes_256_gcm, rsa_2048]
-```
+```text
 
 ### Access Control
 - Roles: submitter, executor, admin
@@ -247,7 +247,7 @@ metrics:
     - name: error_rate
       type: ratio
       threshold: < 0.1%
-```
+```text
 
 ### Logging Requirements
 - Log Levels: info, warn, error

@@ -26,7 +26,7 @@ related_documents:
   - [[agents/modules/extensions/system]]
   - [[agents/modules/extensions/tasks]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the service integration module for agents, providing comprehensive service discovery, connection, management, and monitoring capabilities for external system integration.
@@ -43,7 +43,7 @@ class ServiceManager:
         self.monitor = ServiceMonitor()
         self.adapter = ServiceAdapter()
         self.gateway = ServiceGateway()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Service Catalog]
     C --> F[Connection Pool]
     D --> G[Health Checks]
-```
+```text
 
 ### 2. Service Structure
 #### 2.1 Base Service
@@ -79,7 +79,7 @@ class Service:
     async def monitor(self):
         # Monitoring logic
         pass
-```
+```text
 
 #### 2.2 Service Types
 - REST Services
@@ -103,7 +103,7 @@ class IntegrationSystem:
             connection = await self.establish_connection(service)
             await self.monitor_integration(connection)
             return connection
-```
+```text
 
 #### 3.2 Integration Types
 - Direct Integration
@@ -127,7 +127,7 @@ class ServiceOperations:
             result = await self.process_operation(operation)
             await self.cache_result(operation, result)
             return result
-```
+```text
 
 #### 4.2 Operation Types
 - Query Operations
@@ -152,7 +152,7 @@ class ServiceImplementation:
     async def setup_protocols(self, protocols):
         # Protocol setup
         pass
-```
+```text
 
 #### 1.2 Development Standards
 - Service Structure
@@ -168,7 +168,7 @@ class ServiceAdapter:
         self.converters = DataConverters()
         self.mappers = DataMappers()
         self.validators = SchemaValidators()
-```
+```text
 
 #### 2.2 Integration Patterns
 - Request-Response
@@ -199,7 +199,7 @@ class ServiceQuality:
     async def measure_performance(self, metrics):
         # Performance measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -231,7 +231,7 @@ class ServiceSecurity:
     async def authorize_operation(self, operation):
         # Authorization logic
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Connection Security
@@ -281,7 +281,7 @@ class ServicePattern:
         self.connector = ServiceConnector()
         self.adapter = ServiceAdapter()
         self.monitor = ServiceMonitor()
-```
+```text
 
 ### B. Integration Patterns
 ```python
@@ -291,7 +291,7 @@ class IntegrationPattern:
         self.transformer = DataTransformer()
         self.validator = SchemaValidator()
         self.handler = ErrorHandler()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -301,4 +301,4 @@ class ServiceSecurityPattern:
         self.authenticator = ServiceAuthenticator()
         self.authorizer = OperationAuthorizer()
         self.auditor = SecurityAuditor()
-``` 
+```text 

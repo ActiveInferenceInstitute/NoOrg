@@ -29,7 +29,7 @@ graph TD
     A --> D[Monitoring]
     A --> E[Control]
     A --> F[Closure]
-```
+```text
 
 ### 2. Documentation Structure
 ```yaml
@@ -41,7 +41,7 @@ project:
     - design_docs
     - progress_reports
     - deliverables
-```
+```text
 
 ## 📝 Project Documentation
 
@@ -130,7 +130,7 @@ roles:
     - Task execution
     - Progress reporting
     - Quality assurance
-```
+```text
 
 ## 📊 Project Metrics
 
@@ -152,7 +152,7 @@ metrics:
     - budget variance
     - resource usage
     - cost efficiency
-```
+```text
 
 ## 🔍 Quality Standards
 

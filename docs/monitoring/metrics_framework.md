@@ -25,7 +25,7 @@ related_documents:
   - [[monitoring/alerting_framework]]
   - [[monitoring/visualization_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the metrics framework for the agent system, providing standardized approaches for collecting, processing, and managing metrics across all system components.
@@ -42,7 +42,7 @@ class MetricsManager:
         self.storage = MetricsStorage()
         self.aggregator = MetricsAggregator()
         self.exporter = MetricsExporter()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -53,7 +53,7 @@ graph TD
     B --> E[Collector Registry]
     C --> F[Processing Pipeline]
     D --> G[Time Series DB]
-```
+```text
 
 ### 2. Metrics Collection
 #### 2.1 Collection System
@@ -70,7 +70,7 @@ class MetricsCollector:
         scraping = await self.scrapers.scrape_metrics(collectors)
         validation = await self.validators.validate_metrics(scraping)
         return await self.pipeline.process_metrics(validation)
-```
+```text
 
 #### 2.2 Metric Types
 - System Metrics
@@ -93,7 +93,7 @@ class MetricsProcessor:
         enrichment = await self.enricher.enrich_metrics(transformation)
         validation = await self.validator.validate_processing(enrichment)
         return await self.pipeline.process_metrics(validation)
-```
+```text
 
 #### 3.2 Processing Types
 - Data Transformation
@@ -116,7 +116,7 @@ class MetricsStorage:
         optimization = await self.optimizer.optimize_storage(indexing)
         archival = await self.archiver.archive_metrics(optimization)
         return await self.engine.store_metrics(archival)
-```
+```text
 
 #### 4.2 Storage Types
 - Time Series Storage
@@ -139,7 +139,7 @@ class MetricsAggregator:
         calculation = await self.calculator.calculate_statistics(grouping)
         summary = await self.summarizer.summarize_metrics(calculation)
         return await self.engine.aggregate_metrics(summary)
-```
+```text
 
 #### 5.2 Aggregation Types
 - Time-based Aggregation
@@ -162,7 +162,7 @@ class MetricsExporter:
         conversion = await self.converter.convert_format(formatting)
         validation = await self.validator.validate_export(conversion)
         return await self.engine.export_metrics(validation)
-```
+```text
 
 #### 6.2 Export Types
 - Prometheus Export
@@ -187,7 +187,7 @@ class MetricsStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Naming Standards
@@ -204,7 +204,7 @@ class MetricsProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Collection Process
@@ -235,7 +235,7 @@ class QualityMonitoring:
     async def measure_metrics(self, measurements):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -267,7 +267,7 @@ class MetricsSecurity:
     async def audit_metrics(self, audit):
         # Metrics auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Collection Security
@@ -317,7 +317,7 @@ class CollectionPattern:
         self.collector = MetricsCollector()
         self.validator = MetricsValidator()
         self.processor = MetricsProcessor()
-```
+```text
 
 ### B. Storage Patterns
 ```python
@@ -327,7 +327,7 @@ class StoragePattern:
         self.engine = StorageEngine()
         self.indexer = MetricsIndexer()
         self.optimizer = StorageOptimizer()
-```
+```text
 
 ### C. Export Patterns
 ```python
@@ -337,4 +337,4 @@ class ExportPattern:
         self.formatter = MetricsFormatter()
         self.converter = FormatConverter()
         self.validator = ExportValidator()
-``` 
+```text 

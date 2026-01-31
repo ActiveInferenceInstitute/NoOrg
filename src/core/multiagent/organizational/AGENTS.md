@@ -10,7 +10,7 @@ Complete technical documentation for organizational multi-agent system classes a
 
 ```javascript
 constructor()
-```
+```text
 
 Creates a new AgentManager instance.
 
@@ -20,7 +20,7 @@ Creates a new AgentManager instance.
 
 ```javascript
 registerAgent(agent: UnitAgent): void
-```
+```text
 
 Registers an agent.
 
@@ -35,7 +35,7 @@ Registers an agent.
 
 ```javascript
 getAgentById(agentId: string): UnitAgent | undefined
-```
+```text
 
 Gets agent by ID.
 
@@ -48,7 +48,7 @@ Gets agent by ID.
 
 ```javascript
 getAgentForUnit(unitId: string): UnitAgent | null
-```
+```text
 
 Gets agent for a unit.
 
@@ -61,7 +61,7 @@ Gets agent for a unit.
 
 ```javascript
 getAllAgents(): UnitAgent[]
-```
+```text
 
 Gets all registered agents.
 
@@ -79,7 +79,7 @@ constructor({
   sharedStateManager,
   llmClient
 })
-```
+```text
 
 **Parameters:**
 - `unitDiscovery` (UnitDiscovery): Unit discovery service
@@ -102,7 +102,7 @@ async runCollaborativePlanning(config: {
   }>;
   initialPlanTitle: string;
 }): Promise<object>
-```
+```text
 
 Runs collaborative planning workflow.
 
@@ -115,7 +115,7 @@ Runs collaborative planning workflow.
 
 ```javascript
 logEvent(type: string, message: string, details?: object): void
-```
+```text
 
 Logs workflow event.
 
@@ -134,7 +134,7 @@ Logs workflow event.
 
 ```javascript
 async sendPrompt(prompt: string, options?: object): Promise<string>
-```
+```text
 
 Sends prompt to LLM.
 
@@ -152,7 +152,7 @@ Sends prompt to LLM.
 
 ```javascript
 initializePlan(title: string): void
-```
+```text
 
 Initializes plan document.
 
@@ -165,7 +165,7 @@ Initializes plan document.
 
 ```javascript
 getPlanDocument(): PlanDocument
-```
+```text
 
 Gets plan document.
 
@@ -179,7 +179,7 @@ Gets plan document.
 
 ```javascript
 createTask(taskData: object): Task
-```
+```text
 
 Creates a new task.
 
@@ -192,7 +192,7 @@ Creates a new task.
 
 ```javascript
 updateTask(taskId: string, updates: object): void
-```
+```text
 
 Updates a task.
 
@@ -210,7 +210,7 @@ Updates a task.
 
 ```javascript
 async discoverUnits(): Promise<OrganizationalUnit[]>
-```
+```text
 
 Discovers organizational units.
 

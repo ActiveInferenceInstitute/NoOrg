@@ -46,7 +46,7 @@ monitoring.createAlertRule({
   severity: 'warning',
   notificationChannels: ['email', 'slack']
 });
-```
+```text
 
 ## Metrics Collection
 
@@ -70,7 +70,7 @@ monitoring.recordMetric('custom.business.value', 10, {
   userId: 'user-123',
   action: 'purchase'
 });
-```
+```text
 
 ### Metric Types
 - **Counter**: Monotonically increasing values (e.g., total requests)
@@ -91,7 +91,7 @@ interface AlertRule {
   notificationChannels: string[];
   cooldown?: number; // Minimum time between alerts
 }
-```
+```text
 
 ### Alert Conditions
 - **Threshold Alerts**: `metric > threshold`
@@ -116,7 +116,7 @@ interface HealthCheck {
   interval?: number; // Check interval in seconds
   timeout?: number; // Check timeout in seconds
 }
-```
+```text
 
 ### Health Status
 ```typescript
@@ -126,7 +126,7 @@ interface HealthStatus {
   details?: Record<string, any>;
   timestamp: number;
 }
-```
+```text
 
 ### Built-in Health Checks
 - **Database Connectivity**: Database connection health
@@ -164,7 +164,7 @@ monitoring.createDashboard({
     }
   ]
 });
-```
+```text
 
 ## Configuration
 
@@ -179,7 +179,7 @@ interface MonitoringConfig {
   alertCooldownPeriod?: number; // Minimum time between similar alerts
   dashboardPort?: number; // Port for web dashboard
 }
-```
+```text
 
 ## Performance
 
@@ -228,7 +228,7 @@ const p95ResponseTime = await monitoring.getPercentile(
   95,
   { lastHours: 24 }
 );
-```
+```text
 
 ### Alert Correlation
 ```typescript
@@ -238,7 +238,7 @@ monitoring.correlateAlerts([
   'api.response.time.high',
   'agent.error.rate.spike'
 ]);
-```
+```text
 
 ### Predictive Monitoring
 ```typescript
@@ -249,7 +249,7 @@ monitoring.createPredictiveAlert({
   threshold: 0.9,
   action: 'scale-up-cluster'
 });
-```
+```text
 
 ## Troubleshooting
 
@@ -263,7 +263,7 @@ monitoring.createPredictiveAlert({
 monitoring.updateConfig({
   metricsRetentionPeriod: 7 // Days instead of 30
 });
-```
+```text
 
 #### Frequent False Alerts
 **Cause**: Thresholds too sensitive
@@ -273,7 +273,7 @@ monitoring.updateConfig({
 monitoring.updateAlertRule('high-error-rate', {
   duration: 600 // 10 minutes instead of 5
 });
-```
+```text
 
 #### Missing Metrics
 **Cause**: Metrics not being recorded or collected
@@ -285,10 +285,10 @@ console.log('Registered metrics:', metrics);
 
 // Verify collection is enabled
 console.log('Collection enabled:', monitoring.isCollectionEnabled());
-```
+```text
 
 ## Related Documentation
 
-- [Monitoring System API Reference](../../docs/core/index.md)
+- [Monitoring System API Reference](../../../docs/index.md)
 - [Event System Integration](../events/README.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)

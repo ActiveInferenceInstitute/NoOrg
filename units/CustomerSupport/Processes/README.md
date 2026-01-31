@@ -29,7 +29,7 @@ flowchart LR
     Resolve --> Verify[Verify Resolution]
     Verify --> Document[Document Solution]
     Document --> Close[Close Ticket]
-```
+```text
 
 ## Integration Points
 

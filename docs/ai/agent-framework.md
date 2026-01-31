@@ -72,7 +72,7 @@ graph TD
     A --> C[Version Control]
     A --> D[Task Management]
     A --> E[Quality Tools]
-```
+```text
 
 ### Tool Access
 - Documentation tools

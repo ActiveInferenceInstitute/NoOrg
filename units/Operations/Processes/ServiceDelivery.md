@@ -46,7 +46,7 @@ flowchart TD
     H --> I(Verify Completion & Quality Checks)
     I --> J(Notify Customer / Close Request)
     J --> K(End)
-```
+```text
 
 1. Step 1: Request Intake & Planning
    - Action: Validate request against service catalog, confirm SLA, plan steps, estimate resources needed.

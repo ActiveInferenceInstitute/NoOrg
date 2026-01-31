@@ -19,7 +19,7 @@ enum RelationshipType {
   SERVICE_PROVIDER = 'service_provider',
   CUSTOM = 'custom'
 }
-```
+```text
 
 ### PermissionLevel
 
@@ -31,7 +31,7 @@ enum PermissionLevel {
   EXECUTE = 'execute',
   ADMIN = 'admin'
 }
-```
+```text
 
 ### ResourcePermission
 
@@ -41,7 +41,7 @@ interface ResourcePermission {
   level: PermissionLevel;
   conditions?: Record<string, any>;
 }
-```
+```text
 
 ### RelationshipConfig
 
@@ -55,7 +55,7 @@ interface RelationshipConfig {
   permissions?: ResourcePermission[];
   metadata?: Record<string, any>;
 }
-```
+```text
 
 ### UnitRelationship
 
@@ -69,7 +69,7 @@ interface UnitRelationship {
   permissions?: ResourcePermission[];
   metadata?: Record<string, any>;
 }
-```
+```text
 
 ### RelationshipQueryOptions
 
@@ -81,7 +81,7 @@ interface RelationshipQueryOptions {
   resourcePermission?: string;
   minPermissionLevel?: PermissionLevel;
 }
-```
+```text
 
 ## RelationshipManager Class
 
@@ -91,7 +91,7 @@ interface RelationshipQueryOptions {
 
 ```typescript
 public static getInstance(): RelationshipManager
-```
+```text
 
 Gets singleton instance.
 
@@ -105,7 +105,7 @@ Gets singleton instance.
 public async createRelationship(
   config: RelationshipConfig
 ): Promise<UnitRelationship>
-```
+```text
 
 Creates a relationship.
 
@@ -118,7 +118,7 @@ Creates a relationship.
 
 ```typescript
 public async deleteRelationship(id: string): Promise<boolean>
-```
+```text
 
 Deletes a relationship.
 
@@ -133,7 +133,7 @@ Deletes a relationship.
 public async findRelationships(
   options: RelationshipQueryOptions
 ): Promise<UnitRelationship[]>
-```
+```text
 
 Finds relationships matching criteria.
 
@@ -146,7 +146,7 @@ Finds relationships matching criteria.
 
 ```typescript
 public async getRelationship(id: string): Promise<UnitRelationship | null>
-```
+```text
 
 Gets relationship by ID.
 

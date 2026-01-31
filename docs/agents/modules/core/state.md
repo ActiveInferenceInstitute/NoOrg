@@ -25,7 +25,7 @@ related_documents:
   - [[agents/architectures/modules]]
   - [[agents/modules/core/behavior]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the state management system for agents, providing comprehensive state handling, persistence, and synchronization capabilities as specified in the [[agents/architectures/modules|Module System]].
@@ -41,7 +41,7 @@ class StateManager:
         self.state_history = StateHistory()
         self.state_store = StateStore()
         self.state_lock = StateLock()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -52,7 +52,7 @@ graph TD
     B --> E[Persistence]
     C --> F[Audit Log]
     D --> G[Synchronization]
-```
+```text
 
 ### 2. State Structure
 #### 2.1 Base State
@@ -63,7 +63,7 @@ class AgentState:
         self.timestamp = Timestamp()
         self.data = StateData()
         self.metadata = StateMetadata()
-```
+```text
 
 #### 2.2 State Types
 - Runtime State
@@ -90,7 +90,7 @@ class StateOperations:
     async def clear_state(self):
         # State clearing logic
         pass
-```
+```text
 
 #### 3.2 Advanced Operations
 - State Merging
@@ -106,7 +106,7 @@ class StateStore:
         self.storage = StorageBackend()
         self.cache = StateCache()
         self.index = StateIndex()
-```
+```text
 
 #### 4.2 Persistence Operations
 - Save Operations
@@ -133,7 +133,7 @@ class StateAccess:
             new_state = await update_fn(current)
             await self.set_state(key, new_state)
             return new_state
-```
+```text
 
 ### 2. Synchronization
 #### 2.1 Lock Management
@@ -143,7 +143,7 @@ class StateLock:
         self.locks = LockRegistry()
         self.timeouts = TimeoutConfig()
         self.deadlock_detection = DeadlockDetector()
-```
+```text
 
 #### 2.2 Consistency Controls
 - Lock Acquisition
@@ -202,7 +202,7 @@ class StateSecurityManager:
     async def decrypt_state(self, encrypted_data):
         # Decryption logic
         pass
-```
+```text
 
 ### 2. Data Protection
 - Encryption at Rest
@@ -246,7 +246,7 @@ class StatePattern:
         self.data = StateData()
         self.validator = StateValidator()
         self.handler = StateHandler()
-```
+```text
 
 ### B. Storage Patterns
 ```python
@@ -256,7 +256,7 @@ class StoragePattern:
         self.store = StorageBackend()
         self.cache = CacheLayer()
         self.index = SearchIndex()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -266,4 +266,4 @@ class StateSecurityPattern:
         self.access = AccessControl()
         self.crypto = CryptoSystem()
         self.audit = AuditLogger()
-``` 
+```text 

@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_patterns]]
   - [[monitoring/monitoring_integration]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the visualization framework for monitoring systems within the agent framework, providing comprehensive visualization processes, standards, and best practices for creating effective data visualizations.
@@ -43,7 +43,7 @@ class MonitoringVisualizationManager:
         self.composer = VisualizationComposer()
         self.optimizer = VisualizationOptimizer()
         self.exporter = VisualizationExporter()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Render Engine]
     C --> F[Style Engine]
     D --> G[Layout Engine]
-```
+```text
 
 ### 2. Data Rendering
 #### 2.1 Rendering System
@@ -71,7 +71,7 @@ class DataRenderer:
         pipeline = await self.pipeline.process_rendering(processing)
         validation = await self.validator.validate_rendering(pipeline)
         return await self.engine.render_visualization(validation)
-```
+```text
 
 #### 2.2 Visualization Types
 - Chart Visualizations
@@ -94,7 +94,7 @@ class VisualizationStyler:
         colors = await self.palette.apply_colors(theme)
         typography = await self.typography.apply_typography(colors)
         return await self.engine.apply_styles(typography)
-```
+```text
 
 #### 3.2 Style Types
 - Color Styles
@@ -117,7 +117,7 @@ class VisualizationComposer:
         arrangement = await self.arranger.arrange_elements(layout)
         validation = await self.validator.validate_composition(arrangement)
         return await self.engine.compose_visualization(validation)
-```
+```text
 
 #### 4.2 Composition Types
 - Grid Composition
@@ -140,7 +140,7 @@ class VisualizationOptimizer:
         tuning = await self.tuner.tune_rendering(analysis)
         validation = await self.validator.validate_optimization(tuning)
         return await self.engine.apply_optimization(validation)
-```
+```text
 
 #### 5.2 Optimization Types
 - Performance Optimization
@@ -163,7 +163,7 @@ class VisualizationExporter:
         optimization = await self.optimizer.optimize_export(conversion)
         validation = await self.validator.validate_export(optimization)
         return await self.engine.export_visualization(validation)
-```
+```text
 
 #### 6.2 Export Types
 - Image Export
@@ -188,7 +188,7 @@ class VisualizationStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Design Standards
@@ -205,7 +205,7 @@ class VisualizationProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Design Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class VisualizationSecurity:
     async def audit_visualization(self, audit):
         # Visualization auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Data Security
@@ -318,7 +318,7 @@ class VisualizationPattern:
         self.renderer = DataRenderer()
         self.styler = VisualizationStyler()
         self.composer = VisualizationComposer()
-```
+```text
 
 ### B. Style Patterns
 ```python
@@ -328,7 +328,7 @@ class StylePattern:
         self.themes = ThemeRegistry()
         self.palette = ColorPalette()
         self.typography = TypographySystem()
-```
+```text
 
 ### C. Export Patterns
 ```python
@@ -338,4 +338,4 @@ class ExportPattern:
         self.converter = FormatConverter()
         self.optimizer = ExportOptimizer()
         self.validator = ExportValidator()
-``` 
+```text 

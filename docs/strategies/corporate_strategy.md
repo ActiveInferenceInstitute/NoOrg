@@ -19,7 +19,7 @@ tags:
   - execution
   - growth
 ---
-```
+```text
 
 ## Purpose & Scope
 This document outlines the organization's strategic framework, including vision, mission, objectives, and execution methodology. It serves as the primary reference for strategic planning, decision-making, and organizational alignment.

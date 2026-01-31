@@ -50,7 +50,7 @@ quick_capture:
           categorization: "intelligent"
           tagging: "automated"
           linking: "context_aware"
-```
+```text
 
 ### Capture Management
 ```python
@@ -81,7 +81,7 @@ class CaptureManager:
     def enhance_processing(self):
         """Enhance capture processing"""
         pass
-```
+```text
 
 ## 📝 Review Process
 
@@ -119,7 +119,7 @@ class CaptureManager:
     }
   }
 }
-```
+```text
 
 ### Review Management
 ```python
@@ -150,7 +150,7 @@ class ReviewManager:
     def enhance_quality(self):
         """Enhance review quality"""
         pass
-```
+```text
 
 ## ✅ Task Management
 
@@ -192,7 +192,7 @@ task_management:
           efficiency: "maximized"
           quality: "enhanced"
           learning: "continuous"
-```
+```text
 
 ### Task Management
 ```python
@@ -223,7 +223,7 @@ class TaskManager:
     def enhance_efficiency(self):
         """Enhance task efficiency"""
         pass
-```
+```text
 
 ## 📊 Status Updates
 
@@ -265,7 +265,7 @@ status_updates:
           targeting: "precise"
           timing: "optimal"
           adaptation: "learning_based"
-```
+```text
 
 ### Status Management
 ```python
@@ -296,7 +296,7 @@ class StatusManager:
     def enhance_delivery(self):
         """Enhance update delivery"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

@@ -89,7 +89,7 @@ graph TD
     end
     
     class OrgUnits externalEntity;
-```
+```text
 
 ## Committee Operations
 

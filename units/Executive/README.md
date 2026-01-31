@@ -1,11 +1,55 @@
-# Executive Unit
+# Executive
 
-This directory contains documentation related to the Executive unit, responsible for overall strategic direction, leadership, and oversight of the organization.
+## Overview
 
-## Structure
+The Executive unit is responsible for executive-related strategy, operations, and stakeholder support across the organization.
 
-*   [**Charter.md**](./Charter.md): Defines the purpose, scope, responsibilities, and authority of the Executive unit.
-*   [**Policies/**](./Policies/README.md): Contains policies governing executive conduct and operations.
-*   [**Processes/**](./Processes/README.md): Outlines key strategic and operational processes managed by the Executive unit.
-*   [**Reports/**](./Reports/README.md): Includes templates and examples of reports generated or reviewed by the Executive unit.
-*   [**MeetingNotes/**](./MeetingNotes/README.md): Contains templates and records of executive meetings.
+## Mission
+
+To deliver excellence in executive by providing strategic guidance, operational efficiency, and continuous improvement.
+
+## Directory Structure
+
+```
+Executive/
+├── Charter.md           # Unit charter and governance
+├── Policies/            # Policies and guidelines
+│   ├── PositionsPersonas.md
+│   ├── Resources.md
+│   ├── Responsibilities.md
+│   └── SkillsRoles.md
+├── Processes/           # Operational processes
+├── MeetingNotes/        # Meeting documentation
+├── Reports/             # Performance and status reports
+└── README.md            # This file
+```
+
+## Key Documents
+
+| Document | Purpose |
+|----------|---------|
+| [Charter](./Charter.md) | Unit mission, scope, and governance |
+| [Policies](./Policies/) | Guidelines and standards |
+| [Processes](./Processes/) | Operational procedures |
+| [Reports](./Reports/) | Performance tracking |
+
+## Team Contacts
+
+| Role | Responsibility |
+|------|----------------|
+| Head of Executive | Strategic direction and oversight |
+| Executive Manager | Operational management |
+| Executive Lead | Team coordination |
+
+## Related Units
+
+- [Governance](../Governance/) - Policy alignment
+- [Executive](../Executive/) - Strategic alignment  
+- [HumanResources](../HumanResources/) - Staffing and training
+
+## Getting Started
+
+1. Review the [Charter](./Charter.md) to understand the unit's purpose
+2. Familiarize yourself with key [Policies](./Policies/)
+3. Understand the operational [Processes](./Processes/)
+4. Connect with team members listed above

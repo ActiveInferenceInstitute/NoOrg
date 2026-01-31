@@ -47,7 +47,7 @@ const users = await storage.query('users.*', {
   filter: { active: true },
   limit: 10
 });
-```
+```text
 
 ## Storage Backends
 
@@ -60,7 +60,7 @@ const memoryStorage = storage.createBackend('memory', {
   maxSize: '100MB',
   enableCompression: true
 });
-```
+```text
 
 **Use Cases:**
 - Session data
@@ -77,7 +77,7 @@ const fileStorage = storage.createBackend('file', {
   enableEncryption: true,
   compressionLevel: 6
 });
-```
+```text
 
 **Use Cases:**
 - Configuration files
@@ -94,7 +94,7 @@ const dbStorage = storage.createBackend('database', {
   poolSize: 10,
   enableMigrations: true
 });
-```
+```text
 
 **Use Cases:**
 - User data
@@ -117,7 +117,7 @@ interface KeyValueData {
     tags?: string[];
   };
 }
-```
+```text
 
 ### Document Storage
 Document-based storage for complex data structures.
@@ -133,7 +133,7 @@ interface DocumentData {
     version: number;
   };
 }
-```
+```text
 
 ### Time Series Storage
 Optimized storage for time-series data.
@@ -145,7 +145,7 @@ interface TimeSeriesData {
   value: number;
   tags?: Record<string, string>;
 }
-```
+```text
 
 ## Advanced Operations
 
@@ -167,7 +167,7 @@ await transaction.commit();
 
 // Or rollback on error
 await transaction.rollback();
-```
+```text
 
 ### Batch Operations
 ```typescript
@@ -184,7 +184,7 @@ const results = await storage.batchGet([
   'user.2',
   'user.3'
 ]);
-```
+```text
 
 ### Query Operations
 ```typescript
@@ -201,7 +201,7 @@ const searchResults = await storage.search('documents.*', {
   fields: ['title', 'content'],
   limit: 20
 });
-```
+```text
 
 ## Configuration
 
@@ -215,7 +215,7 @@ interface StorageConfig {
   enableEncryption?: boolean;
   encryptionKey?: string;
 }
-```
+```text
 
 ### Backend-Specific Configuration
 ```typescript
@@ -240,7 +240,7 @@ interface BackendConfig {
     enableMigrations?: boolean;
   };
 }
-```
+```text
 
 ## Performance
 
@@ -297,7 +297,7 @@ await storage.migrateData('users.*', 'memory', 'database');
 await storage.migrateData('legacy.*', 'file', 'database', {
   transform: (data) => transformLegacyFormat(data)
 });
-```
+```text
 
 ### Data Replication
 ```typescript
@@ -307,7 +307,7 @@ storage.setupReplication({
   targets: ['backup-database', 'analytics-database'],
   strategy: 'real-time'
 });
-```
+```text
 
 ### Data Archiving
 ```typescript
@@ -317,7 +317,7 @@ await storage.archiveData('logs.older_than_1_year', {
   compression: true,
   encryption: true
 });
-```
+```text
 
 ## Monitoring
 
@@ -341,7 +341,7 @@ if (!health.healthy) {
   // Switch to fallback backend
   storage.setDefaultBackend('memory');
 }
-```
+```text
 
 #### High Memory Usage
 **Cause**: Memory backend growing too large
@@ -352,7 +352,7 @@ storage.enableAutoCleanup({
   maxSize: '500MB',
   cleanupStrategy: 'lru' // Least recently used
 });
-```
+```text
 
 #### Slow Query Performance
 **Cause**: Missing indexes or large datasets
@@ -367,10 +367,10 @@ const optimizedResults = await storage.query('users.active', {
   index: 'createdAt',
   limit: 100
 });
-```
+```text
 
 ## Related Documentation
 
-- [Storage System API Reference](../../docs/core/index.md)
+- [Storage System API Reference](../../../docs/index.md)
 - [Integration Patterns](../../../docs/core/integration/patterns/README.md)
 - [Monitoring Integration](../monitoring/README.md)

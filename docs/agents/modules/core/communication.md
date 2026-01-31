@@ -26,7 +26,7 @@ related_documents:
   - [[agents/modules/core/state]]
   - [[agents/modules/core/behavior]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the communication system for agents, providing comprehensive message handling, protocol support, and channel management capabilities as specified in the [[agents/architectures/modules|Module System]].
@@ -42,7 +42,7 @@ class CommunicationManager:
         self.channels = ChannelManager()
         self.router = MessageRouter()
         self.handler = MessageHandler()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -53,7 +53,7 @@ graph TD
     B --> E[Protocol Handlers]
     C --> F[Channel Pool]
     D --> G[Message Queue]
-```
+```text
 
 ### 2. Message Structure
 #### 2.1 Base Message
@@ -65,7 +65,7 @@ class Message:
         self.protocol = ProtocolType()
         self.payload = MessagePayload()
         self.metadata = MessageMetadata()
-```
+```text
 
 #### 2.2 Message Types
 - Command Messages
@@ -90,7 +90,7 @@ class Protocol:
     async def validate_message(self, message):
         # Message validation logic
         pass
-```
+```text
 
 #### 3.2 Protocol Types
 - Internal Protocols
@@ -106,7 +106,7 @@ class ChannelManager:
         self.channels = ChannelRegistry()
         self.pool = ChannelPool()
         self.monitor = ChannelMonitor()
-```
+```text
 
 #### 4.2 Channel Operations
 - Channel Creation
@@ -131,7 +131,7 @@ class ProtocolImplementation:
     async def setup_validation(self, validators):
         # Validation setup logic
         pass
-```
+```text
 
 #### 1.2 Protocol Standards
 - Message Format
@@ -148,7 +148,7 @@ class MessageProcessor:
         await self.route(message)
         await self.handle(message)
         await self.respond(message)
-```
+```text
 
 #### 2.2 Processing Steps
 1. Message Validation
@@ -202,7 +202,7 @@ class CommunicationSecurity:
     async def validate_message(self, message):
         # Security validation
         pass
-```
+```text
 
 #### 1.2 Security Operations
 - Channel Security
@@ -252,7 +252,7 @@ class ProtocolPattern:
         self.handlers = HandlerRegistry()
         self.validators = ValidatorRegistry()
         self.router = MessageRouter()
-```
+```text
 
 ### B. Channel Patterns
 ```python
@@ -262,7 +262,7 @@ class ChannelPattern:
         self.pool = ChannelPool()
         self.monitor = ChannelMonitor()
         self.security = ChannelSecurity()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -272,4 +272,4 @@ class CommunicationSecurityPattern:
         self.encryption = EncryptionSystem()
         self.authentication = AuthSystem()
         self.audit = AuditLogger()
-``` 
+```text 

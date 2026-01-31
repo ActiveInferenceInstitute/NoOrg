@@ -19,7 +19,7 @@ graph TD
     Processes[Finance Processes] --> Reports
     
     class Processes externalEntity;
-```
+```text
 
 ## Report Categories
 

@@ -13,9 +13,9 @@ This document defines the semantic versioning standards for the Operations Knowl
 ## 🔢 Version Format
 
 ### Basic Structure
-```
+```text
 vMAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
-```
+```text
 
 ### Version Components
 1. MAJOR version (X.0.0)

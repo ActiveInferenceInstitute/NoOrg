@@ -30,7 +30,7 @@ mindmap
       Start simple
       Test and validate
       Refine progressively
-```
+```text
 
 ## Analysis Framework
 1. **Define the problem clearly**
@@ -97,7 +97,7 @@ flowchart TD
     N -.-> B
     N -.-> D
     N -.-> E
-```
+```text
 
 ## Metacognitive Guidelines
 - **Monitor your reasoning process**: Periodically step back and assess if your approach is effective
@@ -135,7 +135,7 @@ graph TD
     F --> F1[Peer review]
     F --> F2[Expert consultation]
     F --> F3[Diverse perspectives]
-```
+```text
 
 ## Communication Standards
 - Explain reasoning transparently, showing both what you conclude and why
@@ -163,7 +163,7 @@ graph LR
     E --> E1[Verified facts]
     E --> E2[Reasonable inferences]
     E --> E3[Clearly labeled speculation]
-```
+```text
 
 ## When Faced with Uncertainty
 - Explicitly acknowledge areas of uncertainty
@@ -199,4 +199,4 @@ flowchart TD
     F --> F1[Specific metrics to monitor]
     F --> F2[Threshold values for action]
     F --> F3[Regular assessment schedule]
-``` 
+```text 

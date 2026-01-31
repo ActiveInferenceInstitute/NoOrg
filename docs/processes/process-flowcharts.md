@@ -43,7 +43,7 @@ flowchart TD
     P -->|Resolved| Q[Document & Close]
     P -->|Unresolved| R[Escalate Further]
     R --> K
-```
+```text
 
 ### Incident Escalation Process
 ```mermaid
@@ -66,7 +66,7 @@ flowchart TD
     I -->|Success| J[Document & Close]
     I -->|Failure| K[Reassess]
     K --> B
-```
+```text
 
 ## 🔄 Change Management Flow
 
@@ -98,7 +98,7 @@ flowchart TD
     M -->|Failure| O[Rollback]
     O --> P[Review & Reassess]
     P --> B
-```
+```text
 
 ### Change Implementation Flow
 ```mermaid
@@ -124,7 +124,7 @@ flowchart TD
     
     I --> M[Document Changes]
     M --> N[Close Implementation]
-```
+```text
 
 ## 🚀 Release Management Flow
 
@@ -155,7 +155,7 @@ flowchart TD
     N -->|Approved| O[Begin Preparation]
     N -->|Rejected| P[Revise Plan]
     P --> M
-```
+```text
 
 ### Release Implementation Flow
 ```mermaid
@@ -183,7 +183,7 @@ flowchart TD
     M --> N[Review Failure]
     N --> O[Update Release Plan]
     O --> A
-```
+```text
 
 ## ⚠️ Exception Handling
 
@@ -215,7 +215,7 @@ flowchart TD
     K --> O[Update Process]
     L --> B
     N --> P[Crisis Management]
-```
+```text
 
 ### Error Recovery Flow
 ```mermaid
@@ -245,7 +245,7 @@ flowchart TD
     
     O --> Q[Process Improvement]
     P --> R[Emergency Review]
-```
+```text
 
 ## 📊 Process Metrics
 
@@ -274,7 +274,7 @@ flowchart TD
     K --> N[Monitor Results]
     L --> N
     M --> N
-```
+```text
 
 ## 📚 References
 

@@ -38,13 +38,13 @@ This document outlines our Git workflow for managing the Operations Knowledge Ba
 ## 📝 Commit Guidelines
 
 ### Commit Message Format
-```
+```text
 type(scope): subject
 
 [optional body]
 
 [optional footer]
-```
+```text
 
 ### Types
 - `docs`: Documentation changes
@@ -63,11 +63,11 @@ type(scope): subject
 - `config`: Configuration changes
 
 ### Examples
-```
+```text
 docs(process): add incident response process
 fix(links): update broken references in security policy
 style(template): improve meeting notes format
-```
+```text
 
 ## 🔄 Workflow Process
 
@@ -76,7 +76,7 @@ style(template): improve meeting notes format
 git checkout develop
 git pull origin develop
 git checkout -b feature/new-feature
-```
+```text
 
 ### 2. Regular Updates
 ```bash
@@ -87,7 +87,7 @@ git rebase origin/develop
 # Stage and commit changes
 git add .
 git commit -m "type(scope): subject"
-```
+```text
 
 ### 3. Preparing for Review
 ```bash
@@ -97,7 +97,7 @@ git rebase origin/develop
 
 # Push to remote
 git push origin feature/new-feature
-```
+```text
 
 ### 4. Merging Changes
 ```bash
@@ -111,7 +111,7 @@ git commit -m "merge: resolve conflicts"
 
 # Push final changes
 git push origin feature/new-feature
-```
+```text
 
 ## 🔍 Review Process
 
@@ -161,7 +161,7 @@ git push origin feature/new-feature
 # Verify no sensitive information
 # Check markdown formatting
 # Validate internal links
-```
+```text
 
 ### GitHub Actions
 - Link validation
@@ -193,7 +193,7 @@ git push origin feature/branch
 
 # Force push (with caution)
 git push --force-with-lease origin feature/branch
-```
+```text
 
 ### Conflict Resolution
 1. Identify conflicts

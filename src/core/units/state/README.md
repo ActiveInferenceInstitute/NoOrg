@@ -46,7 +46,7 @@ const status = await stateManager.getState('unit:001:status');
 const unsubscribe = stateManager.subscribe('unit:001:*', (path, value) => {
   console.log(`State changed: ${path} = ${value}`);
 });
-```
+```text
 
 ## Integration
 

@@ -55,7 +55,7 @@ Exclusions: [Specify any exclusions, e.g., standard service requests handled out
 
 ## 7. Process Flow
 
-Refer to the [Change Management Procedure document](link-to-process-doc-if-exists) for the detailed workflow, including CR submission, assessment, approval, implementation, and review steps.
+Refer to the [Change Management Procedure document](AGENTS.md) for the detailed workflow, including CR submission, assessment, approval, implementation, and review steps.
 
 ## 8. Enforcement
 

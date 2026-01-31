@@ -27,7 +27,7 @@ Demonstrates fundamental event and storage system integration.
 **Usage:**
 ```bash
 npm run example:basic
-```
+```text
 
 #### 2. Relationship Management (`2-relationship-management-example.ts`)
 Shows how agents can establish and manage relationships.
@@ -170,13 +170,13 @@ npm run example:lexdao
 
 # Run comprehensive example
 npm run example:comprehensive
-```
+```text
 
 ### All Examples
 ```bash
 # Run all examples sequentially
 npm run example:all
-```
+```text
 
 ### Development Mode
 ```bash
@@ -185,7 +185,7 @@ DEBUG=* npm run example:basic
 
 # Run with performance monitoring
 npm run example:performance
-```
+```text
 
 ## Example Structure
 
@@ -235,7 +235,7 @@ if (require.main === module) {
     .then(() => process.exit(0))
     .catch(() => process.exit(1));
 }
-```
+```text
 
 ## Learning from Examples
 
@@ -285,7 +285,7 @@ DEBUG=* npm run example:basic
 
 # Run with verbose logging
 LOG_LEVEL=debug npm run example:workflow
-```
+```text
 
 ## Performance Examples
 
@@ -297,8 +297,8 @@ Examples include performance demonstrations:
 
 ## Related Documentation
 
-- [Framework Overview](../../../README.md)
-- [Agent Documentation](../../../src/agents/README.md)
-- [Core Systems](../../../src/core/README.md)
-- [Testing Guide](../../../tests/README.md)
-- [API Reference](../../../docs/api/index.md)
+- [Framework Overview](../README.md)
+- [Agent Documentation](../README.md)
+- [Core Systems](../README.md)
+- [Testing Guide](../README.md)
+- [API Reference](../docs/index.md)

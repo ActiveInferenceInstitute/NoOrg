@@ -13,7 +13,7 @@ This document defines the comprehensive structure and organization of the Operat
 ## 🏗️ Repository Layout
 
 ### Root Level Organization
-```
+```text
 operations/
 ├── meta/               # Repository metadata and documentation
 ├── frameworks/         # Core operational frameworks
@@ -23,7 +23,7 @@ operations/
 ├── docs/              # General documentation
 ├── templates/         # Document and code templates
 └── tools/            # Repository management tools
-```
+```text
 
 ## 📂 Directory Structures
 

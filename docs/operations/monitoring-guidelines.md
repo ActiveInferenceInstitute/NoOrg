@@ -19,7 +19,7 @@ graph TD
     A --> C[Performance Monitoring]
     A --> D[Security Monitoring]
     A --> E[User Monitoring]
-```
+```text
 
 ### Monitoring Architecture
 1. **Monitoring Layers**

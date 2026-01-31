@@ -40,7 +40,7 @@ required_metadata:
       max_items: 10
       format: "[tag1, tag2, ...]"
       description: "Classification tags"
-```
+```text
 
 ### Content Classification
 ```python
@@ -71,7 +71,7 @@ class ContentMetadata:
     def generate_metadata(self, content_type):
         """Generate metadata template"""
         pass
-```
+```text
 
 ## 📝 Optional Fields
 
@@ -125,7 +125,7 @@ class ContentMetadata:
     }
   }
 }
-```
+```text
 
 ### Domain-Specific Fields
 ```yaml
@@ -162,7 +162,7 @@ domain_metadata:
     - scope:
         type: array
         description: "Policy scope"
-```
+```text
 
 ## ✅ Validation Rules
 
@@ -194,7 +194,7 @@ class MetadataValidator:
     def validate_document(self, metadata):
         """Validate complete document metadata"""
         pass
-```
+```text
 
 ### Format Rules
 ```yaml
@@ -218,7 +218,7 @@ format_rules:
     format: "YYYY-MM-DD"
     timezone: "UTC"
     validation: "ISO8601"
-```
+```text
 
 ## 🔄 Automation
 
@@ -248,7 +248,7 @@ class MetadataGenerator:
     def update_metadata(self, metadata, changes):
         """Update existing metadata"""
         pass
-```
+```text
 
 ### Automated Updates
 ```yaml
@@ -274,7 +274,7 @@ automation_rules:
     - event: "metadata_invalid"
       trigger: "validation_fail"
       action: "notify_author"
-```
+```text
 
 ## 🔍 Search Integration
 
@@ -303,7 +303,7 @@ automation_rules:
     }
   }
 }
-```
+```text
 
 ### Query Support
 ```python
@@ -323,7 +323,7 @@ class MetadataSearch:
     def execute_search(self, query):
         """Execute metadata search"""
         pass
-```
+```text
 
 ## 📊 Reporting and Analysis
 
@@ -344,7 +344,7 @@ quality_metrics:
     - data_validation
     - relationship_checks
     - temporal_consistency
-```
+```text
 
 ### Usage Analytics
 ```python
@@ -363,7 +363,7 @@ class MetadataAnalytics:
     def generate_report(self):
         """Generate analytics report"""
         pass
-```
+```text
 
 ## 📚 References
 

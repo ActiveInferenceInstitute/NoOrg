@@ -62,7 +62,7 @@ graph LR
   F --> G[Document Assets & Accounts]
   G --> H[Notify Manager & Handover to User]
   H --> I[Onboarding Complete]
-```
+```text
 
 ## 7. Procedure Review
 

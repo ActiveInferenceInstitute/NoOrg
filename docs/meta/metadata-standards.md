@@ -20,7 +20,7 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 tags: [tag1, tag2, tag3]
 ---
-```
+```text
 
 ### Extended Information (When Applicable)
 ```yaml
@@ -32,7 +32,7 @@ priority: low|medium|high
 category: process|policy|guide|reference
 related: [doc1, doc2, doc3]
 ---
-```
+```text
 
 ## 📝 Field Specifications
 

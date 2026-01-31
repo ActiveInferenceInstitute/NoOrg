@@ -47,7 +47,7 @@ creation_process:
       - policy_draft
       - supporting_documents
       - implementation_plan
-```
+```text
 
 ### Development Framework
 ```python
@@ -78,7 +78,7 @@ class PolicyDevelopment:
     def validate_policy(self):
         """Validate policy content"""
         pass
-```
+```text
 
 ## 🔍 Review Cycle
 
@@ -129,7 +129,7 @@ class PolicyDevelopment:
     }
   }
 }
-```
+```text
 
 ### Review Management
 ```python
@@ -160,7 +160,7 @@ class ReviewManager:
     def track_review_cycle(self):
         """Track review cycle"""
         pass
-```
+```text
 
 ## 🔚 Retirement Process
 
@@ -197,7 +197,7 @@ retirement_process:
         - risk_evaluation
         - control_assessment
         - compliance_review
-```
+```text
 
 ### Retirement Workflow
 ```python
@@ -228,7 +228,7 @@ class PolicyRetirement:
     def manage_transition(self):
         """Manage retirement transition"""
         pass
-```
+```text
 
 ## 📊 Lifecycle Management
 
@@ -265,7 +265,7 @@ class PolicyRetirement:
     }
   }
 }
-```
+```text
 
 ### Lifecycle Tracking
 ```python
@@ -296,7 +296,7 @@ class LifecycleTracker:
     def generate_reports(self):
         """Generate lifecycle reports"""
         pass
-```
+```text
 
 ## 📈 Performance Monitoring
 
@@ -326,7 +326,7 @@ lifecycle_metrics:
       - error_rate
       - compliance_score
       - user_satisfaction
-```
+```text
 
 ### Analytics Framework
 ```python
@@ -357,7 +357,7 @@ class LifecycleAnalytics:
     def generate_insights(self):
         """Generate lifecycle insights"""
         pass
-```
+```text
 
 ## 📚 References
 

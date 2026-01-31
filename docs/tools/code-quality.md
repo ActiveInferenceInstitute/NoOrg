@@ -19,7 +19,7 @@ graph TD
     A --> C[Style Checking]
     A --> D[Pattern Analysis]
     A --> E[Security Scanning]
-```
+```text
 
 ### Tool Configuration
 1. **Markdown Lint**
@@ -113,7 +113,7 @@ graph TD
 markdownlint "**/*.md"
 prettier --check "**/*.{md,js,json}"
 vale "**/*.md"
-```
+```text
 
 ### Continuous Integration
 1. **Automated Checks**

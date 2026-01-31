@@ -50,7 +50,7 @@ access_statistics:
       - click_patterns
       - sharing_rate
       - feedback_rate
-```
+```text
 
 ### Statistics Management
 ```python
@@ -81,7 +81,7 @@ class StatisticsManager:
     def generate_insights(self):
         """Generate statistical insights"""
         pass
-```
+```text
 
 ## 🔍 Search Patterns
 
@@ -115,7 +115,7 @@ class StatisticsManager:
     }
   }
 }
-```
+```text
 
 ### Search Analysis
 ```python
@@ -146,7 +146,7 @@ class SearchAnalyzer:
     def optimize_search(self):
         """Optimize search experience"""
         pass
-```
+```text
 
 ## 🔄 Navigation Flows
 
@@ -188,7 +188,7 @@ navigation_flows:
       - restructuring_needs
       - navigation_aids
       - content_organization
-```
+```text
 
 ### Navigation Analysis
 ```python
@@ -219,7 +219,7 @@ class NavigationAnalyzer:
     def optimize_flows(self):
         """Optimize navigation flows"""
         pass
-```
+```text
 
 ## 👥 User Behavior
 
@@ -261,7 +261,7 @@ user_behavior:
       - usage_trends
       - retention_patterns
       - growth_indicators
-```
+```text
 
 ### Behavior Analysis
 ```python
@@ -292,7 +292,7 @@ class BehaviorAnalyzer:
     def generate_insights(self):
         """Generate behavioral insights"""
         pass
-```
+```text
 
 ## 📚 References
 

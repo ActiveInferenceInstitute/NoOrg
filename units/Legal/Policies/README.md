@@ -12,4 +12,4 @@ This directory contains formal policies managed or significantly influenced by t
 *   **[Records Retention Policy](./RecordsRetentionPolicy.md):** Schedule and process for retaining and disposing of organizational records.
 *   **[Compliance Policy Overview](./CompliancePolicyOverview.md):** High-level statement on the organization's commitment to compliance.
 
-*Note: Some policies may be cross-referenced in specific functional areas (e.g., [Corporate Governance Policies](../CorporateGovernance/Policies/README.md)).* 
+*Note: Some policies may be cross-referenced in specific functional areas (e.g., [Corporate Governance Policies](../../../README.md)).* 

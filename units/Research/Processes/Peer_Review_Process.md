@@ -38,7 +38,7 @@ graph TD
         E --> E1(Constructive Feedback);
         F --> F1(Revised Output / Response to Reviewer);
     end
-```
+```text
 
 ## 4. Steps Description
 

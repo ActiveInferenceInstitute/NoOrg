@@ -18,7 +18,7 @@ console.log(agentDiagram);
 // Generate a workflow diagram
 const workflowDiagram = generateWorkflowDiagram(workflowSteps);
 console.log(workflowDiagram);
-```
+```text
 
 ## Diagram Types
 
@@ -51,8 +51,8 @@ The following diagram shows the high-level architecture of the system:
 
 ```mermaid
 {{DIAGRAM_OUTPUT}}
-```
-```
+```text
+```text
 
 ## Integration with Other Tools
 

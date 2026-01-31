@@ -22,7 +22,7 @@ protocol:
   version: 1.0.0
   category: resource_control
   style: request_response_with_monitoring
-```
+```text
 
 ### Participants
 - Resource Manager (RM)
@@ -61,7 +61,7 @@ sequenceDiagram
     RR->>RM: ReleaseResources
     RM->>RP: DeallocateResources
     RP-->>RM: DeallocationConfirmed
-```
+```text
 
 ## States & Transitions
 
@@ -113,7 +113,7 @@ states:
         trigger: error_resolved
       - to: request_processing
         trigger: retry_allocation
-```
+```text
 
 ## Message Definitions
 
@@ -178,7 +178,7 @@ messages:
           "storage_volume": "vol_1"
         }
       }
-```
+```text
 
 ### Event Messages
 ```yaml
@@ -210,7 +210,7 @@ events:
           "power_usage": 45
         }
       }
-```
+```text
 
 ## Implementation
 
@@ -225,7 +225,7 @@ components:
     - status_reporter
     - resource_controller
     - metric_collector
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -243,7 +243,7 @@ integration:
       - resource_manager
       - resource_providers
       - system_monitor
-```
+```text
 
 ## Behavior
 
@@ -269,7 +269,7 @@ error_handling:
     - error: resource_failure
       action: reallocate_resources
       retry: true
-```
+```text
 
 ## Quality of Service
 
@@ -282,7 +282,7 @@ performance:
   throughput:
     requests_per_second: 1000
     allocations_per_second: 500
-```
+```text
 
 ### Reliability Measures
 ```yaml
@@ -294,7 +294,7 @@ reliability:
   state_consistency:
     sync_interval: "50ms"
     consistency_check: "strong"
-```
+```text
 
 ## Security
 
@@ -310,7 +310,7 @@ security:
       - resource_manager
       - resource_provider
       - resource_consumer
-```
+```text
 
 ### Resource Protection
 ```yaml
@@ -321,7 +321,7 @@ resource_security:
   access_control:
     method: capability_based
     granularity: resource_level
-```
+```text
 
 ## Monitoring
 
@@ -338,7 +338,7 @@ monitoring:
     - name: allocation_success_rate
       type: counter
       labels: [resource_type, requester_id]
-```
+```text
 
 ### Logging Requirements
 ```yaml
@@ -353,7 +353,7 @@ logging:
     - resource_id
     - operation_type
     - status
-```
+```text
 
 ## Maintenance
 

@@ -29,7 +29,7 @@ const unitAgent = new LLMAgent({
     temperature: 0.7
   }
 });
-```
+```text
 
 ### UnitAgentFactory (`UnitAgentFactory.ts`)
 Factory for creating unit-specific agents.
@@ -46,17 +46,17 @@ import { UnitAgentFactory } from './units/agents/UnitAgentFactory';
 
 const factory = UnitAgentFactory.getInstance();
 const agent = factory.createAgent('research', config);
-```
+```text
 
 ## Architecture
 
 ### Unit Agent Hierarchy
-```
+```text
 OrganizationalUnit
 ├── LLMAgent (Base unit agent)
 ├── SpecializedUnitAgent (Domain-specific)
 └── UnitAgentFactory (Agent creation)
-```
+```text
 
 ### Integration with Core Systems
 - **Event System**: Unit events and notifications
@@ -103,7 +103,7 @@ class LLMAgent extends AbstractAgent {
     return this.processResponse(response, context);
   }
 }
-```
+```text
 
 ### Unit Agent Factory
 ```typescript
@@ -127,7 +127,7 @@ class UnitAgentFactory {
     return new AgentClass(config);
   }
 }
-```
+```text
 
 ## Configuration
 
@@ -147,7 +147,7 @@ interface UnitAgentConfig extends AgentConfig {
     monitoringConfig?: MonitoringConfig;
   };
 }
-```
+```text
 
 ### Unit Context
 ```typescript
@@ -160,7 +160,7 @@ interface UnitContext {
   constraints: UnitConstraint[];
   relationships: UnitRelationship[];
 }
-```
+```text
 
 ## Testing
 
@@ -186,7 +186,7 @@ describe('LLMAgent', () => {
     expect(result.success).to.be.true;
   });
 });
-```
+```text
 
 ## Performance
 
@@ -218,7 +218,7 @@ describe('LLMAgent', () => {
 
 ## Related Documentation
 
-- [Organizational Units](../../../src/core/units/README.md)
-- [Agent Framework](../../../src/agents/README.md)
-- [Core Systems](../../../src/core/README.md)
-- [Unit Management](../../../docs/units/README.md)
+- [Organizational Units](../../../../README.md)
+- [Agent Framework](../../../../README.md)
+- [Core Systems](../../../../README.md)
+- [Unit Management](../../../../README.md)

@@ -1,13 +1,42 @@
 # Executive Policies
 
-This directory houses policies established and overseen by the Executive Unit. These policies provide high-level guidance and rules governing executive conduct, decision-making, communication, and other critical areas of organizational management.
+## Overview
 
-Refer to individual policy documents for specific details.
+This directory contains the official policies governing Executive operations, standards, and compliance requirements.
 
-## Key Policies:
+## Policy Categories
 
-*   [**Code of Conduct**](./CodeOfConduct.md)
-*   [**Conflict of Interest Policy**](./ConflictOfInterestPolicy.md)
-*   [**Communication Policy**](./CommunicationPolicy.md)
-*   [**Delegation of Authority**](./DelegationOfAuthority.md)
-*   *(Add links to other relevant policies as they are developed)* 
+### Core Policies
+Foundational policies that govern unit operations and standards.
+
+### Operational Policies
+Day-to-day operational guidelines and procedures.
+
+### Compliance Policies
+Regulatory and compliance-related requirements.
+
+## Policy Lifecycle
+
+| Stage | Description | Owner |
+|-------|-------------|-------|
+| Draft | Initial policy creation | Policy Author |
+| Review | Stakeholder feedback | Review Committee |
+| Approval | Formal authorization | Unit Leadership |
+| Published | Active and enforced | Policy Owner |
+| Review | Periodic assessment | Policy Owner |
+| Retired | No longer active | Unit Leadership |
+
+## Policy Standards
+
+All policies must include:
+- **Version**: Current version number
+- **Effective Date**: When policy becomes active
+- **Owner**: Responsible individual or role
+- **Review Date**: Next scheduled review
+- **Scope**: Who the policy applies to
+
+## Related Documentation
+
+- [Processes](../Processes/)
+- [Governance Policies](../../Governance/Policies/)
+- [Policy on Policies](../../Governance/Policies/Policy_on_Policies.md)

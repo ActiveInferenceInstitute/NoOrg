@@ -22,7 +22,7 @@ Make sure your environment has the necessary dependencies:
 
 ```bash
 npm install axios dotenv
-```
+```text
 
 ### Configuration
 
@@ -56,14 +56,14 @@ const client = new OpenAIClient({
     alertThreshold: 0.8
   }
 });
-```
+```text
 
 ### Simple Text Completion
 
 ```typescript
 const response = await client.sendPrompt('Explain quantum computing briefly');
 console.log(response.choices[0].message.content);
-```
+```text
 
 ### Structured Messages
 
@@ -74,7 +74,7 @@ const response = await client.sendPrompt([
 ]);
 
 console.log(response.choices[0].message.content);
-```
+```text
 
 ### Advanced Options
 
@@ -90,7 +90,7 @@ const response = await client.sendPrompt(
     presence_penalty: 0.5
   }
 );
-```
+```text
 
 ## Advanced Usage
 
@@ -106,7 +106,7 @@ const stream = client.streamResponse('Write a long technical article about AI sa
 for await (const chunk of stream) {
   process.stdout.write(chunk); // Output chunks as they arrive
 }
-```
+```text
 
 ### Generating Embeddings
 
@@ -115,7 +115,7 @@ Embeddings are useful for semantic search, clustering, and similarity analysis:
 ```typescript
 const embedding = await client.generateEmbedding('This is a sample text');
 // embedding is an array of floating-point numbers
-```
+```text
 
 ### Tracking Usage
 
@@ -129,7 +129,7 @@ startDate.setMonth(startDate.getMonth() - 1);
 const usageStats = await client.getUsageStats(startDate);
 console.log(`Total tokens used: ${usageStats.totalTokens}`);
 console.log(`Total cost: $${usageStats.totalCost.toFixed(2)}`);
-```
+```text
 
 ### Model Information
 
@@ -143,7 +143,7 @@ const models = await client.getAvailableModels();
 const modelInfo = await client.getModelInfo('gpt-4');
 console.log(`Max tokens: ${modelInfo.maxTokens}`);
 console.log(`Context window: ${modelInfo.contextWindow}`);
-```
+```text
 
 ## Error Handling
 
@@ -157,7 +157,7 @@ try {
   console.error('Error calling OpenAI API:', error.message);
   // Handle specific error cases if needed
 }
-```
+```text
 
 ## Billing Management
 
@@ -169,7 +169,7 @@ client.billingLimits = {
   maxMonthlySpend: 100, // Maximum monthly spend in USD
   alertThreshold: 0.8   // Alert at 80% of maximum
 };
-```
+```text
 
 ## Best Practices
 
@@ -211,7 +211,7 @@ async function processTask(task, agent) {
     usage: response.usage
   };
 }
-```
+```text
 
 ## Troubleshooting
 

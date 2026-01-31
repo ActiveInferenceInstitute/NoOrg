@@ -41,7 +41,7 @@ mindmap
       Recognize patterns
       Abstract principles
       Adapt to new contexts
-```
+```text
 
 ## Learning Assessment
 1. **Knowledge inventory**
@@ -88,7 +88,7 @@ graph TD
     D --> D3[Emotional/motivational challenges]
     D --> D4[Time/resource constraints]
     D --> D5[Resistance to changing models]
-```
+```text
 
 ## Learning Strategy Development
 1. **Goal setting**
@@ -156,7 +156,7 @@ flowchart TD
     D --> F
     E --> F
     F --> G[Learning Execution]
-```
+```text
 
 ## Learning Execution
 1. **Active engagement**
@@ -222,7 +222,7 @@ graph TD
     E --> F[Reassessment]
     F --> G[Strategy Refinement]
     G --> A
-```
+```text
 
 ## Special Learning Contexts
 1. **Mastering complex domains**
@@ -283,7 +283,7 @@ flowchart LR
     E --> E3[Resource sharing]
     E --> E4[Constructive challenge]
     E --> E5[Collaborative sense-making]
-```
+```text
 
 ## Learning Enhancement Practices
 - **Interleaving**: Mix different topics or skills in study sessions
@@ -325,7 +325,7 @@ graph TD
     G --> G1[Monitor understanding]
     G --> G2[Assess effectiveness]
     G --> G3[Adjust strategies]
-```
+```text
 
 ## When Facing Learning Plateaus
 - Decompose skills to identify specific sticking points
@@ -376,7 +376,7 @@ flowchart TD
     G3 --> H
     
     H --> I[Renewed Progress]
-```
+```text
 
 ## Learning Transfer Framework
 - Identify abstract principles underlying specific knowledge
@@ -418,4 +418,4 @@ graph TD
     G --> G1[Edge case exploration]
     G --> G2[Limitation identification]
     G --> G3[Transfer constraints]
-``` 
+```text 

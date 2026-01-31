@@ -19,7 +19,7 @@ The **DevelopmentAgent** specializes in software development tasks including cod
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -39,7 +39,7 @@ async generateCode(
     checkCache?: boolean;
   }
 ): Promise<CodeGenerationResult>
-```
+```text
 
 #### reviewCode()
 
@@ -54,7 +54,7 @@ async reviewCode(
     severity?: 'strict' | 'balanced' | 'lenient';
   }
 ): Promise<CodeReviewResult>
-```
+```text
 
 #### designArchitecture()
 
@@ -71,7 +71,7 @@ async designArchitecture(
     complexity?: 'simple' | 'moderate' | 'complex';
   }
 ): Promise<ArchitectureResult>
-```
+```text
 
 ## Configuration Options
 
@@ -85,7 +85,7 @@ interface DevelopmentAgentConfig extends AgentConfig {
   codeStyle?: 'functional' | 'object-oriented' | 'procedural';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -128,7 +128,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -157,7 +157,7 @@ const code = await devAgent.generateCode(requirements, {
   language: 'TypeScript',
   templates: templates
 });
-```
+```text
 
 ### Multi-language Projects
 
@@ -172,7 +172,7 @@ const frontendCode = await devAgent.generateCode(frontendReqs, {
   language: 'TypeScript',
   framework: 'React'
 });
-```
+```text
 
 ## Version History
 

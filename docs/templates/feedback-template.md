@@ -49,7 +49,7 @@ attachments:
   - screenshots: []
   - logs: []
   - error_messages: []
-```
+```text
 
 ### Issue Management
 ```python
@@ -80,7 +80,7 @@ class IssueTracker:
     def track_resolution(self):
         """Track issue resolution"""
         pass
-```
+```text
 
 ## 💡 Enhancement Requests
 
@@ -135,7 +135,7 @@ class IssueTracker:
     ]
   }
 }
-```
+```text
 
 ### Enhancement Management
 ```python
@@ -166,7 +166,7 @@ class EnhancementManager:
     def track_implementation(self):
         """Track enhancement implementation"""
         pass
-```
+```text
 
 ## 🔄 Process Improvement
 
@@ -217,7 +217,7 @@ implementation:
   resources:
     - resource_1: ""
     - resource_2: ""
-```
+```text
 
 ### Improvement Management
 ```python
@@ -248,7 +248,7 @@ class ImprovementManager:
     def track_progress(self):
         """Track improvement progress"""
         pass
-```
+```text
 
 ## 📊 Feedback Analytics
 
@@ -288,7 +288,7 @@ feedback_analytics:
       - key_findings
       - recommendations
       - action_items
-```
+```text
 
 ## 📝 Documentation
 
@@ -334,7 +334,7 @@ feedback_analytics:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

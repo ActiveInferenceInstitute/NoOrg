@@ -61,7 +61,7 @@ graph TD
     K --> L{Review Outcome};
     L -- Adjustment Needed --> A;
     L -- OK --> M[End Process];
-```
+```text
 
 ## 6. Tools & Techniques
 

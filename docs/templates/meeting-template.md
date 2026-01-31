@@ -58,7 +58,7 @@ discussion_points:
       allocation: ""
       constraints: ""
       resolution: ""
-```
+```text
 
 ### Technical Review Meeting
 ```json
@@ -106,7 +106,7 @@ discussion_points:
     }
   }
 }
-```
+```text
 
 ### Strategic Planning Meeting
 ```yaml
@@ -146,7 +146,7 @@ strategic_planning:
     phases: []
     timelines: []
     responsibilities: []
-```
+```text
 
 ## ✅ Action Item Tracking
 
@@ -185,7 +185,7 @@ class ActionTracker:
     def update_status(self):
         """Update action item status"""
         pass
-```
+```text
 
 ### Action Items Template
 ```yaml
@@ -213,7 +213,7 @@ action_items:
       - date: "YYYY-MM-DD"
         status: ""
         notes: ""
-```
+```text
 
 ## 📝 Decision Recording
 
@@ -262,7 +262,7 @@ action_items:
     ]
   }
 }
-```
+```text
 
 ### Decision Framework
 ```python
@@ -293,7 +293,7 @@ class DecisionRecorder:
     def track_implementation(self):
         """Track decision implementation"""
         pass
-```
+```text
 
 ## 📊 Meeting Analytics
 
@@ -329,7 +329,7 @@ meeting_analytics:
       - process_improvements
       - format_adjustments
       - tool_enhancements
-```
+```text
 
 ## 📚 References
 

@@ -49,7 +49,7 @@ This process applies to all regular employees [Specify exceptions, e.g., excludi
     *   Focus on achievements, areas for development, overall performance rating, and career aspirations.
     *   Finalize review documentation and obtain signatures (if required).
 7.  **Link to Outcomes (Following Review - e.g., Q1/Q2):**
-    *   Performance outcomes inform compensation decisions (merit increases, bonuses) per the [Compensation Review Process](./CompensationReviewProcess.md).
+    *   Performance outcomes inform compensation decisions (merit increases, bonuses) per the [Compensation Review Process](AGENTS.md).
     *   Performance data informs promotion readiness and succession planning.
     *   Development needs feed into training plans.
 8.  **Cycle Restart:** Begin goal setting for the next performance cycle.
@@ -83,7 +83,7 @@ graph TD
 
     %% Feedback Loop
     D --> D; # Ongoing Nature
-```
+```text
 
 ## 7. Performance Ratings
 
@@ -94,7 +94,7 @@ graph TD
 
 *   Address performance issues promptly and directly through coaching and feedback.
 *   If issues persist, implement a formal Performance Improvement Plan (PIP) in consultation with HR, outlining specific expectations, support, and timelines.
-*   Refer to the [Disciplinary Action Policy](../Policies/DisciplinaryActionPolicy.md) if necessary.
+*   Refer to the [Disciplinary Action Policy](../Policies/AGENTS.md) if necessary.
 
 ## 9. Tools & Resources
 

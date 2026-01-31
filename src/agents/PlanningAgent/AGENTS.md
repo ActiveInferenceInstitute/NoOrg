@@ -19,7 +19,7 @@ The **PlanningAgent** specializes in creating and validating plans, project mana
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 ### Core Methods
 
@@ -32,7 +32,7 @@ async createPlan(
   topic: string,
   requirements: string[]
 ): Promise<PlanResult>
-```
+```text
 
 #### validatePlan()
 
@@ -42,7 +42,7 @@ Validate existing plans for completeness and feasibility.
 async validatePlan(
   plan: any
 ): Promise<ValidationResult>
-```
+```text
 
 ## Configuration Options
 
@@ -57,7 +57,7 @@ interface PlanningAgentConfig extends AgentConfig {
   planningFramework?: 'waterfall' | 'agile' | 'hybrid';
   cacheTTL?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -100,7 +100,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -132,7 +132,7 @@ const multiPhasePlan = await planningAgent.createPlan('Product Launch', [
   `Phase 3: ${phases[2]} - 6 weeks`,
   `Phase 4: ${phases[3]} - 4 weeks`
 ]);
-```
+```text
 
 ### Risk-based Planning
 
@@ -151,7 +151,7 @@ if (validation.risks.length > 0) {
     'Add contingency planning'
   ]);
 }
-```
+```text
 
 ## Version History
 

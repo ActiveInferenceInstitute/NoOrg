@@ -42,7 +42,7 @@ system_requirements:
       - wandb: "latest"
     message_broker: "RabbitMQ >=3.8"
     service_registry: "Consul >=1.9"
-```
+```text
 
 ## Architecture
 
@@ -84,7 +84,7 @@ classDiagram
     LearningAgent --> LearningEngine
     LearningAgent --> AdaptationSystem
     LearningAgent --> ModelRegistry
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -102,7 +102,7 @@ integration:
     - metric_store
     - experiment_tracker
     - distributed_training
-```
+```text
 
 ## Implementation Steps
 
@@ -143,7 +143,7 @@ class LearningAgent:
         await self._setup_distributed_learning()
         await self._start_experience_collection()
         self.logger.info("Learning Agent started successfully")
-```
+```text
 
 ### 2. Experience Management Implementation
 ```python
@@ -182,7 +182,7 @@ class ExperienceManager:
         except Exception as e:
             await self._handle_validation_error(e, batch)
             return False
-```
+```text
 
 ### 3. Learning Engine Implementation
 ```python
@@ -245,7 +245,7 @@ class LearningEngine:
         except Exception as e:
             await self._handle_update_error(e, model_id)
             return None
-```
+```text
 
 ### 4. Adaptation System Implementation
 ```python
@@ -285,7 +285,7 @@ class AdaptationSystem:
         except Exception as e:
             await self._handle_adaptation_error(e, model_id)
             return None
-```
+```text
 
 ### 5. Model Registry Implementation
 ```python
@@ -329,7 +329,7 @@ class ModelRegistry:
         except Exception as e:
             await self._handle_distribution_error(e, model_id)
             return False
-```
+```text
 
 ## Testing & Validation
 
@@ -358,7 +358,7 @@ class TestLearningAgent:
         )
         result = await learning_agent.experience_manager.collect_experience(batch)
         assert result is not None
-```
+```text
 
 ### Integration Tests
 ```python
@@ -380,7 +380,7 @@ class TestLearningIntegration:
         # Verify update
         assert update is not None
         assert "parameters" in update
-```
+```text
 
 ## Performance Optimization
 
@@ -397,7 +397,7 @@ optimization:
   model_distribution:
     compression_level: 3
     chunk_size: 10MB
-```
+```text
 
 ### Resource Management
 ```python
@@ -411,7 +411,7 @@ class ResourceManager:
         """Optimize resource usage"""
         # Implement resource optimization logic
         pass
-```
+```text
 
 ## Security Implementation
 
@@ -435,7 +435,7 @@ class SecurityManager:
         """Encrypt model data"""
         # Implement model encryption
         pass
-```
+```text
 
 ### Authorization
 ```python
@@ -448,7 +448,7 @@ class AuthorizationManager:
         """Check agent permissions"""
         # Implement permission checking
         pass
-```
+```text
 
 ## Deployment
 
@@ -467,7 +467,7 @@ deployment:
     volumes:
       - ./models:/app/models
       - ./data:/app/data
-```
+```text
 
 ### Health Checks
 ```python
@@ -482,7 +482,7 @@ class HealthCheck:
             "model_registry": await self._check_registry()
         }
         return checks
-```
+```text
 
 ## Troubleshooting
 
@@ -498,7 +498,7 @@ troubleshooting:
     - symptom: "GPU memory overflow"
       check: "Monitor memory usage and batch size"
       solution: "Reduce batch size or enable gradient accumulation"
-```
+```text
 
 ### Logging Strategy
 ```python
@@ -514,7 +514,7 @@ class LogManager:
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
         # Setup handlers and formatters
-```
+```text
 
 ## Maintenance
 

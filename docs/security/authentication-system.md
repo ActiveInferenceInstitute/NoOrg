@@ -43,7 +43,7 @@ login_methods:
           strategy: "intelligent"
           refinement: "dynamic"
           validation: "automated"
-```
+```text
 
 ### Method Management
 ```python
@@ -74,7 +74,7 @@ class LoginMethodManager:
     def enhance_security(self):
         """Enhance authentication security"""
         pass
-```
+```text
 
 ## 🔄 SSO Integration
 
@@ -105,7 +105,7 @@ sso_integration:
           strategy: "intelligent"
           adaptation: "dynamic"
           validation: "automated"
-```
+```text
 
 ### Integration Management
 ```python
@@ -136,7 +136,7 @@ class SSOManager:
     def enhance_security(self):
         """Enhance SSO security"""
         pass
-```
+```text
 
 ## 🔒 2FA Setup
 
@@ -167,7 +167,7 @@ two_factor_auth:
           strategy: "intelligent"
           adaptation: "dynamic"
           validation: "automated"
-```
+```text
 
 ### 2FA Management
 ```python
@@ -198,7 +198,7 @@ class TwoFactorManager:
     def enhance_security(self):
         """Enhance 2FA security"""
         pass
-```
+```text
 
 ## 🔐 Password Policies
 
@@ -229,7 +229,7 @@ password_policies:
           strategy: "intelligent"
           refinement: "dynamic"
           validation: "automated"
-```
+```text
 
 ### Policy Management
 ```python
@@ -260,7 +260,7 @@ class PasswordPolicyManager:
     def enhance_security(self):
         """Enhance policy security"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

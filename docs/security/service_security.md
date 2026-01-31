@@ -26,7 +26,7 @@ related_documents:
   - [[processes/service_management]]
   - [[frameworks/security_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the security framework for service integration within the agent system, providing comprehensive security controls, compliance requirements, and risk management strategies.
@@ -43,7 +43,7 @@ class SecurityManager:
         self.encryptor = EncryptionSystem()
         self.auditor = AuditSystem()
         self.monitor = SecurityMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Identity Store]
     C --> F[Policy Engine]
     D --> G[Key Management]
-```
+```text
 
 ### 2. Authentication System
 #### 2.1 Authentication Manager
@@ -71,7 +71,7 @@ class AuthenticationSystem:
         token = await self.tokens.generate_token(validation)
         session = await self.sessions.create_session(token)
         return session
-```
+```text
 
 #### 2.2 Authentication Methods
 - Certificate Authentication
@@ -94,7 +94,7 @@ class AuthorizationSystem:
         permissions = await self.permissions.get_permissions(roles)
         decision = await self.policies.evaluate(context, permissions)
         await self.enforcer.enforce_decision(decision)
-```
+```text
 
 #### 3.2 Authorization Models
 - Role-based Access Control
@@ -117,7 +117,7 @@ class EncryptionSystem:
         cipher = await self.ciphers.get_cipher(channel)
         cert = await self.certificates.get_certificate(channel)
         await self.protocols.secure_channel(channel, keys, cipher, cert)
-```
+```text
 
 #### 4.2 Encryption Methods
 - Transport Encryption
@@ -140,7 +140,7 @@ class AuditSystem:
         analysis = await self.analyzer.analyze_log(log)
         alerts = await self.alerter.process_alerts(analysis)
         await self.reporter.generate_report(analysis)
-```
+```text
 
 #### 5.2 Audit Areas
 - Access Auditing
@@ -165,7 +165,7 @@ class SecurityImplementation:
     async def setup_monitoring(self, monitoring):
         # Monitoring setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Security Architecture
@@ -182,7 +182,7 @@ class SecurityControls:
         self.crypto = CryptoControls()
         self.audit = AuditControls()
         self.monitor = MonitoringControls()
-```
+```text
 
 #### 2.2 Control Types
 - Preventive Controls
@@ -213,7 +213,7 @@ class SecurityQuality:
     async def measure_effectiveness(self, metrics):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -245,7 +245,7 @@ class ComplianceManager:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Data Protection
@@ -295,7 +295,7 @@ class SecurityPattern:
         self.controls = SecurityControls()
         self.validator = SecurityValidator()
         self.monitor = SecurityMonitor()
-```
+```text
 
 ### B. Control Patterns
 ```python
@@ -305,7 +305,7 @@ class ControlPattern:
         self.enforcer = ControlEnforcer()
         self.validator = ControlValidator()
         self.monitor = ControlMonitor()
-```
+```text
 
 ### C. Compliance Patterns
 ```python
@@ -315,4 +315,4 @@ class CompliancePattern:
         self.validator = ComplianceValidator()
         self.monitor = ComplianceMonitor()
         self.reporter = ComplianceReporter()
-``` 
+```text 

@@ -47,7 +47,7 @@ mindmap
       Implementation links
       Test coverage
       Review tracking
-```
+```text
 
 ## Code Analysis Methodology
 1. **Context establishment**
@@ -113,7 +113,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Modification Planning Framework
 1. **Change specification**
@@ -179,7 +179,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Code Documentation Practices
 1. **Understanding documentation**
@@ -245,7 +245,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Uncertainty Handling and Escalation
 1. **Uncertainty classification**
@@ -311,7 +311,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Code Modification Techniques
 1. **Incremental change patterns**
@@ -377,7 +377,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Decision-Making Framework for Code Changes
 - **When to make changes directly**: Clear requirements, high confidence in understanding, low complexity, good test coverage
@@ -419,7 +419,7 @@ mindmap
       Fundamental limitations
       Technical constraints
       Resource considerations
-```
+```text
 
 ## Code Analysis and Modification Process Model
 ```mermaid
@@ -462,4 +462,4 @@ graph TB
     V -.-> E
     V -.-> K
     V -.-> P
-``` 
+```text 

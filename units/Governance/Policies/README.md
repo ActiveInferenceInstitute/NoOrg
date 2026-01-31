@@ -1,14 +1,42 @@
 # Governance Policies
 
-This directory contains policies managed or overseen by the [[Governance]] unit.
+## Overview
 
-Key policies include:
-- [[Code_of_Conduct.md]]
-- [[Data_Governance_Policy.md]]
-- [[Policy_on_Policies.md]]
-- [[Delegation_of_Authority_Policy.md]]
-- [[Whistleblower_Policy.md]]
-- [[Conflict_of_Interest_Policy.md]]
-- [[Records_Management_Policy.md]]
+This directory contains the official policies governing Governance operations, standards, and compliance requirements.
 
-See also: [[Policy_Template.md]] 
+## Policy Categories
+
+### Core Policies
+Foundational policies that govern unit operations and standards.
+
+### Operational Policies
+Day-to-day operational guidelines and procedures.
+
+### Compliance Policies
+Regulatory and compliance-related requirements.
+
+## Policy Lifecycle
+
+| Stage | Description | Owner |
+|-------|-------------|-------|
+| Draft | Initial policy creation | Policy Author |
+| Review | Stakeholder feedback | Review Committee |
+| Approval | Formal authorization | Unit Leadership |
+| Published | Active and enforced | Policy Owner |
+| Review | Periodic assessment | Policy Owner |
+| Retired | No longer active | Unit Leadership |
+
+## Policy Standards
+
+All policies must include:
+- **Version**: Current version number
+- **Effective Date**: When policy becomes active
+- **Owner**: Responsible individual or role
+- **Review Date**: Next scheduled review
+- **Scope**: Who the policy applies to
+
+## Related Documentation
+
+- [Processes](../Processes/)
+- [Governance Policies](../../Governance/Policies/)
+- [Policy on Policies](../../Governance/Policies/Policy_on_Policies.md)

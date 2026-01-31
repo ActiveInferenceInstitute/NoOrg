@@ -235,7 +235,7 @@ class BaseAnalyticsEngine implements AnalyticsEngine {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ### Data Manager Implementation
 ```typescript
@@ -429,7 +429,7 @@ class BaseDataManager implements DataManager {
     throw new Error('Not implemented');
   }
 }
-```
+```text
 
 ## 🔗 Related Resources
 

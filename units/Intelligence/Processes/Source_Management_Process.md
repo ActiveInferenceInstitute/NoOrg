@@ -33,7 +33,7 @@ flowchart TD
     I --> Z
 
     style Z fill:#fdd
-``` 
+```text 
 
 ## 5. Step Descriptions
 

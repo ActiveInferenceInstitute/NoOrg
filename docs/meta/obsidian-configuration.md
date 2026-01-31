@@ -22,7 +22,7 @@ Show frontmatter: true
 Show line numbers: true
 Use tabs: false
 Tab size: 2
-```
+```text
 
 ### Files & Links
 ```yaml
@@ -30,7 +30,7 @@ Default location for new notes: In the folder specified by the template
 Always update internal links: true
 Default file location: docs/
 Attachment folder path: assets/
-```
+```text
 
 ### Appearance
 ```yaml
@@ -39,7 +39,7 @@ Enable translucent window: true
 Show inline title: true
 Show tab title bar: true
 Show status bar: true
-```
+```text
 
 ## 🔌 Core Plugins
 
@@ -82,7 +82,7 @@ graph:
 search:
   show-context: true
   explain-search-terms: true
-```
+```text
 
 ## 🧩 Community Plugins
 
@@ -121,7 +121,7 @@ search:
 --text-normal: #2e3338
 --text-muted: #6e7681
 --text-accent: #007acc
-```
+```text
 
 ### Typography
 ```css
@@ -129,7 +129,7 @@ search:
 --font-monospace: 'Fira Code'
 --font-size-normal: 16px
 --line-height-normal: 1.5
-```
+```text
 
 ### Custom CSS Snippets
 1. `custom-callouts.css`
@@ -151,7 +151,7 @@ Right Sidebar:
   - Outgoing Links
   - Calendar
   - Graph View
-```
+```text
 
 ### Custom Workspaces
 1. Writing
@@ -184,7 +184,7 @@ Groups:
   Documentation:
     Color: #0000ff
     Query: tag:#documentation
-```
+```text
 
 ### Local Graph
 ```yaml
@@ -192,7 +192,7 @@ Depth: 2
 Show tags: true
 Show attachments: false
 Show external links: true
-```
+```text
 
 ## 🔒 Security Settings
 
@@ -202,14 +202,14 @@ End-to-end encryption: true
 Exclude patterns:
   - "*.private"
   - "sensitive/*"
-```
+```text
 
 ### Git Integration
 ```yaml
 Auto commit: true
 Commit message template: "docs: update {{files}}"
 Backup branch: backup
-```
+```text
 
 ## 🛠️ Hotkeys
 
@@ -220,7 +220,7 @@ Open quick switcher: Ctrl/Cmd + O
 Open graph view: Ctrl/Cmd + G
 Toggle edit/preview: Ctrl/Cmd + E
 Open command palette: Ctrl/Cmd + P
-```
+```text
 
 ### Custom Shortcuts
 ```yaml
@@ -228,7 +228,7 @@ Insert template: Alt + T
 Create daily note: Alt + D
 Toggle sidebar: Alt + S
 Focus on editor: Alt + E
-```
+```text
 
 ## 📱 Mobile Configuration
 
@@ -237,14 +237,14 @@ Focus on editor: Alt + E
 Enable swipe gestures: true
 Keep screen awake: true
 Default view: Preview
-```
+```text
 
 ### Sync Settings
 ```yaml
 Enable automatic sync: true
 Sync on cellular: false
 Sync attachments: true
-```
+```text
 
 ## 🔄 Maintenance
 

@@ -44,7 +44,7 @@ flowchart LR
     Approval --> Provision[Provision Resource]
     Provision --> Monitor[Monitor Utilization]
     Monitor --> Report[Generate Reports]
-```
+```text
 
 ### Prohibited Actions
 1. Unauthorized resource allocation without approval.

@@ -38,7 +38,7 @@ planning:
       - identify_related_docs
       - plan_cross_references
       - define_navigation
-```
+```text
 
 ### 2. Creation Phase
 ```yaml
@@ -66,7 +66,7 @@ creation:
       - specify_requirements
       - detail_dependencies
       - provide_examples
-```
+```text
 
 ### 3. Review Phase
 ```yaml
@@ -94,7 +94,7 @@ review:
       - accuracy_review
       - completeness_review
       - usability_review
-```
+```text
 
 ### 4. Publication Phase
 ```yaml
@@ -122,7 +122,7 @@ publication:
       - user_notification
       - search_indexing
       - analytics_setup
-```
+```text
 
 ## 🛠 Workflow Tools
 
@@ -158,7 +158,7 @@ class DocumentationTools:
     def configure_tools(self):
         """Configure documentation tools"""
         pass
-```
+```text
 
 ### 2. Automation Tools
 ```yaml
@@ -186,7 +186,7 @@ automation:
       - quality_monitor
       - usage_monitor
       - performance_monitor
-```
+```text
 
 ## 📊 Workflow Metrics
 

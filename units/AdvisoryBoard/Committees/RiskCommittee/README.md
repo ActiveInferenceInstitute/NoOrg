@@ -28,7 +28,7 @@ graph TD
     RiskCommittee -.-> RiskWorkingGroup[Risk Working Group]
     
     class RMU,RiskWorkingGroup externalEntity;
-```
+```text
 
 ## Key Responsibilities
 

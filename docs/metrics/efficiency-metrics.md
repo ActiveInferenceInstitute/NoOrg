@@ -19,7 +19,7 @@ graph TD
     A --> C[Process Efficiency]
     A --> D[Resource Efficiency]
     A --> E[Cost Efficiency]
-```
+```text
 
 ### Measurement Framework
 1. **Key Indicators**

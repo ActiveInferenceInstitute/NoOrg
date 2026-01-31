@@ -41,7 +41,7 @@ graph TD
         M --> INT
         L --> INT
     end
-```
+```text
 
 ## REST API Endpoints
 
@@ -113,7 +113,7 @@ task_api:
                     type: number
                   details:
                     type: object
-```
+```text
 
 ### Resource Management API
 ```yaml
@@ -181,7 +181,7 @@ resource_api:
                           type: number
                         allocated:
                           type: number
-```
+```text
 
 ### Monitoring API
 ```yaml
@@ -261,7 +261,7 @@ monitoring_api:
                     timestamp:
                       type: string
                       format: date-time
-```
+```text
 
 ## GraphQL API
 
@@ -338,7 +338,7 @@ type Subscription {
   metricReceived(name: String): Metric!
   alertTriggered(severity: AlertSeverity): Alert!
 }
-```
+```text
 
 ## WebSocket API
 
@@ -398,7 +398,7 @@ websocket_api:
             timestamp:
               type: string
               format: date-time
-```
+```text
 
 ## Internal APIs
 
@@ -441,7 +441,7 @@ agent_protocol:
               type: object
             duration:
               type: string
-```
+```text
 
 ### Service Integration Protocol
 ```yaml
@@ -476,7 +476,7 @@ service_protocol:
           type: string
         ttl:
           type: integer
-```
+```text
 
 ## Authentication & Authorization
 
@@ -505,7 +505,7 @@ authentication:
       rate_limit:
         requests: 1000
         period: 1h
-```
+```text
 
 ### Authorization Policies
 ```yaml
@@ -529,7 +529,7 @@ authorization:
         - execute_task
         - request_resources
         - report_metrics
-```
+```text
 
 ## Error Handling
 
@@ -571,7 +571,7 @@ error_responses:
           type: array
           items:
             type: string
-```
+```text
 
 ## Rate Limiting
 
@@ -597,7 +597,7 @@ rate_limiting:
       get:
         requests: 300
         period: 1m
-```
+```text
 
 ## Documentation
 

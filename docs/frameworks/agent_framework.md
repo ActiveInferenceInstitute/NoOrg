@@ -23,7 +23,7 @@ related_frameworks:
   - [[frameworks/implementation_framework]]
   - [[frameworks/risk_management]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This framework establishes comprehensive standards and methodologies for designing, implementing, and managing agent-based systems across the organization, ensuring consistent quality, reliability, and effectiveness.

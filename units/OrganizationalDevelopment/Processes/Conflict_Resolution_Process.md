@@ -44,7 +44,7 @@ graph TD
     M --> Z;
     L --> N[Consider Other Options (e.g., Policy Violation Investigation, Team Intervention)];
     N --> X[Process Concludes / Separate Process Initiated];
-```
+```text
 
 **Detailed Steps:**
 

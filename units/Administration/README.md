@@ -1,14 +1,55 @@
-# Administration Unit
+# Administration
 
 ## Overview
-The Administration unit provides essential support services, manages office operations, coordinates administrative processes, and ensures the efficient use of resources to facilitate smooth organizational functioning.
+
+The Administration unit is responsible for administration-related strategy, operations, and stakeholder support across the organization.
+
+## Mission
+
+To deliver excellence in administration by providing strategic guidance, operational efficiency, and continuous improvement.
+
+## Directory Structure
+
+```
+Administration/
+├── Charter.md           # Unit charter and governance
+├── Policies/            # Policies and guidelines
+│   ├── PositionsPersonas.md
+│   ├── Resources.md
+│   ├── Responsibilities.md
+│   └── SkillsRoles.md
+├── Processes/           # Operational processes
+├── MeetingNotes/        # Meeting documentation
+├── Reports/             # Performance and status reports
+└── README.md            # This file
+```
 
 ## Key Documents
-- **[[Charter]]**: Defines the mission, scope, and responsibilities of the Administration unit. ([Charter.md](Charter.md))
-- **[[Policies]]**: Outlines the governing policies for administrative functions. ([Policies/administrationunit.md](Policies/administrationunit.md))
-- **[[Processes]]**: Details the standard operating procedures for administrative tasks. ([Processes/administration_processes.md](Processes/administration_processes.md))
-- **[[Reports]]**: Describes the key reports generated and managed by the unit. ([Reports/administration_reports.md](Reports/administration_reports.md))
-- **[[Meeting Notes]]**: Index of meeting notes for the Administration unit. ([MeetingNotes/administration_meeting_notes.md](MeetingNotes/administration_meeting_notes.md))
 
----
-*This README provides a high-level overview. Please refer to the linked documents for detailed information.* 
+| Document | Purpose |
+|----------|---------|
+| [Charter](./Charter.md) | Unit mission, scope, and governance |
+| [Policies](./Policies/) | Guidelines and standards |
+| [Processes](./Processes/) | Operational procedures |
+| [Reports](./Reports/) | Performance tracking |
+
+## Team Contacts
+
+| Role | Responsibility |
+|------|----------------|
+| Head of Administration | Strategic direction and oversight |
+| Administration Manager | Operational management |
+| Administration Lead | Team coordination |
+
+## Related Units
+
+- [Governance](../Governance/) - Policy alignment
+- [Executive](../Executive/) - Strategic alignment  
+- [HumanResources](../HumanResources/) - Staffing and training
+
+## Getting Started
+
+1. Review the [Charter](./Charter.md) to understand the unit's purpose
+2. Familiarize yourself with key [Policies](./Policies/)
+3. Understand the operational [Processes](./Processes/)
+4. Connect with team members listed above

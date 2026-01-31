@@ -68,7 +68,7 @@ graph TD
     I -- No --> F;
 
     C -- Information Request --> G; %% Simple requests might skip Tier 1 attempt
-```
+```text
 
 ## 6. Service Level Agreements (SLAs)
 

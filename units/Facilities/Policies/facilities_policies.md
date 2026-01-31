@@ -123,7 +123,7 @@ Proc6 --> P6
 Proc7 --> P1
 
 Gov(Policy Governance) -- Annual Review --> CoreFacilitiesPolicies
-```
+```text
 
 ---
 Version: 1.0

@@ -4,7 +4,7 @@ Generated: 2026-01-02T15:05:04.304085
 Root: /Users/4d/Documents/GitHub/NoOrg/agents
 
 ## Directory Tree
-```
+```text
 /Users/4d/Documents/GitHub/NoOrg/agents
 └── agents/
     ├── architectures/
@@ -130,4 +130,4 @@ Root: /Users/4d/Documents/GitHub/NoOrg/agents
     ├── README.md (2070 bytes)
     ├── __init__.py (64 bytes)
     └── types.ts (1492 bytes)
-```
+```text

@@ -102,7 +102,7 @@ async function runWorkflow() {
   // Execute workflow
   // ... workflow execution code ...
 }
-```
+```text
 
 ### 2. Creating Custom Agents
 ```typescript
@@ -123,7 +123,7 @@ class CustomAgent extends BaseAgent {
     // Cleanup logic
   }
 }
-```
+```text
 
 ### 3. Task Management
 ```typescript
@@ -154,7 +154,7 @@ await taskManager.completeTask(taskId, {
     // Task results
   }
 });
-```
+```text
 
 ### 4. State Management
 ```typescript
@@ -169,7 +169,7 @@ sharedState.updateState('path.to.state', (current) => {
   // Update logic
   return updatedValue;
 });
-```
+```text
 
 ## Advanced Workflow Patterns
 
@@ -205,7 +205,7 @@ for (const stage of stages) {
     await executeStage(stage);
   }
 }
-```
+```text
 
 ### 2. Parallel Task Execution
 ```typescript
@@ -218,7 +218,7 @@ const parallelTasks = [
 
 // Execute tasks in parallel
 await Promise.all(parallelTasks.map(task => executeTask(task)));
-```
+```text
 
 ### 3. Conditional Workflow
 ```typescript
@@ -237,7 +237,7 @@ const conditionalTask = {
 if (await checkConditions(conditionalTask.conditions)) {
   await executeTask(conditionalTask);
 }
-```
+```text
 
 ## Best Practices
 
@@ -326,7 +326,7 @@ async function runComplexWorkflow() {
   // Generate final report
   await generateFinalReport();
 }
-```
+```text
 
 This example demonstrates:
 - Multiple specialized agents
@@ -345,7 +345,7 @@ MAX_TOKENS=4096
 TEMPERATURE=0.7
 LOG_LEVEL=info
 STORAGE_PATH=./data
-```
+```text
 
 2. Dependencies:
 ```json
@@ -357,7 +357,7 @@ STORAGE_PATH=./data
     "uuid": "^9.0.1"
   }
 }
-```
+```text
 
 ## Conclusion
 

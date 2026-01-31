@@ -9,12 +9,12 @@ This directory contains legal interpretations, policies, and support documentati
 - `Training_Materials/`: Legal input on compliance training content.
 
 ## Key Processes
-- [Link to Legal Review Process for Compliance Policies](./../Processes/Compliance_Policy_Legal_Review.md)
-- [Link to Process for Handling Regulatory Inquiries](./../Processes/Regulatory_Inquiry_Handling.md)
+- [Link to Legal Review Process for Compliance Policies](../Processes/AGENTS.md)
+- [Link to Process for Handling Regulatory Inquiries](../Processes/AGENTS.md)
 
 ## Related Units & Linking
 - **Compliance Unit:** This directory complements the main [Compliance Unit](../../Compliance/). Documents here should link directly to the relevant policies, procedures, or activities managed by the main Compliance unit.
-  - *Example Link Placeholder:* [Analysis of GDPR Article 30](./Regulatory_Analysis/GDPR_Art30_Analysis.md) - Supports [Record of Processing Activities Policy](../../Compliance/Policies/RoPA_Policy.md) <!-- Update path as needed -->
+  - *Example Link Placeholder:* [Analysis of GDPR Article 30](./Regulatory_Analysis/GDPR_Art30_Analysis.md) - Supports [Record of Processing Activities Policy](../../Compliance/Policies/AGENTS.md) <!-- Update path as needed -->
 - **Internal Audit:** Collaboration on audits related to legal and regulatory compliance.
 - **All Business Units:** Providing legal interpretation of compliance requirements affecting their operations.
 

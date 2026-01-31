@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/monitoring_integration]]
   - [[monitoring/monitoring_security]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the deployment framework for monitoring systems within the agent framework, providing comprehensive deployment processes, standards, and best practices for monitoring components.
@@ -43,7 +43,7 @@ class MonitoringDeploymentManager:
         self.deployer = ComponentDeployer()
         self.validator = DeploymentValidator()
         self.monitor = DeploymentMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Pipeline Stages]
     C --> F[Resource Pool]
     D --> G[Deployment Target]
-```
+```text
 
 ### 2. Deployment Pipeline
 #### 2.1 Pipeline System
@@ -71,7 +71,7 @@ class DeploymentPipeline:
         execution = await self.executor.execute_stages(stages)
         validation = await self.validator.validate_stages(execution)
         return await self.monitor.monitor_pipeline(validation)
-```
+```text
 
 #### 2.2 Pipeline Stages
 - Build Stage
@@ -94,7 +94,7 @@ class ResourceProvisioner:
         scheduling = await self.scheduler.schedule_resources(allocation)
         management = await self.manager.manage_resources(scheduling)
         return await self.monitor.monitor_resources(management)
-```
+```text
 
 #### 3.2 Resource Types
 - Compute Resources
@@ -117,7 +117,7 @@ class ComponentDeployer:
         execution = await self.executor.execute_deployment(orchestration)
         validation = await self.validator.validate_components(execution)
         return await self.monitor.monitor_components(validation)
-```
+```text
 
 #### 4.2 Deployment Types
 - Rolling Deployment
@@ -140,7 +140,7 @@ class DeploymentValidator:
         verification = await self.verifier.verify_health(testing)
         validation = await self.engine.validate_results(verification)
         return await self.reporter.report_validation(validation)
-```
+```text
 
 #### 5.2 Validation Types
 - Health Validation
@@ -163,7 +163,7 @@ class DeploymentMonitor:
         analysis = await self.analyzer.analyze_deployment(collection)
         alerts = await self.alerter.process_alerts(analysis)
         return await self.reporter.generate_report(analysis)
-```
+```text
 
 #### 6.2 Monitoring Types
 - Health Monitoring
@@ -188,7 +188,7 @@ class DeploymentStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - Process Standards
@@ -205,7 +205,7 @@ class DeploymentProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - Planning Process
@@ -236,7 +236,7 @@ class QualityMonitoring:
     async def measure_metrics(self, metrics):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class DeploymentSecurity:
     async def audit_deployment(self, audit):
         # Deployment auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - Process Security
@@ -318,7 +318,7 @@ class DeploymentPattern:
         self.pipeline = DeploymentPipeline()
         self.provisioner = ResourceProvisioner()
         self.deployer = ComponentDeployer()
-```
+```text
 
 ### B. Process Patterns
 ```python
@@ -328,7 +328,7 @@ class ProcessPattern:
         self.planner = ProcessPlanner()
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -338,4 +338,4 @@ class SecurityPattern:
         self.validator = SecurityValidator()
         self.control = AccessControl()
         self.audit = AuditLogger()
-``` 
+```text 

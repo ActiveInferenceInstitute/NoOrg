@@ -23,7 +23,7 @@ related_frameworks:
   - [[frameworks/strategic_planning]]
   - [[frameworks/competitive_intelligence]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document outlines the methodology and framework for conducting comprehensive competitive analysis as part of the [[analysis/market_analysis|Market Analysis Framework]]. It provides structured approaches for understanding competitive dynamics and strategic positioning.

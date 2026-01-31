@@ -22,7 +22,7 @@ protocol:
   version: 1.0.0
   category: system_monitoring
   style: publish_subscribe_with_alerts
-```
+```text
 
 ### Participants
 - Monitoring Agent (MA)
@@ -55,7 +55,7 @@ sequenceDiagram
     
     MS->>MA: HealthCheck
     MA-->>MS: HealthStatus
-```
+```text
 
 ## States & Transitions
 
@@ -109,7 +109,7 @@ states:
         trigger: error_resolved
       - to: failed
         trigger: recovery_failed
-```
+```text
 
 ## Message Definitions
 
@@ -182,7 +182,7 @@ messages:
           "duration": "5m"
         }
       }
-```
+```text
 
 ### Event Messages
 ```yaml
@@ -218,7 +218,7 @@ events:
           "response_time": 45
         }
       }
-```
+```text
 
 ## Implementation
 
@@ -233,7 +233,7 @@ components:
     - metric_reporter
     - health_checker
     - status_manager
-```
+```text
 
 ### Integration Points
 ```yaml
@@ -248,7 +248,7 @@ integration:
   metric_storage:
     type: prometheus
     retention: 30d
-```
+```text
 
 ## Behavior
 
@@ -273,7 +273,7 @@ error_handling:
     - error: storage_failure
       action: buffer_data
       retry: true
-```
+```text
 
 ## Quality of Service
 
@@ -287,7 +287,7 @@ performance:
   throughput:
     metrics_per_second: 10000
     alerts_per_second: 100
-```
+```text
 
 ### Reliability Measures
 ```yaml
@@ -299,7 +299,7 @@ reliability:
   data_consistency:
     validation: "strict"
     storage: "durable"
-```
+```text
 
 ## Security
 
@@ -315,7 +315,7 @@ security:
       - metric_producer
       - metric_consumer
       - alert_receiver
-```
+```text
 
 ### Data Protection
 ```yaml
@@ -326,7 +326,7 @@ data_protection:
   integrity:
     checksums: sha256
     signatures: ed25519
-```
+```text
 
 ## Monitoring
 
@@ -343,7 +343,7 @@ monitoring:
     - name: error_rate
       type: gauge
       labels: [error_type]
-```
+```text
 
 ### Logging Requirements
 ```yaml
@@ -358,7 +358,7 @@ logging:
     - source
     - operation
     - status
-```
+```text
 
 ## Maintenance
 

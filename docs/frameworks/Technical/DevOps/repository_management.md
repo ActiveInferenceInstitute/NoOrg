@@ -35,7 +35,7 @@ graph TD
         I
         J
     end
-```
+```text
 
 ## 🤖 Agent Integration Points
 
@@ -87,7 +87,7 @@ graph TD
     }
   ]
 }
-```
+```text
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## 🏗️ Repository Structure
@@ -144,7 +144,7 @@ graph TD
         C
         D
     end
-```
+```text
 
 ### Branching Model
 1. **Core Branches**
@@ -295,7 +295,7 @@ git config --global user.email "user@example.com"
 git config --global core.autocrlf input
 git config --global pull.rebase true
 git config --global init.defaultBranch main
-```
+```text
 
 ### Branch Protection Configuration
 
@@ -323,7 +323,7 @@ git config --global init.defaultBranch main
     }
   ]
 }
-```
+```text
 
 ---
 **Metadata**

@@ -26,7 +26,7 @@ const circuitBreaker = new CircuitBreaker({
 const result = await circuitBreaker.execute(async () => {
   return await unreliableService.call();
 });
-```
+```text
 
 **Features:**
 - Configurable failure thresholds
@@ -53,7 +53,7 @@ const retry = new Retry({
 const result = await retry.execute(async () => {
   return await networkCall();
 });
-```
+```text
 
 **Features:**
 - Multiple backoff strategies (linear, exponential, fixed)
@@ -80,7 +80,7 @@ const allowed = await rateLimiter.allowRequest('user-123');
 if (allowed) {
   await processRequest();
 }
-```
+```text
 
 **Features:**
 - Token bucket and sliding window algorithms
@@ -106,7 +106,7 @@ const bulkhead = new Bulkhead({
 const result = await bulkhead.execute(async () => {
   return await resourceIntensiveOperation();
 });
-```
+```text
 
 **Features:**
 - Configurable concurrency limits
@@ -137,7 +137,7 @@ try {
     // Handle timeout
   }
 }
-```
+```text
 
 **Features:**
 - Configurable timeout durations
@@ -163,7 +163,7 @@ const cacheAside = new CacheAside({
 const data = await cacheAside.get('user-profile', async (key) => {
   return await database.fetchUserProfile(key);
 });
-```
+```text
 
 **Features:**
 - Automatic cache invalidation
@@ -191,7 +191,7 @@ saga.addCompensation('reserve-inventory', async (context) => {
 });
 
 const result = await saga.execute({ productId: '123' });
-```
+```text
 
 **Features:**
 - Automatic compensation on failure
@@ -219,7 +219,7 @@ const response = await pattern.sendRequest({
     priority: 'high'
   }
 });
-```
+```text
 
 **Features:**
 - Structured request/response format
@@ -238,7 +238,7 @@ interface IntegrationPatternConfig {
   retryAttempts?: number;
   circuitBreakerThreshold?: number;
 }
-```
+```text
 
 ### Global Configuration
 ```typescript
@@ -248,7 +248,7 @@ IntegrationPatterns.configure({
   defaultTimeout: 10000,
   retryAttempts: 3
 });
-```
+```text
 
 ## Monitoring and Metrics
 
@@ -264,7 +264,7 @@ const health = IntegrationPatterns.getHealth();
 // Pattern-specific metrics
 const circuitBreakerStats = circuitBreaker.getStats();
 const retryStats = retry.getStats();
-```
+```text
 
 ## Error Handling
 
@@ -282,7 +282,7 @@ try {
     // Handle timeout
   }
 }
-```
+```text
 
 ## Best Practices
 

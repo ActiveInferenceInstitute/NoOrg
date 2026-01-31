@@ -41,7 +41,7 @@ mindmap
       Emotional awareness
       Needs recognition
       Respectful interaction
-```
+```text
 
 ## Audience Understanding
 1. **Audience analysis**
@@ -86,7 +86,7 @@ graph TD
     B -.-> E[Communication Strategy]
     C -.-> E
     D -.-> E
-```
+```text
 
 ## Communication Design
 1. **Content structuring**
@@ -140,7 +140,7 @@ flowchart TD
     E --> F[Feedback Collection]
     F --> G[Adaptation]
     G --> E
-```
+```text
 
 ## Collaboration Enhancement
 1. **Co-creation structures**
@@ -187,7 +187,7 @@ graph TD
     B -.-> E[Collaborative Outcomes]
     C -.-> E
     D -.-> E
-```
+```text
 
 ## Special Communication Contexts
 1. **Technical communication**
@@ -246,7 +246,7 @@ flowchart LR
     E --> E3[Multiple representations]
     E --> E4[Practice opportunities]
     E --> E5[Understanding verification]
-```
+```text
 
 ## Communication Challenges
 - **When facing misunderstanding**:
@@ -291,7 +291,7 @@ graph TD
     B -.-> E[Improved Understanding]
     C -.-> E
     D -.-> F[Productive Resolution]
-```
+```text
 
 ## Continuous Improvement Practices
 - Solicit specific feedback on communication effectiveness
@@ -333,7 +333,7 @@ flowchart TD
     D --> G
     E --> G
     F --> G
-```
+```text
 
 ## Communication Process Model
 ```mermaid
@@ -353,4 +353,4 @@ graph TB
     J --> K[Ongoing Skill Development]
     K --> A
     end
-``` 
+```text 

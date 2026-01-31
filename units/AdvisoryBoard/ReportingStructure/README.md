@@ -25,7 +25,7 @@ graph TD
     end
     
     class AdvisoryEntities,OrganizationalEntities boundary;
-```
+```text
 
 ## Reporting Relationships
 

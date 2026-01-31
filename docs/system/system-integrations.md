@@ -48,7 +48,7 @@ api_specifications:
           - DELETE: "Delete transaction"
         authentication: "OAuth2"
         rate_limit: "150 requests/minute"
-```
+```text
 
 ### GraphQL APIs
 ```graphql
@@ -105,7 +105,7 @@ input ProfileInput {
   avatar: String
   settings: JSONObject
 }
-```
+```text
 
 ## 🔄 Integration Patterns
 
@@ -152,7 +152,7 @@ input ProfileInput {
     }
   }
 }
-```
+```text
 
 ### Asynchronous Patterns
 ```yaml
@@ -191,7 +191,7 @@ batch_processing:
       - parallel_execution
       - error_handling
       - status_tracking
-```
+```text
 
 ## 🔒 Authentication Methods
 
@@ -224,7 +224,7 @@ class AuthenticationSystem:
     def validate_credentials(self):
         """Validate authentication credentials"""
         pass
-```
+```text
 
 ### Security Implementation
 ```yaml
@@ -263,7 +263,7 @@ security_implementation:
       - audit_logging
       - threat_detection
       - incident_response
-```
+```text
 
 ## 📊 Integration Monitoring
 
@@ -297,7 +297,7 @@ security_implementation:
     }
   }
 }
-```
+```text
 
 ### Analytics System
 ```python
@@ -328,7 +328,7 @@ class IntegrationAnalytics:
     def generate_insights(self):
         """Generate analytical insights"""
         pass
-```
+```text
 
 ## 📚 References
 

@@ -37,7 +37,7 @@ graph TD
         MQ[Message Queue] --> C
         SR[Service Registry] --> RM
     end
-```
+```text
 
 ## Daily Operations
 
@@ -80,7 +80,7 @@ morning_procedures:
     - model_registry:
         command: mlflow models list
         expected: Latest models available
-```
+```text
 
 ### Evening Checklist
 ```yaml
@@ -112,7 +112,7 @@ evening_procedures:
     - cleanup_temp:
         command: ./cleanup-temp.sh
         threshold: 24h
-```
+```text
 
 ## Weekly Operations
 
@@ -151,7 +151,7 @@ weekly_maintenance:
     - update_policies:
         command: ./update-security-policies.sh
         based_on: audit_results
-```
+```text
 
 ### Learning System Maintenance
 ```yaml
@@ -180,7 +180,7 @@ learning_maintenance:
     - archive_old_data:
         command: ./archive-data.sh
         criteria: "age > 30d AND processed"
-```
+```text
 
 ## Monthly Operations
 
@@ -222,7 +222,7 @@ monthly_review:
     - update_documentation:
         command: ./update-docs.sh
         based_on: monthly_review
-```
+```text
 
 ### Infrastructure Maintenance
 ```yaml
@@ -248,7 +248,7 @@ infrastructure_maintenance:
     - data_archival:
         command: ./archive-old-data.sh
         criteria: age > 90d
-```
+```text
 
 ## Incident Response
 
@@ -289,7 +289,7 @@ alert_procedures:
       - monitor_recovery:
           command: ./monitor-recovery.sh
           duration: 1h
-```
+```text
 
 ### Recovery Procedures
 ```yaml
@@ -315,7 +315,7 @@ recovery_procedures:
     - verify_integrity:
         command: ./verify-data.sh
         consistency_check: true
-```
+```text
 
 ## Performance Management
 
@@ -344,7 +344,7 @@ monitoring_guidelines:
       - error_rate:
           threshold: 1%
           interval: 5m
-```
+```text
 
 ### Optimization Procedures
 ```yaml
@@ -370,7 +370,7 @@ optimization_procedures:
     - validate_changes:
         command: ./validate-learning.sh
         acceptance_criteria: defined
-```
+```text
 
 ## Documentation
 

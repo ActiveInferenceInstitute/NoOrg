@@ -19,7 +19,7 @@ graph TD
     A --> C[Vulnerability Management]
     A --> D[Access Control]
     A --> E[Compliance Monitoring]
-```
+```text
 
 ### Metrics Architecture
 1. **Security Categories**

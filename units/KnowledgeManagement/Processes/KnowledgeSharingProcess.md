@@ -36,7 +36,7 @@ flowchart TD
     G --> H[Support Application]
     H --> I[Measure Effectiveness]
     I --> J[Refine and Improve]
-```
+```text
 
 ## Detailed Process Steps
 

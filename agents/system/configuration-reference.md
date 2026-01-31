@@ -39,7 +39,7 @@ graph TD
         SVC --> DB[Databases]
         SVC --> SR[Service Registry]
     end
-```
+```text
 
 ## System Configuration
 
@@ -66,7 +66,7 @@ environment:
     max_nodes: 20
     target_cpu_utilization: 0.75
     target_memory_utilization: 0.80
-```
+```text
 
 ### Logging Configuration
 ```yaml
@@ -104,7 +104,7 @@ logging:
     enabled: true
     interval: "1m"
     retention: "30d"
-```
+```text
 
 ### Security Settings
 ```yaml
@@ -152,7 +152,7 @@ security:
       algorithm: AES-256-GCM
       key_rotation: "30d"
       key_store: vault
-```
+```text
 
 ## Agent Configuration
 
@@ -183,7 +183,7 @@ task_executor:
     metrics_interval: "10s"
     health_check_interval: "30s"
     profiling_enabled: true
-```
+```text
 
 ### Coordinator Settings
 ```yaml
@@ -208,7 +208,7 @@ coordinator:
     type: redis
     persistence: true
     snapshot_interval: "5m"
-```
+```text
 
 ### Resource Manager Settings
 ```yaml
@@ -235,7 +235,7 @@ resource_manager:
       - type
       - status
       - allocation
-```
+```text
 
 ### Monitoring Settings
 ```yaml
@@ -264,7 +264,7 @@ monitoring:
   dashboards:
     refresh_interval: "30s"
     default_timerange: "6h"
-```
+```text
 
 ### Learning Settings
 ```yaml
@@ -291,7 +291,7 @@ learning:
     strategy: "parameter_server"
     num_workers: 4
     sync_period: "1m"
-```
+```text
 
 ## Service Configuration
 
@@ -331,7 +331,7 @@ message_queue:
       event_exchange:
         type: topic
         durable: true
-```
+```text
 
 ### Database Settings
 ```yaml
@@ -373,7 +373,7 @@ databases:
     storage:
       tsdb_path: /data
       max_block_duration: 2h
-```
+```text
 
 ### Service Registry Settings
 ```yaml
@@ -403,7 +403,7 @@ service_registry:
         key:
           - type: http
             url: http://handler:8080/key
-```
+```text
 
 ## Documentation
 

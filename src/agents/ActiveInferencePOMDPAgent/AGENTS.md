@@ -32,7 +32,7 @@ constructor(config: {
   capabilities?: string[];
   metadata?: Record<string, any>;
 })
-```
+```text
 
 ### Core Methods
 
@@ -45,7 +45,7 @@ async process(
   observations: number[] | any,
   context: any
 ): Promise<InferenceResult>
-```
+```text
 
 ## Configuration Options
 
@@ -62,7 +62,7 @@ interface ActiveInferencePOMDPAgentConfig {
   policyDepth?: number; // Planning horizon
   metadata?: Record<string, any>;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -105,7 +105,7 @@ const taskId = await coordinator.createTask({
 // Execute the inference
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ## Best Practices
 
@@ -138,7 +138,7 @@ const agent = new ActiveInferencePOMDPAgent({
   ...config,
   ...customModel
 });
-```
+```text
 
 ### Multi-step Inference
 
@@ -154,7 +154,7 @@ for (const observations of sequences) {
   console.log('Updated beliefs:', currentBeliefs);
   console.log('Selected action:', result.action);
 }
-```
+```text
 
 ## Version History
 

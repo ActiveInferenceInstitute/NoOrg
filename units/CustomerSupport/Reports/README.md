@@ -10,11 +10,11 @@ These reports provide structured visibility into the organization's customer sup
 
 | Report | Frequency | Audience | Purpose |
 |--------|-----------|----------|---------|
-| [Support Dashboard](SupportDashboard.md) | Daily | Support Management | Overview of key performance indicators and ticket status |
+| [Support Dashboard](AGENTS.md) | Daily | Support Management | Overview of key performance indicators and ticket status |
 | [Customer Satisfaction Report](CSATReport.md) | Weekly | Executive Committee, Support Leadership | Analysis of customer satisfaction metrics and trends |
-| [Volume & Trend Analysis](VolumeTrendAnalysis.md) | Weekly | Support Management, Product Teams | Breakdown of ticket volumes, categories, and trends |
-| [First Contact Resolution](FCRReport.md) | Weekly | Support Team Leaders | Performance on first contact resolution by team and individual |
-| [Quality Assurance Report](QualityReport.md) | Monthly | Support Management | Results of support interaction quality audits |
+| [Volume & Trend Analysis](AGENTS.md) | Weekly | Support Management, Product Teams | Breakdown of ticket volumes, categories, and trends |
+| [First Contact Resolution](AGENTS.md) | Weekly | Support Team Leaders | Performance on first contact resolution by team and individual |
+| [Quality Assurance Report](AGENTS.md) | Monthly | Support Management | Results of support interaction quality audits |
 | [Customer Support Risk Report](RiskReport.md) | Monthly | Support & Risk Management | Identification of customer-facing risks and coordination with Risk Management |
 
 ## Report Structure

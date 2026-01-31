@@ -48,7 +48,7 @@ graph TD
     B --> E[Response Time]
     C --> F[Uptime]
     D --> G[Utilization]
-```
+```text
 
 ### Process Metrics
 1. **Execution Metrics**
@@ -83,7 +83,7 @@ components:
       - threshold_breach
       - error_spike
       - resource_exhaustion
-```
+```text
 
 ### Historical Analysis
 1. **Trend Analysis**
@@ -195,7 +195,7 @@ graph TD
     A --> C[Performance Metrics]
     A --> D[Security Events]
     A --> E[Resource Usage]
-```
+```text
 
 ## 🔄 Continuous Improvement
 

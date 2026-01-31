@@ -63,7 +63,7 @@ class BaseAgent:
     def learn(self, experience):
         """Update knowledge based on experience"""
         pass
-```
+```text
 
 ### Agent Types
 1. **Task Agents**

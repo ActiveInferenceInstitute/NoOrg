@@ -24,7 +24,7 @@ behavior_model:
   category: "resource_management"
   complexity: "high"
   adaptability: "dynamic"
-```
+```text
 
 ## Implementation
 
@@ -41,7 +41,7 @@ graph TD
     G -.-> D
     H[Learning System] -.-> D
     H -.-> F
-```
+```text
 
 ### State Machine
 ```yaml
@@ -93,7 +93,7 @@ states:
         condition: recovery_successful
       - to: failed
         condition: recovery_failed
-```
+```text
 
 ## Interaction Pattern
 
@@ -110,7 +110,7 @@ inputs:
       priority: high
     - type: optimization_trigger
       priority: medium
-```
+```text
 
 ### Output Generation
 ```yaml
@@ -125,7 +125,7 @@ outputs:
       destination: monitoring_system
     - type: allocation_status
       destination: requesting_agent
-```
+```text
 
 ## Learning & Adaptation
 
@@ -142,7 +142,7 @@ learning:
     - optimize_resource_utilization
     - minimize_fragmentation
     - balance_workload
-```
+```text
 
 ### Adaptation Rules
 ```yaml
@@ -157,7 +157,7 @@ adaptation:
   constraints:
     - maintain_minimum_availability
     - preserve_priority_ordering
-```
+```text
 
 ## Integration
 
@@ -177,7 +177,7 @@ communication:
   external:
     - target: requesting_agents
       protocol: [[protocols#resource-response]]
-```
+```text
 
 ## Performance
 
@@ -194,7 +194,7 @@ metrics:
       threshold: 100ms
     - metric: optimization_time
       threshold: 1s
-```
+```text
 
 ### Optimization
 ```yaml
@@ -206,7 +206,7 @@ optimization:
     - name: fragmentation_reduction
       trigger: high_fragmentation
       action: consolidate_resources
-```
+```text
 
 ## Safety & Validation
 
@@ -224,7 +224,7 @@ safety:
   postconditions:
     - resources_properly_assigned
     - state_consistency_maintained
-```
+```text
 
 ### Validation Methods
 ```yaml
@@ -237,7 +237,7 @@ validation:
     - allocation_rollback
     - state_reconciliation
     - emergency_rebalancing
-```
+```text
 
 ## Maintenance
 

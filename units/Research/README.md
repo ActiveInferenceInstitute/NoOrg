@@ -39,7 +39,7 @@ graph TD
     B --> E{Projects};
     C --> E;
     D --> E;
-```
+```text
 
 ## Contact
 

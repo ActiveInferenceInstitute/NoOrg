@@ -18,7 +18,7 @@ The **CreativeWritingAgent** specializes in generating creative content includin
 
 ```typescript
 constructor(config: AgentConfig)
-```
+```text
 
 **Parameters:**
 - `config` (AgentConfig): Configuration object containing agent settings
@@ -39,7 +39,7 @@ const writingAgent = new CreativeWritingAgent({
     tonePreferences: ['professional', 'casual', 'inspirational']
   }
 });
-```
+```text
 
 ### Core Methods
 
@@ -60,7 +60,7 @@ async generateContent(
     temperature?: number;
   }
 ): Promise<ContentResult>
-```
+```text
 
 **Parameters:**
 - `contentPrompt` (string): Prompt describing the content to generate
@@ -84,7 +84,7 @@ const content = await writingAgent.generateContent(
 console.log('Title:', content.title);
 console.log('Content:', content.content);
 console.log('Word Count:', content.wordCount);
-```
+```text
 
 #### refineContent()
 
@@ -95,7 +95,7 @@ async refineContent(
   originalContent: string,
   feedback: string
 ): Promise<RefinementResult>
-```
+```text
 
 **Parameters:**
 - `originalContent` (string): Content to refine
@@ -112,7 +112,7 @@ const refined = await writingAgent.refineContent(
 
 console.log('Refined Content:', refined.refinedContent);
 console.log('Changes Made:', refined.changes);
-```
+```text
 
 #### generateStylizedContent()
 
@@ -129,7 +129,7 @@ async generateStylizedContent(
     temperature?: number;
   }
 ): Promise<StylizedContentResult>
-```
+```text
 
 **Parameters:**
 - `contentPrompt` (string): Core content idea
@@ -152,7 +152,7 @@ const stylizedContent = await writingAgent.generateStylizedContent(
 
 console.log('Content:', stylizedContent.content);
 console.log('Style Confidence:', stylizedContent.styleConfidence);
-```
+```text
 
 ## Configuration Options
 
@@ -167,7 +167,7 @@ interface CreativeWritingAgentConfig extends AgentConfig {
   styleAdaptation?: boolean;
   cacheTTL?: number; // Cache time-to-live
 }
-```
+```text
 
 ### Runtime Options
 
@@ -181,7 +181,7 @@ interface ContentGenerationOptions {
   checkCache?: boolean;
   temperature?: number;
 }
-```
+```text
 
 ## Performance Characteristics
 
@@ -226,7 +226,7 @@ const taskId = await coordinator.createTask({
 // Execute the task
 await coordinator.assignTask(taskId, agentId);
 const result = await coordinator.getTask(taskId);
-```
+```text
 
 ### With Other Agents
 
@@ -246,7 +246,7 @@ const content = await writingAgent.generateContent(
 
 // Review Agent checks quality
 const review = await reviewAgent.reviewContent(content.content);
-```
+```text
 
 ## Best Practices
 
@@ -261,7 +261,7 @@ const content = await writingAgent.generateContent(
     keywords: ['solar', 'wind', 'sustainability']
   }
 );
-```
+```text
 
 ### 2. Style Consistency
 ```typescript
@@ -275,7 +275,7 @@ const article2 = await writingAgent.generateContent('Topic 2', {
   style: 'professional-tech',
   tone: 'informative'
 });
-```
+```text
 
 ### 3. Content Refinement
 ```typescript
@@ -284,7 +284,7 @@ let content = await writingAgent.generateContent(initialPrompt);
 const feedback = await reviewAgent.reviewContent(content.content);
 
 content = await writingAgent.refineContent(content.content, feedback);
-```
+```text
 
 ### 4. Performance Optimization
 ```typescript
@@ -293,7 +293,7 @@ const shortContent = await writingAgent.generateContent(prompt, {
   length: 'short', // Faster generation
   temperature: 0.7
 });
-```
+```text
 
 ## Error Handling
 
@@ -310,7 +310,7 @@ try {
     console.error('Unexpected error:', error);
   }
 }
-```
+```text
 
 **Common Error Types:**
 - `PromptValidationError` - Invalid or unclear prompts
@@ -334,7 +334,7 @@ const stylizedContent = await writingAgent.generateStylizedContent(
   'Custom trained style',
   { examples: styleExamples }
 );
-```
+```text
 
 ### Batch Content Generation
 
@@ -351,7 +351,7 @@ const contents = await Promise.all(
     writingAgent.generateContent(prompt, { format: 'blog-post' })
   )
 );
-```
+```text
 
 ### Content Series Management
 
@@ -368,7 +368,7 @@ const series = await Promise.all(
     writingAgent.generateContent(topic, seriesConfig)
   )
 );
-```
+```text
 
 ## Troubleshooting
 
@@ -387,7 +387,7 @@ const content = await writingAgent.generateContent(prompt, {
     formatInstructions: 'Include introduction, body sections, and conclusion'
   }
 });
-```
+```text
 
 #### 2. "Generated content is too generic"
 **Cause:** Prompt lacks specific details
@@ -402,7 +402,7 @@ const content = await writingAgent.generateContent(
     tone: 'authoritative'
   }
 );
-```
+```text
 
 #### 3. "Style adaptation not working"
 **Cause:** Style description too vague or examples insufficient
@@ -417,7 +417,7 @@ const content = await writingAgent.generateStylizedContent(
     format: 'story'
   }
 );
-```
+```text
 
 ### Performance Optimization
 
@@ -439,7 +439,7 @@ try {
   console.error('Detailed error:', error.details);
   console.error('Stack trace:', error.stack);
 }
-```
+```text
 
 ## Version History
 

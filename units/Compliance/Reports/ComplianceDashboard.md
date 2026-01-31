@@ -4,7 +4,7 @@
 This dashboard provides a high-level view of the organization's compliance status, key risks, and program performance. It is updated monthly and distributed to executive leadership and the [[../BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]].
 
 ## Current Compliance Status
-![Compliance Status](placeholder-for-status-chart)
+![Compliance Status](AGENTS.md)
 
 | Domain | Status | Trend | Key Issues |
 |--------|--------|-------|------------|

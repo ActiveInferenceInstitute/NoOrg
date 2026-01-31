@@ -14,7 +14,7 @@ updated: YYYY-MM-DD
 tags: [category1, category2]
 aliases: [alternative-name]
 ---
-```
+```text
 
 ### Headers
 - Use ATX-style headers (`#` syntax)
@@ -50,7 +50,7 @@ aliases: [alternative-name]
 ````markdown
 ```language
 code here
-```
+```text
 ````
 
 ## 🔗 Linking
@@ -61,8 +61,8 @@ code here
 - Link to specific headers with `[[note#header]]`
 
 ### External Links
-- Use standard Markdown: `[text](URL)`
-- Include link titles: `[text](URL "title")`
+- Use standard Markdown: `[text](AGENTS.md)`
+- Include link titles: `[text](AGENTS.md)`
 
 ## 📁 File Organization
 
@@ -105,7 +105,7 @@ code here
 | Header 1 | Header 2 |
 |----------|----------|
 | Content  | Content  |
-```
+```text
 
 ### Table Guidelines
 - Include header row
@@ -123,7 +123,7 @@ code here
 ### Image Syntax
 ```markdown
 ![Alt text](../assets/image-name.png "Optional title")
-```
+```text
 
 ## 📋 Templates
 
@@ -201,7 +201,7 @@ graph TD
     A[Agent Core] --> B[Perception]
     A --> C[Decision Making]
     A --> D[Action Execution]
-```
+```text
 
 ### Multi-Agent System Documentation
 - Define agent interaction patterns
@@ -221,7 +221,7 @@ agent:
   protocols:
     - FIPA_Contract_Net
     - FIPA_Request
-```
+```text
 
 ### Agent State Documentation
 - Use state diagrams for agent lifecycle
@@ -237,7 +237,7 @@ agent:
 Agent A->Agent B: Request
 Agent B-->Agent A: Acknowledge
 Agent B->Agent A: Response
-```
+```text
 
 ### Testing and Validation
 - Document test scenarios
@@ -263,7 +263,7 @@ class Agent:
     - State management
     - Error handling
     """
-```
+```text
 
 ### Performance Monitoring
 - Document metrics collection
@@ -312,7 +312,7 @@ cognitive_state:
   intentions:
     commitment_strategy: "open_minded"
     reconsideration: "event_driven"
-```
+```text
 
 ### Reasoning Mechanisms
 - Document inference rules
@@ -326,7 +326,7 @@ graph LR
     C --> D[Plan Generation]
     D --> E[Action Selection]
     E --> F[Execution]
-```
+```text
 
 ### Knowledge Representation
 - Ontology specifications
@@ -355,7 +355,7 @@ team_structure:
   shared_mental_models:
     type: "distributed"
     synchronization: "event_based"
-```
+```text
 
 ### Collective Intelligence
 - Swarm patterns
@@ -375,7 +375,7 @@ goal:
   failure_conditions:
     - timeout: 3600
     - resource_depletion: true
-```
+```text
 
 ### Plan Libraries
 - Document reusable plans
@@ -392,7 +392,7 @@ graph TD
     B --> C[Analysis]
     C --> D[Alerting]
     C --> E[Visualization]
-```
+```text
 
 ### Debugging Infrastructure
 - Log levels and formats
@@ -427,7 +427,7 @@ metrics:
     - decision_quality
     - learning_rate
     - adaptation_speed
-```
+```text
 
 ### Evaluation Framework
 - Benchmark scenarios
@@ -454,7 +454,7 @@ adaptation:
     - parameter_tuning
     - behavior_modification
     - knowledge_update
-```
+```text
 
 ## 🏗️ Agent Design Patterns
 
@@ -470,7 +470,7 @@ graph LR
     A[Publisher] --> B[Message Broker]
     B --> C[Subscriber 1]
     B --> D[Subscriber 2]
-```
+```text
 
 ## 📈 Scalability Documentation
 
@@ -487,7 +487,7 @@ distribution:
   synchronization: "eventual"
   communication: "async"
   recovery: "checkpoint_based"
-```
+```text
 
 ## 🔗 Integration Standards
 
@@ -502,7 +502,7 @@ api:
   schemas:
     - name: "AgentState"
       format: "JSON"
-```
+```text
 
 ### Interface Specifications
 - Command formats
@@ -513,7 +513,7 @@ api:
 ## 📑 Advanced Obsidian Organization
 
 ### Agent Knowledge Base Structure
-```
+```text
 agents/
 ├── architectures/
 │   ├── cognitive-models.md
@@ -531,7 +531,7 @@ agents/
     ├── agent-spec.md
     ├── behavior-doc.md
     └── protocol-doc.md
-```
+```text
 
 ### Linking Patterns
 
@@ -551,7 +551,7 @@ agents/
 
 <!-- Transclusion with parameters -->
 ![[_templates/agent-spec.md:yaml]]
-```
+```text
 
 ### Backlink Usage
 - Use consistent terminology for bidirectional linking
@@ -563,7 +563,7 @@ Related: [[reasoning-models|Reasoning]], [[learning-patterns|Learning]]
 
 <!-- In reasoning-models.md -->
 Part of: [[cognitive-models|Cognitive Architecture]]
-```
+```text
 
 ### Dynamic Views
 ```markdown
@@ -575,14 +575,14 @@ TABLE
 FROM "agents"
 WHERE type = "agent"
 SORT role ASC
-```
+```text
 
 <!-- Behavior Tracking -->
 ```dataview
 LIST
 FROM #agent-behavior
 GROUP BY category
-```
+```text
 
 ### Metadata Standards
 ```yaml
@@ -607,7 +607,7 @@ relationships:
   depends-on:
     - [[resource-management]]
 ---
-```
+```text
 
 ## 🗂️ File Organization
 
@@ -626,7 +626,7 @@ standard_files:
     - setup.md
     - configuration.md
     - monitoring.md
-```
+```text
 
 ### Naming Conventions
 ```yaml
@@ -636,7 +636,7 @@ file_naming:
     - "agent-spec-taskexecutor.md"
     - "behavior-pattern-learning.md"
     - "protocol-definition-fipa.md"
-```
+```text
 
 ### Cross-Reference System
 ```mermaid
@@ -649,7 +649,7 @@ graph TD
     style A fill:#f9f,stroke:#333
     style B fill:#bbf,stroke:#333
     style C fill:#bbf,stroke:#333
-```
+```text
 
 ## 🔍 Advanced Search Patterns
 
@@ -662,7 +662,7 @@ TABLE
 FROM "agents"
 WHERE contains(tags, "active")
 SORT file.mtime DESC
-```
+```text
 
 ### Tag Hierarchy
 ```yaml
@@ -680,7 +680,7 @@ tag_structure:
     - review
     - active
     - deprecated
-```
+```text
 
 ## 📋 Template System
 
@@ -712,7 +712,7 @@ version: 1.0
 - [[agent-list|Agent Registry]]
 - [[behavior-catalog|Behavior Patterns]]
 - [[protocol-standards|Communication Standards]]
-```
+```text
 
 ### Behavior Template
 ```yaml
@@ -736,7 +736,7 @@ version: 1.0
 ## Integration
 - Required Capabilities: {{capabilities}}
 - Dependencies: {{dependencies}}
-```
+```text
 
 ---
 

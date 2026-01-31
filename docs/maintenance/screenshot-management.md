@@ -44,7 +44,7 @@ screenshot_management:
       - capture_date
       - version_info
       - context_details
-```
+```text
 
 ### Screenshot Management
 ```python
@@ -75,7 +75,7 @@ class ScreenshotManager:
     def verify_quality(self):
         """Verify screenshot quality"""
         pass
-```
+```text
 
 ## 📊 Diagram Maintenance
 
@@ -109,7 +109,7 @@ class ScreenshotManager:
     }
   }
 }
-```
+```text
 
 ### Diagram Management
 ```python
@@ -140,7 +140,7 @@ class DiagramManager:
     def validate_diagrams(self):
         """Validate diagram accuracy"""
         pass
-```
+```text
 
 ## 🎥 Video Tutorials
 
@@ -176,7 +176,7 @@ video_tutorials:
       - version_tracking
       - update_scheduling
       - feedback_monitoring
-```
+```text
 
 ### Tutorial Management
 ```python
@@ -207,7 +207,7 @@ class TutorialManager:
     def track_effectiveness(self):
         """Track tutorial effectiveness"""
         pass
-```
+```text
 
 ## 🎮 Interactive Guides
 
@@ -243,7 +243,7 @@ interactive_guides:
       - usage_analytics
       - error_tracking
       - user_feedback
-```
+```text
 
 ### Guide Management
 ```python
@@ -274,7 +274,7 @@ class GuideManager:
     def monitor_effectiveness(self):
         """Monitor guide effectiveness"""
         pass
-```
+```text
 
 ## 📊 Analytics and Reporting
 
@@ -308,7 +308,7 @@ class GuideManager:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

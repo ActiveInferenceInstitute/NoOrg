@@ -1,11 +1,42 @@
 # Strategy Policies
 
-This directory contains policies governing the strategic planning process, market analysis, and related activities managed by the [[Strategy]] unit.
+## Overview
 
-Key policies may include:
-- [[Strategic_Planning_Policy.md]]
-- [[Market_Analysis_Policy.md]]
-- [[Competitive_Intelligence_Ethics_Policy.md]]
-- [[Confidentiality_Policy_Strategy.md]]
+This directory contains the official policies governing Strategy operations, standards, and compliance requirements.
 
-See [[Policy_Template.md]] for the standard structure. 
+## Policy Categories
+
+### Core Policies
+Foundational policies that govern unit operations and standards.
+
+### Operational Policies
+Day-to-day operational guidelines and procedures.
+
+### Compliance Policies
+Regulatory and compliance-related requirements.
+
+## Policy Lifecycle
+
+| Stage | Description | Owner |
+|-------|-------------|-------|
+| Draft | Initial policy creation | Policy Author |
+| Review | Stakeholder feedback | Review Committee |
+| Approval | Formal authorization | Unit Leadership |
+| Published | Active and enforced | Policy Owner |
+| Review | Periodic assessment | Policy Owner |
+| Retired | No longer active | Unit Leadership |
+
+## Policy Standards
+
+All policies must include:
+- **Version**: Current version number
+- **Effective Date**: When policy becomes active
+- **Owner**: Responsible individual or role
+- **Review Date**: Next scheduled review
+- **Scope**: Who the policy applies to
+
+## Related Documentation
+
+- [Processes](../Processes/)
+- [Governance Policies](../../Governance/Policies/)
+- [Policy on Policies](../../Governance/Policies/Policy_on_Policies.md)

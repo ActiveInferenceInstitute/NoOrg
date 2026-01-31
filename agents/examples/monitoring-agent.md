@@ -32,7 +32,7 @@ capabilities:
     - metric_collection
     - alert_distribution
     - health_reporting
-```
+```text
 
 ## Architecture
 
@@ -48,7 +48,7 @@ cognitive_architecture:
     - real_time_analysis
     - predictive_monitoring
     - pattern_recognition
-```
+```text
 
 ### Behavioral Framework
 ```mermaid
@@ -63,7 +63,7 @@ graph TD
     G -.-> C
     H[Alert Rules] -.-> D
     I[Action Policies] -.-> E
-```
+```text
 
 ## Implementation
 
@@ -89,7 +89,7 @@ integration:
     - type: performance_reports
       format: json
       protocol: [[protocols#metric-reporting]]
-```
+```text
 
 ## Monitoring Specification
 
@@ -126,7 +126,7 @@ metrics:
     - name: success_rate
       type: gauge
       unit: percentage
-```
+```text
 
 ### Alert Rules
 ```yaml
@@ -149,7 +149,7 @@ alerts:
       condition: error_rate > 5%
       duration: 5m
       severity: warning
-```
+```text
 
 ## Communication
 
@@ -166,7 +166,7 @@ message_formats:
   outgoing:
     - [[message-formats#alert-notification]]
     - [[message-formats#metric-report]]
-```
+```text
 
 ## Performance
 
@@ -188,7 +188,7 @@ performance_metrics:
       threshold: 5000_writes_per_second
     - metric: query_latency
       threshold: 50ms
-```
+```text
 
 ### Monitoring
 - [[monitoring-system#self-monitoring|Self Monitoring]]
@@ -202,7 +202,7 @@ security:
   authentication: certificate_based
   authorization: role_based
   encryption: tls_1.3
-```
+```text
 
 ### Safety Protocols
 - [[safety-protocols#data-integrity|Data Integrity]]
@@ -223,7 +223,7 @@ data_management:
     - window_functions
     - statistical_analysis
     - trend_detection
-```
+```text
 
 ### Analysis Capabilities
 ```yaml
@@ -236,7 +236,7 @@ analysis:
     - trend_analysis
     - correlation_detection
     - pattern_recognition
-```
+```text
 
 ### Visualization
 ```yaml
@@ -249,7 +249,7 @@ visualization:
     - time_series
     - heat_maps
     - dependency_graphs
-```
+```text
 
 ## Maintenance
 

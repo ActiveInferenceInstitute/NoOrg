@@ -21,7 +21,7 @@ graph TD
     D --> E[Quality Gates]
     E --> F[Deployment Automation]
     F --> G[Monitoring]
-```
+```text
 
 ### Pipeline Structure
 1. **Pipeline Layers**

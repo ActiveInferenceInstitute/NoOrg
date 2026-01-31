@@ -20,7 +20,7 @@ interface EventDefinition {
   sourceId?: string;
   metadata?: Record<string, any>;
 }
-```
+```text
 
 **Properties:**
 - `id` (string): Unique identifier for the event
@@ -44,7 +44,7 @@ interface EventFilter {
   timestampTo?: number;
   metadataFilter?: Record<string, any>;
 }
-```
+```text
 
 **Properties:**
 - `type` (string | RegExp, optional): Event type filter (exact match or regex)
@@ -65,7 +65,7 @@ interface EventSubscriptionOptions {
   persist?: boolean;
   subscriptionId?: string;
 }
-```
+```text
 
 **Properties:**
 - `filter` (EventFilter, optional): Filter criteria for subscription
@@ -83,7 +83,7 @@ interface EventPersistenceOptions {
   storageDirectory?: string;
   maxEventsPerType?: number;
 }
-```
+```text
 
 **Properties:**
 - `enabled` (boolean): Whether persistence is enabled
@@ -100,7 +100,7 @@ Main event system class implementing publish/subscribe pattern.
 
 ```typescript
 private constructor(persistenceOptions: EventPersistenceOptions = { enabled: false })
-```
+```text
 
 **Parameters:**
 - `persistenceOptions` (EventPersistenceOptions, optional): Persistence configuration
@@ -113,7 +113,7 @@ private constructor(persistenceOptions: EventPersistenceOptions = { enabled: fal
 
 ```typescript
 public static getInstance(persistenceOptions?: EventPersistenceOptions): EventSystem
-```
+```text
 
 Gets the singleton instance of EventSystem.
 
@@ -129,7 +129,7 @@ const eventSystem = EventSystem.getInstance({
   storageDirectory: './events',
   maxEventsPerType: 1000
 });
-```
+```text
 
 #### Instance Methods
 
@@ -145,7 +145,7 @@ public emit(
     metadata?: Record<string, any>;
   }
 ): EventDefinition
-```
+```text
 
 Emits an event to all subscribers.
 
@@ -169,13 +169,13 @@ const event = eventSystem.emit('task.completed', {
   sourceId: 'agent-001',
   metadata: { priority: 'high' }
 });
-```
+```text
 
 ##### on()
 
 ```typescript
 public on(type: string, handler: (event: EventDefinition) => void): void
-```
+```text
 
 Registers a handler for a specific event type.
 
@@ -190,13 +190,13 @@ Registers a handler for a specific event type.
 eventSystem.on('task.completed', (event) => {
   console.log('Task completed:', event.payload);
 });
-```
+```text
 
 ##### off()
 
 ```typescript
 public off(type: string, handler: (event: EventDefinition) => void): void
-```
+```text
 
 Removes a handler for a specific event type.
 
@@ -212,13 +212,13 @@ const handler = (event) => console.log(event);
 eventSystem.on('task.completed', handler);
 // Later...
 eventSystem.off('task.completed', handler);
-```
+```text
 
 ##### getEventHistory()
 
 ```typescript
 public getEventHistory(type: string): EventDefinition[]
-```
+```text
 
 Gets all events of a specific type.
 
@@ -230,13 +230,13 @@ Gets all events of a specific type.
 **Example:**
 ```typescript
 const taskEvents = eventSystem.getEventHistory('task.completed');
-```
+```text
 
 ##### getAllEvents()
 
 ```typescript
 public getAllEvents(): EventDefinition[]
-```
+```text
 
 Gets all events across all types, sorted by timestamp.
 
@@ -245,13 +245,13 @@ Gets all events across all types, sorted by timestamp.
 **Example:**
 ```typescript
 const allEvents = eventSystem.getAllEvents();
-```
+```text
 
 ##### findEvents()
 
 ```typescript
 public findEvents(filter: EventFilter): EventDefinition[]
-```
+```text
 
 Finds events matching the specified filter.
 
@@ -267,7 +267,7 @@ const events = eventSystem.findEvents({
   timestampFrom: Date.now() - 3600000,
   metadataFilter: { priority: 'high' }
 });
-```
+```text
 
 ##### subscribe()
 
@@ -276,7 +276,7 @@ public subscribe(
   options: EventSubscriptionOptions,
   handler: (event: EventDefinition) => void
 ): () => void
-```
+```text
 
 Subscribes to events with filtering options.
 
@@ -297,13 +297,13 @@ const unsubscribe = eventSystem.subscribe({
 
 // Later...
 unsubscribe();
-```
+```text
 
 ##### getCorrelatedEvents()
 
 ```typescript
 public getCorrelatedEvents(correlationId: string): EventDefinition[]
-```
+```text
 
 Gets all events with a specific correlation ID.
 
@@ -315,13 +315,13 @@ Gets all events with a specific correlation ID.
 **Example:**
 ```typescript
 const relatedEvents = eventSystem.getCorrelatedEvents('workflow-456');
-```
+```text
 
 ##### clearEventHistory()
 
 ```typescript
 public clearEventHistory(): void
-```
+```text
 
 Clears all event history and persisted events.
 
@@ -330,7 +330,7 @@ Clears all event history and persisted events.
 **Example:**
 ```typescript
 eventSystem.clearEventHistory();
-```
+```text
 
 ##### replayEvents()
 
@@ -339,7 +339,7 @@ public replayEvents(
   filter?: EventFilter,
   handler?: (event: EventDefinition) => void
 ): void
-```
+```text
 
 Replays events matching the filter.
 
@@ -359,7 +359,7 @@ eventSystem.replayEvents(
   { correlationId: 'workflow-456' },
   (event) => console.log('Replaying:', event)
 );
-```
+```text
 
 ## Private Methods
 
@@ -367,7 +367,7 @@ eventSystem.replayEvents(
 
 ```typescript
 private storeEvent(event: EventDefinition): void
-```
+```text
 
 Stores an event in memory and optionally persists it.
 
@@ -380,7 +380,7 @@ Stores an event in memory and optionally persists it.
 
 ```typescript
 private matchesFilter(event: EventDefinition, filter: EventFilter): boolean
-```
+```text
 
 Checks if an event matches the filter criteria.
 
@@ -394,7 +394,7 @@ Checks if an event matches the filter criteria.
 
 ```typescript
 private processSubscriptionsForEvent(event: EventDefinition): void
-```
+```text
 
 Processes all subscriptions for a given event.
 
@@ -407,7 +407,7 @@ Processes all subscriptions for a given event.
 
 ```typescript
 private persistEventToDisk(event: EventDefinition): void
-```
+```text
 
 Persists an event to disk if persistence is enabled.
 
@@ -420,7 +420,7 @@ Persists an event to disk if persistence is enabled.
 
 ```typescript
 private loadPersistedEvents(): void
-```
+```text
 
 Loads persisted events from disk on initialization.
 
@@ -430,7 +430,7 @@ Loads persisted events from disk on initialization.
 
 ```typescript
 private generateEventId(): string
-```
+```text
 
 Generates a unique event ID.
 
@@ -440,7 +440,7 @@ Generates a unique event ID.
 
 ```typescript
 private generateSubscriptionId(): string
-```
+```text
 
 Generates a unique subscription ID.
 
@@ -465,7 +465,7 @@ eventSystem.emit('task.completed', {
   taskId: 'task-123',
   status: 'success'
 });
-```
+```text
 
 ### Filtered Subscriptions
 
@@ -479,7 +479,7 @@ const unsubscribe = eventSystem.subscribe({
 }, (event) => {
   console.log('Task event:', event);
 });
-```
+```text
 
 ### Event Correlation
 
@@ -492,7 +492,7 @@ eventSystem.emit('task.completed', { taskId: 'task-1' }, { correlationId });
 
 // Get all correlated events
 const relatedEvents = eventSystem.getCorrelatedEvents(correlationId);
-```
+```text
 
 ### Event Persistence
 
@@ -505,7 +505,7 @@ const eventSystem = EventSystem.getInstance({
 
 // Events are automatically persisted
 eventSystem.emit('system.startup', { version: '1.0.0' });
-```
+```text
 
 ### Event Replay
 
@@ -515,7 +515,7 @@ const oneHourAgo = Date.now() - 3600000;
 eventSystem.replayEvents({
   timestampFrom: oneHourAgo
 });
-```
+```text
 
 ## Error Handling
 
@@ -539,4 +539,4 @@ The EventSystem is designed for single-threaded Node.js execution. For concurren
 
 - [Event System README](./README.md)
 - [Core Systems Documentation](../README.md)
-- [Integration Patterns](../../integration/README.md)
+- [Integration Patterns](../../../README.md)

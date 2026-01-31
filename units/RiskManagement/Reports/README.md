@@ -11,10 +11,10 @@ These reports provide structured visibility into the organization's risk posture
 | Report | Frequency | Audience | Purpose |
 |--------|-----------|----------|---------|
 | [Risk Dashboard](RiskDashboard.md) | Weekly | Executive Committee | Overview of key risk indicators and status |
-| [Enterprise Risk Register](EnterpriseRiskRegister.md) | Monthly | Risk Committee | Comprehensive inventory of organizational risks |
-| [Risk Mitigation Status](RiskMitigationStatus.md) | Monthly | Unit Leaders | Status of risk treatment initiatives |
-| [Emerging Risk Report](EmergingRisks.md) | Quarterly | Board, Executive Team | Analysis of emerging and horizon risks |
-| [Risk Incident Analysis](RiskIncidentAnalysis.md) | As needed | Risk Team, Affected Units | Root cause analysis of risk incidents |
+| [Enterprise Risk Register](AGENTS.md) | Monthly | Risk Committee | Comprehensive inventory of organizational risks |
+| [Risk Mitigation Status](AGENTS.md) | Monthly | Unit Leaders | Status of risk treatment initiatives |
+| [Emerging Risk Report](AGENTS.md) | Quarterly | Board, Executive Team | Analysis of emerging and horizon risks |
+| [Risk Incident Analysis](AGENTS.md) | As needed | Risk Team, Affected Units | Root cause analysis of risk incidents |
 | [Joint Risk-Operations Report](JointOperationsReport.md) | Monthly | Operations & Risk Teams | Focused on operational risk trends |
 
 ## Report Structure

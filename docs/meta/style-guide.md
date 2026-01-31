@@ -58,7 +58,7 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 tags: [relevant, tags, here]
 ---
-```
+```text
 
 ### Standard Sections
 1. Overview/Introduction
@@ -116,7 +116,7 @@ tags: [relevant, tags, here]
 # Include language identifier
 # Use appropriate formatting
 # Include comments for clarity
-```
+```text
 ````
 
 ### Tables

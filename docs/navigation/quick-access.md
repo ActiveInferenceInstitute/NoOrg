@@ -55,7 +55,7 @@ frequently_used:
           agent: "llm_analyzer"
           learning: "continuous"
           adaptation: "real_time"
-```
+```text
 
 ### Usage Management
 ```python
@@ -86,7 +86,7 @@ class UsageManager:
     def optimize_surfacing(self):
         """Optimize content surfacing"""
         pass
-```
+```text
 
 ## 🔄 Recent Updates
 
@@ -124,7 +124,7 @@ class UsageManager:
     }
   }
 }
-```
+```text
 
 ### Update Management
 ```python
@@ -155,7 +155,7 @@ class UpdateManager:
     def optimize_presentation(self):
         """Optimize update presentation"""
         pass
-```
+```text
 
 ## 🔗 Important Links
 
@@ -198,7 +198,7 @@ important_links:
           model: "usage_patterns"
           anticipation: "user_needs"
           accuracy: "learning_enhanced"
-```
+```text
 
 ### Link Management
 ```python
@@ -229,7 +229,7 @@ class LinkManager:
     def enhance_suggestions(self):
         """Enhance link suggestions"""
         pass
-```
+```text
 
 ## 🔍 Search Shortcuts
 
@@ -268,7 +268,7 @@ search_shortcuts:
           preferences: "user_specific"
           learning: "adaptive"
           optimization: "continuous"
-```
+```text
 
 ### Shortcut Management
 ```python
@@ -299,7 +299,7 @@ class ShortcutManager:
     def optimize_assistance(self):
         """Optimize shortcut assistance"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

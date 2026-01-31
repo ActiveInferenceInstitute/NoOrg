@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/alerting_framework]]
   - [[monitoring/optimization_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the performance monitoring framework for the agent system, providing comprehensive approaches for measuring, analyzing, and optimizing system performance across all components. It integrates with the [[monitoring/monitoring_framework|Monitoring Framework]] and extends the capabilities defined in the [[monitoring/metrics_framework|Metrics Framework]].
@@ -43,7 +43,7 @@ class PerformanceManager:
         self.optimizer = PerformanceOptimizer()
         self.reporter = PerformanceReporter()
         self.monitor = PerformanceMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Metric Store]
     C --> F[Analysis Engine]
     D --> G[Optimization Engine]
-```
+```text
 
 ### 2. Performance Collection
 #### 2.1 Collection System
@@ -72,7 +72,7 @@ class PerformanceCollector:
         traces = await self.tracer.trace_performance(target)
         samples = await self.sampler.sample_metrics(target)
         return PerformanceData(metrics, profile, traces, samples)
-```
+```text
 
 #### 2.2 Performance Metrics
 - [[monitoring/metrics/system|System Metrics]]
@@ -103,7 +103,7 @@ class PerformanceAnalyzer:
         predictions = await self.predictor.predict_performance(analysis)
         correlations = await self.correlator.correlate_metrics(analysis)
         return PerformanceAnalysis(analysis, profile, predictions, correlations)
-```
+```text
 
 #### 3.2 Analysis Types
 - [[monitoring/analysis/trend|Trend Analysis]]
@@ -126,7 +126,7 @@ class PerformanceOptimizer:
         execution = await self.executor.execute_plan(plan)
         validation = await self.validator.validate_optimization(execution)
         return await self.engine.apply_optimization(validation)
-```
+```text
 
 #### 4.2 Optimization Types
 - [[monitoring/optimization/resource|Resource Optimization]]
@@ -149,7 +149,7 @@ class PerformanceReporter:
         visuals = await self.visualizer.create_visuals(report)
         formatting = await self.formatter.format_report(visuals)
         return await self.distributor.distribute_report(formatting)
-```
+```text
 
 #### 5.2 Report Types
 - [[monitoring/reports/performance|Performance Reports]]
@@ -174,7 +174,7 @@ class PerformanceStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - [[monitoring/standards/metrics|Metrics Standards]]
@@ -191,7 +191,7 @@ class PerformanceProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - [[monitoring/processes/collection|Collection Process]]
@@ -222,7 +222,7 @@ class QualityMonitoring:
     async def measure_metrics(self, measurements):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -254,7 +254,7 @@ class PerformanceSecurity:
     async def audit_performance(self, audit):
         # Performance auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - [[security/performance/collection|Collection Security]]
@@ -304,7 +304,7 @@ class PerformancePattern:
         self.collector = PerformanceCollector()
         self.analyzer = PerformanceAnalyzer()
         self.optimizer = PerformanceOptimizer()
-```
+```text
 
 ### B. Analysis Patterns
 ```python
@@ -314,7 +314,7 @@ class AnalysisPattern:
         self.engine = AnalysisEngine()
         self.profiler = ProfileAnalyzer()
         self.predictor = PerformancePredictor()
-```
+```text
 
 ### C. Optimization Patterns
 ```python
@@ -324,4 +324,4 @@ class OptimizationPattern:
         self.planner = OptimizationPlanner()
         self.executor = OptimizationExecutor()
         self.validator = OptimizationValidator()
-``` 
+```text 

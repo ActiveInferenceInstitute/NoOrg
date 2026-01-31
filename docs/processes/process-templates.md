@@ -48,7 +48,7 @@ standard_process:
     informed:
       - "Informed Role 1"
       - "Informed Role 2"
-```
+```text
 
 ### Process Flow
 ```python
@@ -84,7 +84,7 @@ class StandardProcessTemplate:
     def validate_content(self):
         """Validate template content"""
         pass
-```
+```text
 
 ## 🚀 Quick Process Template
 
@@ -122,7 +122,7 @@ class StandardProcessTemplate:
     }
   }
 }
-```
+```text
 
 ### Quick Implementation
 ```python
@@ -153,7 +153,7 @@ class QuickProcessTemplate:
     def validate_essentials(self):
         """Validate essential elements"""
         pass
-```
+```text
 
 ## 📋 Review Template
 
@@ -196,7 +196,7 @@ review_template:
         - description: "Recommendation"
           impact: "Expected impact"
           effort: "Required effort"
-```
+```text
 
 ### Review Process
 ```python
@@ -227,7 +227,7 @@ class ReviewTemplate:
     def generate_report(self):
         """Generate review report"""
         pass
-```
+```text
 
 ## 📊 Template Management
 
@@ -254,7 +254,7 @@ class ReviewTemplate:
     }
   }
 }
-```
+```text
 
 ### Template Automation
 ```python
@@ -285,7 +285,7 @@ class TemplateManager:
     def automate_workflows(self):
         """Automate template workflows"""
         pass
-```
+```text
 
 ## 📈 Usage Guidelines
 
@@ -322,7 +322,7 @@ usage_guidelines:
         - "Objective criteria"
         - "Metric evaluation"
         - "Action planning"
-```
+```text
 
 ### Best Practices
 ```python
@@ -353,7 +353,7 @@ class TemplateGuidelines:
     def verify_compliance(self):
         """Verify guideline compliance"""
         pass
-```
+```text
 
 ## 📚 References
 

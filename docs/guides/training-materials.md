@@ -44,7 +44,7 @@ user_training:
       - file_management
       - task_organization
       - resource_planning
-```
+```text
 
 ### Training Implementation
 ```python
@@ -75,7 +75,7 @@ class UserTraining:
     def assess_progress(self):
         """Assess training progress"""
         pass
-```
+```text
 
 ## 👨‍💼 Admin Training
 
@@ -125,7 +125,7 @@ class UserTraining:
     }
   }
 }
-```
+```text
 
 ### Administration Management
 ```python
@@ -156,7 +156,7 @@ class AdminTraining:
     def assess_competency(self):
         """Assess admin competency"""
         pass
-```
+```text
 
 ## 👥 Contributor Training
 
@@ -192,7 +192,7 @@ contributor_training:
       - project_planning
       - resource_allocation
       - timeline_management
-```
+```text
 
 ### Contribution Management
 ```python
@@ -223,7 +223,7 @@ class ContributorTraining:
     def assess_skills(self):
         """Assess contributor skills"""
         pass
-```
+```text
 
 ## 📊 Progress Tracking
 
@@ -259,7 +259,7 @@ progress_tracking:
       - trend_analysis
       - effectiveness_evaluation
       - improvement_opportunities
-```
+```text
 
 ### Analytics System
 ```python
@@ -290,7 +290,7 @@ class TrainingAnalytics:
     def generate_insights(self):
         """Generate training insights"""
         pass
-```
+```text
 
 ## 🔄 Continuous Improvement
 
@@ -340,7 +340,7 @@ class TrainingAnalytics:
     }
   }
 }
-```
+```text
 
 ### Process Enhancement
 ```python
@@ -371,7 +371,7 @@ class ImprovementManager:
     def track_progress(self):
         """Track improvement progress"""
         pass
-```
+```text
 
 ## 📚 References
 

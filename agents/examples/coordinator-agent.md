@@ -32,7 +32,7 @@ capabilities:
     - agent_discovery
     - task_distribution
     - system_monitoring
-```
+```text
 
 ## Architecture
 
@@ -48,7 +48,7 @@ cognitive_architecture:
     - dynamic_team_formation
     - adaptive_load_balancing
     - predictive_resource_allocation
-```
+```text
 
 ### Behavioral Framework
 ```mermaid
@@ -63,7 +63,7 @@ graph TD
     G -.-> C
     H[Resource Monitor] -.-> C
     H -.-> D
-```
+```text
 
 ## Implementation
 
@@ -89,7 +89,7 @@ integration:
     - type: coordination_directive
       format: json
       protocol: [[protocols#agent-coordination]]
-```
+```text
 
 ## Coordination Specification
 
@@ -107,7 +107,7 @@ patterns:
     - name: team_assembly
       strategy: optimal_grouping
       constraints: communication_overhead
-```
+```text
 
 ### Learning Configuration
 ```yaml
@@ -120,7 +120,7 @@ learning:
   objectives:
     - system_throughput_optimization
     - communication_overhead_reduction
-```
+```text
 
 ## Communication
 
@@ -137,7 +137,7 @@ message_formats:
   outgoing:
     - [[message-formats#task-assignment]]
     - [[message-formats#coordination-directive]]
-```
+```text
 
 ## Performance
 
@@ -159,7 +159,7 @@ performance_metrics:
       threshold: 0.99
     - metric: agent_responsiveness
       threshold: 0.95
-```
+```text
 
 ### Monitoring
 - [[monitoring-system#coordination|Coordination Monitoring]]
@@ -173,7 +173,7 @@ security:
   authentication: mutual_tls
   authorization: capability_based
   encryption: ed25519
-```
+```text
 
 ### Safety Protocols
 - [[safety-protocols#coordination|Coordination Safety]]
@@ -204,7 +204,7 @@ adaptation:
     - rebalance_workload
     - restructure_coalitions
     - adjust_communication_patterns
-```
+```text
 
 ### Fault Tolerance
 ```yaml
@@ -217,7 +217,7 @@ fault_tolerance:
     - task_reassignment
     - coalition_restructuring
     - communication_rerouting
-```
+```text
 
 ### System Optimization
 ```yaml
@@ -230,7 +230,7 @@ optimization:
     - communication_bandwidth
     - processing_capacity
     - response_time_requirements
-```
+```text
 
 ## References
 - [[architecture-patterns#coordination]]

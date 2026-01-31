@@ -24,7 +24,7 @@ behavior_model:
   category: "system_management"
   complexity: "high"
   adaptability: "dynamic"
-```
+```text
 
 ## Implementation
 
@@ -41,7 +41,7 @@ graph TD
     H[Performance Monitor] -.-> B
     I[Learning System] -.-> C
     I -.-> D
-```
+```text
 
 ### State Machine
 ```yaml
@@ -93,7 +93,7 @@ states:
         condition: recovery_successful
       - to: planning
         condition: replan_required
-```
+```text
 
 ## Interaction Pattern
 
@@ -112,7 +112,7 @@ inputs:
       priority: critical
     - type: load_imbalance
       priority: medium
-```
+```text
 
 ### Output Generation
 ```yaml
@@ -127,7 +127,7 @@ outputs:
       destination: performance_monitor
     - type: adaptation_data
       destination: learning_system
-```
+```text
 
 ## Learning & Adaptation
 
@@ -144,7 +144,7 @@ learning:
     - optimize_task_distribution
     - minimize_communication_overhead
     - maximize_system_stability
-```
+```text
 
 ### Adaptation Rules
 ```yaml
@@ -159,7 +159,7 @@ adaptation:
   constraints:
     - maintain_service_level
     - preserve_system_stability
-```
+```text
 
 ## Integration
 
@@ -179,7 +179,7 @@ communication:
   external:
     - target: managed_agents
       protocol: [[protocols#coordination-directive]]
-```
+```text
 
 ## Performance
 
@@ -196,7 +196,7 @@ metrics:
       threshold: 0.15
     - metric: resource_utilization
       threshold: 0.85
-```
+```text
 
 ### Optimization
 ```yaml
@@ -208,7 +208,7 @@ optimization:
     - name: coalition_optimization
       trigger: communication_overhead
       action: restructure_teams
-```
+```text
 
 ## Safety & Validation
 
@@ -226,7 +226,7 @@ safety:
   postconditions:
     - system_stability_maintained
     - performance_requirements_met
-```
+```text
 
 ### Validation Methods
 ```yaml
@@ -239,7 +239,7 @@ validation:
     - coordination_rollback
     - gradual_state_correction
     - emergency_stabilization
-```
+```text
 
 ## Maintenance
 

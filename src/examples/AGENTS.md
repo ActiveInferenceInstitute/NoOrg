@@ -48,7 +48,7 @@ async function runExample() {
 
   console.log('Example completed:', result);
 }
-```
+```text
 
 ## Key Patterns Demonstrated
 
@@ -60,7 +60,7 @@ await coordinator.registerAgent(new WritingAgent('writer'));
 
 // Find agents by capability
 const analysisAgents = await registry.findAgentsByCapability('analysis');
-```
+```text
 
 ### Task Coordination
 ```typescript
@@ -70,7 +70,7 @@ await coordinator.submitTask({
   priority: 'high',
   dependsOn: ['data-collection']
 });
-```
+```text
 
 ### Workflow Execution
 ```typescript
@@ -82,14 +82,14 @@ const result = await coordinator.executeWorkflow({
     { agent: 'WritingAgent', action: 'write', data: analysisResults }
   ]
 });
-```
+```text
 
 ### State Management
 ```typescript
 // Shared state operations
 await stateManager.setState('workflow.status', 'in-progress');
 const currentState = await stateManager.getState('workflow.status');
-```
+```text
 
 ## Running Examples
 
@@ -100,7 +100,7 @@ npm install
 
 # Set OpenAI API key
 export OPENAI_API_KEY=your-api-key-here
-```
+```text
 
 ### Execute Individual Examples
 ```bash
@@ -115,7 +115,7 @@ npm run example:research
 
 # Run all examples
 npm run example:all
-```
+```text
 
 ### Programmatic Execution
 ```typescript
@@ -123,7 +123,7 @@ import { runExample } from './examples/basic_coordination';
 
 // Execute example
 await runExample();
-```
+```text
 
 ## Example Features
 
@@ -137,7 +137,7 @@ try {
   console.error('Workflow failed:', error);
   await coordinator.stop();
 }
-```
+```text
 
 ### Resource Cleanup
 Examples show proper cleanup patterns:
@@ -147,7 +147,7 @@ await coordinator.stop();
 
 // Close connections
 await stateManager.clearState();
-```
+```text
 
 ### Performance Monitoring
 Examples include performance tracking:
@@ -156,7 +156,7 @@ const startTime = Date.now();
 const result = await coordinator.executeWorkflow(workflow);
 const duration = Date.now() - startTime;
 console.log(`Workflow completed in ${duration}ms`);
-```
+```text
 
 ## Testing Examples
 
@@ -164,7 +164,7 @@ Examples serve as integration tests:
 ```bash
 # Run example-based tests
 npm test -- --testPathPattern=examples
-```
+```text
 
 ## Contributing Examples
 

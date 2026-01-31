@@ -26,7 +26,7 @@ graph TD
     RiskWorkingGroup -.-> RMU[Risk Management Unit]
     
     class RiskCommittee,RMU externalEntity;
-```
+```text
 
 ## Mission
 

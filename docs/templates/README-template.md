@@ -16,7 +16,7 @@ graph TD
     B --> D[Integrations]
     C --> E[Configuration]
     D --> F[External Systems]
-```
+```text
 
 ## Purpose
 Brief description of the component's purpose and role in the system.
@@ -36,7 +36,7 @@ graph LR
     B --> C[Output]
     B --> D[Storage]
     B --> E[Integration]
-```
+```text
 
 ## Configuration
 ```yaml
@@ -47,7 +47,7 @@ component:
   features:
     - feature1
     - feature2
-```
+```text
 
 ## Dependencies
 - Dependency 1

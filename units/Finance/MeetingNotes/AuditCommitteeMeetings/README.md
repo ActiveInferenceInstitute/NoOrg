@@ -18,7 +18,7 @@ graph TD
     MeetingTypes --> AuditCommittee[Audit Committee]
     
     class AuditCommittee externalEntity;
-```
+```text
 
 ## Meeting Schedule
 

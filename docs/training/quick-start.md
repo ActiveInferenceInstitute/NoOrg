@@ -50,7 +50,7 @@ orientation_process:
       - basic_editing
       - content_viewing
       - collaboration_basics
-```
+```text
 
 ### Orientation Guide
 ```python
@@ -81,7 +81,7 @@ class OrientationGuide:
     def track_progress(self):
         """Track orientation progress"""
         pass
-```
+```text
 
 ## 🔄 Common Tasks
 
@@ -119,7 +119,7 @@ class OrientationGuide:
     }
   }
 }
-```
+```text
 
 ### Task Management
 ```python
@@ -150,7 +150,7 @@ class TaskGuide:
     def provide_assistance(self):
         """Provide task assistance"""
         pass
-```
+```text
 
 ## 🛠️ Tool Usage
 
@@ -192,7 +192,7 @@ tool_usage:
       - custom_scripts
       - keyboard_shortcuts
       - templates_system
-```
+```text
 
 ### Tool Management
 ```python
@@ -223,7 +223,7 @@ class ToolGuide:
     def optimize_usage(self):
         """Optimize tool usage"""
         pass
-```
+```text
 
 ## ❗ Troubleshooting
 
@@ -265,7 +265,7 @@ troubleshooting:
       - solution_documentation
       - knowledge_sharing
       - process_improvement
-```
+```text
 
 ### Issue Management
 ```python
@@ -296,7 +296,7 @@ class TroubleshootingGuide:
     def prevent_problems(self):
         """Implement prevention measures"""
         pass
-```
+```text
 
 ## 📚 References
 

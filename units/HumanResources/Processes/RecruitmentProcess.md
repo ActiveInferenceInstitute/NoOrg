@@ -88,7 +88,7 @@ graph TD
     U --> V[Close Requisition];
     V --> W(Handover to Onboarding Process); 
     W --> X[End];
-```
+```text
 
 ## 6. Key Metrics
 

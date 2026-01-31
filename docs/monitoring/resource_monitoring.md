@@ -26,7 +26,7 @@ related_documents:
   - [[processes/resource_management]]
   - [[processes/capacity_planning]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the resource monitoring framework for the agent system, providing comprehensive monitoring, analysis, optimization, and management capabilities for system resources across all components.
@@ -43,7 +43,7 @@ class ResourceManager:
         self.optimizer = ResourceOptimizer()
         self.planner = CapacityPlanner()
         self.alerter = AlertManager()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Data Pipeline]
     C --> F[Analysis Engine]
     D --> G[Optimization Engine]
-```
+```text
 
 ### 2. Resource Collection
 #### 2.1 Collection System
@@ -71,7 +71,7 @@ class ResourceCollector:
         processed = await self.processors.process_data(raw_data)
         pipeline = await self.pipeline.process_data(processed)
         await self.storage.store_metrics(pipeline)
-```
+```text
 
 #### 2.2 Resource Types
 - Compute Resources
@@ -94,7 +94,7 @@ class ResourceAnalyzer:
         prediction = await self.predictor.predict_usage(profile)
         correlation = await self.correlator.correlate_metrics(prediction)
         return await self.engine.analyze_results(correlation)
-```
+```text
 
 #### 3.2 Analysis Types
 - Usage Analysis
@@ -117,7 +117,7 @@ class ResourceOptimizer:
         execution = await self.executor.execute_plan(plan)
         validation = await self.validator.validate_optimization(execution)
         return await self.engine.apply_optimization(validation)
-```
+```text
 
 #### 4.2 Optimization Types
 - Allocation Optimization
@@ -140,7 +140,7 @@ class CapacityPlanner:
         prediction = await self.predictor.predict_capacity(analysis)
         plan = await self.planner.create_plan(prediction)
         return await self.validator.validate_plan(plan)
-```
+```text
 
 #### 5.2 Planning Types
 - Short-term Planning
@@ -163,7 +163,7 @@ class AlertManager:
         classification = await self.classifier.classify_alerts(detection)
         priority = await self.prioritizer.prioritize_alerts(classification)
         await self.notifier.notify_alerts(priority)
-```
+```text
 
 #### 6.2 Alert Types
 - Resource Alerts
@@ -188,7 +188,7 @@ class MonitoringImplementation:
     async def setup_analysis(self, analysis):
         # Analysis setup
         pass
-```
+```text
 
 #### 1.2 Implementation Standards
 - Monitoring Architecture
@@ -205,7 +205,7 @@ class ResourceManagement:
         self.scheduler = ResourceScheduler()
         self.controller = ResourceController()
         self.monitor = ResourceMonitor()
-```
+```text
 
 #### 2.2 Management Types
 - Allocation Management
@@ -236,7 +236,7 @@ class MonitoringQuality:
     async def measure_effectiveness(self, results):
         # Effectiveness measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -268,7 +268,7 @@ class ResourceCompliance:
     async def report_compliance(self, status):
         # Compliance reporting logic
         pass
-```
+```text
 
 #### 1.2 Compliance Areas
 - Resource Standards
@@ -318,7 +318,7 @@ class MonitoringPattern:
         self.collector = ResourceCollector()
         self.analyzer = ResourceAnalyzer()
         self.optimizer = ResourceOptimizer()
-```
+```text
 
 ### B. Analysis Patterns
 ```python
@@ -328,7 +328,7 @@ class AnalysisPattern:
         self.engine = AnalysisEngine()
         self.profiler = ResourceProfiler()
         self.predictor = UsagePredictor()
-```
+```text
 
 ### C. Optimization Patterns
 ```python
@@ -338,4 +338,4 @@ class OptimizationPattern:
         self.planner = OptimizationPlanner()
         self.executor = OptimizationExecutor()
         self.validator = OptimizationValidator()
-``` 
+```text 

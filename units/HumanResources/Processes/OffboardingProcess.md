@@ -100,7 +100,7 @@ graph TD
     J --> O;
     R --> S;
     S --> T[End: Offboarding Complete];
-```
+```text
 
 ## 6. Key Considerations
 

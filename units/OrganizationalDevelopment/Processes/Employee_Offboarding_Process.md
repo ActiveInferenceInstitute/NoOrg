@@ -39,7 +39,7 @@ graph TD
         O --> R[Security: Ensure Physical Access Revoked];
         Q --> S[HR: File Offboarding Documentation];
     end
-```
+```text
 
 **Detailed Steps:**
 

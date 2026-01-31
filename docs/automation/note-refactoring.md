@@ -53,7 +53,7 @@ content_restructuring:
           - consistency_verification
           - functionality_testing
           - quality_assurance
-```
+```text
 
 ### Restructuring Management
 ```python
@@ -84,7 +84,7 @@ class RestructuringManager:
     def validate_changes(self):
         """Validate restructuring changes"""
         pass
-```
+```text
 
 ## 🔗 Link Updates
 
@@ -122,7 +122,7 @@ class RestructuringManager:
     }
   }
 }
-```
+```text
 
 ### Link Management
 ```python
@@ -153,7 +153,7 @@ class LinkUpdateManager:
     def verify_integrity(self):
         """Verify link integrity"""
         pass
-```
+```text
 
 ## 🏷️ Tag Management
 
@@ -198,7 +198,7 @@ tag_management:
           - accuracy_verification
           - completeness_validation
           - effectiveness_assessment
-```
+```text
 
 ### Tag Management
 ```python
@@ -229,7 +229,7 @@ class TagManager:
     def optimize_taxonomy(self):
         """Optimize tag taxonomy"""
         pass
-```
+```text
 
 ## 🧹 Metadata Cleanup
 
@@ -274,7 +274,7 @@ metadata_cleanup:
           - relationship_verification
           - navigation_testing
           - search_validation
-```
+```text
 
 ### Cleanup Management
 ```python
@@ -305,7 +305,7 @@ class MetadataCleanupManager:
     def verify_quality(self):
         """Verify metadata quality"""
         pass
-```
+```text
 
 ## 📚 References
 

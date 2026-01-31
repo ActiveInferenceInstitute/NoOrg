@@ -41,7 +41,7 @@ mindmap
       Component interaction analysis
       Resource contention awareness
       System boundary evaluation
-```
+```text
 
 ## Performance Analysis Methods
 1. **Profiling and benchmarking**
@@ -107,7 +107,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Algorithm and Data Structure Optimization
 1. **Algorithm selection and improvement**
@@ -173,7 +173,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Database Performance Optimization
 1. **Query optimization**
@@ -239,7 +239,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Front-end Performance Optimization
 1. **Network optimization**
@@ -305,7 +305,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Back-end Performance Optimization
 1. **Service architecture optimization**
@@ -371,7 +371,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## System-level Optimization
 1. **Infrastructure optimization**
@@ -437,7 +437,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Performance Optimization Process
 - Establish clear, measurable performance objectives
@@ -486,7 +486,7 @@ mindmap
       Diminishing returns awareness
       Continuous evaluation
       Stopping criteria
-```
+```text
 
 ## Performance Optimization Process Model
 ```mermaid
@@ -525,4 +525,4 @@ graph TB
     
     R -.-> D
     R -.-> E
-``` 
+```text 

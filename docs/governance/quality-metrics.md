@@ -46,7 +46,7 @@ quality_dimensions:
       - version_control
       - link_health
     weight: 0.2
-```
+```text
 
 ### Quality Assessment
 ```python
@@ -73,7 +73,7 @@ class QualityAssessor:
     def generate_score(self):
         """Generate quality score"""
         pass
-```
+```text
 
 ## 📈 Documentation Coverage
 
@@ -110,7 +110,7 @@ class QualityAssessor:
     }
   }
 }
-```
+```text
 
 ### Coverage Analysis
 ```python
@@ -141,7 +141,7 @@ class CoverageAnalyzer:
     def generate_report(self):
         """Generate coverage report"""
         pass
-```
+```text
 
 ## 👥 User Satisfaction
 
@@ -171,7 +171,7 @@ satisfaction_metrics:
       - time_to_find
       - return_rate
     target_score: 4.5/5
-```
+```text
 
 ### Feedback Collection
 ```python
@@ -201,7 +201,7 @@ class FeedbackCollector:
     def analyze_feedback(self):
         """Analyze feedback data"""
         pass
-```
+```text
 
 ## 📊 Measurement System
 
@@ -234,7 +234,7 @@ class FeedbackCollector:
     }
   }
 }
-```
+```text
 
 ### Analysis and Reporting
 ```python
@@ -265,7 +265,7 @@ class MetricsAnalyzer:
     def generate_insights(self):
         """Generate actionable insights"""
         pass
-```
+```text
 
 ## 🎯 Performance Targets
 
@@ -286,7 +286,7 @@ quality_targets:
     minimum: 4.0
     target: 4.5
     excellent: 4.8
-```
+```text
 
 ### Improvement Tracking
 ```python
@@ -317,7 +317,7 @@ class ImprovementTracker:
     def assess_progress(self):
         """Assess improvement progress"""
         pass
-```
+```text
 
 ## 📈 Continuous Improvement
 
@@ -341,7 +341,7 @@ improvement_process:
     - monitor_progress
     - adjust_approach
     - validate_results
-```
+```text
 
 ### Process Automation
 ```python
@@ -372,7 +372,7 @@ class ImprovementAutomation:
     def monitor_automation(self):
         """Monitor automation effectiveness"""
         pass
-```
+```text
 
 ## 📚 References
 

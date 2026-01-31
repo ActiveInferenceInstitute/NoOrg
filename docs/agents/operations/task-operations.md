@@ -43,7 +43,7 @@ class TaskStateMachine {
     await this.afterStateChange();
   }
 }
-```
+```text
 
 ### 1.2 Task Queue Implementation
 ```typescript
@@ -70,7 +70,7 @@ class PriorityTaskQueue {
     return task;
   }
 }
-```
+```text
 
 ## 2. Resource Management Implementation
 
@@ -99,7 +99,7 @@ class TaskResourceMonitor implements ResourceMonitor {
     });
   }
 }
-```
+```text
 
 ### 2.2 Resource Scaling
 ```typescript
@@ -122,7 +122,7 @@ class AutoScaler {
     return { action: 'none' };
   }
 }
-```
+```text
 
 ## 3. Task Processing Implementation
 
@@ -162,7 +162,7 @@ class TaskProcessor {
     }
   }
 }
-```
+```text
 
 ### 3.2 Error Recovery
 ```typescript
@@ -198,7 +198,7 @@ class TaskErrorRecovery {
     await this.scheduleRetry(task, delay);
   }
 }
-```
+```text
 
 ## 4. Monitoring Implementation
 
@@ -228,7 +228,7 @@ class TaskMetricsCollector {
     });
   }
 }
-```
+```text
 
 ### 4.2 Health Checks
 ```typescript
@@ -262,7 +262,7 @@ class TaskHealthCheck implements HealthCheck {
     return 'healthy';
   }
 }
-```
+```text
 
 ## 5. Integration Implementation
 
@@ -301,7 +301,7 @@ class TaskEventPublisher {
     };
   }
 }
-```
+```text
 
 ### 5.2 Service Integration
 ```typescript
@@ -323,7 +323,7 @@ class TaskServiceIntegration {
     }
   }
 }
-```
+```text
 
 ## 6. Deployment Implementation
 
@@ -346,7 +346,7 @@ class TaskConfiguration {
     await this.config.save(updated);
   }
 }
-```
+```text
 
 ### 6.2 Deployment Procedures
 ```typescript
@@ -372,7 +372,7 @@ class TaskDeployment {
     }
   }
 }
-```
+```text
 
 ---
 

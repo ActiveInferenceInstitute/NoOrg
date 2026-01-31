@@ -128,7 +128,7 @@ graph TD
     FacilitiesUnit -- Interacts With --> Utilities
     FacilitiesUnit -- Interacts With --> Regulators
     FacilitiesUnit -- Interacts With --> Landlord
-```
+```text
 
 ---
 Approved By: [[Approving Authority]]

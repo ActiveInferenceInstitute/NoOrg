@@ -290,7 +290,7 @@ open http://localhost:3001
 
 # View metrics
 curl http://localhost:9090/metrics
-```
+```text
 
 ### 2. Comprehensive Testing
 ```bash
@@ -302,7 +302,7 @@ pytest tests/performance/ -v
 
 # Integration tests
 pytest tests/integration/ -v
-```
+```text
 
 ### 3. Configuration Validation
 ```typescript
@@ -314,7 +314,7 @@ try {
 } catch (error) {
   // Detailed validation errors
 }
-```
+```text
 
 ### 4. Agent Health Monitoring
 ```typescript
@@ -323,14 +323,14 @@ await healthMonitor.startMonitoring(agentId);
 
 const report = await healthMonitor.generateHealthReport(agentId);
 console.log(`Status: ${report.overall}`);
-```
+```text
 
 ### 5. Task Analytics
 ```typescript
 const stats = await taskManager.getTaskStatistics();
 console.log(`Success rate: ${stats.successRate}%`);
 console.log(`Avg duration: ${stats.avgProcessingTime}ms`);
-```
+```text
 
 ---
 
@@ -465,7 +465,7 @@ await healthMonitor.registerHealthCheck(agentId, {
 
 // Get report
 const report = await healthMonitor.generateHealthReport(agentId);
-```
+```text
 
 ### 2. Task Analytics
 ```typescript
@@ -480,7 +480,7 @@ const history = await taskManager.getTaskHistory(taskId);
 
 // Cleanup old tasks
 await taskManager.cleanupOldTasks(Date.now() - 7*24*60*60*1000);
-```
+```text
 
 ### 3. Cache Pattern
 ```typescript
@@ -491,7 +491,7 @@ const cache = new CacheAsidePattern({ ttl: 300000, maxSize: 1000 });
 const data = await cache.get('key', async () => {
   return await expensiveOperation();
 });
-```
+```text
 
 ### 4. Saga Pattern
 ```typescript
@@ -504,7 +504,7 @@ const saga = SagaPattern.builder()
   .build();
 
 const result = await saga.execute(context);
-```
+```text
 
 ---
 
@@ -526,7 +526,7 @@ docker-compose logs -f coordinator
 # Coordinator: http://localhost:3000
 # Grafana: http://localhost:3001
 # Prometheus: http://localhost:9091
-```
+```text
 
 ### Production Deployment
 ```bash
@@ -541,7 +541,7 @@ git push origin main
 
 # 3. Monitor deployment
 kubectl get pods -n noorg
-```
+```text
 
 ---
 

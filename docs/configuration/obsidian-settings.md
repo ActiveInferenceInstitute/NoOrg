@@ -80,7 +80,7 @@ This document provides a comprehensive configuration guide for our Obsidian vaul
     }
   }
 }
-```
+```text
 
 ### Typography
 ```css
@@ -94,7 +94,7 @@ body {
   --line-height-normal: 1.6;
   --line-width: 42em;
 }
-```
+```text
 
 ## ⌨️ Hotkey Configuration
 
@@ -112,7 +112,7 @@ hotkeys:
     back: "Mod+["
     forward: "Mod+]"
     graph_view: "Mod+G"
-```
+```text
 
 ### Custom Commands
 ```json
@@ -128,7 +128,7 @@ hotkeys:
     }
   }
 }
-```
+```text
 
 ## 🔌 Community Plugins
 
@@ -175,7 +175,7 @@ mobile:
     - "editor:toggle-italic"
     - "editor:toggle-code"
     - "editor:insert-link"
-```
+```text
 
 ### Sync Configuration
 ```json
@@ -188,7 +188,7 @@ mobile:
     "sync_on_mobile": true
   }
 }
-```
+```text
 
 ## 🔒 Security Settings
 
@@ -199,7 +199,7 @@ security:
   password_timeout: 30  # minutes
   auto_lock: true
   lock_on_exit: true
-```
+```text
 
 ### Backup Configuration
 ```json
@@ -216,7 +216,7 @@ security:
     ]
   }
 }
-```
+```text
 
 ## 🔄 Integration Settings
 
@@ -229,7 +229,7 @@ git:
     commit_interval: 10  # minutes
     commit_message_template: "docs: update {{files}}"
     backup_branch: "backup"
-```
+```text
 
 ### External Tools
 ```json
@@ -240,7 +240,7 @@ git:
     "pdf_viewer": "default"
   }
 }
-```
+```text
 
 ## 📊 Performance Settings
 
@@ -251,7 +251,7 @@ cache:
   cache_timeout: 3600   # seconds
   enable_memory_cache: true
   enable_disk_cache: true
-```
+```text
 
 ### Search Optimization
 ```json
@@ -263,7 +263,7 @@ cache:
     "max_search_results": 50
   }
 }
-```
+```text
 
 ## 📚 References
 

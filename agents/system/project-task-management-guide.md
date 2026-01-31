@@ -37,7 +37,7 @@ graph TD
         MS --> PR[Progress Reporting]
         PR --> PA[Performance Analysis]
     end
-```
+```text
 
 ## Project Management
 
@@ -86,7 +86,7 @@ project_structure:
         target_date: timestamp
         criteria: [string]
         verification: [string]
-```
+```text
 
 ### Task Breakdown
 ```yaml
@@ -123,7 +123,7 @@ task_breakdown:
       upstream: [task_id]
       downstream: [task_id]
       resources: [resource_id]
-```
+```text
 
 ## Task Execution
 
@@ -161,7 +161,7 @@ execution_pipeline:
       resource_adjustment:
         enabled: true
         factors: [utilization, efficiency]
-```
+```text
 
 ### Progress Tracking
 ```yaml
@@ -195,7 +195,7 @@ progress_tracking:
       - metrics_snapshot
       - resource_state
     retention: 24h
-```
+```text
 
 ## Reporting System
 
@@ -235,7 +235,7 @@ realtime_reporting:
           topic: alerts
         - type: webhook
           endpoint: monitoring_system
-```
+```text
 
 ### Periodic Reports
 ```yaml
@@ -264,7 +264,7 @@ periodic_reports:
       - optimization_recommendations
     format: dashboard
     distribution: [stakeholders]
-```
+```text
 
 ### Analytics and Insights
 ```yaml
@@ -297,7 +297,7 @@ analytics:
         objectives:
           - minimize_completion_time
           - maximize_resource_efficiency
-```
+```text
 
 ## Integration Points
 
@@ -325,7 +325,7 @@ system_integration:
       endpoint: /status
       format: event_stream
       keepalive: 30s
-```
+```text
 
 ### External Integration
 ```yaml
@@ -352,7 +352,7 @@ external_integration:
         - project_overview
         - task_status
         - resource_usage
-```
+```text
 
 ## Best Practices
 
@@ -373,7 +373,7 @@ task_management_practices:
     - design_for_parallelism
     - implement_backpressure
     - plan_for_growth
-```
+```text
 
 ### Reporting
 ```yaml
@@ -392,7 +392,7 @@ reporting_practices:
     - target_audience
     - relevant_content
     - timely_delivery
-```
+```text
 
 ## Documentation
 

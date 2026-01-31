@@ -45,7 +45,7 @@ graph TD
     style E1 fill:#f9f,stroke:#333,stroke-width:1px
     style F1 fill:#f9f,stroke:#333,stroke-width:1px
     style G1 fill:#f9f,stroke:#333,stroke-width:1px
-```
+```text
 
 ## 4. Steps Description
 

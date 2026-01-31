@@ -31,7 +31,7 @@ flowchart LR
     
     Agent --> Resolution[Issue Resolution]
     Knowledge --> Resolution
-```
+```text
 
 ### Channel-Specific Guidelines
 
@@ -74,7 +74,7 @@ flowchart LR
 ### Email Templates
 
 #### Initial Response Template
-```
+```text
 Hello [Customer Name],
 
 Thank you for contacting [Company] Support. I understand that you're experiencing [brief issue description].
@@ -90,10 +90,10 @@ Thank you for your patience.
 Best regards,
 [Agent Name]
 [Company] Support Team
-```
+```text
 
 #### Resolution Template
-```
+```text
 Hello [Customer Name],
 
 Great news! I've resolved the [issue description] you reported.
@@ -109,7 +109,7 @@ Thank you for choosing [Company].
 Best regards,
 [Agent Name]
 [Company] Support Team
-```
+```text
 
 Additional templates are available in the [[../Resources/CommunicationTemplates|Communication Templates Library]].
 

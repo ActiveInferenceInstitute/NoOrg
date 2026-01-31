@@ -19,7 +19,7 @@ graph TD
     A --> C[Tool Integration]
     A --> D[Safety Controls]
     A --> E[Monitoring System]
-```
+```text
 
 ### Framework Layers
 1. **Integration Layers**

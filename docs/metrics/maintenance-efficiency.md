@@ -50,7 +50,7 @@ update_speed:
       - efficiency_patterns
       - improvement_rates
       - optimization_impact
-```
+```text
 
 ### Speed Management
 ```python
@@ -81,7 +81,7 @@ class SpeedManager:
     def optimize_performance(self):
         """Optimize update performance"""
         pass
-```
+```text
 
 ## 🔄 Resource Usage
 
@@ -115,7 +115,7 @@ class SpeedManager:
     }
   }
 }
-```
+```text
 
 ### Resource Management
 ```python
@@ -146,7 +146,7 @@ class ResourceManager:
     def optimize_utilization(self):
         """Optimize resource utilization"""
         pass
-```
+```text
 
 ## 📊 Process Effectiveness
 
@@ -188,7 +188,7 @@ process_effectiveness:
       - improvement_patterns
       - impact_assessment
       - value_creation
-```
+```text
 
 ### Effectiveness Management
 ```python
@@ -219,7 +219,7 @@ class EffectivenessManager:
     def improve_effectiveness(self):
         """Improve process effectiveness"""
         pass
-```
+```text
 
 ## 💰 Cost Efficiency
 
@@ -261,7 +261,7 @@ cost_efficiency:
       - efficiency_patterns
       - savings_analysis
       - value_assessment
-```
+```text
 
 ### Efficiency Management
 ```python
@@ -292,7 +292,7 @@ class EfficiencyManager:
     def optimize_costs(self):
         """Optimize cost structure"""
         pass
-```
+```text
 
 ## 📚 References
 

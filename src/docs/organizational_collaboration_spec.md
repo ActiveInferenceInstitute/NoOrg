@@ -175,7 +175,7 @@ The system consists of the following core components:
   "status": "in_progress" // draft, in_review, final
 }
 
-```
+```text
 
 ## 6. Key Considerations
 

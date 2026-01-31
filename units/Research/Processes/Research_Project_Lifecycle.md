@@ -55,7 +55,7 @@ graph TD
         K --> K1(Final Project Report);
         L --> L1(Archived Dataset);
     end
-```
+```text
 
 ## 4. Stages Description
 

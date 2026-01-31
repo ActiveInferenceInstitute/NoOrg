@@ -72,7 +72,7 @@ graph TD
     A --> C[Style Tests]
     A --> D[Content Tests]
     A --> E[Integration Tests]
-```
+```text
 
 ## 📊 Quality Tools
 

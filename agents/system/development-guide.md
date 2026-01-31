@@ -38,7 +38,7 @@ graph TD
         UNIT --> INT[Integration Tests]
         INT --> DEPLOY[Deployment]
     end
-```
+```text
 
 ## Development Setup
 
@@ -87,10 +87,10 @@ development_environment:
         "python.linting.enabled": true
         "python.linting.pylintEnabled": true
         "editor.formatOnSave": true
-```
+```text
 
 ### Project Structure
-```
+```text
 agents/
 ├── core/                     # Core agent functionality
 │   ├── base/                # Base classes and interfaces
@@ -124,7 +124,7 @@ agents/
     ├── docker/            # Docker configurations
     ├── kubernetes/        # Kubernetes manifests
     └── terraform/         # Infrastructure as code
-```
+```text
 
 ## Development Workflow
 
@@ -204,7 +204,7 @@ class TaskProcessor:
                 extra={"task_id": task["task_id"], "error": str(e)}
             )
             raise
-```
+```text
 
 ### Testing Guidelines
 ```python
@@ -266,7 +266,7 @@ class TestTaskProcessor:
         # Act/Assert
         with pytest.raises(ValidationError):
             await processor.process_task(task)
-```
+```text
 
 ### Documentation Standards
 ```python
@@ -311,7 +311,7 @@ class TaskValidator:
         self._validate_config(config)
         self.config = config
         self.logger = logging.getLogger(__name__)
-```
+```text
 
 ## Development Patterns
 
@@ -371,7 +371,7 @@ class TaskExecutorAgent(BaseAgent):
         except Exception as e:
             self.logger.error(f"Failed to start agent: {e}")
             raise
-```
+```text
 
 ### Protocol Implementation
 ```python
@@ -440,7 +440,7 @@ class MessageProtocol:
         except Exception as e:
             self.logger.error(f"Message decoding failed: {e}")
             raise DecodingError(str(e))
-```
+```text
 
 ### Error Handling
 ```python
@@ -497,7 +497,7 @@ def handle_agent_error(error: Exception, context: Dict) -> None:
         recovery.handle_error(error, context)
     except Exception as e:
         logger.error(f"Error recovery failed: {e}")
-```
+```text
 
 ## Local Development
 
@@ -576,7 +576,7 @@ services:
       - "9090:9090"
     volumes:
       - ./config/prometheus:/etc/prometheus
-```
+```text
 
 ### Development Tools
 ```yaml
@@ -637,7 +637,7 @@ development_tools:
       installation: pip install py-spy
       commands:
         - py-spy record -o profile.svg --pid <PID>
-```
+```text
 
 ## CI/CD Pipeline
 
@@ -707,7 +707,7 @@ jobs:
       - name: Deploy to production
         run: |
           # Add deployment steps
-```
+```text
 
 ## Documentation
 

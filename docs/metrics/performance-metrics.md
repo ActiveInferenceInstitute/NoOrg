@@ -19,7 +19,7 @@ graph TD
     A --> C[Application Performance]
     A --> D[Resource Utilization]
     A --> E[User Experience]
-```
+```text
 
 ### Metrics Architecture
 1. **Metric Categories**

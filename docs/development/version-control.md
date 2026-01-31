@@ -19,7 +19,7 @@ graph TD
     A --> C[Branch Strategy]
     A --> D[Commit Standards]
     A --> E[Release Management]
-```
+```text
 
 ### Version Control Architecture
 1. **System Components**

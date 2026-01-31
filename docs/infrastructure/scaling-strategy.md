@@ -19,7 +19,7 @@ graph TD
     A --> C[Vertical Scaling]
     A --> D[Resource Management]
     A --> E[Performance Optimization]
-```
+```text
 
 ### Strategy Architecture
 1. **Scaling Layers**

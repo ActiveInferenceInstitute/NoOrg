@@ -26,7 +26,7 @@ related_documents:
   - [[monitoring/automation_framework]]
   - [[monitoring/performance_framework]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the compliance framework for monitoring systems within the agent framework, providing comprehensive approaches for ensuring regulatory compliance, governance, and adherence to standards. It integrates with the [[monitoring/monitoring_framework|Monitoring Framework]] and extends the capabilities defined in the [[monitoring/security_framework|Security Framework]].
@@ -43,7 +43,7 @@ class ComplianceManager:
         self.auditor = ComplianceAuditor()
         self.reporter = ComplianceReporter()
         self.monitor = ComplianceMonitor()
-```
+```text
 
 #### 1.2 Component Relationships
 ```mermaid
@@ -54,7 +54,7 @@ graph TD
     B --> E[Policy Engine]
     C --> F[Control Engine]
     D --> G[Audit Engine]
-```
+```text
 
 ### 2. Compliance Validation
 #### 2.1 Validation System
@@ -71,7 +71,7 @@ class ComplianceValidator:
         checks = await self.checker.check_compliance(policy)
         report = await self.reporter.report_validation(checks)
         return await self.engine.validate_compliance(report)
-```
+```text
 
 #### 2.2 Validation Types
 - [[monitoring/compliance/regulatory|Regulatory Validation]]
@@ -101,7 +101,7 @@ class ComplianceEnforcer:
         monitoring = await self.monitor.monitor_enforcement(controls)
         report = await self.reporter.report_enforcement(monitoring)
         return await self.engine.enforce_compliance(report)
-```
+```text
 
 #### 3.2 Enforcement Types
 - [[monitoring/enforcement/policy|Policy Enforcement]]
@@ -124,7 +124,7 @@ class ComplianceAuditor:
         analysis = await self.analyzer.analyze_audit(collection)
         report = await self.reporter.report_audit(analysis)
         return await self.engine.process_audit(report)
-```
+```text
 
 #### 4.2 Audit Types
 - [[monitoring/audit/regulatory|Regulatory Audit]]
@@ -147,7 +147,7 @@ class ComplianceReporter:
         formatting = await self.formatter.format_report(report)
         distribution = await self.distributor.distribute_report(formatting)
         return await self.engine.process_report(distribution)
-```
+```text
 
 #### 5.2 Report Types
 - [[monitoring/reports/compliance|Compliance Reports]]
@@ -172,7 +172,7 @@ class ComplianceStandards:
     async def verify_compliance(self, verification):
         # Compliance verification
         pass
-```
+```text
 
 #### 1.2 Standard Types
 - [[monitoring/standards/regulatory|Regulatory Standards]]
@@ -189,7 +189,7 @@ class ComplianceProcess:
         self.executor = ProcessExecutor()
         self.validator = ProcessValidator()
         self.monitor = ProcessMonitor()
-```
+```text
 
 #### 2.2 Process Types
 - [[monitoring/processes/validation|Validation Process]]
@@ -220,7 +220,7 @@ class QualityMonitoring:
     async def measure_metrics(self, measurements):
         # Metrics measurement
         pass
-```
+```text
 
 ### 2. Performance Management
 #### 2.1 Performance Areas
@@ -252,7 +252,7 @@ class ComplianceSecurity:
     async def audit_security(self, audit):
         # Security auditing logic
         pass
-```
+```text
 
 #### 1.2 Security Areas
 - [[security/compliance/validation|Validation Security]]
@@ -302,7 +302,7 @@ class ValidationPattern:
         self.policy = PolicyManager()
         self.checker = ComplianceChecker()
         self.reporter = ValidationReporter()
-```
+```text
 
 ### B. Enforcement Patterns
 ```python
@@ -312,7 +312,7 @@ class EnforcementPattern:
         self.controller = ControlManager()
         self.monitor = EnforcementMonitor()
         self.reporter = EnforcementReporter()
-```
+```text
 
 ### C. Audit Patterns
 ```python
@@ -322,4 +322,4 @@ class AuditPattern:
         self.collector = AuditCollector()
         self.analyzer = AuditAnalyzer()
         self.reporter = AuditReporter()
-``` 
+```text 

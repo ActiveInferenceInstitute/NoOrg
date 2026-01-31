@@ -493,12 +493,10 @@ export class SharedStateManager implements ISharedStateManager {
     this.state = newState;
   }
 
-  // --- Optional Methods (Example Implementations - Review if needed) ---
-  
-  // These were present in some earlier versions, kept here commented out for reference
-  // If they are truly needed, they should be added to the interface as well.
-
-  /*
+  /**
+   * Delete state at a specific path
+   * @param path Dot notation path to delete
+   */
   public async deleteState(path: string): Promise<void> {
     this.logger.info('Deleting state', { path });
     const pathParts = path.split('.');
@@ -506,16 +504,23 @@ export class SharedStateManager implements ISharedStateManager {
     if (!lastPart) return;
 
     const parentPath = pathParts.join('.');
-    const parent = this.getNestedValue(this.state, parentPath);
+    const parent = parentPath ? this.getNestedValue(this.state, parentPath) : this.state;
 
     if (typeof parent === 'object' && parent !== null && lastPart in parent) {
       const oldValue = parent[lastPart];
       delete parent[lastPart];
-      this.internalMetadata.delete(path); // Remove internal meta if needed
+      this.internalMetadata.delete(path);
       this.logger.info('State deleted successfully', { path });
 
       // Notify subscribers
-      this.notifySubscribers(path, undefined, oldValue, { // Pass appropriate metadata });
+      const deleteMetadata: StateMetadata = {
+        action: 'deleteState',
+        agentId: 'system',
+        agentName: 'SharedStateManager',
+        agentType: 'System',
+        timestamp: new Date().toISOString()
+      };
+      this.notifySubscribers(path, undefined, oldValue, deleteMetadata);
 
       if (this.autoSaveEnabled) {
         await this.saveState();
@@ -524,32 +529,52 @@ export class SharedStateManager implements ISharedStateManager {
       this.logger.warn('Attempted to delete non-existent state', { path });
     }
   }
-  */
 
-  /*
+  /**
+   * Initialize the SharedStateManager by loading persisted state
+   */
   public async initialize(): Promise<void> {
     this.logger.info('Initializing SharedStateManager');
-    await this.loadState(); // Attempt to load persisted state on init
+    if (this.persistencePath) {
+      await this.loadState();
+    }
     this.logger.info('SharedStateManager initialized successfully');
   }
-  */
 
-  /*
+  /**
+   * Shutdown the SharedStateManager, clearing intervals and optionally persisting state
+   */
   async shutdown(): Promise<void> {
     this.logger.info('Shutting down SharedStateManager');
     if (this.autoSaveInterval) {
       clearInterval(this.autoSaveInterval);
       this.autoSaveInterval = null;
     }
-    // Optionally save state one last time?
-    // if (this.persistencePath) {
-    //   await this.saveState();
-    // }
+    // Save state one final time before shutdown
+    if (this.persistencePath) {
+      try {
+        await this.saveState();
+      } catch (err) {
+        this.logger.error('Failed to save state during shutdown', { error: err });
+      }
+    }
     this.state = {};
     this.subscriptionCallbacks.clear();
     this.internalMetadata.clear();
+    this.persistedPaths.clear();
     this.logger.info('SharedStateManager shut down successfully');
   }
-  */
 
+  /**
+   * Reset the singleton instance (useful for testing)
+   */
+  public static resetInstance(): void {
+    if (SharedStateManager.instance) {
+      // Clear auto-save interval if active
+      if (SharedStateManager.instance.autoSaveInterval) {
+        clearInterval(SharedStateManager.instance.autoSaveInterval);
+      }
+    }
+    SharedStateManager.instance = undefined as any;
+  }
 } 

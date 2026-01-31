@@ -50,7 +50,7 @@ icons_and_badges:
           placement: "optimal"
           sizing: "responsive"
           grouping: "logical"
-```
+```text
 
 ### Visual Management
 ```python
@@ -81,7 +81,7 @@ class IconBadgeManager:
     def enhance_presentation(self):
         """Enhance visual presentation"""
         pass
-```
+```text
 
 ## 🔄 Status Indicators
 
@@ -129,7 +129,7 @@ class IconBadgeManager:
     }
   }
 }
-```
+```text
 
 ### Indicator Management
 ```python
@@ -160,7 +160,7 @@ class StatusIndicatorManager:
     def enhance_feedback(self):
         """Enhance indicator feedback"""
         pass
-```
+```text
 
 ## 📊 Progress Bars
 
@@ -202,7 +202,7 @@ progress_bars:
           type: "intelligent"
           timing: "contextual"
           presentation: "adaptive"
-```
+```text
 
 ### Progress Management
 ```python
@@ -233,7 +233,7 @@ class ProgressBarManager:
     def enhance_feedback(self):
         """Enhance progress feedback"""
         pass
-```
+```text
 
 ## ⚡ Priority Markers
 
@@ -279,7 +279,7 @@ priority_markers:
           placement: "optimal"
           emphasis: "appropriate"
           visibility: "context_aware"
-```
+```text
 
 ### Marker Management
 ```python
@@ -310,7 +310,7 @@ class PriorityMarkerManager:
     def enhance_indication(self):
         """Enhance priority indication"""
         pass
-```
+```text
 
 ## 🔗 Related Documentation
 

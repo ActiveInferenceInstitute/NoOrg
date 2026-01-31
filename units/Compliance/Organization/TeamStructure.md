@@ -61,7 +61,7 @@
   - Automated monitoring tools
 
 ## Organizational Chart
-```
+```text
 Chief Compliance Officer
 ├── Regulatory Compliance Manager
 │   ├── Regulatory Analysts (2)
@@ -81,7 +81,7 @@ Chief Compliance Officer
 └── Compliance Technology Lead
     ├── Technology Specialists (2)
     └── Data Analysts (2)
-```
+```text
 
 ## Reporting Relationships
 - CCO reports to CEO with dotted line to [[../BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]

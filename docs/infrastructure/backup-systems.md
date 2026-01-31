@@ -19,7 +19,7 @@ graph TD
     A --> C[Backup Storage]
     A --> D[Recovery Systems]
     A --> E[Retention Management]
-```
+```text
 
 ### Backup Architecture
 1. **Backup Layers**

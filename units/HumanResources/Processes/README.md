@@ -9,11 +9,11 @@ Detailed steps, roles, responsibilities, and associated forms or system actions 
 *   [**Recruitment Process**](./RecruitmentProcess.md): From job requisition to offer acceptance.
 *   [**Onboarding Process**](./OnboardingProcess.md): Integrating new hires into the organization.
 *   [**Performance Management Process**](./PerformanceManagementProcess.md): Goal setting, reviews, and development planning.
-*   [**Compensation Review Process**](./CompensationReviewProcess.md): Annual salary reviews, promotions, bonus cycles.
-*   [**Benefits Enrollment Process**](./BenefitsEnrollmentProcess.md): New hire and annual open enrollment.
-*   [**Leave Request & Approval Process**](./LeaveRequestApprovalProcess.md): Procedures for requesting and managing time off.
-*   [**Employee Relations Issue Resolution Process**](./EmployeeRelationsIssueResolutionProcess.md): Handling complaints and investigations.
+*   [**Compensation Review Process**](AGENTS.md): Annual salary reviews, promotions, bonus cycles.
+*   [**Benefits Enrollment Process**](AGENTS.md): New hire and annual open enrollment.
+*   [**Leave Request & Approval Process**](AGENTS.md): Procedures for requesting and managing time off.
+*   [**Employee Relations Issue Resolution Process**](AGENTS.md): Handling complaints and investigations.
 *   [**Offboarding Process**](./OffboardingProcess.md): Managing employee separations.
-*   [**Training & Development Request Process**](./TrainingDevelopmentRequestProcess.md)
+*   [**Training & Development Request Process**](AGENTS.md)
 
 *(Add links to other relevant processes as they are developed)* 

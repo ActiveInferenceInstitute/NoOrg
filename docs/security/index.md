@@ -69,7 +69,7 @@ graph TB
     Perimeter --> Network
     Network --> Application
     Application --> Data
-```
+```text
 
 ## Authentication System
 
@@ -100,7 +100,7 @@ sequenceDiagram
         AS->>AS: Validate Refresh Token
         AS->>C: New Auth Token
     end
-```
+```text
 
 ## Authorization Framework
 
@@ -139,7 +139,7 @@ graph TB
     
     Users --> Resources
     Resources --> Policies
-```
+```text
 
 ## Data Protection
 
@@ -180,7 +180,7 @@ graph TB
     
     KeyMgmt --> DataEnc
     DataEnc --> HSM
-```
+```text
 
 ## Security Monitoring
 
@@ -225,7 +225,7 @@ graph TB
     
     Collection --> Analysis
     Analysis --> Response
-```
+```text
 
 ## Compliance Framework
 
@@ -267,7 +267,7 @@ graph TB
     
     Requirements --> Controls
     Controls --> Audit
-```
+```text
 
 ## Related Documentation
 - [Authentication Guide](authentication/guide.md)

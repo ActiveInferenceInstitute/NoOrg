@@ -50,7 +50,7 @@ daily_reporting:
       - midday_update
       - evening_report
       - incident_alerts
-```
+```text
 
 ### Report Management
 ```python
@@ -81,7 +81,7 @@ class DailyReporter:
     def manage_distribution(self):
         """Manage report distribution"""
         pass
-```
+```text
 
 ## 📊 Weekly Summaries
 
@@ -115,7 +115,7 @@ class DailyReporter:
     }
   }
 }
-```
+```text
 
 ### Summary Management
 ```python
@@ -146,7 +146,7 @@ class WeeklySummarizer:
     def distribute_summary(self):
         """Distribute weekly summary"""
         pass
-```
+```text
 
 ## 📈 Monthly Analysis
 
@@ -188,7 +188,7 @@ monthly_analysis:
       - capacity_forecasting
       - improvement_initiatives
       - strategic_adjustments
-```
+```text
 
 ### Analysis Management
 ```python
@@ -219,7 +219,7 @@ class MonthlyAnalyzer:
     def generate_recommendations(self):
         """Generate strategic recommendations"""
         pass
-```
+```text
 
 ## 🔄 Quarterly Reviews
 
@@ -261,7 +261,7 @@ quarterly_reviews:
       - risk_mitigation
       - opportunity_pursuit
       - capability_enhancement
-```
+```text
 
 ### Review Management
 ```python
@@ -292,7 +292,7 @@ class QuarterlyReviewer:
     def update_strategy(self):
         """Update strategic planning"""
         pass
-```
+```text
 
 ## 📚 References
 

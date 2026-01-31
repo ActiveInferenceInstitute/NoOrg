@@ -27,7 +27,7 @@ related_processes:
   - [[processes/quality_processes]]
   - [[processes/change_management]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document details the operational processes and procedures that execute the [[frameworks/implementation_framework|Implementation Framework]], ensuring consistent and effective implementation of initiatives across the organization.
@@ -43,7 +43,7 @@ graph TD
     C --> D[Monitoring]
     D --> E[Optimization]
     E --> A
-```
+```text
 
 #### 1.2 Key Components
 - Implementation Teams

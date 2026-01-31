@@ -25,7 +25,7 @@ graph LR
     
     G[Context] -.-> D
     G -.-> E
-```
+```text
 
 ## Perception Components
 
@@ -42,7 +42,7 @@ sensor_systems:
     - api_endpoints
     - event_listeners
     - state_monitors
-```
+```text
 
 ### Processing Layers
 
@@ -64,7 +64,7 @@ pattern_recognition:
         - recognized_patterns
         - confidence_scores
         - temporal_context
-```
+```text
 
 ## Integration
 
@@ -84,7 +84,7 @@ data_pipeline:
     consumers:
       - cognitive_system
       - decision_framework
-```
+```text
 
 ### Cross-System Communication
 - [[cognitive-models|Cognitive Integration]]
@@ -110,7 +110,7 @@ quality_metrics:
     - processing_latency
     - resource_usage
     - throughput
-```
+```text
 
 ## Advanced Features
 
@@ -127,7 +127,7 @@ graph TD
     B --> C[Model Update]
     C --> D[Improved Recognition]
     D --> A
-```
+```text
 
 ## References
 - [[sensor-integration|Sensor Integration Guide]]

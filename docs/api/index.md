@@ -44,7 +44,7 @@ graph TB
 
     Gateway --> Services
     Services --> Security
-```
+```text
 
 ## API Standards
 
@@ -68,7 +68,7 @@ graph LR
         S2 --> S3[4xx Client Error]
         S3 --> S4[5xx Server Error]
     end
-```
+```text
 
 ### Authentication Flow
 ```mermaid
@@ -88,7 +88,7 @@ sequenceDiagram
     R->>D: Get Resource
     D->>R: Return Data
     R->>C: Send Response
-```
+```text
 
 ## API Specifications
 
@@ -125,7 +125,7 @@ paths:
       responses:
         '200':
           description: User details
-```
+```text
 
 #### Account Service API
 ```yaml
@@ -147,7 +147,7 @@ paths:
       responses:
         '200':
           description: Transaction history
-```
+```text
 
 ## API Integration Patterns
 
@@ -171,7 +171,7 @@ graph TB
     
     Publishers --> Queue
     Queue --> Subscribers
-```
+```text
 
 ### Microservices Communication
 ```mermaid
@@ -190,7 +190,7 @@ graph LR
         H1[CQRS] --> H2[Event Sourcing]
         H2 --> H3[Saga Pattern]
     end
-```
+```text
 
 ## API Security
 
@@ -215,7 +215,7 @@ graph TB
     
     Authentication --> Authorization
     Authorization --> Protection
-```
+```text
 
 ## API Documentation
 
@@ -239,7 +239,7 @@ mindmap
       Endpoints
       Methods
       Parameters
-```
+```text
 
 ## API Testing
 
@@ -263,7 +263,7 @@ graph TB
     
     Unit --> Integration
     Integration --> E2E
-```
+```text
 
 ## Related Documentation
 - [API Design Guidelines](guidelines/api-design.md)

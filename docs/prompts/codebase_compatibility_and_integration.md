@@ -47,7 +47,7 @@ mindmap
       Parallel operation
       Rollback capability
       Gradual adoption
-```
+```text
 
 ## Introduction of New Methods and Functions
 1. **Consistency with existing patterns**
@@ -113,7 +113,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Introduction of New Classes and Modules
 1. **Architectural placement**
@@ -179,7 +179,7 @@ flowchart TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Introduction of New Dependencies
 1. **Dependency evaluation**
@@ -245,7 +245,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Introduction of New Architectural Patterns
 1. **Pattern compatibility assessment**
@@ -311,7 +311,7 @@ flowchart LR
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Comprehensive Documentation Practices
 1. **Code-level documentation**
@@ -377,7 +377,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Styling and Formatting Integration
 1. **Visual consistency**
@@ -443,7 +443,7 @@ graph TD
     C --> F
     D --> F
     E --> F
-```
+```text
 
 ## Compatibility Decision Framework
 - **When to strictly match existing patterns**: Core functionalities, publicly exposed APIs, foundational components
@@ -485,7 +485,7 @@ mindmap
       Strategic shifts
       Major version upgrades
       Architectural realignments
-```
+```text
 
 ## Codebase Integration Process Model
 ```mermaid
@@ -523,4 +523,4 @@ graph TB
     R -.-> D
     R -.-> I
     R -.-> J
-``` 
+```text 

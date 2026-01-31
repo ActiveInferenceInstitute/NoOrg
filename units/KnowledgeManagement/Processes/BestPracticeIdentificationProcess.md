@@ -41,7 +41,7 @@ flowchart TD
     N -->|Yes| O[Update if Needed]
     N -->|No| P[Retire Best Practice]
     O --> M
-```
+```text
 
 ## Detailed Process Steps
 

@@ -26,7 +26,7 @@ flowchart TD
     Treat --> Document[Document Results]
     Document --> Review[Review and Approve]
     Review --> End[End Assessment]
-```
+```text
 
 ## Detailed Process Steps
 

@@ -11,7 +11,7 @@ A Python script for auditing and fixing organizational unit structures. It ensur
 ```bash
 # Run the units check and fix script
 python fix_and_check_units.py
-```
+```text
 
 The script performs the following tasks:
 - Validates unit directory structures
@@ -32,7 +32,7 @@ Requirements:
 ```bash
 # Run a Python script
 python script_name.py [arguments]
-```
+```text
 
 ### JavaScript/TypeScript Scripts
 
@@ -47,7 +47,7 @@ node script_name.js [arguments]
 
 # Run a TypeScript script
 ts-node script_name.ts [arguments]
-```
+```text
 
 ## Creating New Scripts
 

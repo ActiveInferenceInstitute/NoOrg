@@ -37,7 +37,7 @@ graph TD
         API[API Gateway] --> TE
         EXT[External Systems] --> API
     end
-```
+```text
 
 ## Implementation Prerequisites
 
@@ -71,7 +71,7 @@ development_requirements:
     storage:
       capacity: 200GB
       type: SSD
-```
+```text
 
 ### System Dependencies
 ```yaml
@@ -105,7 +105,7 @@ system_dependencies:
     metrics: Prometheus
     logging: ELK Stack
     tracing: Jaeger
-```
+```text
 
 ## Core Agent Implementation
 
@@ -153,7 +153,7 @@ class TaskExecutor:
         except Exception as e:
             await self._handle_execution_error(task, e)
             raise
-```
+```text
 
 ### 2. Coordinator Agent
 ```python
@@ -198,7 +198,7 @@ class Coordinator:
         except Exception as e:
             await self._handle_coordination_error(task, e)
             raise
-```
+```text
 
 ### 3. Resource Manager Agent
 ```python
@@ -246,7 +246,7 @@ class ResourceManager:
         except Exception as e:
             await self._handle_allocation_error(request, e)
             raise
-```
+```text
 
 ### 4. Monitoring Agent
 ```python
@@ -306,7 +306,7 @@ class MonitoringAgent:
             await self._store_analysis(analysis)
             
             await asyncio.sleep(self.config.collection_interval)
-```
+```text
 
 ### 5. Learning Agent
 ```python
@@ -341,7 +341,7 @@ class LearningAgent:
         except Exception as e:
             await self._handle_learning_error(e)
             raise
-```
+```text
 
 ## Integration Implementation
 
@@ -376,7 +376,7 @@ class MessageBroker:
             queue=topic,
             callback=callback
         )
-```
+```text
 
 ### 2. Service Discovery
 ```python
@@ -401,7 +401,7 @@ class ServiceRegistry:
         if services:
             return self._select_service(services)
         raise ServiceNotFoundError(service_name)
-```
+```text
 
 ### 3. Monitoring Integration
 ```python
@@ -430,7 +430,7 @@ class MonitoringIntegration:
     async def trace_operation(self, name: str, context: Dict):
         """Trace operation"""
         return await self.tracing.start_span(name, context)
-```
+```text
 
 ### 4. Security Integration
 ```python
@@ -456,7 +456,7 @@ class SecurityIntegration:
     async def decrypt_data(self, encrypted: bytes) -> Dict:
         """Decrypt sensitive data"""
         return await self.crypto.decrypt(encrypted)
-```
+```text
 
 ## Deployment Implementation
 
@@ -494,7 +494,7 @@ container_config:
           configMapKeyRef:
             name: system-config
             key: registry_url
-```
+```text
 
 ### 2. Kubernetes Deployment
 ```yaml
@@ -530,7 +530,7 @@ kubernetes_deployment:
                     configMapKeyRef:
                       name: system-config
                       key: broker_url
-```
+```text
 
 ### 3. Service Configuration
 ```yaml
@@ -548,7 +548,7 @@ service_config:
           port: 80
           targetPort: 8080
       type: ClusterIP
-```
+```text
 
 ## Testing Implementation
 
@@ -574,7 +574,7 @@ class TestTaskExecutor:
         )
         result = await executor.execute_task(task)
         assert result.status == "completed"
-```
+```text
 
 ### 2. Integration Testing
 ```python
@@ -596,7 +596,7 @@ class TestSystemIntegration:
         # Verify execution
         assert result.status == "completed"
         assert result.output is not None
-```
+```text
 
 ### 3. Performance Testing
 ```python
@@ -621,7 +621,7 @@ class TestSystemPerformance:
         duration = end_time - start_time
         throughput = len(results) / duration
         assert throughput >= 100  # tasks per second
-```
+```text
 
 ## Documentation
 

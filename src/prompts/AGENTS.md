@@ -42,7 +42,7 @@ const prompt = await promptManager.getPrompt('agent_coordination', {
   agent_details: 'Research Agent, Analysis Agent',
   shared_state: '{}'
 });
-```
+```text
 
 ### Template Variables
 
@@ -54,7 +54,7 @@ const filledPrompt = await promptManager.getPrompt('research_task', {
   depth: 'comprehensive',
   sources: ['academic papers', 'industry reports']
 });
-```
+```text
 
 ## Template Categories
 

@@ -47,7 +47,7 @@ team_metrics:
     - cycle_time: ""
     - throughput: ""
     - quality_metrics: ""
-```
+```text
 
 ### Weekly Action Items
 ```python
@@ -78,7 +78,7 @@ class WeeklyActions:
     def track_progress(self):
         """Track action progress"""
         pass
-```
+```text
 
 ## 📈 Monthly Report Template
 
@@ -131,7 +131,7 @@ class WeeklyActions:
     }
   }
 }
-```
+```text
 
 ### Monthly Analysis
 ```python
@@ -162,7 +162,7 @@ class MonthlyAnalysis:
     def provide_recommendations(self):
         """Provide strategic recommendations"""
         pass
-```
+```text
 
 ## 📊 Quarterly Report Template
 
@@ -207,7 +207,7 @@ strategic_objectives:
     key_results: []
     challenges: []
     next_steps: []
-```
+```text
 
 ### Performance Analytics
 ```python
@@ -238,7 +238,7 @@ class QuarterlyAnalytics:
     def generate_insights(self):
         """Generate quarterly insights"""
         pass
-```
+```text
 
 ## 📈 Metrics Dashboard
 
@@ -274,7 +274,7 @@ metrics_dashboard:
         current: ""
         projected: ""
         confidence: "High/Medium/Low"
-```
+```text
 
 ## 📊 Visualization Templates
 
@@ -318,7 +318,7 @@ metrics_dashboard:
     }
   }
 }
-```
+```text
 
 ## 📚 References
 

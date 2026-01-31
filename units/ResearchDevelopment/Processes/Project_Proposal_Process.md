@@ -71,7 +71,7 @@ graph TD
         R6[Team Capability]
         R1 & R2 & R3 & R4 & R5 & R6 --> E
     end
-```
+```text
 
 ## 5. Roles and Responsibilities
 

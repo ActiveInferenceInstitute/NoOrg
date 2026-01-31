@@ -40,7 +40,7 @@ core_agents:
     role: System-wide learning and adaptation
     priority: High
     dependencies: [monitoring]
-```
+```text
 
 ## System Architecture
 
@@ -69,7 +69,7 @@ graph TD
         M
         L
     end
-```
+```text
 
 ### Communication Flow
 ```mermaid
@@ -92,7 +92,7 @@ sequenceDiagram
         M->>C: SystemState
         C->>RM: OptimizationDirective
     end
-```
+```text
 
 ## Integration Requirements
 
@@ -132,7 +132,7 @@ software_stack:
     metrics: "Prometheus + Grafana"
     logging: "ELK Stack 8.11+"
     tracing: "Jaeger 1.47+"
-```
+```text
 
 ### Service Dependencies
 ```yaml
@@ -163,7 +163,7 @@ core_services:
     type: mlflow
     version: "2.7+"
     storage: s3
-```
+```text
 
 ## Integration Implementation
 
@@ -202,7 +202,7 @@ class SystemBootstrap:
         except Exception as e:
             self.logger.error(f"System bootstrap failed: {e}")
             await self._emergency_shutdown()
-```
+```text
 
 ### 2. Inter-Agent Communication
 ```python
@@ -228,7 +228,7 @@ class AgentCommunication:
         await self._setup_resource_channels()
         await self._setup_monitoring_channels()
         await self._setup_learning_channels()
-```
+```text
 
 ### 3. Resource Coordination
 ```python
@@ -257,7 +257,7 @@ class ResourceCoordination:
             return allocation
         else:
             return await self._handle_resource_unavailable(request)
-```
+```text
 
 ### 4. System Monitoring
 ```python
@@ -285,7 +285,7 @@ class SystemMonitoring:
                 await self.alert_manager.trigger_alert(analysis)
             
             await asyncio.sleep(self.config.collection_interval)
-```
+```text
 
 ### 5. Learning Integration
 ```python
@@ -307,7 +307,7 @@ class SystemLearning:
         for agent_id, update in updates.items():
             await self.model_registry.store_update(agent_id, update)
             await self._distribute_update(agent_id, update)
-```
+```text
 
 ## System Operations
 
@@ -328,7 +328,7 @@ startup_sequence:
     - service_health_checks
     - agent_connectivity
     - system_readiness
-```
+```text
 
 ### Shutdown Sequence
 ```yaml
@@ -347,7 +347,7 @@ shutdown_sequence:
     - resource_cleanup
     - state_persistence
     - system_verification
-```
+```text
 
 ## Performance Considerations
 
@@ -367,7 +367,7 @@ optimization:
       hot_data: 7d
       warm_data: 30d
       cold_data: 365d
-```
+```text
 
 ### Scaling Guidelines
 ```yaml
@@ -382,7 +382,7 @@ scaling:
   resource_manager:
     instances: 2
     mode: active-passive
-```
+```text
 
 ## Security Integration
 
@@ -400,7 +400,7 @@ security:
     transport: tls_1.3
     storage: aes_256_gcm
     keys: vault_managed
-```
+```text
 
 ### Access Control
 ```yaml
@@ -417,7 +417,7 @@ access_control:
     - mandatory_access_control
     - least_privilege
     - separation_of_duties
-```
+```text
 
 ## Monitoring Integration
 
@@ -438,7 +438,7 @@ metrics:
     - name: allocation_efficiency
       type: histogram
       labels: [resource_type]
-```
+```text
 
 ### Alerting Rules
 ```yaml
@@ -452,7 +452,7 @@ alerting:
       condition: communication_errors > 5
       duration: 1m
       severity: critical
-```
+```text
 
 ## Maintenance Procedures
 
@@ -471,7 +471,7 @@ maintenance:
     - security_audit
     - capacity_planning
     - system_updates
-```
+```text
 
 ### Troubleshooting
 ```yaml
@@ -487,7 +487,7 @@ troubleshooting:
         - assess_damage
         - restore_services
         - verify_integrity
-```
+```text
 
 ## Documentation
 

@@ -43,7 +43,7 @@ flowchart TD
     D -->|No| F[Step 3b]
     E --> G[End]
     F --> G
-```
+```text
 
 #### Step 1: Step Name
 - Description

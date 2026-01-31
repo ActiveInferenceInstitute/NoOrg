@@ -93,7 +93,7 @@ graph TD
     I & J & K & L & M & N & O --> P3_Start;
     U -.- Z;
     W --> Z;
-```
+```text
 
 ## 6. Key Metrics
 

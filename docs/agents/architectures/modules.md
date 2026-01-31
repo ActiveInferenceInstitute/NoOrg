@@ -25,7 +25,7 @@ related_documents:
   - [[agents/architectures/interfaces]]
   - [[agents/architectures/integration]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document defines the modular architecture system that supports the [[agents/architectures/core|Core Architecture]], enabling flexible and extensible agent implementations.
@@ -41,7 +41,7 @@ class BaseModule:
         self.config = ModuleConfig()
         self.state = ModuleState()
         self.interfaces = InterfaceRegistry()
-```
+```text
 
 #### 1.2 Module Relationships
 ```mermaid
@@ -55,7 +55,7 @@ graph TD
     C --> H[Task Modules]
     C --> I[System Modules]
     D --> J[Integration Modules]
-```
+```text
 
 ### 2. Core Modules
 #### 2.1 State Module
@@ -132,7 +132,7 @@ class ModuleTemplate:
     def stop(self):
         # Stop logic
         pass
-```
+```text
 
 #### 1.2 Development Standards
 - [[standards/module_standards|Module Standards]]
@@ -149,7 +149,7 @@ class ModuleIntegration:
         self.modules = ModuleRegistry()
         self.connections = ConnectionRegistry()
         self.dependencies = DependencyGraph()
-```
+```text
 
 #### 2.2 Integration Requirements
 - [[standards/integration_standards|Integration Standards]]
@@ -243,7 +243,7 @@ class ModulePattern:
         self.interfaces = InterfaceRegistry()
         self.state = StateManager()
         self.config = ConfigManager()
-```
+```text
 
 ### B. Integration Patterns
 ```python
@@ -253,7 +253,7 @@ class ModuleIntegrationPattern:
         self.registry = ModuleRegistry()
         self.loader = ModuleLoader()
         self.connector = ModuleConnector()
-```
+```text
 
 ### C. Security Patterns
 ```python
@@ -263,4 +263,4 @@ class ModuleSecurityPattern:
         self.access = AccessControl()
         self.crypto = CryptoSystem()
         self.audit = AuditLogger()
-``` 
+```text 

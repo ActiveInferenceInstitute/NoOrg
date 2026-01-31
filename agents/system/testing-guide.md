@@ -37,7 +37,7 @@ graph TD
         PT --> STRESS[Stress Tests]
         PT --> SCALE[Scaling Tests]
     end
-```
+```text
 
 ## Test Categories
 
@@ -111,7 +111,7 @@ class TestTaskValidator:
         
         # Assert
         assert result is True
-```
+```text
 
 ### Integration Testing
 ```python
@@ -196,7 +196,7 @@ class TestSystemIntegration:
         # Assert
         assert allocation["status"] == "allocated"
         assert allocation["resources"]["compute"] == 2
-```
+```text
 
 ### Performance Testing
 ```python
@@ -296,7 +296,7 @@ class TestSystemPerformance:
             assert metrics["throughput"].mean() >= load * 0.95  # 95% of target
             assert metrics["error_rate"].max() <= 0.02  # 2% error rate
             assert metrics["response_time"].percentile(95) <= 0.2  # 200ms
-```
+```text
 
 ## Test Implementation
 
@@ -363,7 +363,7 @@ class TestResourceManagement(TestBase):
         """Test resource allocation."""
         # Test implementation
         pass
-```
+```text
 
 ### Test Fixtures
 ```python
@@ -411,7 +411,7 @@ async def test_system(
     await system.start()
     yield system
     await system.stop()
-```
+```text
 
 ### Test Utilities
 ```python
@@ -464,7 +464,7 @@ class TestHelper:
                     f"{metrics[metric]} > {threshold}"
                 )
         return violations
-```
+```text
 
 ## Test Execution
 
@@ -491,7 +491,7 @@ test_execution:
       - -v
       - --asyncio-mode=auto
       - --performance  # performance test marker
-```
+```text
 
 ### Test Configuration
 ```yaml
@@ -521,7 +521,7 @@ test_configuration:
     enabled: true
     collection_interval: 1s
     output_format: prometheus
-```
+```text
 
 ### Test Reports
 ```yaml
@@ -553,7 +553,7 @@ test_reports:
       - complexity
       - maintainability
       - test_coverage
-```
+```text
 
 ## Documentation
 

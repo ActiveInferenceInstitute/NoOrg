@@ -45,7 +45,7 @@ core_tags:
       required: true
       max_per_document: 1
       description: "Current document status"
-```
+```text
 
 ### Tag Relationships
 ```python
@@ -72,7 +72,7 @@ class TagRelationships:
     def suggest_tags(self, content):
         """Suggest appropriate tags"""
         pass
-```
+```text
 
 ## 🏷️ Modifier Tags
 
@@ -97,7 +97,7 @@ class TagRelationships:
     }
   }
 }
-```
+```text
 
 ### State Modifiers
 ```yaml
@@ -126,7 +126,7 @@ state_modifiers:
     - experimental
     attributes:
       technical_only: true
-```
+```text
 
 ## 🔄 Status Tags
 
@@ -157,7 +157,7 @@ class WorkflowStatus:
     def validate_transition(self, from_status, to_status):
         """Validate status transition"""
         pass
-```
+```text
 
 ### Review Status
 ```yaml
@@ -183,7 +183,7 @@ review_status:
     - review_due
     - review_overdue
     - approval_needed
-```
+```text
 
 ## 📊 Tag Management
 
@@ -270,7 +270,7 @@ review_status:
     }
   }
 }
-```
+```text
 
 ### Tag Navigation
 ```python
@@ -301,7 +301,7 @@ class TagNavigation:
     def update_view(self, view_type, filters):
         """Update navigation view"""
         pass
-```
+```text
 
 ## 📈 Metrics and Analysis
 
@@ -324,7 +324,7 @@ tag_analytics:
       - tag_consistency
       - relationship_validity
       - hierarchy_depth
-```
+```text
 
 ### Performance Monitoring
 ```python
@@ -343,7 +343,7 @@ class TagPerformance:
     def analyze_performance(self):
         """Analyze tag system performance"""
         pass
-```
+```text
 
 ## 📚 References
 

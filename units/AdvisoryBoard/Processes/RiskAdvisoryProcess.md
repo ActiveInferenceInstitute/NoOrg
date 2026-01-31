@@ -14,7 +14,7 @@ graph TD
     D --> E[Implementation Support]
     E --> F[Effectiveness Monitoring]
     F --> A
-```
+```text
 
 ## Process Steps
 

@@ -54,7 +54,7 @@ review_frequencies:
       - comprehensive_review
       - gap_analysis
       - improvement_planning
-```
+```text
 
 ### Review Process
 ```python
@@ -90,7 +90,7 @@ class ReviewScheduler:
     def send_notifications(self):
         """Send review notifications"""
         pass
-```
+```text
 
 ## 📝 Content Updates
 
@@ -127,7 +127,7 @@ class ReviewScheduler:
     }
   }
 }
-```
+```text
 
 ### Update Workflow
 ```python
@@ -163,7 +163,7 @@ class UpdateWorkflow:
     def track_progress(self):
         """Track update progress"""
         pass
-```
+```text
 
 ## 📦 Archive Schedule
 
@@ -187,7 +187,7 @@ archive_criteria:
       action: "review_for_archive"
     - relevance: "outdated_technology"
       action: "archive_with_update"
-```
+```text
 
 ### Archive Process
 ```python
@@ -221,7 +221,7 @@ class ArchiveManager:
     def manage_archives(self):
         """Manage archived content"""
         pass
-```
+```text
 
 ## 📊 Monitoring and Reporting
 
@@ -245,7 +245,7 @@ update_metrics:
     - review_duration
     - implementation_time
     - resource_utilization
-```
+```text
 
 ### Performance Tracking
 ```python
@@ -276,7 +276,7 @@ class UpdateTracker:
     def generate_reports(self):
         """Generate tracking reports"""
         pass
-```
+```text
 
 ## 🔄 Automation Support
 
@@ -301,7 +301,7 @@ class UpdateTracker:
     }
   }
 }
-```
+```text
 
 ### Integration Points
 ```python
@@ -332,7 +332,7 @@ class AutomationIntegration:
     def monitor_automation(self):
         """Monitor automation performance"""
         pass
-```
+```text
 
 ## 📚 References
 

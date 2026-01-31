@@ -23,7 +23,7 @@ related_frameworks:
   - [[processes/knowledge_sharing]]
   - [[frameworks/learning_management]]
 ---
-```
+```text
 
 ## Purpose & Scope
 This document outlines the structure and implementation of the organizational mentoring program as part of the [[processes/knowledge_sharing|Knowledge Sharing Processes]]. It provides comprehensive guidelines for knowledge transfer through structured mentoring relationships.
