@@ -1,0 +1,49 @@
+# AII sidecar — InstituteOS metadata. Schema: instituteos.platform.aii_sidecar
+meta:
+  updated: '2026-06-30'
+repo:
+  name: NoOrg
+  slug: noorg
+  full_name: ActiveInferenceInstitute/NoOrg
+  description: NoOrg is a Real Org
+institute:
+  category: research
+  steward: Active Inference Institute
+ecosystem:
+  links:
+    github: https://github.com/ActiveInferenceInstitute/NoOrg
+    website: https://www.activeinference.org
+artifacts:
+- path: README.md
+  kind: doc
+  description: Repository overview.
+- path: src
+  kind: code
+  description: Source tree.
+- path: package.json
+  kind: code
+  description: Node package config.
+provenance:
+  license: see-license-file
+instituteos:
+  tags:
+  - noorg
+  - real
+  - org
+  - html
+capabilities:
+- node-package
+- tested
+- documentation
+- containerized
+- dataset
+tasks:
+  test:
+    cmd: npm run test
+    description: npm test.
+  build:
+    cmd: npm run build
+    description: npm build.
+  lint:
+    cmd: npm run lint
+    description: npm lint.
