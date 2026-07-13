@@ -10,6 +10,10 @@ institute:
   category: research
   steward: Active Inference Institute
 ecosystem:
+  relations:
+  - repo: ActiveInferenceInstitute/InstituteOS
+    relation: referenced-by
+    note: Federated via the InstituteOS .aii manifest.
   links:
     github: https://github.com/ActiveInferenceInstitute/NoOrg
     website: https://www.activeinference.org
@@ -25,6 +29,8 @@ artifacts:
   description: Node package config.
 provenance:
   license: see-license-file
+  citation:
+    text: Active Inference Institute — NoOrg.
 instituteos:
   tags:
   - noorg
