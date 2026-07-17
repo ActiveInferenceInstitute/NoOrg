@@ -29,7 +29,8 @@
     "manuscript:render": "tsx scripts/manuscript.ts render",
     "manuscript:check": "tsx scripts/manuscript.ts check",
     "validate": "npm run quality && npm test && npm run validate:text && npm run validate:docs && npm run validate:units && npm run build",
-    "clean": "rm -rf dist coverage data/*.json",
+    "release:check": "npm run validate && npm run example && npm audit --audit-level=high && npm run manuscript:check && git diff --check",
+    "clean": "tsx scripts/clean-generated.ts",
     "example": "tsx examples/basic-workflow.ts"
   },
   "dependencies": {

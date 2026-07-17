@@ -21,6 +21,10 @@ const headingSlug = (value: string): string =>
     .trim()
     .replace(/\s+/g, '-');
 
+function isGeneratedManuscriptAsset(file: string, target: string): boolean {
+  return file.startsWith('docs/manuscript/') && target.startsWith('output/figures/');
+}
+
 for (const file of files) {
   if (!existsSync(resolve(root, file))) continue;
   const content = readFileSync(resolve(root, file), 'utf8')
@@ -29,6 +33,7 @@ for (const file of files) {
   for (const match of content.matchAll(markdownLink)) {
     const target = match[1];
     if (!target || /^https?:\/\//.test(target) || target.startsWith('mailto:')) continue;
+    if (isGeneratedManuscriptAsset(file, target)) continue;
     const [pathPart, anchor] = target.split('#');
     const targetPath = pathPart ? resolve(root, file, '..', pathPart) : resolve(root, file);
     const candidates = [
