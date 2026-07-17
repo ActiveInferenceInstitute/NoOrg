@@ -14,4 +14,4 @@ Reports typically include:
 - Findings and Observations
 - Recommendations
 - Management Response (if applicable)
-- Appendices 
+- Appendices

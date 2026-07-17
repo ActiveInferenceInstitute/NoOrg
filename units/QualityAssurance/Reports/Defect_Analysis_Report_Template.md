@@ -62,7 +62,7 @@
 1. [Root Cause 1] - [Percentage]% of defects
    - Example defects: [IDs or brief descriptions]
    - Affected modules: [List]
-   
+
 2. [Root Cause 2] - [Percentage]% of defects
    - Example defects: [IDs or brief descriptions]
    - Affected modules: [List]
@@ -141,4 +141,4 @@
 
 ---
 
-*This report is generated based on data from the QA defect tracking system and follows the [[../Processes/Bug_Triage_Process|Bug Triage Process]]* 
+*This report is generated based on data from the QA defect tracking system and follows the [[../Processes/Bug_Triage_Process|Bug Triage Process]]*

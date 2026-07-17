@@ -190,4 +190,4 @@ Documentation that supports adaptability while maintaining coherence:
 - Simple Rules: How to Thrive in a Complex World by Donald Sull and Kathleen M. Eisenhardt
 - Reinventing Organizations by Frederic Laloux
 - Sense and Respond: How Successful Organizations Listen to Customers and Create New Products Continuously by Jeff Gothelf and Josh Seiden
-- Design Rules, Vol. 1: The Power of Modularity by Carliss Y. Baldwin and Kim B. Clark 
+- Design Rules, Vol. 1: The Power of Modularity by Carliss Y. Baldwin and Kim B. Clark

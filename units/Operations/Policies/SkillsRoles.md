@@ -8,14 +8,14 @@ graph TD
         Chair["Operations Chair (Strategic Thinking, Financial Acumen)"]
         Director["Operations Director (Execution, Leadership, Six Sigma)"]
     end
-    
+
     subgraph CoreTeam
         Manager["Operations Manager (Project Management, Communication, PMP)"]
         Engineer["Process Engineer (Process Mapping, Lean, Optimization)"]
         Analyst["Resource Analyst (Data Analysis, SQL, Excel)"]
         QA["QA Lead (Auditing, ISO Standards, Quality Metrics)"]
     end
-    
+
     subgraph SupportTeam
         Admin["Admin Coordinator (Organization, Scheduling)"]
         IT["IT Systems Architect (Cloud, Integration, Security)"]

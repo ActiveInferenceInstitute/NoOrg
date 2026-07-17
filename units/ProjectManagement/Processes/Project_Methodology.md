@@ -72,4 +72,4 @@ Combines elements based on project needs:
 ## Related Documents
 
 - [Project Governance Policy](../Policies/Project_Governance_Policy.md)
-- [Templates](./Templates/)
+- [Templates](../../Innovation/Templates/README.md)

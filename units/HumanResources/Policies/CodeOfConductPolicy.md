@@ -51,4 +51,4 @@ All employees are required to acknowledge that they have read, understood, and a
 
 ## 8. Review
 
-This policy will be reviewed periodically (typically annually) by HR, Legal, and Compliance (if applicable) to ensure its relevance and effectiveness. 
+This policy will be reviewed periodically (typically annually) by HR, Legal, and Compliance (if applicable) to ensure its relevance and effectiveness.

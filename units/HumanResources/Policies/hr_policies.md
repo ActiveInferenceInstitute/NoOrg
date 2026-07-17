@@ -118,4 +118,4 @@ graph LR
 ---
 Version: 1.0
 Last Reviewed: [[Date]]
-Maintained by: [[Head of HR]] 
+Maintained by: [[Head of HR]]

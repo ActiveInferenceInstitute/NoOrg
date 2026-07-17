@@ -25,4 +25,4 @@ All Customer Support personnel are required to understand and comply with these 
 Policies are reviewed periodically (at least annually) and updated as necessary by the Head of Customer Support to reflect changes in tools, processes, products, or organizational needs. Significant updates are communicated to the team.
 
 ---
-*Version: 1.0* 
+*Version: 1.0*

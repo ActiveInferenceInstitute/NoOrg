@@ -21,14 +21,14 @@ flowchart LR
     Customer --> Phone[Phone]
     Customer --> Portal[Self-Service Portal]
     Customer --> Social[Social Media]
-    
+
     Email --> Agent[Support Agent]
     Chat --> Agent
     Phone --> Agent
     Portal --> Knowledge[Knowledge Base]
     Portal --> Agent
     Social --> Agent
-    
+
     Agent --> Resolution[Issue Resolution]
     Knowledge --> Resolution
 ```text
@@ -216,4 +216,4 @@ All support agents must complete the customer communication training course avai
 
 ## Process Owner
 
-**Customer Experience Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement. 
+**Customer Experience Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement.

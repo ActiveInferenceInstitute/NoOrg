@@ -75,4 +75,4 @@ The release decision (Go/No-Go) is made based on the evaluation against the agre
 
 ## 9. Review and Revision
 
-This policy will be reviewed annually and updated as necessary to reflect changes in risk appetite, technology, or processes. 
+This policy will be reviewed annually and updated as necessary to reflect changes in risk appetite, technology, or processes.

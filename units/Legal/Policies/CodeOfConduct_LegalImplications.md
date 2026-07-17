@@ -32,4 +32,4 @@ Violations may lead to disciplinary action up to and including termination, as w
 ## Related Documents
 
 *   [Link to Organization's Code of Conduct]
-*   [Link to Specific Policies (e.g., Anti-Bribery, Insider Trading)] 
+*   [Link to Specific Policies (e.g., Anti-Bribery, Insider Trading)]

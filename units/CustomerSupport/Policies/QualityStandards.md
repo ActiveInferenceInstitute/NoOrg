@@ -220,4 +220,4 @@ This policy is reviewed annually or when significant changes occur in:
 |---------|---------------|-------------|---------|
 | 1.0 | 2024-01-15 | Executive Committee | Initial policy |
 | 1.1 | 2024-04-10 | Customer Support Director | Updated quality principles and measurement methods |
-| 1.2 | 2025-01-20 | Executive Committee | Added efficiency standards and revised performance levels | 
+| 1.2 | 2025-01-20 | Executive Committee | Added efficiency standards and revised performance levels |

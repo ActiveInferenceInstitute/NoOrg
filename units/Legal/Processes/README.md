@@ -12,4 +12,4 @@ This directory outlines the standardized processes followed by the Legal Unit to
 *   **Compliance Investigation:** Procedures for investigating reported compliance concerns.
 *   **Records Management & Litigation Hold:** Processes related to the implementation of the Records Retention and Litigation Hold policies.
 
-Detailed process documents are located within this directory. 
+Detailed process documents are located within this directory.

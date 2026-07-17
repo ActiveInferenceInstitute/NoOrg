@@ -17,7 +17,7 @@ graph TD
 
     Reports --> Distribution[Report Distribution]
     Processes[Finance Processes] --> Reports
-    
+
     class Processes externalEntity;
 ```text
 
@@ -92,4 +92,4 @@ Financial reports are distributed through the following channels:
 - [[../Policies/FinancialReportingPolicy|Financial Reporting Policy]]
 - [[../Processes/FinancialReportingProcess|Financial Reporting Process]]
 - [[../Processes/DataGovernanceProcess|Data Governance Process]]
-- [[../../AdvisoryBoard/Reports/README|Advisory Board Reports]] 
+- [[../../AdvisoryBoard/Reports/README|Advisory Board Reports]]

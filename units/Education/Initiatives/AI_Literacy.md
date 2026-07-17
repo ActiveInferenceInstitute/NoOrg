@@ -116,7 +116,7 @@ The AI Literacy Initiative is a comprehensive educational program designed to en
 
 ## Initiative Team
 - **Program Lead**: Senior Educational Program Manager
-- **Curriculum Development**: 
+- **Curriculum Development**:
   - Lead Instructional Designer
   - AI Subject Matter Experts (2)
   - Ethics Specialist
@@ -166,5 +166,5 @@ See [[AI_Literacy/RiskManagement|AI Literacy Initiative Risk Management Plan]] f
 
 ---
 
-**Last Updated**: [Current Date]  
-**Next Review**: [Current Date + 1 Month] 
+**Last Updated**: [Current Date]
+**Next Review**: [Current Date + 1 Month]

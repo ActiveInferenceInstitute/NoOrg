@@ -23,4 +23,4 @@ This document outlines the key interaction points and relationships between the 
 - [Describe primary methods of communication, e.g., regular meetings, email distribution lists, shared project management tools]
 
 ## Service Level Expectations (SLEs)
-- [Define expected response times or service levels for common requests, e.g., standard contract review turnaround time] 
+- [Define expected response times or service levels for common requests, e.g., standard contract review turnaround time]

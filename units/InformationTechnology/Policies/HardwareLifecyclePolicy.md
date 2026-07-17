@@ -59,4 +59,4 @@ This policy applies to all IT hardware assets owned or leased by the organizatio
 
 ## 11. Policy Review
 
-*   This policy will be reviewed annually. 
+*   This policy will be reviewed annually.

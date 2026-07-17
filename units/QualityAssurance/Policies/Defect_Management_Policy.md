@@ -98,4 +98,4 @@ Defect metrics (e.g., total open defects, defect density, distribution by severi
 
 ## 11. Review and Revision
 
-This policy and the associated defect management process will be reviewed annually and updated as needed. 
+This policy and the associated defect management process will be reviewed annually and updated as needed.

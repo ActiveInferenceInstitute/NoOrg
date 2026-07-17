@@ -68,4 +68,4 @@ The QA Unit will standardize on approved tools for test management, defect track
 
 ## 10. Review and Revision
 
-This policy will be reviewed annually by the QA Unit and updated as needed to align with industry best practices, new technologies, and organizational changes. 
+This policy will be reviewed annually by the QA Unit and updated as needed to align with industry best practices, new technologies, and organizational changes.

@@ -22,5 +22,5 @@ Units are used by the Organizational Units Framework to create hierarchical orga
 
 ## Related Documentation
 
-- [Units System Documentation](../src/core/units/README.md)
+- [Units System Documentation](../docs/architecture.md)
 - [Main README](../README.md)

@@ -2,11 +2,11 @@
 
 ## Report Information
 
-**Report Type**: Management Dashboard  
-**Report Period**: [Month/Quarter/Year]  
-**Prepared By**: Finance Unit  
-**Distribution**: Executive Committee, Department Heads, [[../../../AdvisoryBoard/Committees/AuditCommittee/README|Audit Committee]]  
-**Report Date**: [Date]  
+**Report Type**: Management Dashboard
+**Report Period**: [Month/Quarter/Year]
+**Prepared By**: Finance Unit
+**Distribution**: Executive Committee, Department Heads, [[../../../AdvisoryBoard/Committees/AuditCommittee/README|Audit Committee]]
+**Report Date**: [Date]
 
 ## Executive Summary
 
@@ -191,4 +191,4 @@ Based on current financial performance, the Finance Unit recommends the followin
 
 ## Distribution and Review
 
-This dashboard has been reviewed by the Finance Director and approved by the Chief Financial Officer. It is distributed to the Executive Committee, Department Heads, and the [[../../../AdvisoryBoard/Committees/AuditCommittee/README|Audit Committee]] to support decision-making and governance oversight. 
+This dashboard has been reviewed by the Finance Director and approved by the Chief Financial Officer. It is distributed to the Executive Committee, Department Heads, and the [[../../../AdvisoryBoard/Committees/AuditCommittee/README|Audit Committee]] to support decision-making and governance oversight.

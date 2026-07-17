@@ -37,4 +37,4 @@ All policies are subject to periodic review and updates. Compliance is mandatory
 *Version: 1.0*
 *Last Updated: [Date]*
 *Maintained by: [[business_development_director]]*
-*Status: Active* 
+*Status: Active*

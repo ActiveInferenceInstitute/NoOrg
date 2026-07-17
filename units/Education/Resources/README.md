@@ -50,4 +50,4 @@ This directory contains all educational resources, materials, and assets used ac
 - [[../KPIs/ResourceEffectiveness|Resource Effectiveness Metrics]]
 
 ## Resource Development Roadmap
-See [[Roadmap|Resource Development Roadmap]] for planned resource development and updates. 
+See [[Roadmap|Resource Development Roadmap]] for planned resource development and updates.

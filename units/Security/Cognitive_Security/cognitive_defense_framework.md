@@ -465,15 +465,15 @@ This framework establishes the structure, methodology, and operational approach 
 ### Cognitive Security Documents
 
 - [cognitive_security_unit](cognitive_security_unit.md) - Cognitive Security Unit Overview
-- [information_warfare_defense](../Policies/resources/information_warfare_defense.md) - Information Warfare Defense Strategy
-- [psychological_operations_defense](../Policies/resources/psychological_operations_defense.md) - Psychological Operations Defense
-- [social_engineering_prevention](../Policies/resources/social_engineering_prevention.md) - Social Engineering Prevention Program
+- [information_warfare_defense](README.md) - Information Warfare Defense Strategy
+- [psychological_operations_defense](README.md) - Psychological Operations Defense
+- [social_engineering_prevention](README.md) - Social Engineering Prevention Program
 
 ### Security Integration Documents
 
 - [Security Unit](../README.md) - Main Security Unit Overview
 - [Security Strategy](../Policies/securitystrategy.md) - Integrated Security Strategy
-- [Incident Response](../../docs/security/incident_response.md) - Integrated Incident Response Plan
+- [Incident Response](../../../SECURITY.md) - Integrated Incident Response Plan
 
 ### Cross-Domain Integration
 

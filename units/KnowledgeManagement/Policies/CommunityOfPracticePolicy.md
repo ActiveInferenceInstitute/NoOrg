@@ -256,4 +256,4 @@ This policy applies to all formally recognized Communities of Practice within th
 
 **Next Review Date**: [Date + 1 year]
 
-**Version**: 1.0 
+**Version**: 1.0

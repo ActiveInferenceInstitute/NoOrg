@@ -55,4 +55,4 @@ Exceeding delegated authority without proper approval is a serious violation and
 
 ## 9. Review
 
-This policy and the associated DoA Matrix will be reviewed periodically (e.g., annually or biannually) by the Executive Unit, Finance, Legal, and approved by the CEO and/or the Board's Audit or Governance Committee as appropriate. 
+This policy and the associated DoA Matrix will be reviewed periodically (e.g., annually or biannually) by the Executive Unit, Finance, Legal, and approved by the CEO and/or the Board's Audit or Governance Committee as appropriate.

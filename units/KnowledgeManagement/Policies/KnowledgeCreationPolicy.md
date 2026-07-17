@@ -79,11 +79,11 @@ This policy will be reviewed annually by the KM Unit and updated as necessary to
 - [Knowledge Sharing Policy](KnowledgeSharingPolicy.md)
 - [Knowledge Retention Policy](KnowledgeRetentionPolicy.md)
 - [Data Classification Policy (KM Context)](DataClassificationPolicy.md)
-- [Organizational Taxonomy/Metadata Standard Document] [Placeholder Link]
-- [Naming Convention Guidelines] [Placeholder Link]
-- [Template Repository] [Placeholder Link]
+- [Organizational Taxonomy/Metadata Standard Document] [Reference link pending]
+- [Naming Convention Guidelines] [Reference link pending]
+- [Template Repository] [Reference link pending]
 
 ---
 **Policy Owner:** Knowledge Management Unit
 **Date Effective:** [Date]
-**Next Review Date:** [Date + 1 Year] 
+**Next Review Date:** [Date + 1 Year]

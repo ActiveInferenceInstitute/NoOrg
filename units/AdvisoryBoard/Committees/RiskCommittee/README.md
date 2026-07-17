@@ -26,7 +26,7 @@ graph TD
     RiskCommittee --> FocusAreas
     RiskCommittee -.-> RMU[Risk Management Unit]
     RiskCommittee -.-> RiskWorkingGroup[Risk Working Group]
-    
+
     class RMU,RiskWorkingGroup externalEntity;
 ```text
 
@@ -65,4 +65,4 @@ The Risk Committee meets quarterly and conducts additional sessions as needed fo
 - [[../../../RiskAdvisoryBoard/README|Risk Advisory Board]]
 - [[../../WorkingGroups/RiskGroup/README|Risk Working Group]]
 - [[../ComplianceCommittee/README|Compliance Committee]]
-- [[../AuditCommittee/README|Audit Committee]] 
+- [[../AuditCommittee/README|Audit Committee]]

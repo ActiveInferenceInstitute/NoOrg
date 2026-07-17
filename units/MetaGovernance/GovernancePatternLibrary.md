@@ -188,4 +188,4 @@ For more information on contributing, contact the [[ResponsibilitiesAndAuthoriti
 
 ---
 
-*The Governance Pattern Library is maintained by the Meta-Governance Unit and is updated regularly to reflect emerging governance practices and implementation learnings.* 
+*The Governance Pattern Library is maintained by the Meta-Governance Unit and is updated regularly to reflect emerging governance practices and implementation learnings.*

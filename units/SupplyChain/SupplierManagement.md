@@ -12,4 +12,4 @@ Focuses on building and maintaining relationships with suppliers.
 - [[Procurement]]
 - [[SupplyChainRiskManagement]]
 - [[Policies/Supplier Code of Conduct]]
-- [[Processes/Supplier Onboarding Process]] 
+- [[Processes/Supplier Onboarding Process]]

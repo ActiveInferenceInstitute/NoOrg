@@ -66,4 +66,4 @@ Initiative meeting notes document discussions, decisions, action items, and prog
 - All notes should include date, attendees, initiative name, phase, status update, key discussions, decisions, and action items
 - Action items should be clearly marked with owner and due date
 - Notes should be uploaded within 24 hours of meeting completion
-- Sensitive initiative information should be marked accordingly 
+- Sensitive initiative information should be marked accordingly

@@ -33,7 +33,7 @@ flowchart TD
     I --> Z
 
     style Z fill:#fdd
-```text 
+```text
 
 ## 5. Step Descriptions
 
@@ -114,4 +114,4 @@ flowchart TD
 
 ## 9. Document Review
 
-Review this process annually or after any significant source-related incident. 
+Review this process annually or after any significant source-related incident.

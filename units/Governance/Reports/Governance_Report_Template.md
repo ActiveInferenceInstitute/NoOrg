@@ -40,4 +40,4 @@
 
 ---
 **Distribution:** [List recipients or groups]
-**Security Classification:** [[Classification]] 
+**Security Classification:** [[Classification]]

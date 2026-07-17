@@ -56,4 +56,4 @@ This policy applies to all employees, contractors, and collaborators involved in
 This policy guidance will be reviewed annually, or as needed, in conjunction with the review of the main [Organization-wide IP Policy Document Name/Link].
 
 ---
-*This policy clarifies Intellectual Property considerations specifically within the context of innovation activities.* 
+*This policy clarifies Intellectual Property considerations specifically within the context of innovation activities.*

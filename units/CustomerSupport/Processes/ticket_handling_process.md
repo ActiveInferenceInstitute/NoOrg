@@ -80,4 +80,4 @@ This process applies to all support requests logged in the organization's ticket
 - [[Charter.md]]
 
 ---
-*Version: 1.0* 
+*Version: 1.0*

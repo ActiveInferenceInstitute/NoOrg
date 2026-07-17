@@ -47,4 +47,4 @@ This section provides comprehensive documentation for intellectual property acti
 ## Related Documentation
 
 - [Governance Policies](../../Governance/Policies/)
-- [Processes](./Processes/)
+- [Processes](../Processes/README.md)

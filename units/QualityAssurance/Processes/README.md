@@ -30,4 +30,4 @@ This directory contains the standard processes and workflows followed by the Qua
 - [[../../Development/Processes/|Development Processes]]
 - [[../../Operations/Processes/|Operations Processes]]
 
-These documented processes ensure consistency, efficiency, and traceability in QA operations. Mermaid diagrams are included in relevant process documents to visualize the workflows. 
+These documented processes ensure consistency, efficiency, and traceability in QA operations. Mermaid diagrams are included in relevant process documents to visualize the workflows.

@@ -26,4 +26,4 @@ Organize reports logically, for example:
 
 ## Access
 
-*   Specify any access restrictions or sharing guidelines if applicable. 
+*   Specify any access restrictions or sharing guidelines if applicable.

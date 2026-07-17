@@ -55,4 +55,4 @@
 
 *   **Date:** YYYY-MM-DD
 *   **Time:** HH:MM [Timezone]
-*   **Tentative Agenda:** [List key topics for next time] 
+*   **Tentative Agenda:** [List key topics for next time]

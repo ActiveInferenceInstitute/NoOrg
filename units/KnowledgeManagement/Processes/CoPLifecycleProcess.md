@@ -362,4 +362,4 @@ flowchart TD
 - [[../Charter|Knowledge Management Unit Charter]]
 - [[../Policies/CommunityOfPracticePolicy|Community of Practice Policy]]
 - [[../../templates/documentation/CommunityOfPracticeCharterTemplate|Community of Practice Charter Template]]
-- [[../../templates/documentation/CommunityOfPracticeProposalTemplate|Community of Practice Proposal Template]] 
+- [[../../templates/documentation/CommunityOfPracticeProposalTemplate|Community of Practice Proposal Template]]

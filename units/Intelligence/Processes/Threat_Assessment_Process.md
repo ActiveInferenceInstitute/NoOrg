@@ -91,4 +91,4 @@ graph TD
 
 - **Intelligence Analysts:** Responsible for executing steps 1-5.
 - **Head of Intelligence:** Oversees the process, reviews critical assessments, ensures appropriate dissemination.
-- **Stakeholders:** Provide input, receive reports, and potentially act on recommendations (e.g., Risk Management, Security, Strategy, Executive Leadership). 
+- **Stakeholders:** Provide input, receive reports, and potentially act on recommendations (e.g., Risk Management, Security, Strategy, Executive Leadership).

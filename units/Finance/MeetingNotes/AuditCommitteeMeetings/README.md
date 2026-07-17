@@ -16,7 +16,7 @@ graph TD
 
     FinanceUnit[Finance Unit] --> MeetingTypes
     MeetingTypes --> AuditCommittee[Audit Committee]
-    
+
     class AuditCommittee externalEntity;
 ```text
 
@@ -91,4 +91,4 @@ Other regular participants:
 - [[../../Processes/AuditCoordinationProcess|Audit Coordination Process]]
 - [[../../Reports/README|Financial Reports]]
 - [[../../../AdvisoryBoard/Committees/AuditCommittee/Charter|Audit Committee Charter]]
-- [[../../../Audit/Processes/README|Audit Processes]] 
+- [[../../../Audit/Processes/README|Audit Processes]]

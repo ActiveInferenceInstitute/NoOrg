@@ -47,4 +47,4 @@ This document describes the key interaction points and collaboration mechanisms 
 *   **Regular Inter-Unit Meetings:** [Specify frequency and purpose]
 *   **Cross-Functional Project Teams:** See individual project files in `Projects/`.
 *   **Shared Platforms:** See [[Resources.md]].
-*   **Formal Handoff Processes:** Defined in `Processes/` (e.g., transition to Development). 
+*   **Formal Handoff Processes:** Defined in `Processes/` (e.g., transition to Development).

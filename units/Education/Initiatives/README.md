@@ -100,4 +100,4 @@ Education Initiatives represent strategic projects and programs that advance the
 - [[../Reports/InitiativeReports|Initiative Reports]]
 
 ## Responsible Team
-Each initiative has an assigned Program Owner and cross-functional team. Overall initiative portfolio is managed by the Director of Education with support from Deputy Directors. 
+Each initiative has an assigned Program Owner and cross-functional team. Overall initiative portfolio is managed by the Director of Education with support from Deputy Directors.

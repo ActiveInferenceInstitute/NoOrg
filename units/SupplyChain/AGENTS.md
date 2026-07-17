@@ -33,7 +33,7 @@ Supply chain metrics, vendor performance, and logistics reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Operations Unit](../Operations/README.md) - Operations alignment
 
 ## Related Documentation

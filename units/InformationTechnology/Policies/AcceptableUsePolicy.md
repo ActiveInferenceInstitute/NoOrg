@@ -68,4 +68,4 @@ The following activities are strictly prohibited when using organizational IT re
 ## 9. Policy Review
 
 *   This policy will be reviewed annually and updated as necessary by the [[../index|IT Department]].
-*   Users may be required to acknowledge review and acceptance of this policy periodically. 
+*   Users may be required to acknowledge review and acceptance of this policy periodically.

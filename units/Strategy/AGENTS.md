@@ -33,8 +33,8 @@ Strategic assessments, market analysis, and progress reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
-- [PlanningAgent](../../src/agents/PlanningAgent/) - Planning AI agent
+- [Units System](../../docs/architecture.md) - Unit management code
+- [PlanningAgent](../../docs/architecture.md) - Planning AI agent
 
 ## Related Documentation
 

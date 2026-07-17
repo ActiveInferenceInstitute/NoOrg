@@ -24,7 +24,7 @@ graph TD
     RiskWorkingGroup --> CurrentFocus
     RiskWorkingGroup -.-> RiskCommittee[Risk Committee]
     RiskWorkingGroup -.-> RMU[Risk Management Unit]
-    
+
     class RiskCommittee,RMU externalEntity;
 ```text
 
@@ -69,4 +69,4 @@ To identify, analyze, and recommend solutions for emerging and complex risk chal
 - [[../../../RiskManagement/README|Risk Management Unit]]
 - [[../../../RiskAdvisoryBoard/README|Risk Advisory Board]]
 - [[../../../Strategy/README|Strategy Unit]]
-- [[../StrategyGroup/README|Strategy Working Group]] 
+- [[../StrategyGroup/README|Strategy Working Group]]

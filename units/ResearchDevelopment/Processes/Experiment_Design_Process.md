@@ -90,4 +90,4 @@ graph TD
 
 ## 7. Review
 
-This process should be reviewed and updated periodically to incorporate best practices in experimental design. 
+This process should be reviewed and updated periodically to incorporate best practices in experimental design.

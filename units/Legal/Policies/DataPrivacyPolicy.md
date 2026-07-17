@@ -43,4 +43,4 @@ Applies to all personal data processed by the organization, regardless of format
 
 ## Contact
 
-*   **Data Protection Officer (DPO) / Privacy Contact:** [Name/Email] 
+*   **Data Protection Officer (DPO) / Privacy Contact:** [Name/Email]

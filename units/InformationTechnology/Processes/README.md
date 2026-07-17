@@ -17,4 +17,4 @@ These processes ensure consistency, efficiency, and adherence to policies in del
 *   **[Data Backup and Recovery Procedure](DataBackupRecoveryProcedure.md):** Specific steps for performing data backups and restorations.
 *   **[Access Request Procedure](AccessRequestProcedure.md):** Process for requesting and granting access to systems and applications.
 
-Where applicable, process documents include Mermaid diagrams to visualize the workflow. 
+Where applicable, process documents include Mermaid diagrams to visualize the workflow.

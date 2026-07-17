@@ -126,4 +126,4 @@ graph LR
 *(Include supplementary material not essential to the main text, e.g., raw data summaries, detailed protocols, questionnaires, code snippets.)*
 
 *   **Appendix A:** [Title]
-*   **Appendix B:** [Title] 
+*   **Appendix B:** [Title]

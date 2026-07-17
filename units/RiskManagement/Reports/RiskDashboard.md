@@ -25,7 +25,7 @@ graph LR
 | Financial | ↓ | MEDIUM | Liquidity pressure, foreign exchange volatility |
 | Operational | ↑ | HIGH | Supply chain disruption, staffing shortages |
 | Compliance | ↔️ | MEDIUM | New data protection regulations |
-| Technology | ↓ | MEDIUM | Legacy system stability, cloud dependency |
+| Technology | ↓ | MEDIUM | Historical system stability, cloud dependency |
 | Reputational | ↔️ | LOW | Social media response capabilities |
 
 ## Risk Movement
@@ -43,7 +43,7 @@ pie title Risk Change Since Last Period
 | Rank | Risk ID | Description | Risk Level | Owner | Trend | Key Mitigation |
 |------|---------|-------------|------------|-------|-------|----------------|
 | 1 | HR-OPS-2023-05 | Supply Chain Disruption | HIGH | [[../../Operations/README|Supply Chain Manager]] | ↑ | Alternate supplier onboarding |
-| 2 | HR-OPS-2023-04 | Legacy System Failure | HIGH | [[../../InformationTechnology/README|IT Director]] | ↔️ | System replacement project |
+| 2 | HR-OPS-2023-04 | Historical System Failure | HIGH | [[../../InformationTechnology/README|IT Director]] | ↔️ | System replacement project |
 | 3 | HR-OPS-2023-02 | Staff Shortage | HIGH | [[../../CustomerSupport/README|CS Director]] | ↑ | Cross-training program |
 | 4 | HR-FIN-2023-03 | Liquidity Risk | MEDIUM | [[../../Finance/README|Finance Director]] | ↓ | Credit facility expansion |
 | 5 | HR-COM-2023-06 | Data Protection Compliance | MEDIUM | [[../../Compliance/README|Compliance Officer]] | ↑ | Regulatory readiness program |
@@ -125,7 +125,7 @@ graph LR
 
 | Risk ID | Description | Risk Level | Rationale for Acceptance | Review Date | Approved By |
 |---------|-------------|------------|--------------------------|-------------|-------------|
-| HR-ACC-2023-06 | Legacy Application Support | MEDIUM | Cost of replacement exceeds risk impact; compensating controls in place | Sep 30, 2023 | IT Steering Committee |
+| HR-ACC-2023-06 | Historical Application Support | MEDIUM | Cost of replacement exceeds risk impact; compensating controls in place | Sep 30, 2023 | IT Steering Committee |
 
 ## Cross-Functional Initiatives
 
@@ -153,5 +153,5 @@ graph LR
 
 ---
 
-**Distribution**: Executive Committee, Risk Committee, Department Heads  
-**Next Report**: June 8, 2023 
+**Distribution**: Executive Committee, Risk Committee, Department Heads
+**Next Report**: June 8, 2023

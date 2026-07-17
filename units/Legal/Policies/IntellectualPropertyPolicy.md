@@ -34,4 +34,4 @@ Applies to all employees, contractors, and third parties involved in the creatio
 ## Contact
 
 *   **IP Counsel:** [Name/Email]
-*   **IP Disclosure Submissions:** [Email Alias/System Link] 
+*   **IP Disclosure Submissions:** [Email Alias/System Link]

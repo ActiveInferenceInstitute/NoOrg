@@ -96,4 +96,4 @@ gantt
 
 ## 9. Review
 
-This process is reviewed annually by the CEO and HR, with input from the Executive Unit, to ensure effectiveness and alignment with organizational needs. 
+This process is reviewed annually by the CEO and HR, with input from the Executive Unit, to ensure effectiveness and alignment with organizational needs.

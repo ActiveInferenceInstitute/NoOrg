@@ -27,4 +27,4 @@ This directory contains the meeting notes for the Knowledge Management Unit, inc
 Meeting notes are organized by year and quarter in the following folders:
 
 - [[2023/|2023 Meeting Notes]]
-- [[2024/|2024 Meeting Notes]] 
+- [[2024/|2024 Meeting Notes]]

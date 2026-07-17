@@ -59,4 +59,4 @@ Meta-Governance is implemented through:
 5. **Metrics and Evaluation**: Continuously assessing governance effectiveness at multiple scales.
 6. **Training and Support**: Building organizational capacity to implement and maintain fractal governance approaches.
 
-For more information on implementation, see [[Processes/Implementation_Approach|Implementation Approach]] and [[Projects/|Current Projects]]. 
+For more information on implementation, see [[Processes/Implementation_Approach|Implementation Approach]] and [[Projects/|Current Projects]].

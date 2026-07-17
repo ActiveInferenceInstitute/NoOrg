@@ -81,4 +81,4 @@ The innovation lifecycle consists of several distinct stages, each with specific
 This process will be reviewed annually by the Process Owner and key stakeholders and updated as necessary to optimize effectiveness and alignment with organizational needs.
 
 ---
-*This document outlines the structured journey of an idea within the organization's innovation framework.* 
+*This document outlines the structured journey of an idea within the organization's innovation framework.*

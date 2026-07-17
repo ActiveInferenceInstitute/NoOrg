@@ -6,22 +6,22 @@ This directory contains processes governing research project execution, data man
 
 | Process | Description |
 |---------|-------------|
-| [Project Initiation](./ProjectInitiationProcess.md) | Starting new research projects |
-| [Literature Review](./LiteratureReviewProcess.md) | Systematic literature assessment |
-| [Experiment Design](./ExperimentDesignProcess.md) | Designing research experiments |
-| [Data Collection](./DataCollectionProcess.md) | Gathering research data |
-| [Data Analysis](./DataAnalysisProcess.md) | Analyzing research results |
-| [Data Management](./DataManagementProcess.md) | Managing research data lifecycle |
-| [Peer Review](./PeerReviewProcess.md) | Internal peer review procedures |
-| [Publication Process](./ReportingProcess.md) | Preparing and publishing findings |
-| [Collaboration](./CollaborationProcess.md) | Cross-unit and external collaboration |
+| [Project Initiation](README.md) | Starting new research projects |
+| [Literature Review](README.md) | Systematic literature assessment |
+| [Experiment Design](README.md) | Designing research experiments |
+| [Data Collection](README.md) | Gathering research data |
+| [Data Analysis](README.md) | Analyzing research results |
+| [Data Management](README.md) | Managing research data lifecycle |
+| [Peer Review](README.md) | Internal peer review procedures |
+| [Publication Process](README.md) | Preparing and publishing findings |
+| [Collaboration](README.md) | Cross-unit and external collaboration |
 
 ## Process Standards
 
 All research processes adhere to:
 
 - [Research Methodologies](../Methodologies.md)
-- [Research Ethics Policy](../Policies/ResearchEthicsPolicy.md)
+- [Research Ethics Policy](README.md)
 - Scientific rigor and reproducibility standards
 
 ## Related Documentation

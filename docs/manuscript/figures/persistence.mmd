@@ -1,0 +1,8 @@
+flowchart TD
+  M[Mutation] --> Q[Serialized state queue]
+  Q --> V[Validate JSON value]
+  V --> R[Increment revision]
+  R --> T[Write private temporary file]
+  T --> X[Atomic rename]
+  X --> D[Durable state envelope]
+  L[Process lock] --> Q

@@ -13,4 +13,4 @@ Manages the flow of goods, information, and resources from origin to consumption
 - [[InventoryManagement]]
 - [[Procurement]]
 - [[Processes/Shipping and Receiving Process]]
-- [[Policies/Transportation Policy]] 
+- [[Policies/Transportation Policy]]

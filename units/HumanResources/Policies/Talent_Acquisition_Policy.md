@@ -73,4 +73,4 @@ Establishes guidelines for attracting, selecting, and hiring qualified candidate
 ## Related Documents
 
 - [Onboarding Process](../Processes/Onboarding_Process.md)
-- [Diversity & Inclusion](./Diversity_Inclusion_Policy.md)
+- [Diversity & Inclusion](README.md)

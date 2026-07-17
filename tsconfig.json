@@ -1,105 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "module": "CommonJS",
-    "lib": ["ES2020", "DOM"],
-    "outDir": "./dist",
-    "strict": false,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "strictFunctionTypes": false,
-    "strictBindCallApply": false,
-    "strictPropertyInitialization": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "skipLibCheck": true,
-    "useDefineForClassFields": true,
+    "moduleResolution": "Node",
+    "lib": ["ES2022"],
+    "rootDir": "src",
+    "outDir": "dist",
     "declaration": true,
-    "declarationMap": true,
     "sourceMap": true,
-    "removeComments": false,
-    "noEmitOnError": false,
-    "incremental": true,
-    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "allowJs": false,
-    "checkJs": false,
-    "maxNodeModuleJsDepth": 1,
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["*"],
-      "@/core/*": ["core/*"],
-      "@/agents/*": ["agents/*"],
-      "@/utils/*": ["utils/*"],
-      "@/types/*": ["types/*"],
-      "*": ["node_modules/*"]
-    },
-    "types": ["node", "jest"],
-    "typeRoots": ["./node_modules/@types", "./src/types"]
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
-  "include": [
-    "src/**/*",
-    "tests/**/*",
-    "scripts/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "coverage",
-    "logs",
-    "output",
-    "**/*.d.ts",
-    "**/*.js",
-    "src/agents/CalmTechnologyAgent.ts"
-  ],
-  "ts-node": {
-    "esm": false,
-    "experimentalSpecifierResolution": "node",
-    "transpileOnly": true,
-    "files": true,
-    "compilerOptions": {
-      "module": "CommonJS",
-      "target": "ES2020"
-    }
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "roots": ["<rootDir>/src", "<rootDir>/tests"],
-    "testMatch": [
-      "**/__tests__/**/*.ts",
-      "**/?(*.)+(spec|test).ts"
-    ],
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    },
-    "collectCoverageFrom": [
-      "src/**/*.ts",
-      "!src/**/*.d.ts",
-      "!src/**/*.test.ts",
-      "!src/**/*.spec.ts"
-    ],
-    "coverageDirectory": "coverage",
-    "coverageReporters": ["text", "lcov", "html", "json"],
-    "setupFilesAfterEnv": ["<rootDir>/tests/config/jest.setup.ts"],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
-    "testTimeout": 30000,
-    "verbose": true,
-    "clearMocks": true,
-    "restoreMocks": true
-  }
-} 
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "coverage"]
+}

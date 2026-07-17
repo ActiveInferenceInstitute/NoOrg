@@ -72,4 +72,4 @@
 - Links to prototypes or demos
 
 ---
-*This proposal outlines the plan and resource requirements for the next phase of the [Project Name] innovation project.* 
+*This proposal outlines the plan and resource requirements for the next phase of the [Project Name] innovation project.*

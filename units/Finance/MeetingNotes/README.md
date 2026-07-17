@@ -18,7 +18,7 @@ graph TD
     MeetingNotes --> Actions[Action Items]
     MeetingNotes --> Decisions[Decision Record]
     MeetingNotes --> Reports[Financial Reports]
-    
+
     class Actions,Decisions,Reports externalEntity;
 ```text
 
@@ -108,4 +108,4 @@ Special financial meetings with governance or advisory entities require addition
 - [[../Policies/MeetingProtocols|Meeting Protocols]]
 - [[../Processes/MeetingManagement|Meeting Management Process]]
 - [[../Reports/README|Financial Reports]]
-- [[../../AdvisoryBoard/MeetingNotes/README|Advisory Board Meeting Notes]] 
+- [[../../AdvisoryBoard/MeetingNotes/README|Advisory Board Meeting Notes]]

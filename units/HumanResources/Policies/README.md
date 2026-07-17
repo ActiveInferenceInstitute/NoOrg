@@ -20,4 +20,4 @@ These policies are designed to ensure fairness, consistency, compliance with law
 
 *(Add links to other relevant policies as they are developed or refined)*
 
-**Note:** All employees are responsible for familiarizing themselves with and adhering to these policies. Questions regarding policies should be directed to the HR department. 
+**Note:** All employees are responsible for familiarizing themselves with and adhering to these policies. Questions regarding policies should be directed to the HR department.

@@ -242,4 +242,4 @@ flowchart TD
 - Effective Date: 2023-01-01
 - Review Frequency: Annual
 - Process Owner: Strategy Committee
-- Last Updated: 2023-12-15 
+- Last Updated: 2023-12-15

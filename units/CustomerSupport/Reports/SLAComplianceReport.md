@@ -214,4 +214,4 @@ graph LR
 
 ## Report Owner
 
-**Support Operations Manager** - Responsible for this report, analysis, and resulting improvement initiatives. For more information about SLA definitions, see [[../Policies/ServiceLevelAgreements|Service Level Agreements]]. 
+**Support Operations Manager** - Responsible for this report, analysis, and resulting improvement initiatives. For more information about SLA definitions, see [[../Policies/ServiceLevelAgreements|Service Level Agreements]].

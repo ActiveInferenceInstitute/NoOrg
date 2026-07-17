@@ -1,0 +1,10 @@
+flowchart LR
+  C[Configuration] --> P[Explicit provider]
+  C --> S[State store]
+  P --> A[Agent registry]
+  S --> R[Task repository]
+  A --> O[Coordinator]
+  R --> O
+  O --> E[Event bus]
+  O --> H[Health and metrics]
+  O --> HTTP[HTTP surface]

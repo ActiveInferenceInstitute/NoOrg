@@ -17,7 +17,7 @@ graph TD
     G -- No Agreement --> I[Follow-up / Re-engage];
     H --> J[Onboarding / Handover];
     J --> K[Account Management];
-    I --> B; 
+    I --> B;
     E --> A;
 ```text
 
@@ -52,4 +52,4 @@ Last Updated: {{date}}
 Version: 1.0
 Maintained by: [[sales_manager]]
 Security Level: [[internal]]
-Document Status: [[draft]] 
+Document Status: [[draft]]

@@ -47,4 +47,4 @@ Adherence to this policy is mandatory. Violations may lead to disciplinary actio
 
 ## 8. Review
 
-This policy will be reviewed periodically (e.g., annually) by the Executive Unit, Legal, and Communications departments. 
+This policy will be reviewed periodically (e.g., annually) by the Executive Unit, Legal, and Communications departments.

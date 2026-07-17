@@ -33,7 +33,7 @@ Pipeline reports, revenue forecasts, and performance metrics.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Marketing Unit](../Marketing/README.md) - Marketing alignment
 - [Business Development](../BusinessDevelopment/README.md) - BD coordination
 

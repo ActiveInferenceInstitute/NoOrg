@@ -82,4 +82,4 @@ This process applies to all forms of legal disputes, including:
 
 ## 7. Review and Updates
 
-This process will be reviewed annually by the Legal Unit and updated as necessary, particularly in response to changes in law or significant case outcomes. 
+This process will be reviewed annually by the Legal Unit and updated as necessary, particularly in response to changes in law or significant case outcomes.

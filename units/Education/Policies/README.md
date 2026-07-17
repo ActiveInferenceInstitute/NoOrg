@@ -59,4 +59,4 @@ This directory contains all formal policies governing the Education Unit's opera
 - [[../StrategicPlan|Strategic Plan]]
 
 ## Policy Review Schedule
-All Education Unit policies are subject to annual review or more frequent updates as required by organizational changes or compliance requirements. See [[ReviewSchedule|Policy Review Schedule]] for details. 
+All Education Unit policies are subject to annual review or more frequent updates as required by organizational changes or compliance requirements. See [[ReviewSchedule|Policy Review Schedule]] for details.

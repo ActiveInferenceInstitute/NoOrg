@@ -1,7 +1,7 @@
 # Access Request Procedure
 
-**Version:** 1.0  
-**Effective Date:** [Date]  
+**Version:** 1.0
+**Effective Date:** [Date]
 **Last Reviewed:** [Date]
 
 ## 1. Purpose
@@ -20,22 +20,22 @@ This procedure applies to all requests for access to organizational IT resources
 
 ## 4. Procedure Steps
 
-1.  **Request Submission:**  
+1.  **Request Submission:**
     *   User or manager submits an Access Request via the ITSM portal, specifying the resource, required access level, and business justification.
-2.  **Initial Validation:**  
+2.  **Initial Validation:**
     *   Help Desk or relevant team validates the request for completeness and user identity.
-3.  **Approval Workflow:**  
+3.  **Approval Workflow:**
     *   **Manager Approval:** Request is routed to the user's manager for initial approval.
     *   **Resource Owner Approval:** If manager approves, request is routed to the data/system owner for final approval.
-4.  **Provisioning:**  
+4.  **Provisioning:**
     *   Upon final approval, the responsible IT team (e.g., Sys Admin, Application Admin) grants the requested access.
-5.  **Notification:**  
+5.  **Notification:**
     *   User and requester are notified once access is granted.
-6.  **Documentation:**  
+6.  **Documentation:**
     *   Access grant is logged in the ITSM ticket and relevant system audit logs.
-7.  **Access Modification/Revocation:**  
+7.  **Access Modification/Revocation:**
     *   Similar process followed for modifying or revoking access (e.g., initiated by manager upon role change or termination via Offboarding Procedure).
-8.  **Periodic Review:**  
+8.  **Periodic Review:**
     *   User access rights are periodically reviewed (e.g., quarterly, annually) by managers and resource owners to ensure continued necessity (User Access Review process).
 
 ## 5. Roles and Responsibilities
@@ -62,4 +62,4 @@ graph TD
 
 ## 7. Procedure Review
 
-This procedure will be reviewed annually and updated as necessary. 
+This procedure will be reviewed annually and updated as necessary.

@@ -178,6 +178,6 @@ The Customer Support Unit is committed to continuous improvement through:
 
 ---
 
-**Policy Owner**: Customer Support Director  
-**Last Review**: YYYY-MM-DD  
+**Policy Owner**: Customer Support Director
+**Last Review**: YYYY-MM-DD
 **Next Review**: YYYY-MM-DD

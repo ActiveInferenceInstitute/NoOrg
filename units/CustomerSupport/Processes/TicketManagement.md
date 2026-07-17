@@ -188,4 +188,4 @@ All support agents must complete the ticket management training course available
 
 ## Process Owner
 
-**Customer Support Operations Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement. 
+**Customer Support Operations Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement.

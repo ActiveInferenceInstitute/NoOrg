@@ -62,4 +62,4 @@ Personnel are encouraged and expected to report any suspected ethical violations
 
 ## 8. Review
 
-These guidelines will be reviewed annually and updated as necessary. 
+These guidelines will be reviewed annually and updated as necessary.

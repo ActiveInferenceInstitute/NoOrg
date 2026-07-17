@@ -51,4 +51,4 @@ To provide a brief guide on conducting systematic and comprehensive literature r
 
 *   [Link to PRISMA Statement (for systematic reviews)]
 *   [Link to relevant database search guides]
-*   [[../Processes/Research_Project_Lifecycle.md]] (Literature review is often part of Ideation/Planning) 
+*   [[../Processes/Research_Project_Lifecycle.md]] (Literature review is often part of Ideation/Planning)

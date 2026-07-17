@@ -83,4 +83,4 @@
 
 ---
 **Distribution:** [[sales_director]], [[Executive]], [Other relevant stakeholders]
-**Data Source:** [[crm_system]], [[analytics_platform]] 
+**Data Source:** [[crm_system]], [[analytics_platform]]

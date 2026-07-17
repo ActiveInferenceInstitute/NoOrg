@@ -1,7 +1,7 @@
 # Incident Response Procedure
 
-**Version:** 1.0  
-**Effective Date:** [Date]  
+**Version:** 1.0
+**Effective Date:** [Date]
 **Last Reviewed:** [Date]
 
 ## 1. Purpose
@@ -20,28 +20,28 @@ This procedure applies to all suspected or confirmed information security incide
 
 ## 4. Procedure Steps
 
-1.  **Preparation:**  
-    *   Ensure tools, documentation, and team roles are up-to-date.  
-2.  **Detection & Identification:**  
-    *   Monitor alerts, logs, and reports for anomalies.  
-    *   Validate potential incident and classify severity.  
-3.  **Containment:**  
-    *   Short-Term: Isolate affected systems to prevent lateral movement.  
-    *   Long-Term: Apply temporary fixes (e.g., access controls, firewall rules).  
-4.  **Eradication:**  
-    *   Remove malware, close vulnerabilities, and harden systems.  
-5.  **Recovery:**  
-    *   Restore systems from clean backups, verify integrity, and resume normal operations.  
-6.  **Post-Incident Activity (Lessons Learned):**  
-    *   Conduct a review meeting, document root cause, and update policies and procedures.  
+1.  **Preparation:**
+    *   Ensure tools, documentation, and team roles are up-to-date.
+2.  **Detection & Identification:**
+    *   Monitor alerts, logs, and reports for anomalies.
+    *   Validate potential incident and classify severity.
+3.  **Containment:**
+    *   Short-Term: Isolate affected systems to prevent lateral movement.
+    *   Long-Term: Apply temporary fixes (e.g., access controls, firewall rules).
+4.  **Eradication:**
+    *   Remove malware, close vulnerabilities, and harden systems.
+5.  **Recovery:**
+    *   Restore systems from clean backups, verify integrity, and resume normal operations.
+6.  **Post-Incident Activity (Lessons Learned):**
+    *   Conduct a review meeting, document root cause, and update policies and procedures.
 
 ## 5. Roles and Responsibilities
 
-*   **Incident Reporter:** Initial detection or report of suspected incident.  
-*   **IRT Lead:** Coordinates response and communication.  
-*   **Forensic Analyst:** Gathers and analyzes evidence.  
-*   **Containment Team:** Implements isolation and mitigation.  
-*   **Recovery Team:** Restores affected systems and services.  
+*   **Incident Reporter:** Initial detection or report of suspected incident.
+*   **IRT Lead:** Coordinates response and communication.
+*   **Forensic Analyst:** Gathers and analyzes evidence.
+*   **Containment Team:** Implements isolation and mitigation.
+*   **Recovery Team:** Restores affected systems and services.
 *   **Communications Lead:** Manages notifications to stakeholders and regulators.
 
 ## 6. Workflow Diagram
@@ -61,4 +61,4 @@ graph TD
 
 ## 7. Procedure Review
 
-This procedure will be tested and reviewed at least annually, and after each major incident. 
+This procedure will be tested and reviewed at least annually, and after each major incident.

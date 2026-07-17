@@ -16,9 +16,9 @@ This template guides the creation of a governance circle charter for use within 
 
 # [Circle Name] Charter
 
-**Version:** [Version Number]  
-**Date:** [YYYY-MM-DD]  
-**Parent Circle:** [Name of Parent Circle]  
+**Version:** [Version Number]
+**Date:** [YYYY-MM-DD]
+**Parent Circle:** [Name of Parent Circle]
 
 ## 1. Purpose
 
@@ -153,9 +153,9 @@ This template guides the creation of a governance circle charter for use within 
 
 ## 9. Approval and Implementation
 
-**Approved By:** [Name and role of approver(s)]  
-**Approval Date:** [YYYY-MM-DD]  
-**Implementation Date:** [YYYY-MM-DD]  
+**Approved By:** [Name and role of approver(s)]
+**Approval Date:** [YYYY-MM-DD]
+**Implementation Date:** [YYYY-MM-DD]
 
 ---
 
@@ -168,6 +168,6 @@ This template guides the creation of a governance circle charter for use within 
 
 ## Notes
 
-- This template aligns with the [[../FractalGovernanceFramework|Fractal Governance Framework]] 
+- This template aligns with the [[../FractalGovernanceFramework|Fractal Governance Framework]]
 - For assistance with completing this template, contact the Meta-Governance Unit
-- See [[../Examples/CircleCharterExample|Example Circle Charter]] for a completed example 
+- See [[../Examples/CircleCharterExample|Example Circle Charter]] for a completed example

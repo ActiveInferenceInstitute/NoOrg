@@ -92,4 +92,4 @@
 - Key Decisions Needed: [List any upcoming decisions required from the audience]
 
 ---
-*This report provides a snapshot of the innovation pipeline's health and progress.* 
+*This report provides a snapshot of the innovation pipeline's health and progress.*

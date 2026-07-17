@@ -24,4 +24,4 @@ This directory contains the governance policies that guide the Board of Director
 - **Review Frequency**: Annual
 - **Policy Owner**: Governance Committee
 - **Last Reviewed**: [Date]
-- **Next Review**: [Date] 
+- **Next Review**: [Date]

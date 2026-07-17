@@ -17,7 +17,7 @@ graph TD
 
     AdvisoryBoard[Advisory Board] --> WorkingGroups
     WorkingGroups --> OrganizationalUnits[Organizational Units]
-    
+
     class OrganizationalUnits externalEntity;
 ```text
 
@@ -56,4 +56,4 @@ New working groups are established through the [[../Processes/WorkingGroupFormat
 
 - [[../Charter|Advisory Board Charter]]
 - [[../Policies/WorkingGroupPolicy|Working Group Policy]]
-- [[../Processes/WorkingGroupReporting|Working Group Reporting Process]] 
+- [[../Processes/WorkingGroupReporting|Working Group Reporting Process]]

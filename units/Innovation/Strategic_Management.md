@@ -30,4 +30,4 @@ This document outlines how innovation activities are aligned with and contribute
 ## Integration with Business Units
 
 *   **Handover Process:** Defining how successful innovations are transitioned to relevant business units for scaling and commercialization.
-*   **Collaboration Mechanisms:** How the Innovation unit works with business units throughout the innovation process (See [[Interfaces.md]]). 
+*   **Collaboration Mechanisms:** How the Innovation unit works with business units throughout the innovation process (See [[Interfaces.md]]).

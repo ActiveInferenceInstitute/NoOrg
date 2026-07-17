@@ -107,4 +107,4 @@ graph TD
 
 ## 10. Review Cycle
 
-This process, including forms and system configuration, will be reviewed annually by HR leadership, with input from managers and employees, to ensure effectiveness, fairness, and alignment with organizational needs. 
+This process, including forms and system configuration, will be reviewed annually by HR leadership, with input from managers and employees, to ensure effectiveness, fairness, and alignment with organizational needs.

@@ -76,4 +76,4 @@ This policy applies to all organizational data, regardless of format (electronic
 
 ## 13. Policy Review
 
-*   This policy will be reviewed annually and updated as necessary to address evolving threats, technologies, and regulations. 
+*   This policy will be reviewed annually and updated as necessary to address evolving threats, technologies, and regulations.

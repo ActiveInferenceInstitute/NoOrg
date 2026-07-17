@@ -33,7 +33,7 @@ Ethics assessments, recommendations, and compliance reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Compliance Unit](../Compliance/README.md) - Regulatory alignment
 
 ## Related Documentation

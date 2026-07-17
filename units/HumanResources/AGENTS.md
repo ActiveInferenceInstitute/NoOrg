@@ -33,8 +33,8 @@ Workforce analytics, turnover metrics, and employee satisfaction surveys.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
-- [HRAgent](../../src/agents/HRAgent/) - HR AI agent
+- [Units System](../../docs/architecture.md) - Unit management code
+- [HRAgent](../../docs/architecture.md) - HR AI agent
 
 ## Related Documentation
 

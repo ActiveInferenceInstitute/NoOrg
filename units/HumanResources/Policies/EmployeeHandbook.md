@@ -90,4 +90,4 @@
 
 ---
 
-***Disclaimer:** This handbook provides guidelines and summaries of company policies and benefits. It is not intended to create a contract of employment. The company reserves the right to modify, revoke, suspend, terminate, or change any or all policies, procedures, practices, and benefits, in whole or in part, at any time, with or without notice. Please consult the HR department for the most current versions of policies and for any questions.* 
+***Disclaimer:** This handbook provides guidelines and summaries of company policies and benefits. It is not intended to create a contract of employment. The company reserves the right to modify, revoke, suspend, terminate, or change any or all policies, procedures, practices, and benefits, in whole or in part, at any time, with or without notice. Please consult the HR department for the most current versions of policies and for any questions.*

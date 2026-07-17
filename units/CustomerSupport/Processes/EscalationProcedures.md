@@ -15,25 +15,25 @@ flowchart TD
     Type -->|Procedural| ProcEval[Procedural Evaluation]
     Type -->|Customer Satisfaction| CSATEval[CSAT Evaluation]
     Type -->|Authority| AuthEval[Authority Evaluation]
-    
+
     TechEval --> TechTier{Required Tier}
     TechTier -->|Tier 2| AssignT2[Assign to Tier 2]
     TechTier -->|Tier 3| AssignT3[Assign to Tier 3]
     TechTier -->|Development| AssignDev[Assign to Development]
-    
+
     ProcEval --> ProcOwner[Identify Process Owner]
     ProcOwner --> AssignProc[Assign to Process Owner]
-    
+
     CSATEval --> Impact{Impact Level}
     Impact -->|Low| TeamLead[Escalate to Team Lead]
     Impact -->|Medium| Manager[Escalate to Manager]
     Impact -->|High| Director[Escalate to Director]
-    
+
     AuthEval --> AuthLevel{Authority Level}
     AuthLevel -->|Approval| Manager
     AuthLevel -->|Policy Exception| Director
     AuthLevel -->|Legal| Legal[Escalate to Legal]
-    
+
     AssignT2 --> Monitor[Monitor Resolution]
     AssignT3 --> Monitor
     AssignDev --> Monitor
@@ -42,7 +42,7 @@ flowchart TD
     Manager --> Monitor
     Director --> Monitor
     Legal --> Monitor
-    
+
     Monitor --> Resolved{Issue Resolved?}
     Resolved -->|Yes| Document[Document Resolution]
     Resolved -->|No| Reassess[Reassess Escalation Path]
@@ -178,4 +178,4 @@ See [[../Policies/ServiceLevelAgreements|Service Level Agreements]] for priority
 
 ## Process Owner
 
-**Customer Support Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement. 
+**Customer Support Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement.

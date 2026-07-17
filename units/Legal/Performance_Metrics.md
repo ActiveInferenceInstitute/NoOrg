@@ -19,4 +19,4 @@ This document defines the Key Performance Indicators (KPIs) used to measure the 
 - **Budget Variance:** Percentage difference between actual spend and budget.
 
 ## Reporting
-[Describe the frequency and format of performance reporting] 
+[Describe the frequency and format of performance reporting]

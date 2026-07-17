@@ -49,4 +49,4 @@ All disclosures made under this policy will be kept confidential to the extent p
 
 Compliance with this policy is mandatory for all RAB members. Failure to comply may result in removal from the Board.
 
-This policy shall be reviewed annually by the RAB and [Specify reviewing body], or as needed. It should be kept consistent with the organization's overall ethics and conflict of interest standards. 
+This policy shall be reviewed annually by the RAB and [Specify reviewing body], or as needed. It should be kept consistent with the organization's overall ethics and conflict of interest standards.

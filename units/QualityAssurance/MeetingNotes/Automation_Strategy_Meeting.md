@@ -49,7 +49,7 @@ Team discussion identified these primary challenges:
 - **Test Data Management**: Lack of automated test data setup and teardown
 - **Skill Gaps**: Limited expertise in mobile automation and performance testing
 - **Tool Fragmentation**: Using multiple tools without clear guidelines
-- **Technical Debt**: Legacy test scripts need refactoring for maintainability
+- **Technical Debt**: Historical test scripts need refactoring for maintainability
 - **Reporting**: Lack of unified reporting across different test types
 
 ## 3. Strategic Goals for Next 12 Months
@@ -176,4 +176,4 @@ Reporting improvements:
 ---
 
 Meeting notes prepared by Morgan Patel
-Reviewed by Jamie Rodriguez 
+Reviewed by Jamie Rodriguez

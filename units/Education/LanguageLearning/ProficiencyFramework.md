@@ -184,6 +184,6 @@ Extensions covering regulatory terminology, legal concepts, and compliance docum
 
 ---
 
-**Document Owner**: Language Assessment Specialist  
-**Last Updated**: [Current Date]  
-**Review Cycle**: Annual with quarterly refinement 
+**Document Owner**: Language Assessment Specialist
+**Last Updated**: [Current Date]
+**Review Cycle**: Annual with quarterly refinement

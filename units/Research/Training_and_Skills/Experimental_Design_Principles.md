@@ -53,4 +53,4 @@ To outline fundamental principles of experimental design, ensuring that research
 
 *   [[../Processes/Research_Project_Lifecycle.md]] (Design occurs during Planning)
 *   [[../Processes/Data_Analysis_Workflow.md]] (Design influences analysis)
-*   [[../Policies/Research_Ethics_Policy.md]] 
+*   [[../Policies/Research_Ethics_Policy.md]]

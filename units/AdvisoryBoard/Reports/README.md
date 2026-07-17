@@ -18,7 +18,7 @@ graph TD
     Reports --> Organizational[Organizational Implementation]
     Committees[Advisory Committees] --> Reports
     WorkingGroups[Working Groups] --> Reports
-    
+
     class Committees,WorkingGroups,Organizational externalEntity;
 ```text
 
@@ -81,4 +81,4 @@ The Advisory Board follows a structured approach to report development:
 
 - [[../Charter|Advisory Board Charter]]
 - [[../Processes/AdvisoryReportingProcess|Advisory Reporting Process]]
-- [[../Policies/DocumentationStandards|Documentation Standards]] 
+- [[../Policies/DocumentationStandards|Documentation Standards]]

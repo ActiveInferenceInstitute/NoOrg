@@ -18,4 +18,4 @@ While the RAB is advisory, it may request updates from management at future meet
 
 ## 9. Review
 
-This process document shall be reviewed annually alongside the RAB Charter or as needed. 
+This process document shall be reviewed annually alongside the RAB Charter or as needed.

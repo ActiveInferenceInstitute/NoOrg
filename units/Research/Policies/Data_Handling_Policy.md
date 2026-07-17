@@ -67,4 +67,4 @@ This policy will be reviewed annually and updated as necessary by the Research U
 
 *   **Research Unit Lead:** [Name/Signature] - Date: ________
 *   **[Head of IT/CIO]:** [Name/Signature] - Date: ________
-*   **[Legal Counsel]:** [Name/Signature] - Date: ________ 
+*   **[Legal Counsel]:** [Name/Signature] - Date: ________

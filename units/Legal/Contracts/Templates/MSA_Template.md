@@ -46,4 +46,4 @@ Use this template when:
 ## Related Documents
 
 - [Procurement Process](../../../Procurement/)
-- [Vendor Management Policy](../../../Policies/)
+- [Vendor Management Policy](../../Policies/README.md)

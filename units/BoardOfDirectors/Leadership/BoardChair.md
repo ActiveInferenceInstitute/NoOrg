@@ -14,7 +14,7 @@ Sarah Chen is an experienced corporate governance leader with over 25 years of e
 
 ## Expertise and Qualifications
 - **Industry knowledge**: Technology, Financial Services, Healthcare
-- **Functional expertise**: 
+- **Functional expertise**:
   - Strategic Leadership
   - Digital Transformation
   - Corporate Governance
@@ -63,4 +63,4 @@ As Board Chair, Sarah is known for her collaborative leadership approach that ba
 - Profile Version: 1.0
 - Last Updated: 2023-12-15
 - Review Frequency: Annual
-- Confidentiality: Board Confidential 
+- Confidentiality: Board Confidential

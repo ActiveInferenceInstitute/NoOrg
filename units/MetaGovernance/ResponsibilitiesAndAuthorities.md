@@ -226,7 +226,7 @@ This Responsibilities and Authorities document will be:
 - Approved by the Executive Committee
 - Shared with all relevant stakeholders
 
-**Current Version:** 1.0  
-**Last Review Date:** YYYY-MM-DD  
-**Next Review Date:** YYYY-MM-DD  
-**Approved By:** [Executive Committee Chairperson Name] 
+**Current Version:** 1.0
+**Last Review Date:** YYYY-MM-DD
+**Next Review Date:** YYYY-MM-DD
+**Approved By:** [Executive Committee Chairperson Name]

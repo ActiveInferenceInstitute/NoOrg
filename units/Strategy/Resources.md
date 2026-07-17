@@ -34,4 +34,4 @@ This page lists key systems, tools, and frameworks utilized by the Strategy unit
 - **[[Financial Analysis Tools]]**
 - **[[Research Databases]]** (e.g., Statista, Gartner)
 - **[[Project Management Software]]**
-- **[[Mind Mapping Tools]]** (e.g., MindMeister, XMind) 
+- **[[Mind Mapping Tools]]** (e.g., MindMeister, XMind)

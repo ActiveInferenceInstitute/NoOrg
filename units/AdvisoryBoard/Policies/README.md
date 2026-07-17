@@ -17,7 +17,7 @@ graph TD
 
     Policies --> Implementation[Policy Implementation]
     Charter[Advisory Board Charter] --> Policies
-    
+
     class Charter externalEntity;
 ```text
 
@@ -68,4 +68,4 @@ The Advisory Board follows a structured approach to policy development and maint
 
 - [[../Charter|Advisory Board Charter]]
 - [[../Processes/PolicyDevelopment|Policy Development Process]]
-- [[../Reports/PolicyCompliance|Policy Compliance Reports]] 
+- [[../Reports/PolicyCompliance|Policy Compliance Reports]]

@@ -230,4 +230,4 @@ The Board of Directors serves as the highest governing body of the organization,
 - Review Frequency: Annual
 - Owner: Board of Directors
 - Classification: Confidential
-- Last Updated: <% tp.date.now("YYYY-MM-DD") %> 
+- Last Updated: <% tp.date.now("YYYY-MM-DD") %>

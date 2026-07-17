@@ -17,7 +17,7 @@ graph TD
 
     Processes --> Implementation[Process Implementation]
     Policies[Advisory Board Policies] --> Processes
-    
+
     class Policies externalEntity;
 ```text
 
@@ -68,4 +68,4 @@ The Advisory Board follows a structured approach to process development and main
 
 - [[../Charter|Advisory Board Charter]]
 - [[../Policies/README|Policies Overview]]
-- [[../Reports/ProcessEffectiveness|Process Effectiveness Reports]] 
+- [[../Reports/ProcessEffectiveness|Process Effectiveness Reports]]

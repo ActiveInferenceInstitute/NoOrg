@@ -1,36 +1,7 @@
-# Security Policy
+# Security policy
 
-## Supported Versions
+Do not commit credentials, runtime state, logs, coverage, or generated build output.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x.x   | :white_check_mark: |
-| < 1.0   | :x:                |
+Provider credentials are read only at application startup and are never included in task results, events, metrics, or logs. Prompt and state paths are validated and runtime writes use atomic replacement.
 
-## Reporting a Vulnerability
-
-If you discover a security vulnerability within NoOrg, please send an email to the maintainers. All security vulnerabilities will be promptly addressed.
-
-**Do NOT open a public GitHub issue for security vulnerabilities.**
-
-## Security Best Practices
-
-When working with agents in this framework:
-
-1. **API Keys**: Never commit API keys. Use environment variables (see `.env.example`).
-2. **Input Validation**: All agents validate inputs at method entry points.
-3. **Circuit Breakers**: External service calls are wrapped with resilience patterns.
-4. **Logging**: Use structured logging via the Logger class; never log sensitive data.
-
-## Agent Security Model
-
-Each agent operates within a defined scope:
-
-- Agents cannot access resources outside their designated Unit.
-- Cross-agent communication is mediated by the `MultiAgentCoordinator`.
-- All external calls use timeout, retry, and circuit breaker patterns.
-
-## Related Documentation
-
-- [Security Unit](./units/Security/AGENTS.md)
-- [Framework Security Docs](./docs/security/AGENTS.md)
+Report vulnerabilities privately to the repository maintainers with reproduction steps, affected versions, and suggested containment.

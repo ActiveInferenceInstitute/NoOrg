@@ -72,4 +72,4 @@ To request a new resource or update to an existing one:
 
 ## Contact
 
-For questions about these resources, contact the Customer Support Operations team at support-ops@organization.com or via Slack at #cs-resources. 
+For questions about these resources, contact the Customer Support Operations team at support-ops@organization.com or via Slack at #cs-resources.

@@ -12,7 +12,7 @@ This process applies to all audit findings where management has agreed to implem
 3.  **Verification Planning:** Based on the nature of the finding and the action plan, determine the appropriate method and timing for verifying implementation and effectiveness. High-risk findings typically require more rigorous verification.
 4.  **Verification Execution:** Perform procedures to verify that the action plan has been implemented and is effectively addressing the original finding.
     *   Methods: Reviewing updated documentation, testing new controls, interviewing personnel, observing processes, data analysis.
-5.  **Documentation:** Document the follow-up procedures performed, evidence obtained, and conclusion regarding the status of the action plan (e.g., Implemented and Effective, Implemented but Not Yet Effective, Not Implemented, Superseded).
+5.  **Documentation:** Document the follow-up procedures performed, evidence obtained, and conclusion regarding the status of the action plan (e.g., Implemented and Effective, Implemented but Not Yet Effective, Pending implementation, Superseded).
 6.  **Reporting:** Periodically report the status of outstanding audit findings and follow-up activities to senior management and the Audit Committee.
 7.  **Closure:** Formally close findings in the tracking system once verification confirms effective implementation.
 8.  **Escalation:** Escalate overdue or ineffective action plans to senior management and the Audit Committee as appropriate.
@@ -51,4 +51,4 @@ This process applies to all audit findings where management has agreed to implem
 - [[auditunit.md]]
 
 ---
-*Version: 1.0* 
+*Version: 1.0*

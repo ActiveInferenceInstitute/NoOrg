@@ -96,4 +96,4 @@ graph TD
 
 ## 7. Review
 
-This process will be reviewed periodically to ensure its effectiveness and efficiency. 
+This process will be reviewed periodically to ensure its effectiveness and efficiency.

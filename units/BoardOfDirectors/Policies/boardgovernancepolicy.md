@@ -258,4 +258,4 @@ The Board of Directors shall govern the organization in accordance with applicab
 - Document ID: POL-BOD-2024-001
 - Next Review: <% tp.date.now("YYYY") + 1 %>-<% tp.date.now("MM-DD") %>
 - Policy Authority: Board of Directors
-- Supersedes: None 
+- Supersedes: None

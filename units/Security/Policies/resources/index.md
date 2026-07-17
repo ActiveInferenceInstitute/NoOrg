@@ -46,5 +46,5 @@ This section provides comprehensive documentation for resources activities, incl
 
 ## Related Documentation
 
-- [Governance Policies](../../Governance/Policies/)
-- [Processes](./Processes/)
+- [Governance Policies](policies/README.md)
+- [Processes](../../Processes/README.md)

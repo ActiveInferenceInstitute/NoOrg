@@ -33,7 +33,7 @@ Risk registers, heat maps, and mitigation status reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Risk Advisory Board](../RiskAdvisoryBoard/README.md) - Advisory coordination
 
 ## Related Documentation

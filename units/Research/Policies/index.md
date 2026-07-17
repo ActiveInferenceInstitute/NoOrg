@@ -6,10 +6,10 @@ This directory contains policies governing research activities, publications, da
 
 | Policy | Description |
 |--------|-------------|
-| [Publication Policy](./PublicationPolicy.md) | Guidelines for academic and industry publications |
-| [Data Management Policy](./DataManagementPolicy.md) | Research data handling, storage, and sharing |
-| [Intellectual Property Policy](./IntellectualPropertyPolicy.md) | IP ownership and commercialization |
-| [Research Ethics Policy](./ResearchEthicsPolicy.md) | Ethical conduct in research |
+| [Publication Policy](README.md) | Guidelines for academic and industry publications |
+| [Data Management Policy](README.md) | Research data handling, storage, and sharing |
+| [Intellectual Property Policy](../../Legal/Policies/IntellectualPropertyPolicy.md) | IP ownership and commercialization |
+| [Research Ethics Policy](README.md) | Ethical conduct in research |
 
 ## Governance
 

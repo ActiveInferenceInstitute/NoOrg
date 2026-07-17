@@ -66,4 +66,4 @@ This policy applies to all employees, contractors, and authorized users who util
 
 ## 12. Policy Review
 
-*   This policy will be reviewed annually and updated as necessary. 
+*   This policy will be reviewed annually and updated as necessary.

@@ -75,4 +75,4 @@
 *   Clearly define the calculation method for each metric.
 *   Use consistent time periods for comparisons.
 *   Visualizations (charts, graphs) are highly recommended for clarity.
-*   Focus commentary on insights and actions, not just reporting numbers. 
+*   Focus commentary on insights and actions, not just reporting numbers.

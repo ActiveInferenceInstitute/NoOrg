@@ -120,4 +120,4 @@ graph TD
 
 ## 6. Review & Improvement
 
-This process will be reviewed regularly, incorporating feedback from analysts and intelligence consumers to identify areas for enhancement. 
+This process will be reviewed regularly, incorporating feedback from analysts and intelligence consumers to identify areas for enhancement.

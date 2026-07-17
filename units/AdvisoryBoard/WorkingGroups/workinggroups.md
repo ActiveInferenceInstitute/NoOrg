@@ -280,4 +280,4 @@ This document defines the structure, composition, and operational framework for 
 - Owner: Advisory Board
 - Maintainer: Working Group Coordinator
 - Review Frequency: Quarterly
-- Security Classification: Confidential 
+- Security Classification: Confidential

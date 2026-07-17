@@ -319,6 +319,6 @@ Technologies will be evaluated based on:
 
 ---
 
-**Document Owner**: Language Technology Specialist  
-**Last Updated**: [Current Date]  
-**Review Cycle**: Semi-annual review with quarterly updates 
+**Document Owner**: Language Technology Specialist
+**Last Updated**: [Current Date]
+**Review Cycle**: Semi-annual review with quarterly updates

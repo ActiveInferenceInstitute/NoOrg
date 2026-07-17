@@ -17,4 +17,4 @@ Adherence to these policies is mandatory for all employees, contractors, and oth
 *   **[Software Usage Policy](SoftwareUsagePolicy.md):** Outlines rules regarding the installation and use of software.
 *   **[Hardware Lifecycle Policy](HardwareLifecyclePolicy.md):** Defines the process for procurement, management, and disposal of IT hardware.
 
-Please review the relevant policies to understand your responsibilities. 
+Please review the relevant policies to understand your responsibilities.

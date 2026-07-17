@@ -26,7 +26,7 @@ graph TD
     StrategyCommittee --> FocusAreas
     StrategyCommittee -.-> StrategyUnit[Strategy Unit]
     StrategyCommittee -.-> StrategyWorkingGroup[Strategy Working Group]
-    
+
     class StrategyUnit,StrategyWorkingGroup externalEntity;
 ```text
 
@@ -78,4 +78,4 @@ The Strategy Committee meets quarterly and conducts additional sessions as neede
 - [[../../../Strategy/README|Strategy Unit]]
 - [[../../WorkingGroups/StrategyGroup/README|Strategy Working Group]]
 - [[../InnovationCommittee/README|Innovation Committee]]
-- [[../RiskCommittee/README|Risk Committee]] 
+- [[../RiskCommittee/README|Risk Committee]]

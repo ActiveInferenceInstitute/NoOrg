@@ -46,4 +46,4 @@ This policy applies to all critical IT infrastructure, systems, applications, da
 
 ## 7. Policy Review
 
-*   This policy will be reviewed annually and updated as necessary. 
+*   This policy will be reviewed annually and updated as necessary.

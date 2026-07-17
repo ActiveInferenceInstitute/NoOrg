@@ -38,4 +38,4 @@ Policies are reviewed periodically and updated as needed. Adherence is mandatory
 *Version: 1.0*
 *Last Updated: [Date]*
 *Maintained by: [[head_of_development]] / [[cto]]*
-*Status: Active* 
+*Status: Active*

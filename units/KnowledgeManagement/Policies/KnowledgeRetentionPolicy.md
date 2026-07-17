@@ -88,12 +88,12 @@ This policy and the associated Knowledge Retention Schedule will be reviewed ann
 - [Knowledge Creation Policy](KnowledgeCreationPolicy.md)
 - [Knowledge Sharing Policy](KnowledgeSharingPolicy.md)
 - [Data Classification Policy (KM Context)](DataClassificationPolicy.md)
-- [Organizational Records Management Policy] [Placeholder Link]
-- [Data Governance Policy] [Placeholder Link]
-- [Legal Hold Procedure] [Placeholder Link]
-- [Knowledge Retention Schedule] [Placeholder Link - Crucial supporting document]
+- [Organizational Records Management Policy] [Reference link pending]
+- [Data Governance Policy] [Reference link pending]
+- [Legal Hold Procedure] [Reference link pending]
+- [Knowledge Retention Schedule] [Reference link pending - Crucial supporting document]
 
 ---
 **Policy Owner:** Knowledge Management Unit (in consultation with Legal/Compliance)
 **Date Effective:** [Date]
-**Next Review Date:** [Date + 1 Year] 
+**Next Review Date:** [Date + 1 Year]

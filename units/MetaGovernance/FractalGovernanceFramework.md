@@ -125,4 +125,4 @@ Rules about how rules themselves are created, modified, and applied:
 - Reinventing Organizations by Frederic Laloux
 - Sociocracy 3.0 (S3) Principles and Patterns
 - Complex Adaptive Systems: An Introduction to Computational Models of Social Life by John H. Miller and Scott E. Page
-- The Hidden Order of Organizations by David Hurst 
+- The Hidden Order of Organizations by David Hurst

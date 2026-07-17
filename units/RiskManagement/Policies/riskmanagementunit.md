@@ -165,6 +165,6 @@ The Risk Management Unit is committed to continuous improvement through:
 
 ---
 
-**Policy Owner**: Risk Management Director  
-**Last Review**: YYYY-MM-DD  
-**Next Review**: YYYY-MM-DD 
+**Policy Owner**: Risk Management Director
+**Last Review**: YYYY-MM-DD
+**Next Review**: YYYY-MM-DD

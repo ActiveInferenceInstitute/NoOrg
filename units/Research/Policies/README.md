@@ -14,4 +14,4 @@ This directory contains policies specific to the Research Unit.
 
 *   [[../Charter.md]]
 *   [[../Processes/]]
-*   [Link to Organization-Wide Policy Repository] 
+*   [Link to Organization-Wide Policy Repository]

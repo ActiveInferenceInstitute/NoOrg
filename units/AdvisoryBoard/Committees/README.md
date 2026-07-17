@@ -55,4 +55,4 @@ Committees function through:
 
 - [[../Charter|Advisory Board Charter]]
 - [[../Policies/CommitteeOperations|Committee Operations Policy]]
-- [[../Processes/CommitteeReporting|Committee Reporting Process]] 
+- [[../Processes/CommitteeReporting|Committee Reporting Process]]

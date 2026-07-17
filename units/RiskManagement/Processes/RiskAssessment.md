@@ -215,6 +215,6 @@ flowchart TD
 
 ---
 
-**Process Owner**: Risk Assessment Lead  
-**Last Review**: YYYY-MM-DD  
-**Next Review**: YYYY-MM-DD 
+**Process Owner**: Risk Assessment Lead
+**Last Review**: YYYY-MM-DD
+**Next Review**: YYYY-MM-DD

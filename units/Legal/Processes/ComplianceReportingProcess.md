@@ -85,4 +85,4 @@ This process applies to:
 
 ## 7. Review and Updates
 
-This process will be reviewed annually by the Compliance and Legal Units and updated as needed to reflect changes in regulations, organizational structure, or best practices. 
+This process will be reviewed annually by the Compliance and Legal Units and updated as needed to reflect changes in regulations, organizational structure, or best practices.

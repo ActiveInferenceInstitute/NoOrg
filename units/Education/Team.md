@@ -127,4 +127,4 @@ Planned expansion (per [[StrategicPlan|Strategic Plan]]): +4 FTEs by Q4 2023
 - [[Team/JobDescriptions/README|Job Descriptions]]
 - [[Team/PerformanceMetrics|Team Performance Metrics]]
 - [[Team/DevelopmentPlans/README|Team Development Plans]]
-- [[../HumanResources/Policies/CompetencyFrameworks|Organizational Competency Frameworks]] 
+- [[../HumanResources/Policies/CompetencyFrameworks|Organizational Competency Frameworks]]

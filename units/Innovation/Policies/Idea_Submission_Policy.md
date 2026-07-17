@@ -68,4 +68,4 @@ This policy applies to all employees, contractors, and designated partners of [O
 This policy will be reviewed annually by the Policy Owner and the [Approving Body] and updated as necessary.
 
 ---
-*This policy ensures a structured and transparent approach to capturing and evaluating new ideas.* 
+*This policy ensures a structured and transparent approach to capturing and evaluating new ideas.*

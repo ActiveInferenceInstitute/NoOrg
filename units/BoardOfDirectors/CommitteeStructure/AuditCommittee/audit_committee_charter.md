@@ -61,7 +61,7 @@ The Audit Committee assists the Board of Directors in fulfilling its oversight r
 ### Meeting Structure
 - Frequency: Quarterly, minimum
 - Format: In-person/hybrid
-- Required attendance: 
+- Required attendance:
   - Committee members
   - External auditors (as needed)
   - CFO (as needed)
@@ -208,4 +208,4 @@ The Audit Committee assists the Board of Directors in fulfilling its oversight r
 - Review Frequency: Annual
 - Owner: Board of Directors
 - Maintainer: Audit Committee Chair
-- Last Updated: 2023-12-15 
+- Last Updated: 2023-12-15

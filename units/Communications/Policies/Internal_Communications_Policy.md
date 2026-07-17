@@ -68,5 +68,5 @@ Applies to all internal communications between employees and organizational unit
 
 ## Related Documents
 
-- [Communications Policy](./Communications_Policy.md)
+- [Communications Policy](README.md)
 - [HR Policies](../../HumanResources/Policies/)

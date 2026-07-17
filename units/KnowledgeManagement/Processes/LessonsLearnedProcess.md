@@ -333,4 +333,4 @@ flowchart TD
 - [[../Charter|Knowledge Management Unit Charter]]
 - [[../Policies/KnowledgeSharingPolicy|Knowledge Sharing Policy]]
 - [[../../templates/documentation/LessonLearnedTemplate|Lesson Learned Documentation Template]]
-- [[../../templates/project/LessonsLearnedSessionAgenda|Lessons Learned Session Agenda Template]] 
+- [[../../templates/project/LessonsLearnedSessionAgenda|Lessons Learned Session Agenda Template]]

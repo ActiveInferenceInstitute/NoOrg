@@ -162,7 +162,7 @@ This guide integrates cultural intelligence principles with language learning, r
 - Metacommunication about cultural differences
 - Creating shared cultural spaces in teams
 
-## Culture-Specific Language Learning 
+## Culture-Specific Language Learning
 
 ### Cultural Integration in Language Practice
 - Incorporating cultural scenarios in role plays
@@ -193,6 +193,6 @@ This guide integrates cultural intelligence principles with language learning, r
 
 ---
 
-**Document Owner**: Cultural Intelligence Specialist  
-**Last Updated**: [Current Date]  
-**Review Cycle**: Annual with quarterly updates for regional information 
+**Document Owner**: Cultural Intelligence Specialist
+**Last Updated**: [Current Date]
+**Review Cycle**: Annual with quarterly updates for regional information

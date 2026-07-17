@@ -155,7 +155,7 @@ Each risk has associated key indicators that are monitored:
 
 ### Review Schedule
 - Monthly review by Education Unit leadership
-- Quarterly comprehensive risk assessment 
+- Quarterly comprehensive risk assessment
 - Annual strategic risk review with [[../RiskManagement/index|Risk Management Unit]]
 
 ### Escalation Procedure
@@ -184,5 +184,5 @@ See [[RiskAssessment/Matrix|Detailed Risk Assessment Matrix]] for complete risk 
 
 ---
 
-**Last Updated**: [Current Date]  
-**Next Review**: [Current Date + 3 Months] 
+**Last Updated**: [Current Date]
+**Next Review**: [Current Date + 3 Months]

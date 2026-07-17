@@ -44,7 +44,7 @@ KnowledgeManagement/
 ## Related Units
 
 - [Governance](../Governance/) - Policy alignment
-- [Executive](../Executive/) - Strategic alignment  
+- [Executive](../Executive/) - Strategic alignment
 - [HumanResources](../HumanResources/) - Staffing and training
 
 ## Getting Started

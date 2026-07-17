@@ -160,6 +160,6 @@ Our approach to language learning combines:
 
 ---
 
-**Document Owner**: Language Learning Program Manager  
-**Last Updated**: [Current Date]  
-**Review Cycle**: Annual with quarterly progress assessment 
+**Document Owner**: Language Learning Program Manager
+**Last Updated**: [Current Date]
+**Review Cycle**: Annual with quarterly progress assessment

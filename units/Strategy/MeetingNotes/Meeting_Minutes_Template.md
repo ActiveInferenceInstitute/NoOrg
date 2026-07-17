@@ -54,4 +54,4 @@
 
 ---
 **Minutes Approved By:** [Name/Chair]
-**Date Approved:** YYYY-MM-DD 
+**Date Approved:** YYYY-MM-DD

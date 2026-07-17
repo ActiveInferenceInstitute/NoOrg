@@ -1,7 +1,7 @@
 # User Offboarding Procedure
 
-**Version:** 1.0  
-**Effective Date:** [Date]  
+**Version:** 1.0
+**Effective Date:** [Date]
 **Last Reviewed:** [Date]
 
 ## 1. Purpose
@@ -19,28 +19,28 @@ This procedure applies to all user termination, resignation, or transfer events 
 
 ## 4. Procedure Steps
 
-1.  **Request Initiation:**  
+1.  **Request Initiation:**
     *   HR or manager initiates an Offboarding ticket in ITSM with user details and termination date.
-2.  **Notification & Scheduling:**  
+2.  **Notification & Scheduling:**
     *   Notify IT teams of upcoming offboarding and schedule deprovisioning tasks on the termination date/time.
-3.  **Access Revocation:**  
+3.  **Access Revocation:**
     *   Disable or remove user accounts (AD, email, applications) at the termination time.
     *   Revoke VPN and remote access.
-4.  **Asset Retrieval:**  
+4.  **Asset Retrieval:**
     *   Collect company-owned hardware and peripherals (laptop, mobile devices, access cards).
     *   Inspect and record asset condition and return in Asset Management.
-5.  **Data Handling:**  
+5.  **Data Handling:**
     *   Transfer or archive user data (home folder, shared drives, email) according to Data Security and Retention policies.
     *   Securely erase data from devices slated for reuse or disposal.
-6.  **Notification of Completion:**  
+6.  **Notification of Completion:**
     *   Confirm with HR and manager that offboarding tasks are complete.
     *   Close the Offboarding ticket in ITSM.
 
 ## 5. Roles and Responsibilities
 
-*   **HR:** Initiates offboarding request and provides termination details.  
-*   **Help Desk:** Disables user accounts, revokes access, collects assets.  
-*   **Asset Management:** Tracks returned hardware and updates inventory.  
+*   **HR:** Initiates offboarding request and provides termination details.
+*   **Help Desk:** Disables user accounts, revokes access, collects assets.
+*   **Asset Management:** Tracks returned hardware and updates inventory.
 *   **Data Owner/IT:** Archives or transfers user data and ensures secure disposal.
 
 ## 6. Workflow Diagram
@@ -54,4 +54,4 @@ graph TD
     E --> F[Archive & Secure Data]
     F --> G[Notify HR/Manager of Completion]
     G --> H[Close Offboarding Ticket]
-```text 
+```text

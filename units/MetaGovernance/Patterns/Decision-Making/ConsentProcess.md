@@ -2,9 +2,9 @@
 
 ## Pattern ID: DM-CONSENT-001
 
-**Category:** Decision-Making  
-**Complexity:** Intermediate  
-**Maturity:** Established  
+**Category:** Decision-Making
+**Complexity:** Intermediate
+**Maturity:** Established
 
 ## Problem Statement
 
@@ -192,13 +192,13 @@ A marketing department used consent to revise their content approval policy. The
 
 ## Metadata
 
-**Author(s):** Meta-Governance Pattern Team  
-**Created Date:** YYYY-MM-DD  
-**Last Updated:** YYYY-MM-DD  
-**Version:** 1.0  
-**Status:** Approved  
-**Reviewer(s):** Governance Pattern Review Panel  
+**Author(s):** Meta-Governance Pattern Team
+**Created Date:** YYYY-MM-DD
+**Last Updated:** YYYY-MM-DD
+**Version:** 1.0
+**Status:** Approved
+**Reviewer(s):** Governance Pattern Review Panel
 
 ---
 
-*This pattern is part of the [[../../GovernancePatternLibrary|Governance Pattern Library]] maintained by the Meta-Governance Unit.* 
+*This pattern is part of the [[../../GovernancePatternLibrary|Governance Pattern Library]] maintained by the Meta-Governance Unit.*

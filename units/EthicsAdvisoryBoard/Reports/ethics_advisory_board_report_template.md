@@ -59,4 +59,4 @@
 
 ---
 **Distribution:** [[List of Recipients e.g., Executive Leadership, Legal, Compliance]]
-**Confidentiality Level:** [[e.g., Internal, Restricted]] 
+**Confidentiality Level:** [[e.g., Internal, Restricted]]

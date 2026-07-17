@@ -269,4 +269,4 @@ The Special Projects Working Group serves as a dynamic and specialized advisory 
 - Owner: Advisory Board
 - Maintainer: Special Projects Group Chair
 - Review Frequency: Annual
-- Security Classification: Confidential 
+- Security Classification: Confidential

@@ -36,4 +36,4 @@ graph LR
 
 ## Maintenance
 
-Processes are reviewed at least annually or when significant changes occur (e.g., new systems, major reorganizations). Updates follow the change management procedure defined in the [[ProcessManagement]] process itself and the [[../Charter|Unit Charter]]. 
+Processes are reviewed at least annually or when significant changes occur (e.g., new systems, major reorganizations). Updates follow the change management procedure defined in the [[ProcessManagement]] process itself and the [[../Charter|Unit Charter]].

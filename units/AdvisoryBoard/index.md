@@ -27,7 +27,7 @@ The Advisory Board serves as an independent consultative body providing strategi
 ## Related Units
 
 - [[../BoardOfDirectors/README|Board of Directors]]
-- [[../ExecutiveCommittee/README|Executive Committee]] 
+- [[../ExecutiveCommittee/README|Executive Committee]]
 - [[../RiskManagement/README|Risk Management]]
 - [[../Strategy/README|Strategy]]
 - [[../Innovation/README|Innovation]]

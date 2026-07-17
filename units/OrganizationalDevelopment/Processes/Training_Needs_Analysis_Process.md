@@ -123,4 +123,4 @@ graph TD
 - Process ID: [PROC-OD-003]
 - Version: 1.0
 - Owner: [[Head of Organizational Development]] / [[Head of L&D]]
-- Last Updated: <% tp.date.now("YYYY-MM-DD") %> 
+- Last Updated: <% tp.date.now("YYYY-MM-DD") %>

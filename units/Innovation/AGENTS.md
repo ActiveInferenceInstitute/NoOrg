@@ -41,9 +41,9 @@ Visual representations of innovation pipelines, technology roadmaps, and capabil
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
-- [CreativeWritingAgent](../../src/agents/CreativeWritingAgent.ts) - Creative content generation
-- [PlanningAgent](../../src/agents/PlanningAgent.ts) - Strategic planning support
+- [Units System](../../docs/architecture.md) - Unit management code
+- [CreativeWritingAgent](../../docs/architecture.md) - Creative content generation
+- [PlanningAgent](../../docs/architecture.md) - Strategic planning support
 - [Research & Development](../ResearchDevelopment/README.md) - R&D coordination
 - [Technology Advisory Board](../TechnologyAdvisoryBoard/README.md) - Technology strategy
 

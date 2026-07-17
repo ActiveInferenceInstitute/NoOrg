@@ -33,7 +33,7 @@ Training metrics, completion rates, and program effectiveness reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Human Resources](../HumanResources/README.md) - HR coordination
 - [Education Unit](../Education/README.md) - Education alignment
 

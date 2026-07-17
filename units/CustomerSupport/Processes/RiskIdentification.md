@@ -237,6 +237,6 @@ The following metrics will be tracked to measure the effectiveness of the risk i
 
 ---
 
-**Process Owner**: Customer Support Operations Manager  
-**Last Review**: YYYY-MM-DD  
-**Next Review**: YYYY-MM-DD 
+**Process Owner**: Customer Support Operations Manager
+**Last Review**: YYYY-MM-DD
+**Next Review**: YYYY-MM-DD

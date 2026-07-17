@@ -95,4 +95,4 @@ This document catalogs the software, hardware, platforms, and datasets utilized 
 ## Related Documentation
 
 - [Methodologies](./Methodologies.md)
-- [Data Management Process](./Processes/DataManagementProcess.md)
+- [Data Management Process](README.md)

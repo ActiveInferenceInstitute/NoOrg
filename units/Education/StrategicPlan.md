@@ -123,5 +123,5 @@ The implementation of this strategic plan will be overseen by:
 
 ---
 
-**Last Updated**: [Current Date]  
-**Next Review**: [Current Date + 6 Months] 
+**Last Updated**: [Current Date]
+**Next Review**: [Current Date + 6 Months]

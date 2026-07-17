@@ -74,4 +74,4 @@ Tickets should be escalated when:
 - Cross-departmental collaboration agreements/procedures (if exist)
 
 ---
-*Version: 1.0* 
+*Version: 1.0*

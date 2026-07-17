@@ -159,7 +159,7 @@ This document outlines the key positions, roles, and personas within the Knowled
 - Good communication and organizational skills
 - Respected by peers
 
-**Time Commitment:** 
+**Time Commitment:**
 - 10-20% of regular work time
 
 ### Community of Practice Leader (Part-time role)
@@ -180,7 +180,7 @@ This document outlines the key positions, roles, and personas within the Knowled
 - Good facilitation and networking skills
 - Collaborative mindset
 
-**Time Commitment:** 
+**Time Commitment:**
 - 10-15% of regular work time
 
 ### Knowledge Champion (Part-time role)
@@ -201,7 +201,7 @@ This document outlines the key positions, roles, and personas within the Knowled
 - Respected by peers
 - Interest in organizational improvement
 
-**Time Commitment:** 
+**Time Commitment:**
 - 5-10% of regular work time
 
 ### Subject Matter Expert (Context-specific role)
@@ -222,7 +222,7 @@ This document outlines the key positions, roles, and personas within the Knowled
 - Good communication skills
 - Patient and articulate
 
-**Time Commitment:** 
+**Time Commitment:**
 - As needed for specific initiatives
 
 ## Knowledge Management Governance Bodies
@@ -247,7 +247,7 @@ This document outlines the key positions, roles, and personas within the Knowled
 - HR representative
 - Key business unit leaders
 
-**Meeting Frequency:** 
+**Meeting Frequency:**
 - Quarterly
 
 ### Community of Practice Coordination Group
@@ -268,7 +268,7 @@ This document outlines the key positions, roles, and personas within the Knowled
 - Knowledge Management representative
 - Organizational Development representative
 
-**Meeting Frequency:** 
+**Meeting Frequency:**
 - Bi-monthly
 
 ## Related Documents

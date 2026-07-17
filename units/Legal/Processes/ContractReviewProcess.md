@@ -68,4 +68,4 @@ This process applies to all types of contracts, agreements, and Memoranda of Und
 
 ## 7. Review and Updates
 
-This process will be reviewed annually by the Legal Unit and updated as necessary. 
+This process will be reviewed annually by the Legal Unit and updated as necessary.

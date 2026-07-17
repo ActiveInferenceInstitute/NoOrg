@@ -12,13 +12,13 @@ graph TB
     ResourceUtil[Resource Util.<br>Value / Target]
     ServiceRate[Service Delivery<br>Value / Target]
     end
-    
+
     subgraph Status
     S1[["On Track"]]
     S2[["At Risk"]]
     S3[["Needs Improvement"]]
     end
-    
+
     CycleTime --> S1
     DefectRate --> S1
     ResourceUtil --> S2
@@ -155,4 +155,4 @@ sankey-beta
 - Author: [[Operations Manager]]
 - Reviewer: [[Operations Director]]
 - Status: [Draft/Reviewed/Approved]
-- Distribution: [[Executive Committee]], [[Operations Unit]] 
+- Distribution: [[Executive Committee]], [[Operations Unit]]

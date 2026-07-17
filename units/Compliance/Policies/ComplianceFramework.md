@@ -83,8 +83,8 @@ This framework establishes the structure, principles, and processes that govern 
 - **Leading**: Optimized, proactive program
 
 ---
-**Document Owner:** Chief Compliance Officer  
-**Approval Authority:** [[BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]  
-**Last Review Date:** 2024-02-10  
-**Next Review Date:** 2025-02-10  
-**Version:** 1.2 
+**Document Owner:** Chief Compliance Officer
+**Approval Authority:** [[BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]
+**Last Review Date:** 2024-02-10
+**Next Review Date:** 2025-02-10
+**Version:** 1.2

@@ -176,4 +176,4 @@
 
 ---
 
-*This report follows the standards defined in the [[../Policies/Test_Strategy_Policy|Test Strategy Policy]]* 
+*This report follows the standards defined in the [[../Policies/Test_Strategy_Policy|Test Strategy Policy]]*

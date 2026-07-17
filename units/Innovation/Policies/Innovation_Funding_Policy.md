@@ -70,4 +70,4 @@ Innovation activities may be funded through one or more of the following sources
 This policy will be reviewed annually by the Policy Owner(s) and the [Approving Body] and updated as necessary to reflect changes in strategy, budget availability, or process effectiveness.
 
 ---
-*This policy provides a framework for allocating and managing resources dedicated to innovation.* 
+*This policy provides a framework for allocating and managing resources dedicated to innovation.*

@@ -98,4 +98,4 @@ The Test Automation Process defines the approach, tools, and methodology for imp
 
 - [[../../Development/Processes/Code_Review_Process|Development Code Review Process]]
 - [[../../DevOps/Processes/Continuous_Integration_Process|DevOps CI Process]]
-- [[../MeetingNotes/Automation_Strategy_Meeting|Automation Strategy Meeting Notes]] 
+- [[../MeetingNotes/Automation_Strategy_Meeting|Automation Strategy Meeting Notes]]

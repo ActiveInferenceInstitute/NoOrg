@@ -114,4 +114,4 @@ tags: [meeting, operations, sync]
 
 ---
 
-*Last updated: <% tp.date.now("YYYY-MM-DD") %>* 
+*Last updated: <% tp.date.now("YYYY-MM-DD") %>*

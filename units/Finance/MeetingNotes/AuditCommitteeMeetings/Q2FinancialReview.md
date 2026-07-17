@@ -2,10 +2,10 @@
 
 ## Meeting Details
 
-**Date**: [Q2 Date]  
-**Time**: 14:00 - 16:00  
-**Location**: Conference Room A / Virtual Meeting  
-**Meeting Type**: Quarterly Financial Review  
+**Date**: [Q2 Date]
+**Time**: 14:00 - 16:00
+**Location**: Conference Room A / Virtual Meeting
+**Meeting Type**: Quarterly Financial Review
 
 ## Attendees
 
@@ -153,9 +153,9 @@ Review of outstanding action items from previous meetings:
 
 ## Next Meeting
 
-**Date**: [Next meeting date]  
-**Time**: [Time]  
-**Focus**: [Special focus areas for next meeting]  
+**Date**: [Next meeting date]
+**Time**: [Time]
+**Focus**: [Special focus areas for next meeting]
 
 ## Attachments
 
@@ -175,4 +175,4 @@ These meeting notes have been distributed to:
 
 ## Approval
 
-These minutes were prepared by [Preparer] and approved by [[../../../AdvisoryBoard/Committees/AuditCommittee/README|Jennifer Williams]], Audit Committee Chair. 
+These minutes were prepared by [Preparer] and approved by [[../../../AdvisoryBoard/Committees/AuditCommittee/README|Jennifer Williams]], Audit Committee Chair.

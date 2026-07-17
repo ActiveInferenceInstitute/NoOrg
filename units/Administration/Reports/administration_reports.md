@@ -49,4 +49,4 @@ Reports are typically generated using [[reporting_system]] or specific administr
 *Version: 1.0*
 *Last Updated: [Date]*
 *Maintained by: [[administration_manager]]*
-*Status: Active* 
+*Status: Active*

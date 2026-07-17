@@ -33,7 +33,7 @@ Product performance metrics, roadmap status, and feature adoption reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Development Unit](../Development/README.md) - Development coordination
 
 ## Related Documentation

@@ -139,5 +139,5 @@ Defines the process for planning, conducting, and following up on board of direc
 ## Related Documents
 
 - [Board of Directors Charter](../../BoardOfDirectors/Charter.md)
-- [Committee Charters](../../BoardOfDirectors/Committees/)
+- [Committee Charters](../../AdvisoryBoard/Committees/README.md)
 - [Corporate Governance Guidelines](../Policies/)

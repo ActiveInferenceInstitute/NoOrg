@@ -64,4 +64,4 @@ Refer to the [Change Management Procedure document](AGENTS.md) for the detailed 
 
 ## 9. Policy Review
 
-*   This policy will be reviewed annually and updated as necessary. 
+*   This policy will be reviewed annually and updated as necessary.

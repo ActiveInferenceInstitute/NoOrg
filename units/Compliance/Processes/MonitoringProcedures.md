@@ -113,8 +113,8 @@ These procedures apply to all compliance monitoring activities conducted by the 
 - Monitoring Report Template
 
 ---
-**Document Owner:** Compliance Monitoring Manager  
-**Approval Authority:** Chief Compliance Officer  
-**Last Review Date:** 2024-03-01  
-**Next Review Date:** 2025-03-01  
-**Version:** 1.3 
+**Document Owner:** Compliance Monitoring Manager
+**Approval Authority:** Chief Compliance Officer
+**Last Review Date:** 2024-03-01
+**Next Review Date:** 2025-03-01
+**Version:** 1.3

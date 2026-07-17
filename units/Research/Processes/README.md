@@ -14,4 +14,4 @@ This directory outlines standard operating procedures and workflows for the Rese
 
 *   [[../Charter.md]]
 *   [[../Policies/]]
-*   [Link to Relevant Templates (e.g., DMP, Project Plan)] 
+*   [Link to Relevant Templates (e.g., DMP, Project Plan)]

@@ -15,4 +15,4 @@ This file outlines the primary processes managed and executed by the Strategy un
 9.  **[[Processes/MA_Opportunity_Assessment|M&A Opportunity Assessment]]**: Identifying and evaluating potential merger, acquisition, or partnership targets.
 10. **[[Processes/Strategy_Communication_Cascade|Strategy Communication & Cascade]]**: Ensuring the strategy is effectively communicated and understood throughout the [[organization]].
 
-Detailed process documentation can be found in the [[Processes/|Processes]] directory. 
+Detailed process documentation can be found in the [[Processes/|Processes]] directory.

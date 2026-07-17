@@ -68,4 +68,4 @@ All organizational emissions across Scope 1, 2, and 3.
 ## Related Documents
 
 - [Climate Action Policy](../Policies/Climate_Action_Policy.md)
-- [Reporting Templates](./Templates/)
+- [Reporting Templates](../../Innovation/Templates/README.md)

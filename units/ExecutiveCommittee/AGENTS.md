@@ -35,7 +35,7 @@ Committee charter, policies, and procedural documentation.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Executive Unit](../Executive/README.md) - Executive coordination
 
 ## Related Documentation

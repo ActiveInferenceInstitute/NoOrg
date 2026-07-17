@@ -1,0 +1,11 @@
+stateDiagram-v2
+  [*] --> queued
+  queued --> running: claim and start
+  running --> completed: execute, validate, persist
+  running --> queued: retryable failure
+  running --> failed: terminal failure
+  queued --> cancelled: cancel
+  running --> cancelled: abort and settle
+  completed --> [*]
+  failed --> [*]
+  cancelled --> [*]

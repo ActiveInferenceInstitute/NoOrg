@@ -80,4 +80,4 @@ graph TD
 
 ## 8. Review Cycle
 
-This workflow document will be reviewed annually. 
+This workflow document will be reviewed annually.

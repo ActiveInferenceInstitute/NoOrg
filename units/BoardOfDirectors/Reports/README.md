@@ -34,4 +34,4 @@ This directory contains reporting templates, frameworks, and examples of regular
 - **Report Coordinator**: Corporate Secretary
 - **Distribution**: Board portal, secure distribution
 - **Retention Policy**: 7 years
-- **Security Classification**: Confidential 
+- **Security Classification**: Confidential

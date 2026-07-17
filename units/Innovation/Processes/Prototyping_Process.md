@@ -10,7 +10,7 @@ This document outlines the recommended process for creating prototypes as part o
 
 ## 2. Scope
 
-This process applies to the development of various fidelity prototypes (e.g., sketches, wireframes, mockups, functional prototypes, proofs-of-concept) for innovation projects managed by the Innovation Unit.
+This process applies to the development of various fidelity prototypes (e.g., sketches, wireframes, prototype sketches, functional prototypes, proofs-of-concept) for innovation projects managed by the Innovation Unit.
 
 ## 3. Process Overview
 
@@ -27,8 +27,8 @@ The prototyping process is typically iterative and integrated within the experim
     *   **Actor:** Project Team
     *   **Action:** Choose the appropriate level of detail and functionality based on the goals, stage of development, audience, and available resources.
         *   *Low-Fidelity (e.g., sketches, paper prototypes):* For early concept exploration and workflow validation.
-        *   *Medium-Fidelity (e.g., wireframes, basic digital mockups):* For usability testing, layout refinement, information architecture.
-        *   *High-Fidelity (e.g., interactive mockups, functional prototypes):* For detailed UI testing, demonstrating core functionality, stakeholder presentations.
+        *   *Medium-Fidelity (e.g., wireframes, basic digital prototype sketches):* For usability testing, layout refinement, information architecture.
+        *   *High-Fidelity (e.g., interactive prototype sketches, functional prototypes):* For detailed UI testing, demonstrating core functionality, stakeholder presentations.
     *   **Output:** Selected fidelity level and justification.
 
 3.  **Choose Tools & Techniques:**
@@ -89,4 +89,4 @@ The prototyping process is typically iterative and integrated within the experim
 This process guidance will be reviewed periodically by the Process Owner(s) and updated with best practices and new tool recommendations as needed.
 
 ---
-*This document provides a flexible framework for developing effective prototypes during innovation projects.* 
+*This document provides a flexible framework for developing effective prototypes during innovation projects.*

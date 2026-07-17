@@ -41,4 +41,4 @@ Development processes are continuously evaluated based on team retrospectives, m
 *Version: 1.0*
 *Last Updated: [Date]*
 *Maintained by: [[head_of_development]] / [[cto]]*
-*Status: Active* 
+*Status: Active*

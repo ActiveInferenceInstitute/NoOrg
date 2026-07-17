@@ -39,4 +39,4 @@ Example: `2026-01-15_Weekly_Sprint-Review.md`
 
 - [Processes](../Processes/)
 - [Reports](../Reports/)
-- [Meeting Minutes Template](./Meeting_Minutes_Template.md)
+- [Meeting Minutes Template](../../Governance/MeetingNotes/Meeting_Minutes_Template.md)

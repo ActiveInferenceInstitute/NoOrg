@@ -98,4 +98,4 @@ graph TD
 
 *   **Full Process:** Annually (typically)
 *   **Performance Monitoring:** Quarterly (typically)
-*   **Ad-hoc Review:** Triggered by significant internal or external events. 
+*   **Ad-hoc Review:** Triggered by significant internal or external events.

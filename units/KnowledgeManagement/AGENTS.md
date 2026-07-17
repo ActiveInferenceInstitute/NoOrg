@@ -34,10 +34,10 @@ Knowledge repository utilization metrics, content gap analysis, knowledge health
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
-- [StorageSystem](../../src/core/storage/StorageSystem.ts) - Data persistence layer
-- [EventSystem](../../src/core/events/EventSystem.ts) - Knowledge event tracking
-- [SharedStateManager](../../src/core/multiagent/SharedStateManager.ts) - Shared knowledge state
+- [Units System](../../docs/architecture.md) - Unit management code
+- [StorageSystem](../../docs/architecture.md) - Data persistence layer
+- [EventSystem](../../docs/architecture.md) - Knowledge event tracking
+- [SharedStateManager](../../docs/architecture.md) - Shared knowledge state
 - [Education Unit](../Education/README.md) - Learning integration
 
 ## Related Documentation

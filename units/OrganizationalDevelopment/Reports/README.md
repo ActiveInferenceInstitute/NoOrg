@@ -52,4 +52,4 @@ Reports/
 Some reports, particularly those containing sensitive talent or demographic data (e.g., Succession Planning, detailed DEI metrics), may have restricted access. Please adhere to data privacy and confidentiality guidelines.
 
 ## Dashboards
-Links to interactive dashboards (e.g., Power BI, Tableau) related to OD metrics should also be stored or referenced here. 
+Links to interactive dashboards (e.g., Power BI, Tableau) related to OD metrics should also be stored or referenced here.

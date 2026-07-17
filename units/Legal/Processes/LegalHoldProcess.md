@@ -107,4 +107,4 @@ Failure to comply with a legal hold notice can result in disciplinary action, up
 
 ## 9. Review and Updates
 
-This Legal Hold Process will be reviewed annually by the Legal Department and updated as necessary to reflect changes in technology, regulations, and best practices. 
+This Legal Hold Process will be reviewed annually by the Legal Department and updated as necessary to reflect changes in technology, regulations, and best practices.

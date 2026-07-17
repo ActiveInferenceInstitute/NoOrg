@@ -21,4 +21,4 @@ This unit is responsible for setting the long-term direction and strategic prior
 - [[units/Strategy/MeetingNotes/|Meeting Notes]]
 - [[units/Strategy/Policies/|Policies]]
 - [[units/Strategy/Processes/|Processes]] (Detailed operational processes)
-- [[units/Strategy/Reports/|Reports]] 
+- [[units/Strategy/Reports/|Reports]]

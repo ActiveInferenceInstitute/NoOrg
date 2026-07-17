@@ -82,8 +82,8 @@ This Code applies to all employees, contractors, consultants, officers, director
 - [[../HumanResources/|Human Resources Department]]
 
 ---
-**Document Owner:** Ethics Program Director  
-**Approval Authority:** [[BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]  
-**Last Review Date:** 2024-03-15  
-**Next Review Date:** 2025-03-15  
-**Version:** 2.1 
+**Document Owner:** Ethics Program Director
+**Approval Authority:** [[BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]
+**Last Review Date:** 2024-03-15
+**Next Review Date:** 2025-03-15
+**Version:** 2.1

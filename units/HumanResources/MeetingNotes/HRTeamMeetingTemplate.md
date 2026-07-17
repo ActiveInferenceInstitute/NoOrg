@@ -103,4 +103,4 @@
 *   **Location:** [Meeting Room / Platform]
 *   **Potential Agenda Items:** [List any items suggested for next time]
 
-**Meeting Adjourned:** [Time] 
+**Meeting Adjourned:** [Time]

@@ -16,4 +16,4 @@ These policies ensure consistency, compliance, and clarity in the operation of t
 
 ## Maintenance
 
-Policies are reviewed annually or as needed. Updates are managed according to the process outlined in the [[../Charter|Operations Unit Charter]]. 
+Policies are reviewed annually or as needed. Updates are managed according to the process outlined in the [[../Charter|Operations Unit Charter]].

@@ -245,4 +245,4 @@ To ensure consistent application of quality standards, regular calibration sessi
 
 ## Process Owner
 
-**Quality Assurance Manager** - Responsible for maintaining this scorecard, ensuring consistent application, and driving continuous improvement of quality standards. 
+**Quality Assurance Manager** - Responsible for maintaining this scorecard, ensuring consistent application, and driving continuous improvement of quality standards.

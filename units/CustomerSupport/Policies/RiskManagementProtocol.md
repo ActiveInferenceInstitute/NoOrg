@@ -158,6 +158,6 @@ This protocol shall be reviewed jointly by Customer Support and Risk Management:
 
 ---
 
-**Policy Owner**: Customer Support Operations Manager & Risk Management Specialist  
-**Last Review**: YYYY-MM-DD  
-**Next Review**: YYYY-MM-DD 
+**Policy Owner**: Customer Support Operations Manager & Risk Management Specialist
+**Last Review**: YYYY-MM-DD
+**Next Review**: YYYY-MM-DD

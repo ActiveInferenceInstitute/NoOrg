@@ -237,4 +237,4 @@ flowchart TD
 
 ## Process Owner
 
-**Quality Assurance Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement. 
+**Quality Assurance Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement.

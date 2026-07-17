@@ -26,4 +26,4 @@ This document outlines the key metrics used to track the effectiveness and progr
 -   **Accuracy of Forecasts/Models**: Variance between strategic forecasts (e.g., market growth, financial projections) and actual results.
 -   **Time-to-Market for Strategic Products**: Speed of launching key new offerings.
 
-*Note: Specific targets and detailed tracking methodologies are typically found in [[Reports/]] or dedicated performance dashboards linked in [[Related_Links]].* 
+*Note: Specific targets and detailed tracking methodologies are typically found in [[Reports/]] or dedicated performance dashboards linked in [[Related_Links]].*

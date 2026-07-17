@@ -48,4 +48,4 @@ Where applicable, a standard meeting notes template ([[meeting_notes_template]])
 *Version: 1.0*
 *Last Updated: [Date]*
 *Maintained by: [[head_of_development]] / [[cto]]*
-*Status: Active* 
+*Status: Active*

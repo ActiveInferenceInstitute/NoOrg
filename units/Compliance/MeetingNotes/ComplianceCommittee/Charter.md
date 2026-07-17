@@ -63,5 +63,5 @@ This charter shall be reviewed annually and updated as necessary.
 ## Related Documents
 
 - [Compliance Charter](../../Charter.md)
-- [Committee Policies](./Policies/)
-- [Meeting Notes](./MeetingNotes/)
+- [Committee Policies](../../Policies/README.md)
+- [Meeting Notes](../README.md)

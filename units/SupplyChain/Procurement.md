@@ -13,4 +13,4 @@ Responsible for sourcing and acquiring goods and services needed by the organiza
 - [[Logistics]]
 - [[Policies/Procurement Policy]]
 - [[Processes/Purchase Requisition Process]]
-- [[../Finance/README|Finance Unit]] 
+- [[../Finance/README|Finance Unit]]

@@ -12,4 +12,4 @@ Examples include:
 - [[crisis_management_process_overview]]
 - [[board_reporting_preparation_cycle]]
 
-These documents describe the end-to-end flow, key stages, EC involvement points, and links to detailed procedures elsewhere. 
+These documents describe the end-to-end flow, key stages, EC involvement points, and links to detailed procedures elsewhere.

@@ -43,7 +43,7 @@ graph TD
 - **Due Date**: July 15, 2023
 - **Required Decisions**: Approval for expedited onboarding of secondary supplier
 
-#### HR-OPS-2023-04: Legacy System Failure - Financial Processing
+#### HR-OPS-2023-04: Historical System Failure - Financial Processing
 - **Risk Rating**: High (Likelihood: 3, Impact: 5)
 - **Risk Owner**: [[../../InformationTechnology/README|IT Director]]
 - **Mitigation Status**: In Progress (75%)
@@ -111,7 +111,7 @@ Upcoming regulatory changes in data protection will impact operational processes
 1. **Executive Approval Needed**: Expedite approval for alternate supplier onboarding to address supply chain risk (HR-OPS-2023-05)
 2. **Resource Allocation**: Increase resource allocation to customer support cross-training program
 3. **Policy Update**: Review and update operational resilience policies to align with new business continuity standards
-4. **Technology Investment**: Prioritize legacy system replacement to mitigate operational technology risks
+4. **Technology Investment**: Prioritize historical system replacement to mitigate operational technology risks
 
 ## Joint Operations-Risk Initiatives
 
@@ -144,6 +144,6 @@ Upcoming regulatory changes in data protection will impact operational processes
 
 ---
 
-**Report Prepared By**: Joint Operations-Risk Working Group  
-**Date**: May 31, 2023  
-**Distribution**: Executive Committee, Operations Leadership, Risk Committee 
+**Report Prepared By**: Joint Operations-Risk Working Group
+**Date**: May 31, 2023
+**Distribution**: Executive Committee, Operations Leadership, Risk Committee

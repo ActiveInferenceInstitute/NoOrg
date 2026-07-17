@@ -29,4 +29,4 @@ Use a clear naming convention, for example:
 
 ## Access & Distribution
 
-Report access and distribution lists vary based on the report type and sensitivity. Refer to the metadata within each report for details. 
+Report access and distribution lists vary based on the report type and sensitivity. Refer to the metadata within each report for details.

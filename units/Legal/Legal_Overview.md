@@ -25,4 +25,4 @@ See [OrgChart.md](./OrgChart.md) for the team structure.
 - [Performance_Metrics.md](./Performance_Metrics.md)
 - [Risk_Management.md](./Risk_Management.md)
 - [Strategic_Management.md](./Strategic_Management.md)
-- [Related_Links.md](./Related_Links.md) 
+- [Related_Links.md](./Related_Links.md)

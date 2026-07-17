@@ -12,4 +12,4 @@ This directory contains templates, examples, and guidelines for standard reports
 *   [**Training & Development Report Template**](AGENTS.md): Tracking participation, costs, and effectiveness of L&D programs.
 *   [**Compliance Audit Report Template**](AGENTS.md): Summarizing findings from internal or external HR compliance audits.
 
-*(Add links to other relevant report templates or examples as they are developed)* 
+*(Add links to other relevant report templates or examples as they are developed)*

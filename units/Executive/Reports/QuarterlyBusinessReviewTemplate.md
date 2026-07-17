@@ -71,4 +71,4 @@
 
 *   Detailed financial statements.
 *   Supporting data for KPIs.
-*   Market analysis updates. 
+*   Market analysis updates.

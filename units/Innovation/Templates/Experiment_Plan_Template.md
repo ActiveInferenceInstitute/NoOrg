@@ -81,4 +81,4 @@
 - **[Approver Role 2]:** [Approved / Pending / N/A] - Date: [YYYY-MM-DD]
 
 ---
-*This plan outlines the design and execution strategy for the specified innovation experiment. Results will be documented in the [Experiment Results Report](../Reports/Experiment_Results_Template.md).* 
+*This plan outlines the design and execution strategy for the specified innovation experiment. Results will be documented in the [Experiment Results Report](../Reports/Experiment_Results_Template.md).*

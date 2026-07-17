@@ -107,4 +107,4 @@ Performance of the Meta-Governance Unit will be measured by indicators such as:
 This charter will be reviewed bi-annually or as needed by the Meta-Governance Steering Committee and updated to reflect evolving understanding of effective meta-governance approaches, organizational needs, and external conditions.
 
 ---
-*This charter serves as the foundational document defining the mandate and operation of the [[index|Meta-Governance Unit]].* 
+*This charter serves as the foundational document defining the mandate and operation of the [[index|Meta-Governance Unit]].*

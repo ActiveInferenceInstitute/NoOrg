@@ -75,4 +75,4 @@ The Executive Unit may utilize various tools and techniques, including:
 
 ## 7. Review
 
-This framework will be reviewed periodically (e.g., annually) by the Executive Unit to ensure its continued effectiveness and relevance. 
+This framework will be reviewed periodically (e.g., annually) by the Executive Unit to ensure its continued effectiveness and relevance.

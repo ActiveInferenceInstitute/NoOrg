@@ -15,4 +15,4 @@
 - [[CrossOrganizationalGovernance|Cross-Organizational Governance]]
 - [[GovernancePatternLibrary|Governance Pattern Library]]
 - [[AdaptiveRuleSystems|Adaptive Rule Systems]]
-- [[Integration_With_Traditional_Governance|Integration with Traditional Governance]] 
+- [[Integration_With_Traditional_Governance|Integration with Traditional Governance]]

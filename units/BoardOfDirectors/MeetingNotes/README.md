@@ -34,4 +34,4 @@ This directory contains the official meeting notes and minutes from Board of Dir
 - **Record Keeper**: Corporate Secretary
 - **Distribution**: All board members, secure board portal
 - **Retention Policy**: 7 years (digital), permanent (official minutes)
-- **Security Classification**: Confidential 
+- **Security Classification**: Confidential

@@ -70,4 +70,4 @@ This policy and related procedures will be reviewed annually or more frequently 
 
 *   **Research Unit Lead:** [Name/Signature] - Date: ________
 *   **[Lab Manager/Safety Officer]:** [Name/Signature] - Date: ________
-*   **[Institutional EHS Representative]:** [Name/Signature] - Date: ________ 
+*   **[Institutional EHS Representative]:** [Name/Signature] - Date: ________

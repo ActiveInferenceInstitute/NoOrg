@@ -41,4 +41,4 @@ This process applies to all employees wishing to submit ideas related to new pro
 ## Related Documents
 
 *   [[../Responsibilities.md]]
-*   [[../Strategic_Management.md]] 
+*   [[../Strategic_Management.md]]

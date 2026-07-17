@@ -4,12 +4,12 @@
 This document outlines the organization's integrated security strategy, providing a comprehensive approach to security across physical, digital, and cognitive domains. The strategy aligns with the organization's objectives while establishing a cohesive security posture that addresses the full spectrum of security challenges.
 
 ## Strategic Framework Reference
-This strategy implements the principles and methodologies defined in the [Security Framework](../../../docs/frameworks/Security/security_framework.md), which serves as the master framework for all security domains. The domain-specific frameworks further detail implementation approaches for each security area:
+This strategy implements the principles and methodologies defined in the [Security Framework](../../../docs/architecture.md), which serves as the master framework for all security domains. The domain-specific frameworks further detail implementation approaches for each security area:
 
-- [Physical Security Framework](../../../docs/frameworks/Security/physical_security_framework.md)
-- [Digital Security Framework](../../../docs/frameworks/Security/digital_security_framework.md)
-- [Cognitive Security Framework](../../../docs/frameworks/Security/cognitive_security_framework.md)
-- [Security Framework Integration](../../../docs/frameworks/Security/security_framework_integration.md)
+- [Physical Security Framework](../../../docs/architecture.md)
+- [Digital Security Framework](../../../docs/architecture.md)
+- [Cognitive Security Framework](../../../docs/architecture.md)
+- [Security Framework Integration](../../../docs/architecture.md)
 
 ## Vision and Mission
 
@@ -453,7 +453,7 @@ To establish a resilient, adaptive security ecosystem that provides comprehensiv
 ### Domain Security Documents
 - [[Physical_Security/physical_security_unit]] - Physical Security Unit
 - [[Physical_Security/standard_operating_procedures]] - Physical Security SOPs
-- [[Digital_Security/digital_security_unit]] - Digital Security Unit 
+- [[Digital_Security/digital_security_unit]] - Digital Security Unit
 - [[Digital_Security/cybersecurity_framework]] - Cybersecurity Framework
 - [[Cognitive_Security/cognitive_security_unit]] - Cognitive Security Unit
 - [[Cognitive_Security/cognitive_defense_framework]] - Cognitive Defense Framework
@@ -475,4 +475,4 @@ Last Updated: 2024-03-19
 Version: 1.0
 Maintained by: [[security_director]]
 Security Level: [[top_secret]]
-Document Status: [[active]] 
+Document Status: [[active]]

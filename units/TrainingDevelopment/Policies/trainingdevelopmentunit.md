@@ -288,4 +288,4 @@ Last Updated: YYYY-MM-DD
 Version: 1.0
 Maintained by: [[training_development_director]]
 Security Level: [[internal]]
-Document Status: [[active]] 
+Document Status: [[active]]

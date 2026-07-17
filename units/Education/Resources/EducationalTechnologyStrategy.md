@@ -130,6 +130,6 @@ This document outlines the strategic approach to educational technology for the 
 
 ---
 
-**Document Owner**: Educational Technology Lead  
-**Last Updated**: [Current Date]  
-**Review Cycle**: Annual with quarterly progress assessment 
+**Document Owner**: Educational Technology Lead
+**Last Updated**: [Current Date]
+**Review Cycle**: Annual with quarterly progress assessment

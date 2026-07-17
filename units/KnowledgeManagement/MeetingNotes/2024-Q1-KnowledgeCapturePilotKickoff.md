@@ -1,9 +1,9 @@
 # Knowledge Capture Pilot Kickoff Meeting
 
-**Date:** January 15, 2024  
-**Time:** 10:00 AM - 12:00 PM  
-**Location:** Conference Room A / Virtual Meeting  
-**Meeting Type:** Project Kickoff  
+**Date:** January 15, 2024
+**Time:** 10:00 AM - 12:00 PM
+**Location:** Conference Room A / Virtual Meeting
+**Meeting Type:** Project Kickoff
 
 ## Attendees
 
@@ -142,12 +142,12 @@ Discussion points:
 
 ## Next Meeting
 
-**Date:** January 29, 2024  
-**Time:** 10:00 AM - 11:30 AM  
+**Date:** January 29, 2024
+**Time:** 10:00 AM - 11:30 AM
 **Focus:** Project status review and initial elicitation feedback
 
 ---
 
-Meeting notes prepared by: Michael Washington  
-Approved by: Sarah Chen  
-Distribution: All attendees, Knowledge Management Steering Committee 
+Meeting notes prepared by: Michael Washington
+Approved by: Sarah Chen
+Distribution: All attendees, Knowledge Management Steering Committee

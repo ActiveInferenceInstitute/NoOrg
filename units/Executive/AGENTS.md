@@ -33,7 +33,7 @@ Executive dashboards, strategic metrics, and organizational performance.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Executive Committee](../ExecutiveCommittee/README.md) - Committee coordination
 
 ## Related Documentation

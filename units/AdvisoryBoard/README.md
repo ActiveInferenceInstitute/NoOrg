@@ -77,4 +77,4 @@ To provide independent, expert guidance that enhances organizational strategy, i
 - [[../ExecutiveCommittee/README|Executive Committee]] - Strategic alignment
 - [[../RiskManagement/README|Risk Management Unit]] - Risk oversight coordination
 - [[../Strategy/README|Strategy Unit]] - Strategic planning collaboration
-- [[../Innovation/README|Innovation Unit]] - Innovation guidance 
+- [[../Innovation/README|Innovation Unit]] - Innovation guidance

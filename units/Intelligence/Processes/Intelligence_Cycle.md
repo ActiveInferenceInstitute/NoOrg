@@ -86,4 +86,4 @@ graph LR
 
 ## 4. Process Management
 
-The Head of Intelligence is responsible for overseeing the effective functioning of the Intelligence Cycle, ensuring resources are allocated appropriately, and promoting continuous improvement. 
+The Head of Intelligence is responsible for overseeing the effective functioning of the Intelligence Cycle, ensuring resources are allocated appropriately, and promoting continuous improvement.

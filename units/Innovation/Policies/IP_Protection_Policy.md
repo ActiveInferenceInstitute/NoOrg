@@ -32,4 +32,4 @@ This policy applies to all employees, contractors, and partners involved in inno
 
 *   [[../Risk_Management.md]]
 *   [[../Interfaces.md]]
-*   [Link to overall Corporate IP Policy] 
+*   [Link to overall Corporate IP Policy]

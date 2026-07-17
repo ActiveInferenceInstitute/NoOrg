@@ -74,4 +74,4 @@ Violation of this policy may result in disciplinary action, up to and including 
 
 ## 13. Contact
 
-For questions or concerns regarding research ethics, contact the [Designated Ethics Officer/Research Integrity Officer/Ethics Committee]. 
+For questions or concerns regarding research ethics, contact the [Designated Ethics Officer/Research Integrity Officer/Ethics Committee].

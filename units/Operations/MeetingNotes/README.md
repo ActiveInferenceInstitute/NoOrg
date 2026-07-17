@@ -20,4 +20,4 @@ Meeting notes should ideally be organized by meeting type or date. Use a consist
 
 ## Access
 
-Meeting notes are typically classified as Internal and accessible to unit members and relevant stakeholders. 
+Meeting notes are typically classified as Internal and accessible to unit members and relevant stakeholders.

@@ -61,4 +61,4 @@ Establish a process for receiving feedback from intelligence consumers to assess
 
 ## 9. Policy Review
 
-This policy will be reviewed annually and updated as necessary. 
+This policy will be reviewed annually and updated as necessary.

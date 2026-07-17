@@ -113,4 +113,4 @@ graph TD
 
 ## 8. Review & Testing
 
-This process and associated plans should be reviewed annually and tested periodically (e.g., through tabletop exercises) to ensure readiness and effectiveness. 
+This process and associated plans should be reviewed annually and tested periodically (e.g., through tabletop exercises) to ensure readiness and effectiveness.

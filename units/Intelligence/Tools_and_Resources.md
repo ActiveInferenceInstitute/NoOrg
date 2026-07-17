@@ -72,4 +72,4 @@ This list covers resources used across the [[Processes/Intelligence_Cycle.md]], 
 
 ## 8. Review
 
-This list will be reviewed periodically (e.g., annually or semi-annually) to ensure accuracy and relevance. 
+This list will be reviewed periodically (e.g., annually or semi-annually) to ensure accuracy and relevance.

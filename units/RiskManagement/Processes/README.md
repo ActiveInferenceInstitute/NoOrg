@@ -52,4 +52,4 @@ flowchart LR
 
 ## Contact
 
-For questions about these processes, contact the Risk Management team at risk@organization.com or via Slack at #risk-management. 
+For questions about these processes, contact the Risk Management team at risk@organization.com or via Slack at #risk-management.

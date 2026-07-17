@@ -37,4 +37,4 @@ All new programs follow the standard [[../Processes/ProgramDevelopment|Program D
 ## Related Resources
 - [[../Curriculum/README|Curriculum Development]]
 - [[../Resources/README|Learning Resources]]
-- [[../KPIs/ProgramEffectiveness|Program Effectiveness Metrics]] 
+- [[../KPIs/ProgramEffectiveness|Program Effectiveness Metrics]]

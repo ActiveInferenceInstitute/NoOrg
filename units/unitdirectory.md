@@ -17,10 +17,10 @@ graph TD
     BOARD[Board of Directors]:::executive
     EXEC[Executive Committee]:::executive
     ADV[Advisory Boards]:::advisory
-    
+
     BOARD --> EXEC
     BOARD --> ADV
-    
+
     subgraph Leadership_Layer
         STRAT[Strategy]:::executive
         RISK[Risk Management]:::executive
@@ -28,19 +28,19 @@ graph TD
         COMP[Compliance]:::executive
         AUDIT[Audit]:::executive
     end
-    
+
     subgraph Business_Units
         REV[Revenue Units]:::business
         PROD[Product & Tech]:::business
         OPS[Operations]:::business
     end
-    
+
     subgraph Support_Units
         CORP[Corporate Services]:::service
         INFRA[Infrastructure]:::infra
         KNOW[Knowledge]:::service
     end
-    
+
     EXEC --> Leadership_Layer
     Leadership_Layer --> Business_Units
     Leadership_Layer --> Support_Units
@@ -64,28 +64,28 @@ graph TD
         GOV[Governance]:::exec
         EXEC[Executive]:::exec
     end
-    
+
     subgraph Revenue
         SALES[Sales]:::rev
         MARKET[Marketing Communications]:::rev
         CUST[Customer Support]:::rev
         BIZ[Business Development]:::rev
     end
-    
+
     subgraph Product_Tech
         DEV[Development]:::tech
         INNV[Innovation]:::tech
         RES[Research]:::tech
         PROD[Product Management]:::tech
     end
-    
+
     subgraph Operations
         OPS[Operations]:::ops
         IT[IT]:::ops
         QA[Quality Assurance]:::ops
         SC[Supply Chain]:::ops
     end
-    
+
     subgraph Corporate
         FIN[Finance]:::corp
         LEGAL[Legal]:::corp
@@ -94,46 +94,46 @@ graph TD
         AUDIT[Audit]:::corp
         COMP[Compliance]:::corp
     end
-    
+
     subgraph Infrastructure
         SEC[Security]:::infra
         FAC[Facilities]:::infra
         INTEL[Intelligence]:::infra
     end
-    
+
     subgraph Knowledge
         TRAIN[Training Development]:::know
         EDU[Education]:::know
         KM[Knowledge Management]:::know
         OD[Organizational Development]:::know
     end
-    
+
     STRAT --> SALES & DEV & OPS
     RISK --> SEC & COMP & AUDIT
     GOV --> LEGAL & HR & ADMIN
     EXEC --> STRAT & RISK & GOV
-    
+
     SALES --> MARKET
     MARKET --> CUST
     CUST --> BIZ
-    
+
     DEV --> INNV
     INNV --> RES
     RES --> PROD
-    
+
     OPS --> IT
     IT --> QA
     QA --> SC
-    
+
     FIN --> LEGAL
     LEGAL --> HR
     HR --> ADMIN
     ADMIN --> AUDIT
     AUDIT --> COMP
-    
+
     SEC --> FAC
     FAC --> INTEL
-    
+
     TRAIN --> EDU
     EDU --> KM
     KM --> OD
@@ -151,26 +151,26 @@ flowchart TD
         EXEC[Executive Committee]:::strategic
         STRAT[Strategy Committee]:::strategic
     end
-    
+
     subgraph Tactical_Decisions
         BU[Business Units]:::tactical
         RISK[Risk Management]:::tactical
         COMP[Compliance]:::tactical
     end
-    
+
     subgraph Operational_Decisions
         FUNC[Functional Teams]:::operational
         PROJ[Project Teams]:::operational
         OPS[Operations]:::operational
     end
-    
+
     BOARD --> EXEC
     EXEC --> STRAT
     STRAT --> BU
     BU --> FUNC
     RISK --> PROJ
     COMP --> OPS
-    
+
     %% Cross-connections
     STRAT -.-> RISK
     BU -.-> COMP
@@ -179,50 +179,50 @@ flowchart TD
     EXEC -.-> BU
 ```text
 
-### 🔄 Information Flow Architecture 
+### 🔄 Information Flow Architecture
 ```mermaid
 graph LR
     classDef strategic fill:#bbdefb,stroke:#0d47a1
     classDef reporting fill:#c8e6c9,stroke:#1b5e20
     classDef operational fill:#ffecb3,stroke:#ff6f00
     classDef feedback fill:#f8bbd0,stroke:#880e4f
-    
+
     subgraph Strategic_Information
         DIR[Directives]:::strategic
         POL[Policies]:::strategic
         GOAL[Goals]:::strategic
     end
-    
+
     subgraph Reporting_Information
         PERF[Performance]:::reporting
         RISK[Risk]:::reporting
         COMP[Compliance]:::reporting
     end
-    
+
     subgraph Operational_Information
         PROC[Procedures]:::operational
         STAND[Standards]:::operational
         GUIDE[Guidelines]:::operational
     end
-    
+
     subgraph Feedback_Loops
         IMPROVE[Improvements]:::feedback
         ISSUE[Issues]:::feedback
         INNOVATION[Innovations]:::feedback
     end
-    
+
     DIR --> PROC
     POL --> STAND
     GOAL --> GUIDE
-    
+
     PROC --> PERF
     STAND --> RISK
     GUIDE --> COMP
-    
+
     PERF --> IMPROVE
     RISK --> ISSUE
     COMP --> INNOVATION
-    
+
     IMPROVE --> DIR
     ISSUE --> POL
     INNOVATION --> GOAL
@@ -454,18 +454,18 @@ graph TD
     RC <--> CC
     CC <--> GC
     GC <--> EC
-    
+
     SC <--> IC
     IC <--> EC
     EC <--> CC
     SC <--> GC
-    
+
     %% Secondary connections
     AC -.-> SC
     RC -.-> IC
     CC -.-> EC
     GC -.-> SC
-    
+
     %% Advisory connections
     SC <-.-> SAB
     IC <-.-> TAB
@@ -577,7 +577,7 @@ graph TD
     IMS --> IC --> IH
     EMS --> EC --> EH
     PMS --> PC --> PH
-    
+
     DMS --> WMS --> CLS --> ANS
 ```text
 
@@ -733,18 +733,18 @@ graph TD
     PM <--> DEV
     DEV <--> OPS
     OPS --> SC
-    
+
     MKTG <--> SALES
     CS <--> SALES
     BD <--> MKTG
-    
+
     FIN <--> SALES
     LEGAL <--> PM
     HR <--> ALL[All Units]
-    
+
     SEC <--> ALL
     KM <--> ALL
-    
+
     %% Key data flows
     PM -.-> MKTG
     CS -.-> PM
@@ -793,18 +793,18 @@ graph TD
 ```mermaid
 stateDiagram-v2
     [*] --> Vision
-    
+
     Vision --> Analysis
-    
+
     state Analysis {
         [*] --> Market
         Market --> Competition
         Competition --> Capabilities
         Capabilities --> [*]
     }
-    
+
     Analysis --> Planning
-    
+
     state Planning {
         [*] --> Objectives
         Objectives --> Initiatives
@@ -812,25 +812,25 @@ stateDiagram-v2
         Resources --> Metrics
         Metrics --> [*]
     }
-    
+
     Planning --> Execution
-    
+
     state Execution {
         [*] --> Implementation
         Implementation --> Monitoring
         Monitoring --> Adjustment
         Adjustment --> [*]
     }
-    
+
     Execution --> Review
-    
+
     state Review {
         [*] --> Performance
         Performance --> Lessons
         Lessons --> Feedback
         Feedback --> [*]
     }
-    
+
     Review --> [*]
 ```text
 
@@ -949,22 +949,22 @@ flowchart LR
 
     subgraph Strategic_Flow
         direction TB
-        S1[Strategic Direction]:::strategic --> 
-        S2[Policy Framework]:::strategic --> 
+        S1[Strategic Direction]:::strategic -->
+        S2[Policy Framework]:::strategic -->
         S3[Resource Allocation]:::strategic
     end
 
     subgraph Operational_Flow
         direction TB
-        O1[Implementation Plans]:::operational --> 
-        O2[Operational Procedures]:::operational --> 
+        O1[Implementation Plans]:::operational -->
+        O2[Operational Procedures]:::operational -->
         O3[Performance Execution]:::operational
     end
 
     subgraph Feedback_Flow
         direction TB
-        F1[Performance Reports]:::feedback --> 
-        F2[Issue Management]:::feedback --> 
+        F1[Performance Reports]:::feedback -->
+        F2[Issue Management]:::feedback -->
         F3[Improvement Proposals]:::feedback
     end
 
@@ -1029,7 +1029,7 @@ graph TD
     RF --> PM & SF & IM
     CF --> PM & SF & IM
     AF --> PO & SO & EO & IO
-    
+
     PM --> PL --> PP --> PO
     SF --> SL --> SP --> SO
     EF --> EC --> EP --> EO
@@ -1087,49 +1087,49 @@ graph TD
 | **Infrastructure** | Security Posture, Facility Effectiveness | Uptime, Incident Response | Infrastructure TCO, Investment ROI | Resource Availability, Service Experience | Security Innovation, Infrastructure Evolution |
 | **Knowledge** | Capability Development, Knowledge Transfer | Training Completion, Knowledge Access | Training ROI, Development Cost | Learner Satisfaction, Capability Improvement | Learning Innovation, Knowledge Creation |
 
-## 🔄 Unit Life Cycle Management 
+## 🔄 Unit Life Cycle Management
 
 ### Unit Evolution Stages
 ```mermaid
 stateDiagram-v2
     [*] --> Formation
-    
+
     Formation --> Establishment
-    
+
     state Establishment {
         [*] --> Scoping
         Scoping --> Staffing
         Staffing --> Chartering
         Chartering --> [*]
     }
-    
+
     Establishment --> Growth
-    
+
     state Growth {
         [*] --> Capability
         Capability --> Process
         Process --> Integration
         Integration --> [*]
     }
-    
+
     Growth --> Maturity
-    
+
     state Maturity {
         [*] --> Optimization
         Optimization --> Innovation
         Innovation --> Leadership
         Leadership --> [*]
     }
-    
+
     Maturity --> Transformation
-    
+
     state Transformation {
         [*] --> Assessment
         Assessment --> Redesign
         Redesign --> Realignment
         Realignment --> [*]
     }
-    
+
     Transformation --> [*]
 ```text
 
@@ -1210,25 +1210,25 @@ graph TD
 ```mermaid
 stateDiagram-v2
     [*] --> Normal
-    
+
     Normal --> Alert: Detection
-    
+
     Alert --> Analysis
-    
+
     Analysis --> False_Positive: Verified Safe
     Analysis --> Incident: Threat Confirmed
-    
+
     False_Positive --> Normal: Reset
-    
+
     Incident --> Response
-    
+
     Response --> Containment
     Containment --> Investigation
     Investigation --> Remediation
     Remediation --> Recovery
-    
+
     Recovery --> Normal: Restored
-    
+
     Normal --> [*]
 ```text
 

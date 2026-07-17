@@ -9,7 +9,7 @@ The Development unit is responsible for designing, building, testing, deploying,
 - **[[Processes]]**: Details the standard operating procedures for planning, coding, testing, building, and releasing software. ([Processes/development_processes.md](Processes/development_processes.md))
 - **[[Reports]]**: Describes the key metrics and reports used for tracking progress, quality, and performance. ([Reports/development_reports.md](Reports/development_reports.md))
 - **[[Meeting Notes]]**: Index of meeting notes for key development ceremonies and discussions. ([MeetingNotes/development_meeting_notes.md](MeetingNotes/development_meeting_notes.md))
-- **[[Tech Stack]]**: (Optional/Link) Documentation detailing the approved technologies, languages, and frameworks. 
+- **[[Tech Stack]]**: (Optional/Link) Documentation detailing the approved technologies, languages, and frameworks.
 - **[[Architecture]]**: (Optional/Link) High-level overview and detailed diagrams of the system architecture.
 
 ---

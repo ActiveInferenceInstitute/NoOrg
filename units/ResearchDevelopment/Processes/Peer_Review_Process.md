@@ -92,4 +92,4 @@ graph TD
 
 ## 9. Review
 
-This process will be reviewed periodically to ensure fairness, effectiveness, and efficiency. 
+This process will be reviewed periodically to ensure fairness, effectiveness, and efficiency.

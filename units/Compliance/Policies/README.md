@@ -21,4 +21,4 @@ This directory contains the organization's compliance policies, frameworks, and 
 - [[../Processes/PolicyDevelopment|Policy Development Process]]
 - [[../Processes/PolicyReview|Policy Review Process]]
 - [[../Reports/PolicyCompliance|Policy Compliance Reports]]
-- [[../MeetingNotes/PolicyCommittee|Policy Committee Meetings]] 
+- [[../MeetingNotes/PolicyCommittee|Policy Committee Meetings]]

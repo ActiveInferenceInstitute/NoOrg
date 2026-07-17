@@ -65,4 +65,4 @@ Meeting notes are maintained as the official record of risk discussions and deci
 
 ## Contact
 
-For questions about meeting notes or to request additions, contact the Risk Management Documentation Specialist or via Slack at #risk-management. 
+For questions about meeting notes or to request additions, contact the Risk Management Documentation Specialist or via Slack at #risk-management.

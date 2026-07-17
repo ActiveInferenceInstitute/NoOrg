@@ -22,7 +22,7 @@ Product Discovery is an iterative and often non-linear process focused on learni
     *   **Stakeholder Input:** Gathering insights and constraints from internal stakeholders (Sales, Marketing, Support, Engineering, Legal, etc.).
 *   **Ideation & Solution Exploration:** Brainstorming potential solutions to the identified problems. Exploring different approaches and concepts.
 *   **Assumption Mapping & Prioritization:** Identifying the riskiest assumptions underlying the potential solutions (related to value, usability, feasibility, viability).
-*   **Prototyping & Experimentation:** Creating low-fidelity and high-fidelity prototypes (wireframes, mockups, interactive prototypes) or other experiments (e.g., landing page tests, A/B tests, Wizard of Oz tests) to test assumptions.
+*   **Prototyping & Experimentation:** Creating low-fidelity and high-fidelity prototypes (wireframes, prototype sketches, interactive prototypes) or other experiments (e.g., landing page tests, A/B tests, Wizard of Oz tests) to test assumptions.
 *   **Validation & Testing:** Testing prototypes and concepts with target users and stakeholders to gather feedback and validate (or invalidate) assumptions. Iterating based on learnings.
 *   **Definition & Handoff (if proceeding):** If validation is successful, defining the solution requirements (e.g., user stories, specifications) for the delivery team. This often involves close collaboration with the delivery team to ensure feasibility and understanding. (See [[Feature_Specification_Process.md]])
 
@@ -64,7 +64,7 @@ graph TD
     end
 
 ```text
-*Note: This is a conceptual flow; the process is often iterative and steps may be revisited.* 
+*Note: This is a conceptual flow; the process is often iterative and steps may be revisited.*
 
 ## 5. Roles & Responsibilities
 
@@ -106,4 +106,4 @@ This process will be reviewed periodically (e.g., annually) and refined based on
 *   [[../Policies/Product_Roadmap_Policy.md]]
 *   [[Roadmap_Prioritization_Process.md]]
 *   [[Feature_Specification_Process.md]]
-*   [[User_Feedback_Collection_Process.md]] 
+*   [[User_Feedback_Collection_Process.md]]

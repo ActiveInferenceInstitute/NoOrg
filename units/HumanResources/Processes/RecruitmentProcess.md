@@ -86,7 +86,7 @@ graph TD
     S -- No --> M; # Consider next candidate or restart search
     T --> U[Initiate Pre-Boarding / New Hire Paperwork];
     U --> V[Close Requisition];
-    V --> W(Handover to Onboarding Process); 
+    V --> W(Handover to Onboarding Process);
     W --> X[End];
 ```text
 
@@ -109,4 +109,4 @@ graph TD
 
 ## 8. Review Cycle
 
-This process will be reviewed annually by HR/TA leadership and key stakeholders (e.g., sample of Hiring Managers) to identify areas for improvement in efficiency, effectiveness, and candidate experience. 
+This process will be reviewed annually by HR/TA leadership and key stakeholders (e.g., sample of Hiring Managers) to identify areas for improvement in efficiency, effectiveness, and candidate experience.

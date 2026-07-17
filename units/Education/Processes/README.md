@@ -58,4 +58,4 @@ This directory contains all standard operating procedures, workflows, and proces
 - [[../Reports/README|Education Reports]]
 
 ## Process Map
-See [[ProcessMap|Education Unit Process Map]] for a visual representation of how these processes interconnect and support the unit's objectives. 
+See [[ProcessMap|Education Unit Process Map]] for a visual representation of how these processes interconnect and support the unit's objectives.

@@ -1,7 +1,7 @@
 # Software Update & Patching Process
 
-**Version:** 1.0  
-**Effective Date:** [Date]  
+**Version:** 1.0
+**Effective Date:** [Date]
 **Last Reviewed:** [Date]
 
 ## 1. Purpose
@@ -20,33 +20,33 @@ This process applies to operating systems, applications, firmware, and any softw
 
 ## 4. Procedure Steps
 
-1.  **Patch Identification:**  
+1.  **Patch Identification:**
     *   Subscribe to vendor security bulletins, vulnerability feeds, and internal asset inventory.
     *   Identify critical patches and updates.
-2.  **Impact Assessment:**  
+2.  **Impact Assessment:**
     *   Evaluate potential impact on systems, applications, and business processes.
     *   Prioritize patches based on severity (e.g., Critical, High, Medium, Low).
-3.  **Testing:**  
+3.  **Testing:**
     *   Apply patches in a test environment mirroring production.
     *   Validate functionality and compatibility.
-4.  **Scheduling:**  
+4.  **Scheduling:**
     *   Schedule deployment during maintenance windows.
     *   Communicate schedule and potential downtime to stakeholders.
-5.  **Deployment:**  
+5.  **Deployment:**
     *   Deploy patches to production using automated tooling (e.g., SCCM, WSUS, Ansible).
-6.  **Validation:**  
+6.  **Validation:**
     *   Verify patch installation success and system health post-deployment.
     *   Monitor logs and alerts for anomalies.
-7.  **Documentation:**  
+7.  **Documentation:**
     *   Document patch details, deployment status, and any issues in the ITSM ticket.
-8.  **Exception Handling:**  
+8.  **Exception Handling:**
     *   If critical business impact is detected, rollback changes or implement workaround as per rollback plan.
 
 ## 5. Roles and Responsibilities
 
-*   **Patch Coordinator:** Manages patch identification, planning, and scheduling.  
-*   **Test Engineer:** Validates patches in test environments.  
-*   **Systems Administrator:** Executes deployment and validation in production.  
+*   **Patch Coordinator:** Manages patch identification, planning, and scheduling.
+*   **Test Engineer:** Validates patches in test environments.
+*   **Systems Administrator:** Executes deployment and validation in production.
 *   **Change Manager:** Reviews and approves patch deployment as part of change management.
 
 ## 6. Workflow Diagram
@@ -61,4 +61,4 @@ graph TD
     E --> G[Deploy to Production]
     G --> H[Validation & Monitoring]
     H --> I[Document & Close Ticket]
-```text 
+```text

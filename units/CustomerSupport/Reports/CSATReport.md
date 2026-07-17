@@ -14,20 +14,20 @@ graph TD
     CSAT --> NPS[Net Promoter Score]
     CSAT --> CES[Customer Effort Score]
     CSAT --> Sentiment[Sentiment Analysis]
-    
+
     Score --> Email[Email: 92%]
     Score --> Chat[Chat: 94%]
     Score --> Phone[Phone: 89%]
     Score --> Overall[Overall: 91%]
-    
+
     NPS --> Promoters[Promoters: 65%]
     NPS --> Passive[Passive: 24%]
     NPS --> Detractors[Detractors: 11%]
-    
+
     CES --> Easy[Easy: 78%]
     CES --> Neutral[Neutral: 15%]
     CES --> Difficult[Difficult: 7%]
-    
+
     Sentiment --> Positive[Positive: 72%]
     Sentiment --> Neutral[Neutral: 19%]
     Sentiment --> Negative[Negative: 9%]
@@ -213,4 +213,4 @@ This report is distributed weekly to:
 
 ## Report Owner
 
-**Customer Experience Manager** - Responsible for this report, analysis, and resulting improvement initiatives. 
+**Customer Experience Manager** - Responsible for this report, analysis, and resulting improvement initiatives.

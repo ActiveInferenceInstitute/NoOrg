@@ -1,9 +1,9 @@
 # Knowledge Capture Pilot Initiative Report - Q1 2024
 
-**Report Date:** March 31, 2024  
-**Project Period:** January 15 - March 30, 2024  
-**Prepared By:** Sarah Chen, Knowledge Management Lead  
-**Distribution:** Knowledge Management Steering Committee, Executive Committee, Pilot Participants  
+**Report Date:** March 31, 2024
+**Project Period:** January 15 - March 30, 2024
+**Prepared By:** Sarah Chen, Knowledge Management Lead
+**Distribution:** Knowledge Management Steering Committee, Executive Committee, Pilot Participants
 
 ## Executive Summary
 
@@ -151,4 +151,4 @@ The pilot has created immediate value for the participating departments while es
 - **Appendix C**: Complete Metrics Dataset
 - **Appendix D**: User Feedback Compilation
 - **Appendix E**: Cost Breakdown and ROI Analysis
-- **Appendix F**: Sample Knowledge Assets 
+- **Appendix F**: Sample Knowledge Assets

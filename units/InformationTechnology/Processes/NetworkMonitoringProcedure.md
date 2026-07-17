@@ -1,7 +1,7 @@
 # Network Monitoring Procedure
 
-**Version:** 1.0  
-**Effective Date:** [Date]  
+**Version:** 1.0
+**Effective Date:** [Date]
 **Last Reviewed:** [Date]
 
 ## 1. Purpose
@@ -28,30 +28,30 @@ This procedure applies to all network devices and services, including routers, s
 
 ## 4. Setup and Configuration
 
-1.  **Device Enrollment:**  
+1.  **Device Enrollment:**
     *   Add network devices to the monitoring platform with SNMP credentials or agent.
     *   Define polling intervals and metric thresholds.
-2.  **Alert Profiles:**  
+2.  **Alert Profiles:**
     *   Configure alerts for each metric based on severity: Warning, Critical.
     *   Set notification channels (email, SMS, ticket creation in ITSM).
-3.  **Dashboards and Reports:**  
+3.  **Dashboards and Reports:**
     *   Create real-time dashboards for network health.
     *   Schedule regular performance reports (daily, weekly, monthly).
 
 ## 5. Monitoring Workflow
 
-1.  **Data Collection:**  
+1.  **Data Collection:**
     *   Monitoring platform polls devices at defined intervals.
-2.  **Threshold Evaluation:**  
+2.  **Threshold Evaluation:**
     *   Metrics are compared against thresholds to determine alert conditions.
-3.  **Alert Generation:**  
+3.  **Alert Generation:**
     *   On threshold breach, alerts are created and notifications are sent.
-4.  **Alert Triage:**  
+4.  **Alert Triage:**
     *   Network Operations team acknowledges the alert, determines severity, and assigns a ticket.
-5.  **Investigation & Remediation:**  
+5.  **Investigation & Remediation:**
     *   Investigate root cause (e.g., misconfiguration, hardware degradation, security event).
     *   Apply corrective actions (e.g., reconfigure device, replace hardware, block traffic).
-6.  **Resolution & Closure:**  
+6.  **Resolution & Closure:**
     *   Verify the issue is resolved.
     *   Document remediation steps in the ticket and close.
 
@@ -69,4 +69,4 @@ graph TD
     F -- No --> H[Monitor for Recurrence]
     G --> I[Verify Resolution]
     I --> J[Document & Close Ticket]
-```text 
+```text

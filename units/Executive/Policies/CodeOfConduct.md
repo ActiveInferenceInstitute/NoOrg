@@ -45,4 +45,4 @@ Members of the Executive Unit may be required to periodically acknowledge they h
 
 ## 8. Review
 
-This Code will be reviewed periodically (e.g., annually) by the General Counsel and the Board's Governance or Audit Committee to ensure its continued relevance and effectiveness. 
+This Code will be reviewed periodically (e.g., annually) by the General Counsel and the Board's Governance or Audit Committee to ensure its continued relevance and effectiveness.

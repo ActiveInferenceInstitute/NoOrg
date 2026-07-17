@@ -92,4 +92,4 @@ graph TD
 
 ## 7. Review
 
-This process will be reviewed periodically to optimize efficiency, effectiveness, and alignment with organizational goals. 
+This process will be reviewed periodically to optimize efficiency, effectiveness, and alignment with organizational goals.

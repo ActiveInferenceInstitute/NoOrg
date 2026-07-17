@@ -243,6 +243,6 @@ This document provides the framework for our Business Language Program, a compre
 
 ---
 
-**Document Owner**: Language Learning Program Manager  
-**Last Updated**: [Current Date]  
-**Review Cycle**: Annual with quarterly curriculum refresh 
+**Document Owner**: Language Learning Program Manager
+**Last Updated**: [Current Date]
+**Review Cycle**: Annual with quarterly curriculum refresh

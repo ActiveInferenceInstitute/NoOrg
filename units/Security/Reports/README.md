@@ -33,8 +33,8 @@ Key performance indicators tracked:
 
 ## Report Templates
 
-- [Status Report Template](./templates/status_report_template.md)
-- [Monthly Summary Template](./templates/monthly_summary_template.md)
+- [Status Report Template](../README.md)
+- [Monthly Summary Template](../README.md)
 
 ## Related Documentation
 

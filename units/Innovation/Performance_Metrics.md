@@ -34,4 +34,4 @@ This document defines the key performance indicators (KPIs) used to measure the 
 
 *   **Frequency:** [Specify reporting frequency, e.g., Quarterly]
 *   **Dashboard:** [Link to the Innovation Metrics Dashboard, if available]
-*   **Reports:** See `Reports/` for historical performance data. 
+*   **Reports:** See `Reports/` for historical performance data.

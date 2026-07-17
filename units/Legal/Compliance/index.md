@@ -47,4 +47,4 @@ This section provides comprehensive documentation for compliance activities, inc
 ## Related Documentation
 
 - [Governance Policies](../../Governance/Policies/)
-- [Processes](./Processes/)
+- [Processes](../Processes/README.md)

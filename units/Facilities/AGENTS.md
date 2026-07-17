@@ -33,7 +33,7 @@ Facilities metrics, maintenance logs, and utilization reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Operations Unit](../Operations/README.md) - Operational coordination
 
 ## Related Documentation

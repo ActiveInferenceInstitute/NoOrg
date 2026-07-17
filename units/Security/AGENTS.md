@@ -55,9 +55,9 @@ Security posture dashboards, incident analysis reports, vulnerability assessment
 
 This unit integrates with the NoOrg agent security framework for automated security operations:
 
-- **Agent Security Framework**: [agents/system/agent_security_framework.md](../../agents/system/agent_security_framework.md) - Core security patterns for autonomous agents
+- **Runtime security guidance**: [docs/architecture.md](../../docs/architecture.md) - Core security patterns for registered agents
 - **Security Operations**: Agents can leverage security policies for automated threat detection and response
-- **Resilience Patterns**: Integration with [circuit breaker](../../src/core/integration/patterns/) and rate limiting for security controls
+- **Resilience Patterns**: Integration with [circuit breaker](../../docs/architecture.md) and rate limiting for security controls
 
 ### Security Agent Capabilities
 
@@ -72,8 +72,8 @@ This unit integrates with the NoOrg agent security framework for automated secur
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
-- [Integration Patterns](../../src/core/integration/patterns/) - Circuit breaker, rate limiting, bulkhead isolation
+- [Units System](../../docs/architecture.md) - Unit management code
+- [Integration Patterns](../../docs/architecture.md) - Circuit breaker, rate limiting, bulkhead isolation
 - [Information Technology](../InformationTechnology/README.md) - IT security coordination
 - [Compliance Unit](../Compliance/README.md) - Regulatory compliance
 

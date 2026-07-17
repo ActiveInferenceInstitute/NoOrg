@@ -69,4 +69,4 @@ Last Updated: {{date}}
 Version: 1.0
 Maintained by: [[sales_director]]
 Security Level: [[internal]]
-Document Status: [[draft]] 
+Document Status: [[draft]]

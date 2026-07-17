@@ -112,4 +112,4 @@ graph TD
 
 ## 8. Review Cycle
 
-This process and associated materials (checklists, surveys) will be reviewed annually by [[../index|HR]] and key stakeholders (e.g., sample of Hiring Managers, recently onboarded employees) to ensure effectiveness and a positive new hire experience. 
+This process and associated materials (checklists, surveys) will be reviewed annually by [[../index|HR]] and key stakeholders (e.g., sample of Hiring Managers, recently onboarded employees) to ensure effectiveness and a positive new hire experience.

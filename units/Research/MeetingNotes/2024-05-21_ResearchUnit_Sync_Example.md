@@ -63,4 +63,4 @@
 
 *   **Date:** 2024-05-28
 *   **Time:** 10:00 AM PDT
-*   **Tentative Agenda:** Project Alpha updates, Conference abstract review, Project Z planning. 
+*   **Tentative Agenda:** Project Alpha updates, Conference abstract review, Project Z planning.

@@ -117,9 +117,9 @@ graph TD
 - [Knowledge Sharing Policy](../Policies/KnowledgeSharingPolicy.md)
 - [Data Classification Policy (KM Context)](../Policies/DataClassificationPolicy.md)
 - [Knowledge Review and Validation Process](KnowledgeReviewProcess.md)
-- [Organizational Taxonomy/Metadata Standard] [Placeholder Link]
+- [Organizational Taxonomy/Metadata Standard] [Reference link pending]
 
 ---
 **Process Owner:** Knowledge Management Unit
 **Date Effective:** [Date]
-**Next Review Date:** [Date + 1 Year] 
+**Next Review Date:** [Date + 1 Year]

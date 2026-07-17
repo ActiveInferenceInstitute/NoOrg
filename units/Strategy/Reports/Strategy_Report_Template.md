@@ -41,4 +41,4 @@
 
 ---
 **Distribution:** [List recipients or groups]
-**Security Classification:** [[Highly Confidential]] / [[Internal]] 
+**Security Classification:** [[Highly Confidential]] / [[Internal]]

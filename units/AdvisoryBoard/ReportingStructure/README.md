@@ -9,21 +9,21 @@ graph TD
     AB[Advisory Board] -->|Reports To| BOD[Board of Directors]
     AB -->|Strategic Guidance| EC[Executive Committee]
     AB -->|Advisory Input| OU[Organizational Units]
-    
+
     Committees -->|Report To| AB
     WorkingGroups -->|Report To| AB
-    
+
     subgraph AdvisoryEntities [Advisory Entities]
         Committees[Board Committees]
         WorkingGroups[Working Groups]
     end
-    
+
     subgraph OrganizationalEntities [Organizational Entities]
         BOD
         EC
         OU
     end
-    
+
     class AdvisoryEntities,OrganizationalEntities boundary;
 ```text
 
@@ -78,4 +78,4 @@ graph TD
 - [[../Charter|Advisory Board Charter]]
 - [[../Policies/ReportingRequirements|Reporting Requirements Policy]]
 - [[../Processes/AdvisoryReportingProcess|Advisory Reporting Process]]
-- [[../Reports/README|Advisory Reports Overview]] 
+- [[../Reports/README|Advisory Reports Overview]]

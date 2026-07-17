@@ -73,4 +73,4 @@ Establishes principles and guidelines for competitive and equitable compensation
 ## Related Documents
 
 - [Performance Management](./Performance_Management_Policy.md)
-- [Benefits Summary](./Benefits_Policy.md)
+- [Benefits Summary](README.md)

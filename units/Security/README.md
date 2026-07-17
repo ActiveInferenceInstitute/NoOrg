@@ -32,7 +32,7 @@ The Cognitive Security team addresses threats related to information manipulatio
 The Security Unit operates through an integrated model where domain-specific expertise is combined with cross-domain collaboration. This ensures that security operations address the full spectrum of threats while maintaining specialized capabilities.
 
 - [Technical Documentation](AGENTS.md) - Integrated approach to organizational security
-- [Incident Response](../../docs/security/incident_response.md) - Coordinated response to security incidents
+- [Incident Response](../../SECURITY.md) - Coordinated response to security incidents
 
 ## Security Frameworks
 
@@ -40,7 +40,7 @@ The Security Unit implements comprehensive frameworks that provide structured me
 
 ### Core Security Framework
 
-- [Security Framework](../../docs/frameworks/Security/security_framework.md) - Master framework for all security domains
+- [Security Framework](../../docs/architecture.md) - Master framework for all security domains
 
 ### Domain-Specific Frameworks
 
@@ -50,7 +50,7 @@ The Security Unit implements comprehensive frameworks that provide structured me
 
 ## Agent Framework Integration
 
-The Security Unit integrates with the NoOrg agent framework for automated security operations. See the [Agent Security Framework](../../agents/system/agent_security_framework.md) for implementation patterns.
+The Security Unit integrates with the NoOrg agent framework for automated security operations. See the [Agent Security Framework](../../docs/architecture.md) for implementation patterns.
 
 ## Documentation and Resources
 
@@ -73,7 +73,7 @@ The Security Unit is led by a team of security professionals with domain experti
 
 - [Technical Documentation](AGENTS.md) - Detailed information about the Security Unit
 - [Security Strategy](Policies/securitystrategy.md) - Integrated Security Strategy
-- [Incident Response](../../docs/security/incident_response.md) - Integrated Incident Response Plan
+- [Incident Response](../../SECURITY.md) - Integrated Incident Response Plan
 - [Security Policies](Policies/) - Index of Security Documentation
 
 ---

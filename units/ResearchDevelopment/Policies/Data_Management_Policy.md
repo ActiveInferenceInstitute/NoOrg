@@ -58,4 +58,4 @@ Adherence to this policy is essential for research integrity and compliance. Non
 
 ## 11. Contact
 
-For questions or support regarding data management, contact [Designated Data Steward/IT Support/Research Office]. 
+For questions or support regarding data management, contact [Designated Data Steward/IT Support/Research Office].

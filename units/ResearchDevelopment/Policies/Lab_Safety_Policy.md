@@ -86,4 +86,4 @@ Failure to comply with this safety policy may result in disciplinary action, inc
 
 ## 15. Contact
 
-For safety-related questions or concerns, contact your Supervisor or the [Designated Safety Officer/Environmental Health & Safety Department]. 
+For safety-related questions or concerns, contact your Supervisor or the [Designated Safety Officer/Environmental Health & Safety Department].

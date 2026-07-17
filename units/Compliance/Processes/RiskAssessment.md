@@ -142,8 +142,8 @@ This process applies to all compliance risk assessment activities conducted by t
 - Risk Assessment Calendar
 
 ---
-**Document Owner:** Compliance Risk Manager  
-**Approval Authority:** Chief Compliance Officer  
-**Last Review Date:** 2024-01-15  
-**Next Review Date:** 2025-01-15  
-**Version:** 2.0 
+**Document Owner:** Compliance Risk Manager
+**Approval Authority:** Chief Compliance Officer
+**Last Review Date:** 2024-01-15
+**Next Review Date:** 2025-01-15
+**Version:** 2.0

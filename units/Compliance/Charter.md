@@ -93,7 +93,7 @@ The Compliance unit derives its authority from the [[BoardOfDirectors/CommitteeS
 This charter shall be reviewed annually by the [[Compliance/|Compliance]] unit and approved by the [[BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]. Amendments require approval from both the Chief Compliance Officer and the Governance Committee.
 
 ---
-**Approved by:** [[BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]  
-**Date of Approval:** 2024-04-15  
-**Version:** 1.0  
+**Approved by:** [[BoardOfDirectors/CommitteeStructure/GovernanceCommittee|Governance Committee]]
+**Date of Approval:** 2024-04-15
+**Version:** 1.0
 **Next Review Date:** 2025-04-15

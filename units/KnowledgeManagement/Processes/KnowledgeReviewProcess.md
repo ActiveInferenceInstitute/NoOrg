@@ -25,7 +25,7 @@ graph TD
     E -- Yes --> F[Approve Knowledge Asset];
     E -- No --> G[Provide Feedback/Revision Requests];
     G --> H[Revise Knowledge Asset];
-    H --> D; 
+    H --> D;
     F --> I[Update Asset Status/Metadata];
     I --> J[End Review Cycle];
 
@@ -135,4 +135,4 @@ graph TD
 ---
 **Process Owner:** Knowledge Management Unit
 **Date Effective:** [Date]
-**Next Review Date:** [Date + 1 Year] 
+**Next Review Date:** [Date + 1 Year]

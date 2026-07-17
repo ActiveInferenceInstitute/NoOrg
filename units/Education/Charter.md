@@ -62,5 +62,5 @@ This charter is subject to annual review and revision as needed to ensure alignm
 
 ---
 
-**Last Updated**: [Current Date]  
+**Last Updated**: [Current Date]
 **Next Review**: [Current Date + 1 Year]

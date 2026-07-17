@@ -55,5 +55,5 @@
 
 ## Related Documents
 
-- [Proposal](./Proposals/)
+- [Proposal](README.md)
 - [Contract](../../Legal/Contracts/)

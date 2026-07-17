@@ -17,7 +17,7 @@ graph TD
 
     Processes --> Execution[Process Execution]
     Policies[Finance Policies] --> Processes
-    
+
     class Policies externalEntity;
 ```text
 
@@ -94,4 +94,4 @@ Each process document includes:
 - [[../Policies/README|Finance Policies]]
 - [[../Reports/ProcessEfficiency|Process Efficiency Reports]]
 - [[../../AdvisoryBoard/Processes/README|Advisory Board Processes]]
-- [[../../Audit/Processes/README|Audit Processes]] 
+- [[../../Audit/Processes/README|Audit Processes]]

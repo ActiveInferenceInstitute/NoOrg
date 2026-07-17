@@ -30,4 +30,4 @@ A standard meeting notes template ([[meeting_notes_template]]) should be utilize
 *Version: 1.0*
 *Last Updated: [Date]*
 *Maintained by: [[business_development_director]]*
-*Status: Active* 
+*Status: Active*

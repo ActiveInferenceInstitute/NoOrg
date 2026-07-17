@@ -5,7 +5,7 @@ graph TD
     subgraph LegalUnit [Legal Unit]
         direction TB
         HeadLegal(Head of Legal / General Counsel)
-        
+
         subgraph ContractsMgmt [Contracts Management]
             direction TB
             ContractManager(Contract Manager/Counsel)
@@ -23,7 +23,7 @@ graph TD
             LitigationCounsel(Litigation Counsel)
             LitigationParalegal(Litigation Paralegal)
         end
-        
+
         subgraph ComplianceRegulatory [Compliance & Regulatory]
             direction TB
             ComplianceOfficer(Compliance Officer/Counsel)
@@ -56,4 +56,4 @@ graph TD
 
 **Description:**
 
-This chart outlines a possible structure for the Legal Unit, headed by the General Counsel. It includes specialized teams for Contracts, Intellectual Property, Litigation, Compliance, Corporate Governance, and Legal Operations. The actual structure may vary based on organizational size and needs. 
+This chart outlines a possible structure for the Legal Unit, headed by the General Counsel. It includes specialized teams for Contracts, Intellectual Property, Litigation, Compliance, Corporate Governance, and Legal Operations. The actual structure may vary based on organizational size and needs.

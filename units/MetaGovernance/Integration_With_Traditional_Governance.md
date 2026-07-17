@@ -348,4 +348,4 @@ The integration of Meta-Governance with traditional governance is not about repl
 
 ---
 
-*This document is maintained by the Meta-Governance Unit in collaboration with the Governance Unit and is updated as integration approaches evolve based on organizational learning and changing needs.* 
+*This document is maintained by the Meta-Governance Unit in collaboration with the Governance Unit and is updated as integration approaches evolve based on organizational learning and changing needs.*

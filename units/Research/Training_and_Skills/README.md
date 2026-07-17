@@ -17,4 +17,4 @@ This directory provides guides, resources, and links related to developing and m
 ## Internal Training
 
 *   Refer to [Organization's Training Portal/Calendar] for scheduled workshops or sessions.
-*   New researcher onboarding includes mandatory review of [[../Policies/]] and [[../Processes/]]. 
+*   New researcher onboarding includes mandatory review of [[../Policies/]] and [[../Processes/]].

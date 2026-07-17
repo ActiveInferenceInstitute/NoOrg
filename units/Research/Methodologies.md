@@ -16,32 +16,32 @@ Depending on the focus area and project goals, we utilize a range of qualitative
 
 ### Research Ethics
 
-Adherence to [Research Ethics Policy](../EthicsAdvisoryBoard/Policies/research_ethics_policy.md) including:
+Adherence to [Research Ethics Policy](Policies/Research_Ethics_Policy.md) including:
 
 - Informed consent procedures
-- Data privacy per [Privacy Policy](../Legal/Policies/privacy_policy.md)
+- Data privacy per [Privacy Policy](README.md)
 - Responsible innovation principles
 
 ### Data Management
 
 - Secure storage and version control of datasets
-- See [Data Management Process](./Processes/DataManagementProcess.md)
+- See [Data Management Process](README.md)
 
 ### Reproducibility
 
 - Clear documentation of methods and code
-- Use [code repositories](../Development/Standards/code_repository_standards.md)
+- Use [code repositories](README.md)
 - Detailed analysis step documentation
 
 ### Peer Review
 
 - Internal review process for key findings
-- See [Peer Review Process](./Processes/PeerReviewProcess.md)
+- See [Peer Review Process](README.md)
 
 ### Publication & Dissemination
 
 - Guidelines for sharing research findings
-- See [Publication Policy](./Policies/PublicationPolicy.md)
+- See [Publication Policy](README.md)
 
 ## Related Documentation
 

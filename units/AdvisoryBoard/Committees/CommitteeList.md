@@ -59,7 +59,7 @@ Each committee operates according to the following governance structure:
 ```mermaid
 graph TD
     AB[Advisory Board] --> Committees
-    
+
     subgraph Committees [Advisory Board Committees]
         SC[Strategy Committee]
         IC[Innovation Committee]
@@ -69,7 +69,7 @@ graph TD
         AC[Audit Committee]
         CC[Compliance Committee]
     end
-    
+
     SC -.-> StratUnit[Strategy Unit]
     IC -.-> InnovUnit[Innovation Unit]
     RC -.-> RiskUnit[Risk Management Unit]
@@ -77,7 +77,7 @@ graph TD
     EC -.-> EthicsUnit[Ethics Advisory Board]
     AC -.-> AuditUnit[Audit Unit]
     CC -.-> CompUnit[Compliance Unit]
-    
+
     subgraph OrgUnits [Organizational Units]
         StratUnit
         InnovUnit
@@ -87,7 +87,7 @@ graph TD
         AuditUnit
         CompUnit
     end
-    
+
     class OrgUnits externalEntity;
 ```text
 
@@ -104,4 +104,4 @@ graph TD
 - [[../Charter|Advisory Board Charter]]
 - [[../Policies/CommitteeOperations|Committee Operations Policy]]
 - [[../Processes/CommitteeReporting|Committee Reporting Process]]
-- [[../MeetingNotes/Committees/README|Committee Meeting Notes]] 
+- [[../MeetingNotes/Committees/README|Committee Meeting Notes]]

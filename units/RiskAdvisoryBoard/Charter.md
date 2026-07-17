@@ -63,7 +63,7 @@ The organization will provide the RAB with:
 
 This Charter shall be reviewed by the RAB and [Specify reviewing body] annually, or more frequently if necessary. Any proposed amendments require approval from [Specify approving body].
 
-## 10. Appendices (Placeholders)
+## 10. Appendices (Pending references)
 
 - Appendix A: Current Member List & Terms
 - Appendix B: Contact Information (Chair, Secretary)

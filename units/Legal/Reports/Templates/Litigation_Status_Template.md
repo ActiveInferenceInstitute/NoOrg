@@ -17,16 +17,16 @@ Brief overview of current litigation matters and key developments.
 ## Matter Details
 
 ### [Matter Name]
-- **Case Number:** 
-- **Court/Forum:** 
-- **Parties:** 
+- **Case Number:**
+- **Court/Forum:**
+- **Parties:**
 - **Key Dates:**
-  - Filed: 
-  - Discovery Close: 
-  - Trial Date: 
-- **Status Update:** 
-- **Risk Assessment:** 
-- **Recommended Actions:** 
+  - Filed:
+  - Discovery Close:
+  - Trial Date:
+- **Status Update:**
+- **Risk Assessment:**
+- **Recommended Actions:**
 
 ## Financial Summary
 
@@ -44,5 +44,5 @@ Brief overview of current litigation matters and key developments.
 
 ## Related Documents
 
-- [Legal Hold Status](../Legal_Hold/)
-- [Budget Report](../../Finance/)
+- [Legal Hold Status](README.md)
+- [Budget Report](../../../Finance/README.md)

@@ -54,4 +54,4 @@ This policy will be reviewed annually and updated as necessary by the Research U
 ## 9. Approvals
 
 *   **Research Unit Lead:** [Name/Signature] - Date: ________
-*   **[Relevant Committee/Executive Sponsor]:** [Name/Signature] - Date: ________ 
+*   **[Relevant Committee/Executive Sponsor]:** [Name/Signature] - Date: ________

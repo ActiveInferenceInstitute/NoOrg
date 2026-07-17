@@ -77,4 +77,4 @@ graph TD
 ---
 Version: 1.0
 Last Updated: YYYY-MM-DD
-Owner: [[training_development_director]] 
+Owner: [[training_development_director]]

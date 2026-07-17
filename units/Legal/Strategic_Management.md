@@ -20,4 +20,4 @@ This document outlines the strategic objectives, priorities, and management appr
 - [Initiative 2 linked to Objective Y]
 
 ## Resource Allocation
-[Overview of how budget and personnel are allocated to support strategic objectives] 
+[Overview of how budget and personnel are allocated to support strategic objectives]

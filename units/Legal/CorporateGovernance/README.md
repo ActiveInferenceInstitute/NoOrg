@@ -22,10 +22,10 @@ This directory contains documents related to the company's corporate structure, 
 - [Articles of Incorporation](./Entity_Management/Articles_of_Incorporation.md)
 - [Bylaws](./Entity_Management/Bylaws.md)
 - [Code of Conduct](../../Governance/Policies/Code_of_Conduct.md) (May also link to central policy repository)
-- [Board Committee Charters](./Board_Materials/Committee_Charters/) <!-- Example subdir -->
+- [Board Committee Charters](../README.md) <!-- Example subdir -->
 
 ## Key Contacts
 
 *   **Corporate Counsel:** [Name/Email]
 *   **Corporate Paralegal:** [Name/Email]
-*   **Governance Inquiries:** [Email Alias] 
+*   **Governance Inquiries:** [Email Alias]

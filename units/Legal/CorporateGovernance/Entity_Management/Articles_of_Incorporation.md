@@ -46,4 +46,4 @@ Information about the incorporating party.
 ## Related Documents
 
 - [Bylaws](./Bylaws.md)
-- [Board Resolutions](../../BoardOfDirectors/)
+- [Board Resolutions](../../../BoardOfDirectors/README.md)

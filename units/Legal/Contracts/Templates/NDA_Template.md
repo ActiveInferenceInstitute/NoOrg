@@ -53,5 +53,5 @@ Use this template when:
 
 ## Related Documents
 
-- [Contract Management Process](../../../Processes/)
-- [Confidentiality Policy](../../../Policies/)
+- [Contract Management Process](../../Processes/README.md)
+- [Confidentiality Policy](../../Policies/README.md)

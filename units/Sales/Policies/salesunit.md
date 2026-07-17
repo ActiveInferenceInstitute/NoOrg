@@ -19,48 +19,48 @@ graph TD
     classDef support fill:#f8bbd0,stroke:#880e4f,stroke-width:2px
 
     CSO[Chief Sales Officer]:::leadership
-    
+
     subgraph Primary_Functions
         FSD[Field Sales Division]:::primary
         ISD[Inside Sales Division]:::primary
         GPD[Global Partnerships Division]:::primary
     end
-    
+
     subgraph Secondary_Functions
         SOM[Sales Operations Management]:::secondary
         SSM[Sales Strategy Management]:::secondary
     end
-    
+
     subgraph Support_Functions
         SEM[Sales Enablement]:::support
         SCM[Sales Capacity Management]:::support
     end
-    
+
     CSO --> FSD & ISD & GPD
     CSO --> SOM & SSM
     CSO --> SEM & SCM
-    
+
     FSD --> RS[Regional Sales]
     FSD --> KAM[Key Account Management]
     FSD --> VS[Vertical Sales]
-    
+
     ISD --> SDR[Sales Development]
     ISD --> ISR[Inside Sales Reps]
     ISD --> TS[Telesales]
-    
+
     GPD --> CP[Channel Partners]
     GPD --> SP[Strategic Partnerships]
     GPD --> RS[Reseller Management]
-    
+
     SOM --> SA[Sales Administration]
     SOM --> SO[Sales Operations]
-    
+
     SSM --> SPL[Sales Planning]
     SSM --> PP[Pipeline Management]
-    
+
     SEM --> ST[Sales Training]
     SEM --> SC[Sales Coaching]
-    
+
     SCM --> SPM[Sales Performance Management]
     SCM --> SQM[Sales Quota Management]
 ```text
@@ -138,20 +138,20 @@ graph TD
     classDef external fill:#c8e6c9,stroke:#1b5e20,stroke-width:1px
 
     SALES[Sales Unit]:::current
-    
+
     subgraph Internal_Units
         MKT[Marketing]:::internal
         CS[Customer Support]:::internal
         PROD[Product Management]:::internal
         FIN[Finance]:::internal
     end
-    
+
     subgraph External_Entities
         CUST[Customers]:::external
         PART[Partners]:::external
         DIST[Distributors]:::external
     end
-    
+
     SALES <-->|Leads, Campaigns| MKT
     SALES <-->|Customer Issues, Feedback| CS
     SALES <-->|Product Requirements, Roadmap| PROD
@@ -186,19 +186,19 @@ graph LR
         S2[Market Share]:::strategic
         S3[Product Mix]:::strategic
     end
-    
+
     subgraph Operational_KPIs
         O1[Sales Cycle Length]:::operational
         O2[Pipeline Coverage]:::operational
         O3[Conversion Rates]:::operational
     end
-    
+
     subgraph Financial_KPIs
         F1[Average Deal Size]:::financial
         F2[Sales Expense Ratio]:::financial
         F3[Discount Levels]:::financial
     end
-    
+
     subgraph Customer_KPIs
         C1[Customer Acquisition Cost]:::customer
         C2[Customer Lifetime Value]:::customer
@@ -233,40 +233,40 @@ graph TD
         CPQ[Configure-Price-Quote]:::primary
         SFA[Sales Force Automation]:::primary
     end
-    
+
     subgraph Supporting_Systems
         SPM[Sales Performance Management]:::secondary
         SEM[Sales Enablement Platform]:::secondary
         ANL[Sales Analytics Platform]:::secondary
     end
-    
+
     subgraph Data_Repositories
         CUST[(Customer Data)]:::data
         PROD[(Product & Pricing Data)]:::data
         SALES[(Sales Activity Data)]:::data
     end
-    
+
     subgraph External_Systems
         ERP[ERP System]:::external
         MKTG[Marketing Automation]:::external
         CS[Customer Support System]:::external
     end
-    
+
     CRM <--> CUST
     CPQ <--> PROD
     SFA <--> SALES
-    
+
     CRM <--> SFA
     CRM <--> CPQ
     SFA <--> SPM
-    
+
     CRM <--> SEM
     SFA <--> ANL
-    
+
     CRM <--> ERP
     CRM <--> MKTG
     CRM <--> CS
-    
+
     CPQ <--> ERP
     ANL <--> CUST & PROD & SALES
 ```text
@@ -332,33 +332,33 @@ graph TD
         HR2[Competitive Threats]:::high
         HR3[Sales Talent Loss]:::high
     end
-    
+
     subgraph Medium_Risks
         MR1[Pricing Pressure]:::medium
         MR2[Product Delivery Delays]:::medium
         MR3[Customer Churn]:::medium
     end
-    
+
     subgraph Low_Risks
         LR1[Territory Conflicts]:::low
         LR2[Contract Compliance]:::low
         LR3[System Outages]:::low
     end
-    
+
     HR1 --> C1[Pipeline Management]
     HR1 --> C2[Forecasting Process]
     HR2 --> C3[Competitive Intelligence]
     HR2 --> C4[Value Proposition]
     HR3 --> C5[Talent Development]
     HR3 --> C6[Compensation Plan]
-    
+
     MR1 --> C7[Value Selling]
     MR1 --> C8[Pricing Governance]
     MR2 --> C9[Product Alignment]
     MR2 --> C10[Expectation Management]
     MR3 --> C11[Account Planning]
     MR3 --> C12[Success Planning]
-    
+
     LR1 --> C13[Territory Management]
     LR2 --> C14[Legal Review]
     LR3 --> C15[System Redundancy]

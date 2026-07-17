@@ -33,7 +33,7 @@ Risk assessments, trend analyses, and strategic risk reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Risk Management](../RiskManagement/README.md) - Operational alignment
 
 ## Related Documentation

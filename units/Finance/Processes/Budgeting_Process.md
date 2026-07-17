@@ -72,4 +72,4 @@ Defines the annual budgeting process and financial planning procedures.
 ## Related Documents
 
 - [Financial Controls](../Policies/Financial_Controls_Policy.md)
-- [Reporting Standards](./Monthly_Close_Process.md)
+- [Reporting Standards](README.md)

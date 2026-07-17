@@ -35,4 +35,4 @@ Applies to all records created, received, or maintained by employees, contractor
 ## Contact
 
 *   **Records Manager:** [Name/Email]
-*   **Legal Counsel (Records):** [Name/Email] 
+*   **Legal Counsel (Records):** [Name/Email]

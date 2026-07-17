@@ -40,4 +40,4 @@ The Business Development unit actively seeks feedback and analyzes performance d
 *Version: 1.0*
 *Last Updated: [Date]*
 *Maintained by: [[business_development_director]]*
-*Status: Active* 
+*Status: Active*

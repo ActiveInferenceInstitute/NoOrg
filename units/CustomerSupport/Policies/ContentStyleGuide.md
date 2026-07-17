@@ -274,4 +274,4 @@ This style guide establishes consistent writing standards that enhance readabili
 
 ## Process Owner
 
-**Knowledge Base Manager** - Responsible for maintaining this guide, ensuring adherence, and approving updates. 
+**Knowledge Base Manager** - Responsible for maintaining this guide, ensuring adherence, and approving updates.

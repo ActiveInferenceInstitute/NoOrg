@@ -64,4 +64,4 @@ This policy will be reviewed annually and updated as necessary by the Research U
 ## 9. Approvals
 
 *   **Research Unit Lead:** [Name/Signature] - Date: ________
-*   **[Legal Counsel/IP Manager]:** [Name/Signature] - Date: ________ 
+*   **[Legal Counsel/IP Manager]:** [Name/Signature] - Date: ________

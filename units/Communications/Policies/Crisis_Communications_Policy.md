@@ -87,5 +87,5 @@ Applies to all communications during crisis situations affecting the organizatio
 
 ## Related Documents
 
-- [Communications Policy](./Communications_Policy.md)
+- [Communications Policy](README.md)
 - [Business Continuity](../../RiskManagement/)

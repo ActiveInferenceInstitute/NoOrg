@@ -38,7 +38,7 @@ These guidelines ensure consistent and proper use of organizational trademarks t
 ## Approval Process
 
 1. Submit usage request to Legal/Marketing
-2. Provide context and mockups
+2. Provide context and prototype sketches
 3. Obtain written approval
 4. Comply with conditions
 
@@ -53,4 +53,4 @@ These guidelines ensure consistent and proper use of organizational trademarks t
 ## Related Documents
 
 - [Brand Guidelines](../../../Marketing/)
-- [IP Policy](../../../Policies/)
+- [IP Policy](../../Policies/README.md)

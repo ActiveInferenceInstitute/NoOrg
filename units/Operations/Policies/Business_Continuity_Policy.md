@@ -76,5 +76,5 @@ Applies to all business functions, systems, and facilities.
 
 ## Related Documents
 
-- [Disaster Recovery Plan](../Processes/Disaster_Recovery_Process.md)
+- [Disaster Recovery Plan](README.md)
 - [Crisis Communications](../../Communications/Policies/)

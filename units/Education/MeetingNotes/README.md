@@ -77,4 +77,4 @@ Meeting notes capture discussions, decisions, action items, and follow-ups from 
 - All notes should include date, attendees, agenda, key discussions, decisions, and action items
 - Action items should be clearly marked with owner and due date
 - Notes should be uploaded within 24 hours of meeting completion
-- Confidential information should be marked accordingly 
+- Confidential information should be marked accordingly

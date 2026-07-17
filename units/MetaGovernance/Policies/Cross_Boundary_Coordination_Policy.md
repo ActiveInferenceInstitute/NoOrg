@@ -176,7 +176,7 @@ All exceptions must be documented and reviewed within 30 days.
 | 0.1 | YYYY-MM-DD | [Author Name] | Initial draft |
 | 1.0 | YYYY-MM-DD | [Author Name] | Approved version |
 
-**Policy Owner:** Meta-Governance Unit  
-**Approved By:** [Approving Authority]  
-**Effective Date:** YYYY-MM-DD  
-**Review Date:** YYYY-MM-DD 
+**Policy Owner:** Meta-Governance Unit
+**Approved By:** [Approving Authority]
+**Effective Date:** YYYY-MM-DD
+**Review Date:** YYYY-MM-DD

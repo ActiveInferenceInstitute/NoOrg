@@ -33,7 +33,7 @@ Project status, innovation metrics, and technology assessment reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Research Unit](../Research/README.md) - Research coordination
 - [Development Unit](../Development/README.md) - Development alignment
 

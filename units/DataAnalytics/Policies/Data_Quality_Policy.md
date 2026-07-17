@@ -57,4 +57,4 @@ Applies to all data used for analysis, reporting, and decision support throughou
 ## Related Documents
 
 - [Data Governance Policy](../../Governance/Policies/Data_Governance_Policy.md)
-- [Data Management Process](../Processes/Data_Management_Process.md)
+- [Data Management Process](README.md)

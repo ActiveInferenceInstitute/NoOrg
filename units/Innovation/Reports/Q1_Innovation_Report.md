@@ -62,4 +62,4 @@
 
 *   Key priorities and focus areas
 *   Upcoming project milestones
-*   Anticipated challenges 
+*   Anticipated challenges

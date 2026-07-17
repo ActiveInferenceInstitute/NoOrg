@@ -1,0 +1,28 @@
+version: 1
+source:
+  chapters:
+    - 00_abstract.md
+    - 01_introduction.md
+    - 02_system_model.md
+    - 03_architecture.md
+    - 04_execution_semantics.md
+    - 05_evaluation.md
+    - 06_reproducibility.md
+    - 07_scope_and_related_work.md
+    - 08_appendix_contracts.md
+    - 09_claims_and_evidence.md
+    - 98_glossary.md
+    - 99_references.md
+  figures:
+    - figures/architecture.mmd
+    - figures/lifecycle.mmd
+    - figures/provider.mmd
+    - figures/persistence.mmd
+    - figures/verification.mmd
+generated:
+  root: output
+  evidence: output/evidence/runtime.json
+  hydrated: output/manuscript
+  figures: output/figures
+  html: output/noorg-manuscript.html
+  pdf: output/noorg-manuscript.pdf

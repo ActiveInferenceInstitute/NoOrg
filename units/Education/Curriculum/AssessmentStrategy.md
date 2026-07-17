@@ -121,6 +121,6 @@ Our assessment approach follows the Kirkpatrick-Phillips Model with adaptations:
 
 ---
 
-**Document Owner**: Director of Education  
-**Last Updated**: [Current Date]  
-**Review Cycle**: Annual 
+**Document Owner**: Director of Education
+**Last Updated**: [Current Date]
+**Review Cycle**: Annual

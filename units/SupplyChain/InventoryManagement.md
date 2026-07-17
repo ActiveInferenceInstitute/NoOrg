@@ -13,4 +13,4 @@ Oversees the management of inventory levels, including raw materials, work-in-pr
 - [[Procurement]]
 - [[Processes/Inventory Count Process]]
 - [[Policies/Inventory Management Policy]]
-- [[../Finance/README|Finance Unit]] 
+- [[../Finance/README|Finance Unit]]

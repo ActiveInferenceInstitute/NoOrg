@@ -40,4 +40,4 @@ The RAB operates in an advisory capacity. While the Board strives for consensus 
 
 ## 7. Review
 
-These Operating Principles shall be reviewed annually in conjunction with the RAB Charter review, or as needed. 
+These Operating Principles shall be reviewed annually in conjunction with the RAB Charter review, or as needed.

@@ -5,9 +5,9 @@ This template provides a standardized format for preparing materials for Board o
 
 ## Meeting Information
 
-**Meeting Date**: [Date]  
-**Time**: [Start Time] - [End Time]  
-**Location**: [Physical Location and/or Virtual Meeting Details]  
+**Meeting Date**: [Date]
+**Time**: [Start Time] - [End Time]
+**Location**: [Physical Location and/or Virtual Meeting Details]
 **Meeting Type**: [Regular/Special/Annual]
 
 ## Table of Contents
@@ -394,4 +394,4 @@ Additional materials that may be useful for context but aren't critical for pre-
 - Effective Date: 2023-01-01
 - Review Frequency: Annual
 - Template Owner: Corporate Secretary
-- Last Updated: 2023-12-15 
+- Last Updated: 2023-12-15

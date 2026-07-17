@@ -6,11 +6,11 @@ This report provides the Advisory Board's independent assessment of the organiza
 
 ## Report Details
 
-**Report Type**: Advisory Assessment  
-**Period Covered**: [Quarter/Year]  
-**Prepared By**: [[../../Committees/RiskCommittee/README|Risk Committee]]  
-**Submitted To**: Executive Committee  
-**Date**: [Date]  
+**Report Type**: Advisory Assessment
+**Period Covered**: [Quarter/Year]
+**Prepared By**: [[../../Committees/RiskCommittee/README|Risk Committee]]
+**Submitted To**: Executive Committee
+**Date**: [Date]
 
 ## Context and Background
 
@@ -181,4 +181,4 @@ To measure the effectiveness of risk management improvements, the following metr
 
 ### Appendix C: Benchmark Comparison
 
-[Comparison of the organization's risk management practices against industry benchmarks and best practices.] 
+[Comparison of the organization's risk management practices against industry benchmarks and best practices.]

@@ -110,4 +110,4 @@ graph TD
 - Process ID: [PROC-OD-006]
 - Version: 1.0
 - Owner: [[Head of Human Resources]] / [[Head of Organizational Development]]
-- Last Updated: <% tp.date.now("YYYY-MM-DD") %> 
+- Last Updated: <% tp.date.now("YYYY-MM-DD") %>

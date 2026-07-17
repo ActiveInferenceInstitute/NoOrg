@@ -21,4 +21,4 @@ This document outlines the core responsibilities and functions of the Legal unit
 - [Key jurisdictions]
 - [Emerging legal trends impacting the business]
 
-See also: [Charter.md](./Charter.md) 
+See also: [Charter.md](./Charter.md)

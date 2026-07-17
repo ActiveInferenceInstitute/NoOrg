@@ -19,4 +19,4 @@ Within each project folder, maintain the following subdirectories:
 - `assets/` : Supporting materials (images, presentations, datasets).
 - `meeting-notes/` : Notes from project meetings and workshops.
 
-Use this structure to ensure consistency, traceability, and easy access to project information. 
+Use this structure to ensure consistency, traceability, and easy access to project information.

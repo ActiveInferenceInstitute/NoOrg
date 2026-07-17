@@ -107,4 +107,4 @@ Next review: [Date]
 | Average Response Time | <50% of SLA | Weekly |
 | Average Resolution Time | <75% of SLA | Weekly |
 | SLA Breach Rate | <5% | Weekly |
-| Customer Satisfaction | >90% | Monthly | 
+| Customer Satisfaction | >90% | Monthly |

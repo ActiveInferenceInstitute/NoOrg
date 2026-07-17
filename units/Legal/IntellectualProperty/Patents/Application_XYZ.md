@@ -51,4 +51,4 @@ Brief description of the invention and its novel aspects.
 ## Related Documents
 
 - [Portfolio Overview](./Portfolio_Overview.md)
-- [IP Policy](../../../Policies/)
+- [IP Policy](../../Policies/README.md)

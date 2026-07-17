@@ -85,4 +85,4 @@ This policy is intended to comply with all applicable federal, state, and local 
 
 ## 6. Review
 
-This policy will be reviewed periodically (typically annually) by HR and Legal to ensure compliance and alignment with organizational needs. 
+This policy will be reviewed periodically (typically annually) by HR and Legal to ensure compliance and alignment with organizational needs.

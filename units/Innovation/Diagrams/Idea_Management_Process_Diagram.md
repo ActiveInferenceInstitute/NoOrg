@@ -45,4 +45,4 @@ graph TD
 - Rectangles: Process Steps/Activities
 - Diamonds: Decision Points
 - Rounded Rectangles: End States (Archive/Reject/Hold) or Start/External State (Proceed to Stage 3)
-- Arrows: Flow Direction 
+- Arrows: Flow Direction

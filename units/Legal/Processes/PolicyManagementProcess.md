@@ -88,4 +88,4 @@ This process does *not* typically apply to informal guidelines or team-specific 
 
 ## 7. Review and Updates
 
-This Policy Management Process itself will be reviewed annually by the Legal/Compliance department (or designated Policy Office) and updated as necessary. 
+This Policy Management Process itself will be reviewed annually by the Legal/Compliance department (or designated Policy Office) and updated as necessary.

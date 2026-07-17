@@ -33,7 +33,7 @@ System health, security metrics, and infrastructure performance reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Security Unit](../Security/README.md) - Security coordination
 
 ## Related Documentation

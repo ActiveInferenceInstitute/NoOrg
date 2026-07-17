@@ -16,4 +16,4 @@ Detailed steps, roles, responsibilities, and associated forms or system actions 
 *   [**Offboarding Process**](./OffboardingProcess.md): Managing employee separations.
 *   [**Training & Development Request Process**](AGENTS.md)
 
-*(Add links to other relevant processes as they are developed)* 
+*(Add links to other relevant processes as they are developed)*

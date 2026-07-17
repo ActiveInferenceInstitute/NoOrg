@@ -84,11 +84,11 @@ This policy will be reviewed annually by the KM Unit in consultation with releva
 - [Knowledge Creation Policy](KnowledgeCreationPolicy.md)
 - [Knowledge Retention Policy](KnowledgeRetentionPolicy.md)
 - [Data Classification Policy (KM Context)](DataClassificationPolicy.md)
-- [Information Security Policy] [Placeholder Link]
-- [Acceptable Use Policy] [Placeholder Link]
+- [Information Security Policy] [Reference link pending]
+- [Acceptable Use Policy] [Reference link pending]
 - [Community of Practice Policy](CommunityOfPracticePolicy.md)
 
 ---
 **Policy Owner:** Knowledge Management Unit
 **Date Effective:** [Date]
-**Next Review Date:** [Date + 1 Year] 
+**Next Review Date:** [Date + 1 Year]

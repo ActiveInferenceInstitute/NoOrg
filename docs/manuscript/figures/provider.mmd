@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant Agent
+  participant Provider
+  participant Schema
+  participant Usage
+  Agent->>Provider: complete(request, schema, signal)
+  Provider->>Provider: select configured profile
+  Provider->>Schema: parse structured response
+  Schema-->>Provider: validated data
+  Provider->>Usage: attach tokens and cost
+  Provider-->>Agent: CompletionResponse

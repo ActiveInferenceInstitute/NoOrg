@@ -139,4 +139,4 @@ Documenting the process and outcomes, communicating results to relevant stakehol
 **Effective Date:** [Date]
 **Approved By:** [[Board of Directors]] / [[Risk Committee]]
 **Policy Owner:** [[Chief Risk Officer]] / Head of [[Risk Management]]
-**Next Review Date:** [Date + 1 Year] 
+**Next Review Date:** [Date + 1 Year]

@@ -17,7 +17,7 @@ graph TD
 
     Policies --> Implementation[Policy Implementation]
     Charter[Finance Charter] --> Policies
-    
+
     class Charter externalEntity;
 ```text
 
@@ -75,4 +75,4 @@ The Finance Unit follows a structured approach to policy development and mainten
 - [[../Processes/PolicyDevelopment|Policy Development Process]]
 - [[../Reports/PolicyCompliance|Policy Compliance Reports]]
 - [[../../AdvisoryBoard/Committees/AuditCommittee/README|Audit Committee]]
-- [[../../RiskManagement/Policies/README|Risk Management Policies]] 
+- [[../../RiskManagement/Policies/README|Risk Management Policies]]

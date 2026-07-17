@@ -54,4 +54,4 @@ flowchart LR
 
 ## Contact
 
-For questions about these processes, contact the Customer Support team at support-team@organization.com or via Slack at #customer-support. 
+For questions about these processes, contact the Customer Support team at support-team@organization.com or via Slack at #customer-support.

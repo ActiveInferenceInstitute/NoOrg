@@ -14,4 +14,4 @@ Structure Recommendation:
 - Subfolders by Meeting Type (e.g., `Weekly/`, `MonthlyReview/`, `QuarterlyStrategy/`, `AdHoc/`)
 - File Naming Convention: `YYYY-MM-DD-EC-MeetingType-Topic-DocumentType.md` (e.g., `2024-01-15-EC-Weekly-OpsReview-Minutes.md`)
 
-Access is strictly controlled according to the [[confidentiality_information_handling_ec]] procedure. 
+Access is strictly controlled according to the [[confidentiality_information_handling_ec]] procedure.

@@ -127,4 +127,4 @@ sequenceDiagram
 ---
 Version: 1.0
 Last Updated: [[Date]]
-Maintained by: [[Head of HR]] 
+Maintained by: [[Head of HR]]

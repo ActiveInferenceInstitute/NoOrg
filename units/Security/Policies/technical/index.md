@@ -46,5 +46,5 @@ This section provides comprehensive documentation for technical activities, incl
 
 ## Related Documentation
 
-- [Governance Policies](../../Governance/Policies/)
-- [Processes](./Processes/)
+- [Governance Policies](../README.md)
+- [Processes](../../Processes/README.md)

@@ -28,4 +28,4 @@ This policy applies to all types of contracts and agreements binding the organiz
 
 *   [Link to Signature Authority Matrix]
 *   [[../Processes/ContractReviewProcess|Contract Review Process]]
-*   [[../Contracts/Templates/|Contract Templates]] 
+*   [[../Contracts/Templates/|Contract Templates]]

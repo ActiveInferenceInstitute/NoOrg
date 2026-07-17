@@ -192,4 +192,4 @@ This process applies to:
 | 0.1 | YYYY-MM-DD | [Author Name] | Initial draft |
 | 1.0 | YYYY-MM-DD | [Author Name] | Approved version |
 
-*Last Review: YYYY-MM-DD* 
+*Last Review: YYYY-MM-DD*

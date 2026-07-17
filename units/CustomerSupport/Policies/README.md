@@ -29,4 +29,4 @@ These policies are reviewed and updated quarterly or as needed based on customer
 
 ## Contact
 
-For questions about these policies, contact the Customer Support team at support-team@organization.com or via Slack at #customer-support. 
+For questions about these policies, contact the Customer Support team at support-team@organization.com or via Slack at #customer-support.

@@ -38,7 +38,7 @@ Administrative reports and organizational metrics.
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
+- [Units System](../../docs/architecture.md) - Unit management code
 - [Units AGENTS.md](../AGENTS.md) - Overall units documentation
 
 ## Related Documentation

@@ -60,4 +60,4 @@ Adherence to this policy is mandatory. Unauthorized use or disclosure of organiz
 
 ## 12. Contact
 
-For questions regarding IP, contact the [Designated IP Management Function/Legal Department]. 
+For questions regarding IP, contact the [Designated IP Management Function/Legal Department].

@@ -64,4 +64,4 @@ This policy will be reviewed annually.
 ## 9. Approvals
 
 *   **Research Unit Lead:** [Name/Signature] - Date: ________
-*   **[Head of Legal/Contracts]:** [Name/Signature] - Date: ________ 
+*   **[Head of Legal/Contracts]:** [Name/Signature] - Date: ________

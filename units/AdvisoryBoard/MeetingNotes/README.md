@@ -17,7 +17,7 @@ graph TD
     MeetingNotes --> Actions[Action Items]
     MeetingNotes --> Decisions[Decision Record]
     MeetingNotes --> Reports[Advisory Reports]
-    
+
     class Actions,Decisions,Reports externalEntity;
 ```text
 
@@ -90,4 +90,4 @@ The Advisory Board maintains a coordinated meeting schedule to ensure effective 
 - [[../Charter|Advisory Board Charter]]
 - [[../Policies/MeetingProtocols|Meeting Protocols]]
 - [[../Processes/MeetingManagement|Meeting Management Process]]
-- [[../Reports/README|Advisory Reports]] 
+- [[../Reports/README|Advisory Reports]]

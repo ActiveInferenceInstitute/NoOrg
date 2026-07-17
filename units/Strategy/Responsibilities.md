@@ -21,4 +21,4 @@ The Strategy unit is responsible for formulating, articulating, and overseeing t
 - Performance monitoring against [[Strategic_Goals|strategic goals]]
 - Mergers & Acquisitions (M&A) / Partnership strategy
 - Communicating strategy internally & externally
-- Facilitating strategic decision-making across the [[organization]] 
+- Facilitating strategic decision-making across the [[organization]]

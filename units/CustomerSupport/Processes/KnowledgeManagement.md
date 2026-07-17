@@ -231,4 +231,4 @@ flowchart TD
 
 ## Process Owner
 
-**Knowledge Base Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement. 
+**Knowledge Base Manager** - Responsible for maintaining this process, measuring adherence, and driving continuous improvement.

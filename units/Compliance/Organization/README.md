@@ -18,4 +18,4 @@ This directory contains information about the structure, roles, and governance o
 - [[../Charter|Compliance Charter]]
 - [[../Policies/complianceunit|Compliance Unit Overview]]
 - [[../Policies/ComplianceFramework|Compliance Framework]]
-- [[../MeetingNotes/ComplianceCommittee/|Committee Meetings]] 
+- [[../MeetingNotes/ComplianceCommittee/|Committee Meetings]]

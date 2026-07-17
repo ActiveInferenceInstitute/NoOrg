@@ -18,9 +18,9 @@ This template provides a standardized format for documenting governance patterns
 
 ## Pattern ID: [CATEGORY-SHORT_NAME-001]
 
-**Category:** [Decision-Making/Meeting/Role/Structure/Tension/Other]  
-**Complexity:** [Basic/Intermediate/Advanced]  
-**Maturity:** [Emerging/Established/Mature]  
+**Category:** [Decision-Making/Meeting/Role/Structure/Tension/Other]
+**Complexity:** [Basic/Intermediate/Advanced]
+**Maturity:** [Emerging/Established/Mature]
 
 ## Problem Statement
 
@@ -163,12 +163,12 @@ This template provides a standardized format for documenting governance patterns
 
 ## Metadata
 
-**Author(s):** [Names of pattern contributors]  
-**Created Date:** [YYYY-MM-DD]  
-**Last Updated:** [YYYY-MM-DD]  
-**Version:** [x.y]  
-**Status:** [Draft/Review/Approved/Deprecated]  
-**Reviewer(s):** [Names of those who reviewed this pattern]  
+**Author(s):** [Names of pattern contributors]
+**Created Date:** [YYYY-MM-DD]
+**Last Updated:** [YYYY-MM-DD]
+**Version:** [x.y]
+**Status:** [Draft/Review/Approved/Deprecated]
+**Reviewer(s):** [Names of those who reviewed this pattern]
 
 ---
 
@@ -179,4 +179,4 @@ This template provides a standardized format for documenting governance patterns
 - Use plain language and define any specialized terms
 - Consider including visual representations (link to diagrams) when helpful
 - Update the metadata section whenever the pattern is revised
-- Submit completed patterns to the [[ResponsibilitiesAndAuthorities#Pattern Library Curator|Pattern Library Curator]] for review 
+- Submit completed patterns to the [[ResponsibilitiesAndAuthorities#Pattern Library Curator|Pattern Library Curator]] for review

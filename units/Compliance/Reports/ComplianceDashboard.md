@@ -108,7 +108,7 @@ This dashboard provides a high-level view of the organization's compliance statu
 - [[../Processes/IssueManagement|Issue Management Process]]
 
 ---
-**Last Updated:** 2024-06-01  
-**Prepared By:** Compliance Reporting Team  
-**Distribution:** Executive Leadership, Governance Committee  
-**Confidentiality:** Internal Use Only 
+**Last Updated:** 2024-06-01
+**Prepared By:** Compliance Reporting Team
+**Distribution:** Executive Leadership, Governance Committee
+**Confidentiality:** Internal Use Only

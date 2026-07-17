@@ -132,7 +132,7 @@ The Compliance Committee derives its authority from the [[../Executive/|Executiv
 - [[../Processes/CommitteeOperations|Committee Procedures]]
 
 ---
-**Approved By:** [[../Executive/|Executive Committee]]  
-**Last Review Date:** 2024-01-15  
-**Next Review Date:** 2025-01-15  
-**Version:** 2.0 
+**Approved By:** [[../Executive/|Executive Committee]]
+**Last Review Date:** 2024-01-15
+**Next Review Date:** 2025-01-15
+**Version:** 2.0

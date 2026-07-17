@@ -16,22 +16,22 @@
 ## Idea Details
 
 1.  **Idea Title:** *(Provide a short, descriptive title)*
-    
+
 2.  **Problem/Opportunity:** *(Describe the specific problem your idea solves or the opportunity it addresses. What is the unmet need? Who is affected?)*
-    
+
 3.  **Proposed Solution:** *(Explain your idea in detail. How does it work? What are the key features or components?)*
-    
+
 4.  **Potential Benefits:** *(What are the expected positive outcomes? Be specific. Examples: Cost savings, new revenue streams, improved efficiency, enhanced customer experience, strategic advantage, better compliance, etc. Quantify if possible.)*
-    
+
 5.  **Target Audience/Area of Impact:** *(Who would benefit most from this idea? Which part of the organization or market segment is impacted?)*
-    
+
 6.  **Novelty/Uniqueness:** *(How is this idea different from existing solutions or approaches (internal or external)? What makes it innovative?)*
-    
+
 7.  **Known Risks/Challenges:** *(What are the potential obstacles, risks, or challenges in developing or implementing this idea?)*
-    
+
 8.  **Required Resources (Initial Estimate):** *(What resources might be needed to explore this idea further (e.g., specific expertise, technology, data, funding estimate if known)? This is a rough estimate for initial assessment.)*
-    
-9.  **Supporting Information (Optional):** *(You can attach or link to relevant documents, research, sketches, mockups, presentations, etc.)*
+
+9.  **Supporting Information (Optional):** *(You can attach or link to relevant documents, research, sketches, prototype sketches, presentations, etc.)*
     - [Link/Attachment Description 1]
     - [Link/Attachment Description 2]
 
@@ -44,4 +44,4 @@
 - **Notes:** ______
 
 ---
-*Thank you for contributing to innovation at [Organization Name]! You will receive an acknowledgement upon receipt and feedback following the review process.* 
+*Thank you for contributing to innovation at [Organization Name]! You will receive an acknowledgement upon receipt and feedback following the review process.*

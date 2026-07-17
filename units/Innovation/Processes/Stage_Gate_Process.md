@@ -48,11 +48,11 @@ This process applies to prioritized innovation projects undertaken by the [[../I
 ## Governance
 
 *   **Gatekeepers:** [Define who makes the decisions at each gate, e.g., Innovation Council, Unit Leadership]. See [[../Strategic_Management.md#Governance and Decision Making]].
-*   **Documentation:** Templates for deliverables at each stage (See [[../Templates/]]). 
+*   **Documentation:** Templates for deliverables at each stage (See [[../Templates/]]).
 
 ## Related Documents
 
 *   [[../Strategic_Management.md]]
 *   [[../Performance_Metrics.md]]
 *   [[../Risk_Management.md]]
-*   [[../Responsibilities.md]] 
+*   [[../Responsibilities.md]]

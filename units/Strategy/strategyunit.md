@@ -350,4 +350,4 @@ Last Updated: [[current_date]]
 Version: 1.0
 Maintained by: [[chief_strategy_officer]] / [[strategy_director]]
 Security Level: [[highly_confidential]]
-Document Status: [[active]] 
+Document Status: [[active]]

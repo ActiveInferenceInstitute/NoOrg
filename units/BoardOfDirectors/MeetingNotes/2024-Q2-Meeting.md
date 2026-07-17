@@ -1,8 +1,8 @@
 # Board of Directors Meeting Minutes: Q2 2024
 
-**Date:** June 15, 2024  
-**Time:** 9:00 AM - 1:00 PM EDT  
-**Location:** Corporate Headquarters, Boardroom A / Virtual Hybrid  
+**Date:** June 15, 2024
+**Time:** 9:00 AM - 1:00 PM EDT
+**Location:** Corporate Headquarters, Boardroom A / Virtual Hybrid
 **Meeting Type:** Regular Quarterly Meeting
 
 ## Attendees
@@ -157,9 +157,9 @@
 
 ---
 
-**Minutes Prepared By**: Michael Rodriguez, Corporate Secretary  
-**Minutes Reviewed By**: Sarah Chen, Board Chair  
-**Draft Date**: June 18, 2024  
+**Minutes Prepared By**: Michael Rodriguez, Corporate Secretary
+**Minutes Reviewed By**: Sarah Chen, Board Chair
+**Draft Date**: June 18, 2024
 **Approval Date**: [To be approved at next meeting]
 
 **Attachments**:
@@ -168,4 +168,4 @@
 3. Talent Strategy Presentation
 4. International Expansion Strategy
 
-**Distribution**: Board of Directors, CEO, Corporate Secretary, Board Records 
+**Distribution**: Board of Directors, CEO, Corporate Secretary, Board Records

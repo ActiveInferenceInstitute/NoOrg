@@ -16,7 +16,7 @@ This directory manages the legal aspects of the organization's intellectual prop
 
 ## Related Units & Linking
 - **Research & Development / Innovation:** IP documents here should link to the specific R&D projects or innovations they protect.
-  - *Example Link Placeholder:* [Patent Application XYZ](./Patents/Application_XYZ.md) - Related to [Project Phoenix](../../../README.md) <!-- Update path as needed -->
+  - *Example Link Pending reference:* [Patent Application XYZ](./Patents/Application_XYZ.md) - Related to [Project Phoenix](../../../README.md) <!-- Update path as needed -->
 - **Product Management / Marketing:** Collaboration on branding, trademarks, and ensuring products don't infringe third-party IP.
 - **Business Development:** Support for IP aspects of partnerships and M&A.
 
@@ -29,4 +29,4 @@ This directory manages the legal aspects of the organization's intellectual prop
 
 *   **IP Counsel:** [Name/Email]
 *   **IP Paralegal/Administrator:** [Name/Email]
-*   **Invention Disclosure/IP Queries:** [Email Alias/System Link] 
+*   **Invention Disclosure/IP Queries:** [Email Alias/System Link]

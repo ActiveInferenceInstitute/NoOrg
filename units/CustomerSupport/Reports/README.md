@@ -48,4 +48,4 @@ Reports are distributed according to the audience defined in the report schedule
 
 ## Contact
 
-For questions about support reports or to request custom analyses, contact the Support Operations team or via Slack at #cs-reporting. 
+For questions about support reports or to request custom analyses, contact the Support Operations team or via Slack at #cs-reporting.

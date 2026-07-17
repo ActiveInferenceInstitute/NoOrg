@@ -66,4 +66,4 @@ Devices (whether organization-owned or personal/BYOD if permitted) used for remo
 
 ## 11. Policy Review
 
-*   This policy will be reviewed annually and updated as necessary. 
+*   This policy will be reviewed annually and updated as necessary.

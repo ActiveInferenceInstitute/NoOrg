@@ -12,4 +12,4 @@ Key components may include:
 - [[models_for_investment_prioritization]] (e.g., ROI, strategic value scorecards)
 - [[ethical_considerations_checklist]]
 
-This framework supports transparency, rigor, and alignment in executive decisions. 
+This framework supports transparency, rigor, and alignment in executive decisions.

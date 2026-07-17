@@ -99,4 +99,4 @@ sequenceDiagram
 ---
 Version: 1.0
 Last Updated: [[Date]]
-Maintained by: EAB Secretariat 
+Maintained by: EAB Secretariat

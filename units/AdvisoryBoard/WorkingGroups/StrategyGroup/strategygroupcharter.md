@@ -269,4 +269,4 @@ The Strategy Working Group serves as the primary strategic advisory body within 
 - Owner: Advisory Board
 - Maintainer: Strategy Group Chair
 - Review Frequency: Annual
-- Security Classification: Confidential 
+- Security Classification: Confidential

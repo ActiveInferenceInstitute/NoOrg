@@ -34,10 +34,10 @@ Strategic intelligence assessments, market analysis reports, competitive landsca
 
 This unit documentation integrates with:
 
-- [Units System](../../src/core/units/) - Unit management code
-- [ResearchAgent](../../src/agents/ResearchAgent.ts) - Automated research and fact-checking
-- [AnalysisAgent](../../src/agents/AnalysisAgent.ts) - Data analysis and insight extraction
-- [DataAnalysisAgent](../../src/agents/DataAnalysisAgent.ts) - Advanced data processing
+- [Units System](../../docs/architecture.md) - Unit management code
+- [ResearchAgent](../../docs/architecture.md) - Automated research and fact-checking
+- [AnalysisAgent](../../docs/architecture.md) - Data analysis and insight extraction
+- [DataAnalysisAgent](../../docs/architecture.md) - Advanced data processing
 - [Research Unit](../Research/README.md) - Research coordination
 
 ## Related Documentation

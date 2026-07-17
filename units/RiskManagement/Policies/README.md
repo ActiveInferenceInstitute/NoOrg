@@ -28,4 +28,4 @@ These policies are reviewed and updated quarterly or as needed based on organiza
 
 ## Contact
 
-For questions about these policies, contact the Risk Management team at risk@organization.com or via Slack at #risk-management. 
+For questions about these policies, contact the Risk Management team at risk@organization.com or via Slack at #risk-management.

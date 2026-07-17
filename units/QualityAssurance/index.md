@@ -24,7 +24,7 @@ The Quality Assurance unit is responsible for ensuring that all products, servic
 ## Related Units
 
 - [[../Development/index|Development]]
-- [[../Testing/index|Testing]] 
+- [[../Testing/index|Testing]]
 - [[../Operations/index|Operations]]
 - [[../RiskManagement/index|Risk Management]]
 - [[../Compliance/index|Compliance]]

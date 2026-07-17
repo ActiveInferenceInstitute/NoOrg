@@ -66,7 +66,7 @@ graph TD
     B --> C[HR Initiates Offboarding Checklist/Workflow];
     C --> D{Acknowledge Resignation / Communicate Termination};
     D --> E[HR Notifies Payroll, IT, Facilities, Security];
-    
+
     subgraph Separation Period
         F[Manager Oversees Knowledge Transfer];
         G[HR Schedules Exit Interview (Optional)];
@@ -81,11 +81,11 @@ graph TD
         L[HR Conducts Exit Interview (Optional)];
         M[Workspace Clean-out];
     end
-    I --> J & K & L & M; 
+    I --> J & K & L & M;
     H --> J & K & L & M;
     G --> L;
     F --> J;
-    
+
     subgraph Post-Departure
         N[IT Disables All System Access & Email];
         O[Payroll Processes Final Paycheck];
@@ -121,4 +121,4 @@ graph TD
 
 ## 8. Review Cycle
 
-This process will be reviewed annually by HR, Legal, IT, and Payroll leadership to ensure compliance, efficiency, and alignment with best practices. 
+This process will be reviewed annually by HR, Legal, IT, and Payroll leadership to ensure compliance, efficiency, and alignment with best practices.

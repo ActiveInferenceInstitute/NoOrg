@@ -22,4 +22,4 @@ This directory documents the standard operating procedures and workflows managed
 - [[Formal_Grievance_Procedure]]: Handling formal employee complaints.
 - [[Workplace_Investigation]]: Conducting investigations into policy violations or complaints.
 
-These documents often include process maps (e.g., using Mermaid diagrams) to visualize the workflow. 
+These documents often include process maps (e.g., using Mermaid diagrams) to visualize the workflow.

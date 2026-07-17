@@ -36,4 +36,4 @@ This template provides a standard structure for organizational policies.
 **Policy Owner:** [[Role]]
 **Approved By:** [[Approving Body/Role]]
 **Effective Date:** YYYY-MM-DD
-**Next Review Date:** YYYY-MM-DD 
+**Next Review Date:** YYYY-MM-DD

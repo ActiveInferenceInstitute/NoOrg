@@ -49,6 +49,6 @@ The Language Learning subunit operates within the broader Education Unit framewo
 
 ---
 
-**Subunit Lead**: Language Learning Program Manager  
-**Reports to**: Director of Education  
-**Last Updated**: [Current Date] 
+**Subunit Lead**: Language Learning Program Manager
+**Reports to**: Director of Education
+**Last Updated**: [Current Date]

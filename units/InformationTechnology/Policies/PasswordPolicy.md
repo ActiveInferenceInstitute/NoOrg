@@ -72,4 +72,4 @@ All user passwords must meet the following minimum complexity requirements:
 
 ## 12. Policy Review
 
-*   This policy will be reviewed annually and updated as necessary to reflect current best practices and threats. 
+*   This policy will be reviewed annually and updated as necessary to reflect current best practices and threats.

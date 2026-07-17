@@ -47,7 +47,7 @@ flowchart LR
     G --> H[Document Lessons Learned]
     E --> H
     H --> A
-```text  
+```text
 
 ## 6. Training & Awareness
 
@@ -63,4 +63,4 @@ flowchart LR
 
 ## 8. Policy Review
 
-This policy will be reviewed annually or after any significant counterintelligence incident to incorporate lessons learned and update measures accordingly. 
+This policy will be reviewed annually or after any significant counterintelligence incident to incorporate lessons learned and update measures accordingly.

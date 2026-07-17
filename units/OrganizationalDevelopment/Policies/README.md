@@ -12,4 +12,4 @@ This directory contains policies governing Organizational Development activities
 - [[Succession_Planning_Policy]]
 - [[Employee_Engagement_Policy]]
 
-Please refer to the [[Policy_Template]] for the standard structure of these documents. 
+Please refer to the [[Policy_Template]] for the standard structure of these documents.

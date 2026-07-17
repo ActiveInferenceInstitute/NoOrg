@@ -44,5 +44,5 @@
 
 ## Related Documents
 
-- [IP Policy](../../../Policies/)
+- [IP Policy](../../Policies/README.md)
 - [Innovation Projects](../../../Innovation/)

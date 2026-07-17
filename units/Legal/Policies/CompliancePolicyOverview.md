@@ -35,4 +35,4 @@ Applies to all employees, contractors, agents, and business partners.
 
 ## Policy Details
 
-[This document serves as a high-level statement. Detailed requirements are found in specific policies and procedures. It emphasizes the importance of compliance and outlines the structure of the compliance program.] 
+[This document serves as a high-level statement. Detailed requirements are found in specific policies and procedures. It emphasizes the importance of compliance and outlines the structure of the compliance program.]

@@ -27,4 +27,4 @@ This directory contains minutes, agendas, and supporting materials for complianc
 ## Related Links
 - [[../Organization/CommitteeStructure|Committee Structure]]
 - [[../Processes/MeetingProcedures|Meeting Procedures]]
-- [[../Reports/MeetingMetrics|Meeting Effectiveness Metrics]] 
+- [[../Reports/MeetingMetrics|Meeting Effectiveness Metrics]]

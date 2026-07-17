@@ -48,4 +48,4 @@ Reports are distributed according to the audience defined in the report schedule
 
 ## Contact
 
-For questions about risk reports or to request custom risk analyses, contact the Risk Analysis team or via Slack at #risk-reporting. 
+For questions about risk reports or to request custom risk analyses, contact the Risk Analysis team or via Slack at #risk-reporting.

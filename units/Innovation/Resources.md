@@ -42,4 +42,4 @@ This document lists the key resources available to and utilized by the Innovatio
 ## Access & Support
 
 *   **IT Support Contact:** [Details for IT support related to innovation tools]
-*   **Resource Request Process:** [Link to or description of the process for requesting new tools or resources] 
+*   **Resource Request Process:** [Link to or description of the process for requesting new tools or resources]

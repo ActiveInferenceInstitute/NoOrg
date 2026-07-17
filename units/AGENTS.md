@@ -15,4 +15,4 @@ Units are organized by:
 ## Related Documentation
 
 - [Units README](./README.md)
-- [Units System Documentation](../src/core/units/README.md)
+- [Units System Documentation](../docs/architecture.md)

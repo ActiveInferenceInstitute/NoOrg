@@ -61,7 +61,7 @@ The Risk Committee assists the Board of Directors in fulfilling its oversight re
 ### Meeting Structure
 - Frequency: Quarterly, minimum
 - Format: In-person/hybrid
-- Required attendance: 
+- Required attendance:
   - Committee members
   - CRO or equivalent (by invitation)
   - Other executives (as needed)
@@ -200,4 +200,4 @@ The Risk Committee assists the Board of Directors in fulfilling its oversight re
 - Review Frequency: Annual
 - Owner: Board of Directors
 - Maintainer: Risk Committee Chair
-- Last Updated: 2023-12-15 
+- Last Updated: 2023-12-15

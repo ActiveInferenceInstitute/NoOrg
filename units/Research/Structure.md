@@ -56,4 +56,4 @@ Head of Research
 
 - [Research Charter](./Charter.md)
 - [Research KPIs](./Policies/kpis_metrics.md)
-- [HR Roles & Responsibilities](../HumanResources/Policies/roles_responsibilities.md)
+- [HR Roles & Responsibilities](README.md)

@@ -92,4 +92,4 @@ Key metrics for this process include:
 This process will be reviewed annually by the Process Owner and key stakeholders and updated as necessary.
 
 ---
-*This document details the workflow for handling submitted ideas efficiently and transparently.* 
+*This document details the workflow for handling submitted ideas efficiently and transparently.*

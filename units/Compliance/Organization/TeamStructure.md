@@ -116,7 +116,7 @@ Chief Compliance Officer
 - Business acumen
 
 ---
-**Approved By:** Chief Executive Officer  
-**Last Updated:** 2024-02-01  
-**Review Frequency:** Annual  
-**Next Review:** 2025-02-01 
+**Approved By:** Chief Executive Officer
+**Last Updated:** 2024-02-01
+**Review Frequency:** Annual
+**Next Review:** 2025-02-01

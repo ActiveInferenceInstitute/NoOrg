@@ -62,4 +62,4 @@ All interactions and information shared with Outside Counsel are subject to atto
 Adherence to this process is mandatory. Non-compliance may result in disciplinary action and potential termination of Outside Counsel relationships. Regular audits may be conducted to ensure compliance.
 
 ## 8. Review and Updates
-This process document will be reviewed annually by the Legal Department and updated as necessary to reflect changes in organizational needs, industry best practices, or regulatory requirements. 
+This process document will be reviewed annually by the Legal Department and updated as necessary to reflect changes in organizational needs, industry best practices, or regulatory requirements.

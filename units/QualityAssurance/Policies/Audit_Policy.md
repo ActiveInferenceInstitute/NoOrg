@@ -89,4 +89,4 @@ Non-conformances identified during audits must be documented, tracked, and addre
 
 ## 10. Review and Revision
 
-This policy will be reviewed annually by the QA Unit and updated as needed to ensure its continued effectiveness and alignment with organizational goals and industry best practices. 
+This policy will be reviewed annually by the QA Unit and updated as needed to ensure its continued effectiveness and alignment with organizational goals and industry best practices.

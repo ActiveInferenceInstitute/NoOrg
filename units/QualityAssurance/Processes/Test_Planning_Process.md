@@ -88,4 +88,4 @@ graph TD
 
 *   Approved Test Plan Document
 *   Risk Assessment Summary (as part of Test Plan)
-*   Resource Plan & Schedule (as part of Test Plan) 
+*   Resource Plan & Schedule (as part of Test Plan)

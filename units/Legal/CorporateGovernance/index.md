@@ -47,4 +47,4 @@ This section provides comprehensive documentation for corporate governance activ
 ## Related Documentation
 
 - [Governance Policies](../../Governance/Policies/)
-- [Processes](./Processes/)
+- [Processes](../Processes/README.md)

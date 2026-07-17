@@ -66,4 +66,4 @@ Meeting notes are maintained as the official record of support discussions and d
 
 ## Contact
 
-For questions about meeting notes or to request additions, contact the Customer Support Operations Manager or via Slack at #customer-support. 
+For questions about meeting notes or to request additions, contact the Customer Support Operations Manager or via Slack at #customer-support.

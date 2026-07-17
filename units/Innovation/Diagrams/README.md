@@ -28,10 +28,10 @@ Innovation/
 
 | Document | Purpose |
 |----------|---------|
-| [Charter](./Charter.md) | Unit mission, scope, and governance |
-| [Policies](./Policies/) | Guidelines and standards |
-| [Processes](./Processes/) | Operational procedures |
-| [Reports](./Reports/) | Performance tracking |
+| [Charter](../Charter.md) | Unit mission, scope, and governance |
+| [Policies](../Policies/README.md) | Guidelines and standards |
+| [Processes](../Processes/README.md) | Operational procedures |
+| [Reports](../Reports/README.md) | Performance tracking |
 
 ## Team Contacts
 
@@ -43,13 +43,13 @@ Innovation/
 
 ## Related Units
 
-- [Governance](../Governance/) - Policy alignment
-- [Executive](../Executive/) - Strategic alignment  
-- [HumanResources](../HumanResources/) - Staffing and training
+- [Governance](../Policies/governance.md) - Policy alignment
+- [Executive](../../Executive/README.md) - Strategic alignment
+- [HumanResources](../../HumanResources/README.md) - Staffing and training
 
 ## Getting Started
 
-1. Review the [Charter](./Charter.md) to understand the unit's purpose
-2. Familiarize yourself with key [Policies](./Policies/)
-3. Understand the operational [Processes](./Processes/)
+1. Review the [Charter](../Charter.md) to understand the unit's purpose
+2. Familiarize yourself with key [Policies](../Policies/README.md)
+3. Understand the operational [Processes](../Processes/README.md)
 4. Connect with team members listed above

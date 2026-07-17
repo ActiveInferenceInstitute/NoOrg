@@ -54,4 +54,4 @@ Provisions for director and officer protection.
 ## Related Documents
 
 - [Articles of Incorporation](./Articles_of_Incorporation.md)
-- [Board Charter](../../BoardOfDirectors/)
+- [Board Charter](../../../BoardOfDirectors/README.md)

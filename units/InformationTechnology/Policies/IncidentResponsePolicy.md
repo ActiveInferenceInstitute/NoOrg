@@ -72,4 +72,4 @@ Refer to the [Incident Response Procedure document](AGENTS.md) for the detailed 
 
 ## 10. Policy Review
 
-*   This policy will be reviewed annually and updated as necessary, incorporating lessons learned from actual incidents and tests. 
+*   This policy will be reviewed annually and updated as necessary, incorporating lessons learned from actual incidents and tests.

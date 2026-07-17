@@ -52,4 +52,4 @@ This directory contains all reports, analyses, and formal documentation of the E
 ## Related Resources
 - [[../KPIs/README|Education KPIs]]
 - [[../Processes/README|Education Processes]]
-- [[../StrategicPlan|Strategic Plan]] 
+- [[../StrategicPlan|Strategic Plan]]

@@ -89,12 +89,12 @@ This policy will be reviewed annually by the KM Unit and Information Security De
 - [Knowledge Creation Policy](KnowledgeCreationPolicy.md)
 - [Knowledge Sharing Policy](KnowledgeSharingPolicy.md)
 - [Knowledge Retention Policy](KnowledgeRetentionPolicy.md)
-- [Information Security Policy] [Placeholder Link - Corporate Level]
-- [Data Governance Policy] [Placeholder Link - Corporate Level]
-- [Acceptable Use Policy] [Placeholder Link - Corporate Level]
-- [Privacy Policy] [Placeholder Link - Corporate Level]
+- [Information Security Policy] [Reference link pending - Corporate Level]
+- [Data Governance Policy] [Reference link pending - Corporate Level]
+- [Acceptable Use Policy] [Reference link pending - Corporate Level]
+- [Privacy Policy] [Reference link pending - Corporate Level]
 
 ---
 **Policy Owner:** Information Security Department (in consultation with KM Unit, Legal, Compliance)
 **Date Effective:** [Date]
-**Next Review Date:** [Date + 1 Year] 
+**Next Review Date:** [Date + 1 Year]

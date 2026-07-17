@@ -85,4 +85,4 @@ Non-compliance with this policy may result in delayed releases, required remedia
 
 ## 8. Review and Revision
 
-This policy will be reviewed annually by the QA Unit and relevant stakeholders and updated as necessary to reflect evolving technologies, methodologies, and organizational needs. 
+This policy will be reviewed annually by the QA Unit and relevant stakeholders and updated as necessary to reflect evolving technologies, methodologies, and organizational needs.

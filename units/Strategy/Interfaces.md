@@ -32,4 +32,4 @@ This document outlines the key interaction points between the Strategy unit and 
 - **Competitors**: Monitoring activities and performance (ethically).
 - **Technology Partners**: Exploring strategic alliances, understanding technology ecosystems.
 - **Academic Institutions**: Collaborating on research, accessing emerging ideas.
-- **Government Agencies**: Understanding policy direction, regulatory changes, and potential impacts. 
+- **Government Agencies**: Understanding policy direction, regulatory changes, and potential impacts.

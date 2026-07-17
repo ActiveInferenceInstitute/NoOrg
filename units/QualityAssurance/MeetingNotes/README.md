@@ -44,4 +44,4 @@ Meeting notes should follow this naming convention:
 - [[../Policies/|QA Policies]]
 - [[../Reports/|QA Reports]]
 - [[../../Development/MeetingNotes/|Development Meeting Notes]]
-- [[../../Operations/MeetingNotes/|Operations Meeting Notes]] 
+- [[../../Operations/MeetingNotes/|Operations Meeting Notes]]

@@ -33,4 +33,4 @@ Notes can be organized into subdirectories if needed, e.g.:
 
 *   `/WeeklySyncs/`
 *   `/ProjectSpecific/`
-*   `/CommitteeMeetings/` 
+*   `/CommitteeMeetings/`

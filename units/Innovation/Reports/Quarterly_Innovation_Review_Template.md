@@ -95,4 +95,4 @@
 - Links to key project reports
 
 ---
-*This report summarizes the Innovation Unit's performance and outlook for the specified quarter.* 
+*This report summarizes the Innovation Unit's performance and outlook for the specified quarter.*

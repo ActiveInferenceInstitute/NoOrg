@@ -52,4 +52,4 @@
 **Date:** [Date]
 **Time:** [Time]
 **Location:** [Location]
-**Preliminary Agenda:** [Topics] 
+**Preliminary Agenda:** [Topics]

@@ -52,4 +52,4 @@ Individual employee compensation details are considered confidential information
 
 ## 9. Review
 
-This policy and associated compensation structures will be reviewed periodically (typically annually) by HR and Executive Leadership/Compensation Committee to ensure they remain competitive, equitable, compliant, and aligned with organizational goals. 
+This policy and associated compensation structures will be reviewed periodically (typically annually) by HR and Executive Leadership/Compensation Committee to ensure they remain competitive, equitable, compliant, and aligned with organizational goals.

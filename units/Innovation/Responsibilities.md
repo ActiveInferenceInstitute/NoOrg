@@ -36,7 +36,7 @@ This document outlines the primary responsibilities of the Innovation Unit.
     *   Facilitating cross-functional collaboration (See [[Interfaces.md]]).
 
 7.  **Transition & Handover:**
-    *   Developing plans for transitioning successful innovations to relevant business units (e.g., [[Development]], [[Product Management]], [[Marketing]]). 
+    *   Developing plans for transitioning successful innovations to relevant business units (e.g., [[Development]], [[Product Management]], [[Marketing]]).
     *   Supporting the initial stages of implementation or scaling.
 
 8.  **Risk Management:**
@@ -45,4 +45,4 @@ This document outlines the primary responsibilities of the Innovation Unit.
 
 ## Out of Scope
 
-*   [Clearly define activities that are NOT the responsibility of the Innovation Unit, e.g., full-scale product development, ongoing operational management of launched products.] 
+*   [Clearly define activities that are NOT the responsibility of the Innovation Unit, e.g., full-scale product development, ongoing operational management of launched products.]

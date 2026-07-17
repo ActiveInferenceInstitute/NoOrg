@@ -37,4 +37,4 @@ Consider using a standard meeting notes template (link to [[Template:Meeting_Not
 - Key Discussion Points
 - Decisions Made
 - Action Items (Owner, Due Date)
-- Next Meeting (if applicable) 
+- Next Meeting (if applicable)

@@ -1,4 +1,12 @@
-node_modules
+node_modules/
+dist/
+coverage/
+data/*.json
+logs/
+docs/manuscript/output/
+docs/manuscript/.cache/
 .env
-__pycache__/
-*.pyc
+.env.*
+!.env.example
+.DS_Store
+*.tsbuildinfo

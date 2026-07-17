@@ -161,4 +161,4 @@ Organizations establish shared domains of governance:
 - Platform Revolution by Geoffrey G. Parker, Marshall W. Van Alstyne, and Sangeet Paul Choudary
 - The Evolution of Cooperation by Robert Axelrod
 - The Keystone Advantage by Marco Iansiti and Roy Levien
-- Orchestrating Networks in Digital Transformation by Jane E. Fountain 
+- Orchestrating Networks in Digital Transformation by Jane E. Fountain

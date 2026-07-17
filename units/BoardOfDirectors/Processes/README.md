@@ -26,4 +26,4 @@ This directory contains the documented processes for Board of Directors operatio
 - **Review Frequency**: Annual
 - **Process Owner**: Corporate Secretary
 - **Last Reviewed**: [Date]
-- **Next Review**: [Date] 
+- **Next Review**: [Date]

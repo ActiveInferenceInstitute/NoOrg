@@ -37,6 +37,6 @@ All policies must include:
 
 ## Related Documentation
 
-- [Processes](../Processes/)
-- [Governance Policies](../../Governance/Policies/)
-- [Policy on Policies](../../Governance/Policies/Policy_on_Policies.md)
+- [Processes](../../../Processes/README.md)
+- [Governance Policies](README.md)
+- [Policy on Policies](../../../../Governance/Policies/Policy_on_Policies.md)

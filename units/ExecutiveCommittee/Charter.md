@@ -237,4 +237,4 @@ The Executive Committee serves as the primary operational decision-making body o
 - Review Frequency: Annual
 - Owner: Board of Directors
 - Classification: Confidential
-- Last Updated: <% tp.date.now("YYYY-MM-DD") %> 
+- Last Updated: <% tp.date.now("YYYY-MM-DD") %>

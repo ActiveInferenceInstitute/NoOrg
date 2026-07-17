@@ -74,4 +74,4 @@ graph TD
 
 ## 7. Review Cycle
 
-This process document will be reviewed annually. 
+This process document will be reviewed annually.

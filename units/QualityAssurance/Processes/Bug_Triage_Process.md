@@ -76,4 +76,4 @@ The Bug Triage Process defines how defects are reviewed, prioritized, and assign
 
 - [[../../Development/Processes/Code_Review_Process|Development Code Review Process]]
 - [[../../Operations/Processes/Incident_Management_Process|Operations Incident Management Process]]
-- [[../MeetingNotes/README|QA Meeting Notes]] 
+- [[../MeetingNotes/README|QA Meeting Notes]]

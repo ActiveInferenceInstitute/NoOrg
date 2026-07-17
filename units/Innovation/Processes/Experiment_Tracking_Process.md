@@ -88,4 +88,4 @@ Approved experiments are logged, monitored through regular check-ins, and their 
 This process will be reviewed annually by the Process Owner and key stakeholders and updated as necessary based on effectiveness and tool changes.
 
 ---
-*This process ensures systematic monitoring and learning from innovation experiments.* 
+*This process ensures systematic monitoring and learning from innovation experiments.*

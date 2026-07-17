@@ -15,4 +15,4 @@ Examples of Outputs:
 - [[formal_recommendations_to_board]] (e.g., on M&A, major strategy shifts)
 - [[crisis_management_update_reports]] (Internal/Board)
 
-Refer to relevant templates defined in `units/ExecutiveCommittee/Policies/executivecommitteeunit.md`. 
+Refer to relevant templates defined in `units/ExecutiveCommittee/Policies/executivecommitteeunit.md`.

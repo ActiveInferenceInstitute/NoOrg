@@ -169,5 +169,5 @@ By completing this curriculum, learners will be able to:
 
 ---
 
-**Last Updated**: [Current Date]  
-**Next Review**: [Current Date + 3 Months] 
+**Last Updated**: [Current Date]
+**Next Review**: [Current Date + 3 Months]

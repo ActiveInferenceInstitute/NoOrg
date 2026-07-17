@@ -66,4 +66,4 @@ These resources are designed to be:
 - Aligned with organizational AI strategy
 
 ## Resource Roadmap
-See [[Roadmap|AI Resource Development Roadmap]] for planned resource development and updates. 
+See [[Roadmap|AI Resource Development Roadmap]] for planned resource development and updates.

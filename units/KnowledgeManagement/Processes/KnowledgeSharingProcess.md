@@ -360,4 +360,4 @@ flowchart TD
 - [[../Charter|Knowledge Management Unit Charter]]
 - [[../Policies/KnowledgeSharingPolicy|Knowledge Sharing Policy]]
 - [[../../templates/documentation/KnowledgeAssetTemplate|Knowledge Asset Template]]
-- [[../../templates/documentation/KnowledgeSharingPlanTemplate|Knowledge Sharing Plan Template]] 
+- [[../../templates/documentation/KnowledgeSharingPlanTemplate|Knowledge Sharing Plan Template]]

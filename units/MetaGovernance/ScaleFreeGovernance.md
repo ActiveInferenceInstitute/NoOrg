@@ -152,4 +152,4 @@ Specific mechanisms enable governance to scale effectively:
 - The Structure and Dynamics of Networks by Mark Newman, Albert-László Barabási, and Duncan J. Watts
 - Complexity: A Guided Tour by Melanie Mitchell
 - The Starfish and the Spider: The Unstoppable Power of Leaderless Organizations by Ori Brafman and Rod Beckstrom
-- Scale-Free Networks: Complex Webs in Nature and Technology by Guido Caldarelli 
+- Scale-Free Networks: Complex Webs in Nature and Technology by Guido Caldarelli

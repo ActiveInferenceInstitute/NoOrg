@@ -48,4 +48,4 @@
 ## Budget & Resources
 
 *   [Summary of budget allocation and resource usage]
-*   Reference: [[../Resources.md]] 
+*   Reference: [[../Resources.md]]

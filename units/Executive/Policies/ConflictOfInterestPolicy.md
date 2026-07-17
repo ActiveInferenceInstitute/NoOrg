@@ -50,4 +50,4 @@ Failure to disclose a conflict of interest or comply with the management plan de
 
 ## 8. Review
 
-This policy will be reviewed periodically (e.g., annually) by the General Counsel and the Board's Governance or Audit Committee. 
+This policy will be reviewed periodically (e.g., annually) by the General Counsel and the Board's Governance or Audit Committee.
