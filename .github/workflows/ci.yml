@@ -52,7 +52,7 @@ jobs:
           pandoc --version
           pandoc-crossref --version
       - run: sudo apt-get update
-      - run: sudo apt-get install --yes texlive-xetex
+      - run: sudo apt-get install --yes poppler-utils texlive-xetex
       - run: npm run manuscript:check
       - uses: actions/upload-artifact@v4
         with:
