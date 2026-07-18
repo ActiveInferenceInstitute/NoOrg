@@ -12,6 +12,7 @@ import { MemoryLogger } from '../src/logging/logger';
 import { Metrics } from '../src/metrics/metrics';
 import { DeterministicProvider } from '../src/providers/provider';
 import { MemoryStateStore } from '../src/state/state-store';
+import { UnitCorpus } from '../src/content/unit-corpus';
 
 const root = resolve(process.cwd());
 const manuscriptRoot = resolve(root, 'docs/manuscript');
@@ -53,28 +54,6 @@ interface RuntimeEvidence {
 
 function ensureDirectory(path: string): void {
   mkdirSync(path, { recursive: true });
-}
-
-function markdownFiles(directory: string): string[] {
-  return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
-    const path = join(directory, entry.name);
-    if (entry.isDirectory()) return markdownFiles(path);
-    return entry.isFile() && entry.name.endsWith('.md') ? [path] : [];
-  });
-}
-
-function countRelativeLinks(directory: string): number {
-  let count = 0;
-  for (const file of markdownFiles(directory)) {
-    const text = readFileSync(file, 'utf8');
-    const linkPattern = /!?\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)/g;
-    for (const match of text.matchAll(linkPattern)) {
-      const target = match[1]?.replace(/^<|>$/g, '');
-      if (!target || /^(https?:|mailto:)/i.test(target)) continue;
-      count += 1;
-    }
-  }
-  return count;
 }
 
 function readJson(path: string): unknown {
@@ -178,13 +157,14 @@ async function collectEvidence(): Promise<void> {
     });
     const tests = testCountFromJest(jestPath);
     const health = coordinator.getHealth();
+    const unitManifest = await new UnitCorpus().manifest();
     const evidence: RuntimeEvidence = {
       generatedAt: new Date().toISOString(),
       releaseDate: new Date().toISOString().slice(0, 10),
       testCount: tests.total,
       passedTestCount: tests.passed,
-      unitFiles: markdownFiles(resolve(root, 'units')).length,
-      linkCount: countRelativeLinks(resolve(root, 'units')),
+      unitFiles: unitManifest.fileCount,
+      linkCount: unitManifest.linkCount,
       completedStatus: completed.status,
       totalTokens: usageProbe.usage.totalTokens,
       costUsd: usageProbe.usage.costUsd,
@@ -398,6 +378,22 @@ function writeChecksums(): void {
   writeFileSync(resolve(outputRoot, 'checksums.sha256'), `${lines.join('\n')}\n`, 'utf8');
 }
 
+async function runCheck(): Promise<void> {
+  rmSync(outputRoot, { recursive: true, force: true });
+  try {
+    await collectEvidence();
+    renderFigures();
+    hydrate();
+    validateManuscript();
+    render();
+    inspectRendered();
+    writeChecksums();
+  } catch (error) {
+    rmSync(outputRoot, { recursive: true, force: true });
+    throw error;
+  }
+}
+
 function inspectRendered(): void {
   const html = readFileSync(resolve(outputRoot, 'noorg-manuscript.html'), 'utf8');
   if (/\{\{|\[\?/.test(html))
@@ -429,13 +425,7 @@ async function main(): Promise<void> {
       render();
       break;
     case 'check':
-      await collectEvidence();
-      renderFigures();
-      hydrate();
-      validateManuscript();
-      render();
-      inspectRendered();
-      writeChecksums();
+      await runCheck();
       break;
     default:
       throw new Error('Usage: manuscript.ts evidence|figures|hydrate|validate|render|check');

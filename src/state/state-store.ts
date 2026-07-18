@@ -1,4 +1,4 @@
-import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
+import { mkdir, open, readFile, rename, rm, stat, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { z } from 'zod';
 import { randomUUID } from 'node:crypto';
@@ -46,6 +46,14 @@ function isLiveProcess(pid: number): boolean {
     return typeof error === 'object' && error !== null && 'code' in error && error.code === 'EPERM';
   }
 }
+
+interface LockOwner {
+  readonly pid: number;
+  readonly createdAt: number;
+  readonly token: string;
+}
+
+const staleLockMs = 30_000;
 
 export class FileStateStore implements StateStore {
   private readonly values = new Map<string, JsonValue>();
@@ -145,8 +153,19 @@ export class FileStateStore implements StateStore {
       null,
       2
     );
-    await writeFile(temporaryPath, body, { encoding: 'utf8', mode: 0o600 });
-    await rename(temporaryPath, this.filePath);
+    try {
+      await writeFile(temporaryPath, body, { encoding: 'utf8', mode: 0o600 });
+      const handle = await open(temporaryPath, 'r+');
+      try {
+        await handle.sync();
+      } finally {
+        await handle.close();
+      }
+      await rename(temporaryPath, this.filePath);
+    } catch (error) {
+      await rm(temporaryPath, { force: true }).catch(() => undefined);
+      throw error;
+    }
   }
 
   public async close(): Promise<void> {
@@ -184,13 +203,38 @@ export class FileStateStore implements StateStore {
         'code' in error &&
         error.code === 'EEXIST'
       ) {
-        let ownerPid: number | undefined;
+        let owner: LockOwner | undefined;
         try {
-          ownerPid = Number.parseInt(await readFile(`${lockPath}/owner`, 'utf8'), 10);
+          const raw = await readFile(`${lockPath}/owner`, 'utf8');
+          try {
+            const parsed: unknown = JSON.parse(raw);
+            if (
+              typeof parsed === 'object' &&
+              parsed !== null &&
+              typeof (parsed as { pid?: unknown }).pid === 'number' &&
+              typeof (parsed as { createdAt?: unknown }).createdAt === 'number' &&
+              typeof (parsed as { token?: unknown }).token === 'string'
+            ) {
+              owner = parsed as LockOwner;
+            }
+          } catch {
+            const pid = Number.parseInt(raw, 10);
+            if (Number.isInteger(pid)) owner = { pid, createdAt: 0, token: 'prior' };
+          }
         } catch {
-          ownerPid = undefined;
+          owner = undefined;
         }
-        if (ownerPid === undefined || isLiveProcess(ownerPid)) {
+        let lockAge = Number.POSITIVE_INFINITY;
+        try {
+          lockAge = Date.now() - (await stat(lockPath)).mtimeMs;
+        } catch {
+          lockAge = Number.POSITIVE_INFINITY;
+        }
+        if (
+          (owner !== undefined && isLiveProcess(owner.pid)) ||
+          (owner === undefined && lockAge < staleLockMs) ||
+          (owner !== undefined && owner.createdAt > 0 && Date.now() - owner.createdAt < staleLockMs)
+        ) {
           throw new NoOrgError('STATE_LOCKED', `State file ${this.filePath} is already in use`);
         }
         await rm(lockPath, { recursive: true, force: true });
@@ -199,7 +243,16 @@ export class FileStateStore implements StateStore {
         throw error;
       }
     }
-    await writeFile(`${lockPath}/owner`, String(process.pid), { encoding: 'utf8', mode: 0o600 });
+    const owner: LockOwner = { pid: process.pid, createdAt: Date.now(), token: randomUUID() };
+    try {
+      await writeFile(`${lockPath}/owner`, JSON.stringify(owner), {
+        encoding: 'utf8',
+        mode: 0o600,
+      });
+    } catch (error) {
+      await rm(lockPath, { recursive: true, force: true }).catch(() => undefined);
+      throw error;
+    }
     this.locked = true;
   }
 
@@ -219,7 +272,9 @@ export class MemoryStateStore implements StateStore {
     return !this.closed;
   }
 
-  public async load(): Promise<void> {}
+  public async load(): Promise<void> {
+    if (this.closed) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
+  }
 
   public get<T extends JsonValue>(key: string): T | undefined {
     const value = this.values.get(key);

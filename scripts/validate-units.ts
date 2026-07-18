@@ -1,8 +1,15 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, isAbsolute, relative, resolve } from 'node:path';
+import {
+  computeUnitManifest,
+  diffUnitManifests,
+  parseUnitManifest,
+  type UnitManifest,
+} from '../src/content/unit-manifest';
 
 const root = resolve(process.cwd());
 const unitsRoot = resolve(root, 'units');
+const manifestPath = resolve(unitsRoot, 'manifest.json');
 const required = ['README.md', 'AGENTS.md', 'unitdirectory.md'];
 
 function markdownFiles(directory: string): string[] {
@@ -15,6 +22,13 @@ function markdownFiles(directory: string): string[] {
 
 const files = markdownFiles(unitsRoot).map(file => relative(root, file));
 const violations: string[] = [];
+
+let manifest: UnitManifest | undefined;
+try {
+  manifest = parseUnitManifest(JSON.parse(readFileSync(manifestPath, 'utf8')) as unknown);
+} catch {
+  violations.push('units/manifest.json: reviewed integrity manifest is missing or invalid');
+}
 
 for (const requiredPath of required) {
   if (!existsSync(resolve(unitsRoot, requiredPath)))
@@ -97,9 +111,23 @@ const linkCount = files.reduce((total, file) => {
   const content = readFileSync(resolve(root, file), 'utf8');
   return total + [...content.matchAll(/!?\[[^\]]*\]\([^)]*\)/g)].length;
 }, 0);
-if (unitFileCount !== 1816) violations.push(`units: unexpected corpus size ${unitFileCount}`);
-if (linkCount !== 4593)
-  violations.push(`units: link graph changed: expected 4593 links, found ${linkCount}`);
+const computedManifest = computeUnitManifest(unitsRoot);
+if (manifest !== undefined && unitFileCount !== manifest.fileCount)
+  violations.push(
+    `units: unexpected corpus size ${unitFileCount}; manifest records ${manifest.fileCount}`
+  );
+if (manifest !== undefined && linkCount !== manifest.linkCount)
+  violations.push(
+    `units: link graph changed: manifest records ${manifest.linkCount}, found ${linkCount}`
+  );
+if (manifest !== undefined && computedManifest.contentSha256 !== manifest.contentSha256)
+  violations.push('units: content digest does not match the reviewed integrity manifest');
+if (manifest !== undefined) {
+  const diff = diffUnitManifests(manifest, computedManifest);
+  for (const file of diff.added) violations.push(`units: unreviewed file added ${file}`);
+  for (const file of diff.removed) violations.push(`units: reviewed file removed ${file}`);
+  for (const file of diff.changed) violations.push(`units: unreviewed file changed ${file}`);
+}
 
 if (violations.length > 0) {
   console.error(violations.join('\n'));

@@ -1,8 +1,8 @@
-title: "NoOrg: A Typed, Durable Runtime for Explicit Agent Execution"
+title: 'NoOrg: A Typed, Durable Runtime for Explicit Agent Execution'
 author:
-  - "Daniel Ari Friedman"
-  - "Active Inference Institute"
-date: "{{RELEASE_DATE}}"
+  - 'Daniel Ari Friedman'
+  - 'Active Inference Institute'
+date: '{{RELEASE_DATE}}'
 lang: en-US
 toc: true
 numbersections: true
@@ -10,6 +10,6 @@ link-citations: true
 colorlinks: true
 bibliography: references.bib
 reference-section-title: References
-figureTitle: "Figure"
-tableTitle: "Table"
-eqTitle: "Equation"
+figureTitle: 'Figure'
+tableTitle: 'Table'
+eqTitle: 'Equation'

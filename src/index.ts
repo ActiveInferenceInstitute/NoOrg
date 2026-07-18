@@ -5,15 +5,18 @@ import { Coordinator } from './coordination/coordinator';
 import { EventBus } from './events/event-bus';
 import { consoleLogger } from './logging/logger';
 import { Metrics } from './metrics/metrics';
+import { GovernedProvider } from './providers/governed-provider';
 import { DeterministicProvider, OpenAIProvider, type LLMProvider } from './providers/provider';
 import { AgentRegistry } from './agents/registry';
+import { loadConfiguredAgents } from './agents/loader';
 import { createBuiltInAgents } from './agents/builtins';
 import { FileStateStore } from './state/state-store';
 
 export async function createApplication() {
   const config = loadConfig();
+  const clock = new SystemClock();
   const state = new FileStateStore(config.statePath);
-  const provider: LLMProvider =
+  const baseProvider: LLMProvider =
     config.provider === 'openai'
       ? new OpenAIProvider({
           apiKey: config.openai.apiKey as string,
@@ -27,8 +30,32 @@ export async function createApplication() {
           logger: consoleLogger,
         })
       : new DeterministicProvider();
+  const provider: LLMProvider = new GovernedProvider(baseProvider, {
+    ...config.providerGovernance,
+    clock,
+    estimateRequestCost: request => {
+      const promptBytes = Buffer.byteLength(
+        JSON.stringify({
+          operation: request.operation,
+          input: request.input,
+          system: request.system,
+        }),
+        'utf8'
+      );
+      const promptTokens = Math.ceil(promptBytes / 4);
+      const completionTokens = request.maxTokens ?? 0;
+      return (
+        (promptTokens / 1_000_000) * config.openai.promptCostPerMillionUsd +
+        (completionTokens / 1_000_000) * config.openai.completionCostPerMillionUsd
+      );
+    },
+  });
   const registry = new AgentRegistry();
   for (const agent of createBuiltInAgents()) registry.register(agent);
+  for (const agent of await loadConfiguredAgents(config.agentModules, {
+    trustedDigests: config.agentModuleDigests,
+  }))
+    registry.register(agent);
   const coordinator = new Coordinator({
     state,
     registry,
@@ -36,27 +63,38 @@ export async function createApplication() {
     events: new EventBus(),
     metrics: new Metrics(),
     logger: consoleLogger,
-    clock: new SystemClock(),
+    clock,
     pollIntervalMs: config.pollIntervalMs,
     maxConcurrentTasks: config.maxConcurrentTasks,
     defaultTaskTimeoutMs: config.defaultTaskTimeoutMs,
+    shutdownTimeoutMs: config.shutdownTimeoutMs,
+    maxTaskInputBytes: config.maxTaskInputBytes,
+    maxResultBytes: config.maxResultBytes,
+    maxWorkflowDepth: config.maxWorkflowDepth,
+    maxWorkflowChildren: config.maxWorkflowChildren,
     agentConfiguration: {
       provider: config.provider,
       environment: config.environment,
     },
   });
-  const server = createHttpServer({ coordinator, metricsEnabled: config.metricsEnabled });
+  const server = createHttpServer({
+    coordinator,
+    metricsEnabled: config.metricsEnabled,
+    ...(config.server.authToken === undefined ? {} : { authToken: config.server.authToken }),
+    maxBodyBytes: config.server.maxBodyBytes,
+  });
   return { config, coordinator, server };
 }
 
 async function main(): Promise<void> {
   const application = await createApplication();
   await application.coordinator.start();
-  application.server.listen(application.config.server.port, () => {
+  application.server.listen(application.config.server.port, application.config.server.host, () => {
     console.info(
       JSON.stringify({
         message: 'NoOrg listening',
         port: application.config.server.port,
+        host: application.config.server.host,
         provider: application.config.provider,
       })
     );
@@ -90,6 +128,7 @@ if (require.main === module) {
 
 export * from './agents';
 export * from './config/config';
+export * from './content';
 export * from './coordination';
 export * from './domain';
 export * from './events/event-bus';

@@ -56,4 +56,20 @@ describe('EventBus', () => {
     await bus.close();
     expect(settled).toBe(true);
   });
+
+  it('rejects invalid limits and operations after close', async () => {
+    expect(() => new EventBus({ historyLimit: 0 })).toThrow('limits must be positive');
+    expect(() => new EventBus({ handlerTimeoutMs: 0 })).toThrow('limits must be positive');
+    const bus = new EventBus();
+    await bus.close();
+    expect(() => bus.subscribe('closed', () => undefined)).toThrow('closed');
+    await expect(
+      bus.publish({
+        type: 'closed',
+        id: 'closed',
+        timestamp: new Date().toISOString(),
+        payload: {},
+      })
+    ).rejects.toThrow('closed');
+  });
 });

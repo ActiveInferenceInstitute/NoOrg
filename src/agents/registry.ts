@@ -1,6 +1,9 @@
 import { NoOrgError } from '../domain/errors';
 import { agentDescriptorSchema, type AgentDescriptor, type AgentTask } from '../domain/types';
 import type { Agent, AgentContext } from './abstract-agent';
+import { AGENT_CONTRACT_VERSION } from './loader';
+
+export type AgentAvailability = 'available' | 'at_capacity' | 'no_match';
 
 export class AgentRegistry {
   private readonly agents = new Map<string, Agent>();
@@ -9,7 +12,12 @@ export class AgentRegistry {
 
   public register(agent: Agent): void {
     const descriptor = agent.descriptor;
-    agentDescriptorSchema.parse(descriptor);
+    const parsedDescriptor = agentDescriptorSchema.parse(descriptor);
+    if (parsedDescriptor.contractVersion !== AGENT_CONTRACT_VERSION)
+      throw new NoOrgError(
+        'AGENT_CONTRACT_UNSUPPORTED',
+        `Agent ${descriptor.id} uses unsupported contract version ${String(parsedDescriptor.contractVersion)}`
+      );
     if (
       !descriptor.id.trim() ||
       descriptor.capabilities.length === 0 ||
@@ -47,16 +55,7 @@ export class AgentRegistry {
   }
 
   public acquire(task: AgentTask): { agent: Agent; release: () => void } | undefined {
-    const candidates =
-      task.requiredCapabilities.length > 0
-        ? [...this.agents.values()].filter(agent =>
-            task.requiredCapabilities.every(capability =>
-              agent.descriptor.capabilities.includes(capability)
-            )
-          )
-        : task.agentId
-          ? [this.agents.get(task.agentId)].filter((agent): agent is Agent => agent !== undefined)
-          : [...this.agents.values()];
+    const candidates = this.candidates(task);
     for (const agent of candidates) {
       if (task.agentId !== undefined && agent.descriptor.id !== task.agentId) continue;
       const active = this.active.get(agent.descriptor.id) ?? 0;
@@ -78,6 +77,16 @@ export class AgentRegistry {
     return undefined;
   }
 
+  public availability(task: AgentTask): AgentAvailability {
+    const candidates = this.candidates(task);
+    if (candidates.length === 0) return 'no_match';
+    return candidates.some(
+      agent => (this.active.get(agent.descriptor.id) ?? 0) < agent.descriptor.maxConcurrentTasks
+    )
+      ? 'available'
+      : 'at_capacity';
+  }
+
   public activeCount(): number {
     return [...this.active.values()].reduce((sum, value) => sum + value, 0);
   }
@@ -94,5 +103,19 @@ export class AgentRegistry {
     this.active.clear();
     const failure = results.find(result => result.status === 'rejected');
     if (failure?.status === 'rejected') throw failure.reason;
+  }
+
+  private candidates(task: AgentTask): Agent[] {
+    return (
+      task.requiredCapabilities.length > 0
+        ? [...this.agents.values()].filter(agent =>
+            task.requiredCapabilities.every(capability =>
+              agent.descriptor.capabilities.includes(capability)
+            )
+          )
+        : task.agentId
+          ? [this.agents.get(task.agentId)].filter((agent): agent is Agent => agent !== undefined)
+          : [...this.agents.values()]
+    ).filter(agent => task.agentId === undefined || agent.descriptor.id === task.agentId);
   }
 }

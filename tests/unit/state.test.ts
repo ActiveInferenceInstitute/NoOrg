@@ -1,4 +1,4 @@
-import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { MemoryStateStore } from '../../src/state/state-store';
@@ -48,6 +48,46 @@ describe('MemoryStateStore', () => {
     await second.load();
     expect(second.get<number>('count')).toBe(3);
     await second.close();
+    await rm(directory, { recursive: true, force: true });
+  });
+
+  it('rejects corrupt state instead of silently resetting it', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'noorg-corrupt-'));
+    const filePath = join(directory, 'state.json');
+    await writeFile(filePath, '{not-json');
+    const state = new FileStateStore(filePath);
+    await expect(state.load()).rejects.toThrow('Unable to load state');
+    await rm(directory, { recursive: true, force: true });
+  });
+
+  it('reclaims an old lock with a dead owner', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'noorg-stale-lock-'));
+    const filePath = join(directory, 'state.json');
+    const lockPath = `${filePath}.lock`;
+    await mkdir(lockPath);
+    await writeFile(
+      join(lockPath, 'owner'),
+      JSON.stringify({ pid: 99999999, createdAt: Date.now() - 60_000, token: 'stale' })
+    );
+    const state = new FileStateStore(filePath);
+    await state.load();
+    expect(state.isOpen()).toBe(true);
+    await state.close();
+    await rm(directory, { recursive: true, force: true });
+  });
+
+  it('rejects a structurally invalid current envelope and enforces closed memory state', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'noorg-invalid-envelope-'));
+    const filePath = join(directory, 'state.json');
+    await writeFile(filePath, JSON.stringify({ schemaVersion: 2, revision: -1, state: {} }));
+    const state = new FileStateStore(filePath);
+    await expect(state.load()).rejects.toThrow('invalid schema');
+    await state.close();
+
+    const memory = new MemoryStateStore();
+    await memory.close();
+    await expect(memory.load()).rejects.toThrow('closed');
+    await expect(memory.set('value', 1)).rejects.toThrow('closed');
     await rm(directory, { recursive: true, force: true });
   });
 });

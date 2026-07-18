@@ -6,7 +6,7 @@ The root module exports `Agent`, `AgentDescriptor`, `AgentContext`, `AgentTask`,
 
 ## Provider contract
 
-`LLMProvider.complete(request, schema, signal)` returns a response whose `data` has been parsed by the supplied schema and whose usage contains prompt tokens, completion tokens, total tokens, and cost. `DeterministicProvider` requires a caller-supplied derivation. `OpenAIProvider` requires an API key and uses structured response parsing. A closed provider rejects new calls.
+`LLMProvider.complete(request, schema, signal)` returns a response whose `data` has been parsed by the supplied schema and whose usage contains prompt tokens, completion tokens, total tokens, and cost. `DeterministicProvider` requires a caller-supplied derivation. `OpenAIProvider` requires an API key, uses an injectable transport with structured response parsing, and classifies aborts and retryable failures explicitly. A closed provider rejects new calls.
 
 ## State envelope
 
@@ -15,3 +15,5 @@ The file store serializes `{ schemaVersion: 2, revision, state }`. Values are JS
 ## Error contract
 
 Errors carry a stable code, safe message, retryability, and optional JSON details. Task errors are persisted when a transition records failure or interruption. Provider and task execution errors are logged without credentials, reflected in state, and propagated to the caller when no task transition can contain them.
+
+Task requests may carry an idempotency key, deadline, retry backoff, priority propagation, parent policy, and dependency IDs. The repository preserves those fields, bounds graph depth and parent breadth, rejects conflicting idempotency reuse, and the scheduler waits for dependencies or a required parent success before execution. Provider usage accumulates durably across retry and terminal transitions. Configured agents use contract version one; modules outside the local boundary require a trusted digest; and the optional unit adapter verifies per-file `units/manifest.json` digests before returning untrusted Markdown with provenance.

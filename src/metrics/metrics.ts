@@ -12,6 +12,7 @@ export class Metrics {
   }
 
   public observe(name: string, milliseconds: number): void {
+    if (!Number.isFinite(milliseconds) || milliseconds < 0) return;
     const values = this.durations.get(name) ?? [];
     values.push(milliseconds);
     if (values.length > 1000) values.shift();
@@ -20,13 +21,21 @@ export class Metrics {
 
   public renderPrometheus(): string {
     const lines: string[] = [];
-    for (const [name, value] of this.counters) lines.push(`${safeName(name)} ${value}`);
-    for (const [name, value] of this.gauges) lines.push(`${safeName(name)} ${value}`);
+    for (const [name, value] of this.counters) {
+      const metric = safeName(name);
+      lines.push(`# TYPE ${metric} counter`, `${metric} ${value}`);
+    }
+    for (const [name, value] of this.gauges) {
+      const metric = safeName(name);
+      lines.push(`# TYPE ${metric} gauge`, `${metric} ${value}`);
+    }
     for (const [name, values] of this.durations) {
       if (values.length === 0) continue;
       const total = values.reduce((sum, value) => sum + value, 0);
-      lines.push(`${safeName(name)}_count ${values.length}`);
-      lines.push(`${safeName(name)}_sum ${total}`);
+      const metric = safeName(name);
+      lines.push(`# TYPE ${metric} summary`);
+      lines.push(`${metric}_count ${values.length}`);
+      lines.push(`${metric}_sum ${total}`);
     }
     return `${lines.join('\n')}\n`;
   }

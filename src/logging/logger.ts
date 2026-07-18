@@ -1,3 +1,5 @@
+import { redactUnknown } from '../domain/redaction';
+
 export type LogFields = Readonly<Record<string, unknown>>;
 
 export interface Logger {
@@ -7,7 +9,12 @@ export interface Logger {
 }
 
 function write(level: string, message: string, fields?: LogFields): void {
-  const record = { timestamp: new Date().toISOString(), level, message, ...(fields ?? {}) };
+  const record = {
+    timestamp: new Date().toISOString(),
+    level,
+    message: redactUnknown(message),
+    ...(fields === undefined ? {} : (redactUnknown(fields) as Record<string, unknown>)),
+  };
   const line = JSON.stringify(record);
   if (level === 'error') console.error(line);
   else if (level === 'warn') console.warn(line);
@@ -24,14 +31,26 @@ export class MemoryLogger implements Logger {
   public readonly entries: Array<{ level: string; message: string; fields?: LogFields }> = [];
 
   public info(message: string, fields?: LogFields): void {
-    this.entries.push({ level: 'info', message, ...(fields === undefined ? {} : { fields }) });
+    this.entries.push({
+      level: 'info',
+      message: redactUnknown(message) as string,
+      ...(fields === undefined ? {} : { fields: redactUnknown(fields) as LogFields }),
+    });
   }
 
   public warn(message: string, fields?: LogFields): void {
-    this.entries.push({ level: 'warn', message, ...(fields === undefined ? {} : { fields }) });
+    this.entries.push({
+      level: 'warn',
+      message: redactUnknown(message) as string,
+      ...(fields === undefined ? {} : { fields: redactUnknown(fields) as LogFields }),
+    });
   }
 
   public error(message: string, fields?: LogFields): void {
-    this.entries.push({ level: 'error', message, ...(fields === undefined ? {} : { fields }) });
+    this.entries.push({
+      level: 'error',
+      message: redactUnknown(message) as string,
+      ...(fields === undefined ? {} : { fields: redactUnknown(fields) as LogFields }),
+    });
   }
 }

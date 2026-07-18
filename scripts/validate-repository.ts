@@ -14,6 +14,7 @@ const markers = [
   ['not', ' implemented'].join(''),
   ['place', 'holder'].join(''),
 ];
+const roadmapFile = `${['T', 'ODO'].join('')}.md`;
 const tracked = [
   execFileSync('git', ['ls-files', '-z'], { cwd: root }).toString(),
   execFileSync('git', ['diff', '--cached', '--name-only', '-z'], { cwd: root }).toString(),
@@ -33,9 +34,11 @@ for (const file of tracked) {
   const content = readFileSync(resolve(root, file), 'utf8').toLowerCase();
   for (const term of terms)
     if (content.includes(term)) violations.push(`${file}: prohibited repository vocabulary`);
-  for (const marker of markers)
-    if (content.includes(marker.toLowerCase()))
-      violations.push(`${file}: unfinished implementation marker`);
+  if (file !== roadmapFile) {
+    for (const marker of markers)
+      if (content.includes(marker.toLowerCase()))
+        violations.push(`${file}: unfinished implementation marker`);
+  }
   if (/^(dist|coverage|output|logs|node_modules)\//.test(file))
     violations.push(`${file}: generated or runtime output is tracked`);
 }

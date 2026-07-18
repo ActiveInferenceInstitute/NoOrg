@@ -9,18 +9,22 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22, 24]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci
       - run: npm run validate
-      - run: npm run build
+      - run: npm run test:coverage
+        if: matrix.node-version == 20
       - uses: actions/upload-artifact@v4
         with:
-          name: noorg-dist
+          name: noorg-dist-node-${{ matrix.node-version }}
           path: dist/
 
   manuscript-source:
@@ -33,10 +37,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx puppeteer browsers install chrome-headless-shell
-      - run: npm run manuscript:evidence
-      - run: npm run manuscript:figures
-      - run: npm run manuscript:hydrate
-      - run: npm run manuscript:validate
+      - run: sudo apt-get update
+      - run: sudo apt-get install --yes pandoc texlive-xetex pandoc-crossref
+      - run: npm run manuscript:check
       - uses: actions/upload-artifact@v4
         with:
           name: noorg-manuscript-source-evidence
@@ -75,3 +78,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker build --tag noorg:ci .
+      - run: docker run --detach --name noorg-ci --publish 3000:3000 --env NOORG_LLM_PROVIDER=local --env NOORG_HTTP_AUTH_TOKEN=ci-token noorg:ci
+      - run: |
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:3000/ready; then exit 0; fi
+            sleep 1
+          done
+          docker logs noorg-ci
+          exit 1
+      - if: always()
+        run: docker rm --force noorg-ci

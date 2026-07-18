@@ -6,6 +6,7 @@ services:
     env_file:
       - .env
     environment:
+      NOORG_HOST: 0.0.0.0
       NOORG_STATE_PATH: /app/data/state.json
     volumes:
       - noorg-data:/app/data

@@ -85,9 +85,14 @@ export abstract class AbstractAgent<TInput = JsonValue, TOutput = JsonValue> imp
   protected async ask<T extends JsonValue>(
     request: CompletionRequest<T>,
     schema: ZodType<T>,
-    signal: AbortSignal
+    signal: AbortSignal,
+    taskId?: string
   ): Promise<T> {
-    const response = await this.context.provider.complete(request, schema, signal);
+    const response = await this.context.provider.complete(
+      taskId === undefined ? request : { ...request, taskId },
+      schema,
+      signal
+    );
     return response.data;
   }
 

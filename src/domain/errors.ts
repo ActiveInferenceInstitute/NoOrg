@@ -1,3 +1,6 @@
+import { redactJsonValue, redactText } from './redaction';
+import { jsonValueSchema, type JsonValue } from './types';
+
 export class NoOrgError extends Error {
   public constructor(
     public readonly code: string,
@@ -20,15 +23,15 @@ export function toTaskError(error: unknown): {
     const details = jsonValueSchema.safeParse(error.details);
     return {
       code: error.code,
-      message: error.message,
+      message: redactText(error.message),
       retryable: error.retryable,
-      ...(details.success ? { details: details.data } : {}),
+      ...(details.success ? { details: redactJsonValue(details.data) } : {}),
     };
   }
   if (error instanceof Error) {
-    return { code: 'TASK_EXECUTION_FAILED', message: error.message, retryable: false };
+    return { code: 'TASK_EXECUTION_FAILED', message: redactText(error.message), retryable: false };
   }
-  return { code: 'TASK_EXECUTION_FAILED', message: String(error), retryable: false };
+  return { code: 'TASK_EXECUTION_FAILED', message: redactText(String(error)), retryable: false };
 }
 
 export function assertCondition(
@@ -40,4 +43,3 @@ export function assertCondition(
     throw new NoOrgError(code, message);
   }
 }
-import { jsonValueSchema, type JsonValue } from './types';

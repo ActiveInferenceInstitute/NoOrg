@@ -24,7 +24,11 @@ The default development profile uses the deterministic local provider and requir
 - `GET /health` reports process health.
 - `GET /ready` reports coordinator readiness.
 - `GET /metrics` exposes runtime counters when metrics are enabled.
+- `POST /v1/tasks`, `GET /v1/tasks`, `GET /v1/tasks/:id`, and `POST /v1/tasks/:id/cancel` expose the authenticated task API.
+- The generated [OpenAPI contract](docs/api/openapi.json) is checked against the implemented routes.
 - `Coordinator.submitTask()` queues a typed task for a registered executable agent.
+- Optional agent modules are explicitly configured with `NOORG_AGENT_MODULES`; organizational Markdown is available only through the opt-in `UnitCorpus` adapter and its reviewed manifest.
+- External agent modules require `NOORG_AGENT_MODULE_TRUSTED_SHA256` provenance allowlisting.
 
 ## Example
 
@@ -61,6 +65,8 @@ npm test
 npm run validate:text
 npm run validate:docs
 npm run validate:units
+npm run validate:contracts
+npm run validate:decisions
 npm run build
 npm run manuscript:check
 npm run release:check
