@@ -72,5 +72,5 @@ This policy applies to all organizational data including structured and unstruct
 
 ## Related Documentation
 
-- [Information Security Policy](../../Security/Policies/information_security_policy.md)
+- [Information Security Policy](../../Security/Policies/Information_Security_Policy.md)
 - [Records Management Policy](./Records_Management_Policy.md)

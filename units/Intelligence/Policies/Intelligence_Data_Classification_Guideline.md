@@ -59,5 +59,5 @@ All intelligence products must display:
 
 ## Related Documents
 
-- [Information Security Policy](../../Security/Policies/information_security_policy.md)
+- [Information Security Policy](../../Security/Policies/Information_Security_Policy.md)
 - [Data Governance Policy](../../Governance/Policies/Data_Governance_Policy.md)

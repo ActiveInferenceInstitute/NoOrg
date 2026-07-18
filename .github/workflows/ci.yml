@@ -37,8 +37,22 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx puppeteer browsers install chrome-headless-shell
+      - name: Install pinned manuscript tools
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/pandoc" "$HOME/.local/bin"
+          curl --fail --location --retry 3 \
+            https://github.com/jgm/pandoc/releases/download/3.9/pandoc-3.9-linux-amd64.tar.gz \
+            | tar -xz --strip-components=1 -C "$RUNNER_TEMP/pandoc"
+          curl --fail --location --retry 3 \
+            https://github.com/lierdakil/pandoc-crossref/releases/download/v0.3.24/pandoc-crossref-Linux-X64.tar.xz \
+            | tar -xJ -C "$HOME/.local/bin"
+          install "$RUNNER_TEMP/pandoc/bin/pandoc" "$HOME/.local/bin/pandoc"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          pandoc --version
+          pandoc-crossref --version
       - run: sudo apt-get update
-      - run: sudo apt-get install --yes pandoc texlive-xetex pandoc-crossref
+      - run: sudo apt-get install --yes texlive-xetex
       - run: npm run manuscript:check
       - uses: actions/upload-artifact@v4
         with:

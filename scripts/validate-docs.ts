@@ -1,5 +1,5 @@
-import { existsSync, readFileSync, statSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { join, relative, resolve, sep } from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const root = resolve(process.cwd());
@@ -25,6 +25,24 @@ function isGeneratedManuscriptAsset(file: string, target: string): boolean {
   return file.startsWith('docs/manuscript/') && target.startsWith('output/figures/');
 }
 
+function existsWithExactCase(path: string): boolean {
+  const relativePath = relative(root, path);
+  if (relativePath === '' || relativePath.startsWith('..') || relativePath.startsWith(sep))
+    return false;
+  let current = root;
+  for (const segment of relativePath.split(sep)) {
+    let entry: string | undefined;
+    try {
+      entry = readdirSync(current).find(candidate => candidate === segment);
+    } catch {
+      return false;
+    }
+    if (entry === undefined) return false;
+    current = join(current, entry);
+  }
+  return true;
+}
+
 for (const file of files) {
   if (!existsSync(resolve(root, file))) continue;
   const content = readFileSync(resolve(root, file), 'utf8')
@@ -43,9 +61,9 @@ for (const file of files) {
       resolve(targetPath, 'index.md'),
     ];
     const resolved = candidates.find(
-      candidate => existsSync(candidate) && statSync(candidate).isFile()
+      candidate => existsWithExactCase(candidate) && statSync(candidate).isFile()
     );
-    if (!anchor && existsSync(targetPath)) continue;
+    if (!anchor && existsWithExactCase(targetPath)) continue;
     if (!resolved) {
       broken.push(`${file}: ${target}`);
       continue;

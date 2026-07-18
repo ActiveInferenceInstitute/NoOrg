@@ -64,5 +64,5 @@ Establishes service standards to ensure consistent, high-quality customer experi
 
 ## Related Documents
 
-- [Escalation Process](../Processes/Escalation_Process.md)
+- [Escalation Process](../Processes/escalation_process.md)
 - [Quality Assurance](../../QualityAssurance/)

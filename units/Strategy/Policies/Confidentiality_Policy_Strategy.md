@@ -68,4 +68,4 @@ This policy applies to all strategic information including plans, analyses, comp
 ## Related Documentation
 
 - [Data Governance Policy](../../Governance/Policies/Data_Governance_Policy.md)
-- [Information Security Policy](../../Security/Policies/information_security_policy.md)
+- [Information Security Policy](../../Security/Policies/Information_Security_Policy.md)
