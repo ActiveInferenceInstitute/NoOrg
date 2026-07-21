@@ -68,6 +68,8 @@ export class Coordinator implements TaskScheduler {
   private readonly cancellationEvents = new Set<string>();
   private lastFailure?: FailureObservation;
   private shutdownTimedOut = false;
+  private startPromise: Promise<void> | undefined;
+  private shutdownPromise: Promise<void> | undefined;
 
   public constructor(private readonly dependencies: CoordinatorDependencies) {
     this.repository =
@@ -92,23 +94,17 @@ export class Coordinator implements TaskScheduler {
     if (this.status === 'running') return;
     if (this.status === 'stopping' || this.status === 'stopped')
       throw new NoOrgError('COORDINATOR_CLOSED', 'Coordinator cannot be restarted after shutdown');
-    await this.dependencies.state.load();
-    await this.repository.load();
-    const recovered = await this.repository.recoverInterruptedTasks();
-    await this.dependencies.registry.initialize({
-      provider: this.dependencies.provider,
-      state: this.dependencies.state,
-      logger: this.dependencies.logger,
-      clock: this.dependencies.clock,
-      configuration: this.dependencies.agentConfiguration ?? {},
-    });
-    this.controller = new AbortController();
-    this.status = 'running';
-    this.loopPromise = this.runLoop(this.controller.signal);
-    this.dependencies.logger.info('Coordinator started', {
-      agents: this.dependencies.registry.descriptors().length,
-      recoveredTasks: recovered.length,
-    });
+    if (this.startPromise) {
+      await this.startPromise;
+      return;
+    }
+    const startPromise = this.startInternal();
+    this.startPromise = startPromise;
+    try {
+      await startPromise;
+    } finally {
+      if (this.startPromise === startPromise) this.startPromise = undefined;
+    }
   }
 
   public async submitTask(request: TaskRequest): Promise<TaskRecord> {
@@ -197,6 +193,51 @@ export class Coordinator implements TaskScheduler {
   }
 
   public async shutdown(): Promise<void> {
+    if (this.startPromise) await this.startPromise.catch(() => undefined);
+    if (this.status === 'stopped') return;
+    if (this.shutdownPromise) {
+      await this.shutdownPromise;
+      return;
+    }
+    const shutdownPromise = this.shutdownInternal();
+    this.shutdownPromise = shutdownPromise;
+    await shutdownPromise;
+  }
+
+  private async startInternal(): Promise<void> {
+    try {
+      await this.dependencies.state.load();
+      await this.repository.load();
+      const recovered = await this.repository.recoverInterruptedTasks();
+      await this.dependencies.registry.initialize({
+        provider: this.dependencies.provider,
+        state: this.dependencies.state,
+        logger: this.dependencies.logger,
+        clock: this.dependencies.clock,
+        configuration: this.dependencies.agentConfiguration ?? {},
+      });
+      this.controller = new AbortController();
+      this.status = 'running';
+      this.loopPromise = this.runLoop(this.controller.signal);
+      this.dependencies.logger.info('Coordinator started', {
+        agents: this.dependencies.registry.descriptors().length,
+        recoveredTasks: recovered.length,
+      });
+    } catch (error) {
+      this.controller?.abort();
+      if (this.loopPromise) await this.loopPromise.catch(() => undefined);
+      await Promise.allSettled([
+        this.dependencies.events.close(),
+        this.dependencies.registry.shutdown(),
+        this.dependencies.provider.close(),
+        this.dependencies.state.close(),
+      ]);
+      this.status = 'stopped';
+      throw error;
+    }
+  }
+
+  private async shutdownInternal(): Promise<void> {
     if (this.status === 'stopped') return;
     this.status = 'stopping';
     this.controller?.abort();

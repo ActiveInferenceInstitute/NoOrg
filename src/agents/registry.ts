@@ -67,6 +67,7 @@ export class AgentRegistry {
         release: () => {
           if (released) return;
           released = true;
+          if (!this.active.has(agent.descriptor.id)) return;
           this.active.set(
             agent.descriptor.id,
             Math.max(0, (this.active.get(agent.descriptor.id) ?? 1) - 1)

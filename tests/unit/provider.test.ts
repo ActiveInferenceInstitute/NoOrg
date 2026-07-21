@@ -317,6 +317,47 @@ describe('GovernedProvider', () => {
     );
   });
 
+  it('allows a later half-open probe after a non-transport failure', async () => {
+    let now = 0;
+    let calls = 0;
+    const inner = new OpenAIProvider({
+      apiKey: 'test-key',
+      model: 'test-model',
+      timeoutMs: 1000,
+      maxRetries: 0,
+      retryBaseMs: 1,
+      promptCostPerMillionUsd: 1,
+      completionCostPerMillionUsd: 2,
+      transport: {
+        complete: async () => {
+          calls += 1;
+          if (calls === 1) throw { status: 503 };
+          if (calls === 2)
+            return { id: 'refused', model: 'test-model', parsed: null, refusal: 'policy' };
+          return { id: 'recovered', model: 'test-model', parsed: { value: 1 } };
+        },
+      },
+    });
+    const governed = new GovernedProvider(inner, {
+      clock: { now: () => new Date(now) },
+      circuitFailureThreshold: 1,
+      circuitCooldownMs: 10,
+    });
+
+    await expect(
+      governed.complete({ operation: 'fail', input: null }, z.object({ value: z.number() }))
+    ).rejects.toThrow('provider request failed');
+    now = 11;
+    await expect(
+      governed.complete({ operation: 'refused', input: null }, z.object({ value: z.number() }))
+    ).rejects.toThrow('refused');
+    now = 22;
+    await expect(
+      governed.complete({ operation: 'recover', input: null }, z.object({ value: z.number() }))
+    ).resolves.toEqual(expect.objectContaining({ requestId: 'recovered' }));
+    expect(calls).toBe(3);
+  });
+
   it('reserves concurrent budget before network calls begin', async () => {
     let release!: () => void;
     const pending = new Promise<OpenAITransportResponse>(resolve => {

@@ -83,8 +83,7 @@ describe('Coordinator', () => {
       maxConcurrentTasks: 2,
       defaultTaskTimeoutMs: 1000,
     });
-    await coordinator.start();
-    await coordinator.start();
+    await Promise.all([coordinator.start(), coordinator.start()]);
     const task = await coordinator.submitTask({
       name: 'Analyze text',
       description: 'Count words',
@@ -95,7 +94,7 @@ describe('Coordinator', () => {
     const completed = coordinator.getTask(task.id);
     expect(completed?.result?.data).toEqual(expect.objectContaining({ wordCount: 2 }));
     expect(coordinator.getMetrics().renderPrometheus()).toContain('noorg_tasks_completed 1');
-    await coordinator.shutdown();
+    await Promise.all([coordinator.shutdown(), coordinator.shutdown()]);
     expect(coordinator.getStatus()).toBe('stopped');
     await coordinator.shutdown();
     await expect(
@@ -119,6 +118,27 @@ describe('Coordinator', () => {
     await expect(
       coordinator.submitTask({ name: 'Not ready', description: 'Should fail', input: 'x' })
     ).rejects.toThrow('must be running');
+  });
+
+  it('closes owned resources when startup fails after state acquisition', async () => {
+    const state = new MemoryStateStore();
+    await state.set('tasks', [{ invalid: true }]);
+    const coordinator = new Coordinator({
+      state,
+      registry: new AgentRegistry(),
+      provider: new DeterministicProvider(),
+      events: new EventBus(),
+      metrics: new Metrics(),
+      logger: new MemoryLogger(),
+      clock: new SystemClock(),
+      pollIntervalMs: 5,
+      maxConcurrentTasks: 1,
+      defaultTaskTimeoutMs: 1000,
+    });
+
+    await expect(coordinator.start()).rejects.toThrow('schema');
+    expect(coordinator.getStatus()).toBe('stopped');
+    await expect(state.set('after-failure', true)).rejects.toThrow('closed');
   });
 
   it('cancels running work and releases the agent lease', async () => {

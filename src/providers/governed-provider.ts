@@ -93,6 +93,10 @@ export class GovernedProvider implements LLMProvider {
           this.circuitOpenedAt = this.clock.now().getTime();
           this.halfOpen = false;
         }
+      } else if (this.halfOpen) {
+        // Leave the circuit open, but permit another probe after the cooldown.
+        // A refusal or schema error is not evidence that the transport is down.
+        this.halfOpen = false;
       }
       throw error;
     } finally {

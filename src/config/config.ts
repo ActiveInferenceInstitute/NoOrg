@@ -5,10 +5,15 @@ import type { ProviderKind } from '../domain/types';
 const environmentSchema = z.enum(['development', 'test', 'production']);
 const providerSchema = z.enum(['local', 'openai']);
 
-function integer(name: string, fallback: number, minimum: number) {
+function integer(name: string, fallback: number, minimum: number, maximum?: number) {
+  const numberSchema = z.coerce.number().int().min(minimum, `${name} must be at least ${minimum}`);
+  const boundedSchema =
+    maximum === undefined
+      ? numberSchema
+      : numberSchema.max(maximum, `${name} must be at most ${maximum}`);
   return z.preprocess(
     value => (value === undefined || value === '' ? fallback : value),
-    z.coerce.number().int().min(minimum, `${name} must be at least ${minimum}`)
+    boundedSchema
   );
 }
 
@@ -73,7 +78,7 @@ const rawSchema = z.object({
   NOORG_SHUTDOWN_TIMEOUT_MS: integer('NOORG_SHUTDOWN_TIMEOUT_MS', 10000, 100),
   NOORG_MAX_TASK_INPUT_BYTES: integer('NOORG_MAX_TASK_INPUT_BYTES', 1_048_576, 1024),
   NOORG_MAX_RESULT_BYTES: integer('NOORG_MAX_RESULT_BYTES', 1_048_576, 1024),
-  NOORG_MAX_WORKFLOW_DEPTH: integer('NOORG_MAX_WORKFLOW_DEPTH', 32, 1),
+  NOORG_MAX_WORKFLOW_DEPTH: integer('NOORG_MAX_WORKFLOW_DEPTH', 32, 1, 64),
   NOORG_MAX_WORKFLOW_CHILDREN: integer('NOORG_MAX_WORKFLOW_CHILDREN', 100, 1),
   NOORG_PROVIDER_BUDGET_USD: z.preprocess(
     value => (value === undefined || value === '' ? undefined : value),

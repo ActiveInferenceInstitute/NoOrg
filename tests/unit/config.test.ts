@@ -44,6 +44,13 @@ describe('configuration', () => {
 
   it('rejects invalid numeric settings', () => {
     expect(() => loadConfig({ NODE_ENV: 'test', NOORG_PORT: 'not-a-port' })).toThrow('NOORG_PORT');
+    expect(() =>
+      loadConfig({
+        NODE_ENV: 'test',
+        NOORG_LLM_PROVIDER: 'local',
+        NOORG_MAX_WORKFLOW_DEPTH: '65',
+      })
+    ).toThrow('NOORG_MAX_WORKFLOW_DEPTH');
   });
 
   it('uses a loopback development host and requires production API authentication', () => {

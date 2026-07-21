@@ -100,8 +100,9 @@ describe('AgentRegistry', () => {
     const lease = registry.acquire(candidate);
     expect(lease).toBeDefined();
     expect(registry.availability(candidate)).toBe('available');
-    lease?.release();
     await registry.shutdown();
+    lease?.release();
+    expect(registry.activeCount()).toBe(0);
     expect(registry.isReady()).toBe(false);
   });
 
@@ -119,11 +120,15 @@ describe('AgentRegistry', () => {
   });
 
   it('cleans up initialized agents when a later agent fails initialization', async () => {
+    let failingAgentShutdowns = 0;
     class FailingAgent extends AbstractAgent {
       public constructor() {
         super({ id: 'failing', name: 'Failing', capabilities: ['failing'], maxConcurrentTasks: 1 });
         this.onInitialize = async () => {
           throw new Error('init failed');
+        };
+        this.onShutdown = async () => {
+          failingAgentShutdowns += 1;
         };
       }
 
@@ -136,6 +141,7 @@ describe('AgentRegistry', () => {
     registry.register(new FailingAgent());
     await expect(registry.initialize(context())).rejects.toThrow('init failed');
     expect(registry.isReady()).toBe(false);
+    expect(failingAgentShutdowns).toBe(1);
     await registry.shutdown();
   });
 

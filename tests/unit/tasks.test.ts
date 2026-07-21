@@ -61,6 +61,20 @@ describe('TaskRepository', () => {
     expect(repository.list()).toHaveLength(0);
   });
 
+  it('applies the default page size when listing tasks', async () => {
+    const repository = new TaskRepository(new MemoryStateStore(), new SystemClock());
+    for (let index = 0; index < 101; index += 1) {
+      await repository.create({
+        name: `Task ${index}`,
+        description: 'Pagination boundary',
+        input: null,
+      });
+    }
+
+    expect(repository.list()).toHaveLength(100);
+    expect(repository.list(undefined, { offset: 100 })).toHaveLength(1);
+  });
+
   it('makes repeated cancellation idempotent', async () => {
     const repository = new TaskRepository(new MemoryStateStore(), new SystemClock());
     const task = await repository.create({ name: 'Cancel', description: 'Cancel me', input: null });

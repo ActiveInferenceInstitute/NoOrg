@@ -245,7 +245,7 @@ export class TaskRepository {
         const priorityDifference = this.effectivePriority(right) - this.effectivePriority(left);
         return priorityDifference || left.createdAt.localeCompare(right.createdAt);
       });
-    const end = query.limit === undefined ? undefined : parsedQuery.offset + parsedQuery.limit;
+    const end = parsedQuery.offset + parsedQuery.limit;
     return sorted.slice(parsedQuery.offset, end).map(copy);
   }
 

@@ -21,6 +21,19 @@ describe('MemoryStateStore', () => {
     expect(state.get<number>('count')).toBe(2);
   });
 
+  it('serializes concurrent updates without losing increments', async () => {
+    const state = new MemoryStateStore();
+    await state.set('count', 0);
+    await Promise.all(
+      Array.from({ length: 100 }, () =>
+        state.update<number>('count', current => (current ?? 0) + 1)
+      )
+    );
+
+    expect(state.get<number>('count')).toBe(100);
+    expect(state.revision()).toBe(101);
+  });
+
   it('persists a versioned state envelope atomically', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'noorg-state-'));
     const filePath = join(directory, 'state.json');

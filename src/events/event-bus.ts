@@ -72,7 +72,9 @@ export class EventBus {
   public async close(): Promise<void> {
     if (this.closed) return;
     this.closed = true;
-    await Promise.allSettled([...this.inFlight, ...this.backgroundHandlers]);
+    while (this.inFlight.size > 0 || this.backgroundHandlers.size > 0) {
+      await Promise.allSettled([...this.inFlight, ...this.backgroundHandlers]);
+    }
     this.handlers.clear();
   }
 

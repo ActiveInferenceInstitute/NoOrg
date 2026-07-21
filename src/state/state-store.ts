@@ -121,6 +121,7 @@ export class FileStateStore implements StateStore {
   }
 
   public async set(key: string, value: JsonValue): Promise<void> {
+    if (this.closed) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
     jsonValueSchema.parse(value);
     await this.enqueue(() => {
       this.values.set(key, clone(value));
@@ -265,6 +266,7 @@ export class FileStateStore implements StateStore {
 
 export class MemoryStateStore implements StateStore {
   private readonly values = new Map<string, JsonValue>();
+  private mutation = Promise.resolve();
   private closed = false;
   private currentRevision = 0;
 
@@ -292,22 +294,40 @@ export class MemoryStateStore implements StateStore {
   public async set(key: string, value: JsonValue): Promise<void> {
     if (this.closed) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
     jsonValueSchema.parse(value);
-    this.values.set(key, clone(value));
-    this.currentRevision += 1;
+    await this.enqueue(() => {
+      this.values.set(key, clone(value));
+      this.currentRevision += 1;
+    });
   }
 
   public async update<T extends JsonValue>(
     key: string,
     updater: (current: T | undefined) => T
   ): Promise<T> {
-    const next = updater(this.get<T>(key));
-    await this.set(key, next);
-    return clone(next);
+    let nextValue!: T;
+    await this.enqueue(() => {
+      const current = this.values.get(key) as T | undefined;
+      nextValue = updater(current === undefined ? undefined : clone(current));
+      jsonValueSchema.parse(nextValue);
+      this.values.set(key, clone(nextValue));
+      this.currentRevision += 1;
+    });
+    return clone(nextValue);
   }
 
-  public async flush(): Promise<void> {}
+  public async flush(): Promise<void> {
+    await this.mutation;
+  }
 
   public async close(): Promise<void> {
+    await this.flush();
     this.closed = true;
+  }
+
+  private async enqueue(operation: () => void): Promise<void> {
+    if (this.closed) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
+    const next = this.mutation.then(operation);
+    this.mutation = next.catch(() => undefined);
+    await next;
   }
 }

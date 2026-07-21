@@ -54,7 +54,18 @@ export abstract class AbstractAgent<TInput = JsonValue, TOutput = JsonValue> imp
       );
     this.context = context;
     this.initialized = true;
-    if (this.onInitialize) await this.onInitialize();
+    try {
+      if (this.onInitialize) await this.onInitialize();
+    } catch (error) {
+      try {
+        if (this.onShutdown) await this.onShutdown();
+      } catch {
+        // Preserve the initialization failure while still resetting the lifecycle state.
+      } finally {
+        this.initialized = false;
+      }
+      throw error;
+    }
   }
 
   public async execute(
