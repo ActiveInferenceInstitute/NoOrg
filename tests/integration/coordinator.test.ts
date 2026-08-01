@@ -440,4 +440,38 @@ describe('Coordinator', () => {
     await expect(coordinator.start()).rejects.toThrow('restarted after shutdown');
     expect(coordinator.getStatus()).toBe('stopped');
   });
+
+  it('records event delivery failures without failing the completed task', async () => {
+    const registry = new AgentRegistry();
+    registry.register(new AnalysisAgent());
+    const events = new EventBus();
+    events.subscribe('task.completed', () => {
+      throw new Error('subscriber failure');
+    });
+    const coordinator = new Coordinator({
+      state: new MemoryStateStore(),
+      registry,
+      provider: new DeterministicProvider(),
+      events,
+      metrics: new Metrics(),
+      logger: new MemoryLogger(),
+      clock: new SystemClock(),
+      pollIntervalMs: 5,
+      maxConcurrentTasks: 1,
+      defaultTaskTimeoutMs: 1000,
+    });
+    await coordinator.start();
+    const task = await coordinator.submitTask({
+      name: 'Fire event',
+      description: 'Deliver a task.completed event to a failing subscriber',
+      agentId: 'analysis',
+      input: 'A complete input for event delivery.',
+    });
+    await waitFor(() => coordinator.getTask(task.id)?.status === 'completed');
+    expect(coordinator.getTask(task.id)?.status).toBe('completed');
+    expect(coordinator.getMetrics().renderPrometheus()).toContain(
+      'noorg_event_delivery_failures 1'
+    );
+    await coordinator.shutdown();
+  });
 });

@@ -3,7 +3,8 @@
 ## Unreleased
 
 - Hardened the HTTP request surface: explicit header/request/keep-alive timeouts, a cap on concurrent in-flight requests (`503 SERVER_BUSY`), a per-client authentication-failure throttle (`429 AUTH_RATE_LIMITED`), and constant-time bearer-token comparison.
-- Wired the 90% line / 80% branch coverage threshold into the ordinary `npm run validate` gate and closed earlier branch-coverage gaps with real regression tests (coordinator restart guard, priority inheritance, task-load integrity, file-state updates, review-scoring and data-record branches, provider usage passthrough, lock-owner parsing).
+- Remediated a high-severity transitive `brace-expansion` dependency advisory in build/lint tooling (`npm audit fix`); `npm audit --audit-level=high` is clean.
+- Wired the 90% line / 80% branch coverage threshold into the ordinary `npm run validate` gate and closed earlier branch-coverage gaps with real regression tests (coordinator restart guard, priority inheritance, task-load integrity, file-state updates, review-scoring and data-record branches, provider usage passthrough, lock-owner parsing, event-delivery resilience).
 - Added authenticated versioned HTTP task endpoints, request limits, expanded health signals, injectable OpenAI transport tests, and coverage gates.
 - Added idempotent/dependency-aware tasks, deadlines, retry backoff, query filters, provider budgets/rate limits/circuit breaking, per-task usage attribution, versioned agent loading, modular built-ins, and a provenance-safe unit corpus adapter.
 - Task records now preserve the requested agent identity separately from the scheduler-assigned agent identity so idempotent replays remain stable after execution.
