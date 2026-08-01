@@ -229,6 +229,7 @@ describe('GovernedProvider', () => {
       z.object({ value: z.number() })
     );
     expect(governed.getTaskUsage('00000000-0000-4000-8000-000000000003').totalTokens).toBe(5);
+    expect(governed.getUsage().totalTokens).toBe(5);
     await expect(
       governed.complete({ operation: 'limited', input: null }, z.object({ value: z.number() }))
     ).rejects.toThrow('rate limit');

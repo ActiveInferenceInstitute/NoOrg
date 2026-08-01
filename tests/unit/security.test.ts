@@ -3,6 +3,7 @@ import { delay } from '../../src/domain/clock';
 import { NoOrgError, toTaskError } from '../../src/domain/errors';
 import { consoleLogger, MemoryLogger } from '../../src/logging/logger';
 import { Metrics } from '../../src/metrics/metrics';
+import { isBearerAuthorized, AuthThrottle } from '../../src/http/server';
 
 describe('runtime safety helpers', () => {
   it('redacts sensitive keys and credential-like text', () => {
@@ -52,6 +53,38 @@ describe('runtime safety helpers', () => {
     await expect(delay(20, controller.signal)).rejects.toThrow('aborted');
     await delay(0);
     await delay(1, new AbortController().signal);
+  });
+
+  it('authorizes bearer tokens with constant-time comparison', () => {
+    expect(isBearerAuthorized('Bearer secret', 'secret')).toBe(true);
+    expect(isBearerAuthorized(undefined, 'secret')).toBe(false);
+    expect(isBearerAuthorized('Bearer wrong', 'secret')).toBe(false);
+    expect(isBearerAuthorized('Bearer secret', 'different')).toBe(false);
+    expect(isBearerAuthorized('Bearer secret extra', 'secret')).toBe(false);
+    expect(isBearerAuthorized('bearer secret', 'secret')).toBe(false);
+  });
+
+  it('limits repeated authentication failures and resets after the window', () => {
+    let now = 0;
+    const throttle = new AuthThrottle(2, 1000, () => now);
+    expect(throttle.record('1.2.3.4')).toBe(false);
+    expect(throttle.record('1.2.3.4')).toBe(true);
+    expect(throttle.isLimited('1.2.3.4')).toBe(true);
+    expect(throttle.record('5.6.7.8')).toBe(false);
+    expect(throttle.isLimited('5.6.7.8')).toBe(false);
+    now = 1500;
+    expect(throttle.isLimited('1.2.3.4')).toBe(false);
+    expect(throttle.record('1.2.3.4')).toBe(false);
+    expect(throttle.record('5.6.7.8')).toBe(false);
+    expect(throttle.record('5.6.7.8')).toBe(true);
+    throttle.reset('5.6.7.8');
+    expect(throttle.isLimited('5.6.7.8')).toBe(false);
+    expect(throttle.record('5.6.7.8')).toBe(false);
+  });
+
+  it('rejects invalid auth throttle limits', () => {
+    expect(() => new AuthThrottle(0, 1000)).toThrow('auth limits');
+    expect(() => new AuthThrottle(2, 0)).toThrow('auth limits');
   });
 
   it('routes console logger levels through redaction', () => {

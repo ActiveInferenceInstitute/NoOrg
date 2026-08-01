@@ -382,4 +382,120 @@ describe('TaskRepository', () => {
       taskRecordSchema.safeParse({ ...base, status: 'queued', attempt: 2, maxAttempts: 1 }).success
     ).toBe(false);
   });
+
+  it('elevates inherited priority from a wait-for-success parent', async () => {
+    const repository = new TaskRepository(new MemoryStateStore(), new SystemClock());
+    const parent = await repository.create({
+      name: 'High priority parent',
+      description: 'Priority source',
+      input: null,
+      priority: 5,
+    });
+    const child = await repository.create({
+      name: 'Inheriting child',
+      description: 'Follows parent priority',
+      input: null,
+      parentTaskId: parent.id,
+      parentCompletionPolicy: 'wait_for_success',
+      priorityPolicy: 'inherit_max',
+      priority: 1,
+    });
+    const solo = await repository.create({
+      name: 'Fixed task',
+      description: 'Fixed priority',
+      input: null,
+      priority: 0,
+    });
+    const ordered = repository.list().map(task => task.id);
+    expect(ordered).toEqual([parent.id, child.id, solo.id]);
+  });
+
+  it('rejects persisted tasks with a missing parent or dependency', async () => {
+    const state = new MemoryStateStore();
+    const base = {
+      name: 'Loaded task',
+      description: 'Loaded from state',
+      input: null,
+      requiredCapabilities: [],
+      priority: 0,
+      priorityPolicy: 'fixed' as const,
+      timeoutMs: 100,
+      maxAttempts: 1,
+      attempt: 0,
+      retryBackoffMs: 0,
+      parentCompletionPolicy: 'independent' as const,
+      dependencyIds: [],
+      workflowDepth: 0,
+      status: 'queued' as const,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    await state.set('tasks', [
+      {
+        ...base,
+        id: '00000000-0000-4000-8000-000000000101',
+        parentTaskId: '00000000-0000-4000-8000-000000000404',
+      },
+    ]);
+    await expect(new TaskRepository(state, new SystemClock()).load()).rejects.toMatchObject({
+      code: 'TASK_PARENT_NOT_FOUND',
+    });
+
+    const missingDependency = new MemoryStateStore();
+    await missingDependency.set('tasks', [
+      {
+        ...base,
+        id: '00000000-0000-4000-8000-000000000101',
+        dependencyIds: ['00000000-0000-4000-8000-000000000404'],
+      },
+    ]);
+    await expect(
+      new TaskRepository(missingDependency, new SystemClock()).load()
+    ).rejects.toMatchObject({ code: 'TASK_DEPENDENCY_NOT_FOUND' });
+  });
+
+  it('rejects persisted task cycles and duplicate idempotency keys', async () => {
+    const cycleState = new MemoryStateStore();
+    const record = (id: string, dependencyIds: string[]) => ({
+      id,
+      name: 'Cycle task',
+      description: 'Persisted cycle',
+      input: null,
+      requiredCapabilities: [],
+      priority: 0,
+      priorityPolicy: 'fixed' as const,
+      timeoutMs: 100,
+      maxAttempts: 1,
+      attempt: 0,
+      retryBackoffMs: 0,
+      parentCompletionPolicy: 'independent' as const,
+      dependencyIds,
+      workflowDepth: 0,
+      status: 'queued' as const,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    });
+    await cycleState.set('tasks', [
+      record('00000000-0000-4000-8000-000000000101', ['00000000-0000-4000-8000-000000000102']),
+      record('00000000-0000-4000-8000-000000000102', ['00000000-0000-4000-8000-000000000101']),
+    ]);
+    await expect(new TaskRepository(cycleState, new SystemClock()).load()).rejects.toMatchObject({
+      code: 'TASK_DEPENDENCY_CYCLE',
+    });
+
+    const duplicateKeyState = new MemoryStateStore();
+    await duplicateKeyState.set('tasks', [
+      {
+        ...record('00000000-0000-4000-8000-000000000201', []),
+        idempotencyKey: 'duplicate-key',
+      },
+      {
+        ...record('00000000-0000-4000-8000-000000000202', []),
+        idempotencyKey: 'duplicate-key',
+      },
+    ]);
+    await expect(
+      new TaskRepository(duplicateKeyState, new SystemClock()).load()
+    ).rejects.toMatchObject({ code: 'TASK_STATE_INVALID' });
+  });
 });

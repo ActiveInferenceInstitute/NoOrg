@@ -243,4 +243,67 @@ describe('HTTP health surface', () => {
     );
     await coordinator.shutdown();
   });
+
+  it('enforces request timeouts, an in-flight cap, and authentication throttling', async () => {
+    const coordinator = new Coordinator({
+      state: new MemoryStateStore(),
+      registry: new AgentRegistry(),
+      provider: new DeterministicProvider(),
+      events: new EventBus(),
+      metrics: new Metrics(),
+      logger: new MemoryLogger(),
+      clock: new SystemClock(),
+      pollIntervalMs: 10,
+      maxConcurrentTasks: 1,
+      defaultTaskTimeoutMs: 1000,
+    });
+
+    const busyServer = createHttpServer({
+      coordinator,
+      metricsEnabled: false,
+      maxInFlightRequests: 0,
+    });
+    expect(busyServer.requestTimeout).toBe(30000);
+    expect(busyServer.headersTimeout).toBe(10000);
+    expect(busyServer.keepAliveTimeout).toBe(5000);
+    await new Promise<void>(resolve => busyServer.listen(0, resolve));
+    const busyAddress = busyServer.address();
+    if (!busyAddress || typeof busyAddress === 'string')
+      throw new Error('Test server did not bind');
+    const busyBase = `http://127.0.0.1:${busyAddress.port}`;
+    const busy = await fetch(`${busyBase}/health`);
+    expect(busy.status).toBe(503);
+    expect(((await busy.json()) as { error: { code: string } }).error.code).toBe('SERVER_BUSY');
+    await new Promise<void>((resolve, reject) =>
+      busyServer.close(error => (error ? reject(error) : resolve()))
+    );
+
+    const throttleServer = createHttpServer({
+      coordinator,
+      metricsEnabled: false,
+      authToken: 'secret',
+      authFailureThreshold: 2,
+      authFailureWindowMs: 60_000,
+    });
+    await new Promise<void>(resolve => throttleServer.listen(0, resolve));
+    const throttleAddress = throttleServer.address();
+    if (!throttleAddress || typeof throttleAddress === 'string')
+      throw new Error('Test server did not bind');
+    const base = `http://127.0.0.1:${throttleAddress.port}`;
+    const first = await fetch(`${base}/v1/tasks`, { headers: { authorization: 'Bearer wrong' } });
+    expect(first.status).toBe(401);
+    const second = await fetch(`${base}/v1/tasks`, { headers: { authorization: 'Bearer wrong' } });
+    expect(second.status).toBe(429);
+    expect(((await second.json()) as { error: { code: string } }).error.code).toBe(
+      'AUTH_RATE_LIMITED'
+    );
+    const authorized = await fetch(`${base}/v1/tasks`, {
+      headers: { authorization: 'Bearer secret' },
+    });
+    expect(authorized.status).toBe(200);
+    await new Promise<void>((resolve, reject) =>
+      throttleServer.close(error => (error ? reject(error) : resolve()))
+    );
+    await coordinator.shutdown();
+  });
 });

@@ -4,6 +4,8 @@ import {
   AbstractAgent,
   AnalysisAgent,
   DataAnalysisAgent,
+  FinalReviewAgent,
+  ReviewAgent,
   createBuiltInAgents,
   type AgentContext,
 } from '../../src/agents';
@@ -75,6 +77,41 @@ describe('built-in agents', () => {
     await expect(dataAgent.execute(task(null), new AbortController().signal)).rejects.toThrow(
       'Expected an array of record objects'
     );
+    await dataAgent.shutdown();
+  });
+
+  it('covers review scoring branches and record-object data input', async () => {
+    const review = new ReviewAgent();
+    await review.initialize(context());
+    const short = await review.execute(task({ text: 'hi' }), new AbortController().signal);
+    expect((short.data as { score: number }).score).toBe(5);
+    await review.shutdown();
+
+    const longReview = new ReviewAgent();
+    await longReview.initialize(context());
+    const longResult = await longReview.execute(
+      task({ text: 'x'.repeat(120) }),
+      new AbortController().signal
+    );
+    expect((longResult.data as { score: number }).score).toBe(7);
+    await longReview.shutdown();
+
+    const final = new FinalReviewAgent();
+    await final.initialize(context());
+    const finalResult = await final.execute(
+      task({ text: 'y'.repeat(150) }),
+      new AbortController().signal
+    );
+    expect((finalResult.data as { score: number }).score).toBe(8);
+    await final.shutdown();
+
+    const dataAgent = new DataAnalysisAgent();
+    await dataAgent.initialize(context());
+    const analysis = await dataAgent.execute(
+      task({ records: [{ amount: 5 }, { amount: 7 }] }),
+      new AbortController().signal
+    );
+    expect((analysis.data as { rows: number }).rows).toBe(2);
     await dataAgent.shutdown();
   });
 });

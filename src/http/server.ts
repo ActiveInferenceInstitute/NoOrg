@@ -1,4 +1,4 @@
-import { randomUUID } from 'node:crypto';
+import { randomUUID, timingSafeEqual } from 'node:crypto';
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import { NoOrgError } from '../domain/errors';
 import { taskQuerySchema, taskRequestSchema, type TaskQuery } from '../domain/types';
@@ -9,42 +9,149 @@ export interface HttpAppOptions {
   readonly metricsEnabled: boolean;
   readonly authToken?: string;
   readonly maxBodyBytes?: number;
+  readonly maxInFlightRequests?: number;
+  readonly authFailureThreshold?: number;
+  readonly authFailureWindowMs?: number;
 }
 
 const defaultBodyLimit = 1_048_576;
+const defaultMaxInFlightRequests = 100;
+const defaultAuthFailureThreshold = 20;
+const defaultAuthFailureWindowMs = 60_000;
+const headersTimeoutMs = 10_000;
+const requestTimeoutMs = 30_000;
+const keepAliveTimeoutMs = 5_000;
+
+export function isBearerAuthorized(authorization: string | undefined, token: string): boolean {
+  const expected = `Bearer ${token}`;
+  if (authorization === undefined || authorization.length !== expected.length) return false;
+  return timingSafeEqual(Buffer.from(authorization), Buffer.from(expected));
+}
+
+interface AuthEntry {
+  readonly count: number;
+  readonly resetAt: number;
+}
+
+export class AuthThrottle {
+  private readonly counts = new Map<string, AuthEntry>();
+
+  public constructor(
+    private readonly threshold: number,
+    private readonly windowMs: number,
+    private readonly clock: () => number = Date.now
+  ) {
+    if (threshold < 1 || windowMs < 1)
+      throw new NoOrgError('INVALID_AUTH_LIMITS', 'Invalid auth limits');
+  }
+
+  public record(ip: string): boolean {
+    this.prune();
+    const now = this.clock();
+    const previous = this.counts.get(ip);
+    const entry: AuthEntry =
+      previous === undefined || previous.resetAt <= now
+        ? { count: 1, resetAt: now + this.windowMs }
+        : { count: previous.count + 1, resetAt: previous.resetAt };
+    this.counts.set(ip, entry);
+    return entry.count >= this.threshold;
+  }
+
+  public isLimited(ip: string): boolean {
+    this.prune();
+    const entry = this.counts.get(ip);
+    return entry !== undefined && entry.count >= this.threshold && entry.resetAt > this.clock();
+  }
+
+  public reset(ip: string): void {
+    this.counts.delete(ip);
+  }
+
+  private prune(): void {
+    const now = this.clock();
+    for (const [ip, entry] of this.counts) {
+      if (entry.resetAt <= now) this.counts.delete(ip);
+    }
+  }
+}
+
+interface RequestContext {
+  readonly inFlightRequests: number;
+  readonly maxInFlightRequests: number;
+  readonly authThrottle: AuthThrottle;
+}
 
 export function createHttpServer(options: HttpAppOptions): Server {
-  return createServer((request, response) => {
-    void handleRequest(request, response, options).catch(error => {
-      const requestId = response.getHeader('x-request-id')?.toString() ?? randomUUID();
-      const mapped = mapHttpError(error);
-      if (!response.headersSent) response.setHeader('x-request-id', requestId);
-      if (!response.writableEnded)
-        writeError(response, mapped.status, mapped.code, mapped.message, requestId);
-      options.coordinator.getMetrics().increment('http_internal_errors');
-    });
+  const maxInFlightRequests = options.maxInFlightRequests ?? defaultMaxInFlightRequests;
+  const authThrottle = new AuthThrottle(
+    options.authFailureThreshold ?? defaultAuthFailureThreshold,
+    options.authFailureWindowMs ?? defaultAuthFailureWindowMs
+  );
+  let inFlight = 0;
+  const server = createServer((request, response) => {
+    inFlight += 1;
+    const context: RequestContext = {
+      inFlightRequests: inFlight,
+      maxInFlightRequests,
+      authThrottle,
+    };
+    void handleRequest(request, response, options, context)
+      .catch(error => {
+        const requestId = response.getHeader('x-request-id')?.toString() ?? randomUUID();
+        const mapped = mapHttpError(error);
+        if (!response.headersSent) response.setHeader('x-request-id', requestId);
+        if (!response.writableEnded)
+          writeError(response, mapped.status, mapped.code, mapped.message, requestId);
+        options.coordinator.getMetrics().increment('http_internal_errors');
+      })
+      .finally(() => {
+        inFlight -= 1;
+      });
   });
+  server.headersTimeout = headersTimeoutMs;
+  server.requestTimeout = requestTimeoutMs;
+  server.keepAliveTimeout = keepAliveTimeoutMs;
+  return server;
 }
 
 async function handleRequest(
   request: IncomingMessage,
   response: ServerResponse,
-  options: HttpAppOptions
+  options: HttpAppOptions,
+  context: RequestContext
 ): Promise<void> {
   const requestId = requestIdFrom(request);
   response.setHeader('x-request-id', requestId);
   response.setHeader('content-type', 'application/json; charset=utf-8');
   response.setHeader('cache-control', 'no-store');
+  if (context.inFlightRequests > context.maxInFlightRequests) {
+    writeError(response, 503, 'SERVER_BUSY', 'Too many concurrent requests', requestId);
+    return;
+  }
   const url = new URL(request.url ?? '/', `http://${request.headers.host ?? 'localhost'}`);
   const path = url.pathname;
 
   if (path.startsWith('/v1/') || path === '/metrics') {
     const authorization = request.headers.authorization;
-    if (options.authToken !== undefined && authorization !== `Bearer ${options.authToken}`) {
+    const client = request.socket.remoteAddress ?? 'unknown';
+    const authorized =
+      options.authToken === undefined || isBearerAuthorized(authorization, options.authToken);
+    if (!authorized) {
+      if (context.authThrottle.record(client)) {
+        writeError(
+          response,
+          429,
+          'AUTH_RATE_LIMITED',
+          'Too many authentication failures',
+          requestId
+        );
+        return;
+      }
       response.setHeader('www-authenticate', 'Bearer');
       writeError(response, 401, 'UNAUTHORIZED', 'Authentication is required', requestId);
       return;
     }
+    if (options.authToken !== undefined) context.authThrottle.reset(client);
   }
 
   if (request.method === 'GET' && path === '/health') {

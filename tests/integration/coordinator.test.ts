@@ -419,4 +419,25 @@ describe('Coordinator', () => {
     expect(coordinator.getStatus()).toBe('stopped');
     agent.release();
   });
+
+  it('refuses to restart after shutdown', async () => {
+    const registry = new AgentRegistry();
+    registry.register(new AnalysisAgent());
+    const coordinator = new Coordinator({
+      state: new MemoryStateStore(),
+      registry,
+      provider: new DeterministicProvider(),
+      events: new EventBus(),
+      metrics: new Metrics(),
+      logger: new MemoryLogger(),
+      clock: new SystemClock(),
+      pollIntervalMs: 5,
+      maxConcurrentTasks: 1,
+      defaultTaskTimeoutMs: 1000,
+    });
+    await coordinator.start();
+    await coordinator.shutdown();
+    await expect(coordinator.start()).rejects.toThrow('restarted after shutdown');
+    expect(coordinator.getStatus()).toBe('stopped');
+  });
 });

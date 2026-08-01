@@ -103,4 +103,34 @@ describe('MemoryStateStore', () => {
     await expect(memory.set('value', 1)).rejects.toThrow('closed');
     await rm(directory, { recursive: true, force: true });
   });
+
+  it('reclaims a lock whose owner marker is a non-JSON numeric pid', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'noorg-numeric-lock-'));
+    const filePath = join(directory, 'state.json');
+    const lockPath = `${filePath}.lock`;
+    await mkdir(lockPath);
+    await writeFile(join(lockPath, 'owner'), '99999999#');
+    const state = new FileStateStore(filePath);
+    await state.load();
+    expect(state.isOpen()).toBe(true);
+    await state.close();
+    await rm(directory, { recursive: true, force: true });
+  });
+
+  it('updates file-backed values through the typed operation', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'noorg-file-update-'));
+    const filePath = join(directory, 'state.json');
+    const state = new FileStateStore(filePath);
+    await state.load();
+    await state.set('count', 1);
+    await expect(state.update<number>('count', current => (current ?? 0) + 3)).resolves.toBe(4);
+    expect(state.get<number>('count')).toBe(4);
+    await state.close();
+
+    const reopened = new FileStateStore(filePath);
+    await reopened.load();
+    expect(reopened.get<number>('count')).toBe(4);
+    await reopened.close();
+    await rm(directory, { recursive: true, force: true });
+  });
 });

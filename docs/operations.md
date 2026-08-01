@@ -22,6 +22,10 @@ curl -X POST -H "Authorization: Bearer $NOORG_HTTP_AUTH_TOKEN" \
   http://localhost:3000/v1/tasks
 ```
 
+## HTTP hardening
+
+The HTTP server bounds its request surface regardless of the deployment host. It sets explicit header, request, and keep-alive timeouts; caps concurrent in-flight requests (rejecting excess with `503 SERVER_BUSY`); and throttles repeated authentication failures per client (returning `429 AUTH_RATE_LIMITED` after the threshold within a window). A successful authenticated request resets that client's failure counter. These bounds are part of the server construction and apply in production where the API binds to `0.0.0.0`.
+
 ## State
 
 State is stored in the configured runtime data path. Writes use a process lock, a temporary file, and atomic rename. The current state envelope is schema version `2` with a monotonic revision; version `1` is migrated at load and invalid state fails startup rather than silently resetting data.
