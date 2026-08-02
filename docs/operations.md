@@ -16,11 +16,22 @@ curl http://localhost:3000/metrics
 curl -H "Authorization: Bearer $NOORG_HTTP_AUTH_TOKEN" http://localhost:3000/v1/tasks
 
 # Idempotent task submission with a deadline:
-curl -X POST -H "Authorization: Bearer $NOORG_HTTP_AUTH_TOKEN" \
+curl -X POST -H "Authorization: Bearer $NOORG...OKEN" \
   -H 'Content-Type: application/json' \
   -d '{"name":"Analyze","description":"Analyze input","input":"text","idempotencyKey":"analyze-1","deadlineAt":"2030-01-01T00:00:00.000Z"}' \
   http://localhost:3000/v1/tasks
 ```
+
+## Container deployment
+
+The repository ships a multi-stage `Dockerfile` (Node 20, non-root runtime user, `dist/` only) and a `docker-compose.yml` that wires the documented configuration:
+
+```bash
+cp .env.example .env
+docker compose up --build
+```
+
+Compose binds `${NOORG_PORT:-3000}`, loads `.env`, forces `NOORG_HOST=0.0.0.0`, points `NOORG_STATE_PATH` at the named `noorg-data` volume, and health-checks `GET /ready` every 10 seconds. The container job in CI builds the same image and waits on the readiness probe before declaring success. As with any deployment, production use requires `NOORG_HTTP_AUTH_TOKEN` to be set in `.env`.
 
 ## HTTP hardening
 

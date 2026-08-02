@@ -8,6 +8,7 @@ Configuration is loaded once by `src/config/config.ts`.
 | `NOORG_LLM_PROVIDER`                       | required                                      | Explicitly selects `local` or `openai`                              |
 | `OPENAI_API_KEY`                           | empty                                         | Required for the OpenAI provider                                    |
 | `OPENAI_MODEL`                             | `gpt-4o-mini`                                 | OpenAI model name                                                   |
+| `OPENAI_BASE_URL`                          | empty                                         | Optional OpenAI-compatible base URL override                        |
 | `OPENAI_TIMEOUT_MS`                        | `30000`                                       | Provider request timeout                                            |
 | `OPENAI_MAX_RETRIES`                       | `2`                                           | Maximum retry count for retryable provider failures                 |
 | `OPENAI_RETRY_BASE_MS`                     | `250`                                         | Exponential retry backoff base                                      |
