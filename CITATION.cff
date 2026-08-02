@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use NoOrg in your work, please cite this repository."
+title: "NoOrg: A Typed, Durable Runtime for Explicit Agent Execution"
+abstract: >-
+  NoOrg is a typed TypeScript runtime for coordinating explicitly registered
+  agents through a durable task state machine, with explicit language-model
+  providers, bounded lifecycle behavior, and an evidence-gated release
+  process documented in a reproducible manuscript.
+authors:
+  - family-names: Friedman
+    given-names: Daniel Ari
+    orcid: "https://orcid.org/0000-0001-6232-9096"
+  - name: "Active Inference Institute"
+keywords:
+  - multi-agent systems
+  - task orchestration
+  - TypeScript
+  - active inference
+license: CC-BY-NC-SA-4.0
+version: 2.0.0
+repository-code: "https://github.com/ActiveInferenceInstitute/NoOrg"
