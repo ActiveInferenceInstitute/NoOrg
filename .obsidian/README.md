@@ -1,17 +1,3 @@
-# .obsidian - General Documentation
+# .obsidian
 
-## Overview
-
-This directory contains resources for the .obsidian component.
-
-## Directory Structure
-
-- **app.json**: App documentation/resource.
-- **appearance.json**: Appearance documentation/resource.
-- **core-plugins.json**: Core Plugins documentation/resource.
-- **graph.json**: Graph documentation/resource.
-- **workspace.json**: Workspace documentation/resource.
-
-## Related Documentation
-
-- [Parent Directory](../AGENTS.md)
+Local Obsidian workspace configuration (`app.json`, `appearance.json`, `core-plugins.json`, `graph.json`, `workspace.json`) for opening this repository as a vault. These files are editor-local and are not part of the runtime; the parallel `units/.obsidian/` tree participates in the reviewed corpus manifest.

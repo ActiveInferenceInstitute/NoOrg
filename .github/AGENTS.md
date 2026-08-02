@@ -1,13 +1,3 @@
-# .github - Technical Documentation
+# .github guidance
 
-## Overview
-
-This directory contains resources for the .github component.
-
-## Directory Structure
-
-- **workflows/**: Subdirectory
-
-## Related Documentation
-
-- [Parent Directory](../AGENTS.md)
+This directory holds GitHub platform resources only: the Actions workflow in `workflows/ci.yml` and the CI documentation in `README.md`. Changes to the pipeline must keep the repository gates (`npm run validate`, `npm run manuscript:check`, `npm audit --audit-level=high`) intact and must not add secrets to workflow files.

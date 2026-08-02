@@ -1,17 +1,3 @@
-# .obsidian - Technical Documentation
+# .obsidian guidance
 
-## Overview
-
-This directory contains resources for the .obsidian component.
-
-## Directory Structure
-
-- **app.json**: App documentation/resource.
-- **appearance.json**: Appearance documentation/resource.
-- **core-plugins.json**: Core Plugins documentation/resource.
-- **graph.json**: Graph documentation/resource.
-- **workspace.json**: Workspace documentation/resource.
-
-## Related Documentation
-
-- [Parent Directory](../AGENTS.md)
+This directory contains editor-local Obsidian vault configuration only. Do not treat it as product documentation; the maintained documentation index lives in `docs/README.md`, and the reviewed organizational corpus lives under `units/`.
