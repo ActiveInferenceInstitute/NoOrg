@@ -20,4 +20,4 @@ Under the following terms:
 
 For the full license text, visit: [https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
-Copyright (c) Daniel Ari Friedman (@docxology) 
+Copyright (c) Daniel Ari Friedman (@docxology)
