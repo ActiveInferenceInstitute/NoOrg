@@ -1,12 +1,12 @@
 {
   "manifestVersion": 1,
   "fileCount": 1816,
-  "linkCount": 4593,
-  "contentSha256": "3b7b36a4a583ccc3b063b0dbebc1d8e568114a66c33bda02ca4ff75d91a7bab3",
+  "linkCount": 4592,
+  "contentSha256": "50e414edcbffbacafc73000d7dea0baac0d4eb35cf573012384070e3ffd0ac13",
   "files": {
     ".obsidian/AGENTS.md": "d82644477fac54c49584e5e0efdd64e5f11d7a2dbbc0927c55befcb4191d5cfe",
     ".obsidian/README.md": "780c4ae458df99e2227f724068b3f3793039f47d125e7466c9f2d55b4af47120",
-    "AGENTS.md": "beb46ec0cc1ce8fa039c95272de5acc87b62129191b762d52131fca5295f7fa0",
+    "AGENTS.md": "1210e39a4ec02c607a1f046f5cbe9ede4890ad5fa1478f6f7728f765b79210d7",
     "Administration/AGENTS.md": "c1dc61e7ef838e177c6bc42073b27d65c0b0c19454a3d045c746cd85082dac3a",
     "Administration/Charter.md": "48f49ecff896500490cfd19c6eac2839e29869a9b7a93b18e1a2bd36fa46a4ae",
     "Administration/MeetingNotes/AGENTS.md": "63ee8d87eaae44a27749df4d9284cfb9f1ff4c11c371c466fa7bc853fe068149",
@@ -1318,7 +1318,7 @@
     "QualityAssurance/Reports/README.md": "5929650209a4dfa9e9d19375a1f8ad708bdd9efb8283dd0b5e2916a8908eb16f",
     "QualityAssurance/Reports/qualityassurance_reports.md": "7d0f350b656ae6a71c62445ccd9b1742b113016f4893c637cf9eef2fb209d8f8",
     "QualityAssurance/index.md": "f0fb6cf39964e4147412e66d6723ecebfcc8c0534c38b9b0f916eae5e5f08caf",
-    "README.md": "9cd54c336365239cf39cb8f471ee39f7ae11e9dd7b852a1c18b68baa24fba5bd",
+    "README.md": "2b166343d45a37ccbdfd5c474e31073453e1384d53d9ff9d1fc62a03c84f90a7",
     "Research/AGENTS.md": "ed4c1038ef3da8500e07c39afb274a29faefe995cf9e34f18c94686fcea3b607",
     "Research/Charter.md": "574db4eb05d1dd950e85d89004acf9eb593e1292c7a112f895df588c9eee6b57",
     "Research/Collaboration.md": "d95ee775954a9f9f526d363b2c508279121b1cdf33e528d71817819dfe558c0e",
@@ -1819,6 +1819,6 @@
     "TrainingDevelopment/Reports/README.md": "61b5efa5279df1e92226164ce060f4c9327d217147a777e23a6a284b861c75d6",
     "TrainingDevelopment/Reports/trainingdevelopment_reports.md": "557f94156e95cbbd3b358b6b6621409f5c03623796a69c13897d201fff1da6d9",
     "TrainingDevelopment/index.md": "2be7ad2d1ccb7831850a4a2fcc1afbd1d7600dba839860efbe892862d3c56ad6",
-    "unitdirectory.md": "ac6b2e5818797ad0a65b1ec61c4e91c5e9cba828663da2601a104087bede88aa"
+    "unitdirectory.md": "47b6c0bb931b012d352efd0b5feb343a5b9823c83d83081dbccfc85d1dd23556"
   }
 }

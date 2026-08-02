@@ -1,26 +1,19 @@
 # Organizational Units
 
-Organizational unit definitions and structures.
+This directory is the reviewed Markdown corpus of organizational domain content: unit charters, policies, processes, reports, and relationship definitions under `units/`.
 
-## Overview
+## Content
 
-This directory contains markdown files defining organizational units, their structures, relationships, and configurations.
+Units are organized hierarchically by unit directory (Administration, Development, Research, and so on). Each unit directory preserves its local conventions: a README, charter, policy, process, and report documents.
 
-## Structure
+## Integrity and use
 
-Units are organized hierarchically with:
-- Unit definitions
-- Relationship specifications
-- Policy documents
-- Process definitions
-- Meeting notes
-- Reports
+The corpus is domain content, not executable code. The runtime never loads it implicitly and never infers behavior from it. When a workflow needs unit content, callers supply the relevant document or structured extraction as task input. The opt-in `UnitCorpus` adapter verifies `units/manifest.json` before exposing read-only Markdown documents with source paths and content digests.
 
-## Usage
+`units/manifest.json` is the reviewed integrity record: it stores a digest for every Markdown path plus a corpus content hash and link count. Inspect changes with `npm run units:manifest:diff` before review and refresh the reviewed record with `npm run units:manifest:update` only after the content change has been inspected.
 
-Units are used by the Organizational Units Framework to create hierarchical organizational structures and deploy multi-agent systems.
+## Related documentation
 
-## Related Documentation
-
-- [Units System Documentation](../docs/architecture.md)
-- [Main README](../README.md)
+- [Units documentation](../docs/units.md)
+- [Architecture](../docs/architecture.md)
+- [Repository overview](../README.md)

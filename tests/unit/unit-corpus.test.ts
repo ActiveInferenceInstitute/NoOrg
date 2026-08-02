@@ -12,7 +12,7 @@ describe('UnitCorpus', () => {
   it('verifies the reviewed manifest and preserves document provenance', async () => {
     const corpus = new UnitCorpus();
     await expect(corpus.manifest()).resolves.toEqual(
-      expect.objectContaining({ manifestVersion: 1, fileCount: 1816, linkCount: 4593 })
+      expect.objectContaining({ manifestVersion: 1, fileCount: 1816, linkCount: 4592 })
     );
     const document = await corpus.get('Administration/Charter.md');
     expect(document.provenance.manifestSha256).toMatch(/^[a-f0-9]{64}$/);
