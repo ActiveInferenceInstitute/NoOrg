@@ -54,7 +54,7 @@ Task store   Agent registry
           Local or OpenAI provider
 ```
 
-See [architecture](docs/architecture.md), [configuration](docs/configuration.md), [operations](docs/operations.md), and [testing](docs/testing.md).
+See the [documentation index](docs/README.md), [architecture](docs/architecture.md), [configuration](docs/configuration.md), [operations](docs/operations.md), and [testing](docs/testing.md). The reproducible [manuscript](docs/manuscript/README.md) documents the executable contracts, task semantics, and claim boundaries.
 
 ## Development commands
 
@@ -65,6 +65,8 @@ npm test
 npm run validate:text
 npm run validate:docs
 npm run validate:units
+npm run units:manifest:check
+npm run api:openapi:check
 npm run validate:contracts
 npm run validate:decisions
 npm run build
@@ -75,3 +77,7 @@ npm run release:check
 Generated files belong in ignored build, coverage, runtime-data, log, and `docs/manuscript/output/` directories. The repository stores source, tests, configuration, manuscript source, documentation, and domain unit content.
 
 Use `npm run release:check` before publishing or pushing release work. It composes the local validation gate, executable example, dependency audit, manuscript rendering and inspection, and whitespace checks. Use `npm run clean` only for generated build, coverage, and manuscript-output directories; runtime state under `data/` is not deleted by the cleanup command.
+
+## License
+
+NoOrg is published under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE.md). See [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and the [Code of Conduct](CODE_OF_CONDUCT.md) for collaboration guidelines. To cite this repository, use the [CITATION.cff](CITATION.cff) metadata.
