@@ -13,7 +13,7 @@ export const runtimeEventSchema = z.object({
   type: z.string().trim().min(1),
   id: z.string().trim().min(1),
   timestamp: z.string().datetime(),
-  payload: z.record(jsonValueSchema),
+  payload: z.record(z.string(), jsonValueSchema),
 });
 
 type Handler = (event: RuntimeEvent) => Promise<void> | void;

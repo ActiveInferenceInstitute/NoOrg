@@ -122,7 +122,7 @@ export function resultSchema<T>(dataSchema: ZodType<T>): ZodType<AgentResult<T>>
   return z.object({
     data: dataSchema,
     summary: z.string().trim().min(1),
-    metadata: z.record(jsonValueSchema).optional(),
+    metadata: z.record(z.string(), jsonValueSchema).optional(),
   }) as ZodType<AgentResult<T>>;
 }
 

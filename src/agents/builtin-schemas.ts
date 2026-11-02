@@ -27,6 +27,7 @@ export const analysisSchema = z.object({
 export const dataAnalysisSchema = z.object({
   rows: z.number().int().nonnegative(),
   numericColumns: z.record(
+    z.string(),
     z.object({
       count: z.number().int().nonnegative(),
       minimum: z.number(),

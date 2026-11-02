@@ -21,12 +21,12 @@ export interface StateStore {
 const envelopeSchema = z.object({
   schemaVersion: z.literal(2),
   revision: z.number().int().nonnegative(),
-  state: z.record(jsonValueSchema),
+  state: z.record(z.string(), jsonValueSchema),
 });
 
 const previousEnvelopeSchema = z.object({
   schemaVersion: z.literal(1),
-  state: z.record(jsonValueSchema),
+  state: z.record(z.string(), jsonValueSchema),
 });
 
 function clone<T>(value: T): T {

@@ -114,7 +114,7 @@ class SdkOpenAITransport implements OpenAITransport {
     request: OpenAITransportRequest,
     signal: AbortSignal
   ): Promise<OpenAITransportResponse> {
-    type ParseRequest = Parameters<OpenAI['beta']['chat']['completions']['parse']>[0];
+    type ParseRequest = Parameters<OpenAI['chat']['completions']['parse']>[0];
     const params = {
       model: request.model,
       messages: request.messages,
@@ -122,7 +122,7 @@ class SdkOpenAITransport implements OpenAITransport {
       ...(request.maxTokens === undefined ? {} : { max_tokens: request.maxTokens }),
       ...(request.temperature === undefined ? {} : { temperature: request.temperature }),
     } as ParseRequest;
-    const response = await this.client.beta.chat.completions.parse(params, { signal });
+    const response = await this.client.chat.completions.parse(params, { signal });
     const choice = response.choices[0]?.message;
     return {
       id: response.id,
