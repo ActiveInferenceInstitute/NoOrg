@@ -24,7 +24,7 @@ curl -X POST -H "Authorization: Bearer $NOORG...OKEN" \
 
 ## Container deployment
 
-The repository ships a multi-stage `Dockerfile` (Node 20, non-root runtime user, `dist/` only) and a `docker-compose.yml` that wires the documented configuration:
+The repository ships a multi-stage `Dockerfile` (Node 24, non-root runtime user, `dist/` only) and a `docker-compose.yml` that wires the documented configuration:
 
 ```bash
 cp .env.example .env

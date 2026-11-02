@@ -1,6 +1,6 @@
 # Reproducibility {#sec:reproducibility}
 
-The supported baseline is Node.js 20 or newer and the package-lock-resolved dependency graph. A clean checkout can install dependencies with `npm ci`, run the TypeScript type check, lint, formatting check, Jest tests, corpus and documentation validators, and production build. The manuscript pipeline then performs six explicit stages:
+The supported baseline is Node.js 22 or newer and the package-lock-resolved dependency graph. A clean checkout can install dependencies with `npm ci`, run the TypeScript type check, lint, formatting check, Jest tests, corpus and documentation validators, and production build. The manuscript pipeline then performs six explicit stages:
 
 1. `manuscript:evidence` executes the real local runtime path and writes JSON evidence.
 2. `manuscript:figures` converts tracked Mermaid sources into generated images.

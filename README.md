@@ -1,10 +1,10 @@
 # NoOrg
 
-NoOrg is a typed TypeScript runtime for coordinating executable agents with durable task state, explicit language-model providers, and observable lifecycle behavior.
+NoOrg is a typed TypeScript runtime for coordinating executable agents with durable task state, explicit language-model providers, and observable lifecycle behavior. It is developed and maintained by the [Active Inference Institute](https://activeinference.institute/).
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js 22 or newer
 - npm
 - An OpenAI API key only when using the explicit `openai` provider
 

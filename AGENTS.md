@@ -1,6 +1,6 @@
 # NoOrg engineering guide
 
-NoOrg is a TypeScript 5.8+ application targeting Node.js 20+. The source of truth is `src/`; generated output is never edited or committed.
+NoOrg is a TypeScript 5.8+ application targeting Node.js 22+. The source of truth is `src/`; generated output is never edited or committed.
 
 ## Runtime rules
 
