@@ -11,7 +11,7 @@ export const jsonValueSchema: z.ZodType<JsonValue> = z.lazy(() =>
     z.boolean(),
     z.null(),
     z.array(jsonValueSchema),
-    z.record(jsonValueSchema),
+    z.record(z.string(), jsonValueSchema),
   ])
 );
 
@@ -66,7 +66,7 @@ export const agentResultSchema = z
   .object({
     data: jsonValueSchema,
     summary: z.string().trim().min(1),
-    metadata: z.record(jsonValueSchema).optional(),
+    metadata: z.record(z.string(), jsonValueSchema).optional(),
   })
   .strict();
 
@@ -388,6 +388,6 @@ export const runtimeStateSchema = z
   .object({
     schemaVersion: z.literal(2),
     revision: z.number().int().nonnegative(),
-    state: z.record(jsonValueSchema),
+    state: z.record(z.string(), jsonValueSchema),
   })
   .strict();
