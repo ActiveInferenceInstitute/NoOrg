@@ -22,7 +22,7 @@ jobs:
       - run: npm run validate
       - run: npm run test:coverage
         if: matrix.node-version == 24
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: noorg-dist-node-${{ matrix.node-version }}
           path: dist/
@@ -54,7 +54,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install --yes poppler-utils texlive-xetex
       - run: npm run manuscript:check
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: noorg-manuscript-source-evidence
           path: docs/manuscript/output/
