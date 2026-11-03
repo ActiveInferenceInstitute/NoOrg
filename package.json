@@ -45,7 +45,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^11.16.0",
+    "@mermaid-js/mermaid-cli": "^12.2.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.15.21",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
