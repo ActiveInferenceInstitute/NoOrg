@@ -57,5 +57,23 @@
     "ts-jest": "^29.4.15",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.5"
+    },
+    "@jest/reporters": {
+      "glob": "14.0.4"
+    },
+    "jest-config": {
+      "glob": "14.0.4"
+    },
+    "jest-runtime": {
+      "glob": "14.0.4"
+    },
+    "test-exclude": {
+      "glob": "14.0.4",
+      "minimatch": "11.0.5"
+    }
   }
 }
