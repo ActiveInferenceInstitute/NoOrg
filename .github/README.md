@@ -11,6 +11,9 @@ GitHub-specific repository resources.
 - **security** — `npm audit --audit-level=high` and `npm run validate:text` (tracked-file policy and prohibited-vocabulary scan).
 - **live-provider** — runs the live OpenAI suite only when triggered manually via `workflow_dispatch`, using the repository's `OPENAI_API_KEY` secret.
 - **container** — builds the Docker image and waits on its `/ready` probe before passing.
+- **gnn conformance (pinned)** — verifies the GNN parser pin in `.github/gnn-pin.json`
+  (see `.github/GNN.md`); NoOrg has no `.gnn.md` model file, so the job validates the
+  pinned upstream exemplar.
 
 ## Related
 
