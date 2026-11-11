@@ -81,3 +81,11 @@ Use `npm run release:check` before publishing or pushing release work. It compos
 ## License
 
 NoOrg is published under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE.md). See [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and the [Code of Conduct](CODE_OF_CONDUCT.md) for collaboration guidelines. To cite this repository, use the [CITATION.cff](CITATION.cff) metadata.
+
+## InstituteOS sidecar
+
+This repository carries a committed [`.aii/`](.aii/README.md) sidecar with curated
+InstituteOS metadata (`aii-sidecar/v1`): category, maturity, ecosystem relations,
+key artifacts, provenance, and portable tasks. It is read by
+[InstituteOS](https://github.com/ActiveInferenceInstitute/InstituteOS) tooling and
+does not affect the project's build or runtime.
