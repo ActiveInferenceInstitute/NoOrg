@@ -13,12 +13,19 @@ NoOrg is a TypeScript 5.8+ application targeting Node.js 22+. The source of trut
 
 ## Verification
 
-Run `npm run validate` before handing off work. Live provider checks require an explicit OpenAI profile and are never part of the ordinary local test command.
+Run `npm test` for the ordinary unit suite and `npm run validate` (type check, lint, format, tests with coverage, and the repository validators) before handing off work. Live provider checks require an explicit OpenAI profile and are never part of the ordinary local test command.
 
 ## Repository layout
 
 - `src/agents/` executable agent implementations
+- `src/config/` environment and runtime configuration loading
+- `src/content/` reviewed organizational corpus access and integrity manifest
 - `src/coordination/` task scheduling and lifecycle
+- `src/domain/` shared types, errors, clock, and redaction helpers
+- `src/events/` lifecycle event publication
+- `src/http/` HTTP server, routes, and authentication
+- `src/logging/` structured logging
+- `src/metrics/` runtime counters and readiness reporting
 - `src/providers/` local and OpenAI provider adapters
 - `src/state/` versioned state stores
 - `src/tasks/` task state machine persistence
