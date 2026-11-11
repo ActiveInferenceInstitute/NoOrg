@@ -33,4 +33,6 @@ Run `npm test` for the ordinary unit suite and `npm run validate` (type check, l
 - `units/` organizational domain content
 - `docs/` maintained product documentation
 
+Each maintained directory carries a local guide: `src/`, `tests/`, and `scripts/` have their own `README.md`, and `src/`, `tests/`, `.github/`, `.obsidian/`, `scripts/`, and `units/` carry folder-level `AGENTS.md` files.
+
 The manuscript source is under `docs/manuscript/`. Run `npm run manuscript:check` when publication artifacts are in scope. Its generated output is ignored and must not be edited or committed.

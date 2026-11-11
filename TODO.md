@@ -2,10 +2,10 @@
 
 This file contains active future work only. Completed, obsolete, or rejected work is removed rather than archived here; Git history is the historical record, and review passes consolidate their completed findings under an explicit section below.
 
-Updated: 2026-08-02
+Updated: 2026-11-11
 Owner: Active Inference Institute
 Status: active
-Last reviewed: 2026-08-02
+Last reviewed: 2026-11-11
 
 ## Working rules
 
@@ -44,6 +44,15 @@ Implemented during the documentation-focused review; every scoped Minor and Medi
 - [x] Replace boilerplate corpus guides with content that matches `docs/units.md`, and repair the 21 invalid Mermaid closing fences in `units/unitdirectory.md`; refresh the reviewed `units/manifest.json` after inspection (3 file digests changed). Affected: `units/README.md`, `units/AGENTS.md`, `units/unitdirectory.md`, `units/manifest.json`.
 - [x] Replace auto-generated "Technical Documentation" files under `.github/` and `.obsidian/` with accurate, concise content. Affected: `.github/README.md`, `.github/AGENTS.md`, `.github/workflows/README.md`, `.obsidian/README.md`, `.obsidian/AGENTS.md`.
 - [x] Document how to run the executable example. Affected: `examples/README.md`.
+
+## Completed/Closed — 2026-11-11 documentation completeness pass
+
+Implemented during the third documentation pass; the repository's documentation tree, guides, and sidecar were brought to full coverage. All gates remain green.
+
+- [x] Add the missing folder guides for the remaining unguided top-level directories: `src/README.md`, `src/AGENTS.md`, `tests/README.md`, `tests/AGENTS.md`, and `scripts/README.md`. Affected: `src/README.md`, `src/AGENTS.md`, `tests/README.md`, `tests/AGENTS.md`, `scripts/README.md`.
+- [x] Add a status statement and table of contents to the repository README, and link the per-directory guides from a new project-guides section. Affected: `README.md`.
+- [x] Record the folder-guide convention in the engineering guide. Affected: `AGENTS.md`.
+- [x] Add the missing `institute.maturity` field to the InstituteOS sidecar so `config.yaml` matches the rendered sidecar documents, and bump `meta.updated`. The rendered `README.md` and `docs/INTEGRATION.md` were hand-checked for consistency because `aii_platform` is unavailable offline. Affected: `.aii/config.yaml`.
 
 ## Open / deferred — 2026-08-02 documentation pass
 
