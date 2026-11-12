@@ -5,19 +5,19 @@ set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
-IMAGE="noorg:gate"
-CONTAINER="noorg-gate"
+IMAGE="noorg:gate-$$"
+
+docker build --tag "$IMAGE" .
+CONTAINER=$(docker create --publish 3000:3000 \
+  --env NOORG_LLM_PROVIDER=local \
+  --env NOORG_HTTP_AUTH_TOKEN=gate-token "$IMAGE")
 
 cleanup() {
   docker rm --force "$CONTAINER" >/dev/null 2>&1 || true
 }
 trap cleanup EXIT
 
-cleanup
-docker build --tag "$IMAGE" .
-docker run --detach --name "$CONTAINER" --publish 3000:3000 \
-  --env NOORG_LLM_PROVIDER=local \
-  --env NOORG_HTTP_AUTH_TOKEN=gate-token "$IMAGE"
+docker start "$CONTAINER"
 
 for attempt in $(seq 1 30); do
   echo "readiness attempt ${attempt}/30"

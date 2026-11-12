@@ -14,7 +14,7 @@ dependencies.
 | Job key | Display name | Arms | Node |
 | --- | --- | --- | --- |
 | `quality` | quality (node 24) | `lint types format docs policy build` | 24 |
-| `test` | test (node 22) / test (node 24) | `test:fast` on 22, `test:full` on 24 | 22, 24 |
+| `test` | test (node 22) / test (node 24) | `test:offline` on 22, `test:full` on 24 | 22, 24 |
 | `security` | security | `security` (`npm audit --audit-level=high`) | 24 |
 | `container` | container | `container`; runs `scripts/container-check.sh`, no Node install | — |
 | `manuscript-source` | manuscript source | `manuscript`; installs pinned Pandoc, Pandoc-crossref, XeLaTeX, and a headless browser | 24 |

@@ -24,6 +24,7 @@ otherwise.
 | `lint` | ESLint over `src/`, `tests/`, and `scripts/`. |
 | `format` | Prettier formatting check for the same trees. |
 | `test:fast` | `tests/unit` only: the fastest test selection. |
+| `test:offline` | Both offline suites without coverage instrumentation; preserves Node 22 compatibility coverage in CI. |
 | `test:full` | Unit and integration suites with the enforced coverage thresholds (90% lines, 80% branches). |
 | `docs` | Relative Markdown links and anchors across every Markdown file. |
 | `policy` | Tracked-file policy, unit corpus, corpus manifest, OpenAPI contract, contract alignment, and decision records. |
@@ -48,12 +49,12 @@ daemon, and the manuscript arm needs Pandoc, Pandoc-crossref, XeLaTeX,
 
 ## CI parity
 
-`.github/workflows/ci.yml` runs the same arms through `./run.sh`, once each:
+`.github/workflows/ci.yml` runs the same arms, once each:
 
 | Job | Key and display name | Arms |
 | --- | --- | --- |
 | Quality | `quality` — quality (node 24) | `lint types format docs policy build` |
-| Tests | `test` — test (node 22) / test (node 24) | `test:fast` on Node 22, `test:full` on Node 24 |
+| Tests | `test` — test (node 22) / test (node 24) | `test:offline` on Node 22, `test:full` on Node 24 |
 | Security | `security` — security | `security` |
 | Container | `container` — container | `container` |
 | Manuscript | `manuscript-source` — manuscript source | `manuscript` |
@@ -69,10 +70,10 @@ the exact scripts their arms wrap (`scripts/container-check.sh` and
 ## Measured arm times
 
 `./run.sh report` runs every measured arm once on the current host and rewrites
-[`_generated/gate-timings.md`](_generated/gate-timings.md) with wall time per
-arm and the test/coverage evidence from the run. The pre-change baseline is
-recorded in [`_generated/gate-baseline.json`](_generated/gate-baseline.json);
-the generated page shows both columns.
+[`_generated/gate-timings.md`](_generated/gate-timings.md) with wall time per arm
+and test/coverage evidence. Pre-change command measurements are recorded in
+[`_generated/gate-baseline.json`](_generated/gate-baseline.json).
+The passes use a shared host and are not a controlled speedup benchmark.
 
 ## GNN conformance
 

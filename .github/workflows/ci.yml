@@ -51,9 +51,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci
-      - name: Fast suite (tests/unit)
+      - name: Offline suites (unit and integration)
         if: matrix.node-version == 22
-        run: ./run.sh test:fast
+        run: ./run.sh test:offline
       - name: Full suite with coverage thresholds
         if: matrix.node-version == 24
         run: ./run.sh test:full

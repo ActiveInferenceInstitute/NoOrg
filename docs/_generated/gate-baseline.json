@@ -1,28 +1,30 @@
 {
   "captured": "2026-11-12",
-  "note": "pre-change commands measured once each on darwin arm64, Node 26.13.0, before the ./run.sh entry point existed",
+  "method": "each pre-change command run once on this host; successful exit codes were checked",
+  "runtime": "Node v26.13.0; warm dependency and Jest caches",
+  "note": "shared-host point measurements; the later report observed Node v26.13.1, so runtime and load differences preclude attributing timing deltas to this change",
   "commands": {
     "types": "npm run type-check",
     "lint": "npm run lint",
     "format": "npm run format:check",
-    "test:fast": "npx jest --runInBand tests/unit",
-    "test:full": "npm run test:coverage",
+    "test:fast": "npx jest --runInBand tests/unit (no test:fast script existed)",
+    "test:full": "npx jest --coverage --runInBand (the previous test:coverage command)",
     "docs": "npm run validate:docs",
     "policy": "npm run validate:text, validate:units, units:manifest:check, api:openapi:check, validate:contracts, validate:decisions (six separate runs, summed)",
     "build": "npm run build",
-    "gnn": "the two inline python blocks of the gnn-conformance job (second measurement; the first, at 4.85s, reused a wheel built by the new script)",
+    "gnn": "the two inline python blocks of the gnn-conformance job",
     "manuscript": "npm run manuscript:check"
   },
   "arms": {
-    "types": 7.79,
-    "lint": 10.94,
-    "format": 3.37,
-    "test:fast": 18.32,
-    "test:full": 31.35,
-    "docs": 8.59,
-    "policy": 9.45,
-    "build": 7.38,
-    "gnn": 22.87,
-    "manuscript": 62.12
+    "types": 2.11,
+    "lint": 3.07,
+    "format": 1.23,
+    "test:fast": 4.13,
+    "test:full": 14.61,
+    "docs": 3.74,
+    "policy": 4.18,
+    "build": 2.4,
+    "gnn": 1.19,
+    "manuscript": 25.4
   }
 }

@@ -35,9 +35,10 @@ into `output/manuscript/`, and `validate` rejects an unresolved or unknown token
 The declared tokens are `RELEASE_DATE`, `EVIDENCE_TEST_COUNT`,
 `EVIDENCE_UNIT_FILES`, `EVIDENCE_LINK_COUNT`, `EVIDENCE_COMPLETED_STATUS`,
 `EVIDENCE_TOTAL_TOKENS`, `EVIDENCE_COST_USD`, `EVIDENCE_STATE_REVISION`, and
-`EVIDENCE_EVENT_DELIVERIES`; the generator and the validator agree on that list,
-which is the manuscript's variables file. `config.yaml` consumes `RELEASE_DATE`
-as its `date`.
+`EVIDENCE_EVENT_DELIVERIES`. The declared variable input is the generated
+`output/evidence/runtime.json`; the generator maps its fields to these tokens,
+and the validator checks the same token list. `config.yaml` consumes
+`RELEASE_DATE` as its `date`.
 
 The figure registry is the `figures` list in `scripts/manuscript.ts`
 (`architecture`, `lifecycle`, `provider`, `persistence`, `verification`); the
