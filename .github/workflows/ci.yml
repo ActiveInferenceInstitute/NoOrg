@@ -6,8 +6,16 @@ on:
     branches: [main]
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   validate:
+    timeout-minutes: 60
     runs-on: ubuntu-24.04
     strategy:
       matrix:
@@ -28,6 +36,7 @@ jobs:
           path: dist/
 
   manuscript-source:
+    timeout-minutes: 120
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -60,6 +69,7 @@ jobs:
           path: docs/manuscript/output/
 
   security:
+    timeout-minutes: 60
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -72,6 +82,7 @@ jobs:
       - run: npm run validate:text
 
   live-provider:
+    timeout-minutes: 60
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     steps:
@@ -87,6 +98,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
   container:
+    timeout-minutes: 120
     needs: validate
     runs-on: ubuntu-24.04
     steps:
@@ -95,6 +107,7 @@ jobs:
       - run: docker run --detach --name noorg-ci --publish 3000:3000 --env NOORG_LLM_PROVIDER=local --env NOORG_HTTP_AUTH_TOKEN=ci-token noorg:ci
       - run: |
           for attempt in $(seq 1 30); do
+            echo "readiness attempt ${attempt}/30"
             if curl --fail --silent http://127.0.0.1:3000/ready; then exit 0; fi
             sleep 1
           done

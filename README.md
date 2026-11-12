@@ -2,6 +2,22 @@
 
 NoOrg is a typed TypeScript runtime for coordinating executable agents with durable task state, explicit language-model providers, and observable lifecycle behavior. It is developed and maintained by the [Active Inference Institute](https://activeinference.institute/).
 
+## Status
+
+NoOrg is an active research runtime at working-copy maturity. The default development profile runs fully offline against the deterministic local provider; the OpenAI provider and the live test suite require an `OPENAI_API_KEY`. Container deployment uses the committed `Dockerfile` and `docker-compose.yml`. External agent modules require explicit trust configuration.
+
+## Contents
+
+- [Requirements](#requirements)
+- [Quick start](#quick-start)
+- [Runtime surface](#runtime-surface)
+- [Example](#example)
+- [Architecture](#architecture)
+- [Development commands](#development-commands)
+- [Project guides](#project-guides)
+- [License](#license)
+- [InstituteOS sidecar](#instituteos-sidecar)
+
 ## Requirements
 
 - Node.js 22 or newer
@@ -78,6 +94,25 @@ Generated files belong in ignored build, coverage, runtime-data, log, and `docs/
 
 Use `npm run release:check` before publishing or pushing release work. It composes the local validation gate, executable example, dependency audit, manuscript rendering and inspection, and whitespace checks. Use `npm run clean` only for generated build, coverage, and manuscript-output directories; runtime state under `data/` is not deleted by the cleanup command.
 
+## Project guides
+
+Each maintained directory carries a local guide:
+
+- [`docs/`](docs/README.md) — documentation index, with per-topic and manuscript pages.
+- [`src/`](src/README.md) — source modules and runtime conventions.
+- [`tests/`](tests/README.md) — unit, integration, and live suites.
+- [`scripts/`](scripts/README.md) — repository validation and generation gates.
+- [`units/`](units/README.md) — reviewed organizational corpus and its integrity manifest.
+- [`examples/`](examples/README.md) — the runnable executable example.
+
 ## License
 
 NoOrg is published under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE.md). See [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and the [Code of Conduct](CODE_OF_CONDUCT.md) for collaboration guidelines. To cite this repository, use the [CITATION.cff](CITATION.cff) metadata.
+
+## InstituteOS sidecar
+
+This repository carries a committed [`.aii/`](.aii/README.md) sidecar with curated
+InstituteOS metadata (`aii-sidecar/v1`): category, maturity, ecosystem relations,
+key artifacts, provenance, and portable tasks. It is read by
+[InstituteOS](https://github.com/ActiveInferenceInstitute/InstituteOS) tooling and
+does not affect the project's build or runtime.

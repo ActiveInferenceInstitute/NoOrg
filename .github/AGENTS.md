@@ -1,3 +1,3 @@
 # .github guidance
 
-This directory holds GitHub platform resources only: the Actions workflow in `workflows/ci.yml` and the CI documentation in `README.md`. Changes to the pipeline must keep the repository gates (`npm run validate`, `npm run manuscript:check`, `npm audit --audit-level=high`) intact and must not add secrets to workflow files.
+This directory holds GitHub platform resources only: the Actions workflow in `workflows/ci.yml` and its guide in `workflows/README.md`, the CI documentation in `README.md`, the weekly update configuration in `dependabot.yml`, the GNN conformance notes in `GNN.md`, and the pinned parser revision in `gnn-pin.json`. Changes to the pipeline must keep the repository gates (`npm run validate`, `npm run manuscript:check`, `npm audit --audit-level=high`) intact and must not add secrets to workflow files. Keep action versions pinned to full commit SHAs with a version comment; Dependabot updates them.

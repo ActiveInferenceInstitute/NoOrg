@@ -1,13 +1,17 @@
-# AII sidecar — InstituteOS metadata. Schema: instituteos.platform.aii_sidecar
+# AII sidecar — InstituteOS metadata. Schema: aii_platform.aii_sidecar
 meta:
-  updated: '2026-06-30'
+  sidecar_version: 1.2.1
+  updated: '2026-11-11'
 repo:
   name: NoOrg
   slug: noorg
   full_name: ActiveInferenceInstitute/NoOrg
-  description: NoOrg is a Real Org
+  description: NoOrg is a typed TypeScript runtime for coordinating executable agents
+    with durable task state, explicit language-model providers, and observable lifecycle
+    behavior. It is developed and maintained by the Active Inference Institute.
 institute:
   category: research
+  maturity: wip
   steward: Active Inference Institute
 ecosystem:
   relations:
@@ -27,22 +31,40 @@ artifacts:
 - path: package.json
   kind: code
   description: Node package config.
+- path: AGENTS.md
+  kind: doc
+  description: Agent guidance.
+- path: CITATION.cff
+  kind: citation
+  description: Machine-readable citation metadata.
+- path: tests
+  kind: test
+  description: Test suite.
+- path: docs
+  kind: doc
+  description: Documentation tree.
+- path: CHANGELOG.md
+  kind: doc
+  description: Changelog.
 provenance:
-  license: see-license-file
+  license: CC-BY-NC-SA-4.0
   citation:
     text: Active Inference Institute — NoOrg.
 instituteos:
   tags:
   - noorg
-  - real
-  - org
-  - html
+  - typescript
+  - agents
+  - runtime
+  - llm
 capabilities:
 - node-package
 - tested
 - documentation
 - containerized
 - dataset
+- ci
+- citation
 tasks:
   test:
     cmd: npm run test
@@ -53,3 +75,10 @@ tasks:
   lint:
     cmd: npm run lint
     description: npm lint.
+docs:
+- README.md
+- AGENTS.md
+- docs/INTEGRATION.md
+- docs/README.md
+- docs/AGENTS.md
+schema: aii-sidecar/v1
