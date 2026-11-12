@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Corrected sidecar documentation paths to the existing `.aii/docs/` guides; manuscript provenance now records `sourceDirty` alongside HEAD, and extracted PDF text is checked for the same unresolved tokens/references as HTML.
 - Replaced the monolithic validation command with `./run.sh`, one gate entry point whose arms (`types`, `lint`, `format`, `test:fast`, `test:full`, `docs`, `policy`, `build`, `gnn`, `manuscript`, `security`, `container`, `live`) each call a single npm or repository script. CI now runs each arm once instead of running the full gate twice and repeating the coverage run; the container and GNN jobs run the same scripts without installing Node dependencies.
 - Split the ordinary test command into a fast unit selection (`npm run test:fast`) and the coverage-gated full run (`npm run test:coverage`); both exclude `tests/live`, so no default command reaches the network, and the coverage run writes machine-readable `coverage/jest-results.json` and `coverage/coverage-summary.json`.
 - Moved the pinned GNN conformance check out of the workflow's inline Python into `scripts/gnn-conformance.py`, which validates the `gnn-importer-pin/v1` schema in `.github/gnn-pin.json` before installing the pinned revision; the container build and readiness probe moved to `scripts/container-check.sh`.
