@@ -74,21 +74,23 @@ See the [documentation index](docs/README.md), [architecture](docs/architecture.
 
 ## Development commands
 
+`./run.sh` is the single gate entry point; every arm is defined once and CI runs
+the same arms. `./run.sh --list` prints the authoritative table, and the
+[validation gate](docs/gate.md) documents each arm.
+
 ```bash
-npm run type-check
-npm run lint
-npm test
-npm run validate:text
-npm run validate:docs
-npm run validate:units
-npm run units:manifest:check
-npm run api:openapi:check
-npm run validate:contracts
-npm run validate:decisions
-npm run build
-npm run manuscript:check
+./run.sh            # fast arm: types, lint, format, unit tests, docs
+./run.sh all        # ordinary gate (the same set as npm run validate)
+./run.sh test:full  # one arm; ./run.sh --list shows them all
+./run.sh manuscript # evidence, figures, hydration, render check
+./run.sh report     # refresh docs/_generated/gate-timings.md
 npm run release:check
 ```
+
+Underlying npm scripts remain available for single steps and for tools that call
+them directly (`npm run type-check`, `npm run lint`, `npm test`,
+`npm run validate:*`, `npm run units:manifest:*`, `npm run api:openapi:*`,
+`npm run build`, `npm run manuscript:*`).
 
 Generated files belong in ignored build, coverage, runtime-data, log, and `docs/manuscript/output/` directories. The repository stores source, tests, configuration, manuscript source, documentation, and domain unit content.
 

@@ -14,10 +14,11 @@ Jest suites for the NoOrg runtime, written in TypeScript and run from the reposi
 ## Commands
 
 ```bash
-npm test                 # ordinary unit and integration suites
+npm run test:fast        # tests/unit only: the fast selection
+npm test                 # ordinary unit and integration suites, network-free
 npm run test:coverage    # coverage-augmented run with the enforced thresholds
 npm run test:integration # integration suite only
 npm run test:live        # live OpenAI suite; requires credentials
 ```
 
-Coverage thresholds are 90% lines and 80% branches. See the [testing documentation](../docs/testing.md) for the validation gate and the live-provider profile.
+Coverage thresholds are 90% lines and 80% branches. `tests/live` is excluded from `npm test` and from the coverage run, so no default command reaches the network. See the [testing documentation](../docs/testing.md) for the gate arms and the live-provider profile, and the [validation gate](../docs/gate.md) for `./run.sh`.

@@ -1,0 +1,28 @@
+{
+  "captured": "2026-11-12",
+  "note": "pre-change commands measured once each on darwin arm64, Node 26.13.0, before the ./run.sh entry point existed",
+  "commands": {
+    "types": "npm run type-check",
+    "lint": "npm run lint",
+    "format": "npm run format:check",
+    "test:fast": "npx jest --runInBand tests/unit",
+    "test:full": "npm run test:coverage",
+    "docs": "npm run validate:docs",
+    "policy": "npm run validate:text, validate:units, units:manifest:check, api:openapi:check, validate:contracts, validate:decisions (six separate runs, summed)",
+    "build": "npm run build",
+    "gnn": "the two inline python blocks of the gnn-conformance job (second measurement; the first, at 4.85s, reused a wheel built by the new script)",
+    "manuscript": "npm run manuscript:check"
+  },
+  "arms": {
+    "types": 7.79,
+    "lint": 10.94,
+    "format": 3.37,
+    "test:fast": 18.32,
+    "test:full": 31.35,
+    "docs": 8.59,
+    "policy": 9.45,
+    "build": 7.38,
+    "gnn": 22.87,
+    "manuscript": 62.12
+  }
+}
