@@ -69,19 +69,25 @@ function run(typeCheckResult: string, withSketch: boolean) {
 }
 
 describe('scripts/gnn-conformance.py', () => {
-  it.each(['2', 'False', 'None'])('fails closed when the type checker returns %s', value => {
-    const result = run(value, true);
-    expect(result.status).not.toBe(0);
-    expect(result.stderr).toContain(`returned ${value}`);
-    expect(result.stdout).not.toContain('"result"');
-  });
+  it.each(['2', 'False', 'None'])(
+    'fails closed on the repository path when the type checker returns %s',
+    value => {
+      const result = run(value, true);
+      expect(result.status).not.toBe(0);
+      expect(result.stderr).toContain(`did not pass the repository sketches (returned ${value}`);
+      expect(result.stdout).not.toContain('"result"');
+    }
+  );
 
-  it('fails closed on the pinned exemplar path too', () => {
-    const result = run('2', false);
-    expect(result.status).not.toBe(0);
-    expect(result.stderr).toContain('did not pass the pinned exemplar');
-    expect(result.stdout).not.toContain('"result"');
-  });
+  it.each(['2', 'False', 'None'])(
+    'fails closed on the pinned exemplar path when the type checker returns %s',
+    value => {
+      const result = run(value, false);
+      expect(result.status).not.toBe(0);
+      expect(result.stderr).toContain(`did not pass the pinned exemplar (returned ${value}`);
+      expect(result.stdout).not.toContain('"result"');
+    }
+  );
 
   it('labels a repository-sketch pass as repository content', () => {
     const result = run('True', true);
