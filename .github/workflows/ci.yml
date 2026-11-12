@@ -13,11 +13,35 @@ concurrency:
 permissions:
   contents: read
 
+# Node jobs run `./run.sh` arms; the arms are defined once in scripts/gate.ts and
+# call the npm scripts in package.json. The container and gnn-conformance jobs run
+# the same scripts their arms wrap, without installing Node dependencies. No job
+# repeats an arm another job already ran, and each job installs dependencies once.
+
 jobs:
-  validate:
-    timeout-minutes: 60
+  quality:
+    name: quality (node 24)
+    timeout-minutes: 30
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: ./run.sh lint types format docs policy build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: noorg-dist
+          path: dist/
+
+  test:
+    name: test (node ${{ matrix.node-version }})
+    timeout-minutes: 45
     runs-on: ubuntu-24.04
     strategy:
+      fail-fast: false
       matrix:
         node-version: [22, 24]
     steps:
@@ -27,15 +51,38 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci
-      - run: npm run validate
-      - run: npm run test:coverage
+      - name: Fast suite (tests/unit)
+        if: matrix.node-version == 22
+        run: ./run.sh test:fast
+      - name: Full suite with coverage thresholds
         if: matrix.node-version == 24
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        run: ./run.sh test:full
+
+  security:
+    name: security
+    timeout-minutes: 20
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          name: noorg-dist-node-${{ matrix.node-version }}
-          path: dist/
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: ./run.sh security
+
+  container:
+    name: container
+    timeout-minutes: 120
+    needs: [quality, test]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # Same script as the container arm; this job installs no Node toolchain.
+      - run: bash scripts/container-check.sh
 
   manuscript-source:
+    name: manuscript source
     timeout-minutes: 120
     runs-on: ubuntu-24.04
     steps:
@@ -62,27 +109,15 @@ jobs:
           pandoc-crossref --version
       - run: sudo apt-get update
       - run: sudo apt-get install --yes poppler-utils texlive-xetex
-      - run: npm run manuscript:check
+      - run: ./run.sh manuscript
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: noorg-manuscript-source-evidence
           path: docs/manuscript/output/
 
-  security:
-    timeout-minutes: 60
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - run: npm audit --audit-level=high
-      - run: npm run validate:text
-
   live-provider:
-    timeout-minutes: 60
+    name: live provider
+    timeout-minutes: 30
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     steps:
@@ -92,31 +127,12 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run test:live
+      - run: ./run.sh live
         env:
           NOORG_LLM_PROVIDER: openai
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-  container:
-    timeout-minutes: 120
-    needs: validate
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - run: docker build --tag noorg:ci .
-      - run: docker run --detach --name noorg-ci --publish 3000:3000 --env NOORG_LLM_PROVIDER=local --env NOORG_HTTP_AUTH_TOKEN=ci-token noorg:ci
-      - run: |
-          for attempt in $(seq 1 30); do
-            echo "readiness attempt ${attempt}/30"
-            if curl --fail --silent http://127.0.0.1:3000/ready; then exit 0; fi
-            sleep 1
-          done
-          docker logs noorg-ci
-          exit 1
-      - if: always()
-        run: docker rm --force noorg-ci
-
-  # GNN pin: .github/gnn-pin.json (v5.0.3, 8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1)
+  # GNN pin: .github/gnn-pin.json (gnn-importer-pin/v1, v5.0.3, 8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1)
   gnn-conformance:
     name: gnn conformance (pinned)
     runs-on: ubuntu-latest
@@ -127,96 +143,7 @@ jobs:
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
-      - name: Install pinned GNN parser
-        run: |
-          python -m pip install --disable-pip-version-check defusedxml psutil pyyaml
-          python - <<'PY'
-          import json
-          import subprocess
-          import sys
-          from pathlib import Path
-
-          pin = json.loads(Path(".github/gnn-pin.json").read_text(encoding="utf-8"))
-          assert pin["repository"] == "ActiveInferenceInstitute/Generalized_Notation_Notation"
-          assert pin["tag"] == "v5.0.3"
-          assert pin["revision"] == "8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1"
-          spec = (
-              "generalized-notation-notation @ "
-              f"git+https://github.com/{pin['repository']}.git@{pin['revision']}"
-          )
-          subprocess.check_call(
-              [sys.executable, "-m", "pip", "install", "--disable-pip-version-check", "--no-deps", spec]
-          )
-          PY
-      - name: Verify pinned parser and repository sketches
-        run: |
-          python - <<'PY'
-          import json
-          import shutil
-          import tempfile
-          import urllib.request
-          from pathlib import Path
-
-          from gnn import __version__
-          from gnn.parsers.basic import parse_gnn_formal, validate_gnn_syntax
-          from gnn.type_checker import GNNTypeChecker
-
-          pin = json.loads(Path(".github/gnn-pin.json").read_text(encoding="utf-8"))
-          expected_version = pin["tag"].removeprefix("v")
-          if __version__ != expected_version:
-              raise SystemExit(f"installed GNN {__version__!r} does not match {pin['tag']!r}")
-
-          sketches = sorted(Path(".").rglob("*.gnn.md"))
-          if sketches:
-              for sketch in sketches:
-                  parsed = parse_gnn_formal(sketch)
-                  if parsed is None or getattr(parsed, "parse_errors", None):
-                      raise SystemExit(f"{sketch} did not parse cleanly")
-                  valid, errors = validate_gnn_syntax(sketch.read_text(encoding="utf-8"))
-                  if not valid:
-                      raise SystemExit(f"{sketch} syntax errors: {errors!r}")
-              with tempfile.TemporaryDirectory(prefix="repo-gnn-") as output_dir:
-                  model_dir = Path(output_dir) / "models"
-                  model_dir.mkdir()
-                  for index, sketch in enumerate(sketches):
-                      shutil.copy2(sketch, model_dir / f"{index:03d}_{sketch.name}")
-                  if not GNNTypeChecker().validate_gnn_files(model_dir, Path(output_dir)):
-                      raise SystemExit("GNN type checker rejected the repository sketches")
-              checked = len(sketches)
-              source = "repository"
-          else:
-              exemplar_url = (
-                  "https://raw.githubusercontent.com/ActiveInferenceInstitute/"
-                  "Generalized_Notation_Notation/"
-                  f"{pin['revision']}/input/gnn_files/basics/static_perception.md"
-              )
-              with tempfile.TemporaryDirectory(prefix="pinned-exemplar-") as output_dir:
-                  exemplar = Path(output_dir) / "static_perception.md"
-                  urllib.request.urlretrieve(exemplar_url, exemplar)
-                  parsed = parse_gnn_formal(exemplar)
-                  if parsed is None or getattr(parsed, "parse_errors", None):
-                      raise SystemExit("pinned exemplar did not parse cleanly")
-                  valid, errors = validate_gnn_syntax(exemplar.read_text(encoding="utf-8"))
-                  if not valid:
-                      raise SystemExit(f"pinned exemplar syntax errors: {errors!r}")
-                  model_dir = Path(output_dir) / "models"
-                  model_dir.mkdir()
-                  shutil.copy2(exemplar, model_dir / exemplar.name)
-                  if not GNNTypeChecker().validate_gnn_files(model_dir, Path(output_dir)):
-                      raise SystemExit("GNN type checker rejected the pinned exemplar")
-              checked = 1
-              source = "pinned-exemplar"
-
-          print(
-              json.dumps(
-                  {
-                      "gnn-version": __version__,
-                      "pin-revision": pin["revision"],
-                      "models": checked,
-                      "source": source,
-                      "result": "verified",
-                  },
-                  sort_keys=True,
-              )
-          )
-          PY
+      - name: Install pinned parser dependencies
+        run: python -m pip install --disable-pip-version-check defusedxml psutil pyyaml
+      # Same script as the gnn arm; this job installs no Node toolchain.
+      - run: python3 scripts/gnn-conformance.py
