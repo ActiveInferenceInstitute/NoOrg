@@ -31,8 +31,16 @@ It installs that exact revision with `pip` and fails when the installed
    revision, through the same three steps. This repository currently has no
    sketch, so the job reports `"source": "pinned-exemplar"`.
 
+The type checker returns `True` when every file validates, `2` when files are
+invalid or none were found, and `False` on a hard failure. Only `True` passes.
+
 The job prints a single JSON line with `gnn-version`, `pin-revision`, `models`,
-`source`, and `result`.
+`source`, `scope`, and `result`. `scope` and `result` depend on the source:
+
+| `source` | `scope` | `result` |
+| --- | --- | --- |
+| `repository` | `repository sketches` | `repository-content-passed` |
+| `pinned-exemplar` | `pinned GNN exemplar baseline` | `pinned-exemplar-baseline-passed` |
 
 ## Limits
 
