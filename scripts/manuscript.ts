@@ -347,6 +347,8 @@ function writeChecksums(): void {
       {
         generatedAt: new Date().toISOString(),
         sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root }).toString().trim(),
+        sourceDirty:
+          execFileSync('git', ['status', '--porcelain'], { cwd: root }).toString().trim() !== '',
         commands: [
           'manuscript:evidence',
           'manuscript:figures',
@@ -399,10 +401,13 @@ function inspectRendered(): void {
   if (/\{\{|\[\?/.test(html))
     throw new Error('Rendered HTML contains unresolved tokens or references');
   if (existsSync(resolve(outputRoot, 'noorg-manuscript.pdf'))) {
-    execFileSync('pdftotext', [resolve(outputRoot, 'noorg-manuscript.pdf'), '-'], {
+    const pdfText = execFileSync('pdftotext', [resolve(outputRoot, 'noorg-manuscript.pdf'), '-'], {
       cwd: root,
+      encoding: 'utf8',
       stdio: 'pipe',
     });
+    if (/\{\{|\[\?/.test(pdfText))
+      throw new Error('Rendered PDF contains unresolved tokens or references');
   }
 }
 
