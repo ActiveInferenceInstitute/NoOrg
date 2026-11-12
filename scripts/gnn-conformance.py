@@ -8,6 +8,14 @@ repository has no sketch, the pinned upstream exemplar is checked instead.
 The check is a pipeline and pin conformance baseline. It does not claim that
 the repository contains a GNN model.
 
+The type checker returns True when every file validates, 2 when files are
+invalid or none were found, and False on a hard failure. Only True passes; a
+truthiness test would let 2 through.
+
+The printed JSON carries a ``scope`` and a source-dependent ``result``:
+``repository-content-passed`` for repository sketches, and
+``pinned-exemplar-baseline-passed`` when only the pinned exemplar was checked.
+
 Usage: python3 scripts/gnn-conformance.py
 """
 
@@ -30,6 +38,10 @@ PARSER_DEPENDENCIES = (
     ("yaml", "pyyaml"),
 )
 EXEMPLAR_PATH = "input/gnn_files/basics/static_perception.md"
+SOURCE_RECEIPTS = {
+    "repository": ("repository sketches", "repository-content-passed"),
+    "pinned-exemplar": ("pinned GNN exemplar baseline", "pinned-exemplar-baseline-passed"),
+}
 
 
 def fail(message: str) -> None:
@@ -87,6 +99,12 @@ def install_parser(pin: dict[str, str]) -> None:
         )
 
 
+def require_type_check(outcome: object, label: str) -> None:
+    """Fail unless the type checker returned exactly True (not 2, False, or None)."""
+    if outcome is not True:
+        fail(f"GNN type checker did not pass the {label} (returned {outcome!r}; expected True)")
+
+
 def verify_parser(pin: dict[str, str]) -> str:
     from gnn import __version__
 
@@ -107,7 +125,7 @@ def check_sketches() -> tuple[int, str]:
         parsed = parse_gnn_formal(sketch)
         if parsed is None or getattr(parsed, "parse_errors", None):
             fail(f"{sketch.relative_to(ROOT)} did not parse cleanly")
-        valid, errors = validate_gnn_syntax(sketch.read_text(encoding="utf-8"))
+        valid, errors = validate_gnn_syntax(sketch.read_text(encoding="utf-8"), is_content=True)
         if not valid:
             fail(f"{sketch.relative_to(ROOT)} syntax errors: {errors!r}")
     with tempfile.TemporaryDirectory(prefix="repo-gnn-") as output_dir:
@@ -115,8 +133,10 @@ def check_sketches() -> tuple[int, str]:
         model_dir.mkdir()
         for index, sketch in enumerate(sketches):
             shutil.copy2(sketch, model_dir / f"{index:03d}_{sketch.name}")
-        if not GNNTypeChecker().validate_gnn_files(model_dir, Path(output_dir)):
-            fail("GNN type checker rejected the repository sketches")
+        require_type_check(
+            GNNTypeChecker().validate_gnn_files(model_dir, Path(output_dir)),
+            "repository sketches",
+        )
     return len(sketches), "repository"
 
 
@@ -135,14 +155,16 @@ def check_exemplar() -> tuple[int, str]:
         parsed = parse_gnn_formal(exemplar)
         if parsed is None or getattr(parsed, "parse_errors", None):
             fail("pinned exemplar did not parse cleanly")
-        valid, errors = validate_gnn_syntax(exemplar.read_text(encoding="utf-8"))
+        valid, errors = validate_gnn_syntax(exemplar.read_text(encoding="utf-8"), is_content=True)
         if not valid:
             fail(f"pinned exemplar syntax errors: {errors!r}")
         model_dir = Path(output_dir) / "models"
         model_dir.mkdir()
         shutil.copy2(exemplar, model_dir / exemplar.name)
-        if not GNNTypeChecker().validate_gnn_files(model_dir, Path(output_dir)):
-            fail("GNN type checker rejected the pinned exemplar")
+        require_type_check(
+            GNNTypeChecker().validate_gnn_files(model_dir, Path(output_dir)),
+            "pinned exemplar",
+        )
     return 1, "pinned-exemplar"
 
 
@@ -152,14 +174,16 @@ def main() -> None:
     install_parser(pin)
     version = verify_parser(pin)
     models, source = check_sketches()
+    scope, result = SOURCE_RECEIPTS[source]
     print(
         json.dumps(
             {
                 "gnn-version": version,
                 "pin-revision": pin["revision"],
                 "models": models,
+                "scope": scope,
                 "source": source,
-                "result": "verified",
+                "result": result,
             },
             sort_keys=True,
         )

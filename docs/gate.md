@@ -84,7 +84,10 @@ at tag `v5.0.3`, revision `8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1`), installs
 that revision, and verifies the parser version. It parses, syntax-checks, and
 type-checks every `*.gnn.md` sketch in the repository; when the repository has
 none, it checks the pinned upstream exemplar instead and reports
-`"source": "pinned-exemplar"`. See [`.github/GNN.md`](../.github/GNN.md).
+`"source": "pinned-exemplar"`. The type check must return exactly `True`; the
+printed `scope` and `result` say what was checked (`repository sketches` with
+`repository-content-passed`, or `pinned GNN exemplar baseline` with
+`pinned-exemplar-baseline-passed`). See [`.github/GNN.md`](../.github/GNN.md).
 
 The pinned parser declares its own supported Python range; CI uses Python 3.12.
 The arm needs a supported `python3` plus the parser's runtime dependencies

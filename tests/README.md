@@ -6,7 +6,7 @@ Jest suites for the NoOrg runtime, written in TypeScript and run from the reposi
 
 | Path | Purpose |
 | --- | --- |
-| `unit/` | Focused tests for agents, configuration, events, metrics, providers, security, state, tasks, and the unit corpus. |
+| `unit/` | Focused tests for agents, configuration, events, the GNN conformance script, metrics, providers, security, state, tasks, and the unit corpus. |
 | `integration/` | End-to-end coordinator and HTTP integration tests. |
 | `live/` | Opt-in live OpenAI provider test; excluded from the ordinary local run. |
 | `tsconfig.json` | TypeScript configuration shared by the suites. |
