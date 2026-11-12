@@ -34,9 +34,9 @@ It reads the pin in [`gnn-pin.json`](gnn-pin.json) (schema
 parses, the pinned revision, and the claim limits are recorded in
 [`GNN.md`](GNN.md).
 
-NoOrg's workflow installs Python with `actions/setup-python` and the parser with
-`pip`; it does not use the organization composite action
-`ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`.
+NoOrg's workflow installs Python through the pinned organization composite action
+`ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`,
+creates a seeded `uv` environment, and installs the parser with `pip`.
 
 Dependency updates for npm and GitHub Actions are proposed weekly by Dependabot
 ([`dependabot.yml`](dependabot.yml)). Every action stays pinned to a full commit

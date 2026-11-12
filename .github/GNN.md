@@ -42,10 +42,10 @@ repository contains a GNN model, and it does not evaluate model quality.
 
 ## Tooling
 
-The job installs Python with `actions/setup-python` (Python 3.12) and the
-parser's runtime dependencies (`defusedxml`, `psutil`, `pyyaml`) with `pip`. It
-does not use the organization composite action
+The job installs Python 3.12 through the pinned organization composite action
 `ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`.
+A seeded `uv` environment places that interpreter on `PATH`; `pip` installs the
+parser's runtime dependencies (`defusedxml`, `psutil`, `pyyaml`).
 
 Locally, `./run.sh gnn` needs a supported `python3` on `PATH`, the three parser
 dependencies installed for that interpreter, and network access for the pinned
