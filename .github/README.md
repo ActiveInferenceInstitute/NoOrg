@@ -11,7 +11,7 @@ GitHub-specific repository resources.
 - **security** — `npm audit --audit-level=high` and `npm run validate:text` (tracked-file policy and prohibited-vocabulary scan).
 - **live-provider** — runs the live OpenAI suite only when triggered manually via `workflow_dispatch`, using the repository's `OPENAI_API_KEY` secret.
 - **container** — builds the Docker image and waits on its `/ready` probe before passing.
-- **gnn-conformance** — installs the GNN parser pinned in `gnn-pin.json` and checks the repository's GNN sketches (falling back to the pinned exemplar) for parse, syntax, and type conformance.
+- **gnn-conformance** — installs the GNN parser pinned in `gnn-pin.json` and runs it against GNN's own pinned exemplar; this repository ships no `*.gnn.md` model, so this is a pin and pinned-parser baseline, not repository content conformance.
 
 Dependency updates for npm and GitHub Actions are proposed weekly by Dependabot (`.github/dependabot.yml`).
 
