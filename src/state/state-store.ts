@@ -225,7 +225,7 @@ export class FileStateStore implements StateStore {
         } catch {
           owner = undefined;
         }
-        let lockAge = Number.POSITIVE_INFINITY;
+        let lockAge: number;
         try {
           lockAge = Date.now() - (await stat(lockPath)).mtimeMs;
         } catch {
