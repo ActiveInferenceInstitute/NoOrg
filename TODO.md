@@ -23,6 +23,7 @@ Last reviewed: 2026-11-12
 - [x] Added `docs/gate.md`, the flat `docs/documentation-index.md`, and the generated `docs/_generated/gate-timings.md`; pre-change arm measurements are recorded in `docs/_generated/gate-baseline.json`. Affected: `docs/gate.md`, `docs/documentation-index.md`, `docs/README.md`, `docs/testing.md`, `_generated`.
 - [x] Corrected the sidecar `docs` entries to `docs/INTEGRATION.md` and `docs/AGENTS.md`, which resolve relative to `.aii/` and match the files that exist there; `aii_platform.aii_sidecar validate` reports `OK`. Affected: `.aii/config.yaml`. Evidence: #17 (`e60bede`), #18 (`a10ee20`).
 - [x] Made the manuscript evidence record `sourceDirty` alongside `sourceCommit`, and made the rendered-PDF check reject the same unresolved `{{`/`[?` tokens and references the HTML check already rejected. Affected: `scripts/manuscript.ts`. Evidence: #17 (`e60bede`).
+- [x] Made `scripts/gnn-conformance.py` require exactly `True` from `GNNTypeChecker.validate_gnn_files`, so the `2` and `False` sentinels no longer print a passing receipt; `validate_gnn_syntax` receives `is_content=True`, and the receipt's `scope`/`result` distinguish repository sketches from the pinned exemplar baseline. Affected: `scripts/gnn-conformance.py`, `.github/GNN.md`, `docs/gate.md`. Evidence: #20 (`087d49b`); `tests/unit/gnn-conformance.test.ts` asserts `2`, `False` and `None` fail on both source paths.
 
 ## Completed/Closed — 2026-08-01 red-team fix pass
 
