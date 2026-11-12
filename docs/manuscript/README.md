@@ -27,9 +27,35 @@ Supporting sources: [`preamble.md`](preamble.md) (rendering preamble), [`config.
 - `scripts/manuscript.ts` collects runtime evidence, renders figures, hydrates tokens, validates the source, renders HTML/PDF, and writes checksums.
 - `output/` is generated, ignored, and suitable for CI artifact upload.
 
+## Variables
+
+Prose never carries a hand-maintained measurement. `scripts/manuscript.ts evidence`
+writes `output/evidence/runtime.json`, `hydrate` substitutes the declared tokens
+into `output/manuscript/`, and `validate` rejects an unresolved or unknown token.
+The declared tokens are `RELEASE_DATE`, `EVIDENCE_TEST_COUNT`,
+`EVIDENCE_UNIT_FILES`, `EVIDENCE_LINK_COUNT`, `EVIDENCE_COMPLETED_STATUS`,
+`EVIDENCE_TOTAL_TOKENS`, `EVIDENCE_COST_USD`, `EVIDENCE_STATE_REVISION`, and
+`EVIDENCE_EVENT_DELIVERIES`. The declared variable input is the generated
+`output/evidence/runtime.json`; the generator maps its fields to these tokens,
+and the validator checks the same token list. `config.yaml` consumes
+`RELEASE_DATE` as its `date`.
+
+The figure registry is the `figures` list in `scripts/manuscript.ts`
+(`architecture`, `lifecycle`, `provider`, `persistence`, `verification`); the
+validator fails when a source `.mmd` or its rendered `.png` is missing.
+
+## Toolchain
+
+`manuscript:check` needs Pandoc, Pandoc-crossref, XeLaTeX, `pdftotext`, the
+Mermaid CLI from the dev dependencies, and a headless browser. CI pins Pandoc
+3.9 and Pandoc-crossref v0.3.24 and installs `poppler-utils` and `texlive-xetex`.
+The check runs `npm test` to capture test counts as evidence, so it also needs
+the installed Node dependencies.
+
 ## Commands
 
 ```bash
+./run.sh manuscript       # the whole check, the same arm CI runs
 npm run manuscript:evidence
 npm run manuscript:figures
 npm run manuscript:hydrate

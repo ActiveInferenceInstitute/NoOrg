@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Replaced the monolithic validation command with `./run.sh`, one gate entry point whose arms (`types`, `lint`, `format`, `test:fast`, `test:full`, `docs`, `policy`, `build`, `gnn`, `manuscript`, `security`, `container`, `live`) each call a single npm or repository script. CI now runs each arm once instead of running the full gate twice and repeating the coverage run; the container and GNN jobs run the same scripts without installing Node dependencies.
+- Split the ordinary test command into a fast unit selection (`npm run test:fast`) and the coverage-gated full run (`npm run test:coverage`); both exclude `tests/live`, so no default command reaches the network, and the coverage run writes machine-readable `coverage/jest-results.json` and `coverage/coverage-summary.json`.
+- Moved the pinned GNN conformance check out of the workflow's inline Python into `scripts/gnn-conformance.py`, which validates the `gnn-importer-pin/v1` schema in `.github/gnn-pin.json` before installing the pinned revision; the container build and readiness probe moved to `scripts/container-check.sh`.
+- Added `docs/gate.md`, the flat `docs/documentation-index.md`, and the generated `docs/_generated/gate-timings.md` with measured wall time per arm, test counts, and coverage; the pre-change measurements are recorded in `docs/_generated/gate-baseline.json`.
 - Hardened the HTTP request surface: explicit header/request/keep-alive timeouts, a cap on concurrent in-flight requests (`503 SERVER_BUSY`), a per-client authentication-failure throttle (`429 AUTH_RATE_LIMITED`), and constant-time bearer-token comparison.
 - Remediated a high-severity transitive `brace-expansion` dependency advisory in build/lint tooling (`npm audit fix`); `npm audit --audit-level=high` is clean.
 - Wired the 90% line / 80% branch coverage threshold into the ordinary `npm run validate` gate and closed earlier branch-coverage gaps with real regression tests (coordinator restart guard, priority inheritance, task-load integrity, file-state updates, review-scoring and data-record branches, provider usage passthrough, lock-owner parsing, event-delivery resilience).

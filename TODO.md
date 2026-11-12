@@ -2,10 +2,10 @@
 
 This file contains active future work only. Completed, obsolete, or rejected work is removed rather than archived here; Git history is the historical record, and review passes consolidate their completed findings under an explicit section below.
 
-Updated: 2026-11-11
+Updated: 2026-11-12
 Owner: Active Inference Institute
 Status: active
-Last reviewed: 2026-11-11
+Last reviewed: 2026-11-12
 
 ## Working rules
 
@@ -13,6 +13,14 @@ Last reviewed: 2026-11-11
 - Every implementation item requires source, tests, documentation, and generated-artifact alignment where applicable.
 - Preserve the single-process deployment boundary until measured evidence justifies a storage or scheduling redesign.
 - Keep live OpenAI checks explicit and opt-in; ordinary validation remains network-free.
+
+## Completed/Closed — 2026-11-12 gate and documentation pass
+
+- [x] Added `./run.sh` as the single gate entry point, with the arm list declared once in `scripts/gate.ts` and every arm calling one npm or repository script; `npm run validate` now runs the `all` arm. Affected: `run.sh`, `scripts/gate.ts`, `package.json`.
+- [x] Split the test command: `npm run test:fast` selects `tests/unit`, `npm test` keeps the network-free unit and integration suites, and `npm run test:coverage` enforces the coverage thresholds and writes `coverage/jest-results.json` and `coverage/coverage-summary.json`. Live provider coverage stays behind `npm run test:live`. Affected: `package.json`, `jest.config.cjs`, `tests/README.md`.
+- [x] Removed duplicated CI work: each job installs dependencies once, coverage runs once on Node 24, Node 22 retains both offline suites without coverage instrumentation, and `validate:text` runs only inside `policy`. Affected: `.github/workflows/ci.yml`.
+- [x] Moved the pinned GNN conformance check from inline workflow Python into `scripts/gnn-conformance.py`, which also validates the `gnn-importer-pin/v1` schema and the commit id in `.github/gnn-pin.json`; the container build and readiness probe moved into `scripts/container-check.sh`. Affected: `scripts/gnn-conformance.py`, `scripts/container-check.sh`, `.github/workflows/ci.yml`.
+- [x] Added `docs/gate.md`, the flat `docs/documentation-index.md`, and the generated `docs/_generated/gate-timings.md`; pre-change arm measurements are recorded in `docs/_generated/gate-baseline.json`. Affected: `docs/gate.md`, `docs/documentation-index.md`, `docs/README.md`, `docs/testing.md`, `_generated`.
 
 ## Completed/Closed — 2026-08-01 red-team fix pass
 

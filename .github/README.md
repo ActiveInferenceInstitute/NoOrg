@@ -4,17 +4,46 @@ GitHub-specific repository resources.
 
 ## CI validation
 
-`.github/workflows/ci.yml` runs on every push to `main` and on pull requests:
+`.github/workflows/ci.yml` runs on every push to `main` and on pull requests.
+Every job runs the arms of the single gate entry point `./run.sh`; the arms are
+defined once in `scripts/gate.ts` and documented in
+[`docs/gate.md`](../docs/gate.md). The two toolchain-isolated jobs (`container`,
+`gnn-conformance`) invoke the same scripts their arms wrap and install no Node
+dependencies.
 
-- **validate** — `npm ci` plus `npm run validate` on Node 22 and 24; the coverage-augmented test run on Node 24; the built `dist/` uploaded as an artifact.
-- **manuscript-source** — installs pinned Pandoc, Pandoc-crossref, and XeLaTeX, then runs `npm run manuscript:check`; generated `docs/manuscript/output/` uploaded as evidence.
-- **security** — `npm audit --audit-level=high` and `npm run validate:text` (tracked-file policy and prohibited-vocabulary scan).
-- **live-provider** — runs the live OpenAI suite only when triggered manually via `workflow_dispatch`, using the repository's `OPENAI_API_KEY` secret.
-- **container** — builds the Docker image and waits on its `/ready` probe before passing.
-- **gnn-conformance** — installs the GNN parser pinned in `gnn-pin.json` and checks the repository's GNN sketches (falling back to the pinned exemplar) for parse, syntax, and type conformance; NoOrg carries no `.gnn.md` model file, so the job validates the pinned upstream exemplar (see `.github/GNN.md`).
+| Job key | Display name | Arms | Node |
+| --- | --- | --- | --- |
+| `quality` | quality (node 24) | `lint types format docs policy build` | 24 |
+| `test` | test (node 22) / test (node 24) | `test:offline` on 22, `test:full` on 24 | 22, 24 |
+| `security` | security | `security` (`npm audit --audit-level=high`) | 24 |
+| `container` | container | `container`; runs `scripts/container-check.sh`, no Node install | — |
+| `manuscript-source` | manuscript source | `manuscript`; installs pinned Pandoc, Pandoc-crossref, XeLaTeX, and a headless browser | 24 |
+| `gnn-conformance` | gnn conformance (pinned) | `gnn`; runs `scripts/gnn-conformance.py`, no Node install | — |
+| `live-provider` | live provider | `live`; only on `workflow_dispatch`, with the `OPENAI_API_KEY` secret | 24 |
 
-Dependency updates for npm and GitHub Actions are proposed weekly by Dependabot (`.github/dependabot.yml`).
+Each job installs dependencies once and runs only its own arms, so no arm runs
+twice in one pipeline. The built `dist/` is uploaded from the quality job, and
+`docs/manuscript/output/` from the manuscript job.
+
+## GNN conformance
+
+`gnn-conformance` is the job key; its display name is `gnn conformance (pinned)`.
+It reads the pin in [`gnn-pin.json`](gnn-pin.json) (schema
+`gnn-importer-pin/v1`) and checks it through
+[`scripts/gnn-conformance.py`](../scripts/gnn-conformance.py). What the job
+parses, the pinned revision, and the claim limits are recorded in
+[`GNN.md`](GNN.md).
+
+NoOrg's workflow installs Python through the pinned organization composite action
+`ActiveInferenceInstitute/.github/.github/actions/setup-python-uv@7159e67315330aac8e414aebae0ad1e999a41448`,
+creates a seeded `uv` environment, and installs the parser with `pip`.
+
+Dependency updates for npm and GitHub Actions are proposed weekly by Dependabot
+([`dependabot.yml`](dependabot.yml)). Every action stays pinned to a full commit
+SHA with a version comment.
 
 ## Related
 
-- [Parent directory](../AGENTS.md)
+- [Workflow guide](workflows/README.md)
+- [Agent guide](AGENTS.md)
+- [Parent guide](../AGENTS.md)

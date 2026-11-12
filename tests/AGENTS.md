@@ -11,4 +11,4 @@ Read [`README.md`](README.md) and the top-level [`AGENTS.md`](../AGENTS.md) firs
 
 ## Verify
 
-Run `npm test` for the fast loop and `npm run validate` before handing off work.
+Run `npm run test:fast` for the fast loop (`tests/unit`) and `./run.sh all` before handing off work. `npm test` runs both offline suites; `npm run test:live` is the only command that reaches the network.

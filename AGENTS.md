@@ -13,7 +13,7 @@ NoOrg is a TypeScript 5.8+ application targeting Node.js 22+. The source of trut
 
 ## Verification
 
-Run `npm test` for the ordinary unit suite and `npm run validate` (type check, lint, format, tests with coverage, and the repository validators) before handing off work. Live provider checks require an explicit OpenAI profile and are never part of the ordinary local test command.
+`./run.sh` is the gate entry point; `./run.sh --list` prints every arm and the [validation gate](docs/gate.md) explains what each one proves. Run `npm run test:fast` for the unit loop and `./run.sh all` (the same set as `npm run validate`: type check, lint, format, tests with coverage, repository validators, and build) before handing off work. Live provider checks require an explicit OpenAI profile and are never part of the ordinary local test command.
 
 ## Repository layout
 
