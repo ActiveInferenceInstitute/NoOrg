@@ -45,7 +45,7 @@
     "example": "tsx examples/basic-workflow.ts"
   },
   "dependencies": {
-    "openai": "^7.51.0",
+    "openai": "^7.53.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
@@ -60,7 +60,7 @@
     "prettier": "^3.9.10",
     "ts-jest": "^29.4.15",
     "tsx": "^4.23.15",
-    "typescript": "^5.8.3"
+    "typescript": "^7.0.2"
   },
   "overrides": {
     "@typescript-eslint/typescript-estree": {
