@@ -1,3 +1,4 @@
+/// <reference lib="es2024.promise" />
 import { createHttpServer } from '../../src/http/server';
 import { Coordinator } from '../../src/coordination/coordinator';
 import { EventBus } from '../../src/events/event-bus';
@@ -194,39 +195,42 @@ describe('HTTP health surface', () => {
     const address = server.address();
     if (!address || typeof address === 'string') throw new Error('Test server did not bind');
     const base = `http://127.0.0.1:${address.port}`;
-    expect((await fetch(`${base}/health`)).status).toBe(200);
-    expect(((await (await fetch(`${base}/ready`)).json()) as { ready: boolean }).ready).toBe(false);
-    expect((await fetch(`${base}/metrics`)).status).toBe(404);
-    expect((await fetch(`${base}/v1/tasks/00000000-0000-4000-8000-000000000001`)).status).toBe(404);
-    expect(
-      (
-        await fetch(`${base}/v1/tasks/00000000-0000-4000-8000-000000000001/cancel`, {
+    const requestStatus = async (path: string, init?: RequestInit): Promise<number> => {
+      const response = await fetch(`${base}${path}`, {
+        ...init,
+        signal: AbortSignal.timeout(5000),
+      });
+      await response.arrayBuffer();
+      return response.status;
+    };
+    try {
+      expect(await requestStatus('/health')).toBe(200);
+      const ready = await fetch(`${base}/ready`, { signal: AbortSignal.timeout(5000) });
+      expect(await ready.json()).toEqual(expect.objectContaining({ ready: false }));
+      expect(await requestStatus('/metrics')).toBe(404);
+      expect(await requestStatus('/v1/tasks/00000000-0000-4000-8000-000000000001')).toBe(404);
+      expect(
+        await requestStatus('/v1/tasks/00000000-0000-4000-8000-000000000001/cancel', {
           method: 'POST',
         })
-      ).status
-    ).toBe(404);
-    expect((await fetch(`${base}/v1/tasks?status=unknown`)).status).toBe(400);
-    expect(
-      (
-        await fetch(`${base}/v1/tasks`, {
+      ).toBe(404);
+      expect(await requestStatus('/v1/tasks?status=unknown')).toBe(400);
+      expect(
+        await requestStatus('/v1/tasks', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ name: 'Not started', description: 'Unavailable', input: null }),
         })
-      ).status
-    ).toBe(503);
-    expect(
-      (
-        await fetch(`${base}/v1/tasks`, {
+      ).toBe(503);
+      expect(
+        await requestStatus('/v1/tasks', {
           method: 'POST',
           headers: { 'content-type': 'text/plain' },
           body: 'not-json',
         })
-      ).status
-    ).toBe(415);
-    expect(
-      (
-        await fetch(`${base}/v1/tasks`, {
+      ).toBe(415);
+      expect(
+        await requestStatus('/v1/tasks', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
@@ -235,13 +239,15 @@ describe('HTTP health surface', () => {
             input: 'x',
           }),
         })
-      ).status
-    ).toBe(413);
-    expect((await fetch(`${base}/unknown`)).status).toBe(404);
-    await new Promise<void>((resolve, reject) =>
-      server.close(error => (error ? reject(error) : resolve()))
-    );
-    await coordinator.shutdown();
+      ).toBe(413);
+      expect(await requestStatus('/unknown')).toBe(404);
+    } finally {
+      const closed = Promise.withResolvers<void>();
+      server.close(error => (error ? closed.reject(error) : closed.resolve()));
+      server.closeAllConnections();
+      await closed.promise;
+      await coordinator.shutdown();
+    }
   });
 
   it('enforces request timeouts, an in-flight cap, and authentication throttling', async () => {

@@ -30,10 +30,19 @@ NoOrg is an active research runtime at working-copy maturity. The default develo
 npm install
 cp .env.example .env
 npm run validate
-npm start
+node --env-file=.env --import tsx src/index.ts
 ```
 
-The default development profile uses the deterministic local provider and requires no network access. Production requires `NOORG_LLM_PROVIDER=openai` and `OPENAI_API_KEY`.
+Configuration reads `process.env`: a cwd `.env` is not loaded automatically by
+`npm start` or `npm run start:dev`. Node's explicit `--env-file` loads it, and
+inherited environment values take precedence. After a separately verified build,
+the corresponding launch is `node --env-file=.env dist/index.js`.
+
+Keep `NOORG_LLM_PROVIDER` explicit. The local development profile needs no model
+credentials; `OPENAI_API_KEY` is required only for `openai`. Production also
+requires `NOORG_HTTP_AUTH_TOKEN`. Blank optional key/base URL/host/auth/budget
+values mean absent, not an implicit provider or permission to omit production
+authentication. Nonempty invalid values still fail validation.
 
 ## Runtime surface
 

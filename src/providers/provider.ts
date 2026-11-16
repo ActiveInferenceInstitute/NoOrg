@@ -16,6 +16,7 @@ export interface LLMProvider {
   readonly kind: ProviderKind;
   isOpen(): boolean;
   getUsage(): UsageMetadata;
+  /** Cumulative usage for this provider instance, not a persistence delta. */
   getTaskUsage?(taskId: string): UsageMetadata;
   complete<T>(
     request: CompletionRequest<T>,
