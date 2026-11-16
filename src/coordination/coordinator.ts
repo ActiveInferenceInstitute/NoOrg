@@ -12,6 +12,7 @@ import type {
   TaskRequest,
   TaskStatus,
 } from '../domain/types';
+import { usageMetadataSchema, type UsageMetadata } from '../domain/types';
 import type { Agent } from '../agents/abstract-agent';
 import type { AgentAvailability, AgentRegistry } from '../agents/registry';
 import type { Logger } from '../logging/logger';
@@ -70,6 +71,8 @@ export class Coordinator implements TaskScheduler {
   private shutdownTimedOut = false;
   private startPromise: Promise<void> | undefined;
   private shutdownPromise: Promise<void> | undefined;
+  private readonly usageCheckpoints = new Map<string, UsageMetadata>();
+  private readonly usageMutations = new Map<string, Promise<void>>();
 
   public constructor(private readonly dependencies: CoordinatorDependencies) {
     this.repository =
@@ -163,16 +166,16 @@ export class Coordinator implements TaskScheduler {
     readonly registryReady: boolean;
     readonly shutdownTimedOut: boolean;
     readonly lastFailure?: FailureObservation;
-    readonly usage: ReturnType<LLMProvider['getUsage']>;
+    readonly usage: UsageMetadata;
   } {
-    const queued = this.repository.list('queued');
+    const { tasks: queued, total: queueDepth } = this.repository.internalSnapshot('queued');
     const blocked = this.blockedTaskCounts(queued);
     const health = {
       status: this.status,
       provider: this.dependencies.provider.kind,
       agents: this.dependencies.registry.descriptors().length,
       activeTasks: this.dependencies.registry.activeCount(),
-      queueDepth: queued.length,
+      queueDepth,
       blockedTasks: blocked.total,
       blockedCapabilityTasks: blocked.capability,
       blockedCapacityTasks: blocked.capacity,
@@ -184,7 +187,7 @@ export class Coordinator implements TaskScheduler {
       ...(this.lastFailure === undefined ? {} : { lastFailure: this.lastFailure }),
       usage: this.dependencies.provider.getUsage(),
     };
-    this.refreshMetrics(health.usage);
+    this.refreshMetrics(health.usage, queued, blocked);
     return health;
   }
 
@@ -208,6 +211,11 @@ export class Coordinator implements TaskScheduler {
     try {
       await this.dependencies.state.load();
       await this.repository.load();
+      for (const task of this.repository.internalSnapshot().tasks) {
+        const currentUsage = this.dependencies.provider.getTaskUsage?.(task.id);
+        if (currentUsage !== undefined)
+          this.usageCheckpoints.set(task.id, usageMetadataSchema.parse(currentUsage));
+      }
       const recovered = await this.repository.recoverInterruptedTasks();
       await this.dependencies.registry.initialize({
         provider: this.dependencies.provider,
@@ -307,9 +315,8 @@ export class Coordinator implements TaskScheduler {
       0,
       this.dependencies.maxConcurrentTasks - this.dependencies.registry.activeCount()
     );
-    if (available === 0) return 0;
-    for (const task of this.repository.list('queued')) {
-      if (launched >= available) break;
+    for (const task of this.repository.internalSnapshot('queued').tasks) {
+      if (this.status !== 'running') break;
       const now = this.dependencies.clock.now().getTime();
       if (task.deadlineAt !== undefined && Date.parse(task.deadlineAt) <= now) {
         const expired = await this.repository.failQueued(task.id, {
@@ -346,6 +353,7 @@ export class Coordinator implements TaskScheduler {
         continue;
       }
       if (parentState === 'blocked') continue;
+      if (launched >= available) continue;
       const candidate = this.toAgentTask(task);
       const lease = this.dependencies.registry.acquire(candidate);
       if (!lease) continue;
@@ -359,6 +367,19 @@ export class Coordinator implements TaskScheduler {
           taskId: task.id,
           error,
         });
+        continue;
+      }
+      if (this.status !== 'running') {
+        try {
+          if (this.repository.get(started.id)?.status === 'running')
+            await this.cancelTask(started.id);
+        } finally {
+          lease.release();
+        }
+        break;
+      }
+      if (this.repository.get(started.id)?.status !== 'running') {
+        lease.release();
         continue;
       }
       const controller = new AbortController();
@@ -405,14 +426,16 @@ export class Coordinator implements TaskScheduler {
     });
 
     try {
-      const result = await Promise.race([operation, timeout]);
+      let result: AgentResult;
+      try {
+        result = await Promise.race([operation, timeout]);
+      } finally {
+        clearTimeout(timer);
+      }
       const current = this.repository.get(task.id);
       if (this.status === 'running' && current?.status === 'running') {
-        const taskUsage = this.dependencies.provider.getTaskUsage?.(task.id);
-        const completed = await this.repository.completeWithUsage(
-          task.id,
-          agent.validateResult(result),
-          taskUsage
+        const completed = await this.commitProviderUsage(task.id, usage =>
+          this.repository.completeWithUsage(task.id, agent.validateResult(result), usage)
         );
         this.dependencies.metrics.increment('tasks_completed');
         this.dependencies.metrics.observe(
@@ -420,6 +443,8 @@ export class Coordinator implements TaskScheduler {
           this.dependencies.clock.now().getTime() - startedAt
         );
         await this.publishSafely('task.completed', completed);
+      } else {
+        await this.recordProviderUsage(task.id);
       }
     } catch (error) {
       if (timedOut) {
@@ -442,7 +467,6 @@ export class Coordinator implements TaskScheduler {
         }
       }
     } finally {
-      if (timer) clearTimeout(timer);
       release();
       this.taskControllers.delete(task.id);
     }
@@ -455,7 +479,7 @@ export class Coordinator implements TaskScheduler {
     this.dependencies.metrics.increment(
       failed.status === 'queued' ? 'tasks_retried' : 'tasks_failed'
     );
-    this.recordFailure(error);
+    this.recordTaskFailure(error);
     await this.publishSafely(failed.status === 'queued' ? 'task.requeued' : 'task.failed', failed);
   }
 
@@ -541,12 +565,46 @@ export class Coordinator implements TaskScheduler {
   }
 
   private async recordProviderUsage(taskId: string): Promise<void> {
-    const usage = this.dependencies.provider.getTaskUsage?.(taskId);
-    if (usage === undefined || (usage.totalTokens === 0 && usage.costUsd === 0)) return;
-    await this.repository.recordUsage(taskId, usage).catch(error => {
-      if (!(error instanceof NoOrgError && error.code === 'INVALID_TASK_TRANSITION'))
-        this.recordFailure(error);
+    await this.commitProviderUsage(taskId, async usage => {
+      if (usage !== undefined) await this.repository.recordUsage(taskId, usage);
+    }).catch(error => this.recordFailure(error));
+  }
+
+  private commitProviderUsage<T>(
+    taskId: string,
+    commit: (delta: UsageMetadata | undefined) => Promise<T>
+  ): Promise<T> {
+    const previous = this.usageMutations.get(taskId) ?? Promise.resolve();
+    const operation = previous.then(async () => {
+      const observed = this.dependencies.provider.getTaskUsage?.(taskId);
+      const current = observed === undefined ? undefined : usageMetadataSchema.parse(observed);
+      const checkpoint = this.usageCheckpoints.get(taskId) ?? {
+        promptTokens: 0, completionTokens: 0, totalTokens: 0, costUsd: 0,
+      };
+      let delta: UsageMetadata | undefined;
+      if (current !== undefined) {
+        if (current.promptTokens < checkpoint.promptTokens ||
+          current.completionTokens < checkpoint.completionTokens ||
+          current.totalTokens < checkpoint.totalTokens || current.costUsd < checkpoint.costUsd)
+          throw new NoOrgError('PROVIDER_USAGE_REGRESSED', 'Provider-instance usage counters decreased');
+        const added = {
+          promptTokens: current.promptTokens - checkpoint.promptTokens,
+          completionTokens: current.completionTokens - checkpoint.completionTokens,
+          totalTokens: current.totalTokens - checkpoint.totalTokens,
+          costUsd: current.costUsd - checkpoint.costUsd,
+        };
+        if (Object.values(added).some(value => value !== 0)) delta = added;
+      }
+      const result = await commit(delta);
+      if (current !== undefined) this.usageCheckpoints.set(taskId, current);
+      return result;
     });
+    const settled = operation.then(() => undefined, () => undefined);
+    this.usageMutations.set(taskId, settled);
+    void settled.then(() => {
+      if (this.usageMutations.get(taskId) === settled) this.usageMutations.delete(taskId);
+    });
+    return operation;
   }
 
   private async publishSafely(type: string, task: TaskRecord): Promise<void> {
@@ -566,7 +624,10 @@ export class Coordinator implements TaskScheduler {
   }
 
   private recordFailure(error: unknown): void {
-    const taskError = toTaskError(error);
+    this.recordTaskFailure(toTaskError(error));
+  }
+
+  private recordTaskFailure(taskError: TaskError): void {
     this.lastFailure = {
       code: taskError.code,
       message: taskError.message,
@@ -574,9 +635,11 @@ export class Coordinator implements TaskScheduler {
     };
   }
 
-  private refreshMetrics(usage: ReturnType<LLMProvider['getUsage']>): void {
-    const queued = this.repository.list('queued');
-    const blocked = this.blockedTaskCounts(queued);
+  private refreshMetrics(
+    usage: UsageMetadata,
+    queued: readonly TaskRecord[] = this.repository.internalSnapshot('queued').tasks,
+    blocked = this.blockedTaskCounts(queued)
+  ): void {
     this.dependencies.metrics.setGauge('active_tasks', this.dependencies.registry.activeCount());
     this.dependencies.metrics.setGauge('queue_depth', queued.length);
     this.dependencies.metrics.setGauge('blocked_tasks', blocked.total);
@@ -593,13 +656,21 @@ export class Coordinator implements TaskScheduler {
     readonly capability: number;
     readonly capacity: number;
   } {
+    let total = 0;
+    const now = this.dependencies.clock.now().getTime();
     let capability = 0;
     let capacity = 0;
     for (const task of tasks) {
       const availability = this.agentAvailability(task);
       if (availability === 'no_match') capability += 1;
       if (availability === 'at_capacity') capacity += 1;
+      if (
+        availability !== 'available' ||
+        this.dependencyState(task) !== 'ready' ||
+        this.parentState(task) !== 'ready' ||
+        (task.nextAttemptAt !== undefined && Date.parse(task.nextAttemptAt) > now)
+      ) total += 1;
     }
-    return { total: capability + capacity, capability, capacity };
+    return { total, capability, capacity };
   }
 }

@@ -5,6 +5,7 @@ import { assertCondition, NoOrgError } from '../domain/errors';
 import type {
   AgentResult,
   JsonValue,
+  ParsedTaskQuery,
   TaskError,
   TaskQuery,
   TaskRecord,
@@ -53,7 +54,6 @@ function copy<T>(value: T): T {
 export class TaskRepository {
   private tasks = new Map<string, TaskRecord>();
   private mutation = Promise.resolve();
-  private persistence = Promise.resolve();
 
   public constructor(
     private readonly state: StateStore,
@@ -67,32 +67,29 @@ export class TaskRepository {
   ) {}
 
   public async load(): Promise<void> {
-    const persisted = this.state.get<JsonValue>('tasks');
-    if (persisted === undefined) return;
-    const parsed = taskListSchema.safeParse(persisted);
-    if (!parsed.success)
-      throw new NoOrgError(
-        'TASK_STATE_INVALID',
-        'Persisted task records do not match the task schema'
-      );
-    this.tasks = new Map(parsed.data.map(task => [task.id, copy(task) as TaskRecord]));
-    for (const task of this.tasks.values()) {
-      if (task.parentTaskId !== undefined && !this.tasks.has(task.parentTaskId))
-        throw new NoOrgError('TASK_PARENT_NOT_FOUND', 'Persisted task parent was not found');
-      if (task.dependencyIds.some(dependencyId => !this.tasks.has(dependencyId)))
-        throw new NoOrgError(
-          'TASK_DEPENDENCY_NOT_FOUND',
-          'Persisted task dependency was not found'
-        );
-    }
-    if (this.hasDependencyCycle() || this.hasParentCycle())
-      throw new NoOrgError('TASK_DEPENDENCY_CYCLE', 'Persisted tasks contain a dependency cycle');
+    await this.serialize(async () => {
+      const persisted = this.state.get<JsonValue>('tasks');
+      if (persisted === undefined) return;
+      const parsed = taskListSchema.safeParse(persisted);
+      if (!parsed.success)
+        throw new NoOrgError('TASK_STATE_INVALID', 'Persisted task records do not match the task schema');
+      const candidate = new Map(parsed.data.map(task => [task.id, copy(task) as TaskRecord]));
+      for (const task of candidate.values()) {
+        if (task.parentTaskId !== undefined && !candidate.has(task.parentTaskId))
+          throw new NoOrgError('TASK_PARENT_NOT_FOUND', 'Persisted task parent was not found');
+        if (task.dependencyIds.some(dependencyId => !candidate.has(dependencyId)))
+          throw new NoOrgError('TASK_DEPENDENCY_NOT_FOUND', 'Persisted task dependency was not found');
+      }
+      if (this.hasDependencyCycle(candidate) || this.hasParentCycle(candidate))
+        throw new NoOrgError('TASK_DEPENDENCY_CYCLE', 'Persisted tasks contain a dependency cycle');
+      this.tasks = candidate;
+    });
   }
 
   public async recoverInterruptedTasks(): Promise<TaskRecord[]> {
     const recovered: TaskRecord[] = [];
-    await this.enqueue(() => {
-      for (const task of this.tasks.values()) {
+    await this.enqueue(candidate => {
+      for (const task of candidate.values()) {
         if (task.status !== 'running') continue;
         const now = this.clock.now().toISOString();
         const retryable = task.attempt < task.maxAttempts;
@@ -105,11 +102,11 @@ export class TaskRepository {
         const next: TaskRecord = retryable
           ? { ...restartable, status: 'queued', error, updatedAt: now }
           : { ...task, status: 'failed', error, completedAt: now, updatedAt: now };
-        this.tasks.set(task.id, next);
+        candidate.set(task.id, next);
         recovered.push(copy(next));
       }
+      return recovered.length > 0;
     });
-    if (recovered.length > 0) await this.persist();
     return recovered;
   }
 
@@ -158,12 +155,11 @@ export class TaskRepository {
       createdAt: now,
       updatedAt: now,
     };
-    let created = true;
     let result!: TaskRecord;
-    await this.enqueue(() => {
+    await this.enqueue(candidate => {
       if (task.idempotencyKey !== undefined) {
-        const existing = [...this.tasks.values()].find(
-          candidate => candidate.idempotencyKey === task.idempotencyKey
+        const existing = [...candidate.values()].find(
+          existingTask => existingTask.idempotencyKey === task.idempotencyKey
         );
         if (existing !== undefined) {
           if (taskFingerprint(existing) !== taskFingerprint(task))
@@ -171,15 +167,14 @@ export class TaskRepository {
               'IDEMPOTENCY_CONFLICT',
               'Idempotency key was already used for a different task'
             );
-          created = false;
           result = copy(existing);
-          return;
+          return false;
         }
       }
-      if (task.parentTaskId !== undefined && !this.tasks.has(task.parentTaskId))
+      if (task.parentTaskId !== undefined && !candidate.has(task.parentTaskId))
         throw new NoOrgError('TASK_PARENT_NOT_FOUND', 'Parent task was not found');
       for (const dependencyId of task.dependencyIds) {
-        if (!this.tasks.has(dependencyId))
+        if (!candidate.has(dependencyId))
           throw new NoOrgError(
             'TASK_DEPENDENCY_NOT_FOUND',
             `Dependency task ${dependencyId} was not found`
@@ -188,8 +183,8 @@ export class TaskRepository {
       const parentChildren =
         task.parentTaskId === undefined
           ? 0
-          : [...this.tasks.values()].filter(
-              candidate => candidate.parentTaskId === task.parentTaskId
+          : [...candidate.values()].filter(
+              existingTask => existingTask.parentTaskId === task.parentTaskId
             ).length;
       if (parentChildren >= (this.limits.maxWorkflowChildren ?? 100)) {
         throw new NoOrgError(
@@ -199,7 +194,7 @@ export class TaskRepository {
       }
       const normalizedTask = {
         ...task,
-        workflowDepth: this.workflowDepth(task),
+        workflowDepth: this.workflowDepth(task, candidate),
       };
       if (normalizedTask.workflowDepth > (this.limits.maxWorkflowDepth ?? 32)) {
         throw new NoOrgError(
@@ -207,14 +202,12 @@ export class TaskRepository {
           'Task relationships exceed the configured workflow depth'
         );
       }
-      this.tasks.set(task.id, normalizedTask);
-      if (this.hasDependencyCycle() || this.hasParentCycle()) {
-        this.tasks.delete(task.id);
+      candidate.set(task.id, normalizedTask);
+      if (this.hasDependencyCycle(candidate) || this.hasParentCycle(candidate)) {
         throw new NoOrgError('TASK_DEPENDENCY_CYCLE', 'Task relationships would create a cycle');
       }
       result = copy(normalizedTask);
     });
-    if (created) await this.persist();
     return result;
   }
 
@@ -228,25 +221,30 @@ export class TaskRepository {
       ...query,
       ...(status === undefined ? {} : { status }),
     });
-    const sorted = [...this.tasks.values()]
-      .filter(task => parsedQuery.status === undefined || task.status === parsedQuery.status)
-      .filter(task => parsedQuery.agentId === undefined || task.agentId === parsedQuery.agentId)
-      .filter(
-        task =>
-          parsedQuery.capability === undefined ||
-          task.requiredCapabilities.includes(parsedQuery.capability)
-      )
-      .filter(
-        task =>
-          parsedQuery.idempotencyKey === undefined ||
-          task.idempotencyKey === parsedQuery.idempotencyKey
-      )
-      .sort((left, right) => {
-        const priorityDifference = this.effectivePriority(right) - this.effectivePriority(left);
-        return priorityDifference || left.createdAt.localeCompare(right.createdAt);
-      });
+    const sorted = this.select(parsedQuery);
     const end = parsedQuery.offset + parsedQuery.limit;
     return sorted.slice(parsedQuery.offset, end).map(copy);
+  }
+
+  public internalSnapshot(status?: TaskStatus): { readonly tasks: readonly TaskRecord[]; readonly total: number } {
+    const tasks = this.select(status === undefined ? {} : { status }).map(copy);
+    return { tasks, total: tasks.length };
+  }
+
+  private select(query: Omit<ParsedTaskQuery, 'limit' | 'offset'>): TaskRecord[] {
+    const selected: TaskRecord[] = [];
+    for (const task of this.tasks.values()) {
+      if (
+        (query.status === undefined || task.status === query.status) &&
+        (query.agentId === undefined || task.agentId === query.agentId) &&
+        (query.capability === undefined || task.requiredCapabilities.includes(query.capability)) &&
+        (query.idempotencyKey === undefined || task.idempotencyKey === query.idempotencyKey)
+      ) selected.push(task);
+    }
+    return selected.sort((left, right) => {
+      const priorityDifference = this.effectivePriority(right) - this.effectivePriority(left);
+      return priorityDifference || left.createdAt.localeCompare(right.createdAt);
+    });
   }
 
   public async start(id: string, agentId: string): Promise<TaskRecord> {
@@ -397,12 +395,7 @@ export class TaskRepository {
   }
 
   public async persist(): Promise<void> {
-    const next = this.persistence.then(async () => {
-      await this.state.set('tasks', [...this.tasks.values()] as unknown as JsonValue);
-      await this.state.flush();
-    });
-    this.persistence = next.catch(() => undefined);
-    await next;
+    await this.serialize(() => this.state.flush());
   }
 
   private async transition(
@@ -410,61 +403,74 @@ export class TaskRepository {
     update: (task: TaskRecord) => TaskRecord
   ): Promise<TaskRecord> {
     let changed!: TaskRecord;
-    await this.enqueue(() => {
-      const current = this.tasks.get(id);
+    await this.enqueue(candidate => {
+      const current = candidate.get(id);
       if (!current) throw new NoOrgError('TASK_NOT_FOUND', `Task ${id} was not found`);
       changed = update(copy(current));
-      this.tasks.set(id, copy(changed));
+      candidate.set(id, copy(changed));
     });
-    await this.persist();
     return copy(changed);
   }
 
-  private async enqueue(operation: () => void): Promise<void> {
-    const next = this.mutation.then(operation);
-    this.mutation = next.catch(() => undefined);
-    await next;
+  private async enqueue(operation: (candidate: Map<string, TaskRecord>) => void | boolean): Promise<void> {
+    await this.serialize(async () => {
+      if (!this.state.isOpen())
+        throw new NoOrgError('STATE_STORE_UNAVAILABLE', 'Task mutations require an open state store');
+      const candidate = new Map(this.tasks);
+      if (operation(candidate) === false) return;
+      await this.state.set('tasks', [...candidate.values()] as unknown as JsonValue);
+      this.tasks = candidate;
+    });
   }
 
-  private hasDependencyCycle(): boolean {
+  private serialize<T>(operation: () => Promise<T>): Promise<T> {
+    const next = this.mutation.then(operation);
+    this.mutation = next.then(() => undefined, () => undefined);
+    return next;
+  }
+
+  private hasDependencyCycle(tasks: ReadonlyMap<string, TaskRecord> = this.tasks): boolean {
     const visiting = new Set<string>();
     const visited = new Set<string>();
     const visit = (id: string): boolean => {
       if (visiting.has(id)) return true;
       if (visited.has(id)) return false;
       visiting.add(id);
-      const task = this.tasks.get(id);
+      const task = tasks.get(id);
       if (task?.dependencyIds.some(visit)) return true;
       visiting.delete(id);
       visited.add(id);
       return false;
     };
-    return [...this.tasks.keys()].some(visit);
+    return [...tasks.keys()].some(visit);
   }
 
-  private hasParentCycle(): boolean {
+  private hasParentCycle(tasks: ReadonlyMap<string, TaskRecord> = this.tasks): boolean {
     const visiting = new Set<string>();
     const visited = new Set<string>();
     const visit = (id: string): boolean => {
       if (visiting.has(id)) return true;
       if (visited.has(id)) return false;
       visiting.add(id);
-      const parentId = this.tasks.get(id)?.parentTaskId;
+      const parentId = tasks.get(id)?.parentTaskId;
       if (parentId !== undefined && visit(parentId)) return true;
       visiting.delete(id);
       visited.add(id);
       return false;
     };
-    return [...this.tasks.keys()].some(visit);
+    return [...tasks.keys()].some(visit);
   }
 
-  private workflowDepth(task: Pick<TaskRecord, 'parentTaskId' | 'dependencyIds'>): number {
+  private workflowDepth(
+    task: Pick<TaskRecord, 'parentTaskId' | 'dependencyIds'>,
+    tasks: ReadonlyMap<string, TaskRecord> = this.tasks
+  ): number {
     const related = [
       ...(task.parentTaskId === undefined ? [] : [task.parentTaskId]),
       ...task.dependencyIds,
     ];
     if (related.length === 0) return 0;
-    return 1 + Math.max(...related.map(id => this.tasks.get(id)?.workflowDepth ?? 0));
+    return 1 + Math.max(...related.map(id => tasks.get(id)?.workflowDepth ?? 0));
   }
 
   private effectivePriority(task: TaskRecord): number {

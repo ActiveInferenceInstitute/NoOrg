@@ -23,9 +23,11 @@ const requestTimeoutMs = 30_000;
 const keepAliveTimeoutMs = 5_000;
 
 export function isBearerAuthorized(authorization: string | undefined, token: string): boolean {
-  const expected = `Bearer ${token}`;
-  if (authorization === undefined || authorization.length !== expected.length) return false;
-  return timingSafeEqual(Buffer.from(authorization), Buffer.from(expected));
+  if (authorization === undefined) return false;
+  const supplied = Buffer.from(authorization, 'utf8');
+  const expected = Buffer.from(`Bearer ${token}`, 'utf8');
+  if (supplied.length !== expected.length) return false;
+  return timingSafeEqual(supplied, expected);
 }
 
 interface AuthEntry {
@@ -344,7 +346,9 @@ function mapHttpError(error: unknown): {
                   ? 503
                   : error.code.startsWith('INVALID_') ||
                       error.code === 'TASK_DEADLINE_INVALID' ||
-                      error.code.endsWith('_TOO_LARGE')
+                      error.code.endsWith('_TOO_LARGE') ||
+                      error.code === 'TASK_WORKFLOW_BREADTH_EXCEEDED' ||
+                      error.code === 'TASK_WORKFLOW_DEPTH_EXCEEDED'
                     ? 400
                     : error.code.startsWith('PROVIDER_')
                       ? 502

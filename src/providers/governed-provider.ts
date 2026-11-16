@@ -76,7 +76,7 @@ export class GovernedProvider implements LLMProvider {
     this.assertCircuit();
     this.assertRateLimit();
     const reservation = this.reserveBudget(request);
-    this.requestTimes.push(this.clock.now().getTime());
+    if (this.maxRequestsPerMinute > 0) this.requestTimes.push(this.clock.now().getTime());
     try {
       const response = await this.inner.complete(request, schema, signal);
       if (request.taskId !== undefined) this.addTaskUsage(request.taskId, response.usage);

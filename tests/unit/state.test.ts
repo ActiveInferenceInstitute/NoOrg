@@ -1,4 +1,4 @@
-import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, utimes, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { MemoryStateStore } from '../../src/state/state-store';
@@ -109,7 +109,9 @@ describe('MemoryStateStore', () => {
     const filePath = join(directory, 'state.json');
     const lockPath = `${filePath}.lock`;
     await mkdir(lockPath);
-    await writeFile(join(lockPath, 'owner'), '99999999#');
+    await writeFile(join(lockPath, 'owner'), '99999999');
+    const old = new Date(Date.now() - 120_000);
+    await utimes(lockPath, old, old);
     const state = new FileStateStore(filePath);
     await state.load();
     expect(state.isOpen()).toBe(true);

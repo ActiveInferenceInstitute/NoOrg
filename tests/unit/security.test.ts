@@ -62,6 +62,10 @@ describe('runtime safety helpers', () => {
     expect(isBearerAuthorized('Bearer secret', 'different')).toBe(false);
     expect(isBearerAuthorized('Bearer secret extra', 'secret')).toBe(false);
     expect(isBearerAuthorized('bearer secret', 'secret')).toBe(false);
+    expect(isBearerAuthorized('Bearer é', 'x')).toBe(false);
+    expect(isBearerAuthorized('Bearer 🙂', 'ab')).toBe(false);
+    expect(isBearerAuthorized('Bearer é', 'é')).toBe(true);
+    expect(isBearerAuthorized('Bearer ê', 'é')).toBe(false);
   });
 
   it('limits repeated authentication failures and resets after the window', () => {

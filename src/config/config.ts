@@ -17,6 +17,13 @@ function integer(name: string, fallback: number, minimum: number, maximum?: numb
   );
 }
 
+function blankOptional<T extends z.ZodType>(schema: T) {
+  return z.preprocess(
+    value => typeof value === 'string' && value.trim() === '' ? undefined : value,
+    schema.optional()
+  );
+}
+
 export interface AppConfig {
   readonly environment: 'development' | 'test' | 'production';
   readonly provider: ProviderKind;
@@ -59,17 +66,17 @@ export interface AppConfig {
 const rawSchema = z.object({
   NODE_ENV: environmentSchema.default('development'),
   NOORG_LLM_PROVIDER: providerSchema,
-  OPENAI_API_KEY: z.string().trim().min(1).optional(),
+  OPENAI_API_KEY: blankOptional(z.string().trim().min(1)),
   OPENAI_MODEL: z.string().trim().min(1).default('gpt-4o-mini'),
-  OPENAI_BASE_URL: z.string().url().optional(),
+  OPENAI_BASE_URL: blankOptional(z.string().url()),
   OPENAI_TIMEOUT_MS: integer('OPENAI_TIMEOUT_MS', 30000, 1000),
   OPENAI_MAX_RETRIES: integer('OPENAI_MAX_RETRIES', 2, 0),
   OPENAI_RETRY_BASE_MS: integer('OPENAI_RETRY_BASE_MS', 250, 50),
   OPENAI_PROMPT_COST_PER_MILLION_USD: z.coerce.number().finite().min(0).default(0),
   OPENAI_COMPLETION_COST_PER_MILLION_USD: z.coerce.number().finite().min(0).default(0),
-  NOORG_HOST: z.string().trim().min(1).optional(),
+  NOORG_HOST: blankOptional(z.string().trim().min(1)),
   NOORG_PORT: integer('NOORG_PORT', 3000, 1),
-  NOORG_HTTP_AUTH_TOKEN: z.string().trim().min(1).optional(),
+  NOORG_HTTP_AUTH_TOKEN: blankOptional(z.string().trim().min(1)),
   NOORG_HTTP_MAX_BODY_BYTES: integer('NOORG_HTTP_MAX_BODY_BYTES', 1_048_576, 1024),
   NOORG_STATE_PATH: z.string().trim().min(1).default('data/state.json'),
   NOORG_POLL_INTERVAL_MS: integer('NOORG_POLL_INTERVAL_MS', 100, 10),
@@ -80,10 +87,7 @@ const rawSchema = z.object({
   NOORG_MAX_RESULT_BYTES: integer('NOORG_MAX_RESULT_BYTES', 1_048_576, 1024),
   NOORG_MAX_WORKFLOW_DEPTH: integer('NOORG_MAX_WORKFLOW_DEPTH', 32, 1, 64),
   NOORG_MAX_WORKFLOW_CHILDREN: integer('NOORG_MAX_WORKFLOW_CHILDREN', 100, 1),
-  NOORG_PROVIDER_BUDGET_USD: z.preprocess(
-    value => (value === undefined || value === '' ? undefined : value),
-    z.coerce.number().finite().min(0).optional()
-  ),
+  NOORG_PROVIDER_BUDGET_USD: blankOptional(z.coerce.number().finite().min(0)),
   NOORG_PROVIDER_MAX_REQUESTS_PER_MINUTE: integer('NOORG_PROVIDER_MAX_REQUESTS_PER_MINUTE', 0, 0),
   NOORG_PROVIDER_CIRCUIT_FAILURE_THRESHOLD: integer(
     'NOORG_PROVIDER_CIRCUIT_FAILURE_THRESHOLD',

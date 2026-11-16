@@ -157,6 +157,8 @@ export const taskQuerySchema = z
   })
   .strict();
 
+export type ParsedTaskQuery = z.infer<typeof taskQuerySchema>;
+
 export interface TaskRecord {
   readonly id: string;
   readonly name: string;
