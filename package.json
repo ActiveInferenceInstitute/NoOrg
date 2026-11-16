@@ -45,7 +45,7 @@
     "example": "tsx examples/basic-workflow.ts"
   },
   "dependencies": {
-    "openai": "^7.51.0",
+    "openai": "^7.53.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
