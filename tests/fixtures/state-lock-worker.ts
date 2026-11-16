@@ -1,7 +1,11 @@
 import { on, once } from 'node:events';
 import { z } from 'zod';
 import { NoOrgError } from '../../src/domain/errors';
-import { FileStateStore, nodeStateStoreIO, type FileStateStoreIO } from '../../src/state/state-store';
+import {
+  FileStateStore,
+  nodeStateStoreIO,
+  type FileStateStoreIO,
+} from '../../src/state/state-store';
 
 async function main(): Promise<void> {
   const file = z.string().min(1).parse(process.argv[2]);
@@ -45,12 +49,12 @@ async function main(): Promise<void> {
     }
   } finally {
     await store.close();
-    if (process.connected) process.disconnect();
+    if (process.connected && process.disconnect !== undefined) process.disconnect();
   }
 }
 
 void main().catch(error => {
   process.stderr.write(String(error) + '\n');
   process.exitCode = 1;
-  if (process.connected) process.disconnect();
+  if (process.connected && process.disconnect !== undefined) process.disconnect();
 });

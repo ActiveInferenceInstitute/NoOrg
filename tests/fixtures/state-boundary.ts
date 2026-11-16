@@ -3,7 +3,8 @@ import type { FileHandle } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { nodeStateStoreIO, type FileStateStoreIO } from '../../src/state/state-store';
 
-export type StateFault = 'write' | 'sync' | 'rename-before' | 'rename-after' | 'directory-sync' | 'guard-open';
+export type StateFault =
+  'write' | 'sync' | 'rename-before' | 'rename-after' | 'directory-sync' | 'guard-open';
 export interface CommitBarrier {
   readonly entered: Promise<void>;
   release(): void;
@@ -16,7 +17,10 @@ export class StateBoundary {
   private renamed = false;
   private barrier: { enter(): void; readonly released: Promise<void> } | undefined;
 
-  public constructor(private readonly filePath: string, public readonly error = new Error('controlled state I/O failure')) {
+  public constructor(
+    private readonly filePath: string,
+    public readonly error = new Error('controlled state I/O failure')
+  ) {
     this.io = {
       ...nodeStateStoreIO,
       open: async (path, flags, mode) => {
@@ -25,32 +29,38 @@ export class StateBoundary {
           throw this.error;
         }
         const handle = await nodeStateStoreIO.open(path, flags, mode);
-        const temporary = String(path).startsWith(`${this.filePath}.`) && String(path).endsWith('.tmp');
+        const temporary =
+          String(path).startsWith(`${this.filePath}.`) && String(path).endsWith('.tmp');
         const parent = String(path) === dirname(this.filePath);
         return new Proxy(handle, {
           get: (target, property) => {
-            if (property === 'writeFile') return async (...args: Parameters<FileHandle['writeFile']>) => {
-              if (temporary) {
-                const barrier = this.barrier;
-                this.barrier = undefined;
-                if (barrier !== undefined) {
-                  barrier.enter();
-                  await barrier.released;
+            if (property === 'writeFile')
+              return async (...args: Parameters<FileHandle['writeFile']>) => {
+                if (temporary) {
+                  const barrier = this.barrier;
+                  this.barrier = undefined;
+                  if (barrier !== undefined) {
+                    barrier.enter();
+                    await barrier.released;
+                  }
+                  if (this.fault === 'write') {
+                    this.fault = undefined;
+                    throw this.error;
+                  }
                 }
-                if (this.fault === 'write') {
+                return target.writeFile(...args);
+              };
+            if (property === 'sync')
+              return async () => {
+                if (
+                  (temporary && this.fault === 'sync') ||
+                  (parent && this.renamed && this.fault === 'directory-sync')
+                ) {
                   this.fault = undefined;
                   throw this.error;
                 }
-              }
-              return target.writeFile(...args);
-            };
-            if (property === 'sync') return async () => {
-              if ((temporary && this.fault === 'sync') || (parent && this.renamed && this.fault === 'directory-sync')) {
-                this.fault = undefined;
-                throw this.error;
-              }
-              await target.sync();
-            };
+                await target.sync();
+              };
             const value: unknown = Reflect.get(target, property, target);
             return typeof value === 'function' ? value.bind(target) : value;
           },

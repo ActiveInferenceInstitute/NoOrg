@@ -97,7 +97,10 @@ interface ObservedLock {
   readonly owner: LockOwner | undefined;
 }
 
-function sameIdentity(left: { dev: number; ino: number }, right: { dev: number; ino: number }): boolean {
+function sameIdentity(
+  left: { dev: number; ino: number },
+  right: { dev: number; ino: number }
+): boolean {
   return left.dev === right.dev && left.ino === right.ino;
 }
 
@@ -105,18 +108,26 @@ function parseOwner(raw: string): LockOwner | undefined {
   try {
     const parsed: unknown = JSON.parse(raw);
     if (
-      typeof parsed === 'object' && parsed !== null &&
-      'pid' in parsed && Number.isSafeInteger(parsed.pid) && Number(parsed.pid) > 0 &&
-      'createdAt' in parsed && typeof parsed.createdAt === 'number' &&
-      Number.isFinite(parsed.createdAt) && parsed.createdAt >= 0 &&
-      'token' in parsed && typeof parsed.token === 'string' && parsed.token.length > 0
-    ) return parsed as LockOwner;
+      typeof parsed === 'object' &&
+      parsed !== null &&
+      'pid' in parsed &&
+      Number.isSafeInteger(parsed.pid) &&
+      Number(parsed.pid) > 0 &&
+      'createdAt' in parsed &&
+      typeof parsed.createdAt === 'number' &&
+      Number.isFinite(parsed.createdAt) &&
+      parsed.createdAt >= 0 &&
+      'token' in parsed &&
+      typeof parsed.token === 'string' &&
+      parsed.token.length > 0
+    )
+      return parsed as LockOwner;
   } catch {
     // Only the exact historical decimal-PID representation is admitted below.
   }
-  const legacy = raw.trim();
-  if (/^[1-9][0-9]*$/.test(legacy) && Number.isSafeInteger(Number(legacy))) {
-    return { pid: Number(legacy), createdAt: 0, token: 'legacy-pid' };
+  const decimalOwner = raw.trim();
+  if (/^[1-9][0-9]*$/.test(decimalOwner) && Number.isSafeInteger(Number(decimalOwner))) {
+    return { pid: Number(decimalOwner), createdAt: 0, token: 'decimal-pid' };
   }
   return undefined;
 }
@@ -135,7 +146,10 @@ export class FileStateStore implements StateStore {
   private currentRevision = 0;
   private readonly filePath: string;
 
-  public constructor(filePath: string, private readonly io: FileStateStoreIO = nodeStateStoreIO) {
+  public constructor(
+    filePath: string,
+    private readonly io: FileStateStoreIO = nodeStateStoreIO
+  ) {
     this.filePath = resolve(filePath);
   }
 
@@ -195,7 +209,9 @@ export class FileStateStore implements StateStore {
             this.dirty = true;
           }
           await this.assertOwnership(guard);
-          this.values = new Map(Object.entries(parsed.state).map(([key, value]) => [key, clone(value)]));
+          this.values = new Map(
+            Object.entries(parsed.state).map(([key, value]) => [key, clone(value)])
+          );
           this.currentRevision = parsed.revision;
           this.loaded = true;
         } catch (error) {
@@ -203,10 +219,17 @@ export class FileStateStore implements StateStore {
             await this.releaseLock(guard);
           } catch (cleanupError) {
             this.fence('STATE_LOCK_LOST', 'State lock ownership became ambiguous', cleanupError);
-            throw new AggregateError([error, cleanupError], 'State acquisition and owned cleanup failed');
+            throw new AggregateError(
+              [error, cleanupError],
+              'State acquisition and owned cleanup failed',
+              { cause: cleanupError }
+            );
           }
           if (error instanceof NoOrgError) throw error;
-          const failure = new NoOrgError('STATE_LOAD_FAILED', `Unable to load state from ${this.filePath}`);
+          const failure = new NoOrgError(
+            'STATE_LOAD_FAILED',
+            `Unable to load state from ${this.filePath}`
+          );
           failure.cause = error;
           throw failure;
         }
@@ -250,7 +273,9 @@ export class FileStateStore implements StateStore {
     return this.schedule(async () => {
       this.assertAvailable();
       const current = this.values.get(key);
-      const next = clone(jsonValueSchema.parse(updater(current === undefined ? undefined : clone(current) as T))) as T;
+      const next = clone(
+        jsonValueSchema.parse(updater(current === undefined ? undefined : (clone(current) as T)))
+      ) as T;
       const candidate = new Map(this.values);
       candidate.set(key, next);
       const revision = this.currentRevision + 1;
@@ -287,7 +312,10 @@ export class FileStateStore implements StateStore {
         try {
           await this.lease.handle.close();
         } catch (error) {
-          failure = failure === undefined ? error : new AggregateError([failure, error], 'State close and handle cleanup failed');
+          failure =
+            failure === undefined
+              ? error
+              : new AggregateError([failure, error], 'State close and handle cleanup failed');
         }
       }
       if (failure !== undefined) throw failure;
@@ -298,7 +326,8 @@ export class FileStateStore implements StateStore {
   private assertAvailable(requireLoaded = true): void {
     if (this.failure !== undefined) throw this.failure;
     if (this.closed) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
-    if (requireLoaded && !this.loaded) throw new NoOrgError('STATE_NOT_LOADED', 'State store must be loaded before mutation');
+    if (requireLoaded && !this.loaded)
+      throw new NoOrgError('STATE_NOT_LOADED', 'State store must be loaded before mutation');
   }
 
   private assertAdmission(): void {
@@ -308,7 +337,10 @@ export class FileStateStore implements StateStore {
 
   private schedule<T>(operation: () => Promise<T>): Promise<T> {
     const next = this.mutation.then(operation);
-    this.mutation = next.then(() => undefined, () => undefined);
+    this.mutation = next.then(
+      () => undefined,
+      () => undefined
+    );
     return next;
   }
 
@@ -321,10 +353,18 @@ export class FileStateStore implements StateStore {
     this.dirty = false;
   }
 
-  private async writeCandidate(values: ReadonlyMap<string, JsonValue>, revision: number, guard: DirectoryLease): Promise<void> {
+  private async writeCandidate(
+    values: ReadonlyMap<string, JsonValue>,
+    revision: number,
+    guard: DirectoryLease
+  ): Promise<void> {
     await this.assertOwnership(guard);
     const temporaryPath = `${this.filePath}.${process.pid}.${randomUUID()}.tmp`;
-    const body = JSON.stringify({ schemaVersion: 2, revision, state: Object.fromEntries(values) }, null, 2);
+    const body = JSON.stringify(
+      { schemaVersion: 2, revision, state: Object.fromEntries(values) },
+      null,
+      2
+    );
     const handle = await this.io.open(temporaryPath, 'wx', 0o600);
     let identity: Stats | undefined;
     let failure: unknown;
@@ -338,7 +378,10 @@ export class FileStateStore implements StateStore {
     try {
       await handle.close();
     } catch (error) {
-      failure = failure === undefined ? error : new AggregateError([failure, error], 'State write and close failed');
+      failure =
+        failure === undefined
+          ? error
+          : new AggregateError([failure, error], 'State write and close failed');
     }
     if (failure === undefined) {
       try {
@@ -356,16 +399,25 @@ export class FileStateStore implements StateStore {
         return;
       } catch (error) {
         this.retainGuard = true;
-        throw this.fence('STATE_COMMIT_UNCERTAIN', 'State replacement durability is uncertain; store is fenced', error);
+        throw this.fence(
+          'STATE_COMMIT_UNCERTAIN',
+          'State replacement durability is uncertain; store is fenced',
+          error
+        );
       }
     }
     try {
       await this.assertDirectory(guard);
       const current = await this.io.lstat(temporaryPath);
-      if (identity !== undefined && sameIdentity(current, identity)) await this.io.rm(temporaryPath);
+      if (identity !== undefined && sameIdentity(current, identity))
+        await this.io.rm(temporaryPath);
     } catch (cleanupError) {
       if (!isMissingFile(cleanupError)) {
-        throw new AggregateError([failure, cleanupError], 'State write and owned temporary cleanup failed');
+        throw new AggregateError(
+          [failure, cleanupError],
+          'State write and owned temporary cleanup failed',
+          { cause: cleanupError }
+        );
       }
     }
     throw failure;
@@ -379,7 +431,10 @@ export class FileStateStore implements StateStore {
   }
 
   private async openDirectory(path: string): Promise<DirectoryLease> {
-    const handle = await this.io.open(path, constants.O_RDONLY | constants.O_DIRECTORY | constants.O_NOFOLLOW);
+    const handle = await this.io.open(
+      path,
+      constants.O_RDONLY | constants.O_DIRECTORY | constants.O_NOFOLLOW
+    );
     try {
       const identity = await handle.stat();
       return { path, handle, dev: identity.dev, ino: identity.ino };
@@ -415,8 +470,16 @@ export class FileStateStore implements StateStore {
     try {
       await this.io.mkdir(path, { mode: 0o700 });
     } catch (error) {
-      if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'EEXIST') {
-        throw new NoOrgError('STATE_LOCKED', `State file ${this.filePath} is already in use or requires guard recovery`);
+      if (
+        typeof error === 'object' &&
+        error !== null &&
+        'code' in error &&
+        error.code === 'EEXIST'
+      ) {
+        throw new NoOrgError(
+          'STATE_LOCKED',
+          `State file ${this.filePath} is already in use or requires guard recovery`
+        );
       }
       throw error;
     }
@@ -440,22 +503,45 @@ export class FileStateStore implements StateStore {
       await this.assertDirectory(guard);
     } catch (error) {
       owned = false;
-      failure = failure === undefined ? error : new AggregateError([failure, error], 'State operation and namespace identity check failed');
+      failure =
+        failure === undefined
+          ? error
+          : new AggregateError(
+              [failure, error],
+              'State operation and namespace identity check failed'
+            );
     }
     try {
       await guard.handle.close();
     } catch (error) {
       owned = false;
       this.retainGuard = true;
-      const cleanup = this.fence('STATE_LOCK_LOST', 'State namespace guard handle could not be closed', error);
-      failure = failure === undefined ? cleanup : new AggregateError([failure, cleanup], 'State operation and handle cleanup failed');
+      const cleanup = this.fence(
+        'STATE_LOCK_LOST',
+        'State namespace guard handle could not be closed',
+        error
+      );
+      failure =
+        failure === undefined
+          ? cleanup
+          : new AggregateError([failure, cleanup], 'State operation and handle cleanup failed');
     }
     if (owned && !this.retainGuard) {
       try {
         await this.io.rmdir(path);
       } catch (error) {
-        const cleanup = this.fence('STATE_LOCK_LOST', 'State namespace guard could not be released safely', error);
-        failure = failure === undefined ? cleanup : new AggregateError([failure, cleanup], 'State operation and namespace release failed');
+        const cleanup = this.fence(
+          'STATE_LOCK_LOST',
+          'State namespace guard could not be released safely',
+          error
+        );
+        failure =
+          failure === undefined
+            ? cleanup
+            : new AggregateError(
+                [failure, cleanup],
+                'State operation and namespace release failed'
+              );
       }
     }
     if (failure !== undefined) throw failure;
@@ -471,7 +557,8 @@ export class FileStateStore implements StateStore {
       if (isMissingFile(error)) return undefined;
       throw error;
     }
-    if (!identity.isDirectory()) throw new NoOrgError('STATE_LOCKED', 'State lock path is not an owned directory');
+    if (!identity.isDirectory())
+      throw new NoOrgError('STATE_LOCKED', 'State lock path is not an owned directory');
     let owner: LockOwner | undefined;
     try {
       owner = parseOwner(await this.io.readFile(`${path}/owner`, 'utf8'));
@@ -483,7 +570,8 @@ export class FileStateStore implements StateStore {
 
   private assertReclaimable(lock: ObservedLock): void {
     const owner = lock.owner;
-    if (owner === undefined) throw new NoOrgError('STATE_LOCKED', 'State lock owner is incomplete or ambiguous');
+    if (owner === undefined)
+      throw new NoOrgError('STATE_LOCKED', 'State lock owner is incomplete or ambiguous');
     const age = Date.now() - (owner.createdAt === 0 ? lock.identity.mtimeMs : owner.createdAt);
     if (age < staleLockMs || isLiveProcess(owner.pid)) {
       throw new NoOrgError('STATE_LOCKED', `State file ${this.filePath} is already in use`);
@@ -493,10 +581,15 @@ export class FileStateStore implements StateStore {
   private async assertOwnership(guard: DirectoryLease): Promise<void> {
     await this.assertDirectory(guard);
     const lease = this.lease;
-    if (lease === undefined) throw this.fence('STATE_LOCK_LOST', 'State store has no acquired lock', undefined);
+    if (lease === undefined)
+      throw this.fence('STATE_LOCK_LOST', 'State store has no acquired lock', undefined);
     const current = await this.observeLock();
-    if (current === undefined || !sameIdentity(current.identity, lease) ||
-      current.owner?.token !== lease.owner.token || current.owner.pid !== lease.owner.pid) {
+    if (
+      current === undefined ||
+      !sameIdentity(current.identity, lease) ||
+      current.owner?.token !== lease.owner.token ||
+      current.owner.pid !== lease.owner.pid
+    ) {
       throw this.fence('STATE_LOCK_LOST', 'State lock no longer belongs to this store', undefined);
     }
   }
@@ -524,7 +617,8 @@ export class MemoryStateStore implements StateStore {
   }
 
   public async load(): Promise<void> {
-    if (this.closed || this.closing) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
+    if (this.closed || this.closing)
+      throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
   }
 
   public get<T extends JsonValue>(key: string): T | undefined {
@@ -541,7 +635,8 @@ export class MemoryStateStore implements StateStore {
   }
 
   public async set(key: string, value: JsonValue): Promise<void> {
-    if (this.closed || this.closing) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
+    if (this.closed || this.closing)
+      throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
     const admitted = clone(jsonValueSchema.parse(value));
     await this.enqueue(() => {
       this.values.set(key, admitted);
@@ -571,13 +666,16 @@ export class MemoryStateStore implements StateStore {
   public async close(): Promise<void> {
     if (this.closePromise !== undefined) return this.closePromise;
     this.closing = true;
-    this.closePromise = this.mutation.then(() => { this.closed = true; });
+    this.closePromise = this.mutation.then(() => {
+      this.closed = true;
+    });
     this.mutation = this.closePromise;
     return this.closePromise;
   }
 
   private async enqueue(operation: () => void): Promise<void> {
-    if (this.closed || this.closing) throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
+    if (this.closed || this.closing)
+      throw new NoOrgError('STATE_STORE_CLOSED', 'State store is closed');
     const next = this.mutation.then(operation);
     this.mutation = next.catch(() => undefined);
     await next;

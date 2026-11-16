@@ -72,13 +72,19 @@ export class TaskRepository {
       if (persisted === undefined) return;
       const parsed = taskListSchema.safeParse(persisted);
       if (!parsed.success)
-        throw new NoOrgError('TASK_STATE_INVALID', 'Persisted task records do not match the task schema');
+        throw new NoOrgError(
+          'TASK_STATE_INVALID',
+          'Persisted task records do not match the task schema'
+        );
       const candidate = new Map(parsed.data.map(task => [task.id, copy(task) as TaskRecord]));
       for (const task of candidate.values()) {
         if (task.parentTaskId !== undefined && !candidate.has(task.parentTaskId))
           throw new NoOrgError('TASK_PARENT_NOT_FOUND', 'Persisted task parent was not found');
         if (task.dependencyIds.some(dependencyId => !candidate.has(dependencyId)))
-          throw new NoOrgError('TASK_DEPENDENCY_NOT_FOUND', 'Persisted task dependency was not found');
+          throw new NoOrgError(
+            'TASK_DEPENDENCY_NOT_FOUND',
+            'Persisted task dependency was not found'
+          );
       }
       if (this.hasDependencyCycle(candidate) || this.hasParentCycle(candidate))
         throw new NoOrgError('TASK_DEPENDENCY_CYCLE', 'Persisted tasks contain a dependency cycle');
@@ -226,7 +232,10 @@ export class TaskRepository {
     return sorted.slice(parsedQuery.offset, end).map(copy);
   }
 
-  public internalSnapshot(status?: TaskStatus): { readonly tasks: readonly TaskRecord[]; readonly total: number } {
+  public internalSnapshot(status?: TaskStatus): {
+    readonly tasks: readonly TaskRecord[];
+    readonly total: number;
+  } {
     const tasks = this.select(status === undefined ? {} : { status }).map(copy);
     return { tasks, total: tasks.length };
   }
@@ -239,7 +248,8 @@ export class TaskRepository {
         (query.agentId === undefined || task.agentId === query.agentId) &&
         (query.capability === undefined || task.requiredCapabilities.includes(query.capability)) &&
         (query.idempotencyKey === undefined || task.idempotencyKey === query.idempotencyKey)
-      ) selected.push(task);
+      )
+        selected.push(task);
     }
     return selected.sort((left, right) => {
       const priorityDifference = this.effectivePriority(right) - this.effectivePriority(left);
@@ -412,10 +422,15 @@ export class TaskRepository {
     return copy(changed);
   }
 
-  private async enqueue(operation: (candidate: Map<string, TaskRecord>) => void | boolean): Promise<void> {
+  private async enqueue(
+    operation: (candidate: Map<string, TaskRecord>) => void | boolean
+  ): Promise<void> {
     await this.serialize(async () => {
       if (!this.state.isOpen())
-        throw new NoOrgError('STATE_STORE_UNAVAILABLE', 'Task mutations require an open state store');
+        throw new NoOrgError(
+          'STATE_STORE_UNAVAILABLE',
+          'Task mutations require an open state store'
+        );
       const candidate = new Map(this.tasks);
       if (operation(candidate) === false) return;
       await this.state.set('tasks', [...candidate.values()] as unknown as JsonValue);
@@ -425,7 +440,10 @@ export class TaskRepository {
 
   private serialize<T>(operation: () => Promise<T>): Promise<T> {
     const next = this.mutation.then(operation);
-    this.mutation = next.then(() => undefined, () => undefined);
+    this.mutation = next.then(
+      () => undefined,
+      () => undefined
+    );
     return next;
   }
 

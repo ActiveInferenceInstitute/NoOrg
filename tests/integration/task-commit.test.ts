@@ -9,7 +9,13 @@ import { FileStateStore, MemoryStateStore } from '../../src/state/state-store';
 import { TaskRepository } from '../../src/tasks/task-repository';
 import { StateBoundary } from '../fixtures/state-boundary';
 
-const request = { name: 'Durable task', description: 'Publish only committed work', input: 'x', agentId: 'analysis', maxAttempts: 2 };
+const request = {
+  name: 'Durable task',
+  description: 'Publish only committed work',
+  input: 'x',
+  agentId: 'analysis',
+  maxAttempts: 2,
+};
 const two = { promptTokens: 1, completionTokens: 1, totalTokens: 2, costUsd: 0.02 };
 const five = { promptTokens: 3, completionTokens: 2, totalTokens: 5, costUsd: 0.05 };
 
@@ -42,7 +48,9 @@ describe('TaskRepository durable publication', () => {
       await rejection;
       const accepted = await duplicate;
       expect(repository.list().map(task => task.id)).toEqual([accepted.id]);
-      expect((await repository.create({ ...request, idempotencyKey: 'same-key' })).id).toBe(accepted.id);
+      expect((await repository.create({ ...request, idempotencyKey: 'same-key' })).id).toBe(
+        accepted.id
+      );
       await repository.persist();
       await state.close();
       const reopened = new FileStateStore(file);
@@ -52,7 +60,9 @@ describe('TaskRepository durable publication', () => {
         await recovered.load();
         expect(recovered.list().map(task => task.id)).toEqual([accepted.id]);
         expect(recovered.get(accepted.id)?.attempt).toBe(0);
-      } finally { await reopened.close(); }
+      } finally {
+        await reopened.close();
+      }
     } finally {
       barrier.release();
       await state.close();
@@ -82,11 +92,15 @@ describe('TaskRepository durable publication', () => {
       boundary.failNext('sync');
       barrier.release();
       await rejection;
-      expect(await cancellation).toEqual(expect.objectContaining({ status: 'cancelled', attempt: 0 }));
+      expect(await cancellation).toEqual(
+        expect.objectContaining({ status: 'cancelled', attempt: 0 })
+      );
       await repository.persist();
       await state.close();
       const envelope = runtimeStateSchema.parse(JSON.parse(await readFile(file, 'utf8')));
-      expect(envelope.state.tasks).toEqual([expect.objectContaining({ status: 'cancelled', attempt: 0 })]);
+      expect(envelope.state.tasks).toEqual([
+        expect.objectContaining({ status: 'cancelled', attempt: 0 }),
+      ]);
     } finally {
       release?.();
       await state.close();
@@ -110,12 +124,22 @@ describe('TaskRepository durable publication', () => {
       await expect(repository.cancel(task.id)).rejects.toBe(boundary.error);
       expect(repository.get(task.id)).toEqual(running);
       boundary.failNext('sync');
-      await expect(repository.completeWithUsage(task.id, { data: { rejected: true }, summary: 'Not committed' }, five)).rejects.toBe(boundary.error);
+      await expect(
+        repository.completeWithUsage(
+          task.id,
+          { data: { rejected: true }, summary: 'Not committed' },
+          five
+        )
+      ).rejects.toBe(boundary.error);
       expect(repository.get(task.id)).toEqual(running);
       boundary.failNext('write');
       await expect(repository.recordUsage(task.id, five)).rejects.toBe(boundary.error);
       expect(repository.get(task.id)?.usage).toBeUndefined();
-      const completed = await repository.completeWithUsage(task.id, { data: { accepted: true }, summary: 'Committed' }, two);
+      const completed = await repository.completeWithUsage(
+        task.id,
+        { data: { accepted: true }, summary: 'Committed' },
+        two
+      );
       expect(completed.usage).toEqual(two);
       expect(completed.result?.data).toEqual({ accepted: true });
       await repository.persist();
@@ -126,7 +150,9 @@ describe('TaskRepository durable publication', () => {
         const recovered = new TaskRepository(reopened, new SystemClock());
         await recovered.load();
         expect(recovered.get(task.id)).toEqual(completed);
-      } finally { await reopened.close(); }
+      } finally {
+        await reopened.close();
+      }
     } finally {
       await state.close();
       await rm(directory, { recursive: true, force: true });
@@ -165,7 +191,9 @@ describe('TaskRepository durable publication', () => {
       expect(await reloaded.recoverInterruptedTasks()).toEqual([
         expect.objectContaining({ id: task.id, status: 'queued', attempt: 1 }),
       ]);
-      expect(reloaded.get(task.id)).toEqual(expect.objectContaining({ status: 'queued', attempt: 1 }));
+      expect(reloaded.get(task.id)).toEqual(
+        expect.objectContaining({ status: 'queued', attempt: 1 })
+      );
     } finally {
       await third?.close();
       await second?.close();
@@ -179,15 +207,20 @@ describe('TaskRepository durable publication', () => {
       const original = new TaskRepository(state, new SystemClock());
       await original.load();
       const accepted = await original.create(request);
-      await state.set('tasks', jsonValueSchema.parse([
-        accepted,
-        { ...accepted, id: randomUUID(), dependencyIds: [randomUUID()] },
-      ]));
+      await state.set(
+        'tasks',
+        jsonValueSchema.parse([
+          accepted,
+          { ...accepted, id: randomUUID(), dependencyIds: [randomUUID()] },
+        ])
+      );
       const loading = new TaskRepository(state, new SystemClock());
       await expect(loading.load()).rejects.toBeInstanceOf(NoOrgError);
       expect(loading.list()).toEqual([]);
       expect(loading.get(accepted.id)).toBeUndefined();
-    } finally { await state.close(); }
+    } finally {
+      await state.close();
+    }
   });
 });
 

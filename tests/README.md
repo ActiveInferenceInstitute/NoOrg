@@ -29,7 +29,7 @@ Coverage thresholds are 90% lines and 80% branches. `tests/live` is excluded fro
 `task-commit`, `state-lock` and `coordinator-commit` exercise real file-state
 admission, pre-rename failure visibility, post-rename fencing, physical/token/
 guard ownership and agent reservations. The stale-owner race uses independent
-Node processes and IPC barriers, not mocked filesystem outcomes. Both timer
+Node processes and IPC barriers, using native filesystem outcomes. Both timer
 resolve/reject cases hold real completion/accounting writes past the execution
 deadline, then require exact usage/events and reservation/file-state lease release.
 

@@ -19,7 +19,7 @@ function integer(name: string, fallback: number, minimum: number, maximum?: numb
 
 function blankOptional<T extends z.ZodType>(schema: T) {
   return z.preprocess(
-    value => typeof value === 'string' && value.trim() === '' ? undefined : value,
+    value => (typeof value === 'string' && value.trim() === '' ? undefined : value),
     schema.optional()
   );
 }

@@ -579,14 +579,23 @@ export class Coordinator implements TaskScheduler {
       const observed = this.dependencies.provider.getTaskUsage?.(taskId);
       const current = observed === undefined ? undefined : usageMetadataSchema.parse(observed);
       const checkpoint = this.usageCheckpoints.get(taskId) ?? {
-        promptTokens: 0, completionTokens: 0, totalTokens: 0, costUsd: 0,
+        promptTokens: 0,
+        completionTokens: 0,
+        totalTokens: 0,
+        costUsd: 0,
       };
       let delta: UsageMetadata | undefined;
       if (current !== undefined) {
-        if (current.promptTokens < checkpoint.promptTokens ||
+        if (
+          current.promptTokens < checkpoint.promptTokens ||
           current.completionTokens < checkpoint.completionTokens ||
-          current.totalTokens < checkpoint.totalTokens || current.costUsd < checkpoint.costUsd)
-          throw new NoOrgError('PROVIDER_USAGE_REGRESSED', 'Provider-instance usage counters decreased');
+          current.totalTokens < checkpoint.totalTokens ||
+          current.costUsd < checkpoint.costUsd
+        )
+          throw new NoOrgError(
+            'PROVIDER_USAGE_REGRESSED',
+            'Provider-instance usage counters decreased'
+          );
         const added = {
           promptTokens: current.promptTokens - checkpoint.promptTokens,
           completionTokens: current.completionTokens - checkpoint.completionTokens,
@@ -599,7 +608,10 @@ export class Coordinator implements TaskScheduler {
       if (current !== undefined) this.usageCheckpoints.set(taskId, current);
       return result;
     });
-    const settled = operation.then(() => undefined, () => undefined);
+    const settled = operation.then(
+      () => undefined,
+      () => undefined
+    );
     this.usageMutations.set(taskId, settled);
     void settled.then(() => {
       if (this.usageMutations.get(taskId) === settled) this.usageMutations.delete(taskId);
@@ -669,7 +681,8 @@ export class Coordinator implements TaskScheduler {
         this.dependencyState(task) !== 'ready' ||
         this.parentState(task) !== 'ready' ||
         (task.nextAttemptAt !== undefined && Date.parse(task.nextAttemptAt) > now)
-      ) total += 1;
+      )
+        total += 1;
     }
     return { total, capability, capacity };
   }
