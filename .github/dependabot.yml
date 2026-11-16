@@ -18,5 +18,8 @@ updates:
       npm-dependencies:
         patterns:
           - "*"
+        # Review compiler and ESLint peer compatibility in a separate PR.
+        exclude-patterns:
+          - typescript
     cooldown:
       default-days: 7
