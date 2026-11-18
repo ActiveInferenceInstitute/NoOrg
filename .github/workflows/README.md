@@ -4,7 +4,7 @@ GitHub Actions workflows for NoOrg.
 
 ## ci.yml
 
-The single pipeline described in [.github/README.md](../README.md): quality,
+The single pipeline described in [.github/AUTOMATION.md](../AUTOMATION.md): quality,
 tests on the Node 22/24 matrix, dependency security, a container build with a
 readiness probe, the manuscript source check, the pinned GNN conformance
 baseline (see [`../GNN.md`](../GNN.md)), and a manually triggered live-provider
