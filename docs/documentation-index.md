@@ -46,7 +46,7 @@ hub is [`README.md`](README.md); the repository overview is
 ## Directory guides
 
 - [`.aii/` sidecar](../.aii/README.md) — InstituteOS metadata, with its [agent guide](../.aii/AGENTS.md) and [integration note](../.aii/docs/INTEGRATION.md).
-- [`.github/`](../.github/README.md) — CI jobs, Dependabot, GNN pin, with its [agent guide](../.github/AGENTS.md) and [workflow guide](../.github/workflows/README.md).
+- [`.github/`](../.github/AUTOMATION.md) — CI jobs, Dependabot, GNN pin, with its [agent guide](../.github/AGENTS.md) and [workflow guide](../.github/workflows/README.md).
 - [`.obsidian/`](../.obsidian/README.md) — editor configuration notes.
 - [`docs/`](README.md)
 - [`examples/`](../examples/README.md) — the runnable executable example.

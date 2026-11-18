@@ -1,6 +1,6 @@
 # Agent guide — `.github/workflows/`
 
-Read [`.github/AGENTS.md`](../AGENTS.md), [`.github/README.md`](../README.md), and
+Read [`.github/AGENTS.md`](../AGENTS.md), [`.github/AUTOMATION.md`](../AUTOMATION.md), and
 [`docs/gate.md`](../../docs/gate.md) first.
 
 ## Rules
