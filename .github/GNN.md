@@ -12,9 +12,9 @@ The canonical pin file is [`.github/gnn-pin.json`](gnn-pin.json) with schema
 | Field | Value |
 | --- | --- |
 | `repository` | `ActiveInferenceInstitute/Generalized_Notation_Notation` |
-| `tag` | `v5.0.3` |
-| `revision` | `8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1` |
-| `recorded` | `2026-11-12` |
+| `tag` | `v5.1.0` |
+| `revision` | `75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf` |
+| `recorded` | `2026-11-24` |
 
 The script refuses a pin whose schema is not `gnn-importer-pin/v1`, whose
 revision is not a 40-character commit id, or whose tag does not start with `v`.
