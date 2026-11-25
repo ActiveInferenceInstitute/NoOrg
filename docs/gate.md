@@ -80,7 +80,7 @@ The passes use a shared host and are not a controlled speedup benchmark.
 `./run.sh gnn` runs [`scripts/gnn-conformance.py`](../scripts/gnn-conformance.py),
 which reads the pin in [`.github/gnn-pin.json`](../.github/gnn-pin.json)
 (schema `gnn-importer-pin/v1`, `ActiveInferenceInstitute/Generalized_Notation_Notation`
-at tag `v5.0.3`, revision `8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1`), installs
+at tag `v5.1.0`, revision `75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf`), installs
 that revision, and verifies the parser version. It parses, syntax-checks, and
 type-checks every `*.gnn.md` sketch in the repository; when the repository has
 none, it checks the pinned upstream exemplar instead and reports

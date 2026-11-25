@@ -132,7 +132,7 @@ jobs:
           NOORG_LLM_PROVIDER: openai
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-  # GNN pin: .github/gnn-pin.json (gnn-importer-pin/v1, v5.0.3, 8f293d9ba810e6eda5c09842d9c7ed9ffa5f92c1)
+  # GNN pin: .github/gnn-pin.json (gnn-importer-pin/v1, v5.1.0, 75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf)
   gnn-conformance:
     name: gnn conformance (pinned)
     runs-on: ubuntu-latest
