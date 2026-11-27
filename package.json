@@ -45,7 +45,7 @@
     "example": "tsx examples/basic-workflow.ts"
   },
   "dependencies": {
-    "openai": "^7.56.0",
+    "openai": "^7.62.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
@@ -53,9 +53,9 @@
     "@mermaid-js/mermaid-cli": "^12.2.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.6.6",
-    "@typescript-eslint/eslint-plugin": "^8.72.2",
+    "@typescript-eslint/eslint-plugin": "^8.73.0",
     "@typescript-eslint/parser": "^8.32.1",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "jest": "^30.5.2",
     "prettier": "^3.10.1",
     "ts-jest": "^29.4.15",
