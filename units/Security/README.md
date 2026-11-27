@@ -40,7 +40,7 @@ The Security Unit implements comprehensive frameworks that provide structured me
 
 ### Core Security Framework
 
-- [Security Framework](../../docs/architecture.md) - Master framework for all security domains
+- [Security Framework](../../docs/design/architecture.md) - Master framework for all security domains
 
 ### Domain-Specific Frameworks
 
@@ -50,7 +50,7 @@ The Security Unit implements comprehensive frameworks that provide structured me
 
 ## Agent Framework Integration
 
-The Security Unit integrates with the NoOrg agent framework for automated security operations. See the [Agent Security Framework](../../docs/architecture.md) for implementation patterns.
+The Security Unit integrates with the NoOrg agent framework for automated security operations. See the [Agent Security Framework](../../docs/design/architecture.md) for implementation patterns.
 
 ## Documentation and Resources
 

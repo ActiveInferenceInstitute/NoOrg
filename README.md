@@ -79,13 +79,13 @@ Task store   Agent registry
           Local or OpenAI provider
 ```
 
-See the [documentation index](docs/README.md), [architecture](docs/architecture.md), [configuration](docs/configuration.md), [operations](docs/operations.md), and [testing](docs/testing.md). The reproducible [manuscript](docs/manuscript/README.md) documents the executable contracts, task semantics, and claim boundaries.
+See the [documentation index](docs/README.md), [architecture](docs/design/architecture.md), [configuration](docs/reference/configuration.md), [operations](docs/operations/README.md), and [testing](docs/development/testing.md). The reproducible [manuscript](docs/manuscript/README.md) documents the executable contracts, task semantics, and claim boundaries.
 
 ## Development commands
 
 `./run.sh` is the single gate entry point; every arm is defined once and CI runs
 the same arms. `./run.sh --list` prints the authoritative table, and the
-[validation gate](docs/gate.md) documents each arm.
+[validation gate](docs/development/gate.md) documents each arm.
 
 ```bash
 ./run.sh            # fast arm: types, lint, format, unit tests, docs

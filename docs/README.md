@@ -4,15 +4,15 @@ This index maps the maintained documentation for the NoOrg runtime. Product docu
 
 ## Runtime documentation
 
-- [Architecture](architecture.md) — composition root, dependency graph, execution graph, and one-source-of-truth rules.
-- [Configuration](configuration.md) — environment variables, defaults, validation rules, and the HTTP task API surface.
-- [Operations](operations.md) — local execution, container deployment, HTTP hardening, state, shutdown, and release commands.
-- [Testing](testing.md) — suites, coverage thresholds, the live provider profile, and the publication gate.
-- [Units](units.md) — the reviewed organizational Markdown corpus and its integrity manifest.
+- [Architecture](design/architecture.md) — composition root, dependency graph, execution graph, and one-source-of-truth rules.
+- [Configuration](reference/configuration.md) — environment variables, defaults, validation rules, and the HTTP task API surface.
+- [Operations](operations/README.md) — local execution, container deployment, HTTP hardening, state, shutdown, and release commands.
+- [Testing](development/testing.md) — suites, coverage thresholds, the live provider profile, and the publication gate.
+- [Units](reference/units.md) — the reviewed organizational Markdown corpus and its integrity manifest.
 
 ## Validation gate
 
-- [Validation gate](gate.md) — the `./run.sh` entry point, every arm, and the CI job that runs it.
+- [Validation gate](development/gate.md) — the `./run.sh` entry point, every arm, and the CI job that runs it.
 - [Gate measurements](_generated/gate-timings.md) — generated wall time per arm with test and coverage evidence; refresh with `./run.sh report`.
 - [Gate baseline](_generated/gate-baseline.json) — the pre-change arm measurements used as the comparison column.
 - [GNN conformance](../.github/GNN.md) — the pinned parser revision, what the conformance job parses, and the claim limits.
@@ -32,3 +32,9 @@ This index maps the maintained documentation for the NoOrg runtime. Product docu
 - [Security policy](../SECURITY.md)
 - [Code of conduct](../CODE_OF_CONDUCT.md)
 - [License](../LICENSE.md)
+
+## Topic indexes
+
+- [Reference](reference/README.md)
+- [Development](development/README.md)
+- [Design](design/README.md)

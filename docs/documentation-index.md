@@ -8,12 +8,12 @@ hub is [`README.md`](README.md); the repository overview is
 
 - [Repository overview](../README.md) — what NoOrg is, quick start, runtime surface.
 - [Documentation hub](README.md) — how the documentation is organized.
-- [Architecture](architecture.md) — composition root, dependency graph, and one-source-of-truth rules.
-- [Validation gate](gate.md) — the `./run.sh` entry point, its arms, and CI parity.
-- [Configuration](configuration.md) — environment variables, defaults, and validation rules.
-- [Operations](operations.md) — local execution, container deployment, state, shutdown, and release commands.
-- [Testing](testing.md) — suites, coverage thresholds, and the live provider profile.
-- [Units](units.md) — the reviewed organizational corpus and its integrity manifest.
+- [Architecture](design/architecture.md) — composition root, dependency graph, and one-source-of-truth rules.
+- [Validation gate](development/gate.md) — the `./run.sh` entry point, its arms, and CI parity.
+- [Configuration](reference/configuration.md) — environment variables, defaults, and validation rules.
+- [Operations](operations/README.md) — local execution, container deployment, state, shutdown, and release commands.
+- [Testing](development/testing.md) — suites, coverage thresholds, and the live provider profile.
+- [Units](reference/units.md) — the reviewed organizational corpus and its integrity manifest.
 
 ## Reference
 
@@ -54,3 +54,6 @@ hub is [`README.md`](README.md); the repository overview is
 - [`src/`](../src/README.md) — source modules and runtime conventions, with its [agent guide](../src/AGENTS.md).
 - [`tests/`](../tests/README.md) — unit, integration, and live suites, with its [agent guide](../tests/AGENTS.md).
 - [`units/`](../units/README.md) — reviewed organizational corpus.
+- [reference/README.md](reference/README.md)
+- [development/README.md](development/README.md)
+- [design/README.md](design/README.md)

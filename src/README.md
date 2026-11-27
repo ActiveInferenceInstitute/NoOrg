@@ -65,4 +65,4 @@ npm run lint
 npm run build
 ```
 
-See [architecture](../docs/architecture.md) for the composition root and dependency graph, and the [repository overview](../README.md) for the full command list.
+See [architecture](../docs/design/architecture.md) for the composition root and dependency graph, and the [repository overview](../README.md) for the full command list.

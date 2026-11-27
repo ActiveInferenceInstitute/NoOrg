@@ -19,11 +19,11 @@ The frameworks serve as the foundational architecture for security implementatio
 - [Security Domain Integration](AGENTS.md) - Guide for cross-domain security operations
 
 ### Security Frameworks
-- [Security Framework](../../../docs/architecture.md) - Master security framework for all domains
-- [Physical Security Framework](../../../docs/architecture.md) - Framework for physical security
-- [Digital Security Framework](../../../docs/architecture.md) - Framework for digital security
-- [Cognitive Security Framework](../../../docs/architecture.md) - Framework for cognitive security
-- [Security Framework Integration](../../../docs/architecture.md) - Framework integration methodology
+- [Security Framework](../../../docs/design/architecture.md) - Master security framework for all domains
+- [Physical Security Framework](../../../docs/design/architecture.md) - Framework for physical security
+- [Digital Security Framework](../../../docs/design/architecture.md) - Framework for digital security
+- [Cognitive Security Framework](../../../docs/design/architecture.md) - Framework for cognitive security
+- [Security Framework Integration](../../../docs/design/architecture.md) - Framework integration methodology
 
 ## Domain-Specific Units
 
@@ -37,9 +37,9 @@ The frameworks serve as the foundational architecture for security implementatio
 ### Digital Security
 - [Digital Security Unit](Digital_Security/digital_security_unit.md) - Digital Security unit documentation
 - [Cybersecurity Framework](Digital_Security/cybersecurity_framework.md) - Digital security framework
-- [Network Security](../../../docs/architecture.md) - Network protection procedures
+- [Network Security](../../../docs/design/architecture.md) - Network protection procedures
 - [Data Protection](Digital_Security/data_protection.md) - Data security procedures
-- [Identity Management](../../../docs/architecture.md) - Access control procedures
+- [Identity Management](../../../docs/design/architecture.md) - Access control procedures
 
 ### Cognitive Security
 - [Cognitive Security Unit](Cognitive_Security/cognitive_security_unit.md) - Cognitive Security unit documentation
@@ -79,7 +79,7 @@ The frameworks serve as the foundational architecture for security implementatio
 ### Digital Security Technical Documents
 - [Network Security Architecture](technical/digital/network_architecture.md) - Secure network design
 - [System Security](technical/digital/system_security.md) - Endpoint protection
-- [Application Security](../../../docs/architecture.md) - Software security
+- [Application Security](../../../docs/design/architecture.md) - Software security
 - [Cloud Security](technical/digital/cloud_security.md) - Cloud protection
 
 ### Cognitive Security Technical Documents

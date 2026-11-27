@@ -33,7 +33,7 @@ Organizational health assessments, culture surveys, and transformation progress.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
+- [Units System](../../docs/design/architecture.md) - Unit management code
 - [Human Resources](../HumanResources/README.md) - HR coordination
 
 ## Related Documentation

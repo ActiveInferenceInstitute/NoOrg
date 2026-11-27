@@ -33,8 +33,8 @@ Campaign performance, analytics dashboards, and ROI reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [MarketingAgent](../../docs/architecture.md) - Marketing AI agent
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [MarketingAgent](../../docs/design/architecture.md) - Marketing AI agent
 
 ## Related Documentation
 

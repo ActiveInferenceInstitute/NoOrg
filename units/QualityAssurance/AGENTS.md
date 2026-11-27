@@ -34,9 +34,9 @@ Quality metrics dashboards, defect density reports, test coverage analysis, and 
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [FinalReviewAgent](../../docs/architecture.md) - Automated quality review agent
-- [ReviewAgent](../../docs/architecture.md) - Content evaluation agent
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [FinalReviewAgent](../../docs/design/architecture.md) - Automated quality review agent
+- [ReviewAgent](../../docs/design/architecture.md) - Content evaluation agent
 - [Development Unit](../Development/README.md) - Development coordination
 - [Testing Framework](../../tests/) - Automated test suite
 

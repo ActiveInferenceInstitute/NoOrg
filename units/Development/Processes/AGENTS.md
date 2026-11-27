@@ -24,4 +24,4 @@ Mandatory standards ensuring code quality and maintainability.
 ## Related Documentation
 
 - [Development Unit Overview](../AGENTS.md)
-- [Technical Frameworks](../../../docs/architecture.md)
+- [Technical Frameworks](../../../docs/design/architecture.md)
