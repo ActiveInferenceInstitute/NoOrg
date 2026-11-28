@@ -20,4 +20,4 @@ This document details the approach of the Legal unit to identifying, assessing, 
 - [Area 2: e.g., Contract Disputes]
 - [Area 3: e.g., Intellectual Property Infringement]
 
-See the main [Risk Management Framework](../../docs/architecture.md) and the [Compliance Unit](../../units/Compliance/).
+See the main [Risk Management Framework](../../docs/design/architecture.md) and the [Compliance Unit](../../units/Compliance/).

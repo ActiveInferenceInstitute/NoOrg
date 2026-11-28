@@ -14,6 +14,6 @@ The corpus is domain content, not executable code. The runtime never loads it im
 
 ## Related documentation
 
-- [Units documentation](../docs/units.md)
-- [Architecture](../docs/architecture.md)
+- [Units documentation](../docs/reference/units.md)
+- [Architecture](../docs/design/architecture.md)
 - [Repository overview](../README.md)

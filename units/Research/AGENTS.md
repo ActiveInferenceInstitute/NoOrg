@@ -33,8 +33,8 @@ Research findings, literature reviews, and project reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [ResearchAgent](../../docs/architecture.md) - Research AI agent
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [ResearchAgent](../../docs/design/architecture.md) - Research AI agent
 
 ## Related Documentation
 

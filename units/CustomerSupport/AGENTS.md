@@ -34,8 +34,8 @@ Knowledge base articles, troubleshooting guides, and FAQs.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [CustomerSupportAgent](../../docs/architecture.md) - Support AI agent
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [CustomerSupportAgent](../../docs/design/architecture.md) - Support AI agent
 
 ## Related Documentation
 

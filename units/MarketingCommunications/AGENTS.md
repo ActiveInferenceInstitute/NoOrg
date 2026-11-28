@@ -33,10 +33,10 @@ Engagement metrics, media coverage, and brand awareness reports.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
+- [Units System](../../docs/design/architecture.md) - Unit management code
 - [Marketing Unit](../Marketing/README.md) - Marketing coordination
 
 ## Related Documentation
 
 - [Units README](../README.md)
-- [Creative Writing Agent](../../docs/architecture.md)
+- [Creative Writing Agent](../../docs/design/architecture.md)

@@ -70,15 +70,15 @@ the exact scripts their arms wrap (`scripts/container-check.sh` and
 ## Measured arm times
 
 `./run.sh report` runs every measured arm once on the current host and rewrites
-[`_generated/gate-timings.md`](_generated/gate-timings.md) with wall time per arm
+[`_generated/gate-timings.md`](../_generated/gate-timings.md) with wall time per arm
 and test/coverage evidence. Pre-change command measurements are recorded in
-[`_generated/gate-baseline.json`](_generated/gate-baseline.json).
+[`_generated/gate-baseline.json`](../_generated/gate-baseline.json).
 The passes use a shared host and are not a controlled speedup benchmark.
 
 ## GNN conformance
 
-`./run.sh gnn` runs [`scripts/gnn-conformance.py`](../scripts/gnn-conformance.py),
-which reads the pin in [`.github/gnn-pin.json`](../.github/gnn-pin.json)
+`./run.sh gnn` runs [`scripts/gnn-conformance.py`](../../scripts/gnn-conformance.py),
+which reads the pin in [`.github/gnn-pin.json`](../../.github/gnn-pin.json)
 (schema `gnn-importer-pin/v1`, `ActiveInferenceInstitute/Generalized_Notation_Notation`
 at tag `v5.1.0`, revision `75c834bd8519dc7b5adc4d24f16bf393cfd1ecdf`), installs
 that revision, and verifies the parser version. It parses, syntax-checks, and
@@ -87,7 +87,7 @@ none, it checks the pinned upstream exemplar instead and reports
 `"source": "pinned-exemplar"`. The type check must return exactly `True`; the
 printed `scope` and `result` say what was checked (`repository sketches` with
 `repository-content-passed`, or `pinned GNN exemplar baseline` with
-`pinned-exemplar-baseline-passed`). See [`.github/GNN.md`](../.github/GNN.md).
+`pinned-exemplar-baseline-passed`). See [`.github/GNN.md`](../../.github/GNN.md).
 
 The pinned parser declares its own supported Python range; CI uses Python 3.12.
 The arm needs a supported `python3` plus the parser's runtime dependencies

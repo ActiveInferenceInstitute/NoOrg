@@ -22,7 +22,7 @@ npm run test:integration # integration suite only
 npm run test:live        # live OpenAI suite; requires credentials
 ```
 
-Coverage thresholds are 90% lines and 80% branches. `tests/live` is excluded from `npm test` and from the coverage run, so no default command reaches the network. See the [testing documentation](../docs/testing.md) for the gate arms and the live-provider profile, and the [validation gate](../docs/gate.md) for `./run.sh`.
+Coverage thresholds are 90% lines and 80% branches. `tests/live` is excluded from `npm test` and from the coverage run, so no default command reaches the network. See the [testing documentation](../docs/development/testing.md) for the gate arms and the live-provider profile, and the [validation gate](../docs/development/gate.md) for `./run.sh`.
 
 ## Focused runtime boundaries
 

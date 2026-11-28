@@ -45,7 +45,7 @@ Training materials, guides, and technical resources including AI education.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
+- [Units System](../../docs/design/architecture.md) - Unit management code
 - [Training & Development](../TrainingDevelopment/README.md) - Training coordination
 
 ## Related Documentation

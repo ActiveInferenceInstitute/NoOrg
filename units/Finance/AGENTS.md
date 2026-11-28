@@ -39,8 +39,8 @@ Financial statements, budget reports, and management dashboards.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [FinanceAgent](../../docs/architecture.md) - Finance AI agent
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [FinanceAgent](../../docs/design/architecture.md) - Finance AI agent
 
 ## Related Documentation
 

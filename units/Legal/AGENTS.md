@@ -35,8 +35,8 @@ Contract review, litigation management, and regulatory compliance procedures.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [LegalAgent](../../docs/architecture.md) - Legal AI agent
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [LegalAgent](../../docs/design/architecture.md) - Legal AI agent
 
 ## Related Documentation
 

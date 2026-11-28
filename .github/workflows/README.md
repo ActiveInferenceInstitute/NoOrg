@@ -12,4 +12,4 @@ run.
 
 Every job runs arms of `./run.sh`, declared once in `scripts/gate.ts`. Run
 `./run.sh --list` locally to see the same arms, and
-[`../../docs/gate.md`](../../docs/gate.md) for what each one proves.
+[`../../docs/gate.md`](../../docs/development/gate.md) for what each one proves.

@@ -18,12 +18,12 @@ Scope: documentation-focused mega review of the public NoOrg repository, followe
 3. `README.md` development-command list omitted `units:manifest:check` and `api:openapi:check`, both part of the ordinary gate.
 4. `examples/README.md` described the example but not how to run it.
 5. `README.md` had no license/contributing/security/code-of-conduct cross-links.
-6. `docs/configuration.md` omitted `OPENAI_BASE_URL` (present in `.env.example` and `src/config/config.ts`).
+6. `docs/reference/configuration.md` omitted `OPENAI_BASE_URL` (present in `.env.example` and `src/config/config.ts`).
 7. `docs/` had no index page linking the maintained documentation.
 
 ### Medium (7)
 
-1. `units/README.md` and `units/AGENTS.md` were generated boilerplate claiming an "Organizational Units Framework" that deploys multi-agent systems — contradicted by `docs/units.md` (corpus is reviewed content, never loaded implicitly).
+1. `units/README.md` and `units/AGENTS.md` were generated boilerplate claiming an "Organizational Units Framework" that deploys multi-agent systems — contradicted by `docs/reference/units.md` (corpus is reviewed content, never loaded implicitly).
 2. `units/unitdirectory.md` closed every Mermaid code block with an invalid ` ```text ` fence (21 occurrences), so the diagrams render as one broken text block.
 3. `CONTRIBUTING.md` was thin for a public repository (no workflow, commit, or documentation obligations).
 4. No container guidance anywhere despite a committed `Dockerfile` and `docker-compose.yml`.
@@ -38,12 +38,12 @@ No major item was warranted: the repository already has a coherent, validated do
 ## Phase 3 — Implemented
 
 - Added `docs/README.md` documentation index; linked it from `README.md`; added manuscript link; completed the development-command list; added license/contributing/security/code-of-conduct section.
-- Added `OPENAI_BASE_URL` row to the `docs/configuration.md` reference table.
-- Added a container deployment section to `docs/operations.md` grounded in the committed `Dockerfile`/`docker-compose.yml` and CI container job.
+- Added `OPENAI_BASE_URL` row to the `docs/reference/configuration.md` reference table.
+- Added a container deployment section to `docs/operations/README.md` grounded in the committed `Dockerfile`/`docker-compose.yml` and CI container job.
 - Expanded `CONTRIBUTING.md` (workflow, conventional commits, documentation obligations, validation gate, manuscript rules).
 - Added `CITATION.cff` (authors from the manuscript metadata, CC BY-NC-SA 4.0, version 2.0.0, no fabricated identifiers).
 - Fixed `LICENSE.md` trailing whitespace; corrected the stale test count in the active roadmap.
-- Rewrote `units/README.md` and `units/AGENTS.md` to match `docs/units.md` reality; fixed the 21 broken Mermaid closing fences in `units/unitdirectory.md`; refreshed the reviewed `units/manifest.json` via `npm run units:manifest:update` (exactly 3 file digests changed).
+- Rewrote `units/README.md` and `units/AGENTS.md` to match `docs/reference/units.md` reality; fixed the 21 broken Mermaid closing fences in `units/unitdirectory.md`; refreshed the reviewed `units/manifest.json` via `npm run units:manifest:update` (exactly 3 file digests changed).
 - Replaced the `.github/` and `.obsidian/` boilerplate files with accurate, concise content.
 - `examples/README.md` now documents `npm run example`.
 

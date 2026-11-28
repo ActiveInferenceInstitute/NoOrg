@@ -34,8 +34,8 @@ Governance effectiveness assessments, policy compliance dashboards, governance r
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [PlanningAgent](../../docs/architecture.md) - Strategic governance planning
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [PlanningAgent](../../docs/design/architecture.md) - Strategic governance planning
 - [Board of Directors](../BoardOfDirectors/README.md) - Board governance oversight
 - [Executive Committee](../ExecutiveCommittee/README.md) - Executive governance
 

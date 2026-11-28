@@ -7,7 +7,7 @@ GitHub-specific repository resources.
 `.github/workflows/ci.yml` runs on every push to `main` and on pull requests.
 Every job runs the arms of the single gate entry point `./run.sh`; the arms are
 defined once in `scripts/gate.ts` and documented in
-[`docs/gate.md`](../docs/gate.md). The two toolchain-isolated jobs (`container`,
+[`docs/development/gate.md`](../docs/development/gate.md). The two toolchain-isolated jobs (`container`,
 `gnn-conformance`) invoke the same scripts their arms wrap and install no Node
 dependencies.
 

@@ -41,7 +41,7 @@ This unit provides oversight of the governance system itself, ensuring:
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
+- [Units System](../../docs/design/architecture.md) - Unit management code
 - [Governance Unit](../Governance/README.md) - Governance coordination
 
 ## Related Documentation

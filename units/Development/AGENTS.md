@@ -33,8 +33,8 @@ Velocity metrics, bug tracking, and release documentation.
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [DevelopmentAgent](../../docs/architecture.md) - Development AI agent
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [DevelopmentAgent](../../docs/design/architecture.md) - Development AI agent
 
 ## Related Documentation
 

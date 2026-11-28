@@ -21,4 +21,4 @@ Deterministic validation and generation scripts, run through the `./run.sh` arms
 
 `gate.ts` is the only place the arm list is declared. Composite arms (`fast`, `all`) reference other arms instead of repeating their commands, and every arm calls one npm script or one repository script. `./run.sh --list` prints the live table.
 
-See [`AGENTS.md`](AGENTS.md) for the rules an agent must follow when changing these gates, and [`../docs/gate.md`](../docs/gate.md) for the arms and their CI mapping.
+See [`AGENTS.md`](AGENTS.md) for the rules an agent must follow when changing these gates, and [`../docs/gate.md`](../docs/development/gate.md) for the arms and their CI mapping.

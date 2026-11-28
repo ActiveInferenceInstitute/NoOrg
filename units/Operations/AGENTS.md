@@ -34,10 +34,10 @@ Operational KPI dashboards, efficiency analysis reports, capacity utilization me
 
 This unit documentation integrates with:
 
-- [Units System](../../docs/architecture.md) - Unit management code
-- [MultiAgentCoordinator](../../docs/architecture.md) - Agent orchestration
-- [TaskManager](../../docs/architecture.md) - Task lifecycle management
-- [MonitoringSystem](../../docs/architecture.md) - Operational monitoring
+- [Units System](../../docs/design/architecture.md) - Unit management code
+- [MultiAgentCoordinator](../../docs/design/architecture.md) - Agent orchestration
+- [TaskManager](../../docs/design/architecture.md) - Task lifecycle management
+- [MonitoringSystem](../../docs/design/architecture.md) - Operational monitoring
 - [Facilities Unit](../Facilities/README.md) - Facilities coordination
 
 ## Related Documentation
