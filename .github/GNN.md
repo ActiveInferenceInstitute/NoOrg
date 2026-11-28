@@ -1,7 +1,7 @@
 # GNN conformance
 
-The conformance job is `gnn-conformance` with display name
-`gnn conformance (pinned)`. It runs the `gnn` arm of `./run.sh`, which executes
+The `gnn-conformance` job in [`.github/workflows/ci.yml`](workflows/ci.yml)
+has display name `gnn conformance (pinned)`. It runs the `gnn` arm of `./run.sh`, which executes
 `scripts/gnn-conformance.py`.
 
 ## Pin
